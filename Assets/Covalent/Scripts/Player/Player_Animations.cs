@@ -12,6 +12,7 @@ public class Player_Animations : MonoBehaviour
     [Header("References")]
     public Player_Collisions playerCollisions;
     public Player_Movement playerMovement;
+    public Player_Hop playerHop;
 
     public Animator anim;
     public Animator hearts;
@@ -46,8 +47,12 @@ public class Player_Animations : MonoBehaviour
             playerCollisions.botHearts = false;
         }
 
-        // Hook up walking animation
+        
+
+        // Relay proper info to Animator
         anim.SetBool("walking", playerMovement.IsWalking() );
+        anim.SetBool("hopping", playerHop.hopProgress > 0 );
+
 
 
         // Horizontal flip.

@@ -35,6 +35,9 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
     [Tooltip("Handles player hopping up and down (and into benches).")]
     public Player_Hop playerHop;
 
+    [Tooltip("Handles skins")]
+    public Spine_Player_Controller spinePlayerController;
+
 
     public static GameObject LocalPlayerInstance;
 
@@ -172,6 +175,9 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
         playerName.text = name;
         playerName_Black.text = name;
         Debug.Log("Inside Callback the name passed is: " + name + ".");
+
+        // Spine player controller stopped getting this call... Manually forward it
+        spinePlayerController.OnPhotonInstantiate( info ); 
     }
 
 

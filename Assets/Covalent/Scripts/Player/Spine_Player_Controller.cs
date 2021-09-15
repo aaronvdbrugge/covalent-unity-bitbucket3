@@ -97,6 +97,8 @@ public class Spine_Player_Controller : MonoBehaviourPun, IPunObservable, IPunIns
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
         object[] instantiationData = info.photonView.InstantiationData;
+
+        Debug.Log("Instantiating Spine Player Controller with skin " + (int)instantiationData[0]);
         characterSkinSlot = (int)instantiationData[0];
     }
 
