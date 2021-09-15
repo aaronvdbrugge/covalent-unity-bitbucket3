@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: 5030d6b79b50f4fac9839901f92d56c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -15987055768627596
+    second: wind roses_0
+  - first:
+      213: 8529783702832890379
+    second: wind roses_1
+  - first:
+      213: 1389829792757742910
+    second: wind roses_2
+  - first:
+      213: -6157366913432981065
+    second: wind roses_3
+  - first:
+      213: 9129684754048459268
+    second: wind roses_4
+  - first:
+      213: 7223196603983246129
+    second: wind roses_5
+  - first:
+      213: -3136669391783310803
+    second: wind roses_6
+  - first:
+      213: -7005792660256912748
+    second: wind roses_7
+  - first:
+      213: -6566732981641079367
+    second: wind roses_8
+  - first:
+      213: 9128379470498607915
+    second: wind roses_9
+  - first:
+      213: -8723636765275615441
+    second: wind roses_10
+  - first:
+      213: -5650082841589159394
+    second: wind roses_11
+  - first:
+      213: -3277981631234664961
+    second: wind roses_12
+  - first:
+      213: -6125398880297537438
+    second: wind roses_13
+  - first:
+      213: -2250903349661910053
+    second: wind roses_14
+  - first:
+      213: 9141094091853022281
+    second: wind roses_15
+  - first:
+      213: -7131586895938987751
+    second: wind roses_16
+  - first:
+      213: -692849906942688878
+    second: wind roses_17
+  - first:
+      213: 1176864150825515761
+    second: wind roses_18
+  - first:
+      213: -8135401276609008680
+    second: wind roses_19
+  - first:
+      213: 3230136425550339464
+    second: wind roses_20
+  - first:
+      213: 5599239971576530733
+    second: wind roses_21
+  - first:
+      213: 2988134090239758346
+    second: wind roses_22
+  - first:
+      213: -7928017907837435207
+    second: wind roses_23
+  - first:
+      213: 7093657726296467354
+    second: wind roses_24
+  - first:
+      213: -2799765806721070482
+    second: wind roses_25
+  - first:
+      213: 76322291187884628
+    second: wind roses_26
+  - first:
+      213: -896616156828445152
+    second: wind roses_27
+  - first:
+      213: 1933582623709177447
+    second: wind roses_28
+  - first:
+      213: 6145430574378440968
+    second: wind roses_29
+  - first:
+      213: 5945972631737996587
+    second: wind roses_30
+  - first:
+      213: -4437873667148264562
+    second: wind roses_31
+  - first:
+      213: 7105506075827142956
+    second: wind roses_32
+  - first:
+      213: 8321297149790722843
+    second: wind roses_33
+  - first:
+      213: 1267108236378500567
+    second: wind roses_34
+  - first:
+      213: 5239551379476451740
+    second: wind roses_35
+  - first:
+      213: -2144183267651289984
+    second: wind roses_36
+  - first:
+      213: 1119381893591368888
+    second: wind roses_37
+  - first:
+      213: 2502979956630745545
+    second: wind roses_38
+  - first:
+      213: 7850249602144693635
+    second: wind roses_39
+  - first:
+      213: 3214565300089967480
+    second: wind roses_40
+  - first:
+      213: -8641131611676067444
+    second: wind roses_41
+  - first:
+      213: 1150531020877169155
+    second: wind roses_42
+  - first:
+      213: -1031498275106590807
+    second: wind roses_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wind roses_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1288
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47618e38bd337cff0800000000000000
+      internalID: -15987055768627596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1288
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b024542c511ef5670800000000000000
+      internalID: 8529783702832890379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1288
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d749735daa94310800000000000000
+      internalID: 1389829792757742910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_3
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1288
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b175155a63ac8aa0800000000000000
+      internalID: -6157366913432981065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1288
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402ab54a9e723be70800000000000000
+      internalID: 9129684754048459268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133ba3b8a03fd3460800000000000000
+      internalID: 7223196603983246129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a4ae49ecf4874d0800000000000000
+      internalID: -3136669391783310803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a095b91bc66ce90800000000000000
+      internalID: -7005792660256912748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5117e25274ed4a0800000000000000
+      internalID: -6566732981641079367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23b902a3c48eae70800000000000000
+      internalID: 9128379470498607915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1104
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f8530f49a6fe680800000000000000
+      internalID: -8723636765275615441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a6c8b479fd691b0800000000000000
+      internalID: -5650082841589159394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5900ae2154282d0800000000000000
+      internalID: -3277981631234664961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2603a401c263efaa0800000000000000
+      internalID: -6125398880297537438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb3aab445f23c0e0800000000000000
+      internalID: -2250903349661910053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_15
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944425b15a0bbde70800000000000000
+      internalID: 9141094091853022281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_16
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 920
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919d9beb083870d90800000000000000
+      internalID: -7131586895938987751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291c4063ea08266f0800000000000000
+      internalID: -692849906942688878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fab8dab5bf055010800000000000000
+      internalID: 1176864150825515761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbe57264af391f80800000000000000
+      internalID: -8135401276609008680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d5afc07ffb3dc20800000000000000
+      internalID: 3230136425550339464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_21
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27ccfd861f74bd40800000000000000
+      internalID: 5599239971576530733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 736
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00d9fd8f1cf77920800000000000000
+      internalID: 2988134090239758346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b20a6e97b50af190800000000000000
+      internalID: -7928017907837435207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_24
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a972b164e1cb17260800000000000000
+      internalID: 7093657726296467354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a0b1425db3529d0800000000000000
+      internalID: -2799765806721070482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452a2be28b62f0100800000000000000
+      internalID: 76322291187884628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_27
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0265d581b549e83f0800000000000000
+      internalID: -896616156828445152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_28
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 552
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766ad06d62775da10800000000000000
+      internalID: 1933582623709177447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809d6a92c84f84550800000000000000
+      internalID: 6145430574378440968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2510fefa96548250800000000000000
+      internalID: 5945972631737996587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_31
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b419f99618962c0800000000000000
+      internalID: -4437873667148264562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_32
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c218e0f1124db9260800000000000000
+      internalID: 7105506075827142956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_33
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b1fbb6baf2b7370800000000000000
+      internalID: 8321297149790722843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_34
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 368
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddef414a3ca59110800000000000000
+      internalID: 1267108236378500567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c911a142830a6b840800000000000000
+      internalID: 5239551379476451740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_36
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cfe4eada45e32e0800000000000000
+      internalID: -2144183267651289984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_37
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b48487c6e7d88f00800000000000000
+      internalID: 1119381893591368888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_38
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1f5ea520f5cb220800000000000000
+      internalID: 2502979956630745545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_39
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d6cf5bb60b1fc60800000000000000
+      internalID: 7850249602144693635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 184
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873d823eb1e6c9c20800000000000000
+      internalID: 3214565300089967480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8936a4f498841880800000000000000
+      internalID: -8641131611676067444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30283722ed187ff00800000000000000
+      internalID: 1150531020877169155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind roses_43
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 400
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afe7dda8c16fa1f0800000000000000
+      internalID: -1031498275106590807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

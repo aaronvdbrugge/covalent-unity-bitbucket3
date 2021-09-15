@@ -1,0 +1,2732 @@
+fileFormatVersion: 2
+guid: b98b164172fab4d36bb8e7d670ce0e76
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 176572759066569321
+    second: ocean5_0
+  - first:
+      213: -3274465073934768373
+    second: ocean5_1
+  - first:
+      213: -3940977370998691519
+    second: ocean5_2
+  - first:
+      213: 3309243793576090574
+    second: ocean5_3
+  - first:
+      213: 7188784850288260145
+    second: ocean5_4
+  - first:
+      213: -7121683937417865428
+    second: ocean5_5
+  - first:
+      213: -3905356242592090885
+    second: ocean5_6
+  - first:
+      213: -7284315555080551438
+    second: ocean5_7
+  - first:
+      213: 5628285489181250678
+    second: ocean5_8
+  - first:
+      213: -95472724579001391
+    second: ocean5_9
+  - first:
+      213: 6249486302540453003
+    second: ocean5_10
+  - first:
+      213: -7552926084319009365
+    second: ocean5_11
+  - first:
+      213: -2696831483028157045
+    second: ocean5_12
+  - first:
+      213: 7159370450559524172
+    second: ocean5_13
+  - first:
+      213: -678578932762798226
+    second: ocean5_14
+  - first:
+      213: -5952975711278448973
+    second: ocean5_15
+  - first:
+      213: 7611265750072795147
+    second: ocean5_16
+  - first:
+      213: 3303064739528303294
+    second: ocean5_17
+  - first:
+      213: -8706154513558730264
+    second: ocean5_18
+  - first:
+      213: -1689439875947255369
+    second: ocean5_19
+  - first:
+      213: -577750000886810063
+    second: ocean5_20
+  - first:
+      213: -5609760424472235217
+    second: ocean5_21
+  - first:
+      213: -1921633850389821498
+    second: ocean5_22
+  - first:
+      213: 3837788419358575055
+    second: ocean5_23
+  - first:
+      213: -6144633931704595234
+    second: ocean5_24
+  - first:
+      213: 1547827886114673227
+    second: ocean5_25
+  - first:
+      213: -7976781274192846789
+    second: ocean5_26
+  - first:
+      213: 9017947038754852631
+    second: ocean5_27
+  - first:
+      213: 2278946084950279060
+    second: ocean5_28
+  - first:
+      213: 5834727962224444881
+    second: ocean5_29
+  - first:
+      213: 5436911507006166550
+    second: ocean5_30
+  - first:
+      213: 7448640642609950398
+    second: ocean5_31
+  - first:
+      213: -1350091444450150150
+    second: ocean5_32
+  - first:
+      213: -1362459511981890173
+    second: ocean5_33
+  - first:
+      213: 1897071585858862027
+    second: ocean5_34
+  - first:
+      213: 3514308300736857987
+    second: ocean5_35
+  - first:
+      213: -5833925278417465934
+    second: ocean5_36
+  - first:
+      213: 8694725345043151187
+    second: ocean5_37
+  - first:
+      213: 4671947678712109846
+    second: ocean5_38
+  - first:
+      213: -2512544186851646153
+    second: ocean5_39
+  - first:
+      213: -8552894589958506830
+    second: ocean5_40
+  - first:
+      213: 915187852944338971
+    second: ocean5_41
+  - first:
+      213: -6421432404873479618
+    second: ocean5_42
+  - first:
+      213: 4599993011645724207
+    second: ocean5_43
+  - first:
+      213: 1438940928309638937
+    second: ocean5_44
+  - first:
+      213: 4959921176937050522
+    second: ocean5_45
+  - first:
+      213: 6252221854086353362
+    second: ocean5_46
+  - first:
+      213: 3009504403155436623
+    second: ocean5_47
+  - first:
+      213: -9108194555092381260
+    second: ocean5_48
+  - first:
+      213: -5040278562956526905
+    second: ocean5_49
+  - first:
+      213: -3117621945629830336
+    second: ocean5_50
+  - first:
+      213: -3258487786940946157
+    second: ocean5_51
+  - first:
+      213: -473165680402794667
+    second: ocean5_52
+  - first:
+      213: 2158892052478322454
+    second: ocean5_53
+  - first:
+      213: -3288899044465459874
+    second: ocean5_54
+  - first:
+      213: -998830358554073725
+    second: ocean5_55
+  - first:
+      213: 2978579505730483125
+    second: ocean5_56
+  - first:
+      213: -1847672914228329947
+    second: ocean5_57
+  - first:
+      213: -3911560767739031891
+    second: ocean5_58
+  - first:
+      213: 1288760798857647868
+    second: ocean5_59
+  - first:
+      213: -3128953321919984535
+    second: ocean5_60
+  - first:
+      213: 6062344633508726117
+    second: ocean5_61
+  - first:
+      213: -2741426232095641039
+    second: ocean5_62
+  - first:
+      213: 2633241369667909295
+    second: ocean5_63
+  - first:
+      213: -5414169723579042578
+    second: ocean5_64
+  - first:
+      213: 5516268177245625224
+    second: ocean5_65
+  - first:
+      213: 645860268356435648
+    second: ocean5_66
+  - first:
+      213: -3656420777050718781
+    second: ocean5_67
+  - first:
+      213: -4818494046265908339
+    second: ocean5_68
+  - first:
+      213: 2009251277313299739
+    second: ocean5_69
+  - first:
+      213: -4883628913761315600
+    second: ocean5_70
+  - first:
+      213: 6446358731439472860
+    second: ocean5_71
+  - first:
+      213: 7517358625149520560
+    second: ocean5_72
+  - first:
+      213: -3995111586117078701
+    second: ocean5_73
+  - first:
+      213: -7510282123482175911
+    second: ocean5_74
+  - first:
+      213: 3402657737421343213
+    second: ocean5_75
+  - first:
+      213: 1723260446033888087
+    second: ocean5_76
+  - first:
+      213: 5100894833709243400
+    second: ocean5_77
+  - first:
+      213: -1388562595543218761
+    second: ocean5_78
+  - first:
+      213: 457115637201845077
+    second: ocean5_79
+  - first:
+      213: -5256417878539998383
+    second: ocean5_80
+  - first:
+      213: 237939720593164618
+    second: ocean5_81
+  - first:
+      213: -6408105981314929098
+    second: ocean5_82
+  - first:
+      213: 3781981810439859524
+    second: ocean5_83
+  - first:
+      213: -2100218081557115666
+    second: ocean5_84
+  - first:
+      213: -2784157098380468363
+    second: ocean5_85
+  - first:
+      213: -6094516454055178695
+    second: ocean5_86
+  - first:
+      213: -1408137774554461656
+    second: ocean5_87
+  - first:
+      213: 4558408527165841730
+    second: ocean5_88
+  - first:
+      213: -1814689796508718235
+    second: ocean5_89
+  - first:
+      213: -7925642830942996385
+    second: ocean5_90
+  - first:
+      213: -3688949359607586464
+    second: ocean5_91
+  - first:
+      213: -5615644926884475424
+    second: ocean5_92
+  - first:
+      213: -7550367734567782562
+    second: ocean5_93
+  - first:
+      213: 2579605114302499216
+    second: ocean5_94
+  - first:
+      213: -401713124976865785
+    second: ocean5_95
+  - first:
+      213: -3324649477290039775
+    second: ocean5_96
+  - first:
+      213: -4442042376394206144
+    second: ocean5_97
+  - first:
+      213: 350981510099703500
+    second: ocean5_98
+  - first:
+      213: -6330352714817718584
+    second: ocean5_99
+  - first:
+      213: 7548291089046875449
+    second: ocean5_100
+  - first:
+      213: -6605290270658105802
+    second: ocean5_101
+  - first:
+      213: -53343744231394985
+    second: ocean5_102
+  - first:
+      213: 6446161091906684115
+    second: ocean5_103
+  - first:
+      213: 2276116088181664766
+    second: ocean5_104
+  - first:
+      213: -7390869734973391633
+    second: ocean5_105
+  - first:
+      213: 1561617273207676223
+    second: ocean5_106
+  - first:
+      213: -5602970659409640845
+    second: ocean5_107
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ocean5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a6c252dff437200800000000000000
+      internalID: 176572759066569321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07e1b63d53ce82d0800000000000000
+      internalID: -3274465073934768373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14925c516f5de49c0800000000000000
+      internalID: -3940977370998691519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_3
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbd44772bbcced20800000000000000
+      internalID: 3309243793576090574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_4
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343428cbb1b3c360800000000000000
+      internalID: 7188784850288260145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_5
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c275a93f032ba2d90800000000000000
+      internalID: -7121683937417865428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_6
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4b1f650336dc9c0800000000000000
+      internalID: -3905356242592090885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_7
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3429bb899e8ea90800000000000000
+      internalID: -7284315555080551438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674522d15dfab1e40800000000000000
+      internalID: 5628285489181250678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbdab51010dcaef0800000000000000
+      internalID: -95472724579001391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84d7935ea2aab650800000000000000
+      internalID: 6249486302540453003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba522615ebd9e2790800000000000000
+      internalID: -7552926084319009365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_12
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d440bfd0ee29ad0800000000000000
+      internalID: -2696831483028157045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_13
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d57092e713b5360800000000000000
+      internalID: 7159370450559524172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_14
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e671c905e043596f0800000000000000
+      internalID: -678578932762798226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_15
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be38bc7128c26da0800000000000000
+      internalID: -5952975711278448973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00af2c9fd5a0a960800000000000000
+      internalID: 7611265750072795147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_17
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2e3b551e7d6dd20800000000000000
+      internalID: 3303064739528303294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_18
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e90babd8968d2780800000000000000
+      internalID: -8706154513558730264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_19
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9a8c44267ed88e0800000000000000
+      internalID: -1689439875947255369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_20
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13af82c6f6b6bf7f0800000000000000
+      internalID: -577750000886810063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_21
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23b940ad902622b0800000000000000
+      internalID: -5609760424472235217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_22
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7062fb13cf455e0800000000000000
+      internalID: -1921633850389821498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_23
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9c9f2eb30924530800000000000000
+      internalID: 3837788419358575055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc8fe9aeffd9baa0800000000000000
+      internalID: -6144633931704595234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_25
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b421f4df24dfa7510800000000000000
+      internalID: 1547827886114673227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b306fb4a1b7cc4190800000000000000
+      internalID: -7976781274192846789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_27
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fc4487d0f262d70800000000000000
+      internalID: 9017947038754852631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_28
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4938abfc36170af10800000000000000
+      internalID: 2278946084950279060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_29
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d54d6dfa2e19f050800000000000000
+      internalID: 5834727962224444881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_30
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616165aa53ac37b40800000000000000
+      internalID: 5436911507006166550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_31
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebead4a2333ee5760800000000000000
+      internalID: 7448640642609950398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8314ffbf2834de0800000000000000
+      internalID: -1350091444450150150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_33
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385a77fda42971de0800000000000000
+      internalID: -1362459511981890173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_34
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbba946e80c35a10800000000000000
+      internalID: 1897071585858862027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_35
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38780a8a7c455c030800000000000000
+      internalID: 3514308300736857987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_36
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd41c56edbb90fa0800000000000000
+      internalID: -5833925278417465934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_37
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359f1ea72aed9a870800000000000000
+      internalID: 8694725345043151187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_38
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b98d629a716d040800000000000000
+      internalID: 4671947678712109846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_39
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7352c34cf56a12dd0800000000000000
+      internalID: -2512544186851646153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6b9248fa30e4980800000000000000
+      internalID: -8552894589958506830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_41
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10ff7dd08663bc00800000000000000
+      internalID: 915187852944338971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_42
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a755eff3d72e6a0800000000000000
+      internalID: -6421432404873479618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_43
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f263c64b54576df30800000000000000
+      internalID: 4599993011645724207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_44
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917baa4862528f310800000000000000
+      internalID: 1438940928309638937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_45
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a913549180e25d440800000000000000
+      internalID: 4959921176937050522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_46
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d150cd86aa54c650800000000000000
+      internalID: 6252221854086353362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_47
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44cd044f48e3c920800000000000000
+      internalID: 3009504403155436623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b152963f41399180800000000000000
+      internalID: -9108194555092381260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cab5fdf9555d0ab0800000000000000
+      internalID: -5040278562956526905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_50
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04395cabb5bfbb4d0800000000000000
+      internalID: -3117621945629830336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_51
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319af6a3f9687c2d0800000000000000
+      internalID: -3258487786940946157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_52
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5577fa3125afe69f0800000000000000
+      internalID: -473165680402794667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_53
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617626822ece5fd10800000000000000
+      internalID: 2158892052478322454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_54
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5db3809ebb7b52d0800000000000000
+      internalID: -3288899044465459874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_55
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3852287b4117322f0800000000000000
+      internalID: -998830358554073725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3f25e774a065920800000000000000
+      internalID: 2978579505730483125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_57
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5224f4e164fbb56e0800000000000000
+      internalID: -1847672914228329947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_58
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae8f81c43857b9c0800000000000000
+      internalID: -3911560767739031891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_59
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6db505e1992e110800000000000000
+      internalID: 1288760798857647868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_60
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c4e281889b394d0800000000000000
+      internalID: -3128953321919984535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_61
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56588421356c12450800000000000000
+      internalID: 6062344633508726117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_62
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132700add5f74f9d0800000000000000
+      internalID: -2741426232095641039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_63
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa63beef2172b8420800000000000000
+      internalID: 2633241369667909295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4756862510dd4b0800000000000000
+      internalID: -5414169723579042578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_65
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b54864ea8bd8c40800000000000000
+      internalID: 5516268177245625224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_66
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce7cedfd7e86f800800000000000000
+      internalID: 645860268356435648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_67
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdb8820da8c14dc0800000000000000
+      internalID: -3656420777050718781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_68
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d836cf3c135412db0800000000000000
+      internalID: -4818494046265908339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_69
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1552c8246b42eb10800000000000000
+      internalID: 2009251277313299739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_70
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f41e64a06dd93cb0800000000000000
+      internalID: -4883628913761315600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_71
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0003aac11167950800000000000000
+      internalID: 6446358731439472860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba814547d5035860800000000000000
+      internalID: 7517358625149520560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351b17fed238e88c0800000000000000
+      internalID: -3995111586117078701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_74
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e0ea233e16c790800000000000000
+      internalID: -7510282123482175911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_75
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9cb332f2ba83f20800000000000000
+      internalID: 3402657737421343213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_76
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753c455de304ae710800000000000000
+      internalID: 1723260446033888087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_77
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c5dd753d40ac640800000000000000
+      internalID: 5100894833709243400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_78
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b580402da5dabce0800000000000000
+      internalID: -1388562595543218761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_79
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b31b80040085600800000000000000
+      internalID: 457115637201845077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b6c960ac37d07b0800000000000000
+      internalID: -5256417878539998383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_81
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4949eb4ae45d4300800000000000000
+      internalID: 237939720593164618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_82
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63eeaa4cf85d117a0800000000000000
+      internalID: -6408105981314929098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_83
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44da1463b6c4c7430800000000000000
+      internalID: 3781981810439859524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_84
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8fe148c68ad2e0800000000000000
+      internalID: -2100218081557115666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_85
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f5620cedfac59d0800000000000000
+      internalID: -2784157098380468363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_86
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e844e339deb6ba0800000000000000
+      internalID: -6094516454055178695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_87
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a4fd8972a457ce0800000000000000
+      internalID: -1408137774554461656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241e4da6768b24f30800000000000000
+      internalID: 4558408527165841730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_89
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b6295ae3de0d6e0800000000000000
+      internalID: -1814689796508718235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_90
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58750d46d5720290800000000000000
+      internalID: -7925642830942996385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_91
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0616f223a183eccc0800000000000000
+      internalID: -3688949359607586464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_92
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed835421b83112b0800000000000000
+      internalID: -5615644926884475424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_93
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5734898c84b73790800000000000000
+      internalID: -7550367734567782562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_94
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09908c22f299cc320800000000000000
+      internalID: 2579605114302499216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_95
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e442c8a04dc6af0800000000000000
+      internalID: -401713124976865785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12660774ae87cd1d0800000000000000
+      internalID: -3324649477290039775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_97
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0449acd5ef1ba52c0800000000000000
+      internalID: -4442042376394206144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_98
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc61938e2dfeed400800000000000000
+      internalID: 350981510099703500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_99
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c63c5adeb11628a0800000000000000
+      internalID: -6330352714817718584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_100
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93da2efb0cae0c860800000000000000
+      internalID: 7548291089046875449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_101
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e6413ce7b4554a0800000000000000
+      internalID: -6605290270658105802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_102
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7513912b52c724ff0800000000000000
+      internalID: -53343744231394985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_103
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4ca002c5d557950800000000000000
+      internalID: 6446161091906684115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbae97d583669f10800000000000000
+      internalID: 2276116088181664766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_105
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecb9b1722b5e6990800000000000000
+      internalID: -7390869734973391633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_106
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d58acd2aafba510800000000000000
+      internalID: 1561617273207676223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean5_107
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372c3fefedf3e32b0800000000000000
+      internalID: -5602970659409640845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
