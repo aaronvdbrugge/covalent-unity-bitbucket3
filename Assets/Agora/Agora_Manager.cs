@@ -12,8 +12,12 @@ using UnityEngine.Android;
 
 public class Agora_Manager : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void failureToConnectAgora(string error);
+    //[DllImport("__Internal")]
+    //private static extern void failureToConnectAgora(string error);
+    // ^^ Not yet implemented externally
+    private static void failureToConnectAgora(string error) { }
+
+
     public Text logs;
     public IRtcEngine mRtcEngine = null;
     public AudioRecordingDeviceManager audio_manager;

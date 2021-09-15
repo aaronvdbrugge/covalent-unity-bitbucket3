@@ -11,8 +11,13 @@ public class Player_Collisions : MonoBehaviour
     [Tooltip("photonView.isMine is put here. Whether or not this player object is controlled by us.")]
     public bool isMine = false;  
 
+    [Tooltip("These will be turned on/off when we sit in a seat, for example")]
+    public Collider2D[] colliders;
+
+
     [Header("Colliding info")]
     public bool topHearts, botHearts, onBeach;
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +39,15 @@ public class Player_Collisions : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("public_agora") && isMine)
             SendMessage("LeavePublicAgora");
+    }
+
+    /// <summary>
+    /// Turns on/off all relevant colliders for this player.
+    /// </summary>
+    public void EnableColliders(bool enable)
+    {
+        foreach( Collider2D coll in colliders )
+            coll.enabled = enable;
     }
 
 

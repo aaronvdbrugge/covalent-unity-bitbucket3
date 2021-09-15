@@ -40,16 +40,24 @@ public class Dateland_Network : Network_Manager
     private string player_JSON;
 
 
-    string lastSceneName = null;   // used for determining room name.
+    public string lastSceneName = null;   // used for determining room name.
 
     #endregion
 
+    /*
     [DllImport("__Internal")]
     private static extern bool _updatePlayersInRoom(string[] unityJSONList, int count);
     [DllImport("__Internal")]
     private static extern void failureToConnect(string error);
     [DllImport("__Internal")]
     private static extern void failureToJoinRoom(string error);
+    */
+    // ^^ These functions look like they're built to call out to Swift, but the functions might not actually be in Swift (was getting linker errors).
+    // So, replacing them with dummys for now
+    private static bool _updatePlayersInRoom(string[] unityJSONList, int count){ return true; }
+    private static void failureToConnect(string error) { }
+    private static void failureToJoinRoom(string error) { }
+
 
 
     #region MonoBehaviour CallBacks

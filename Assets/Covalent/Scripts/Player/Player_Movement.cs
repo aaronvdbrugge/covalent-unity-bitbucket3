@@ -17,8 +17,21 @@ public class Player_Movement : MonoBehaviour
 	[Tooltip("Multiply maxSpeed by this when you do WASD in the editor")]
 	public float editorSpeedMultiple = 4;
 
-
-
+	//You can turn this off to disable control.
+	public bool movementEnabled
+	{
+		get
+		{
+			return _movementEnabled;
+		}
+		set
+		{
+			_movementEnabled = value;
+			if( !_movementEnabled )
+				body.velocity = Vector3.zero;   // on set off, zero the velocity
+		}
+	}
+	bool _movementEnabled = true;
 
 
     /// <summary>
@@ -26,7 +39,6 @@ public class Player_Movement : MonoBehaviour
     /// </summary>
     private Rigidbody2D body;
     private Vector2 lastMovementInput; 
-
 
 	private void Awake()
 	{
@@ -52,24 +64,27 @@ public class Player_Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        Vector2 new_vel = lastMovementInput * maxSpeed;
-
-		// Allow super-speed WASD in editor
-		if ( Application.isEditor )
+		if( movementEnabled )
 		{
-			if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-				new_vel.y += editorSpeedMultiple;
-			if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-				new_vel.y -= editorSpeedMultiple;
-			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-				new_vel.x -= editorSpeedMultiple;
-			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-				new_vel.x += editorSpeedMultiple;
+			Vector2 new_vel = lastMovementInput * maxSpeed;
 
-			new_vel = maxSpeed * new_vel;
+			// Allow super-speed WASD in editor
+			if ( Application.isEditor )
+			{
+				if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+					new_vel.y += editorSpeedMultiple;
+				if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+					new_vel.y -= editorSpeedMultiple;
+				if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+					new_vel.x -= editorSpeedMultiple;
+				if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+					new_vel.x += editorSpeedMultiple;
+
+				new_vel = maxSpeed * new_vel;
+			}
+
+			body.velocity = new_vel;
 		}
-
-		body.velocity = new_vel;
 	}
 
 

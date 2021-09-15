@@ -1,0 +1,102 @@
+INFO    12:20:00:362   8312; [WIN_CORE] VoE selected this capturing format:
+INFO    12:20:00:362   8312; [WIN_CORE] wFormatTag        : 0xfffe (65534)
+INFO    12:20:00:362   8312; [WIN_CORE] nChannels         : 2
+INFO    12:20:00:362   8312; [WIN_CORE] nSamplesPerSec    : 48000
+INFO    12:20:00:362   8312; [WIN_CORE] nAvgBytesPerSec   : 384000
+INFO    12:20:00:362   8312; [WIN_CORE] nBlockAlign       : 8
+INFO    12:20:00:362   8312; [WIN_CORE] wBitsPerSample    : 32
+INFO    12:20:00:362   8312; [WIN_CORE] cbSize            : 22
+INFO    12:20:00:362   8312; [WIN_CORE] Additional settings:
+INFO    12:20:00:362   8312; [WIN_CORE] _recAudioFrameSize: 4
+INFO    12:20:00:362   8312; [WIN_CORE] _recBlockSize     : 480
+INFO    12:20:00:362   8312; [WIN_CORE] _recChannels      : 2
+INFO    12:20:00:363   8312; [WIN_CORE] capture SetClientProperties hr 0
+INFO    12:20:00:382   8312; [WIN_CORE] capture Initialize time 0  hr 0x0
+INFO    12:20:00:382   8312; [WIN_CORE] IAudioClient::GetBufferSize() => 1056 (<=> 4224 bytes)
+INFO    12:20:00:382   8312; [WIN_CORE] capture side is now initialized
+INFO    12:20:00:382   8312; [WIN_CORE] AgoraRTC::AudioDeviceWindowsCore::InitRecording End
+INFO    12:20:00:382   8312; [WIN_CORE] AgoraRTC::AudioDeviceWindowsCore::StartRecording Begin
+INFO    12:20:00:382  28060; [WIN_CORE] MicrophoneLevelBoostStat boost max = 30.000000 (dB), min = 0.000000 (dB), step = 10.000000 (dB), curr = 20.000000 (dB)
+INFO    12:20:00:382  28060; [WIN_CORE] MicrophoneLevelBoostStat boost max = 30.000000 (dB), min = 0.000000 (dB), step = 10.000000 (dB), curr = 20.000000 (dB)
+INFO    12:20:00:382  28060; [WIN_CORE] SetMicrophoneVolume fLevel = 0.647059
+INFO    12:20:00:383  25628; [WIN_CORE] [CAPT] size of buffer       : 1056
+INFO    12:20:00:383  25628; [WIN_CORE] [CAPT] size of interleaved buffer  : 8448 [bytes]
+INFO    12:20:00:383  25628; [WIN_CORE] [CAPT] size of sync buffer  : 8448 [bytes]
+INFO    12:20:00:383  25628; [WIN_CORE] [CAPT] max stream latency   : 0 (0.00 ms)
+INFO    12:20:00:390  28060; [WIN_CORE] SetMicrophoneBoost level = 20.000000
+INFO    12:20:00:390  25628; [WIN_CORE] [CAPT] device period        : 100000 (10.00 ms)
+INFO    12:20:00:390  25628; [WIN_CORE] [CAPT] extraDelayMS         : 10.00
+INFO    12:20:00:390  25628; [WIN_CORE] [CAPT] endpointBufferSizeMS : 22.00
+INFO    12:20:00:459  32428; [vocs/u] **responsed from 52.58.56.244:8443, 3 vos, elapsed 363, server ts 1631733600211, wan ip 172.******.50
+INFO    12:20:00:459  32428; [remote:52.58.56.244:8443] destroy session 000001E75D2083E0
+INFO    12:20:00:459  32428; [remote:52.58.56.244:8443] destroy connection 000001E74F7BB9B0
+INFO    12:20:00:481  32428; [ch0] rtt: 147
+INFO    12:20:00:535  32428; [cap] synchronise capability set with seq: 1
+INFO    12:20:00:553  32428; [cap] Received capability set ack seq: 1
+INFO    12:20:00:556   8312; [WIN_CORE] capture audio stream has now started...
+INFO    12:20:00:556   8312; [WIN_CORE] AgoraRTC::AudioDeviceWindowsCore::StartRecording End
+INFO    12:20:00:556   8312; [WIN_CORE] Current recording Device name:Microphone (Realtek(R) Audio)
+INFO    12:20:00:556   8312; [WIN_CORE] Current recording device id:{0.0.1.00000000}.{09c33118-5337-48d1-b313-6436d2e238c4}
+INFO    12:20:00:556   8312; [WIN_CORE] Default endpoint device will be used
+INFO    12:20:00:556  25628; SetLocalState: state 1 error 0
+INFO    12:20:00:556  25628; SetLocalState: state 2 error 0
+INFO    12:20:00:557   8312; [WIN_CORE] Find recordingDeviceName:Microphone (Realtek(R) Audio)
+INFO    12:20:00:557   8312; [WIN_CORE] Find recordingDeviceId:{0.0.1.00000000}.{09c33118-5337-48d1-b313-6436d2e238c4}
+INFO    12:20:00:557   8312; agora::media::AudioEngineWrapper::setAecType: aec is set to 5
+INFO    12:20:00:557   8312; agora::media::AudioEngineWrapper::setAecType: aec is set to 3
+INFO    12:20:00:558   8312; output: enabled=0
+INFO    12:20:00:558   8312; => OnWindowsCurrentDeviceChange() : kRecordingDevice micBoost 0 max:  0.0 min:  0.0 step:  0.0 level:  0.0 volume:165
+INFO    12:20:00:558   8312; StartRecording complete
+INFO    12:20:00:558  32428; [API][rtc_engine_impl.cpp:5579][agora::rtc::RtcEngine::onMediaEngineEvent]
+INFO    12:20:00:558  25628; AVSync audio_record_delay: 0
+
+INFO    12:20:00:558  32428; TRACER: onFirstLocalAudioFrame codec 85 elapsed 462
+INFO    12:20:00:558  32428; TRACER: onFirstLocalAudioFramePublished codec 85 elapsed 462
+INFO    12:20:00:558  32428; [API][rtc_engine_impl.cpp:5579][agora::rtc::RtcEngine::onMediaEngineEvent]
+INFO    12:20:00:558  32428; [rp] publish audio old:2,new:3,elapsed:224
+INFO    12:20:00:559   8312; output: enabled=0
+INFO    12:20:00:559   8312; output: volume=51
+INFO    12:20:00:559   8312; output: enabled=0
+INFO    12:20:00:559   8312; agora::media::AudioEngineWrapper::_startCall: audienceRecord 1, mWillsend 1, enableBuildinAEC 0(media volume), enableLocalAudio 1
+INFO    12:20:00:559   8312; output: kWindowsCoreAudio
+INFO    12:20:00:559   8312;   Output: audioLayer=2
+INFO    12:20:00:559   8312; DecideApmParaByStrategy: scenario:1,role:2,routing:3
+INFO    12:20:00:559   8312; agora::media::ApmAudioPolicy::SetAecType: aec is set to 3
+INFO    12:20:00:559   8312; AEC_Delay, Config: dev = 0, npart = 12, agg = -1, diagnosis = 0
+INFO    12:20:00:559   8312; GetNsStatus() => enabled= 1, mode=4，nsLevel=-1
+INFO    12:20:00:559   8312; GetAgcStatus() => enabled=0, mode=1
+INFO    12:20:00:559   8312; GetEcStatus() => enabled=1, mode=3
+INFO    12:20:00:559   8312; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters setting as following:BypassAPM =0,Agc=0,Aec=1,Ans=1,Hw3A=0,PitchSmooth=0,MusicDetect=0,ExceptionDetect=0,ToneRemover=0,Bss=0,Hpf=0
+INFO    12:20:00:559   8312; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters for 3A:Agc.targetLeveldBOv =6,Agc.digitalCompressionGaindB=10,Agc.limiterEnable=1,Agc.gmode=1,Aec.aggressiveness=1,Ans.aggressiveness=1
+INFO    12:20:00:660  32428; [remote:106.14.12.130:8443] start 2th connect, send client hello 4148014|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:20:01:204  32428; [vocs/tcp] connected with 123.56.235.221:8443
+INFO    12:20:01:204  32428; [vocs] close transport since working is finished.
+INFO    12:20:01:269  32428; [remote:106.14.12.130:8443] start 3th connect, send client hello 4148014|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:20:02:114  32428; [tactics] audio speaker stat expired...
+INFO    12:20:02:934  32428; [remote:106.14.12.130:8443] start 4th connect, send client hello 4148014|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:20:04:116  32428; gatewayRtt 1(650), linkspeed 468000(20), rssi -65(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    12:20:04:116  32428; [timeSync] getStableNTP, rtt_w: 21, diffTime: 1631639368917, bootTime: 94235036, currentTs: 1631733603953
+INFO    12:20:04:170  32428; [remote:128.14.208.50:8130] path MTU to remote increased: 1365 --> 1415
+INFO    12:20:04:170  32428; [remote:128.14.208.50:8130] on max stream frame length changed from 1339 to 1389
+INFO    12:20:04:561  32428; [timeSync] sync success, rtt 22, choose diffTime: 1631639368912, currentTs: 1631733604392
+INFO    12:20:05:115  32428; [rs] total: 38 / 37 valid: 37 / 37
+INFO    12:20:05:655  32428; [remote:106.14.12.130:8443] start 5th connect, send client hello 4148014|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:20:06:116  32428; gatewayRtt 1(650), linkspeed 468000(20), rssi -65(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    12:20:06:378   9212; Audio statistics - play count: playout count = 201  signal level: far_in = 0
+INFO    12:20:06:563  25628; Audio statistics - rec count: record count = 200 signal level: near_in = 100, near_out = 76 farin = 104
+INFO    12:20:08:116  32428; gatewayRtt 1(650), linkspeed 468000(20), rssi -65(-70), rxlossrate 0(30), localRxJitter95 6(500), reason 0x0
+INFO    12:20:10:115  32428; [rs] total: 42 / 41 valid: 41 / 41
+INFO    12:20:10:117  32428; gatewayRtt 1(650), linkspeed 468000(20), rssi -65(-70), rxlossrate 0(30), localRxJitter95 6(500), reason 0x0
+INFO    12:20:10:117  32428; [timeSync] getStableNTP, rtt_w: 22, diffTime: 1631639368912, bootTime: 94241036, currentTs: 1631733609948
+INFO    12:20:10:553  25628; AVSync audio_record_delay: 0
+
+INFO    12:20:10:840  32428; [remote:106.14.12.130:8443] start 6th connect, send client hello 4148014|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:20:15:116  32428; [rs] total: 46 / 45 valid: 45 / 45
+INFO    12:20:16:119  32428; gatewayRtt 1(650), linkspeed 468000(20), rssi -65(-70), rxlossrate 0(30), localRxJitter95 7(500), reason 0x0
+INFO    12:20:16:119  32428; [timeSync] getStableNTP, rtt_w: 22, diffTime: 1631639368912, bootTime: 94247038, currentTs: 1631733615950
+FATAL   12:20:16:978  37240; ahpl: System stalling detected: thread<AgoraEvent> stalled for 9 calc cycles, at least 9650ms!
+INFO    12:20:16:993  32428; [rs] **report stats: seq: 72
+INFO    12:20:16:993  32428; [rs] **report stats: report item map size: 0
+INFO    12:20:16:993  32428; [rs] **report stats: tx bytes: 13534
+INFO    12:20:16:993  32428; [rs] **report stats: rx bytes: 3456
+INFO    12:20:16:993  32428; [rs] remote server: 128.14.208.50:8130
