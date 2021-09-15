@@ -1,0 +1,3362 @@
+fileFormatVersion: 2
+guid: cd69402a575f34bbebe0f76d80400d91
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1519226294948627085
+    second: ocean1_0
+  - first:
+      213: 7674368301686961212
+    second: ocean1_1
+  - first:
+      213: -8884861556888826084
+    second: ocean1_2
+  - first:
+      213: 4995223237110536902
+    second: ocean1_3
+  - first:
+      213: -2294638119432799101
+    second: ocean1_4
+  - first:
+      213: -5341673154956079914
+    second: ocean1_5
+  - first:
+      213: 5641822626366444745
+    second: ocean1_6
+  - first:
+      213: 7680916259969238546
+    second: ocean1_7
+  - first:
+      213: 7422374172601360591
+    second: ocean1_8
+  - first:
+      213: -6623227919565347136
+    second: ocean1_9
+  - first:
+      213: 2983431086341202792
+    second: ocean1_10
+  - first:
+      213: -5832330951613966067
+    second: ocean1_11
+  - first:
+      213: 6732104669333091903
+    second: ocean1_12
+  - first:
+      213: 2835413537202132590
+    second: ocean1_13
+  - first:
+      213: -5895534675208769912
+    second: ocean1_14
+  - first:
+      213: 5928037611512197475
+    second: ocean1_15
+  - first:
+      213: 6684219178203574211
+    second: ocean1_16
+  - first:
+      213: -6508951650534510940
+    second: ocean1_17
+  - first:
+      213: -4500169542708990364
+    second: ocean1_18
+  - first:
+      213: -3884359557118708072
+    second: ocean1_19
+  - first:
+      213: 5004575681423401493
+    second: ocean1_20
+  - first:
+      213: 7798377201317369519
+    second: ocean1_21
+  - first:
+      213: -1836800655082842204
+    second: ocean1_22
+  - first:
+      213: 5610849263467631682
+    second: ocean1_23
+  - first:
+      213: 4437785329791507781
+    second: ocean1_24
+  - first:
+      213: -8041107972751872747
+    second: ocean1_25
+  - first:
+      213: -2984870212740740512
+    second: ocean1_26
+  - first:
+      213: 6416039366576885684
+    second: ocean1_27
+  - first:
+      213: -5821544377883726856
+    second: ocean1_28
+  - first:
+      213: -8748161088581810882
+    second: ocean1_29
+  - first:
+      213: -3889951036553105864
+    second: ocean1_30
+  - first:
+      213: 3399595413491700545
+    second: ocean1_31
+  - first:
+      213: -1965007124590448595
+    second: ocean1_32
+  - first:
+      213: -7528854723199940519
+    second: ocean1_33
+  - first:
+      213: 1576334350687521762
+    second: ocean1_34
+  - first:
+      213: -6084136182555185104
+    second: ocean1_35
+  - first:
+      213: 4347606690461902493
+    second: ocean1_36
+  - first:
+      213: 7727355669650293714
+    second: ocean1_37
+  - first:
+      213: 6212934361333013828
+    second: ocean1_38
+  - first:
+      213: -2287583383923112802
+    second: ocean1_39
+  - first:
+      213: 4646075468817795887
+    second: ocean1_40
+  - first:
+      213: 5163276572496789608
+    second: ocean1_41
+  - first:
+      213: 6783076529299507094
+    second: ocean1_42
+  - first:
+      213: -7672962484884398242
+    second: ocean1_43
+  - first:
+      213: 8940090356204448627
+    second: ocean1_44
+  - first:
+      213: 6957404478895165172
+    second: ocean1_45
+  - first:
+      213: -2680362956893495037
+    second: ocean1_46
+  - first:
+      213: 8248075724762464033
+    second: ocean1_47
+  - first:
+      213: 6834650275421915309
+    second: ocean1_48
+  - first:
+      213: -6425038766591750549
+    second: ocean1_49
+  - first:
+      213: 9182786288936412935
+    second: ocean1_50
+  - first:
+      213: 3642973358112703203
+    second: ocean1_51
+  - first:
+      213: 6971817729398642035
+    second: ocean1_52
+  - first:
+      213: 5642768818568611228
+    second: ocean1_53
+  - first:
+      213: -5358387546534691685
+    second: ocean1_54
+  - first:
+      213: 2624920671912510553
+    second: ocean1_55
+  - first:
+      213: 2971603337205621239
+    second: ocean1_56
+  - first:
+      213: -8521101032224989965
+    second: ocean1_57
+  - first:
+      213: 298708856155753477
+    second: ocean1_58
+  - first:
+      213: 2042527788173480554
+    second: ocean1_59
+  - first:
+      213: -5503703961953027971
+    second: ocean1_60
+  - first:
+      213: 9170608537176815900
+    second: ocean1_61
+  - first:
+      213: 2049427136218978891
+    second: ocean1_62
+  - first:
+      213: 1540961740272598177
+    second: ocean1_63
+  - first:
+      213: -8840920914291530810
+    second: ocean1_64
+  - first:
+      213: -3735204703998292109
+    second: ocean1_65
+  - first:
+      213: 8383113983090369674
+    second: ocean1_66
+  - first:
+      213: 9077557948474754224
+    second: ocean1_67
+  - first:
+      213: 1438300444093186480
+    second: ocean1_68
+  - first:
+      213: -6583048221560114276
+    second: ocean1_69
+  - first:
+      213: -8196425525339826378
+    second: ocean1_70
+  - first:
+      213: -495034099884096778
+    second: ocean1_71
+  - first:
+      213: -5690913502722096222
+    second: ocean1_72
+  - first:
+      213: 6443656335606681296
+    second: ocean1_73
+  - first:
+      213: 2695070930078408106
+    second: ocean1_74
+  - first:
+      213: -246089777142716898
+    second: ocean1_75
+  - first:
+      213: 6674803840450334400
+    second: ocean1_76
+  - first:
+      213: -7519899366839021901
+    second: ocean1_77
+  - first:
+      213: -251400479043550770
+    second: ocean1_78
+  - first:
+      213: -3246833908309404376
+    second: ocean1_79
+  - first:
+      213: 7061663632543186242
+    second: ocean1_80
+  - first:
+      213: 1728862647131903532
+    second: ocean1_81
+  - first:
+      213: -2477545913130144156
+    second: ocean1_82
+  - first:
+      213: -184206670388243743
+    second: ocean1_83
+  - first:
+      213: 5491843142855396124
+    second: ocean1_84
+  - first:
+      213: 6369850867185582292
+    second: ocean1_85
+  - first:
+      213: -6355054516519332186
+    second: ocean1_86
+  - first:
+      213: 2295312764432555735
+    second: ocean1_87
+  - first:
+      213: -8240341094036642546
+    second: ocean1_88
+  - first:
+      213: 4420154262492487457
+    second: ocean1_89
+  - first:
+      213: -1012576849233030840
+    second: ocean1_90
+  - first:
+      213: 1667924513971880546
+    second: ocean1_91
+  - first:
+      213: -6801469643092682707
+    second: ocean1_92
+  - first:
+      213: 7828923200264857332
+    second: ocean1_93
+  - first:
+      213: -5377615330462330402
+    second: ocean1_94
+  - first:
+      213: 2472773514993726746
+    second: ocean1_95
+  - first:
+      213: 6703534915326037966
+    second: ocean1_96
+  - first:
+      213: -6689507851446948733
+    second: ocean1_97
+  - first:
+      213: -4777890799686139803
+    second: ocean1_98
+  - first:
+      213: -3719876652421109628
+    second: ocean1_99
+  - first:
+      213: -2430041800758288963
+    second: ocean1_100
+  - first:
+      213: -3646664989053954764
+    second: ocean1_101
+  - first:
+      213: -5876519259466840181
+    second: ocean1_102
+  - first:
+      213: 6088153190738618704
+    second: ocean1_103
+  - first:
+      213: -596439828070985839
+    second: ocean1_104
+  - first:
+      213: -6574352886084989793
+    second: ocean1_105
+  - first:
+      213: -5895637336617872345
+    second: ocean1_106
+  - first:
+      213: 5417468818587774499
+    second: ocean1_107
+  - first:
+      213: 1126262906159988514
+    second: ocean1_108
+  - first:
+      213: 8036397784449131609
+    second: ocean1_109
+  - first:
+      213: -2567499956700740793
+    second: ocean1_110
+  - first:
+      213: 5159723392209361729
+    second: ocean1_111
+  - first:
+      213: -4717625708679375169
+    second: ocean1_112
+  - first:
+      213: 8840476022196905299
+    second: ocean1_113
+  - first:
+      213: -4821453232982624765
+    second: ocean1_114
+  - first:
+      213: 7310703292753979333
+    second: ocean1_115
+  - first:
+      213: -5434379688993873306
+    second: ocean1_116
+  - first:
+      213: 3315229658558309995
+    second: ocean1_117
+  - first:
+      213: -495096856917573436
+    second: ocean1_118
+  - first:
+      213: 8579949830786107508
+    second: ocean1_119
+  - first:
+      213: -2814106520133792095
+    second: ocean1_120
+  - first:
+      213: -3157608689445500685
+    second: ocean1_121
+  - first:
+      213: -4516293877232396765
+    second: ocean1_122
+  - first:
+      213: 7818376226810081162
+    second: ocean1_123
+  - first:
+      213: -6476692182014367424
+    second: ocean1_124
+  - first:
+      213: -8731048497161094999
+    second: ocean1_125
+  - first:
+      213: 2610451165115788637
+    second: ocean1_126
+  - first:
+      213: -5703857776807455542
+    second: ocean1_127
+  - first:
+      213: 53317336180075525
+    second: ocean1_128
+  - first:
+      213: 8432233263989235677
+    second: ocean1_129
+  - first:
+      213: 4595559445657991718
+    second: ocean1_130
+  - first:
+      213: 5346929322955803839
+    second: ocean1_131
+  - first:
+      213: -1890922175919674174
+    second: ocean1_132
+  - first:
+      213: 8792539951654015982
+    second: ocean1_133
+  - first:
+      213: -2443414803185142504
+    second: ocean1_134
+  - first:
+      213: -1226102804874345831
+    second: ocean1_135
+  - first:
+      213: 9029222209924831751
+    second: ocean1_136
+  - first:
+      213: -118868606096192085
+    second: ocean1_137
+  - first:
+      213: 7469919242427701075
+    second: ocean1_138
+  - first:
+      213: 1766234243133331372
+    second: ocean1_139
+  - first:
+      213: -6128658729274050040
+    second: ocean1_140
+  - first:
+      213: -8845315866679777321
+    second: ocean1_141
+  - first:
+      213: 8936792128007380574
+    second: ocean1_142
+  - first:
+      213: 8512976594885940245
+    second: ocean1_143
+  - first:
+      213: 2009195039254279382
+    second: ocean1_144
+  - first:
+      213: -539413970401818849
+    second: ocean1_145
+  - first:
+      213: 3743642691521841476
+    second: ocean1_146
+  - first:
+      213: 6727923318147807073
+    second: ocean1_147
+  - first:
+      213: -6286298319990124460
+    second: ocean1_148
+  - first:
+      213: -640759545828888859
+    second: ocean1_149
+  - first:
+      213: -8847210350294270099
+    second: ocean1_150
+  - first:
+      213: -897573060490635673
+    second: ocean1_151
+  - first:
+      213: -1897622593806826194
+    second: ocean1_152
+  - first:
+      213: 8295837611669387162
+    second: ocean1_153
+  - first:
+      213: 1700236682211784860
+    second: ocean1_154
+  - first:
+      213: -6519171318231957543
+    second: ocean1_155
+  - first:
+      213: -3305136982336161500
+    second: ocean1_156
+  - first:
+      213: -6612850423087747915
+    second: ocean1_157
+  - first:
+      213: 2110266449940648512
+    second: ocean1_158
+  - first:
+      213: -7020031548613485763
+    second: ocean1_159
+  - first:
+      213: -6405113317959564520
+    second: ocean1_160
+  - first:
+      213: -6373776272734912002
+    second: ocean1_161
+  - first:
+      213: -19808850963208973
+    second: ocean1_162
+  - first:
+      213: -4929158896316132243
+    second: ocean1_163
+  - first:
+      213: -7768198578007998631
+    second: ocean1_164
+  - first:
+      213: -3446103491354345872
+    second: ocean1_165
+  - first:
+      213: -4078516253716578956
+    second: ocean1_166
+  - first:
+      213: 1927946302042955928
+    second: ocean1_167
+  - first:
+      213: 6769282540816037964
+    second: ocean1_168
+  - first:
+      213: 5597801297881008928
+    second: ocean1_169
+  - first:
+      213: -6820262979533330293
+    second: ocean1_170
+  - first:
+      213: 7392562523135104541
+    second: ocean1_171
+  - first:
+      213: 3032133311350025751
+    second: ocean1_172
+  - first:
+      213: -4145998549233213473
+    second: ocean1_173
+  - first:
+      213: -2969248686848708199
+    second: ocean1_174
+  - first:
+      213: -8595696656474401130
+    second: ocean1_175
+  - first:
+      213: -5708824697030096211
+    second: ocean1_176
+  - first:
+      213: 5199730736201850310
+    second: ocean1_177
+  - first:
+      213: 2102675553458178215
+    second: ocean1_178
+  - first:
+      213: -2725491851134932115
+    second: ocean1_0
+  - first:
+      213: 8499727278616492419
+    second: ocean1_1
+  - first:
+      213: -4403822707555260870
+    second: ocean1_2
+  - first:
+      213: 3309000277066160213
+    second: ocean1_3
+  - first:
+      213: 4398538392010649314
+    second: ocean1_4
+  - first:
+      213: -3147257976595539774
+    second: ocean1_5
+  - first:
+      213: -2146892259768283672
+    second: ocean1_6
+  - first:
+      213: -6597117177642190404
+    second: ocean1_7
+  - first:
+      213: 5948634620368762248
+    second: ocean1_8
+  - first:
+      213: -5145959008706103232
+    second: ocean1_9
+  - first:
+      213: 2823374361749491648
+    second: ocean1_10
+  - first:
+      213: 6977520893223623780
+    second: ocean1_11
+  - first:
+      213: -3732851820596243812
+    second: ocean1_12
+  - first:
+      213: 6486525989402898952
+    second: ocean1_13
+  - first:
+      213: 1935235881611262709
+    second: ocean1_14
+  - first:
+      213: -7763178270991843528
+    second: ocean1_15
+  - first:
+      213: 3666927608203234873
+    second: ocean1_16
+  - first:
+      213: -6248835309254119890
+    second: ocean1_17
+  - first:
+      213: -1803227650773797355
+    second: ocean1_18
+  - first:
+      213: 6192175214996488605
+    second: ocean1_19
+  - first:
+      213: 4351810146874189282
+    second: ocean1_20
+  - first:
+      213: -1402401200981254552
+    second: ocean1_21
+  - first:
+      213: 7745921522766039791
+    second: ocean1_22
+  - first:
+      213: 7129652475628928827
+    second: ocean1_23
+  - first:
+      213: 2326749076539045275
+    second: ocean1_24
+  - first:
+      213: -5089052851551126072
+    second: ocean1_25
+  - first:
+      213: -5863778031746293355
+    second: ocean1_26
+  - first:
+      213: 8993911123652210553
+    second: ocean1_27
+  - first:
+      213: -5051324312062782218
+    second: ocean1_28
+  - first:
+      213: 1551276583680105460
+    second: ocean1_29
+  - first:
+      213: -7862538337541372581
+    second: ocean1_30
+  - first:
+      213: 2918647006165910948
+    second: ocean1_31
+  - first:
+      213: -7180063527679629578
+    second: ocean1_32
+  - first:
+      213: -7295152572981091082
+    second: ocean1_33
+  - first:
+      213: -5057136439456615907
+    second: ocean1_34
+  - first:
+      213: 8826554800087474907
+    second: ocean1_35
+  - first:
+      213: 9107287609420696398
+    second: ocean1_36
+  - first:
+      213: 2109578949874177215
+    second: ocean1_37
+  - first:
+      213: 6461027468678599741
+    second: ocean1_38
+  - first:
+      213: 1540787458954532476
+    second: ocean1_39
+  - first:
+      213: 4748156061521065100
+    second: ocean1_40
+  - first:
+      213: -1920864806180113002
+    second: ocean1_41
+  - first:
+      213: -6699377417734570842
+    second: ocean1_42
+  - first:
+      213: 8020219205031900511
+    second: ocean1_43
+  - first:
+      213: -9158101882688063782
+    second: ocean1_44
+  - first:
+      213: 7338091572551386241
+    second: ocean1_45
+  - first:
+      213: 5078561088362946264
+    second: ocean1_46
+  - first:
+      213: -1577793354005419385
+    second: ocean1_47
+  - first:
+      213: -5986452245939010895
+    second: ocean1_48
+  - first:
+      213: -5901953029261170890
+    second: ocean1_49
+  - first:
+      213: 9136784741448325363
+    second: ocean1_50
+  - first:
+      213: 3896138074243901298
+    second: ocean1_51
+  - first:
+      213: -7713820557943005360
+    second: ocean1_52
+  - first:
+      213: 7781947437149187191
+    second: ocean1_53
+  - first:
+      213: -7986306983572450251
+    second: ocean1_54
+  - first:
+      213: -7125609393543256383
+    second: ocean1_55
+  - first:
+      213: 2635070122986080254
+    second: ocean1_56
+  - first:
+      213: 8992890688266363315
+    second: ocean1_57
+  - first:
+      213: -961190801269056106
+    second: ocean1_58
+  - first:
+      213: 4566636762490106956
+    second: ocean1_59
+  - first:
+      213: 1668947870648416642
+    second: ocean1_60
+  - first:
+      213: -6405391802244931619
+    second: ocean1_61
+  - first:
+      213: -9050677068826233183
+    second: ocean1_62
+  - first:
+      213: 5733178956359561844
+    second: ocean1_63
+  - first:
+      213: -2737299528898905509
+    second: ocean1_64
+  - first:
+      213: 6998015715101708396
+    second: ocean1_65
+  - first:
+      213: -7252944306125580767
+    second: ocean1_66
+  - first:
+      213: 4807893737612132361
+    second: ocean1_67
+  - first:
+      213: -2699807934820730497
+    second: ocean1_68
+  - first:
+      213: 8090819040984766387
+    second: ocean1_69
+  - first:
+      213: 8421566542557613821
+    second: ocean1_70
+  - first:
+      213: -8032046560342158956
+    second: ocean1_71
+  - first:
+      213: 3063206426249380618
+    second: ocean1_72
+  - first:
+      213: -4570209694957975894
+    second: ocean1_73
+  - first:
+      213: 3182313769745845872
+    second: ocean1_74
+  - first:
+      213: 2811392117224499008
+    second: ocean1_75
+  - first:
+      213: -3832156503626887857
+    second: ocean1_76
+  - first:
+      213: 4415160989388790356
+    second: ocean1_77
+  - first:
+      213: 6872906832095740760
+    second: ocean1_78
+  - first:
+      213: 5897204915125011067
+    second: ocean1_79
+  - first:
+      213: 1227049686104939393
+    second: ocean1_80
+  - first:
+      213: -6311696354181865552
+    second: ocean1_81
+  - first:
+      213: -3851456589234401853
+    second: ocean1_82
+  - first:
+      213: 7244705027443201787
+    second: ocean1_83
+  - first:
+      213: 3903256034764492965
+    second: ocean1_84
+  - first:
+      213: -7308774006971977091
+    second: ocean1_85
+  - first:
+      213: 7204340617076788527
+    second: ocean1_86
+  - first:
+      213: 4466637956846330207
+    second: ocean1_87
+  - first:
+      213: -7562662866365537373
+    second: ocean1_88
+  - first:
+      213: -8495977652521559303
+    second: ocean1_89
+  - first:
+      213: -9169675930406292394
+    second: ocean1_90
+  - first:
+      213: -4662086396492139294
+    second: ocean1_91
+  - first:
+      213: 258523178511234962
+    second: ocean1_92
+  - first:
+      213: 4448171220767115034
+    second: ocean1_93
+  - first:
+      213: -2996108564543806438
+    second: ocean1_94
+  - first:
+      213: -2284515502050406560
+    second: ocean1_95
+  - first:
+      213: -4933663462677217410
+    second: ocean1_96
+  - first:
+      213: 3132351672445211099
+    second: ocean1_97
+  - first:
+      213: -3219256526643274326
+    second: ocean1_98
+  - first:
+      213: -731919524472963521
+    second: ocean1_99
+  - first:
+      213: 2711251416729422969
+    second: ocean1_100
+  - first:
+      213: -8268982885773580661
+    second: ocean1_101
+  - first:
+      213: -993103146491338243
+    second: ocean1_102
+  - first:
+      213: 8213202193610307928
+    second: ocean1_103
+  - first:
+      213: -1329018704080320515
+    second: ocean1_104
+  - first:
+      213: -2597553409242107225
+    second: ocean1_105
+  - first:
+      213: -8926952563188528622
+    second: ocean1_106
+  - first:
+      213: 5446925207495301506
+    second: ocean1_107
+  - first:
+      213: -5096049551597579737
+    second: ocean1_108
+  - first:
+      213: 6941980337715086236
+    second: ocean1_109
+  - first:
+      213: -3051615339473554684
+    second: ocean1_110
+  - first:
+      213: 6518598846519492332
+    second: ocean1_111
+  - first:
+      213: 6785764622950200326
+    second: ocean1_112
+  - first:
+      213: -7891844179499712139
+    second: ocean1_113
+  - first:
+      213: 4934271398016390855
+    second: ocean1_114
+  - first:
+      213: 1940920049797795226
+    second: ocean1_115
+  - first:
+      213: -285778954829511768
+    second: ocean1_116
+  - first:
+      213: 7472199638998590141
+    second: ocean1_117
+  - first:
+      213: 8924898549704263412
+    second: ocean1_118
+  - first:
+      213: 7692724460132959835
+    second: ocean1_119
+  - first:
+      213: -8704789729711676992
+    second: ocean1_120
+  - first:
+      213: -4846470942058375385
+    second: ocean1_121
+  - first:
+      213: 1403873205488616736
+    second: ocean1_122
+  - first:
+      213: -9032478474163508731
+    second: ocean1_123
+  - first:
+      213: -774501100584848900
+    second: ocean1_124
+  - first:
+      213: 440541460651142526
+    second: ocean1_125
+  - first:
+      213: 8956712716272944410
+    second: ocean1_126
+  - first:
+      213: 7689883508779647635
+    second: ocean1_127
+  - first:
+      213: -5461175603461150013
+    second: ocean1_128
+  - first:
+      213: -5550064488892794269
+    second: ocean1_129
+  - first:
+      213: 5412042232791905711
+    second: ocean1_130
+  - first:
+      213: 6371717556579806333
+    second: ocean1_131
+  - first:
+      213: 2315244417406386143
+    second: ocean1_132
+  - first:
+      213: 1726685561177322870
+    second: ocean1_133
+  - first:
+      213: -5333801431107617255
+    second: ocean1_134
+  - first:
+      213: 3989127755586523573
+    second: ocean1_135
+  - first:
+      213: -3252588790624261507
+    second: ocean1_136
+  - first:
+      213: 2628092722459041068
+    second: ocean1_137
+  - first:
+      213: -5901729730572123118
+    second: ocean1_138
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ocean1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b61e60a9b1d2ad0800000000000000
+      internalID: -2725491851134932115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38932a92de815f570800000000000000
+      internalID: 8499727278616492419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ae56749a72e2c0800000000000000
+      internalID: -4403822707555260870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_3
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558923c583eebed20800000000000000
+      internalID: 3309000277066160213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_4
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee66b2fc5fba0d30800000000000000
+      internalID: 4398538392010649314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_5
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c812809b81b254d0800000000000000
+      internalID: -3147257976595539774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_6
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edc97d4dd4b432e0800000000000000
+      internalID: -2146892259768283672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_7
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9720541e45274a0800000000000000
+      internalID: -6597117177642190404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885bba58babcd8250800000000000000
+      internalID: 5948634620368762248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048f959cb81e598b0800000000000000
+      internalID: -5145959008706103232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf060ce504ae2720800000000000000
+      internalID: 2823374361749491648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cd57da84225d060800000000000000
+      internalID: 6977520893223623780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_12
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92d032fb0f323cc0800000000000000
+      internalID: -3732851820596243812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_13
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802f2b03505c40a50800000000000000
+      internalID: 6486525989402898952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_14
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7700f7c65bda10800000000000000
+      internalID: 1935235881611262709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_15
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fff7d5e76a34490800000000000000
+      internalID: -7763178270991843528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ec6004b3b83e230800000000000000
+      internalID: 3666927608203234873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_17
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e6dfbd46da749a0800000000000000
+      internalID: -6248835309254119890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_18
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516377a6106a9f6e0800000000000000
+      internalID: -1803227650773797355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_19
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9108dcec860fe550800000000000000
+      internalID: 6192175214996488605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_20
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5606e854cb46c30800000000000000
+      internalID: 4351810146874189282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_21
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e5ee6b98ba98ce0800000000000000
+      internalID: -1402401200981254552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_22
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feac586d59a0f7b60800000000000000
+      internalID: 7745921522766039791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_23
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fb8dde62d91f260800000000000000
+      internalID: 7129652475628928827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95f39c15f54a4020800000000000000
+      internalID: 2326749076539045275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_25
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd3b1cf46d0069b0800000000000000
+      internalID: -5089052851551126072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591e500a2fcaf9ea0800000000000000
+      internalID: -5863778031746293355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_27
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f69b2e38ac0dc70800000000000000
+      internalID: 8993911123652210553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_28
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4143e1d4716e9b0800000000000000
+      internalID: -5051324312062782218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_29
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb52a675dd378510800000000000000
+      internalID: 1551276583680105460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_30
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55c4fd1a07a2e290800000000000000
+      internalID: -7862538337541372581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_31
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5c64b0dfd118820800000000000000
+      internalID: 2918647006165910948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6eaef534a4b5c90800000000000000
+      internalID: -7180063527679629578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_33
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f46f21e26962ca90800000000000000
+      internalID: -7295152572981091082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_34
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d123181c33171d9b0800000000000000
+      internalID: -5057136439456615907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_35
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2abb953d83e7a70800000000000000
+      internalID: 8826554800087474907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_36
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b46da04d5936e70800000000000000
+      internalID: 9107287609420696398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_37
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb454ecb0eab64d10800000000000000
+      internalID: 2109578949874177215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_38
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3411a2304e2aa950800000000000000
+      internalID: 6461027468678599741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_39
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c769c5dc70af16510800000000000000
+      internalID: 1540787458954532476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84b419f7c6d4e140800000000000000
+      internalID: 4748156061521065100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_41
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695b51ec2a7b755e0800000000000000
+      internalID: -1920864806180113002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_42
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac38afbbb70703a0800000000000000
+      internalID: -6699377417734570842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_43
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5531b0cfda8d4f60800000000000000
+      internalID: 8020219205031900511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_44
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6ba810cd2e7e080800000000000000
+      internalID: -9158101882688063782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_45
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1848637086326d560800000000000000
+      internalID: 7338091572551386241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_46
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de9ef9076caa7640800000000000000
+      internalID: 5078561088362946264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_47
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ae885dd4d8a1ae0800000000000000
+      internalID: -1577793354005419385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b247ff5669dbeca0800000000000000
+      internalID: -5986452245939010895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637e8d16dfc081ea0800000000000000
+      internalID: -5901953029261170890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_50
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f89c3740516cce70800000000000000
+      internalID: 9136784741448325363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_51
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277ae279fecd11630800000000000000
+      internalID: 3896138074243901298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_52
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f93b6721103f490800000000000000
+      internalID: -7713820557943005360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_53
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ce90ca6f70ffb60800000000000000
+      internalID: 7781947437149187191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_54
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53451f89c10fa2190800000000000000
+      internalID: -7986306983572450251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_55
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6eaa97200cc1d90800000000000000
+      internalID: -7125609393543256383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef784dec056a19420800000000000000
+      internalID: 2635070122986080254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_57
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1e8024f6a2dcc70800000000000000
+      internalID: 8992890688266363315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_58
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d1cf01f0a29a2f0800000000000000
+      internalID: -961190801269056106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_59
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44767eb0f3ff5f30800000000000000
+      internalID: 4566636762490106956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_60
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289b4a2fe3b492710800000000000000
+      internalID: 1668947870648416642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_61
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfddf3d71a7b17a0800000000000000
+      internalID: -6405391802244931619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_62
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6b6df8829856280800000000000000
+      internalID: -9050677068826233183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_63
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4727e8792e7509f40800000000000000
+      internalID: 5733178956359561844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5af220d498230ad0800000000000000
+      internalID: -2737299528898905509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_65
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c601d3f3732fd1160800000000000000
+      internalID: 6998015715101708396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_66
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12651b1d49d585b90800000000000000
+      internalID: -7252944306125580767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_67
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900423c81e119b240800000000000000
+      internalID: 4807893737612132361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_68
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79ba3bccfa588ad0800000000000000
+      internalID: -2699807934820730497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_69
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b71ddffc0d584070800000000000000
+      internalID: 8090819040984766387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_70
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe067da62a6fd470800000000000000
+      internalID: 8421566542557613821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_71
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491586f7530788090800000000000000
+      internalID: -8032046560342158956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03c94ed302b28a20800000000000000
+      internalID: 3063206426249380618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6cbf61f7a5390c0800000000000000
+      internalID: -4570209694957975894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_74
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e09815389d92c20800000000000000
+      internalID: 3182313769745845872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_75
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047ef773c32140720800000000000000
+      internalID: 2811392117224499008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_76
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dcd9da6f171dac0800000000000000
+      internalID: -3832156503626887857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_77
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a5eaef68dc54d30800000000000000
+      internalID: 4415160989388790356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_78
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8530c6d7958716f50800000000000000
+      internalID: 6872906832095740760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_79
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c6b520a417d150800000000000000
+      internalID: 5897204915125011067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b1a06303b570110800000000000000
+      internalID: 1227049686104939393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_81
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf9cde4b995868a0800000000000000
+      internalID: -6311696354181865552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_82
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd88d253a0ec8ac0800000000000000
+      internalID: -3851456589234401853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_83
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf61d3f96dc5a8460800000000000000
+      internalID: 7244705027443201787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_84
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0998beea62b2630800000000000000
+      internalID: 3903256034764492965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_85
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72b3d2a3c4029a90800000000000000
+      internalID: -7308774006971977091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_86
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dc7c9fe95faf360800000000000000
+      internalID: 7204340617076788527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_87
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f512a167e8facfd30800000000000000
+      internalID: 4466637956846330207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3ae3611360c0790800000000000000
+      internalID: -7562662866365537373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_89
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa9bc1b659381a80800000000000000
+      internalID: -8495977652521559303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_90
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654fea60354ceb080800000000000000
+      internalID: -9169675930406292394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_91
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4b7e88f11fc4fb0800000000000000
+      internalID: -4662086396492139294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_92
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297fd5d0675769300800000000000000
+      internalID: 258523178511234962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_93
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1780f968241bbd30800000000000000
+      internalID: 4448171220767115034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_94
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a146cd5722fab66d0800000000000000
+      internalID: -2996108564543806438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_95
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f89683145cb40e0800000000000000
+      internalID: -2284515502050406560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ffcc9683b188bb0800000000000000
+      internalID: -4933663462677217410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_97
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd192bb0049587b20800000000000000
+      internalID: 3132351672445211099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_98
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadd190de37e253d0800000000000000
+      internalID: -3219256526643274326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_99
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ebd930213b7d5f0800000000000000
+      internalID: -731919524472963521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_100
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c8ee67ccc40a520800000000000000
+      internalID: 2711251416729422969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_101
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b866ea750ebae3d80800000000000000
+      internalID: -8268982885773580661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_102
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1af0033f9c732f0800000000000000
+      internalID: -993103146491338243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_103
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859f99231e72bf170800000000000000
+      internalID: 8213202193610307928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df74173b7806e8de0800000000000000
+      internalID: -1329018704080320515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_105
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2f40dcfe2a3fbd0800000000000000
+      internalID: -2597553409242107225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_106
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a8268d0f71d1480800000000000000
+      internalID: -8926952563188528622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean1_107
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289d0eefd9d579b40800000000000000
+      internalID: 5446925207495301506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

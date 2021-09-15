@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 28ce63a27643b4018b6022eedb02c3e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6035232356422378556
+    second: topiary trex_0
+  - first:
+      213: -4135077395355841788
+    second: topiary trex_1
+  - first:
+      213: -5729883524599397541
+    second: topiary trex_2
+  - first:
+      213: -6156458466067544464
+    second: topiary trex_3
+  - first:
+      213: -353462039000284055
+    second: topiary trex_4
+  - first:
+      213: 1015678795146878154
+    second: topiary trex_5
+  - first:
+      213: -3472882029299213232
+    second: topiary trex_6
+  - first:
+      213: -6974258608802728997
+    second: topiary trex_7
+  - first:
+      213: -6181353046818767149
+    second: topiary trex_8
+  - first:
+      213: 3850452639867136967
+    second: topiary trex_9
+  - first:
+      213: 2094759476798679483
+    second: topiary trex_10
+  - first:
+      213: -329979963542221732
+    second: topiary trex_11
+  - first:
+      213: -3492182145889620180
+    second: topiary trex_12
+  - first:
+      213: -5634771915840848161
+    second: topiary trex_13
+  - first:
+      213: 1332935297519035571
+    second: topiary trex_14
+  - first:
+      213: -4651451159152885348
+    second: topiary trex_15
+  - first:
+      213: 3625593545411857244
+    second: topiary trex_16
+  - first:
+      213: -723867157476406553
+    second: topiary trex_17
+  - first:
+      213: 2375466339339231657
+    second: topiary trex_18
+  - first:
+      213: -6239020252277206507
+    second: topiary trex_19
+  - first:
+      213: 965612583535540848
+    second: topiary trex_20
+  - first:
+      213: -2494338328963018240
+    second: topiary trex_21
+  - first:
+      213: 7647455382894942464
+    second: topiary trex_22
+  - first:
+      213: 8442936272639955274
+    second: topiary trex_23
+  - first:
+      213: -5776584083632664508
+    second: topiary trex_24
+  - first:
+      213: -5894240201131257369
+    second: topiary trex_25
+  - first:
+      213: -7398437360357959165
+    second: topiary trex_26
+  - first:
+      213: 8582094689614325626
+    second: topiary trex_27
+  - first:
+      213: -2051645918422581227
+    second: topiary trex_28
+  - first:
+      213: -3949276674059641208
+    second: topiary trex_29
+  - first:
+      213: -2868115996687417882
+    second: topiary trex_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: topiary trex_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34ef752ad371c350800000000000000
+      internalID: 6035232356422378556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b411b74014d96c0800000000000000
+      internalID: -4135077395355841788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_2
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53c3e7ea4d5b70b0800000000000000
+      internalID: -5729883524599397541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_3
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0760997b4addf8aa0800000000000000
+      internalID: -6156458466067544464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_4
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9648dc3f520481bf0800000000000000
+      internalID: -353462039000284055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_5
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 2190
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc50ae9b7a681e00800000000000000
+      internalID: 1015678795146878154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c58c8c138ddcfc0800000000000000
+      internalID: -3472882029299213232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_7
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd37a9a1fb4763f90800000000000000
+      internalID: -6974258608802728997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_8
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deb615772c673aa0800000000000000
+      internalID: -6181353046818767149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_9
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbeebf764e8f6530800000000000000
+      internalID: 3850452639867136967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_10
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9e77845a4121d10800000000000000
+      internalID: 2094759476798679483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_11
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 1752
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cc112b8fcab6bf0800000000000000
+      internalID: -329979963542221732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fa94737d6498fc0800000000000000
+      internalID: -3492182145889620180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_13
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde75fdfbc44dc1b0800000000000000
+      internalID: -5634771915840848161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_14
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4a33547998f7210800000000000000
+      internalID: 1332935297519035571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_15
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c910d90b0d9b27fb0800000000000000
+      internalID: -4651451159152885348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_16
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b093ece12b05230800000000000000
+      internalID: 3625593545411857244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_17
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 1314
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea0c0ec7ae44f5f0800000000000000
+      internalID: -723867157476406553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a16634cc0a57f020800000000000000
+      internalID: 2375466339339231657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_19
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5129c84e22c8a69a0800000000000000
+      internalID: -6239020252277206507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_20
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a7848578b866d00800000000000000
+      internalID: 965612583535540848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_21
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00294806184526dd0800000000000000
+      internalID: -2494338328963018240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_22
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0091a1d1728312a60800000000000000
+      internalID: 7647455382894942464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_23
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 876
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4117ffaec55b2570800000000000000
+      internalID: 8442936272639955274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44056efa16375dfa0800000000000000
+      internalID: -5776584083632664508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_25
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e19ebe14c3733ea0800000000000000
+      internalID: -5894240201131257369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_26
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a92ea5b68735990800000000000000
+      internalID: -7398437360357959165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_27
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a776a3b76a9b91770800000000000000
+      internalID: 8582094689614325626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_28
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510ca8348e61783e0800000000000000
+      internalID: -2051645918422581227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_29
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 438
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e50f20ac95139c0800000000000000
+      internalID: -3949276674059641208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary trex_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 454
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edb4da62b76238d0800000000000000
+      internalID: -2868115996687417882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

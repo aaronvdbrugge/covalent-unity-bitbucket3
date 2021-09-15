@@ -1,0 +1,2732 @@
+fileFormatVersion: 2
+guid: 2233f00a3e759410192e378b87890c09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2797664489347398083
+    second: ocean4_0
+  - first:
+      213: -3650847558885482186
+    second: ocean4_1
+  - first:
+      213: -5105715410994103866
+    second: ocean4_2
+  - first:
+      213: 9090184321934275953
+    second: ocean4_3
+  - first:
+      213: 7862132989454299357
+    second: ocean4_4
+  - first:
+      213: 5255070806660096637
+    second: ocean4_5
+  - first:
+      213: 7476468842074995038
+    second: ocean4_6
+  - first:
+      213: -5210342472407687337
+    second: ocean4_7
+  - first:
+      213: 6379254882940832375
+    second: ocean4_8
+  - first:
+      213: 1366003473832504674
+    second: ocean4_9
+  - first:
+      213: 2193728633185235588
+    second: ocean4_10
+  - first:
+      213: -5500358125887394082
+    second: ocean4_11
+  - first:
+      213: 5137444202957760725
+    second: ocean4_12
+  - first:
+      213: 4498669217556790908
+    second: ocean4_13
+  - first:
+      213: 8124433536836132619
+    second: ocean4_14
+  - first:
+      213: -4737806132091998527
+    second: ocean4_15
+  - first:
+      213: -5558634271402699641
+    second: ocean4_16
+  - first:
+      213: 4648798805984232680
+    second: ocean4_17
+  - first:
+      213: -8929363129710662512
+    second: ocean4_18
+  - first:
+      213: 1136387405984114980
+    second: ocean4_19
+  - first:
+      213: -2118407867260683760
+    second: ocean4_20
+  - first:
+      213: -5181298822001415919
+    second: ocean4_21
+  - first:
+      213: 6866344543442801258
+    second: ocean4_22
+  - first:
+      213: -7685451198056873530
+    second: ocean4_23
+  - first:
+      213: -2468085080680980625
+    second: ocean4_24
+  - first:
+      213: 660555955815464741
+    second: ocean4_25
+  - first:
+      213: 8250935338546867997
+    second: ocean4_26
+  - first:
+      213: 5484777096460310257
+    second: ocean4_27
+  - first:
+      213: 5002075953123130558
+    second: ocean4_28
+  - first:
+      213: -3394619563318660615
+    second: ocean4_29
+  - first:
+      213: -5488552141528354239
+    second: ocean4_30
+  - first:
+      213: -878522395736144930
+    second: ocean4_31
+  - first:
+      213: 8769366570811236733
+    second: ocean4_32
+  - first:
+      213: 8496490559157797034
+    second: ocean4_33
+  - first:
+      213: -2511453324680098901
+    second: ocean4_34
+  - first:
+      213: -4608935520815892826
+    second: ocean4_35
+  - first:
+      213: -6469860247134567689
+    second: ocean4_36
+  - first:
+      213: 1700105879013029395
+    second: ocean4_37
+  - first:
+      213: 756612521657964610
+    second: ocean4_38
+  - first:
+      213: -2510339798678307325
+    second: ocean4_39
+  - first:
+      213: 5806209281370466251
+    second: ocean4_40
+  - first:
+      213: -8307636660625266230
+    second: ocean4_41
+  - first:
+      213: -4144611636500696948
+    second: ocean4_42
+  - first:
+      213: -6806130329305389613
+    second: ocean4_43
+  - first:
+      213: -150399213846993652
+    second: ocean4_44
+  - first:
+      213: 1847704124395096376
+    second: ocean4_45
+  - first:
+      213: 5314771726502583808
+    second: ocean4_46
+  - first:
+      213: -7517476730578821830
+    second: ocean4_47
+  - first:
+      213: 477281832610668064
+    second: ocean4_48
+  - first:
+      213: -1576609045236430557
+    second: ocean4_49
+  - first:
+      213: 6654939559277877954
+    second: ocean4_50
+  - first:
+      213: -3805405826047697858
+    second: ocean4_51
+  - first:
+      213: 3947506834832118530
+    second: ocean4_52
+  - first:
+      213: 4581978129791318664
+    second: ocean4_53
+  - first:
+      213: -3784948914332064972
+    second: ocean4_54
+  - first:
+      213: 4749648469242197819
+    second: ocean4_55
+  - first:
+      213: -4239985096558906151
+    second: ocean4_56
+  - first:
+      213: -3933758135295078276
+    second: ocean4_57
+  - first:
+      213: -1748866661367395971
+    second: ocean4_58
+  - first:
+      213: -4231649985843625519
+    second: ocean4_59
+  - first:
+      213: 2299173902193943349
+    second: ocean4_60
+  - first:
+      213: 7393495678247443456
+    second: ocean4_61
+  - first:
+      213: -8109304501393184309
+    second: ocean4_62
+  - first:
+      213: -659254980503037299
+    second: ocean4_63
+  - first:
+      213: -6875333870569401277
+    second: ocean4_64
+  - first:
+      213: 1589696489833720910
+    second: ocean4_65
+  - first:
+      213: 137425206104475062
+    second: ocean4_66
+  - first:
+      213: -7463047410845505852
+    second: ocean4_67
+  - first:
+      213: 5094563847762607544
+    second: ocean4_68
+  - first:
+      213: -7619168233378907108
+    second: ocean4_69
+  - first:
+      213: 8742532830790502035
+    second: ocean4_70
+  - first:
+      213: 217624964759932607
+    second: ocean4_71
+  - first:
+      213: 6063819405247177525
+    second: ocean4_72
+  - first:
+      213: 7222891465003655657
+    second: ocean4_73
+  - first:
+      213: -4376846081037334713
+    second: ocean4_74
+  - first:
+      213: 1365772639246710067
+    second: ocean4_75
+  - first:
+      213: -1772473636368974839
+    second: ocean4_76
+  - first:
+      213: 2233549381785551466
+    second: ocean4_77
+  - first:
+      213: -4192723285168526430
+    second: ocean4_78
+  - first:
+      213: 3256124209354702123
+    second: ocean4_79
+  - first:
+      213: 5631081793570567114
+    second: ocean4_80
+  - first:
+      213: 8637925648483113478
+    second: ocean4_81
+  - first:
+      213: -7701170803380093359
+    second: ocean4_82
+  - first:
+      213: 5038486160061219636
+    second: ocean4_83
+  - first:
+      213: -3725225725099426818
+    second: ocean4_84
+  - first:
+      213: 5184973251513988670
+    second: ocean4_85
+  - first:
+      213: 6436063513400099030
+    second: ocean4_86
+  - first:
+      213: -530352620441384435
+    second: ocean4_87
+  - first:
+      213: 7508896809614620224
+    second: ocean4_88
+  - first:
+      213: -3757840718295332705
+    second: ocean4_89
+  - first:
+      213: 2511715186519664831
+    second: ocean4_90
+  - first:
+      213: 3096511014687179185
+    second: ocean4_91
+  - first:
+      213: 1605654690828267386
+    second: ocean4_92
+  - first:
+      213: 7658893836734731639
+    second: ocean4_93
+  - first:
+      213: 8190651463611460399
+    second: ocean4_94
+  - first:
+      213: 2241583626418477253
+    second: ocean4_95
+  - first:
+      213: -1391147326559652342
+    second: ocean4_96
+  - first:
+      213: 2655889079664114726
+    second: ocean4_97
+  - first:
+      213: -2813399747579289648
+    second: ocean4_98
+  - first:
+      213: 476052291210735696
+    second: ocean4_99
+  - first:
+      213: -4781601436717789535
+    second: ocean4_100
+  - first:
+      213: -7722709712298628046
+    second: ocean4_101
+  - first:
+      213: 463486946616008634
+    second: ocean4_102
+  - first:
+      213: 7251329580578160442
+    second: ocean4_103
+  - first:
+      213: -7354075315299376962
+    second: ocean4_104
+  - first:
+      213: -609675040848767265
+    second: ocean4_105
+  - first:
+      213: -249288849234718010
+    second: ocean4_106
+  - first:
+      213: -6619889581087195933
+    second: ocean4_107
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ocean4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3649b738f2bc29d0800000000000000
+      internalID: -2797664489347398083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631678bfc75955dc0800000000000000
+      internalID: -3650847558885482186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9757b82ead429b0800000000000000
+      internalID: -5105715410994103866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_3
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175b7bb9a72d62e70800000000000000
+      internalID: 9090184321934275953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_4
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0bd4d6c48eb1d60800000000000000
+      internalID: 7862132989454299357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_5
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72208c5e03cde840800000000000000
+      internalID: 5255070806660096637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_6
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59f722ccc0c1c760800000000000000
+      internalID: 7476468842074995038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_7
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3826
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f520e702521b7b0800000000000000
+      internalID: -5210342472407687337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a4d5d648aa78850800000000000000
+      internalID: 6379254882940832375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d6cbb0ce405f210800000000000000
+      internalID: 1366003473832504674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482fb9aa190b17e10800000000000000
+      internalID: 2193728633185235588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede6c093d6dcaa3b0800000000000000
+      internalID: -5500358125887394082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_12
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8efa2884edb4740800000000000000
+      internalID: 5137444202957760725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_13
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ef47281db7e6e30800000000000000
+      internalID: 4498669217556790908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_14
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f5364b149cfb070800000000000000
+      internalID: 8124433536836132619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_15
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3556
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce2df1cc6eef3eb0800000000000000
+      internalID: -4737806132091998527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784dab0c493cbd2b0800000000000000
+      internalID: -5558634271402699641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_17
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e443f632e9d38040800000000000000
+      internalID: 4648798805984232680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_18
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c20271b87841480800000000000000
+      internalID: -8929363129710662512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_19
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42929ec235245cf00800000000000000
+      internalID: 1136387405984114980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_20
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ab88eb447e992e0800000000000000
+      internalID: -2118407867260683760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_21
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119a47f4c245818b0800000000000000
+      internalID: -5181298822001415919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_22
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6299599bf72a4f50800000000000000
+      internalID: 6866344543442801258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_23
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3286
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c14839cadac75590800000000000000
+      internalID: -7685451198056873530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f919212b99fbdd0800000000000000
+      internalID: -2468085080680980625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_25
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f36ac5424ca2900800000000000000
+      internalID: 660555955815464741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fadce99f5318270800000000000000
+      internalID: 8250935338546867997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_27
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f617baa5b7dd1c40800000000000000
+      internalID: 5484777096460310257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_28
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc7d65c391fa6540800000000000000
+      internalID: 5002075953123130558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_29
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1bccc1e73e3e0d0800000000000000
+      internalID: -3394619563318660615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_30
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1423ef828eeb4d3b0800000000000000
+      internalID: -5488552141528354239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_31
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3016
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed30ce2298cdec3f0800000000000000
+      internalID: -878522395736144930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71a36e1f6c03b970800000000000000
+      internalID: 8769366570811236733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_33
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa08f00b52999e570800000000000000
+      internalID: 8496490559157797034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_34
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab0878e186852dd0800000000000000
+      internalID: -2511453324680098901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_35
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6b6112095c900c0800000000000000
+      internalID: -4608935520815892826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_36
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f28f1f42607636a0800000000000000
+      internalID: -6469860247134567689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_37
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316ff171a4df79710800000000000000
+      internalID: 1700105879013029395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_38
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248190a6417008a00800000000000000
+      internalID: 756612521657964610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_39
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2746
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ef042e04b792dd0800000000000000
+      internalID: -2510339798678307325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7a9ab249cc39050800000000000000
+      internalID: 5806209281370466251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_41
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac92b60197855bc80800000000000000
+      internalID: -8307636660625266230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_42
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80fc6afca16b76c0800000000000000
+      internalID: -4144611636500696948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_43
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d56db2a684cb81a0800000000000000
+      internalID: -6806130329305389613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_44
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05e62c36bca9edf0800000000000000
+      internalID: -150399213846993652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_45
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83908909c1d54a910800000000000000
+      internalID: 1847704124395096376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_46
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ed974f9bcd1c940800000000000000
+      internalID: 5314771726502583808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_47
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2476
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d959a2ebe8ca790800000000000000
+      internalID: -7517476730578821830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e918a4c45af9600800000000000000
+      internalID: 477281832610668064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329c3053d62ce1ae0800000000000000
+      internalID: -1576609045236430557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_50
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cad37015481b5c50800000000000000
+      internalID: 6654939559277877954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_51
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c9938209b703bc0800000000000000
+      internalID: -3805405826047697858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_52
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203589e2d8c58c630800000000000000
+      internalID: 3947506834832118530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_53
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88af1da25d4769f30800000000000000
+      internalID: 4581978129791318664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_54
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433ac341409297bc0800000000000000
+      internalID: -3784948914332064972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_55
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2206
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37b8293e142ae140800000000000000
+      internalID: 4749648469242197819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4f7a2e40c8825c0800000000000000
+      internalID: -4239985096558906151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_57
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c701f6161db7869c0800000000000000
+      internalID: -3933758135295078276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_58
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d794ca19907cab7e0800000000000000
+      internalID: -1748866661367395971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_59
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1010412c82645c0800000000000000
+      internalID: -4231649985843625519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_60
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5336e158b7e48ef10800000000000000
+      internalID: 2299173902193943349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_61
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c135e9529fa9660800000000000000
+      internalID: 7393495678247443456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_62
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9abfa5586f57f80800000000000000
+      internalID: -8109304501393184309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_63
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1936
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a95be861bd9d6f0800000000000000
+      internalID: -659254980503037299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344df749548e590a0800000000000000
+      internalID: -6875333870569401277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_65
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c6931f88cbf0610800000000000000
+      internalID: 1589696489833720910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_66
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5ca013f7b38e100800000000000000
+      internalID: 137425206104475062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_67
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6a7a6bbeded6890800000000000000
+      internalID: -7463047410845505852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_68
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdff6fc3d683b640800000000000000
+      internalID: 5094563847762607544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_69
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c728d1cd6434690800000000000000
+      internalID: -7619168233378907108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_70
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39645782a47b35970800000000000000
+      internalID: 8742532830790502035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_71
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1666
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec5ce90c8250300800000000000000
+      internalID: 217624964759932607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533e0ef1f93072450800000000000000
+      internalID: 6063819405247177525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e16eb6d48ddc3460800000000000000
+      internalID: 7222891465003655657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_74
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7478537cda15243c0800000000000000
+      internalID: -4376846081037334713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_75
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3357f3eaaf234f210800000000000000
+      internalID: 1365772639246710067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_76
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c7b726e98e667e0800000000000000
+      internalID: -1772473636368974839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_77
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a620f9134592ffe10800000000000000
+      internalID: 2233549381785551466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_78
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab650ad26470d5c0800000000000000
+      internalID: -4192723285168526430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_79
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1396
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2df22b77b3103d20800000000000000
+      internalID: 3256124209354702123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac371f67e0f952e40800000000000000
+      internalID: 5631081793570567114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_81
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a52129c9310e770800000000000000
+      internalID: 8637925648483113478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_82
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e7be5f4f1ff1590800000000000000
+      internalID: -7701170803380093359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_83
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433cb20b77c4ce540800000000000000
+      internalID: 5038486160061219636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_84
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb3d4ba0f65d4cc0800000000000000
+      internalID: -3725225725099426818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_85
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b46a73b9b4f740800000000000000
+      internalID: 5184973251513988670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_86
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0c01c6aad715950800000000000000
+      internalID: 6436063513400099030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_87
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1126
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ac4e40a1fc3a8f0800000000000000
+      internalID: -530352620441384435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046b4205dd5f43860800000000000000
+      internalID: 7508896809614620224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_89
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98028fc6c779dbc0800000000000000
+      internalID: -3757840718295332705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_90
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8657d87a76bd220800000000000000
+      internalID: 2511715186519664831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_91
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b18381ac5409fa20800000000000000
+      internalID: 3096511014687179185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_92
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f22c62f6e684610800000000000000
+      internalID: 1605654690828267386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_93
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775900fad5bd94a60800000000000000
+      internalID: 7658893836734731639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_94
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b28973c1a0ba170800000000000000
+      internalID: 8190651463611460399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_95
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 856
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8510b8e64bb1f10800000000000000
+      internalID: 2241583626418477253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a067d2a80e6a1bce0800000000000000
+      internalID: -1391147326559652342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_97
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cf734eb0d9bd420800000000000000
+      internalID: 2655889079664114726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_98
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfdc5ae5dbc4f8d0800000000000000
+      internalID: -2813399747579289648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_99
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050702069074b9600800000000000000
+      internalID: 476052291210735696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_100
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae40fac3d654adb0800000000000000
+      internalID: -4781601436717789535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_101
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c2bfeee6c63d490800000000000000
+      internalID: -7722709712298628046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_102
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfd31b1ce2ae6600800000000000000
+      internalID: 463486946616008634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_103
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 586
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fb4a795d5e1a460800000000000000
+      internalID: 7251329580578160442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0ac1cd67311f990800000000000000
+      internalID: -7354075315299376962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_105
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd699c1d7cff987f0800000000000000
+      internalID: -609675040848767265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_106
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c216e6cc195a8cf0800000000000000
+      internalID: -249288849234718010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean4_107
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 316
+        width: 440
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecfcfaef7d6124a0800000000000000
+      internalID: -6619889581087195933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

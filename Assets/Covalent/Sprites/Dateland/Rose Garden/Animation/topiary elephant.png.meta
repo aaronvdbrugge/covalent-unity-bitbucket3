@@ -1,0 +1,1028 @@
+fileFormatVersion: 2
+guid: f43d442600a51424086bafc14d22605b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8501633722162221341
+    second: topiary elephant_0
+  - first:
+      213: -2496702910113514008
+    second: topiary elephant_1
+  - first:
+      213: 634795256143320306
+    second: topiary elephant_2
+  - first:
+      213: -8401645288735535622
+    second: topiary elephant_3
+  - first:
+      213: 6461669530968373776
+    second: topiary elephant_4
+  - first:
+      213: -877349843984033342
+    second: topiary elephant_5
+  - first:
+      213: 6479083336320533841
+    second: topiary elephant_6
+  - first:
+      213: -6934337564067335071
+    second: topiary elephant_7
+  - first:
+      213: 1827346606959040611
+    second: topiary elephant_8
+  - first:
+      213: 6703478763172621931
+    second: topiary elephant_9
+  - first:
+      213: -3357599035121722706
+    second: topiary elephant_10
+  - first:
+      213: 3227888158462717398
+    second: topiary elephant_11
+  - first:
+      213: 8790100462913440925
+    second: topiary elephant_12
+  - first:
+      213: -1060663433285177840
+    second: topiary elephant_13
+  - first:
+      213: -8318640791024993856
+    second: topiary elephant_14
+  - first:
+      213: -4405385056924724122
+    second: topiary elephant_15
+  - first:
+      213: 5838221094046021478
+    second: topiary elephant_16
+  - first:
+      213: 90757809748375609
+    second: topiary elephant_17
+  - first:
+      213: -2164212384461056503
+    second: topiary elephant_18
+  - first:
+      213: -7007649621785779429
+    second: topiary elephant_19
+  - first:
+      213: 5597899540988533359
+    second: topiary elephant_20
+  - first:
+      213: 5430381532976102877
+    second: topiary elephant_21
+  - first:
+      213: 4536123116945682618
+    second: topiary elephant_22
+  - first:
+      213: -5338915109840801509
+    second: topiary elephant_23
+  - first:
+      213: 5373592761798132269
+    second: topiary elephant_24
+  - first:
+      213: 8937142823592034696
+    second: topiary elephant_25
+  - first:
+      213: -9017330046389745380
+    second: topiary elephant_26
+  - first:
+      213: -1168663750558889307
+    second: topiary elephant_27
+  - first:
+      213: 4455036110514039207
+    second: topiary elephant_28
+  - first:
+      213: -8364316880328260423
+    second: topiary elephant_29
+  - first:
+      213: -4059569093309529917
+    second: topiary elephant_30
+  - first:
+      213: 4614773883179218087
+    second: topiary elephant_31
+  - first:
+      213: -778756408373290078
+    second: topiary elephant_32
+  - first:
+      213: 550716626804141172
+    second: topiary elephant_33
+  - first:
+      213: 2774379500141675748
+    second: topiary elephant_34
+  - first:
+      213: 5293099978990827131
+    second: topiary elephant_35
+  - first:
+      213: -8873293006436502097
+    second: topiary elephant_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: topiary elephant_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eee90c5c21240a80800000000000000
+      internalID: -8501633722162221341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edfffc6eede95dd0800000000000000
+      internalID: -2496702910113514008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_2
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f496831cee3fc800800000000000000
+      internalID: 634795256143320306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_3
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd851caf1c576b80800000000000000
+      internalID: -8401645288735535622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_4
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ab559f3367ca950800000000000000
+      internalID: 6461669530968373776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_5
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2460
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9569d17f603d3f0800000000000000
+      internalID: -877349843984033342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155c98b77f35ae950800000000000000
+      internalID: 6479083336320533841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1647e15a9b844cf90800000000000000
+      internalID: -6934337564067335071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_8
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3681f4dae0a0c5910800000000000000
+      internalID: 1827346606959040611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_9
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e67462b6a870d50800000000000000
+      internalID: 6703478763172621931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa106587796761d0800000000000000
+      internalID: -3357599035121722706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_11
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2050
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd2cd39d23cbcc20800000000000000
+      internalID: 3227888158462717398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cc3ff8cc5bcf970800000000000000
+      internalID: 8790100462913440925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_13
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e6ac02a34c741f0800000000000000
+      internalID: -1060663433285177840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_14
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c971ec46404e8c80800000000000000
+      internalID: -8318640791024993856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_15
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6641037a1adecd2c0800000000000000
+      internalID: -4405385056924724122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_16
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6673ece1727850150800000000000000
+      internalID: 5838221094046021478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_17
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1640
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938f4a24fbf624100800000000000000
+      internalID: 90757809748375609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90692b58d4c27f1e0800000000000000
+      internalID: -2164212384461056503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_19
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13ee0f0cc3dfbe90800000000000000
+      internalID: -7007649621785779429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_20
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a91fc39fbbfad40800000000000000
+      internalID: 5597899540988533359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_21
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddb1eb9b379c5b40800000000000000
+      internalID: 5430381532976102877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_22
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab03cf201fb83fe30800000000000000
+      internalID: 4536123116945682618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_23
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1230
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1139ff8efc58e5b0800000000000000
+      internalID: -5338915109840801509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2286967526d29a40800000000000000
+      internalID: 5373592761798132269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_25
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881822b0c0c170c70800000000000000
+      internalID: 8937142823592034696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_26
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c198b7249120cd280800000000000000
+      internalID: -9017330046389745380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_27
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aacf0eb28218cfe0800000000000000
+      internalID: -1168663750558889307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_28
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a92abc1db773dd30800000000000000
+      internalID: 4455036110514039207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_29
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 820
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b40b370d1afbeb80800000000000000
+      internalID: -8364316880328260423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0812c0b6389a7c0800000000000000
+      internalID: -4059569093309529917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_31
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4b5a98568fa0040800000000000000
+      internalID: 4614773883179218087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_32
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abd9503c2d4135f0800000000000000
+      internalID: -778756408373290078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_33
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cef80bad984a700800000000000000
+      internalID: 550716626804141172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_34
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e40212c473908620800000000000000
+      internalID: 2774379500141675748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_35
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 410
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b763068036ed47940800000000000000
+      internalID: 5293099978990827131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary elephant_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 460
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5f46bf50bbbd480800000000000000
+      internalID: -8873293006436502097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

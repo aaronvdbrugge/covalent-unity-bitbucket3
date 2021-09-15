@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: 97e6b6d889ef441e68d0354b18163b00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7160304406968982629
+    second: pond upper_0
+  - first:
+      213: -3786464673297686102
+    second: pond upper_1
+  - first:
+      213: -2454173674489601107
+    second: pond upper_2
+  - first:
+      213: 40414113310971208
+    second: pond upper_3
+  - first:
+      213: -530980700504540788
+    second: pond upper_4
+  - first:
+      213: -6954417721024824463
+    second: pond upper_5
+  - first:
+      213: 3731167426714866914
+    second: pond upper_6
+  - first:
+      213: 8979482720872940001
+    second: pond upper_7
+  - first:
+      213: 6898858220472316837
+    second: pond upper_8
+  - first:
+      213: 5511693109242918822
+    second: pond upper_9
+  - first:
+      213: -5534417249030255277
+    second: pond upper_10
+  - first:
+      213: 5072341680994826074
+    second: pond upper_11
+  - first:
+      213: 527649996064697055
+    second: pond upper_12
+  - first:
+      213: 5635216893183327576
+    second: pond upper_13
+  - first:
+      213: -2522753286797328107
+    second: pond upper_14
+  - first:
+      213: 4721826609973695820
+    second: pond upper_15
+  - first:
+      213: 417777305520467160
+    second: pond upper_16
+  - first:
+      213: 6170450713392353105
+    second: pond upper_17
+  - first:
+      213: -2141545565792863470
+    second: pond upper_18
+  - first:
+      213: 4969714612450444864
+    second: pond upper_19
+  - first:
+      213: 22149035050107919
+    second: pond upper_20
+  - first:
+      213: 4469078397407196963
+    second: pond upper_21
+  - first:
+      213: 302796374026472784
+    second: pond upper_22
+  - first:
+      213: -5050763939080849935
+    second: pond upper_23
+  - first:
+      213: -181583830980123411
+    second: pond upper_24
+  - first:
+      213: 6967418978265350415
+    second: pond upper_25
+  - first:
+      213: 7065289925241927829
+    second: pond upper_26
+  - first:
+      213: 7132936088238616117
+    second: pond upper_27
+  - first:
+      213: 5425454820720588531
+    second: pond upper_28
+  - first:
+      213: 5735996172433566309
+    second: pond upper_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pond upper_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3606
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cdc05dbe28e5360800000000000000
+      internalID: 7160304406968982629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_1
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3606
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1a681f076c37bc0800000000000000
+      internalID: -3786464673297686102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_2
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 3606
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3aeeabb0601fdd0800000000000000
+      internalID: -2454173674489601107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_3
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 3606
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84510d30c649f8000800000000000000
+      internalID: 40414113310971208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3116
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89b6dbbdd391a8f0800000000000000
+      internalID: -530980700504540788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_5
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3116
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b32a6cde1fc7f90800000000000000
+      internalID: -6954417721024824463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_6
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 3116
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e419da8105c7c330800000000000000
+      internalID: 3731167426714866914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_7
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 3116
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1c36495f78d9c70800000000000000
+      internalID: 8979482720872940001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2626
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a33903fffaadbf50800000000000000
+      internalID: 6898858220472316837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_9
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 2626
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7746f3ea77d7c40800000000000000
+      internalID: 5511693109242918822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_10
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2626
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dc1c8a5dcc133b0800000000000000
+      internalID: -5534417249030255277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_11
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 2626
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57ba1b62e3946640800000000000000
+      internalID: 5072341680994826074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2136
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda2c2530e6925700800000000000000
+      internalID: 527649996064697055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_13
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 2136
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85df87e58ef443e40800000000000000
+      internalID: 5635216893183327576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_14
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2136
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5110f7470416dfcd0800000000000000
+      internalID: -2522753286797328107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_15
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 2136
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c451872d84c478140800000000000000
+      internalID: 4721826609973695820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1646
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc64c2fe3e3cc500800000000000000
+      internalID: 417777305520467160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_17
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1646
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f8ecb3b38d1a550800000000000000
+      internalID: 6170450713392353105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_18
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1646
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b7a9087a3b742e0800000000000000
+      internalID: -2141545565792863470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_19
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1646
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0464d2efb19f7f440800000000000000
+      internalID: 4969714612450444864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1156
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0487461e60be4000800000000000000
+      internalID: 22149035050107919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_21
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1156
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327f3decf1b550e30800000000000000
+      internalID: 4469078397407196963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_22
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1156
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dcf19a2bfb33400800000000000000
+      internalID: 302796374026472784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pond upper_23
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1156
+        width: 740
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5bbbe15f418e9b0800000000000000
+      internalID: -5050763939080849935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

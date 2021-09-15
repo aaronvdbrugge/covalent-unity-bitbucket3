@@ -1,0 +1,692 @@
+fileFormatVersion: 2
+guid: 46374cac6e7bb4ece86cff0b4a8ce13e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3045950074207346055
+    second: hearts above head_0
+  - first:
+      213: 843814678028627864
+    second: hearts above head_1
+  - first:
+      213: -1720414301830181351
+    second: hearts above head_2
+  - first:
+      213: 7489551829019141217
+    second: hearts above head_3
+  - first:
+      213: 4530910736399548317
+    second: hearts above head_4
+  - first:
+      213: -1723621936268123033
+    second: hearts above head_5
+  - first:
+      213: 3118410166353453578
+    second: hearts above head_6
+  - first:
+      213: -5592133879782173438
+    second: hearts above head_7
+  - first:
+      213: -5823693649299121281
+    second: hearts above head_8
+  - first:
+      213: -886057061513226838
+    second: hearts above head_9
+  - first:
+      213: -7239585692012737838
+    second: hearts above head_10
+  - first:
+      213: 5994119123564840628
+    second: hearts above head_11
+  - first:
+      213: -8467290835579074266
+    second: hearts above head_12
+  - first:
+      213: -3584755194460615623
+    second: hearts above head_13
+  - first:
+      213: 6338326725347524871
+    second: hearts above head_14
+  - first:
+      213: -7844968225153045581
+    second: hearts above head_15
+  - first:
+      213: -7969411508190474406
+    second: hearts above head_16
+  - first:
+      213: -5882249876581551900
+    second: hearts above head_17
+  - first:
+      213: -4461045532170954700
+    second: hearts above head_18
+  - first:
+      213: 6611428616471598881
+    second: hearts above head_19
+  - first:
+      213: -2434431110268565165
+    second: hearts above head_20
+  - first:
+      213: 4171292211053943111
+    second: hearts above head_21
+  - first:
+      213: -3398890827006610507
+    second: hearts above head_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hearts above head_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2338
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972eb4fab8c9ab5d0800000000000000
+      internalID: -3045950074207346055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2338
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f282c9af4d5bb00800000000000000
+      internalID: 843814678028627864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_2
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2338
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e09e0ce4cdf18e0800000000000000
+      internalID: -1720414301830181351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2338
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164209705bb30f760800000000000000
+      internalID: 7489551829019141217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2338
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f39181f4701ee30800000000000000
+      internalID: 4530910736399548317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764eaa92bf67418e0800000000000000
+      internalID: -1723621936268123033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02e6753681d64b20800000000000000
+      internalID: 3118410166353453578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205182f5ddfb462b0800000000000000
+      internalID: -5592133879782173438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_8
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bd3d03b751e2fa0800000000000000
+      internalID: -5823693649299121281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa517cd0cc714b3f0800000000000000
+      internalID: -886057061513226838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_10
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2004
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da849a8b23d78b90800000000000000
+      internalID: -7239585692012737838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6457da5936f2350800000000000000
+      internalID: 5994119123564840628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629836fb8d32e7a80800000000000000
+      internalID: -8467290835579074266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_13
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c407bb424604ec0800000000000000
+      internalID: -3584755194460615623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_14
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70144b6239246f750800000000000000
+      internalID: 6338326725347524871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_15
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bba681b6f2112390800000000000000
+      internalID: -7844968225153045581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_16
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1670
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f85610576f66190800000000000000
+      internalID: -7969411508190474406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0754a17ec0e5ea0800000000000000
+      internalID: -5882249876581551900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4385b1069be2712c0800000000000000
+      internalID: -4461045532170954700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_19
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12754ae3c4380cb50800000000000000
+      internalID: 6611428616471598881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_20
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359484aadc9273ed0800000000000000
+      internalID: -2434431110268565165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_21
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749593e5a2863e930800000000000000
+      internalID: 4171292211053943111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts above head_22
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1336
+        width: 111
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3ffe90dc6b4d0d0800000000000000
+      internalID: -3398890827006610507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

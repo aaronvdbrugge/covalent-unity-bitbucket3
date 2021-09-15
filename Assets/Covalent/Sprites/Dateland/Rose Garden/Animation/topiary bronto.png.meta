@@ -1,0 +1,1076 @@
+fileFormatVersion: 2
+guid: 22bcf7a43532842d5986a413d278a13e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1328622910798985702
+    second: topiary bronto_0
+  - first:
+      213: 6451938834816592481
+    second: topiary bronto_1
+  - first:
+      213: -723828903683880642
+    second: topiary bronto_2
+  - first:
+      213: 6432205008090995705
+    second: topiary bronto_3
+  - first:
+      213: 8330587001788082249
+    second: topiary bronto_4
+  - first:
+      213: -5246828302242898746
+    second: topiary bronto_5
+  - first:
+      213: 5904627055383468304
+    second: topiary bronto_6
+  - first:
+      213: 5436273103463912034
+    second: topiary bronto_7
+  - first:
+      213: -2724160802839439219
+    second: topiary bronto_8
+  - first:
+      213: 4827820249519942513
+    second: topiary bronto_9
+  - first:
+      213: 6075355821561551078
+    second: topiary bronto_10
+  - first:
+      213: 1307044008803759524
+    second: topiary bronto_11
+  - first:
+      213: -7083982502715612415
+    second: topiary bronto_12
+  - first:
+      213: -6439833754706143534
+    second: topiary bronto_13
+  - first:
+      213: -8163462512272140612
+    second: topiary bronto_14
+  - first:
+      213: -4575387516883841427
+    second: topiary bronto_15
+  - first:
+      213: 2449490316056563015
+    second: topiary bronto_16
+  - first:
+      213: -6442921475510189836
+    second: topiary bronto_17
+  - first:
+      213: -4196661085350909045
+    second: topiary bronto_18
+  - first:
+      213: -8008100621283359484
+    second: topiary bronto_19
+  - first:
+      213: -5164080829544445422
+    second: topiary bronto_20
+  - first:
+      213: -5585094527749497143
+    second: topiary bronto_21
+  - first:
+      213: 1250558474993618434
+    second: topiary bronto_22
+  - first:
+      213: -1230069268990666008
+    second: topiary bronto_23
+  - first:
+      213: -6956889208714076272
+    second: topiary bronto_24
+  - first:
+      213: 6371716735923912990
+    second: topiary bronto_25
+  - first:
+      213: 819782825665430899
+    second: topiary bronto_26
+  - first:
+      213: -5005670482966725217
+    second: topiary bronto_27
+  - first:
+      213: -5878499893334164491
+    second: topiary bronto_28
+  - first:
+      213: -627846494572489327
+    second: topiary bronto_29
+  - first:
+      213: -2658806238322719753
+    second: topiary bronto_30
+  - first:
+      213: 7292882297096966076
+    second: topiary bronto_31
+  - first:
+      213: -5191471043748104020
+    second: topiary bronto_32
+  - first:
+      213: 2616045412023993808
+    second: topiary bronto_33
+  - first:
+      213: -6785188312804162733
+    second: topiary bronto_34
+  - first:
+      213: -2873019732268849192
+    second: topiary bronto_35
+  - first:
+      213: 6716403397665997849
+    second: topiary bronto_36
+  - first:
+      213: -223347795471998660
+    second: topiary bronto_37
+  - first:
+      213: 4953492781347052547
+    second: topiary bronto_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: topiary bronto_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1681618088cf8de0800000000000000
+      internalID: -1328622910798985702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a6ac9bf24e98950800000000000000
+      internalID: 6451938834816592481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3903c5727174f5f0800000000000000
+      internalID: -723828903683880642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb90c52068c34950800000000000000
+      internalID: 6432205008090995705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948a014adb03c9370800000000000000
+      internalID: 8330587001788082249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2808
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc985f35758f27b0800000000000000
+      internalID: -5246828302242898746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019da47d50371f150800000000000000
+      internalID: 5904627055383468304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2621af1c595817b40800000000000000
+      internalID: 5436273103463912034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8856bbde26d13ad0800000000000000
+      internalID: -2724160802839439219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17be21420fcdff240800000000000000
+      internalID: 4827820249519942513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8174c5eefff4450800000000000000
+      internalID: 6075355821561551078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2340
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5fc8ad99d832210800000000000000
+      internalID: 1307044008803759524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103ad824273a0bd90800000000000000
+      internalID: -7083982502715612415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d69b2ed15d11a6a0800000000000000
+      internalID: -6439833754706143534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb61dc2d81e85be80800000000000000
+      internalID: -8163462512272140612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ec16a7b45f080c0800000000000000
+      internalID: -4575387516883841427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d8f49e6765ef120800000000000000
+      internalID: 2449490316056563015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1872
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0ca78dd052696a0800000000000000
+      internalID: -6442921475510189836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b24fc4af672c5c0800000000000000
+      internalID: -4196661085350909045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40502d6e9e28dd090800000000000000
+      internalID: -8008100621283359484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a499398df7558b0800000000000000
+      internalID: -5164080829544445422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce538c3e12cd72b0800000000000000
+      internalID: -5585094527749497143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e49d8ae40ea5110800000000000000
+      internalID: 1250558474993618434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_23
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1404
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eadfac548aedeee0800000000000000
+      internalID: -1230069268990666008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f59d4bf1a247f90800000000000000
+      internalID: -6956889208714076272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11082ecc92ec6850800000000000000
+      internalID: 6371716735923912990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37501c4f224706b00800000000000000
+      internalID: 819782825665430899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d3c188739488ab0800000000000000
+      internalID: -5005670482966725217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb35ad1e7f5b6ea0800000000000000
+      internalID: -5878499893334164491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_29
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 936
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195588d80f07947f0800000000000000
+      internalID: -627846494572489327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f38e2e20d50a1bd0800000000000000
+      internalID: -2658806238322719753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf03335fc5853560800000000000000
+      internalID: 7292882297096966076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8faaf579034f7b0800000000000000
+      internalID: -5191471043748104020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_33
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d50bfb117f0e4420800000000000000
+      internalID: 2616045412023993808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3530d21dd2b26d1a0800000000000000
+      internalID: -6785188312804162733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_35
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 468
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d76d6186cbf028d0800000000000000
+      internalID: -2873019732268849192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914cb1e1e45753d50800000000000000
+      internalID: 6716403397665997849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3166850d5286ecf0800000000000000
+      internalID: -223347795471998660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: topiary bronto_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c17ad90775eb440800000000000000
+      internalID: 4953492781347052547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1580 @@
+fileFormatVersion: 2
+guid: 2f9626205dce64fc887e71a9d09b507d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7035141729170985926
+    second: lilypad_0
+  - first:
+      213: 6475556805881937438
+    second: lilypad_1
+  - first:
+      213: 6446833864839211373
+    second: lilypad_2
+  - first:
+      213: 8906680828234588084
+    second: lilypad_3
+  - first:
+      213: 897252558211379313
+    second: lilypad_4
+  - first:
+      213: -5682080910248589447
+    second: lilypad_5
+  - first:
+      213: -5304395030221455683
+    second: lilypad_6
+  - first:
+      213: 5638329322232389476
+    second: lilypad_7
+  - first:
+      213: -2076162502944535206
+    second: lilypad_8
+  - first:
+      213: 6788872845537916165
+    second: lilypad_9
+  - first:
+      213: -7738671899462314483
+    second: lilypad_10
+  - first:
+      213: -5810552785475348988
+    second: lilypad_11
+  - first:
+      213: 7236188392120095592
+    second: lilypad_12
+  - first:
+      213: -4956304906414084527
+    second: lilypad_13
+  - first:
+      213: 6959277036373800904
+    second: lilypad_14
+  - first:
+      213: -7951493217067889690
+    second: lilypad_15
+  - first:
+      213: -546704375259633579
+    second: lilypad_16
+  - first:
+      213: 3310919610370905470
+    second: lilypad_17
+  - first:
+      213: -5799425547767850395
+    second: lilypad_18
+  - first:
+      213: 5369336463648929295
+    second: lilypad_19
+  - first:
+      213: -7185041193007976599
+    second: lilypad_20
+  - first:
+      213: 8305666048177160320
+    second: lilypad_21
+  - first:
+      213: 5926485731017677271
+    second: lilypad_22
+  - first:
+      213: -6780583110489238158
+    second: lilypad_23
+  - first:
+      213: -2131951677023975040
+    second: lilypad_24
+  - first:
+      213: 8073234169714906011
+    second: lilypad_25
+  - first:
+      213: 1478227103570426657
+    second: lilypad_26
+  - first:
+      213: -172383535919967632
+    second: lilypad_27
+  - first:
+      213: 1684077203587109723
+    second: lilypad_28
+  - first:
+      213: 7981297436944921265
+    second: lilypad_29
+  - first:
+      213: 6581953024548003330
+    second: lilypad_30
+  - first:
+      213: -4792899321911277794
+    second: lilypad_31
+  - first:
+      213: 6733430318932606248
+    second: lilypad_32
+  - first:
+      213: -4560204920651672614
+    second: lilypad_33
+  - first:
+      213: -6204459325115937212
+    second: lilypad_34
+  - first:
+      213: -3065130925602845680
+    second: lilypad_35
+  - first:
+      213: -896710922456222748
+    second: lilypad_36
+  - first:
+      213: -7075702306448847707
+    second: lilypad_37
+  - first:
+      213: 4486491820545762406
+    second: lilypad_38
+  - first:
+      213: -3332260111804084797
+    second: lilypad_39
+  - first:
+      213: -3888378673169807990
+    second: lilypad_40
+  - first:
+      213: -1671934782182446634
+    second: lilypad_41
+  - first:
+      213: -7090897129691277375
+    second: lilypad_42
+  - first:
+      213: -4369184874517613066
+    second: lilypad_43
+  - first:
+      213: -4686053269430234375
+    second: lilypad_44
+  - first:
+      213: -8957866908602479806
+    second: lilypad_45
+  - first:
+      213: 1576263737394173784
+    second: lilypad_46
+  - first:
+      213: -2810845914722530872
+    second: lilypad_47
+  - first:
+      213: 4003387724931371871
+    second: lilypad_48
+  - first:
+      213: -909093238616634087
+    second: lilypad_49
+  - first:
+      213: -6546229266968869423
+    second: lilypad_50
+  - first:
+      213: 2439016346139102451
+    second: lilypad_51
+  - first:
+      213: -3977399255203925930
+    second: lilypad_52
+  - first:
+      213: 5529669577769587780
+    second: lilypad_53
+  - first:
+      213: 3703531157882451971
+    second: lilypad_54
+  - first:
+      213: -6184469512311764319
+    second: lilypad_55
+  - first:
+      213: 5273372642148247123
+    second: lilypad_56
+  - first:
+      213: -6222882078765994655
+    second: lilypad_57
+  - first:
+      213: 423426894335945368
+    second: lilypad_58
+  - first:
+      213: 7159051969459314402
+    second: lilypad_59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lilypad_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c393cff028d1a160800000000000000
+      internalID: 7035141729170985926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1eb4712b9ccdd950800000000000000
+      internalID: 6475556805881937438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6923b74e31c77950800000000000000
+      internalID: 6446833864839211373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf54be0603ea9b70800000000000000
+      internalID: 8906680828234588084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_4
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170fff5a27ea37c00800000000000000
+      internalID: 897252558211379313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977ca9f54813521b0800000000000000
+      internalID: -5682080910248589447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe7d4be2d00366b0800000000000000
+      internalID: -5304395030221455683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_7
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f945a35ae5f3e40800000000000000
+      internalID: 5638329322232389476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_8
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d410c143dff23e0800000000000000
+      internalID: -2076162502944535206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_9
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 465
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505359f42ebe63e50800000000000000
+      internalID: 6788872845537916165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06504f98e6ba9490800000000000000
+      internalID: -7738671899462314483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_11
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406d519f605cc5fa0800000000000000
+      internalID: -5810552785475348988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8639f10f00b1c6460800000000000000
+      internalID: 7236188392120095592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ea9ae72faa73bb0800000000000000
+      internalID: -4956304906414084527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_14
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7f79eb791549060800000000000000
+      internalID: 6959277036373800904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_15
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb8db24c0f96a190800000000000000
+      internalID: -7951493217067889690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_16
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5586f7b6447b968f0800000000000000
+      internalID: -546704375259633579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_17
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e755808f7dfb2fd20800000000000000
+      internalID: 3310919610370905470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_18
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ad8f3e03d448fa0800000000000000
+      internalID: -5799425547767850395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_19
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 372
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06b853d017b38a40800000000000000
+      internalID: 5369336463648929295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fe53a5a1b994c90800000000000000
+      internalID: -7185041193007976599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_21
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0804f98f347a34370800000000000000
+      internalID: 8305666048177160320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9dabb5f5b1f3250800000000000000
+      internalID: 5926485731017677271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_23
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2759649069786e1a0800000000000000
+      internalID: -6780583110489238158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_24
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08900bcce39c962e0800000000000000
+      internalID: -2131951677023975040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_25
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93176a14b3e90070800000000000000
+      internalID: 8073234169714906011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_26
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b7badf7b7b38410800000000000000
+      internalID: 1478227103570426657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_27
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0725d5066129b9df0800000000000000
+      internalID: -172383535919967632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_28
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5394264b4b0f5710800000000000000
+      internalID: 1684077203587109723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_29
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 279
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b276df6bb343ce60800000000000000
+      internalID: 7981297436944921265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20edd74376bc75b50800000000000000
+      internalID: 6581953024548003330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e178449e5733c7db0800000000000000
+      internalID: -4792899321911277794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_32
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82db2d72333f17d50800000000000000
+      internalID: 6733430318932606248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3919129c5e6b0c0800000000000000
+      internalID: -4560204920651672614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_34
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44eca1fcd1555e9a0800000000000000
+      internalID: -6204459325115937212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_35
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cc065b9a77675d0800000000000000
+      internalID: -3065130925602845680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_36
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3b8c0ca2e3e83f0800000000000000
+      internalID: -896710922456222748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_37
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac44bfad3e0ecd90800000000000000
+      internalID: -7075702306448847707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_38
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66463535a88334e30800000000000000
+      internalID: 4486491820545762406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_39
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 186
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdc6b8551f61c1d0800000000000000
+      internalID: -3332260111804084797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a854281c234b90ac0800000000000000
+      internalID: -3888378673169807990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_41
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d925648c281cc8e0800000000000000
+      internalID: -1671934782182446634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_42
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c71ae531a2189d90800000000000000
+      internalID: -7090897129691277375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_43
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f53e5c61898d53c0800000000000000
+      internalID: -4369184874517613066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_44
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f29d05116bc7feb0800000000000000
+      internalID: -4686053269430234375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_45
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bc587e1834fa380800000000000000
+      internalID: -8957866908602479806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_46
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85795bb848300e510800000000000000
+      internalID: 1576263737394173784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_47
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c90b96788eddf8d0800000000000000
+      internalID: -2810845914722530872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_48
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5391bacce3ee8730800000000000000
+      internalID: 4003387724931371871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_49
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 93
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dcb8c14804263f0800000000000000
+      internalID: -909093238616634087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d50e044a2f1725a0800000000000000
+      internalID: -6546229266968869423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_51
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc0ef0c17029d120800000000000000
+      internalID: 2439016346139102451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_52
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650baa753707dc8c0800000000000000
+      internalID: -3977399255203925930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_53
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4449d3cfe255dbc40800000000000000
+      internalID: 5529669577769587780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_54
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308bc2847f5956330800000000000000
+      internalID: 3703531157882451971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_55
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa8c6aceb95c2aa0800000000000000
+      internalID: -6184469512311764319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_56
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356628f7a78ce2940800000000000000
+      internalID: 5273372642148247123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_57
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d220838b1e3a9a0800000000000000
+      internalID: -6222882078765994655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_58
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89aad39548050e500800000000000000
+      internalID: 423426894335945368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilypad_59
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 0
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eede2006df0a5360800000000000000
+      internalID: 7159051969459314402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
