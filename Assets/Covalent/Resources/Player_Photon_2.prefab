@@ -619,6 +619,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: walking
+  - Type: 4
+    SynchronizeType: 0
+    Name: hopping
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -758,6 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCollisions: {fileID: 5217942367510331885}
   playerMovement: {fileID: 8723383788808815926}
+  playerHop: {fileID: 2999592731245700905}
   anim: {fileID: 2282081113195783074}
   hearts: {fileID: 1049407748}
   splash_feet: {fileID: 7332927974134894237}
@@ -1502,6 +1506,7 @@ MonoBehaviour:
   playerEmotes: {fileID: 331415028678201484}
   playerAgora: {fileID: 4753401094386036590}
   playerHop: {fileID: 2999592731245700905}
+  spinePlayerController: {fileID: 8804191198712331188}
   playerName: {fileID: 2481279367525578877}
   playerName_Black: {fileID: 1672433190}
   user_info:
