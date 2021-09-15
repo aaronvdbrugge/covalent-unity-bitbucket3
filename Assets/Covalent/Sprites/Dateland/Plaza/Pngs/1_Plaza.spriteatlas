@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 1_Plaza
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 50b2a81903cbc440d8e6fa6428198b88, type: 3}
+    - {fileID: 2800000, guid: e2c5f0a15416b4db3864854bbe1e2eea, type: 3}
+    - {fileID: 2800000, guid: 31a2ef91366c341bda2d6ad0f4085e33, type: 3}
+    - {fileID: 2800000, guid: 95ce2ba912bc345a9afd21166d5998b8, type: 3}
+    - {fileID: 2800000, guid: 4949b4e0252d34e878c61bff62f85e3d, type: 3}
+    - {fileID: 2800000, guid: 236c5171d8a764275bb17637a0155799, type: 3}
+    - {fileID: 2800000, guid: 6b84c315f552a4de88ea0ca067608093, type: 3}
+    - {fileID: 2800000, guid: 4d30847624c7a4612827b6ff48ae6041, type: 3}
+    - {fileID: 2800000, guid: 929930a3b851e48d1903d76bca4cfb09, type: 3}
+    - {fileID: 2800000, guid: 3261a49851eb4494d90388adc8a75704, type: 3}
+    - {fileID: 2800000, guid: ec42d6cafe6bf43118a9deb3c31f1273, type: 3}
+    - {fileID: 2800000, guid: 955cbbfcafd9a4329b1f7e1e3d7b95b2, type: 3}
+    - {fileID: 2800000, guid: 5aee745b9bad849f4b25a046c6a4d1de, type: 3}
+    - {fileID: 2800000, guid: f2ce5b4b19ce54ab684abd7c2f5d70d9, type: 3}
+    - {fileID: 2800000, guid: 5685c18d2f8094353a10174bcc3fbe2d, type: 3}
+    - {fileID: 2800000, guid: 713d5b7b6c84f4cd69e0f0f469097ded, type: 3}
+    - {fileID: 2800000, guid: e4d1868f75ddc4e749f770d5003afb0a, type: 3}
+    - {fileID: 2800000, guid: 4966c4666f9bb4c6a86d79ef759d333c, type: 3}
+    - {fileID: 2800000, guid: 2230e189a28c1437badd38fba63d78a5, type: 3}
+    - {fileID: 2800000, guid: 45ce577150b5c4d679b77865c87760ed, type: 3}
+    - {fileID: 2800000, guid: df9ebdaed421f4416bb830635301313b, type: 3}
+    - {fileID: 2800000, guid: abca978ce4d1e474195ea2a18671acf2, type: 3}
+    - {fileID: 2800000, guid: aa07a179284354091bf4b263c5a8655f, type: 3}
+    - {fileID: 2800000, guid: dea96c35fcdc24452a419b1729991d1a, type: 3}
+    - {fileID: 2800000, guid: fdee62364efb64cb7aa04cc617852b02, type: 3}
+    - {fileID: 2800000, guid: 5642bfb75e1884d428c65eac5160a43e, type: 3}
+    - {fileID: 2800000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
+    - {fileID: 2800000, guid: db12320962c714cffb91404396ed1c0c, type: 3}
+    - {fileID: 2800000, guid: 543686de483e54f909cd7eea5564a839, type: 3}
+    - {fileID: 2800000, guid: fd82af38fd3f3449bb1fe797e4718ba9, type: 3}
+    - {fileID: 2800000, guid: cc70a200d3625450aa0cbac4f60f63c4, type: 3}
+    - {fileID: 2800000, guid: 2add761e0339f494eb3712c566b0909c, type: 3}
+    - {fileID: 2800000, guid: 15deb52f8747e43f2af359fa3ff87280, type: 3}
+    - {fileID: 2800000, guid: b80634ad5f8f640ba9a7ff5432410253, type: 3}
+    - {fileID: 2800000, guid: 3e51615ca15be40fcbe8ed3fec3d62be, type: 3}
+    - {fileID: 2800000, guid: 10f13702e348e4d2a8e0f64d73cf7f22, type: 3}
+    - {fileID: 2800000, guid: 55131c34cdef9497d8148f399178bcc5, type: 3}
+    - {fileID: 2800000, guid: 2134a9fd8dbe740638381f3d88196c53, type: 3}
+    - {fileID: 2800000, guid: c2c54d57cd90440409e2396873624fd1, type: 3}
+    totalSpriteSurfaceArea: 35705341
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: cc70a200d3625450aa0cbac4f60f63c4, type: 3}
+  - {fileID: 21300000, guid: 4949b4e0252d34e878c61bff62f85e3d, type: 3}
+  - {fileID: 21300000, guid: 236c5171d8a764275bb17637a0155799, type: 3}
+  - {fileID: 21300000, guid: 45ce577150b5c4d679b77865c87760ed, type: 3}
+  - {fileID: 21300000, guid: 31a2ef91366c341bda2d6ad0f4085e33, type: 3}
+  - {fileID: 21300000, guid: e2c5f0a15416b4db3864854bbe1e2eea, type: 3}
+  - {fileID: 21300000, guid: 10f13702e348e4d2a8e0f64d73cf7f22, type: 3}
+  - {fileID: 21300000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
+  - {fileID: 21300000, guid: 929930a3b851e48d1903d76bca4cfb09, type: 3}
+  - {fileID: 21300000, guid: 55131c34cdef9497d8148f399178bcc5, type: 3}
+  - {fileID: 21300000, guid: 6b84c315f552a4de88ea0ca067608093, type: 3}
+  - {fileID: 21300000, guid: dea96c35fcdc24452a419b1729991d1a, type: 3}
+  - {fileID: 21300000, guid: fdee62364efb64cb7aa04cc617852b02, type: 3}
+  - {fileID: 21300000, guid: 4966c4666f9bb4c6a86d79ef759d333c, type: 3}
+  - {fileID: 21300000, guid: 4d30847624c7a4612827b6ff48ae6041, type: 3}
+  - {fileID: 21300000, guid: c2c54d57cd90440409e2396873624fd1, type: 3}
+  - {fileID: 21300000, guid: 5642bfb75e1884d428c65eac5160a43e, type: 3}
+  - {fileID: 21300000, guid: fd82af38fd3f3449bb1fe797e4718ba9, type: 3}
+  - {fileID: 21300000, guid: 3261a49851eb4494d90388adc8a75704, type: 3}
+  - {fileID: 21300000, guid: db12320962c714cffb91404396ed1c0c, type: 3}
+  - {fileID: 21300000, guid: 50b2a81903cbc440d8e6fa6428198b88, type: 3}
+  - {fileID: 21300000, guid: aa07a179284354091bf4b263c5a8655f, type: 3}
+  - {fileID: 21300000, guid: 2230e189a28c1437badd38fba63d78a5, type: 3}
+  - {fileID: 21300000, guid: 95ce2ba912bc345a9afd21166d5998b8, type: 3}
+  - {fileID: 21300000, guid: ec42d6cafe6bf43118a9deb3c31f1273, type: 3}
+  - {fileID: 21300000, guid: f2ce5b4b19ce54ab684abd7c2f5d70d9, type: 3}
+  - {fileID: 21300000, guid: 5aee745b9bad849f4b25a046c6a4d1de, type: 3}
+  - {fileID: 21300000, guid: 713d5b7b6c84f4cd69e0f0f469097ded, type: 3}
+  - {fileID: 21300000, guid: 3e51615ca15be40fcbe8ed3fec3d62be, type: 3}
+  - {fileID: 21300000, guid: abca978ce4d1e474195ea2a18671acf2, type: 3}
+  - {fileID: 21300000, guid: 955cbbfcafd9a4329b1f7e1e3d7b95b2, type: 3}
+  - {fileID: 21300000, guid: 5685c18d2f8094353a10174bcc3fbe2d, type: 3}
+  - {fileID: 21300000, guid: b80634ad5f8f640ba9a7ff5432410253, type: 3}
+  - {fileID: 21300000, guid: 2134a9fd8dbe740638381f3d88196c53, type: 3}
+  - {fileID: 21300000, guid: 2add761e0339f494eb3712c566b0909c, type: 3}
+  - {fileID: 21300000, guid: df9ebdaed421f4416bb830635301313b, type: 3}
+  - {fileID: 21300000, guid: 543686de483e54f909cd7eea5564a839, type: 3}
+  - {fileID: 21300000, guid: 15deb52f8747e43f2af359fa3ff87280, type: 3}
+  - {fileID: 21300000, guid: e4d1868f75ddc4e749f770d5003afb0a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - stand_cottonCandy@3x
+  - chairPurple_right@3x
+  - chairYellow_left@3x
+  - housePink_left@3x
+  - chairBlue_right@3x
+  - chair_pinkHouse@3x
+  - table_chairYellow@3x
+  - platform_fountain@3x
+  - fence_BG_center@3x
+  - table_pinkHouse@3x
+  - chairYellow_right@3x
+  - lights_fountainBack@3x
+  - lights_fountainFront@3x
+  - houseBlue_right@3x
+  - cloud@3x
+  - tree_tall1@3x
+  - planter_lawn@3x
+  - sky
+  - fence_BG_left@3x
+  - rainbow@3x
+  - chair_blueHouse@3x
+  - light_lawn@3x
+  - houseGreen_left@3x
+  - chairPurple_left@3x
+  - fence_BG_right@3x
+  - fence_rightFar@3x
+  - fence_leftMiddle@3x
+  - ground@3x
+  - table_chairPurple@3x
+  - houseYellow_right@3x
+  - fence_leftFar@3x
+  - fence_rightMiddle@3x
+  - table_chairBlue@3x
+  - trashCan@3x
+  - stand_dolls@3x
+  - housePurple_left@3x
+  - sign_cafe@3x
+  - table_blueHouse@3x
+  - houseBlue_left@3x
+  m_Tag: 1_Plaza
+  m_IsVariant: 0
