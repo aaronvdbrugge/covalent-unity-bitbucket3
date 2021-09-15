@@ -48,11 +48,11 @@ public class Player_Animations : MonoBehaviour
         }
 
         
-        // If we're sitting somewhere, get the SitPoint
-        SitPoint seat = playerHop.GetSittingOn();
-
-
-
+        // If we're sitting somewhere, get the SitPoint.
+        // Special care is needed, because if it's another player, we may not have Instantiated the SitPoint.
+        string seat_uid = playerHop.GetSittingOn();
+        bool sitting = !string.IsNullOrEmpty(seat_uid);
+        SitPoint seat = SitPoint.ByUidOrNull( seat_uid );
 
         // Horizontal flip.
         if( playerMovement.GetVelocity().x > 0.01f )
@@ -72,7 +72,7 @@ public class Player_Animations : MonoBehaviour
         // Relay proper info to Animator
         anim.SetBool("walking", playerMovement.IsWalking() );
         anim.SetBool("hopping", playerHop.hopProgress > 0 );
-        anim.SetBool("sitting", seat != null && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
+        anim.SetBool("sitting", sitting && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
 
 

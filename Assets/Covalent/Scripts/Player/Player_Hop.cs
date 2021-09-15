@@ -78,33 +78,15 @@ public class Player_Hop : MonoBehaviourPun
 
 
 	/// <summary>
-	/// Get the object we're sitting on, or null if N/A. This is retrieved from cusotm properties.
+	/// Get the object we're sitting on, or null if N/A. This is retrieved from custom properties.
+	/// The actual SitPoint can be retrieved by SitPoint.byUid(GetSittingOn()) ,
+	/// however, be wary that we may not have actually instantiated the SitPoint yet!!
 	/// </summary>
-	public SitPoint GetSittingOn()
+	public string GetSittingOn()
 	{
 		if( !photonView.Owner.CustomProperties.ContainsKey("SittingOn") )
 			return null;
-		int sitting_on_id = (int)photonView.Owner.CustomProperties["SittingOn"];
-		if( sitting_on_id == -1 )  // not sititng on anything.
-			return null;
-
-		PhotonView pv = PhotonView.Find( (int)photonView.Owner.CustomProperties["SittingOn"] );   // SittingOn is a PhotonView ID. Retrieve the actual game object...
-
-		if( pv == null )
-		{
-			Debug.LogError("ERROR: Bad SittingOn ID.");
-			return null;
-		}
-		
-		SitPoint sp = pv.GetComponent<SitPoint>();
-
-		if( sp == null )
-		{
-			Debug.LogError("ERROR: No SitPoint attached to PhotonView.");
-			return null;
-		}
-
-		return sp;
+		return (string)photonView.Owner.CustomProperties["SittingOn"];
 	}
 
 
@@ -117,10 +99,10 @@ public class Player_Hop : MonoBehaviourPun
 	/// </summary>
 	public void HopToSeat( SitPoint seat )
 	{
-		if( seat == null || seat.GetOccupiedBy() == -1 )   //we're just getting off our seat, or nobody's sitting there
+		if( seat == null || SitPoint.GetOccupiedBy( seat.uid ) == -1 )   //we're just getting off our seat, or nobody's sitting there
 		{
 			Camera.main.SendMessage("PlaySound", "hop");
-			this.photonView.RPC("HopToSeatRPC", RpcTarget.All, new object[] { seat != null ? seat.photonView.ViewID : -1 });
+			this.photonView.RPC("HopToSeatRPC", RpcTarget.All, new object[] { seat != null ? seat.uid : null });
 		}
 		//else   // can't sit there! already occupied
 		//	Camera.main.SendMessage("PlaySound", "no_can_do");
@@ -129,24 +111,27 @@ public class Player_Hop : MonoBehaviourPun
 
 
 	/// <summary>
-	/// NOTE: -1 is allowed, this means get off the seat.
+	/// NOTE: null is allowed, this means get off the seat.
 	/// </summary>
 	[PunRPC]
-	public void HopToSeatRPC( int seat_view_id )
+	public void HopToSeatRPC( string seat_uid )
 	{
 		// Assuming our RPCs happen in consistent order for all clients, we should get reliable replication here
 		// as to who gets the seat if they both tap at once.
-		if( seat_view_id != -1 )  // getting on a seat
+		if( seat_uid != null )  // getting on a seat
 		{
-			SitPoint seat = PhotonView.Find(seat_view_id).GetComponent<SitPoint>();
-			if( seat.TryOccupy( photonView.Owner.ActorNumber ) )
+			SitPoint seat = SitPoint.ByUidOrNull(seat_uid);
+
+			if( SitPoint.TryOccupy( seat_uid, photonView.Owner.ActorNumber ) )
 			{
 				if( photonView.IsMine )
-					Debug.Log("Seated in seat: " + seat_view_id );
+					Debug.Log("Seated in seat: " + seat_uid );
 
 				hopProgress = hopTime;  //starts the hop in Update
 				_hopStart = transform.position;   //record start position, so we can arc from here to the seat.
-				_hopEnd = seat.transform.position;    //hop onto the seat....
+				_hopEnd = _hopStart;
+				if( seat != null )   // might not be instantiated!
+					_hopEnd = seat.transform.position;    //hop onto the seat....
 
 				_hopStartSortingBias = 0;   // ground bias
 				_hopEndSortingBias = seatSortingBias;   // ...lerp it up to the seat bias
@@ -156,23 +141,26 @@ public class Player_Hop : MonoBehaviourPun
 		}
 		else   // Vacating a seat
 		{
-			SitPoint seat = GetSittingOn();
-			seat.Vacate( photonView.Owner.ActorNumber );
-			{
-				if( photonView.IsMine )
-					Debug.Log("Vacating seat.");
+			string sitting_on = GetSittingOn();
+			SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
 
-				hopProgress = hopTime;
-				_hopStart = transform.position;
+			SitPoint.Vacate( sitting_on, photonView.Owner.ActorNumber );
+			
+			if( photonView.IsMine )
+				Debug.Log("Vacating seat.");
+
+			hopProgress = hopTime;
+			_hopStart = transform.position;
+			_hopEnd = _hopStart;
+			if( seat != null )  // may not be instantiated yet!
 				_hopEnd = seat.returnPoint;    // Seat tells us where to hop down.
 
-				_hopStartSortingBias = seatSortingBias;   
-				_hopEndSortingBias = 0;   // Lerp from seat bias to ground bias
+			_hopStartSortingBias = seatSortingBias;   
+			_hopEndSortingBias = 0;   // Lerp from seat bias to ground bias
 
-				_useStartEnd = true;
+			_useStartEnd = true;
 
-				_enableMovementWhenDone = true;  //we'll wait till the end of the hop to re-enable movement.
-			}
+			_enableMovementWhenDone = true;  //we'll wait till the end of the hop to re-enable movement.
 		}
 	}
 
@@ -180,13 +168,17 @@ public class Player_Hop : MonoBehaviourPun
 
 	private void Update()
 	{
-		SitPoint seat = GetSittingOn();
-		if( seat != null )   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
+		string sitting_on = GetSittingOn();
+		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
 		{
 			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
 			playerMovement.movementEnabled = false;    // Disable movement altogether.
 			if( hopProgress <= 0 )  //not even hopping, so stay put on the bench...
-				playerParent.transform.position = seat.transform.position;
+			{
+				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
+				if( seat != null )  // it might not be instantiated
+					playerParent.transform.position = seat.transform.position;
+			}
 		}
 
 
@@ -239,7 +231,7 @@ public class Player_Hop : MonoBehaviourPun
 					playerMovement.movementEnabled = true;  
 				}
 
-				if( seat != null )   // They hopped onto a seat, can play a sound effect
+				if( !string.IsNullOrEmpty(sitting_on) && photonView.IsMine )   // They hopped onto a seat, can play a sound effect. For now, only Mine can do it
 					Camera.main.SendMessage("PlaySound", "sit_down");
 			}
 		}
