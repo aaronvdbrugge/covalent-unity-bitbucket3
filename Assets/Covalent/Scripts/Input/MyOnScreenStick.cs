@@ -39,8 +39,6 @@ public class MyOnScreenStick : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown: " + Time.time );
-
         // this means it was within the rectangular bounds, but ensure it was actually within the smaller circular bounds.
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out var position);
         var delta = position - m_StartPos;   // Difference between touch position and the center of this stick
