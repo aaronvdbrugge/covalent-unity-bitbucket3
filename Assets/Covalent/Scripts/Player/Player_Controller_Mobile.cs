@@ -17,6 +17,18 @@ using System.Collections;
 public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCallback
 {
     #region Variables
+
+    // Convenience pointer to the owned player.
+    public static Player_Controller_Mobile mine;
+
+    /// <summary>
+    /// Lookup of gameobjects via actor number. Photon doesn't seem to provide this, so we'll set it up as we go.
+    /// Bear in mind players could be destroyed, and the key will point to something that casts to false.
+    /// </summary>
+    public static Dictionary<int, Player_Controller_Mobile> fromActorNumber = new Dictionary<int, Player_Controller_Mobile>();
+
+
+
     [Tooltip("Handles actual movement of the player.")]
     public Player_Movement playerMovement; 
 
@@ -140,6 +152,8 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
         // Initialize based on whether this object belongs to the active player or not.
         if (photonView.IsMine)
         {
+            mine = this;  // convenience global
+
             playerMovement.enabled = true;
             playerCollisions.isMine = true;
 
@@ -175,6 +189,10 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
         playerName.text = name;
         playerName_Black.text = name;
         Debug.Log("Inside Callback the name passed is: " + name + ".");
+
+
+        // Set up this dictionary so we can get gameobjects easily, later.
+        fromActorNumber[ photonView.Owner.ActorNumber ] = this;
 
         // Spine player controller stopped getting this call... Manually forward it
         spinePlayerController.OnPhotonInstantiate( info ); 

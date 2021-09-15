@@ -2763,6 +2763,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1240367790}
     m_Modifications:
+    - target: {fileID: 445228247579914722, guid: a813bd96bcfe2b44f9657adefeb726df,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563188145574279950, guid: a813bd96bcfe2b44f9657adefeb726df,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4268212335118533921, guid: a813bd96bcfe2b44f9657adefeb726df,
         type: 3}
       propertyPath: SorterPositionOffset2.y
@@ -5215,7 +5225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ea86180d0c587409671bbc2233c0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  myCamera: {fileID: 0}
 --- !u!61 &1298520691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8109,6 +8119,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1240367790}
     m_Modifications:
+    - target: {fileID: 445228247579914722, guid: a813bd96bcfe2b44f9657adefeb726df,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563188145574279950, guid: a813bd96bcfe2b44f9657adefeb726df,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4268212335118533921, guid: a813bd96bcfe2b44f9657adefeb726df,
         type: 3}
       propertyPath: SorterPositionOffset2.y

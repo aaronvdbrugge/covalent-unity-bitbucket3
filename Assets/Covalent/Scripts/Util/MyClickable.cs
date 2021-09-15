@@ -13,7 +13,7 @@ public class MyClickable : MonoBehaviour, IPointerClickHandler
 
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
-        Debug.Log("OnPointerDown: " + Time.time );
+        //Debug.Log("OnPointerDown: " + Time.time );
 
 		onClick.Invoke();
 	}

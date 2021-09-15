@@ -10,16 +10,19 @@ using UnityEngine.EventSystems;
 public class SendClicksToCamera : MonoBehaviour, IPointerClickHandler
 {
 	[Tooltip("If left blank we'll fetch Camera.main")]
-	public Camera camera;
+	public Camera myCamera;
 
 	void Start()
 	{
-		if( camera == null )
-			camera = Camera.main;
+		if( myCamera == null )
+			myCamera = Camera.main;
 	}
 
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
-		camera.SendMessage("OnObjectClicked", gameObject);
+		myCamera.SendMessage("OnObjectClicked", gameObject);
+
+		// Also allow any other scripts on this object to respond
+        SendMessage("OnThisClicked", SendMessageOptions.DontRequireReceiver);
 	} 
 }

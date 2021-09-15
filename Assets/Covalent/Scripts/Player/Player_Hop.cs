@@ -12,22 +12,36 @@ public class Player_Hop : MonoBehaviourPun
 	[Header("References")]
 	[Tooltip("Nested under the player object, we can move this up and down to make it look like they're hopping.")]	
 	public Transform playerVisual;
+	[Tooltip("We need to move this when we're hopping into a bench etc.")]
+	public Transform playerParent;
+
 	public IsoSpriteSorting isoSpriteSorting;
+	public Player_Collisions playerCollisions;
+	public Player_Movement playerMovement;
 
 	[Header("Settings")]
 	public float hopTime = 0.5f;
 	public float hopHeight = 5.0f;
-
+	[Tooltip("To make us appear on top of the seat, our sorting position will be smoothly scooted by this amount.")]
+	public float seatSortingBias = 2.0f;   
 
 	[Header("Interface")]
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
 
-
 	float _playerVisualYOriginal;
 	float _isoSpriteSortingPositionOffsetYOriginal;  // we have to modify iso sprite sorting y offset to keep it on the ground.
 	float _isoSpriteSortingPositionOffsetYOriginal2;  //there are two of them
 
+	Vector3 _hopStart;   // World position at which we started the current hop (useful for hopping to a waypoint)
+	Vector3 _hopEnd;   // World position at which we should end the current hop
+	float _hopStartSortingBias = 0;    // We can also lerp isometric sorting bias along the hop...
+	float _hopEndSortingBias = 0;
+
+
+	bool _useStartEnd = false;    //Should we use start/end or just hop in place?
+
+	bool _enableMovementWhenDone = false;    //Should we enable colliders and movement when we finish the hop? Useful for hopping off a bench
 
 	private void Start()
 	{
@@ -48,20 +62,134 @@ public class Player_Hop : MonoBehaviourPun
 		// play the sound. For now, we'll only play a sound if it's the controlled player hopping
 		Camera.main.SendMessage("PlaySound", "hop");
 
-
-        this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
+		if( GetSittingOn() == null )
+			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
+		else  // "Hop in place" while sitting on something! This counts as getting off the seat.
+			HopToSeat( null );
 	}
 
 	[PunRPC]
 	public void HopInPlaceRPC()
 	{
 		hopProgress = hopTime;  //starts the hop in Update
+		_useStartEnd = false;     //no start/end point, just hop in place
+	}
+
+
+
+	/// <summary>
+	/// Get the object we're sitting on, or null if N/A. This is retrieved from cusotm properties.
+	/// </summary>
+	public SitPoint GetSittingOn()
+	{
+		if( !photonView.Owner.CustomProperties.ContainsKey("SittingOn") )
+			return null;
+		int sitting_on_id = (int)photonView.Owner.CustomProperties["SittingOn"];
+		if( sitting_on_id == -1 )  // not sititng on anything.
+			return null;
+
+		PhotonView pv = PhotonView.Find( (int)photonView.Owner.CustomProperties["SittingOn"] );   // SittingOn is a PhotonView ID. Retrieve the actual game object...
+
+		if( pv == null )
+		{
+			Debug.LogError("ERROR: Bad SittingOn ID.");
+			return null;
+		}
+		
+		SitPoint sp = pv.GetComponent<SitPoint>();
+
+		if( sp == null )
+		{
+			Debug.LogError("ERROR: No SitPoint attached to PhotonView.");
+			return null;
+		}
+
+		return sp;
+	}
+
+
+	/// <summary>
+	/// Will arc over to a SitPoint and plant our butt in it, turning off all colliders and
+	/// relinquishing walking control until we tap the screen again, at which point we'll hop
+	/// back down onto the SitPoint's returnPoint.
+	/// 
+	/// You can call this function with null to get off of a seat.
+	/// </summary>
+	public void HopToSeat( SitPoint seat )
+	{
+		if( seat == null || seat.GetOccupiedBy() == -1 )   //we're just getting off our seat, or nobody's sitting there
+		{
+			Camera.main.SendMessage("PlaySound", "hop");
+			this.photonView.RPC("HopToSeatRPC", RpcTarget.All, new object[] { seat != null ? seat.photonView.ViewID : -1 });
+		}
+		//else   // can't sit there! already occupied
+		//	Camera.main.SendMessage("PlaySound", "no_can_do");
+		//This should never happen anyway, because we disable the ProximityInteractable as soon as someone is sitting there.
+	}
+
+
+	/// <summary>
+	/// NOTE: -1 is allowed, this means get off the seat.
+	/// </summary>
+	[PunRPC]
+	public void HopToSeatRPC( int seat_view_id )
+	{
+		// Assuming our RPCs happen in consistent order for all clients, we should get reliable replication here
+		// as to who gets the seat if they both tap at once.
+		if( seat_view_id != -1 )  // getting on a seat
+		{
+			SitPoint seat = PhotonView.Find(seat_view_id).GetComponent<SitPoint>();
+			if( seat.TryOccupy( photonView.Owner.ActorNumber ) )
+			{
+				if( photonView.IsMine )
+					Debug.Log("Seated in seat: " + seat_view_id );
+
+				hopProgress = hopTime;  //starts the hop in Update
+				_hopStart = transform.position;   //record start position, so we can arc from here to the seat.
+				_hopEnd = seat.transform.position;    //hop onto the seat....
+
+				_hopStartSortingBias = 0;   // ground bias
+				_hopEndSortingBias = seatSortingBias;   // ...lerp it up to the seat bias
+
+				_useStartEnd = true;   //uses previous two members for the hop
+			}
+		}
+		else   // Vacating a seat
+		{
+			SitPoint seat = GetSittingOn();
+			seat.Vacate( photonView.Owner.ActorNumber );
+			{
+				if( photonView.IsMine )
+					Debug.Log("Vacating seat.");
+
+				hopProgress = hopTime;
+				_hopStart = transform.position;
+				_hopEnd = seat.returnPoint;    // Seat tells us where to hop down.
+
+				_hopStartSortingBias = seatSortingBias;   
+				_hopEndSortingBias = 0;   // Lerp from seat bias to ground bias
+
+				_useStartEnd = true;
+
+				_enableMovementWhenDone = true;  //we'll wait till the end of the hop to re-enable movement.
+			}
+		}
 	}
 
 
 
 	private void Update()
 	{
+		SitPoint seat = GetSittingOn();
+		if( seat != null )   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
+		{
+			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
+			playerMovement.movementEnabled = false;    // Disable movement altogether.
+			if( hopProgress <= 0 )  //not even hopping, so stay put on the bench...
+				playerParent.transform.position = seat.transform.position;
+		}
+
+
 		if( hopProgress > 0 )
 		{
 			hopProgress = Mathf.Max( hopProgress - Time.deltaTime, 0 );
@@ -87,6 +215,36 @@ public class Player_Hop : MonoBehaviourPun
 			// Modify sprite sorting so it stays on the ground
 			isoSpriteSorting.SorterPositionOffset.y = _isoSpriteSortingPositionOffsetYOriginal - to_add;   // reverse direction
 			isoSpriteSorting.SorterPositionOffset2.y = _isoSpriteSortingPositionOffsetYOriginal2  - to_add;
+
+
+			// We've scooted the player visual locally to make it look like we're hopping.
+			// However, if we're doing _useStartEnd, we'll lerp the entire transform as well
+			// to make us arc onto a chair or something.
+			if( _useStartEnd )
+			{
+				playerParent.transform.position = Vector3.Lerp( _hopStart, _hopEnd, hop_norm );
+
+				// Lerp bias, this makes sure we appear on top of the seat.
+				isoSpriteSorting.SorterPositionOffset.y -= Mathf.Lerp( _hopStartSortingBias, _hopEndSortingBias, hop_norm );
+				isoSpriteSorting.SorterPositionOffset2.y -= Mathf.Lerp( _hopStartSortingBias, _hopEndSortingBias, hop_norm );
+			}
+
+
+			if( hopProgress <= 0  )  // end of hop.
+			{
+				if( _enableMovementWhenDone )  // They were probably hopping off of a bench, re-enable colliders and player movement
+				{
+					_enableMovementWhenDone = false;
+					playerCollisions.EnableColliders( true );
+					playerMovement.movementEnabled = true;  
+				}
+
+				if( seat != null )   // They hopped onto a seat, can play a sound effect
+					Camera.main.SendMessage("PlaySound", "sit_down");
+			}
 		}
 	}
+
+
+
 }

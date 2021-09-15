@@ -48,10 +48,9 @@ public class Player_Animations : MonoBehaviour
         }
 
         
+        // If we're sitting somewhere, get the SitPoint
+        SitPoint seat = playerHop.GetSittingOn();
 
-        // Relay proper info to Animator
-        anim.SetBool("walking", playerMovement.IsWalking() );
-        anim.SetBool("hopping", playerHop.hopProgress > 0 );
 
 
 
@@ -61,9 +60,19 @@ public class Player_Animations : MonoBehaviour
         else if( playerMovement.GetVelocity().x < -0.01f )
             horizontalFlip = true;
 
+        // If we're sitting in a seat, defer to SitPoint for horizontal flip.
+        if( seat != null && playerHop.hopProgress <= 0 )
+            horizontalFlip = !seat.faceRight;
+
+
         float hflip_mult = horizontalFlip ? 1.0f : 0.0f;   //makes our math here a little easier...
         transform.localRotation = new Quaternion(0, hflip_mult*180, 0, 0);
         dontFlip.localRotation = new Quaternion( 0, hflip_mult*180, 0, 0);    // player names etc will have to be un-flipped
+
+        // Relay proper info to Animator
+        anim.SetBool("walking", playerMovement.IsWalking() );
+        anim.SetBool("hopping", playerHop.hopProgress > 0 );
+        anim.SetBool("sitting", seat != null && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
 
 

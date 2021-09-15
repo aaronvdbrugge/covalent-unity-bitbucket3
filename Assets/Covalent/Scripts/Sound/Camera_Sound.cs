@@ -22,8 +22,16 @@ public class Camera_Sound : MonoBehaviour
     public void PlaySound(string name)
     {
         if( !_soundDict.ContainsKey( name ) )  //cache it for future re-use
-            _soundDict[name] = soundParent.Find( name ).GetComponent<AudioSource>();
+        {
+            Transform found = soundParent.Find(name);
+            if( found == null )
+                Debug.LogWarning("TBD: Add sound \"" + name + "\"");   // It's OK to put in sound cues for sounds that don't exist yet. Just print a warning.
+            else
+                _soundDict[name] = found.GetComponent<AudioSource>();
+        }
             
-        _soundDict[name].Play();
+
+        if( _soundDict.ContainsKey( name ) )
+            _soundDict[name].Play();
     }
 }

@@ -1,0 +1,102 @@
+INFO    12:07:57:473  29852; [cap] synchronise capability set with seq: 1
+INFO    12:07:57:493  37640; [WIN_CORE] capture audio stream has now started...
+INFO    12:07:57:493  37640; [WIN_CORE] AgoraRTC::AudioDeviceWindowsCore::StartRecording End
+INFO    12:07:57:493  37640; [WIN_CORE] Current recording Device name:Microphone (Realtek(R) Audio)
+INFO    12:07:57:494  37640; [WIN_CORE] Current recording device id:{0.0.1.00000000}.{09c33118-5337-48d1-b313-6436d2e238c4}
+INFO    12:07:57:494  37640; [WIN_CORE] Default endpoint device will be used
+INFO    12:07:57:494  22800; SetLocalState: state 1 error 0
+INFO    12:07:57:494  22800; SetLocalState: state 2 error 0
+INFO    12:07:57:496  37640; [WIN_CORE] Find recordingDeviceName:Microphone (Realtek(R) Audio)
+INFO    12:07:57:496  37640; [WIN_CORE] Find recordingDeviceId:{0.0.1.00000000}.{09c33118-5337-48d1-b313-6436d2e238c4}
+INFO    12:07:57:496  37640; agora::media::AudioEngineWrapper::setAecType: aec is set to 5
+INFO    12:07:57:496  37640; agora::media::AudioEngineWrapper::setAecType: aec is set to 3
+INFO    12:07:57:496  37640; output: enabled=0
+INFO    12:07:57:496  37640; => OnWindowsCurrentDeviceChange() : kRecordingDevice micBoost 0 max:  0.0 min:  0.0 step:  0.0 level:  0.0 volume:165
+INFO    12:07:57:496  37640; StartRecording complete
+INFO    12:07:57:496  29852; [API][rtc_engine_impl.cpp:5579][agora::rtc::RtcEngine::onMediaEngineEvent]
+INFO    12:07:57:497  22800; AVSync audio_record_delay: 0
+
+INFO    12:07:57:497  29852; TRACER: onFirstLocalAudioFrame codec 85 elapsed 511
+INFO    12:07:57:497  29852; TRACER: onFirstLocalAudioFramePublished codec 85 elapsed 511
+INFO    12:07:57:497  29852; [rp] publish audio old:2,new:3,elapsed:224
+INFO    12:07:57:497  37640; output: enabled=0
+INFO    12:07:57:497  37640; output: volume=51
+INFO    12:07:57:497  37640; output: enabled=0
+INFO    12:07:57:497  37640; agora::media::AudioEngineWrapper::_startCall: audienceRecord 1, mWillsend 1, enableBuildinAEC 0(media volume), enableLocalAudio 1
+INFO    12:07:57:497  37640; output: kWindowsCoreAudio
+INFO    12:07:57:497  37640;   Output: audioLayer=2
+INFO    12:07:57:497  37640; DecideApmParaByStrategy: scenario:1,role:2,routing:3
+INFO    12:07:57:497  37640; agora::media::ApmAudioPolicy::SetAecType: aec is set to 3
+INFO    12:07:57:497  37640; AEC_Delay, Config: dev = 0, npart = 12, agg = -1, diagnosis = 0
+INFO    12:07:57:497  29852; [API][rtc_engine_impl.cpp:5579][agora::rtc::RtcEngine::onMediaEngineEvent]
+INFO    12:07:57:497  37640; GetNsStatus() => enabled= 1, mode=4，nsLevel=-1
+INFO    12:07:57:497  37640; GetAgcStatus() => enabled=0, mode=1
+INFO    12:07:57:497  37640; GetEcStatus() => enabled=1, mode=3
+INFO    12:07:57:497  37640; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters setting as following:BypassAPM =0,Agc=0,Aec=1,Ans=1,Hw3A=0,PitchSmooth=0,MusicDetect=0,ExceptionDetect=0,ToneRemover=0,Bss=0,Hpf=0
+INFO    12:07:57:497  37640; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters for 3A:Agc.targetLeveldBOv =6,Agc.digitalCompressionGaindB=10,Agc.limiterEnable=1,Agc.gmode=1,Aec.aggressiveness=1,Ans.aggressiveness=1
+INFO    12:07:57:512  29852; [ch0] rtt: 238
+INFO    12:07:57:513  29852; [cap] Received capability set ack seq: 1
+INFO    12:07:58:174  29852; [remote:106.14.12.130:8443] PTO fail after 8 times, reset all params
+INFO    12:07:58:727  29852; [rlbs] selected: 35.169.70.181:8443
+INFO    12:07:58:727  29852; create session builder 000001E74F900A00
+INFO    12:07:58:727  29852; [rlbs] selected: 40.124.38.186:8443
+INFO    12:07:58:727  29852; tcp_client connecting 40.124.38.186:8443
+INFO    12:07:58:727  29852; create dangling client connection 000001E64E9C9180
+INFO    12:07:58:738  29852; [remote:35.169.70.181:8443] start 0th connect, send client hello 3106326|syn, tags: SNI :33352d313639...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:07:58:819  29852; [remote:35.169.70.181:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    12:07:58:821  29852; [rlbs] request rs list from 40.124.38.186:8443 with fake ch report_lbs_1631732878821.......
+INFO    12:07:58:821  29852; [remote:35.169.70.181:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    12:07:58:821  29852; [remote:35.169.70.181:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    12:07:58:821  29852; [remote:35.169.70.181:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    12:07:58:821  29852; [remote:35.169.70.181:8443] receive server hello piece id: 4, 5/10, complete
+INFO    12:07:58:826  29852; [remote:35.169.70.181:8443] create connection 000001E74F7BA090, self initial seq: 3106327, initial rtt: 88ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    12:07:58:826  29852; [remote:35.169.70.181:8443] create session 000001E75B3AD440
+INFO    12:07:58:826  29852; [rlbs] request rs list from 35.169.70.181:8443 with fake ch report_lbs_1631732878826.......
+INFO    12:07:58:826  29852; destroy dangling client connection 000001E64E9C9180
+INFO    12:07:58:930  29852; [rlbs] [report servers]: 128.14.196.249
+INFO    12:07:58:930  29852; [rlbs] [report servers]: 128.14.208.46
+INFO    12:07:58:930  29852; [rlbs] [report servers]: 104.194.4.71
+INFO    12:07:58:930  29852; [rlbs/u] responsed from 35.169.70.181:8443 with servers 128.14.196.249:8130
+INFO    12:07:58:930  29852; [rs] RefreshServerByPriority addr:  128.14.196.249:8130  priority:  3
+INFO    12:07:58:930  29852; [rs] RefreshServerByPriority addr:  128.14.208.46:8130  priority:  3
+INFO    12:07:58:930  29852; [rs] RefreshServerByPriority addr:  104.194.4.71:8130  priority:  3
+INFO    12:07:58:930  29852; create session builder 000001E77167C0B0
+INFO    12:07:58:930  29852; destroy dangling client connection 000001E64E9C98E0
+INFO    12:07:58:930  29852; [remote:106.14.12.130:8443] destroy session 000001E763674280
+INFO    12:07:58:930  29852; [remote:106.14.12.130:8443] destroy connection 000001E74F7BD2D0
+INFO    12:07:58:931  29852; [remote:35.169.70.181:8443] destroy session 000001E75B3AD440
+INFO    12:07:58:931  29852; [remote:35.169.70.181:8443] destroy connection 000001E74F7BA090
+INFO    12:07:58:931  29852; create dangling client connection 000001E64E9C98E0
+INFO    12:07:58:933  29852; [remote:128.14.196.249:8130] start 0th connect, send client hello 14067681|syn, tags: SNI :3132382d3134...(28), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    12:07:59:000  29852; [tactics] audio speaker stat expired...
+INFO    12:07:59:014  29852; [remote:128.14.196.249:8130] receive server hello piece id: 0, 1/10, not complete
+INFO    12:07:59:014  29852; [remote:128.14.196.249:8130] receive server hello piece id: 1, 2/10, not complete
+INFO    12:07:59:014  29852; [remote:128.14.196.249:8130] receive server hello piece id: 2, 3/10, not complete
+INFO    12:07:59:014  29852; [remote:128.14.196.249:8130] receive server hello piece id: 3, 4/10, not complete
+INFO    12:07:59:014  29852; [remote:128.14.196.249:8130] receive server hello piece id: 4, 5/10, complete
+INFO    12:07:59:016  29852; [remote:128.14.196.249:8130] create connection 000001E74F7BF880, self initial seq: 14067682, initial rtt: 83ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    12:07:59:016  29852; [remote:128.14.196.249:8130] create session 000001E75B3AD600
+INFO    12:07:59:016  29852; [rs] connected to 128.14.196.249:8130 connection type: aut
+INFO    12:07:59:016  29852; [rs] ResendReportItems report item map size: 62
+INFO    12:07:59:017  29852; destroy dangling client connection 000001E64E9C98E0
+INFO    12:07:59:190  29852; [remote:128.14.196.249:8130] path MTU to remote increased: 1280 --> 1365
+INFO    12:07:59:190  29852; [remote:128.14.196.249:8130] on max stream frame length changed from 1204 to 1339
+INFO    12:08:01:001  29852; gatewayRtt 1(650), linkspeed 351000(20), rssi -64(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    12:08:01:001  29852; [timeSync] getStableNTP, rtt_w: 28, diffTime: 1631639368926, bootTime: 93511921, currentTs: 1631732880847
+INFO    12:08:01:179  29852; [remote:128.14.196.249:8130] path MTU to remote increased: 1365 --> 1415
+INFO    12:08:01:179  29852; [remote:128.14.196.249:8130] on max stream frame length changed from 1339 to 1389
+INFO    12:08:03:002  29852; gatewayRtt 2(650), linkspeed 351000(20), rssi -64(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    12:08:03:307  34596; Audio statistics - play count: playout count = 200  signal level: far_in = 0
+INFO    12:08:03:502  22800; Audio statistics - rec count: record count = 200 signal level: near_in = 100, near_out = 75 farin = 103
+INFO    12:08:04:018  29852; [rs] total: 67 / 67 valid: 67 / 67
+INFO    12:08:05:001  29852; gatewayRtt 2(650), linkspeed 351000(20), rssi -64(-70), rxlossrate 0(30), localRxJitter95 12(500), reason 0x0
+INFO    12:08:07:001  29852; gatewayRtt 1(650), linkspeed 351000(20), rssi -64(-70), rxlossrate 0(30), localRxJitter95 12(500), reason 0x0
+INFO    12:08:07:001  29852; [timeSync] getStableNTP, rtt_w: 29, diffTime: 1631639368926, bootTime: 93517921, currentTs: 1631732886847
+INFO    12:08:07:196  29852; [remote:106.14.12.130:8443] OnRemoteTimeout
+ERROR   12:08:07:196  29852; [vocs] aut - socket error to 106.14.12.130:8443
+INFO    12:08:07:196  29852; [remote:106.14.12.130:8443] destroy session 000001E75B3AD0C0
+INFO    12:08:07:196  29852; [remote:106.14.12.130:8443] destroy connection 000001E74F7BC640
+INFO    12:08:07:502  22800; AVSync audio_record_delay: 0
+
+INFO    12:08:09:018  29852; [rs] total: 71 / 72 valid: 71 / 72
+FATAL   12:08:09:696  35668; ahpl: System stalling detected: thread<AgoraEvent> stalled for 9 calc cycles, at least 9514ms!
