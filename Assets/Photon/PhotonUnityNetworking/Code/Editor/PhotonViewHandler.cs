@@ -60,11 +60,25 @@ namespace Photon.Pun
             {
                 if (PhotonEditorUtils.IsPrefab(view.gameObject))
                 {
-                    if (view.ViewID != 0)
+                    //-------------------------------
+                    // NOTE: A fix was needed here to prevent duplicate view IDs proiblem.
+                    // This is now different from Photon's original source!!
+                    //   https://forum.photonengine.com/discussion/18223/photonview-sceneviewid-bug-on-prefabs
+
+                    //if (view.ViewID != 0)
+                    //{
+                    //    view.ViewID = 0;
+                    //    EditorUtility.SetDirty(view);
+                    //}
+
+                    if (view.ViewID != 0 || view.sceneViewId != 0)
                     {
                         view.ViewID = 0;
+                        view.sceneViewId = 0;
                         EditorUtility.SetDirty(view);
                     }
+                    //-------------------------------
+
                     continue;   // skip prefabs
                 }
 
