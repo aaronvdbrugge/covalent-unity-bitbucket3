@@ -165,10 +165,10 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
 
             // Not sure why this has to come from different places depending on scene.
             // I think the Social_Hour case will probably be scrapped. -seb
-            if (SceneManager.GetActiveScene().name.Equals("Social_Hour"))
-                user_info = GameObject.Find("PhotonMono").GetComponent<Launcher>().player;
-            else
-                user_info = GameObject.Find("Network_Manager").GetComponent<Dateland_Network>().player;
+            //if (SceneManager.GetActiveScene().name.Equals("Social_Hour"))
+            //    user_info = GameObject.Find("PhotonMono").GetComponent<Launcher>().player;
+            //else
+            user_info = GameObject.Find("Network_Manager").GetComponent<Dateland_Network>().player;
 
             // Relay playerHop to camera click handler, which needs to be able to trigger hops.
             FindObjectOfType<CameraClickHandler>().playerHop = playerHop;
