@@ -137,6 +137,13 @@ public class Dateland_Camera : Camera_Follow
 
     public void Save_Settings()
     {
+
+        // Something's wonky here.
+        // "Screen position out of view frustum" exception.
+        // Not sure how much of it we're keeping anyway, so I'm just disabling it for now
+        Cancel_Settings();
+
+        #if false
         Debug.Log("Pressed Save");
         cameraMain.orthographicSize = cameraSize;
         setClamps();
@@ -149,6 +156,7 @@ public class Dateland_Camera : Camera_Follow
         Settings.blocksRaycasts = false;
         Enable_Controls();
         EventManager.TriggerEvent("enable_joystick");
+        #endif
     }
     public void Cancel_Settings()
     {
