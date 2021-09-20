@@ -14,7 +14,7 @@ using UnityEngine.UI;
 public class Dateland_Camera : Camera_Follow
 {
     Camera cameraMain;
-    int cameraSize;
+    public int cameraSize;
     public CanvasGroup Settings, Character_Creator, Player_UI, Controls;
     public Image[] Zoom_Level_Buttons;
     public Sprite[] Zoom_Level_Sprites;

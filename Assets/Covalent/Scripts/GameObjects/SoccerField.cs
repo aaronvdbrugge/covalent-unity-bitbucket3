@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SoccerField : MonoBehaviour
 {
-    Vector3 startPos = new Vector3(3.13f, -3.45f, 0);
+    public Transform spawnPoint;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("soccerball"))
         {
-            collision.gameObject.transform.position = startPos;
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            collision.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+            var ball = collision.gameObject.GetComponent<BouncyBall>();
+            ball.Respawn( BouncyBall.RespawnType.OutOfBounds );
         }
     }
 }
