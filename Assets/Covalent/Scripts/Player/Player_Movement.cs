@@ -34,11 +34,18 @@ public class Player_Movement : MonoBehaviour
 	bool _movementEnabled = true;
 
 
+	/// <summary>
+	/// Last reading from the joystick. Reading this might be handy for kicking soccer balls,
+	/// for example.
+	/// </summary>
+	public Vector2 lastMovementInput{ get; private set; }
+
+
     /// <summary>
     /// Auto-generated from Unity's input action importer, only if we're controlled by user. May be overcomplicating things?
     /// </summary>
     private Rigidbody2D body;
-    private Vector2 lastMovementInput; 
+	
 
 	private void Awake()
 	{
