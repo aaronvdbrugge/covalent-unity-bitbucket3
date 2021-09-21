@@ -80,7 +80,7 @@ public class Player_Hop : MonoBehaviourPun
 		hopProgress = hopTime;  //starts the hop in Update
 		_useStartEnd = false;     //no start/end point, just hop in place
 
-		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);
+		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);  
 	}
 
 
