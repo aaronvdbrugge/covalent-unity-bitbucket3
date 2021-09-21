@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1432,8 +1432,8 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: -4.078005, y: 1.7708867, z: 0}
-  SorterPositionOffset2: {x: 3.9095554, y: -2.7984457, z: 0}
+  SorterPositionOffset: {x: -4.078003, y: 1.7708893, z: 0}
+  SorterPositionOffset2: {x: 3.9095612, y: -2.7984467, z: 0}
   renderersToSort:
   - {fileID: 260985838}
 --- !u!212 &260985838
@@ -8341,7 +8341,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: -0.021621704, y: 1.513566, z: -0.00048828125}
+  SorterPositionOffset: {x: -0.021636963, y: 1.5135651, z: -0.00048828125}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 921933206}
@@ -16297,7 +16297,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: -0.19460201, y: 1.6432996, z: -0.00048828125}
+  SorterPositionOffset: {x: -0.19459534, y: 1.6432953, z: -0.00048828125}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 1591794759}
@@ -19095,7 +19095,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: 0.0061278343, y: -0.5821419, z: 0}
+  SorterPositionOffset: {x: 0.006134033, y: -0.58213806, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 1838995358}
@@ -23315,6 +23315,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneViewId
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684815515007593654, guid: c3ae81cc002dc3c40b2b19aa483cf831,
+        type: 3}
+      propertyPath: observableSearch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684815515007593654, guid: c3ae81cc002dc3c40b2b19aa483cf831,
+        type: 3}
+      propertyPath: Synchronization
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6684815515007593657, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}

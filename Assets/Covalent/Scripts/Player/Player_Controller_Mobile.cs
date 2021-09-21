@@ -154,7 +154,7 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
         {
             mine = this;  // convenience global
 
-            playerMovement.enabled = true;
+            playerMovement.isMine = true;
             playerCollisions.isMine = true;
 
             // Just go ahead and hackily connect the MyOnScreenStick in the UI to playerMovement.

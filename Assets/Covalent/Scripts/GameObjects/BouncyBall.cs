@@ -162,15 +162,11 @@ public class BouncyBall : MonoBehaviourPun
 
 	void OnTriggerStay2D(Collider2D other)
     {
-            Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
+        Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
 
-        // We ONLY respond to overlaps with My player. Other players will apply their own velocities
-        // through this function, which will be mirrored through Pun's rigidbody replication.
-        // It's nicer this way, because we can use the exact joystick position to accurately aim the ball,
-        // which is info that isn't network replicated.
-        // We also don't want every player to pile on top of eachother to update the change in velocity;
-        // Only one should send it out, and the rest just respond.
-        if( pcm != null && pcm.photonView.IsMine )
+        
+        //if( pcm != null && pcm.photonView.IsMine )   //Nope, actually only one client at a time can control the ball. We have to confirm that we have the authority to control it.
+        if( pcm != null && photonView.IsMine )   // THIS photonView, NOT the player. So if a non-controlled player hits the ball, it's our responsibility as the owner to handle it.
         {
             Player_Hop ph = pcm.playerHop;
 
@@ -183,6 +179,7 @@ public class BouncyBall : MonoBehaviourPun
                 collision = true;
             else if( zPos >= player_z && zPos <= player_z + ph.collisionHeight )
                 collision = true;
+
 
             if( collision )
             {
@@ -216,9 +213,10 @@ public class BouncyBall : MonoBehaviourPun
                 }
                 else  // Regular hit.
                 {
-                    new_vel = pm.lastMovementInput * velocityMultiplier;
+                    Vector2 last_movement_input = pm.GetLastMovementInput();
+                    new_vel = last_movement_input * velocityMultiplier;
 
-                    if( pm.lastMovementInput.magnitude > upKickThreshold )   // Make this ball go up a bit; it was a hard kick
+                    if( last_movement_input.magnitude > upKickThreshold )   // Make this ball go up a bit; it was a hard kick
                         zVel = Mathf.Max( upKickSpeed, zVel );
                 }
 
