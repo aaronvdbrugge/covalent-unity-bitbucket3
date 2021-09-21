@@ -24,10 +24,20 @@ public class Player_Hop : MonoBehaviourPun
 	public float hopHeight = 5.0f;
 	[Tooltip("To make us appear on top of the seat, our sorting position will be smoothly scooted by this amount.")]
 	public float seatSortingBias = 2.0f;   
+	[Tooltip("If our base is an ellipse, then imagine out collision bound as a cylinder extending upward by this amount.")]
+	public float collisionHeight = 1.0f;
 
-	[Header("Interface")]
+	[Header("Runtime")]
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
+
+
+	/// <summary>
+	/// Access zPos for things like pseudo-3D collision detection
+	/// </summary>
+	public float zPos => GetCurrentHopHeight();   
+	public float zVel => GetCurrentHopVelocity();
+
 
 	float _playerVisualYOriginal;
 	float _isoSpriteSortingPositionOffsetYOriginal;  // we have to modify iso sprite sorting y offset to keep it on the ground.
@@ -165,8 +175,41 @@ public class Player_Hop : MonoBehaviourPun
 	}
 
 
+	
+	float GetCurrentHopHeight()
+	{
+		float hop_norm = 1 - hopProgress / hopTime;   // goes from 0 to 1 as hop progresses
 
-	private void Update()
+		// We want a parabola that goes from y=0 to 1 to 0, from x=0 to y=1.
+		// Should be:    y = -(2x - 1)^2 +1
+		//    https://www.desmos.com/calculator/qphzqwrput
+		float hop_parabolic = -Mathf.Pow(2 * hop_norm - 1, 2) + 1;
+
+		return hop_parabolic * hopHeight;   // de-normalize
+	}
+
+
+	float GetCurrentHopVelocity()
+	{
+		// Best way to do this would be calculus?
+		// I believe it would be:
+		/*
+		y = -(2x - 1)^2 + 1
+		y = -(4x^2 - 4x + 1) + 1
+		y = -4x^2 + 4x
+
+		..multiply by hopheight...
+		y = -4hx^2 + 4hx
+
+		derivitave
+		y' = -8hx + 4h
+		 */
+		float hop_norm = 1 - hopProgress / hopTime;   // goes from 0 to 1 as hop progresses
+		return -8 * hopHeight * hop_norm + 4 * hopHeight;
+	}
+
+
+	private void FixedUpdate()
 	{
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
@@ -184,16 +227,10 @@ public class Player_Hop : MonoBehaviourPun
 
 		if( hopProgress > 0 )
 		{
-			hopProgress = Mathf.Max( hopProgress - Time.deltaTime, 0 );
+			hopProgress = Mathf.Max( hopProgress - Time.fixedDeltaTime, 0 );
+
 			float hop_norm = 1 - hopProgress / hopTime;   // goes from 0 to 1 as hop progresses
-
-
-			// We want a parabola that goes from y=0 to 1 to 0, from x=0 to y=1.
-			// Should be:    y = -(2x - 1)^2 +1
-			//    https://www.desmos.com/calculator/qphzqwrput
-			float hop_parabolic = -Mathf.Pow(2 * hop_norm - 1, 2) + 1;
-
-			float to_add = hop_parabolic * hopHeight;   // de-normalize
+			float to_add = GetCurrentHopHeight();
 
 			// We can now use this value to move the visual up and down.
 			playerVisual.transform.localPosition = new Vector3(
@@ -237,6 +274,11 @@ public class Player_Hop : MonoBehaviourPun
 		}
 	}
 
-
+    void OnDrawGizmos()
+    {
+        // Visualize collision height
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + new Vector3( 0, collisionHeight, 0 ) );
+    }
 
 }

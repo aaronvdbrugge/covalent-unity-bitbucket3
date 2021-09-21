@@ -14,6 +14,10 @@ public class Player_Movement : MonoBehaviour
 {
     public float maxSpeed = 5f;
 
+    [Tooltip("In an isometric world, y velocity needs to be scaled down.")]
+    public float yVelocityScale = 0.5f;
+
+
 	[Tooltip("Multiply maxSpeed by this when you do WASD in the editor")]
 	public float editorSpeedMultiple = 4;
 
@@ -39,6 +43,12 @@ public class Player_Movement : MonoBehaviour
 	/// for example.
 	/// </summary>
 	public Vector2 lastMovementInput{ get; private set; }
+
+
+	/// <summary>
+	/// Last direction they pushed (useful for things like "heading" soccer balls at max speed despite not actuall moving)
+	/// </summary>
+	public Vector2 lastDirection{ get; private set; } = Vector2.one;
 
 
     /// <summary>
@@ -75,6 +85,9 @@ public class Player_Movement : MonoBehaviour
 		{
 			Vector2 new_vel = lastMovementInput * maxSpeed;
 
+			if( lastMovementInput.x != 0 || lastMovementInput.y != 0 )
+				lastDirection = lastMovementInput.normalized;
+
 			// Allow super-speed WASD in editor
 			if ( Application.isEditor )
 			{
@@ -89,6 +102,8 @@ public class Player_Movement : MonoBehaviour
 
 				new_vel = maxSpeed * new_vel;
 			}
+
+			new_vel.y *= yVelocityScale;  // isometric movement
 
 			body.velocity = new_vel;
 		}

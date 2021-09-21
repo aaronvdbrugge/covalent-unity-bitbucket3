@@ -192,7 +192,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.9
+  m_LinearDrag: 0.7
   m_AngularDrag: 0.11
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 69dd204acf8224b708d8303f10738141, type: 2}
@@ -317,13 +317,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballSprite: {fileID: 6684815516317125160}
+  yVelocityScale: 0.5
+  collisionHeight: 0
   velocityMultiplier: 20
   spriteRotationMultiplier: 120
   startingHeight: 10
   gravity: -4
   zBounce: 0.25
+  respawnAnimationTime: 3
+  respawnFreezeTime: 0.5
+  outOfBoundsColor: {r: 0, g: 0, b: 0, a: 0}
+  goalColor: {r: 0, g: 0, b: 0, a: 0}
   zPos: 0
   zVel: 0
+  respawning: 0
+  respawnProgress: 0
 --- !u!114 &6684815515007593652
 MonoBehaviour:
   m_ObjectHideFlags: 0
