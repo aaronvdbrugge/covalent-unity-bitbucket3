@@ -166,7 +166,8 @@ public class BouncyBall : MonoBehaviourPun
 
         
         //if( pcm != null && pcm.photonView.IsMine )   //Nope, actually only one client at a time can control the ball. We have to confirm that we have the authority to control it.
-        if( pcm != null && photonView.IsMine )   // THIS photonView, NOT the player. So if a non-controlled player hits the ball, it's our responsibility as the owner to handle it.
+        //if( pcm != null && photonView.IsMine )   // THIS photonView, NOT the player. So if a non-controlled player hits the ball, it's our responsibility as the owner to handle it.
+        if ( pcm != null )   // Allow ball to be kicked on non-owning clients? This may prevent some lag
         {
             Player_Hop ph = pcm.playerHop;
 
