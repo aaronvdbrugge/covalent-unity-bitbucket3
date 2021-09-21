@@ -14,6 +14,11 @@ public class Player_Movement : MonoBehaviour
 {
     public float maxSpeed = 5f;
 
+	
+
+	[HideInInspector]public bool isMine = false;  //Set this from Player Controller Mobile. It affects how we interpret the directions we're "facing"
+
+
     [Tooltip("In an isometric world, y velocity needs to be scaled down.")]
     public float yVelocityScale = 0.5f;
 
@@ -38,17 +43,44 @@ public class Player_Movement : MonoBehaviour
 	bool _movementEnabled = true;
 
 
+
+
+
+
 	/// <summary>
 	/// Last reading from the joystick. Reading this might be handy for kicking soccer balls,
 	/// for example.
 	/// </summary>
-	public Vector2 lastMovementInput{ get; private set; }
+	Vector2 lastMovementInput;
+
+	/// <summary>
+	/// If this is "my" player, we'll set this directly from input; if not, we'll infer it from
+	/// the player's velocity.
+	/// </summary>
+	public Vector2 GetLastMovementInput()
+	{
+		if( isMine )
+			return lastDirection;
+		else
+		{
+			Vector2 flat_velocity = body.velocity;
+
+			// undo any isometric skewing on the velocity
+			flat_velocity.y /= yVelocityScale;
+
+			return flat_velocity / maxSpeed;   //fair assumption that this non-owned player is holding the joystick in this amount
+		}
+	}
+
 
 
 	/// <summary>
-	/// Last direction they pushed (useful for things like "heading" soccer balls at max speed despite not actuall moving)
+	/// Last direction they pushed (useful for things like "heading" soccer balls at max speed despite not actually moving)
+	/// If this is "my" player, we'll set this directly from input; if not, we'll infer it from
+	/// the player's velocity.
 	/// </summary>
 	public Vector2 lastDirection{ get; private set; } = Vector2.one;
+
 
 
     /// <summary>
@@ -66,12 +98,15 @@ public class Player_Movement : MonoBehaviour
 	private void Start()
 	{
         // Change to dynamic rigidbody
-        body.bodyType = RigidbodyType2D.Dynamic;
+		if( isMine )
+			body.bodyType = RigidbodyType2D.Dynamic;
 	}
 
 
 	/// <summary>
-	/// Connect this to MyOnScreenStick.onJoystickValues
+	/// Connect this to MyOnScreenStick.onJoystickValues.
+	/// 
+	/// We only do this for "my" player
 	/// </summary>
 	public void SetJoystick(Vector2 joyval)
 	{
@@ -81,32 +116,38 @@ public class Player_Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if( movementEnabled )
+		if( movementEnabled  )
 		{
-			Vector2 new_vel = lastMovementInput * maxSpeed;
-
-			if( lastMovementInput.x != 0 || lastMovementInput.y != 0 )
-				lastDirection = lastMovementInput.normalized;
-
-			// Allow super-speed WASD in editor
-			if ( Application.isEditor )
+			if( isMine )
 			{
-				Vector2 editor_vel = Vector2.zero;
-				if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-					editor_vel.y += editorSpeedMultiple;
-				if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-					editor_vel.y -= editorSpeedMultiple;
-				if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-					editor_vel.x -= editorSpeedMultiple;
-				if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-					editor_vel.x += editorSpeedMultiple;
+				Vector2 new_vel = lastMovementInput * maxSpeed;
 
-				new_vel += editor_vel * maxSpeed;
+				if( lastMovementInput.x != 0 || lastMovementInput.y != 0 )
+					lastDirection = lastMovementInput.normalized;
+
+				// Allow super-speed WASD in editor
+				if ( Application.isEditor )
+				{
+					Vector2 editor_vel = Vector2.zero;
+					if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+						editor_vel.y += editorSpeedMultiple;
+					if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+						editor_vel.y -= editorSpeedMultiple;
+					if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+						editor_vel.x -= editorSpeedMultiple;
+					if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+						editor_vel.x += editorSpeedMultiple;
+
+					new_vel += editor_vel * maxSpeed;
+				}
+
+				new_vel.y *= yVelocityScale;  // isometric movement
+
+				body.velocity = new_vel;
 			}
-
-			new_vel.y *= yVelocityScale;  // isometric movement
-
-			body.velocity = new_vel;
+			// Else, it's not mine... 
+			else if( body.velocity != Vector2.zero )  //just update lastDirection based on velocity.
+				lastDirection = body.velocity.normalized;
 		}
 	}
 

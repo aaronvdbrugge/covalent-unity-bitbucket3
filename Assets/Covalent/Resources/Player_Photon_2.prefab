@@ -796,7 +796,7 @@ MonoBehaviour:
   hopTime: 0.75
   hopHeight: 3
   seatSortingBias: 2
-  collisionHeight: 1.49
+  collisionHeight: 1.86
   hopProgress: 0
 --- !u!1 &2481279366892013452
 GameObject:
@@ -1586,12 +1586,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4450914184106857912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75d5cdf7a9bcb4745b0f80d41c9bec69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
+  isMine: 0
   yVelocityScale: 0.5
   editorSpeedMultiple: 6
 --- !u!114 &5217942367510331885
