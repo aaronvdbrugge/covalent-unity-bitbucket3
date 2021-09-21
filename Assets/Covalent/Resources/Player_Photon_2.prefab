@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   isMine: 0
-  yVelocityScale: 0.5
+  yVelocityScale: 1
   editorSpeedMultiple: 6
 --- !u!114 &5217942367510331885
 MonoBehaviour:
