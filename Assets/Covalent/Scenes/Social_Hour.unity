@@ -16652,13 +16652,13 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 1.71
   m_Points:
-  - {x: -16.568502, y: -8.0382395}
-  - {x: 1.2284359, y: -19.553118}
-  - {x: 17.100727, y: -10.278729}
-  - {x: -3.185128, y: 0.09327507}
-  - {x: -16.5685, y: -8.038239}
+  - {x: -19.703438, y: -8.19497}
+  - {x: 1.7770483, y: -21.198948}
+  - {x: 19.138437, y: -10.944891}
+  - {x: -3.1851423, y: 2.0917835}
+  - {x: -19.70344, y: -8.19497}
 --- !u!114 &1628102706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23067,7 +23067,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1619431530, guid: c3ae81cc002dc3c40b2b19aa483cf831, type: 3}
       propertyPath: doOnTriggerEnter
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1619431530, guid: c3ae81cc002dc3c40b2b19aa483cf831, type: 3}
       propertyPath: doOnTriggerStay
@@ -23143,6 +23143,12 @@ PrefabInstance:
       propertyPath: yVelocityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4918015306251223578, guid: c3ae81cc002dc3c40b2b19aa483cf831,
+        type: 3}
+      propertyPath: confettiPrefab
+      value: 
+      objectReference: {fileID: 307067571903347607, guid: d93774775b220df4baa850a310dc6788,
+        type: 3}
     - target: {fileID: 6684815515007593654, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}
       propertyPath: sceneViewId

@@ -70,7 +70,7 @@ public class Player_Hop : MonoBehaviourPun
 	{
 		// NOTE: we should move this sound effect to HopInPlaceRPC(), but it would need to detect if the player is close enough to actually
 		// play the sound. For now, we'll only play a sound if it's the controlled player hopping
-		Camera.main.SendMessage("PlaySound", "hop");
+		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);
 
 		if( GetSittingOn() == null )
 			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
@@ -270,7 +270,7 @@ public class Player_Hop : MonoBehaviourPun
 				}
 
 				if( !string.IsNullOrEmpty(sitting_on) && photonView.IsMine )   // They hopped onto a seat, can play a sound effect. For now, only Mine can do it
-					Camera.main.SendMessage("PlaySound", "sit_down");
+					Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("sit_down", transform.position);
 			}
 		}
 	}
