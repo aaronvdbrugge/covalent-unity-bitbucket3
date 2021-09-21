@@ -26,11 +26,11 @@ public class Camera_Sound : MonoBehaviour
     Dictionary<string, AudioSource> _soundDict = new Dictionary<string, AudioSource>();
 
 
-    Camera camera;
+    Camera myCamera;
 
 	private void Awake()
 	{
-		camera = GetComponent<Camera>();
+		myCamera = GetComponent<Camera>();
 	}
 
 	public void PlaySound(string name)
@@ -57,7 +57,7 @@ public class Camera_Sound : MonoBehaviour
     /// </summary>
     public void PlaySoundAtPosition( string name, Vector2 sound_position )
     {
-        float vert_extent = camera.orthographicSize;    
+        float vert_extent = myCamera.orthographicSize;    
         float horz_extent = vert_extent * Screen.width / Screen.height;
 
         vert_extent *= 1 + extendSoundBounds;
