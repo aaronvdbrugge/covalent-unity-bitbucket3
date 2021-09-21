@@ -60,7 +60,7 @@ public class Player_Movement : MonoBehaviour
 	public Vector2 GetLastMovementInput()
 	{
 		if( isMine )
-			return lastDirection;
+			return lastMovementInput;
 		else
 		{
 			Vector2 flat_velocity = body.velocity;

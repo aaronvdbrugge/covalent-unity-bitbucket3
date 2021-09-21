@@ -23311,6 +23311,11 @@ PrefabInstance:
       propertyPath: upKickSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4918015306251223578, guid: c3ae81cc002dc3c40b2b19aa483cf831,
+        type: 3}
+      propertyPath: yVelocityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6684815515007593654, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}
       propertyPath: sceneViewId
