@@ -75,6 +75,26 @@ PrefabInstance:
       propertyPath: uiText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7827827695935605682, guid: d875a50a4f490c7468e288d899e08437,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827827695935605682, guid: d875a50a4f490c7468e288d899e08437,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827827695935605682, guid: d875a50a4f490c7468e288d899e08437,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -63.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827827695935605682, guid: d875a50a4f490c7468e288d899e08437,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7827827696263294501, guid: d875a50a4f490c7468e288d899e08437,
         type: 3}
       propertyPath: Connecting
@@ -188,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 7827827696463674675, guid: d875a50a4f490c7468e288d899e08437,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d875a50a4f490c7468e288d899e08437, type: 3}
