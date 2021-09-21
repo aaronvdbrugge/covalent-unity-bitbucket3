@@ -216,6 +216,7 @@ public class Player_Hop : MonoBehaviourPun
 		{
 			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
 			playerMovement.movementEnabled = false;    // Disable movement altogether.
+
 			if( hopProgress <= 0 )  //not even hopping, so stay put on the bench...
 			{
 				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
