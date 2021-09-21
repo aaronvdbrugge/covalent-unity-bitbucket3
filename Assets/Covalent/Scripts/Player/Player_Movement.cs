@@ -91,16 +91,17 @@ public class Player_Movement : MonoBehaviour
 			// Allow super-speed WASD in editor
 			if ( Application.isEditor )
 			{
+				Vector2 editor_vel = Vector2.zero;
 				if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-					new_vel.y += editorSpeedMultiple;
+					editor_vel.y += editorSpeedMultiple;
 				if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-					new_vel.y -= editorSpeedMultiple;
+					editor_vel.y -= editorSpeedMultiple;
 				if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-					new_vel.x -= editorSpeedMultiple;
+					editor_vel.x -= editorSpeedMultiple;
 				if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-					new_vel.x += editorSpeedMultiple;
+					editor_vel.x += editorSpeedMultiple;
 
-				new_vel = maxSpeed * new_vel;
+				new_vel += editor_vel * maxSpeed;
 			}
 
 			new_vel.y *= yVelocityScale;  // isometric movement
