@@ -19,6 +19,10 @@ public class BouncyBall : MonoBehaviourPun
     [Header("Internal references")]
     public SpriteRenderer ballSprite;     // may want to rotate this, or change its color.
 
+
+    [Header("External references")]
+    public GameObject confettiPrefab;   //if non-null, we'll instantiate this on goal
+
     [Header("Settings")]
     [Tooltip("In an isometric world, y velocity needs to be scaled down.")]
     public float yVelocityScale = 0.5f;
@@ -92,6 +96,8 @@ public class BouncyBall : MonoBehaviourPun
     Vector3 _respawnStartPos;   // where we started the respawn animation; includes pseudo-3D z position
 
 
+    Player_Controller_Mobile lastEnteredTrigger;   // this makes it easier for us to play only one sound when the player is overlapping the ball
+
     public enum RespawnType
     {
         None = 0,
@@ -156,8 +162,25 @@ public class BouncyBall : MonoBehaviourPun
 
             body.velocity = Vector2.zero;
             _respawnStartPos = new Vector3( body.position.x, body.position.y, zPos);
+
+            if( respawning == RespawnType.Goal && confettiPrefab != null)   // make confetti!
+            {
+                GameObject go = Instantiate(confettiPrefab);
+                go.transform.position = transform.position;
+
+                Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "goal", transform.position );
+            }
+            else if( respawning == RespawnType.OutOfBounds )
+                Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "out_of_bounds", transform.position );
         }
     }
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+        Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
+	    if( pcm != null )
+            lastEnteredTrigger = pcm;  //remember this, so we can know to play a sound in OnTriggerStay2D
+	}
 
 
 	void OnTriggerStay2D(Collider2D other)
@@ -190,12 +213,15 @@ public class BouncyBall : MonoBehaviourPun
                 Vector2 flat_velocity = body.velocity;   //un-skewed from isometric view...
                 flat_velocity.y /= yVelocityScale;
 
+                bool heavy_hit = false;   //used for sound
 
                 if( ph.zPos > 0 )  // Player is airborne. "Head" the ball at max speed, also give it the player's z velocity.
                 {
                     zVel = ph.zVel;
                     float cur_spd = flat_velocity.magnitude;
                     new_vel =pm.lastDirection * Mathf.Max(cur_spd, headVelocity);   // lastDirection is always normalized. Hit it at headVelocity, or current speed, whatever's faster.
+
+                    heavy_hit = true;
                 }
                 else if ( zPos > ph.collisionHeight / 2 )   // Ball is landing in the head area, bounce it in Z, and also try to "reflect" its rigidbody velocity
                 {
@@ -218,12 +244,23 @@ public class BouncyBall : MonoBehaviourPun
                     new_vel = last_movement_input * velocityMultiplier;
 
                     if( last_movement_input.magnitude > upKickThreshold )   // Make this ball go up a bit; it was a hard kick
+                    {
                         zVel = Mathf.Max( upKickSpeed, zVel );
+                        heavy_hit = true;
+                    }
                 }
 
 
                 new_vel.y *= yVelocityScale;   // apply isometric velocity scale
                 body.velocity = new_vel;
+
+
+                // Figure out what sound to play.
+                if( pcm == lastEnteredTrigger)
+                {
+                    lastEnteredTrigger = null;
+                    Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( heavy_hit ? "soccer_heavy_hit" : "soccer_light_hit", transform.position );
+                }
             }
         }
     }
