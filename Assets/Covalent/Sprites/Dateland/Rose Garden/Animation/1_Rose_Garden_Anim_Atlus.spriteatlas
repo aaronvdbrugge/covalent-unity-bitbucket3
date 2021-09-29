@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 50
-      m_CrunchedCompression: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -40,6 +40,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: c588d548babf2440ebc055257106b78b, type: 3}
@@ -49,8 +51,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 5b74774d13853418da1f0ac43658d460, type: 3}
     - {fileID: 2800000, guid: 28ce63a27643b4018b6022eedb02c3e1, type: 3}
     - {fileID: 2800000, guid: 5030d6b79b50f4fac9839901f92d56c6, type: 3}
-    totalSpriteSurfaceArea: 32986896
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -2868115996687417882, guid: 28ce63a27643b4018b6022eedb02c3e1, type: 3}
@@ -546,5 +549,6 @@ SpriteAtlas:
   - topiary rabbit_19
   - topiary rabbit_18
   - topiary rabbit_30
+  m_RenderDataMap: {}
   m_Tag: 1_Rose_Garden_Anim_Atlus
   m_IsVariant: 0

@@ -20,7 +20,19 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 4
@@ -28,6 +40,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 079dd8bff06d44fc5a75dc3af4f24611, type: 3}
@@ -47,8 +61,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 912cb14f310b241329bda213e22c3dc7, type: 3}
     - {fileID: 2800000, guid: b7bcc58cf92c24a009977dfe55a0bbe1, type: 3}
     - {fileID: 2800000, guid: 29a30a263fc5246f7bdf129579af7306, type: 3}
-    totalSpriteSurfaceArea: 17432576
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 1b0c2dd0e0cf54aeaab84117b049e45b, type: 3}
@@ -86,5 +101,6 @@ SpriteAtlas:
   - bookshelf living room
   - pizza table
   - back pink wall
+  m_RenderDataMap: {}
   m_Tag: Kitchen+TV
   m_IsVariant: 0

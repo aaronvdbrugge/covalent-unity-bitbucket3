@@ -20,7 +20,19 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 4
@@ -28,13 +40,16 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 6fd000a85be394613aacb9039a3ecf62, type: 3}
     - {fileID: 2800000, guid: 59d6f124ade8d4f8fb9b3de40e62c713, type: 3}
     - {fileID: 2800000, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
-    totalSpriteSurfaceArea: 5811376
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 4689128650607986575, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
@@ -366,5 +381,6 @@ SpriteAtlas:
   - wind_5
   - wind_6
   - wind_7
+  m_RenderDataMap: {}
   m_Tag: Grass+Wind
   m_IsVariant: 0

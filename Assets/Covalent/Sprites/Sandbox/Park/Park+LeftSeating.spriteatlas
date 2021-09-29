@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 50
-      m_CrunchedCompression: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -40,6 +40,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 6b0d81a8c1e5b4437bfaf41e52996da0, type: 3}
@@ -72,8 +74,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 1772958fbf89f4a90bd01f29e0b38722, type: 3}
     - {fileID: 2800000, guid: 3d87fbbc583ea43e8b99de00b34ec7db, type: 3}
     - {fileID: 2800000, guid: ec564cc457ce847698b0d80b25c8ce85, type: 3}
-    totalSpriteSurfaceArea: 47284224
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 50a15c313920347138d824d634db2d26, type: 3}
@@ -137,5 +140,6 @@ SpriteAtlas:
   - outdoor railing back 1
   - soccer net upper back
   - trees left
+  m_RenderDataMap: {}
   m_Tag: Park+LeftSeating
   m_IsVariant: 0
