@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 50
-      m_CrunchedCompression: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -52,6 +52,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 9666d097dc420453ba17345d67915613, type: 3}
@@ -66,8 +68,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
     - {fileID: 2800000, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
     - {fileID: 2800000, guid: 0c1eb6d3d34074c4680a331c1d1536e1, type: 3}
-    totalSpriteSurfaceArea: 84364380
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -4254168736266780060, guid: 94da7f32867dd4e9786f451604e477a0, type: 3}
@@ -1213,5 +1216,6 @@ SpriteAtlas:
   - buoy-3x-pt1_4
   - buoy-3x-pt1_9
   - buoy-3x-pt1_8
+  m_RenderDataMap: {}
   m_Tag: 1_Beach_Anim_Atlas
   m_IsVariant: 0

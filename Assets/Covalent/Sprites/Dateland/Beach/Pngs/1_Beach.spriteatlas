@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 50
-      m_CrunchedCompression: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -52,6 +52,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 73fe3ce2c5c9e492b84c9cbb9d7d99a4, type: 3}
@@ -85,8 +87,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: fdafc4f205f2d4a49bcecfcf3bf7dcca, type: 3}
     - {fileID: 2800000, guid: 45680d9ac08a84c4c8308ace6b574964, type: 3}
     - {fileID: 2800000, guid: 3f1f863dfce564ebe8c2b55e3db31aa3, type: 3}
-    totalSpriteSurfaceArea: 32304309
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 975b70c0ae64243acbde0f329a9bf33f, type: 3}
@@ -152,5 +155,6 @@ SpriteAtlas:
   - fence_Right
   - fishHouse@3x
   - seashells1@3x
+  m_RenderDataMap: {}
   m_Tag: 1_Beach
   m_IsVariant: 0
