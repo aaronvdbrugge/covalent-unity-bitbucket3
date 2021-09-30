@@ -26,7 +26,7 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
+      m_TextureCompression: 3
       m_CompressionQuality: 0
       m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
@@ -1191,5 +1191,5 @@ SpriteAtlas:
   - buoy-3x-pt1_9
   - buoy-3x-pt1_8
   m_RenderDataMap: {}
-  m_Tag: 1_Beach_Anim_Atlas
+  m_Tag: Beach Animations
   m_IsVariant: 0

@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 3
+      m_TextureCompression: 1
       m_CompressionQuality: 0
-      m_CrunchedCompression: 1
+      m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -1048,5 +1048,5 @@ SpriteAtlas:
   - swimmingLefttoRightFish 1_51
   - swimmingLefttoRightFish 1_50
   m_RenderDataMap: {}
-  m_Tag: Pond_Animations
+  m_Tag: Pond Animations (SocialHour)
   m_IsVariant: 0

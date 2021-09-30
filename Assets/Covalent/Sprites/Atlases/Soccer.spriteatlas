@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Soccer
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 008cca9874fda435dab8ac8076a846be, type: 3}
+    - {fileID: 2800000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
+    - {fileID: 2800000, guid: e71f5e24df80e445f998f4fab8b68d4f, type: 3}
+    - {fileID: 2800000, guid: e6526a4ba85df457dbb2c7872efa2ac8, type: 3}
+    - {fileID: 2800000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
+    - {fileID: 2800000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
+    - {fileID: 2800000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
+    - {fileID: 2800000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
+    - {fileID: 2800000, guid: 1eba4ecdc95f14c4f806eaea441e275e, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
+  - {fileID: 21300000, guid: e71f5e24df80e445f998f4fab8b68d4f, type: 3}
+  - {fileID: 21300000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
+  - {fileID: 21300000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
+  - {fileID: 21300000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
+  - {fileID: 21300000, guid: 008cca9874fda435dab8ac8076a846be, type: 3}
+  - {fileID: 21300000, guid: e6526a4ba85df457dbb2c7872efa2ac8, type: 3}
+  - {fileID: 21300000, guid: 1eba4ecdc95f14c4f806eaea441e275e, type: 3}
+  - {fileID: 21300000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - soccer net upper right
+  - soccer net lower left
+  - soccer net lower bottom
+  - soccer net upper bottom
+  - soccer net upper left
+  - soccer net lower back
+  - soccer net lower right
+  - soccerball
+  - soccer net upper back
+  m_RenderDataMap: {}
+  m_Tag: Soccer
+  m_IsVariant: 0
