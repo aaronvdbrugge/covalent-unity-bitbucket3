@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kitchen+TV
+  m_Name: Kitchen+TV (SocialHour)
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -61,7 +61,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 912cb14f310b241329bda213e22c3dc7, type: 3}
     - {fileID: 2800000, guid: b7bcc58cf92c24a009977dfe55a0bbe1, type: 3}
     - {fileID: 2800000, guid: 29a30a263fc5246f7bdf129579af7306, type: 3}
-    bindAsDefault: 1
+    bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
@@ -102,5 +102,5 @@ SpriteAtlas:
   - pizza table
   - back pink wall
   m_RenderDataMap: {}
-  m_Tag: Kitchen+TV
+  m_Tag: Kitchen+TV (SocialHour)
   m_IsVariant: 0
