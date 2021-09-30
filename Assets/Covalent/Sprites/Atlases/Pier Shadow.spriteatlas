@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pier Shadow
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+    - {fileID: 2800000, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 7819286370165212650, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: 8013672711282509904, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: -4703361731599787132, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: -3491111669229993914, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: -1527282740491023419, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: -4259985259721140072, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
+  - {fileID: 3235368540683367953, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  - {fileID: 6051678365061801494, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  - {fileID: 6213156517259585901, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  - {fileID: 2186211664278545953, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  - {fileID: -2710725856917138392, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  - {fileID: -1895630074873461557, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - pier-shadow-3x-pt1_3
+  - pier-shadow-3x-pt1_2
+  - pier-shadow-3x-pt1_1
+  - pier-shadow-3x-pt1_0
+  - pier-shadow-3x-pt1_5
+  - pier-shadow-3x-pt1_4
+  - pier-shadow-3x-pt2_4
+  - pier-shadow-3x-pt2_5
+  - pier-shadow-3x-pt2_0
+  - pier-shadow-3x-pt2_1
+  - pier-shadow-3x-pt2_2
+  - pier-shadow-3x-pt2_3
+  m_RenderDataMap: {}
+  m_Tag: Pier Shadow
+  m_IsVariant: 0

@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 1_TOL_Anim_Atlus
+  m_Name: TOL Animations
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -28,7 +28,7 @@ SpriteAtlas:
       m_TextureFormat: -1
       m_TextureCompression: 3
       m_CompressionQuality: 0
-      m_CrunchedCompression: 1
+      m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -55,7 +55,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 0efbc833ddc57407eadf77b5c56a86b3, type: 3}
     - {fileID: 2800000, guid: 1919d8b39a36c4612b70d4af3e8ad638, type: 3}
     - {fileID: 2800000, guid: 87c64e618ce9d410cb3c38803311e033, type: 3}
-    bindAsDefault: 1
+    bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
@@ -1948,5 +1948,5 @@ SpriteAtlas:
   - swanbob4_59
   - swanbob4_58
   m_RenderDataMap: {}
-  m_Tag: 1_TOL_Anim_Atlus
+  m_Tag: TOL Animations
   m_IsVariant: 0

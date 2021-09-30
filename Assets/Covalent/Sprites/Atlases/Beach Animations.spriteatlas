@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 1_Beach_Anim_Atlas
+  m_Name: Beach Animations
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -26,7 +26,7 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 3
+      m_TextureCompression: 1
       m_CompressionQuality: 0
       m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
@@ -63,12 +63,10 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 6caa251ee85074d5d9d48092e84f23b8, type: 3}
     - {fileID: 2800000, guid: 94da7f32867dd4e9786f451604e477a0, type: 3}
     - {fileID: 2800000, guid: 1267d99e2284a4d3792b9a601748534b, type: 3}
-    - {fileID: 2800000, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-    - {fileID: 2800000, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-    - {fileID: 2800000, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
-    - {fileID: 2800000, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
     - {fileID: 2800000, guid: 0c1eb6d3d34074c4680a331c1d1536e1, type: 3}
-    bindAsDefault: 1
+    - {fileID: 2800000, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
+    - {fileID: 2800000, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
+    bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
@@ -223,12 +221,6 @@ SpriteAtlas:
   - {fileID: 4282115777631567812, guid: 0c1eb6d3d34074c4680a331c1d1536e1, type: 3}
   - {fileID: -6495896908001125964, guid: 0c1eb6d3d34074c4680a331c1d1536e1, type: 3}
   - {fileID: 5770993530176320440, guid: 0c1eb6d3d34074c4680a331c1d1536e1, type: 3}
-  - {fileID: 7819286370165212650, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-  - {fileID: 8013672711282509904, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-  - {fileID: -4703361731599787132, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-  - {fileID: -3491111669229993914, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-  - {fileID: -1527282740491023419, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
-  - {fileID: -4259985259721140072, guid: ca8f9a76a7b834d8da8c1427b030bef6, type: 3}
   - {fileID: -2766328456817163170, guid: 888b137769a824d1bb8f6ad3175d4656, type: 3}
   - {fileID: 1419777589073486223, guid: 888b137769a824d1bb8f6ad3175d4656, type: 3}
   - {fileID: -6749755767949645969, guid: 888b137769a824d1bb8f6ad3175d4656, type: 3}
@@ -469,12 +461,6 @@ SpriteAtlas:
   - {fileID: -4533871845103539330, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
   - {fileID: -219472447722626327, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
   - {fileID: 4410541758554423063, guid: e967115bd151b4aedb4ca9272b4c55c6, type: 3}
-  - {fileID: 3235368540683367953, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-  - {fileID: 6051678365061801494, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-  - {fileID: 6213156517259585901, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-  - {fileID: 2186211664278545953, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-  - {fileID: -2710725856917138392, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
-  - {fileID: -1895630074873461557, guid: e0c5abab9c3d1418ea6ad3bde704f8f7, type: 3}
   - {fileID: 2250459203902724633, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
   - {fileID: -5565471278857286488, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
   - {fileID: 8716294526568245196, guid: 54b1a78ce922c481cb6adc2fe58efff5, type: 3}
@@ -795,12 +781,6 @@ SpriteAtlas:
   - fishing pole idle 3x_89
   - fishing pole idle 3x_88
   - fishing pole idle 3x_87
-  - pier-shadow-3x-pt1_3
-  - pier-shadow-3x-pt1_2
-  - pier-shadow-3x-pt1_1
-  - pier-shadow-3x-pt1_0
-  - pier-shadow-3x-pt1_5
-  - pier-shadow-3x-pt1_4
   - buoy-3x-pt2_8
   - buoy-3x-pt2_9
   - buoy-3x-pt2_4
@@ -1041,12 +1021,6 @@ SpriteAtlas:
   - splash feet 3x_13
   - splash feet 3x_12
   - splash feet 3x_6
-  - pier-shadow-3x-pt2_4
-  - pier-shadow-3x-pt2_5
-  - pier-shadow-3x-pt2_0
-  - pier-shadow-3x-pt2_1
-  - pier-shadow-3x-pt2_2
-  - pier-shadow-3x-pt2_3
   - waves_20
   - waves_21
   - waves_22

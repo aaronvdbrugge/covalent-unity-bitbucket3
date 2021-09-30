@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Park+LeftSeating
+  m_Name: Park+LeftSeating (SocialHour)
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -28,7 +28,7 @@ SpriteAtlas:
       m_TextureFormat: -1
       m_TextureCompression: 3
       m_CompressionQuality: 0
-      m_CrunchedCompression: 1
+      m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -59,7 +59,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
     - {fileID: 2800000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
     - {fileID: 2800000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
-    - {fileID: 2800000, guid: ccccffa58216a4e218404632c2ce4f08, type: 3}
+    - {fileID: 2800000, guid: ec564cc457ce847698b0d80b25c8ce85, type: 3}
     - {fileID: 2800000, guid: 16a823d9f30f846f08f61791f1a06374, type: 3}
     - {fileID: 2800000, guid: 6101cf04f4e5348efbd49ccb787c8974, type: 3}
     - {fileID: 2800000, guid: 50a15c313920347138d824d634db2d26, type: 3}
@@ -73,8 +73,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: fa9e864bdbd334e92ae5ede46bf33970, type: 3}
     - {fileID: 2800000, guid: 1772958fbf89f4a90bd01f29e0b38722, type: 3}
     - {fileID: 2800000, guid: 3d87fbbc583ea43e8b99de00b34ec7db, type: 3}
-    - {fileID: 2800000, guid: ec564cc457ce847698b0d80b25c8ce85, type: 3}
-    bindAsDefault: 1
+    bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
@@ -141,5 +140,5 @@ SpriteAtlas:
   - soccer net upper back
   - trees left
   m_RenderDataMap: {}
-  m_Tag: Park+LeftSeating
+  m_Tag: Park+LeftSeating (SocialHour)
   m_IsVariant: 0

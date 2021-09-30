@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Landscape
+  m_Name: Diamonds Small
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -15,7 +15,7 @@ SpriteAtlas:
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      filterMode: 0
+      filterMode: 1
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
@@ -26,23 +26,11 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 3
-      m_CompressionQuality: 0
-      m_CrunchedCompression: 1
-      m_AllowsAlphaSplitting: 0
-      m_Overridden: 0
-      m_AndroidETC2FallbackOverride: 0
-      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
-    - serializedVersion: 3
-      m_BuildTarget: iPhone
-      m_MaxTextureSize: 4096
-      m_ResizeAlgorithm: 0
-      m_TextureFormat: 48
       m_TextureCompression: 1
       m_CompressionQuality: 50
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
-      m_Overridden: 1
+      m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -56,21 +44,24 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: b6a42adadf48a48dc9176f72d12b1d44, type: 3}
-    - {fileID: 2800000, guid: 99a0c1280e03544d5958487df07fe24e, type: 3}
-    - {fileID: 2800000, guid: 5f880d6143bf94313a00f22c8993df4f, type: 3}
+    - {fileID: 2800000, guid: ccccffa58216a4e218404632c2ce4f08, type: 3}
+    - {fileID: 2800000, guid: b35491a7255af4565bdf24f0b6ff9cc0, type: 3}
+    - {fileID: 2800000, guid: 14f941d95b591cf4db84546adb90b325, type: 3}
+    - {fileID: 2800000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 5f880d6143bf94313a00f22c8993df4f, type: 3}
-  - {fileID: 21300000, guid: 99a0c1280e03544d5958487df07fe24e, type: 3}
-  - {fileID: 21300000, guid: b6a42adadf48a48dc9176f72d12b1d44, type: 3}
+  - {fileID: 21300000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
+  - {fileID: 21300000, guid: ccccffa58216a4e218404632c2ce4f08, type: 3}
+  - {fileID: 21300000, guid: b35491a7255af4565bdf24f0b6ff9cc0, type: 3}
+  - {fileID: 21300000, guid: 14f941d95b591cf4db84546adb90b325, type: 3}
   m_PackedSpriteNamesToIndex:
-  - lower clouds
-  - cloud
-  - building
+  - platform_fountain@3x
+  - soccer
+  - pond_left
+  - castle
   m_RenderDataMap: {}
-  m_Tag: Landscape
+  m_Tag: Diamonds Small
   m_IsVariant: 0
