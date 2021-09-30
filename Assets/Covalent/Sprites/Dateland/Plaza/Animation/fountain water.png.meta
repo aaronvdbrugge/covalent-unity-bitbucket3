@@ -1,0 +1,1152 @@
+fileFormatVersion: 2
+guid: 496e7359352711543b37cbdb8fa494c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2756062991119010162
+    second: fountain water_0
+  - first:
+      213: -6212868440684549222
+    second: fountain water_1
+  - first:
+      213: -3297112489652227481
+    second: fountain water_2
+  - first:
+      213: -9051602246868854971
+    second: fountain water_3
+  - first:
+      213: -626616313215522715
+    second: fountain water_4
+  - first:
+      213: 3838498095734322165
+    second: fountain water_5
+  - first:
+      213: 5755104528425479163
+    second: fountain water_6
+  - first:
+      213: -3238286777625083915
+    second: fountain water_7
+  - first:
+      213: 7488550317216496018
+    second: fountain water_8
+  - first:
+      213: 3718708023235115799
+    second: fountain water_9
+  - first:
+      213: -3312248340419561733
+    second: fountain water_10
+  - first:
+      213: 1045026883521628486
+    second: fountain water_11
+  - first:
+      213: 2507984070360556828
+    second: fountain water_12
+  - first:
+      213: 9141151451382840749
+    second: fountain water_13
+  - first:
+      213: 8668820301446265950
+    second: fountain water_14
+  - first:
+      213: 4967430695703373697
+    second: fountain water_15
+  - first:
+      213: 5036385972717313184
+    second: fountain water_16
+  - first:
+      213: -981998176621427811
+    second: fountain water_17
+  - first:
+      213: -3455534029562466337
+    second: fountain water_18
+  - first:
+      213: 5078873887482658646
+    second: fountain water_19
+  - first:
+      213: 8312225412637572390
+    second: fountain water_20
+  - first:
+      213: -6087404886143186978
+    second: fountain water_21
+  - first:
+      213: -7104195961744654213
+    second: fountain water_22
+  - first:
+      213: 4358266488129260910
+    second: fountain water_23
+  - first:
+      213: 5421503911485892426
+    second: fountain water_24
+  - first:
+      213: -2179391354474218228
+    second: fountain water_25
+  - first:
+      213: -57636550313557817
+    second: fountain water_26
+  - first:
+      213: 1178406611141763899
+    second: fountain water_27
+  - first:
+      213: -3102569565304441923
+    second: fountain water_28
+  - first:
+      213: -5711792940496566786
+    second: fountain water_29
+  - first:
+      213: -7007166075520025598
+    second: fountain water_30
+  - first:
+      213: 1501656811878740608
+    second: fountain water_31
+  - first:
+      213: -2057427843332559668
+    second: fountain water_32
+  - first:
+      213: -1809505773607933417
+    second: fountain water_33
+  - first:
+      213: -3498687531862324938
+    second: fountain water_34
+  - first:
+      213: 426829390673831051
+    second: fountain water_35
+  - first:
+      213: -1661546891986668178
+    second: fountain water_36
+  - first:
+      213: -2662597806890639571
+    second: fountain water_37
+  - first:
+      213: 4064315896848626459
+    second: fountain water_38
+  - first:
+      213: 1659780562672198832
+    second: fountain water_39
+  - first:
+      213: 8113319069934525794
+    second: fountain water_40
+  - first:
+      213: 8113917878730746957
+    second: fountain water_41
+  - first:
+      213: 4010014718503717654
+    second: fountain water_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fountain water_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279cf3c20b08f3620800000000000000
+      internalID: 2756062991119010162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_1
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b23c4021577c9a0800000000000000
+      internalID: -6212868440684549222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_2
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76276c5d8ad4e32d0800000000000000
+      internalID: -3297112489652227481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_3
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5471143c6bf326280800000000000000
+      internalID: -9051602246868854971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_4
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568e25878cfcd47f0800000000000000
+      internalID: -626616313215522715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_5
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f14b4ea5154530800000000000000
+      internalID: 3838498095734322165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_6
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 1824
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbea06a31d3edf40800000000000000
+      internalID: 5755104528425479163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffffca355b4f03d0800000000000000
+      internalID: -3238286777625083915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_8
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299f35466dcace760800000000000000
+      internalID: 7488550317216496018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_9
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bf25c9e318b9330800000000000000
+      internalID: 3718708023235115799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_10
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf63a65fea78802d0800000000000000
+      internalID: -3312248340419561733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_11
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6494a0de96ea08e00800000000000000
+      internalID: 1045026883521628486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_12
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15ed2069362ec220800000000000000
+      internalID: 2507984070360556828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_13
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 1520
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad78b920d4ebde70800000000000000
+      internalID: 9141151451382840749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c36618226dd4870800000000000000
+      internalID: 8668820301446265950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_15
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18765cf26ebdfe440800000000000000
+      internalID: 4967430695703373697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_16
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac5397bb56d4e540800000000000000
+      internalID: 5036385972717313184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_17
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9306687cdd3f52f0800000000000000
+      internalID: -981998176621427811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_18
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfa7aabb1a7b00d0800000000000000
+      internalID: -3455534029562466337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_19
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f396244e8cb7640800000000000000
+      internalID: 5078873887482658646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_20
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 1216
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62dbc3509f4fa5370800000000000000
+      internalID: 8312225412637572390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7457d2281358ba0800000000000000
+      internalID: -6087404886143186978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_22
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7002759963d86d90800000000000000
+      internalID: -7104195961744654213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_23
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d0f65a74cab7c30800000000000000
+      internalID: 4358266488129260910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_24
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47e188451d0d3b40800000000000000
+      internalID: 5421503911485892426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_25
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0db10a2c1f31c1e0800000000000000
+      internalID: -2179391354474218228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_26
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c04b74ecdb333ff0800000000000000
+      internalID: -57636550313557817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_27
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 912
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33a312c19a8a5010800000000000000
+      internalID: 1178406611141763899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db337112b6571f4d0800000000000000
+      internalID: -3102569565304441923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_29
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef54e1f3592abb0b0800000000000000
+      internalID: -5711792940496566786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_30
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cf572749b81ce90800000000000000
+      internalID: -7007166075520025598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_31
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082f39e0ae4f6d410800000000000000
+      internalID: 1501656811878740608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_32
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc2a27f64c8273e0800000000000000
+      internalID: -2057427843332559668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_33
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71aa419061853e6e0800000000000000
+      internalID: -1809505773607933417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_34
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 608
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63902430a3a227fc0800000000000000
+      internalID: -3498687531862324938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b846fc2c1176ce500800000000000000
+      internalID: 426829390673831051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_36
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65fa7da7eff0f8e0800000000000000
+      internalID: -1661546891986668178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_37
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f9c84d66d8c0bd0800000000000000
+      internalID: -2662597806890639571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_38
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13b2a646c9576830800000000000000
+      internalID: 4064315896848626459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_39
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4ac2bb0a9b80710800000000000000
+      internalID: 1659780562672198832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_40
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d99d835bc489070800000000000000
+      internalID: 8113319069934525794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_41
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 304
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cef62425d6a9070800000000000000
+      internalID: 8113917878730746957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fountain water_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 568
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b8088f32f66a730800000000000000
+      internalID: 4010014718503717654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

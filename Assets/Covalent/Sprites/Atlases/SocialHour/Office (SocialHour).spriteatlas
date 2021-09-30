@@ -26,9 +26,9 @@ SpriteAtlas:
       m_MaxTextureSize: 2048
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 3
+      m_TextureCompression: 1
       m_CompressionQuality: 0
-      m_CrunchedCompression: 1
+      m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -62,7 +62,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: e3c90e89ed14447b2acabf5bbf60173f, type: 3}
     - {fileID: 2800000, guid: 6c5788b5b22334a7eb862aabc0bccd0d, type: 3}
     - {fileID: 2800000, guid: 9ea43e384abdc4ef6b10d1d14d3220f3, type: 3}
-    bindAsDefault: 0
+    bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
