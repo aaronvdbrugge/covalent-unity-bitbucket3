@@ -1,6 +1,8 @@
 // Found this here:
 //   https://forum.unity.com/threads/editor-utility-crunch-all-textures.504988/
 
+// Modified by Seb to have a greater range of settings (including ability to set all to uncompressed)
+
 
 using UnityEditor;
 using UnityEngine;
@@ -11,6 +13,8 @@ public class TextureCruncher : EditorWindow
 {
     #region Variables
  
+    TextureImporterCompression textureCompression;
+    bool crunchedCompression = true;
     int compressionQuality = 75;
     int processingSpeed = 10;
  
@@ -61,7 +65,10 @@ public class TextureCruncher : EditorWindow
     void OnGUI ()
     {
         EditorGUILayout.LabelField ("Texture Cruncher", EditorStyles.boldLabel);
- 
+
+
+        textureCompression = (TextureImporterCompression)EditorGUILayout.EnumPopup("Texture compression", textureCompression);
+        crunchedCompression = EditorGUILayout.Toggle("Crunched compression", crunchedCompression);
         compressionQuality = EditorGUILayout.IntSlider ("Compression quality:", compressionQuality, 0, 100);
         processingSpeed = EditorGUILayout.IntSlider ("Processing speed:", processingSpeed, 1, 20);
  
@@ -147,27 +154,34 @@ public class TextureCruncher : EditorWindow
         DisplayMessage (string.Empty);
  
         var assets = AssetDatabase.FindAssets ("t:texture", null).Select (o => AssetImporter.GetAtPath (AssetDatabase.GUIDToAssetPath(o)) as TextureImporter);
-        var eligibleAssets = assets.Where (o => o != null).Where (o => o.compressionQuality != compressionQuality || !o.crunchedCompression);
+        var eligibleAssets = assets.Where (o => o != null).Where (o => o.compressionQuality != compressionQuality || o.crunchedCompression != crunchedCompression || o.textureCompression != textureCompression );
  
         totalCount = (float)eligibleAssets.Count();
         progressCount = 0f;
  
-        int quality = compressionQuality;
-        int limiter = processingSpeed;
+        // I'm guessing it's like this to guard against UI changes while coroutine is going
+        int compression_quality = compressionQuality;
+        bool crunched_compression = crunchedCompression;
+        TextureImporterCompression texture_compression = textureCompression;
+        int processing_speed = processingSpeed;
+
+
         foreach (var textureImporter in eligibleAssets)
         {
             progressCount += 1f;
  
-            textureImporter.compressionQuality = quality;
-            textureImporter.crunchedCompression = true;
+            textureImporter.compressionQuality = compression_quality;
+            textureImporter.crunchedCompression = crunched_compression;
+            textureImporter.textureCompression = texture_compression;
+
             AssetDatabase.ImportAsset(textureImporter.assetPath);
          
-            limiter -= 1;
-            if (limiter <= 0)
+            processing_speed -= 1;
+            if (processing_speed <= 0)
             {
                 yield return null;
  
-                limiter = processingSpeed;
+                processing_speed = processingSpeed;
             }
         }
    
