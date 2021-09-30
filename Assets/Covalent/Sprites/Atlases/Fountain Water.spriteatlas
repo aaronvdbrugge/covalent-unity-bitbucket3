@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fountain Water
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -9051602246868854971, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3297112489652227481, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -6212868440684549222, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 2756062991119010162, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3238286777625083915, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 5755104528425479163, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 3838498095734322165, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -626616313215522715, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 3718708023235115799, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 7488550317216496018, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -7007166075520025598, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 1501656811878740608, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -2057427843332559668, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -1809505773607933417, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 4358266488129260910, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3498687531862324938, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -7104195961744654213, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 426829390673831051, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -6087404886143186978, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -4925668404237689230, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -1661546891986668178, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 8312225412637572390, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 5036385972717313184, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3985573856140903160, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -2662597806890639571, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 1178406611141763899, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -981998176621427811, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -1509951750980710662, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 4064315896848626459, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -57636550313557817, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 8668820301446265950, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 807366051499951482, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 1659780562672198832, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -2179391354474218228, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 4967430695703373697, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 8113917878730746957, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 5421503911485892426, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 2507984070360556828, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 8113319069934525794, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 9141151451382840749, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -2242474838213728402, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3312248340419561733, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 4010014718503717654, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -5711792940496566786, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 1045026883521628486, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3102569565304441923, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: -3455534029562466337, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  - {fileID: 5078873887482658646, guid: 496e7359352711543b37cbdb8fa494c0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - fountain water_3
+  - fountain water_2
+  - fountain water_1
+  - fountain water_0
+  - fountain water_7
+  - fountain water_6
+  - fountain water_5
+  - fountain water_4
+  - fountain water_9
+  - fountain water_8
+  - fountain water_30
+  - fountain water_31
+  - fountain water_32
+  - fountain water_33
+  - fountain water_23
+  - fountain water_34
+  - fountain water_22
+  - fountain water_35
+  - fountain water_21
+  - fountain water_45
+  - fountain water_36
+  - fountain water_20
+  - fountain water_16
+  - fountain water_44
+  - fountain water_37
+  - fountain water_27
+  - fountain water_17
+  - fountain water_47
+  - fountain water_38
+  - fountain water_26
+  - fountain water_14
+  - fountain water_46
+  - fountain water_39
+  - fountain water_25
+  - fountain water_15
+  - fountain water_41
+  - fountain water_24
+  - fountain water_12
+  - fountain water_40
+  - fountain water_13
+  - fountain water_43
+  - fountain water_10
+  - fountain water_42
+  - fountain water_29
+  - fountain water_11
+  - fountain water_28
+  - fountain water_18
+  - fountain water_19
+  m_RenderDataMap: {}
+  m_Tag: Fountain Water
+  m_IsVariant: 0

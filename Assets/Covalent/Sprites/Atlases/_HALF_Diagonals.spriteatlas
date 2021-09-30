@@ -66,12 +66,17 @@ SpriteAtlas:
     type: 2}
   m_PackedSprites:
   - {fileID: 21300000, guid: fcb1fd20738284e9888edf6d2a5d9da1, type: 3}
+  - {fileID: 21300000, guid: 0f61bc802aabece4aab80c9137cde08b, type: 3}
   - {fileID: 21300000, guid: 062ab642cf76849b6acd8fa4f4b5699b, type: 3}
+  - {fileID: 21300000, guid: 82ffe7e2c72e9da4390e107c0d9fc1f7, type: 3}
+  - {fileID: 21300000, guid: f4215193bd98fe240a40db0fe0ca9c04, type: 3}
+  - {fileID: 21300000, guid: 23e36ff4ea0cefd408e6985a1410ddbe, type: 3}
   - {fileID: 21300000, guid: 52af8605538264f3da8d7a4dac22a614, type: 3}
   - {fileID: 21300000, guid: b9a40787a8a1a48e180b4ab572ccaa49, type: 3}
   - {fileID: 21300000, guid: fddae2583253841059e1de92ab8541d7, type: 3}
   - {fileID: 21300000, guid: 3261a49851eb4494d90388adc8a75704, type: 3}
   - {fileID: 21300000, guid: 89255d99f14074b1da24a1c9a10f69f0, type: 3}
+  - {fileID: 21300000, guid: df63beaab8d5cea4c9b3a94be37dff00, type: 3}
   - {fileID: 21300000, guid: a607d4bad460d4324aa23eaaffa3692f, type: 3}
   - {fileID: 21300000, guid: ec42d6cafe6bf43118a9deb3c31f1273, type: 3}
   - {fileID: 21300000, guid: f2ce5b4b19ce54ab684abd7c2f5d70d9, type: 3}
@@ -80,14 +85,20 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 955cbbfcafd9a4329b1f7e1e3d7b95b2, type: 3}
   - {fileID: 21300000, guid: 5685c18d2f8094353a10174bcc3fbe2d, type: 3}
   - {fileID: 21300000, guid: 0e6bd55e398004b8eab66ca38708df41, type: 3}
+  - {fileID: 21300000, guid: 7f1816bfbf1b20440a89ede0ea0b78e6, type: 3}
   m_PackedSpriteNamesToIndex:
   - fence_ironLeftBottom
+  - hedge_l_2
   - fence_mainBack
+  - hedge_r_2
+  - hedge_l_3
+  - hedge_l_1
   - fence_ironLeftCenter
   - fence_ironRightTop
   - fence_ironRightBottom
   - fence_BG_left@3x
   - bushHeart_backRight
+  - hedge_r_3
   - fence_ironLeftTop
   - fence_BG_right@3x
   - fence_rightFar@3x
@@ -96,6 +107,7 @@ SpriteAtlas:
   - fence_leftFar@3x
   - fence_rightMiddle@3x
   - fence_ironRightCenter
+  - hedge_r_1
   m_RenderDataMap: {}
   m_Tag: Diagonals
   m_IsVariant: 1

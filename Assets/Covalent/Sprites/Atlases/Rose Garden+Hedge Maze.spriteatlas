@@ -78,12 +78,14 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: f47c67a071e721041a60eb8391e9762b, type: 3}
   - {fileID: 21300000, guid: 3a4528a094b2d46df8d6ab8fef3bbfe1, type: 3}
+  - {fileID: 21300000, guid: c561567178aae44c7a2e3123e3a57c57, type: 3}
   - {fileID: 21300000, guid: 109195e1e8c92074ebe939e42ea8b0c2, type: 3}
   - {fileID: 21300000, guid: 5f7116f1898ce4f86b78aef348cd5b19, type: 3}
   - {fileID: 21300000, guid: 0e484953d87e341f19c928cd8d88a8f6, type: 3}
   - {fileID: 21300000, guid: e5db05c3a448c462cad35388f48ab4d7, type: 3}
   - {fileID: 21300000, guid: eb0118d36b45740828985ffabe3add2d, type: 3}
   - {fileID: 21300000, guid: b13428e37a52b4b6a835519fd126d4ea, type: 3}
+  - {fileID: 21300000, guid: 52490524c879044b0a267bf6da7de960, type: 3}
   - {fileID: 21300000, guid: 062afc84e0224480499b0a45793cadf8, type: 3}
   - {fileID: 21300000, guid: 39f3d3161f5dc45be9621a141319aa9c, type: 3}
   - {fileID: 21300000, guid: 3fe51d36c07b34f778a2697a5cb7ed8a, type: 3}
@@ -104,12 +106,14 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - wishing well
   - topiary_trex@3x
+  - gardenBench_left@3x
   - garden bench
   - boundary_bottomLeft@3x
   - tulip_top1@3x
   - arbor_bottomRight@3x
   - hedgeFlowers_bottomRight2@3x
   - arbor_bottomLeft@3x
+  - stoneBench_bottomCenter@3x
   - boundary_right@3x
   - hedgeFlowers_bottomRight1@3x
   - topiary_rabbit@3x
