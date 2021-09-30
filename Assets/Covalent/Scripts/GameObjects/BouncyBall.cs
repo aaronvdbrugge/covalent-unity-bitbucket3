@@ -287,7 +287,7 @@ public class BouncyBall : MonoBehaviourPun
             );
 
         // Move the ball's sorting offset
-        _ballSpriteSorter.SorterPositionOffset.y = _ballSortingYOriginal - zPos;
+        _ballSpriteSorter.SorterPositionOffset.y = _ballSortingYOriginal - (zPos / _ballSpriteSorter.transform.localScale.y);
 	}
 
 

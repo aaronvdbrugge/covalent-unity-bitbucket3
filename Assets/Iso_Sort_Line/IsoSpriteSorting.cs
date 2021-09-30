@@ -43,18 +43,67 @@ public class IsoSpriteSorting : MonoBehaviour
 
     private Transform t;
 
+
+    /// <summary>
+    /// Transforms a local sorting point to world, but ignores rotation.
+    /// </summary>
+    public Vector3 TransformSortingPoint( Vector3 local_point )
+    {
+        Quaternion real_rotation = transform.localRotation;   // hopefully efficiency is OK here?
+        transform.rotation = Quaternion.identity;   // change world rotation so it isn't rotated
+        Vector3 ret = transform.localToWorldMatrix.MultiplyPoint( local_point );
+        transform.localRotation = real_rotation;
+        return ret;
+    }
+
+    /// <summary>
+    /// Transforms a world sorting point to local, but ignores rotation.
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 UntransformSortingPoint( Vector3 world_point )
+    {
+        Quaternion real_rotation = transform.localRotation;   // hopefully efficiency is OK here?
+        transform.rotation = Quaternion.identity;   // change world rotation so it isn't rotated
+        Vector3 ret = transform.worldToLocalMatrix.MultiplyPoint( world_point );
+        transform.localRotation = real_rotation;
+        return ret;
+    }
+
+
+    Vector3 _lastSorterPositionOffset = new Vector3( float.MinValue, float.MinValue, float.MinValue );   //cache last used local position for efficiency
+    Vector3 _lastSorterPositionOffsetWorld;
     private Vector3 SortingPoint1
     {
         get
         {
-            return SorterPositionOffset + t.position;
+            //return SorterPositionOffset + t.position;   // changed by Seb to accept scaling, etc better
+            if( _lastSorterPositionOffset != SorterPositionOffset || transform.hasChanged)   // just in case the transform stuff is slow
+            {
+                _lastSorterPositionOffset = SorterPositionOffset;
+                _lastSorterPositionOffsetWorld = TransformSortingPoint( SorterPositionOffset );
+                transform.hasChanged = false;
+            }
+
+            return _lastSorterPositionOffsetWorld;
         }
     }
+
+    Vector3 _lastSorterPositionOffset2 = new Vector3( float.MinValue, float.MinValue, float.MinValue );   //cache last used local position for efficiency
+    Vector3 _lastSorterPositionOffsetWorld2;
     private Vector3 SortingPoint2
     {
         get
         {
-            return SorterPositionOffset2 + t.position;
+            //return SorterPositionOffset2 + t.position;
+
+            if( _lastSorterPositionOffset2 != SorterPositionOffset2 || transform.hasChanged)   // just in case the transform stuff is slow
+            {
+                _lastSorterPositionOffset2 = SorterPositionOffset2;
+                _lastSorterPositionOffsetWorld2 = TransformSortingPoint( SorterPositionOffset2 );
+                transform.hasChanged = false;
+            }
+
+            return _lastSorterPositionOffsetWorld2;
         }
     }
 
