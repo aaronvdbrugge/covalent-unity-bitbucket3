@@ -44,9 +44,8 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: c588d548babf2440ebc055257106b78b, type: 3}
-    - {fileID: 2800000, guid: 79b1ee59471db421cbc9c3f3f435866f, type: 3}
     - {fileID: 2800000, guid: 5030d6b79b50f4fac9839901f92d56c6, type: 3}
+    - {fileID: 2800000, guid: 79b1ee59471db421cbc9c3f3f435866f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -96,30 +95,6 @@ SpriteAtlas:
   - {fileID: 1150531020877169155, guid: 5030d6b79b50f4fac9839901f92d56c6, type: 3}
   - {fileID: -1031498275106590807, guid: 5030d6b79b50f4fac9839901f92d56c6, type: 3}
   - {fileID: -6125398880297537438, guid: 5030d6b79b50f4fac9839901f92d56c6, type: 3}
-  - {fileID: 9005637746464284294, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 607182124921687071, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -5318699486576375762, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 8977424547829261652, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -3204158248089620447, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -567051304924995348, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 6747022469751426137, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 5131253765189258675, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -7118657641768884740, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 3694936995787993237, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -1666033519279155148, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -3810611451148343529, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -2036903025573277735, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 6988547588630596262, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -487987972299459256, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -4160487712461007264, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -8913400354774523, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 5178043934999433314, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 718697509756091627, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: 5308928159167515565, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -3980686529043407936, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -6220374212759464533, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -8308100746422203121, guid: c588d548babf2440ebc055257106b78b, type: 3}
-  - {fileID: -5504388195281060557, guid: c588d548babf2440ebc055257106b78b, type: 3}
   - {fileID: -4084335338914654812, guid: 79b1ee59471db421cbc9c3f3f435866f, type: 3}
   - {fileID: -6449651792096812936, guid: 79b1ee59471db421cbc9c3f3f435866f, type: 3}
   - {fileID: 3105756935679620580, guid: 79b1ee59471db421cbc9c3f3f435866f, type: 3}
@@ -205,30 +180,6 @@ SpriteAtlas:
   - wind roses_42
   - wind roses_43
   - wind roses_13
-  - arbor center wisteria_21
-  - arbor center wisteria_20
-  - arbor center wisteria_23
-  - arbor center wisteria_22
-  - arbor center wisteria_9
-  - arbor center wisteria_8
-  - arbor center wisteria_5
-  - arbor center wisteria_4
-  - arbor center wisteria_7
-  - arbor center wisteria_6
-  - arbor center wisteria_1
-  - arbor center wisteria_0
-  - arbor center wisteria_3
-  - arbor center wisteria_2
-  - arbor center wisteria_14
-  - arbor center wisteria_15
-  - arbor center wisteria_16
-  - arbor center wisteria_17
-  - arbor center wisteria_10
-  - arbor center wisteria_11
-  - arbor center wisteria_12
-  - arbor center wisteria_13
-  - arbor center wisteria_18
-  - arbor center wisteria_19
   - leaves falling_3
   - leaves falling_2
   - leaves falling_1
