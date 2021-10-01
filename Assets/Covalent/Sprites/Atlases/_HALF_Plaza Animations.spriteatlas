@@ -26,8 +26,8 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 100
       m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
@@ -421,6 +421,36 @@ SpriteAtlas:
   - {fileID: -1950239772141810352, guid: 97808aa36d0da4e1bb33812ed42ad1fd, type: 3}
   - {fileID: -5936970069891435790, guid: 97808aa36d0da4e1bb33812ed42ad1fd, type: 3}
   - {fileID: -8166861184446990571, guid: 97808aa36d0da4e1bb33812ed42ad1fd, type: 3}
+  - {fileID: -6384081557155793264, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 6886178453672305326, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -1725332363756634941, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -8717109508442977468, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 1500463661883338547, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -4139694768120332024, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 7566126790726460090, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -7582905439324764561, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 3495301036689832445, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -3023446391008454037, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -930918948830858522, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -4055709620190856489, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 6712714840332784938, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -3506519677988719982, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 4625237377173308275, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -455622095734552585, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -6494656711642010645, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -4341209307699571989, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -995882344458069747, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -4365040811442915969, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -7336383269554291871, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -3409696929250634970, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 4045823626743875795, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 3158314921182776359, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 7766602637131020636, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -2357858629804643235, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: 1195521225108278853, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -8402033686643536094, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -555124215276565179, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
+  - {fileID: -896190286679361693, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
   - {fileID: 1429039857649187066, guid: 4991babdf9b584d4aa395c2a6fc27611, type: 3}
   - {fileID: -1621513535098824681, guid: 4991babdf9b584d4aa395c2a6fc27611, type: 3}
   - {fileID: 2825332790264576967, guid: 4991babdf9b584d4aa395c2a6fc27611, type: 3}
@@ -939,6 +969,36 @@ SpriteAtlas:
   - balloon bunch 3x_2
   - balloon bunch 3x_3
   - balloon bunch 3x_0
+  - flag animation_28
+  - flag animation_29
+  - flag animation_24
+  - flag animation_25
+  - flag animation_26
+  - flag animation_27
+  - flag animation_20
+  - flag animation_21
+  - flag animation_22
+  - flag animation_23
+  - flag animation_6
+  - flag animation_7
+  - flag animation_4
+  - flag animation_5
+  - flag animation_2
+  - flag animation_3
+  - flag animation_0
+  - flag animation_1
+  - flag animation_8
+  - flag animation_9
+  - flag animation_15
+  - flag animation_14
+  - flag animation_17
+  - flag animation_16
+  - flag animation_11
+  - flag animation_10
+  - flag animation_13
+  - flag animation_12
+  - flag animation_19
+  - flag animation_18
   - grass patch mild 3x_119
   - grass patch mild 3x_118
   - grass patch mild 3x_148

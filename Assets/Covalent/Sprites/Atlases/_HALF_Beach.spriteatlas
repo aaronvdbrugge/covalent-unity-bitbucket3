@@ -26,8 +26,8 @@ SpriteAtlas:
       m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 1
-      m_CompressionQuality: 0
+      m_TextureCompression: 3
+      m_CompressionQuality: 100
       m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
@@ -92,6 +92,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3f1f863dfce564ebe8c2b55e3db31aa3, type: 3}
   - {fileID: 21300000, guid: 9ca4d6be8ab984ceda4d8a0bda6d5e66, type: 3}
   - {fileID: 21300000, guid: 744d930f5780645e2b601a659c5bc974, type: 3}
+  - {fileID: 21300000, guid: 65c5ae8faeff64ef0af955e849acc3c9, type: 3}
   m_PackedSpriteNamesToIndex:
   - crabBuried1@3x
   - umbrellaBlueShadow@3x
@@ -123,6 +124,7 @@ SpriteAtlas:
   - fence_Right
   - fishHouse@3x
   - seashells1@3x
+  - pier post sand
   m_RenderDataMap: {}
   m_Tag: Beach
   m_IsVariant: 1
