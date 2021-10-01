@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grass+Wind
+  m_Name: Grass+Wind Animations
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -503,5 +503,5 @@ SpriteAtlas:
   - wind_6
   - wind_7
   m_RenderDataMap: {}
-  m_Tag: Grass+Wind
+  m_Tag: Grass+Wind Animations
   m_IsVariant: 0
