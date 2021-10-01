@@ -40,14 +40,25 @@ public class Animating_Object : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        TriggeredByTouch();
+    }
+
+   private void OnCollisionEnter2D(Collision2D col)
+    {
+        TriggeredByTouch();
+    }
+
+    void TriggeredByTouch()
+    {
         if (animateDownTime == false)
         {
             animateDownTime = true;
             animateObj();
             StartCoroutine(resetDownTime());
         }
-        
     }
+
+
     public IEnumerator resetDownTime()
     {
         yield return new WaitForSeconds(timeToWait);
