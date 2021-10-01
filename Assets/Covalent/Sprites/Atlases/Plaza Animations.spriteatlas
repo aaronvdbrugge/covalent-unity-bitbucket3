@@ -27,8 +27,8 @@ SpriteAtlas:
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 1
-      m_CompressionQuality: 100
-      m_CrunchedCompression: 0
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -48,6 +48,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
     - {fileID: 2800000, guid: 2452c4d02ec174e40b492a7377cad2b6, type: 3}
     - {fileID: 2800000, guid: 4991babdf9b584d4aa395c2a6fc27611, type: 3}
+    - {fileID: 2800000, guid: 5a137b864bce6b04ca040fd550b42d73, type: 3}
     bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
