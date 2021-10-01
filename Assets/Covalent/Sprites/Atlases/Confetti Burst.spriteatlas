@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Confetti Burst
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4130944772207679131, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -6261547305425344321, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -7135385185083210991, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -8018598485055441546, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 3687186910739806781, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 2458706812044639691, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 2792435118999516451, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 1110780484930210860, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 1305047054334456811, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -6644584693337432824, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -8433566271401017951, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -2516577753162236789, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -3637723359966491037, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 5608587137287723638, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -5765649195578974721, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -4472400100912946602, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -8597903676411856942, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 5745123305841203494, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -5350456817188226243, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 7650170615735956795, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 148729213638150224, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -3092722381606170771, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -9160150385871563773, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 5685391141203197725, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 6358594585557923907, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 2470959166501619224, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -8398136759861302380, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -1187043580295119095, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -6188047951800478072, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 6032597258993842775, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 6196751464930287347, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 314832349986265012, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -3337469620293018089, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -5633856601043047478, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: 2465319540514005373, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -7215385270260607043, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  - {fileID: -5626323680748555349, guid: 959b67420a21bd04d8e2d3c45bc47b8c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - confetti_burst_36
+  - confetti_burst_34
+  - confetti_burst_35
+  - confetti_burst_29
+  - confetti_burst_32
+  - confetti_burst_28
+  - confetti_burst_33
+  - confetti_burst_30
+  - confetti_burst_31
+  - confetti_burst_21
+  - confetti_burst_20
+  - confetti_burst_23
+  - confetti_burst_22
+  - confetti_burst_25
+  - confetti_burst_24
+  - confetti_burst_27
+  - confetti_burst_26
+  - confetti_burst_10
+  - confetti_burst_11
+  - confetti_burst_12
+  - confetti_burst_13
+  - confetti_burst_14
+  - confetti_burst_15
+  - confetti_burst_16
+  - confetti_burst_17
+  - confetti_burst_18
+  - confetti_burst_19
+  - confetti_burst_1
+  - confetti_burst_0
+  - confetti_burst_3
+  - confetti_burst_2
+  - confetti_burst_5
+  - confetti_burst_4
+  - confetti_burst_7
+  - confetti_burst_6
+  - confetti_burst_9
+  - confetti_burst_8
+  m_RenderDataMap: {}
+  m_Tag: Confetti Burst
+  m_IsVariant: 0

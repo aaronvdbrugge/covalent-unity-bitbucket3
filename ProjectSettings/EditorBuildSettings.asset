@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Covalent/Scenes/Dateland.unity
     guid: f9a9f144954b14bad80040bcb4ac6d02
-  - enabled: 1
-    path: Assets/Covalent/Scenes/Social_Hour.unity
-    guid: 4e8277c270097493ab936a0721435d57
-  - enabled: 1
-    path: Assets/Covalent/Scenes/HedgeMaze.unity
-    guid: 49451f2d7f6ca6342986cefe19623a35
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 45d15d103e0c943919d91b5bd9b9cf91,
       type: 2}

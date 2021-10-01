@@ -27,8 +27,8 @@ SpriteAtlas:
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 1
-      m_CompressionQuality: 100
-      m_CrunchedCompression: 0
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
@@ -47,11 +47,72 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 6fd000a85be394613aacb9039a3ecf62, type: 3}
     - {fileID: 2800000, guid: 59d6f124ade8d4f8fb9b3de40e62c713, type: 3}
     - {fileID: 2800000, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
+    - {fileID: 2800000, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 6178715739618129699, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -3444221184237406056, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 8322867445140268575, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -1479351391241368131, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -7398394678240345709, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -9032402672648066062, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -6271264218281267274, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -4773970003751075780, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 7597544601446490796, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -2973545205511582295, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 448012458581268170, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -7916435451084902171, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 2324245651540604299, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -3163324428024393955, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 6829863057163846447, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -4360471671087888525, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 1393221146297543229, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -2669310138968597968, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -5847619041768973637, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 193030651494325083, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -3847247687953452230, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 5919185867969976986, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -4512943156677725872, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 6809429627531279031, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 8686614029602295772, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 5331818843444332225, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 2677955544246385982, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 5952637574591291494, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -8427454272111755346, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 5910536177976869433, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -6554437466652808831, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -5382549701047185359, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 992216401261313424, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -6439982808896337920, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 3207539821247127309, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -7220129352669680336, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 1858005300209365322, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 5593806016189791929, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -1616400941412918375, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -8545243481581946328, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -7491518149655870551, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -4897185772929941416, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -3842919009797622834, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 4225950354656059505, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -3732623487586589134, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 8884786218869241949, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -5333279174193228177, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 6242425263607179437, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -5510824834449156242, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -8094476151947124465, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -2370471934804634611, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -6208725703140112931, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 918980419240397072, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 645926154170359880, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -6453292067082968012, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: 6302304070342348754, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -5581296694935575984, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -653156204200084094, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -7316735807602779565, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
+  - {fileID: -96874552368296101, guid: 70995d9036676432ca0b28d9614960cb, type: 3}
   - {fileID: 4689128650607986575, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
   - {fileID: -3686236525362297758, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
   - {fileID: 2842297602509672115, guid: 9e4b1b22b51964def9b48e49d1e27758, type: 3}
@@ -217,6 +278,66 @@ SpriteAtlas:
   - {fileID: 76566668360782697, guid: 6fd000a85be394613aacb9039a3ecf62, type: 3}
   - {fileID: 8024345378078992206, guid: 6fd000a85be394613aacb9039a3ecf62, type: 3}
   m_PackedSpriteNamesToIndex:
+  - grass patch vigorous 3x_18
+  - grass patch vigorous 3x_19
+  - grass patch vigorous 3x_14
+  - grass patch vigorous 3x_15
+  - grass patch vigorous 3x_16
+  - grass patch vigorous 3x_17
+  - grass patch vigorous 3x_10
+  - grass patch vigorous 3x_11
+  - grass patch vigorous 3x_12
+  - grass patch vigorous 3x_13
+  - grass patch vigorous 3x_50
+  - grass patch vigorous 3x_51
+  - grass patch vigorous 3x_52
+  - grass patch vigorous 3x_32
+  - grass patch vigorous 3x_53
+  - grass patch vigorous 3x_43
+  - grass patch vigorous 3x_33
+  - grass patch vigorous 3x_54
+  - grass patch vigorous 3x_42
+  - grass patch vigorous 3x_30
+  - grass patch vigorous 3x_55
+  - grass patch vigorous 3x_41
+  - grass patch vigorous 3x_31
+  - grass patch vigorous 3x_25
+  - grass patch vigorous 3x_5
+  - grass patch vigorous 3x_56
+  - grass patch vigorous 3x_40
+  - grass patch vigorous 3x_36
+  - grass patch vigorous 3x_24
+  - grass patch vigorous 3x_4
+  - grass patch vigorous 3x_57
+  - grass patch vigorous 3x_47
+  - grass patch vigorous 3x_37
+  - grass patch vigorous 3x_27
+  - grass patch vigorous 3x_7
+  - grass patch vigorous 3x_58
+  - grass patch vigorous 3x_46
+  - grass patch vigorous 3x_34
+  - grass patch vigorous 3x_26
+  - grass patch vigorous 3x_6
+  - grass patch vigorous 3x_59
+  - grass patch vigorous 3x_45
+  - grass patch vigorous 3x_35
+  - grass patch vigorous 3x_21
+  - grass patch vigorous 3x_1
+  - grass patch vigorous 3x_44
+  - grass patch vigorous 3x_20
+  - grass patch vigorous 3x_0
+  - grass patch vigorous 3x_23
+  - grass patch vigorous 3x_3
+  - grass patch vigorous 3x_38
+  - grass patch vigorous 3x_22
+  - grass patch vigorous 3x_2
+  - grass patch vigorous 3x_49
+  - grass patch vigorous 3x_39
+  - grass patch vigorous 3x_48
+  - grass patch vigorous 3x_29
+  - grass patch vigorous 3x_9
+  - grass patch vigorous 3x_28
+  - grass patch vigorous 3x_8
   - grass blade vigorous-3_15
   - grass blade vigorous-3_46
   - grass blade vigorous-3_14
