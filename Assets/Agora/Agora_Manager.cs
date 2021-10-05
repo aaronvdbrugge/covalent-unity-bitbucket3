@@ -17,6 +17,11 @@ public class Agora_Manager : MonoBehaviour
     // ^^ Not yet implemented externally
     private static void failureToConnectAgora(string error) { Debug.Log("EXTERN: failureToConnectAgora(" + error + ")"); }
 
+    public static void _playerDidMute(int player_id) { Debug.Log("EXTERN: playerDidMute(" + player_id + ")"); }
+    public static void _playerDidUnmute(int player_id) { Debug.Log("EXTERN: playerDidMute(" + player_id + ")"); }
+
+
+
 
     public Text logs;
     public IRtcEngine mRtcEngine = null;
@@ -94,13 +99,36 @@ public class Agora_Manager : MonoBehaviour
             //string leaveChannelMessage = string.Format("onLeaveChannel callback duration {0}, tx: {1}, rx: {2}, tx kbps: {3}, rx kbps: {4}", stats.duration, stats.txBytes, stats.rxBytes, stats.txKBitRate, stats.rxKBitRate);
             //Debug.Log(leaveChannelMessage);
         };
+
+
+        mRtcEngine.OnAudioDeviceStateChanged += (string deviceId, int deviceType, int deviceState) =>
+        {
+            Debug.Log("OnAudioDeviceStateChanged: " + deviceId + " : " + deviceType + " : " + deviceState);
+        };
+
+
+        // NOTE: This is marked as "deprecated" in the Agora docs, but the function they recommend to replace it,
+        // OnAudioDeviceStateChanged, doesn't seem to work for muting.
+        mRtcEngine.OnUserMutedAudio += (uint uid, bool muted) =>
+        {
+            Debug.Log("OnUserMutedAudio: " + uid + " : " + muted );
+        };
     }
 
     public void mute(bool muted)
     {
         //Debug.Log(muted);
-        mRtcEngine.EnableLocalAudio(!muted);
+
+        // This was here when I got here, but doesn't seem to trigger proper muting callbacks, and might still allow some quiet
+        // noise to get through...
+        //mRtcEngine.EnableLocalAudio(!muted); 
+    
+        // This comment was also here when I got here; I'd guess it's the proper function, was it not working for some reason?
+        // Maybe it's just because they accidentally used !muted instead of muted?
         //mRtcEngine.MuteLocalAudioStream(!muted);
+
+
+        mRtcEngine.MuteLocalAudioStream( muted );
     }
 
     public void JoinChannel(string name)
