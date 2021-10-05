@@ -9,7 +9,6 @@ public class Agora_Public_Space : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Player_Controller_Mobile p = collision.gameObject.GetComponent<Player_Controller_Mobile>();
-            
         }
     }
 }
