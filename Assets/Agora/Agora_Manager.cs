@@ -12,13 +12,40 @@ using UnityEngine.Android;
 
 public class Agora_Manager : MonoBehaviour
 {
-    //[DllImport("__Internal")]
-    //private static extern void failureToConnectAgora(string error);
-    // ^^ Not yet implemented externally
-    private static void failureToConnectAgora(string error) { Debug.Log("EXTERN: failureToConnectAgora(" + error + ")"); }
+    // External functions (to native app)
+    [DllImport("__Internal")]
+    private static extern void _failureToConnectAgora(string error);
+    [DllImport("__Internal")]
+    private static extern void _playerDidMute(uint player_id);
+    [DllImport("__Internal")]
+    private static extern void _playerDidUnmute(uint player_id) ;
 
-    public static void _playerDidMute(int player_id) { Debug.Log("EXTERN: playerDidMute(" + player_id + ")"); }
-    public static void _playerDidUnmute(int player_id) { Debug.Log("EXTERN: playerDidMute(" + player_id + ")"); }
+    //Wrappers (don't call externs in editor)
+    private static void failureToConnectAgora(string error)
+    {
+        if( Application.isEditor )
+            Debug.Log("EXTERN: failureToConnectAgora(" + error + ")");
+        else
+            _failureToConnectAgora(error);
+    }
+
+    private static void playerDidMute(uint player_id)
+    { 
+        if( Application.isEditor)
+            Debug.Log("EXTERN: playerDidMute(" + player_id + ")");
+        else
+            _playerDidMute( player_id );
+    }
+
+    private static void playerDidUnmute(uint player_id)
+    { 
+        if( Application.isEditor )
+            Debug.Log("EXTERN: playerDidUnmute(" + player_id + ")");
+        else
+            _playerDidUnmute( player_id );
+    }
+
+
 
 
 
@@ -26,7 +53,7 @@ public class Agora_Manager : MonoBehaviour
     public Text logs;
     public IRtcEngine mRtcEngine = null;
     public AudioRecordingDeviceManager audio_manager;
-    public uint uID;
+    public uint myUid;  //save our own uid in ChannelOnJoinChannelSuccess
 
     [SerializeField]
     private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
@@ -88,6 +115,7 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.OnJoinChannelSuccess += (string channelName, uint uid, int elapsed) =>
         {
             Debug.Log("Joined Channel: " + channelName);
+            myUid = uid;
             if (!mRtcEngine.IsSpeakerphoneEnabled())
             {
                 mRtcEngine.SetEnableSpeakerphone(true);
@@ -101,33 +129,47 @@ public class Agora_Manager : MonoBehaviour
         };
 
 
-        mRtcEngine.OnAudioDeviceStateChanged += (string deviceId, int deviceType, int deviceState) =>
+
+
+        
+        // This is the recommended replacement for the "deprecated" OnUserMutedAudio, but it doesn't
+        // seem to work....
+        //mRtcEngine.OnAudioDeviceStateChanged += (string deviceId, int deviceType, int deviceState) =>
+        //{
+        //    Debug.Log("OnAudioDeviceStateChanged: " + deviceId + " : " + deviceType + " : " + deviceState);
+        //};
+
+
+        // This is the function that gets called when THIS user changes mute state (not the remote user)
+        mRtcEngine.OnAudioPublishStateChanged += (string channel, STREAM_PUBLISH_STATE oldState, STREAM_PUBLISH_STATE newState, int elapseSinceLastState) =>
         {
-            Debug.Log("OnAudioDeviceStateChanged: " + deviceId + " : " + deviceType + " : " + deviceState);
+            //Debug.Log("OnAudioPublishStateChanged: " + channel + " : " + oldState + " : " + newState + " : " + elapseSinceLastState);
+            if( newState == STREAM_PUBLISH_STATE.PUB_STATE_PUBLISHING )
+                playerDidUnmute( myUid );
+            else if( newState == STREAM_PUBLISH_STATE.PUB_STATE_NO_PUBLISHED )
+                playerDidMute( myUid );
         };
 
 
+        // This is the function that gets called when a REMOTE user changes mute state (but not this user)
         // NOTE: This is marked as "deprecated" in the Agora docs, but the function they recommend to replace it,
         // OnAudioDeviceStateChanged, doesn't seem to work for muting.
+        // OnAudioPublishStateChanged doesn't seem to work either... so as far as I know, we're stuck using this "deprecated" function.
         mRtcEngine.OnUserMutedAudio += (uint uid, bool muted) =>
         {
-            Debug.Log("OnUserMutedAudio: " + uid + " : " + muted );
+            //Debug.Log("OnUserMutedAudio: " + uid + " : " + muted );
+            if( muted )
+                playerDidMute( uid );
+            else
+                playerDidUnmute( uid );
         };
+
+
+
     }
 
     public void mute(bool muted)
     {
-        //Debug.Log(muted);
-
-        // This was here when I got here, but doesn't seem to trigger proper muting callbacks, and might still allow some quiet
-        // noise to get through...
-        //mRtcEngine.EnableLocalAudio(!muted); 
-    
-        // This comment was also here when I got here; I'd guess it's the proper function, was it not working for some reason?
-        // Maybe it's just because they accidentally used !muted instead of muted?
-        //mRtcEngine.MuteLocalAudioStream(!muted);
-
-
         mRtcEngine.MuteLocalAudioStream( muted );
     }
 

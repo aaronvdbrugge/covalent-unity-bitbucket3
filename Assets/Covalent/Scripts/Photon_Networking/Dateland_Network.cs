@@ -44,21 +44,50 @@ public class Dateland_Network : Network_Manager
 
     #endregion
 
-    /*
+    // External calls (out to native app)
     [DllImport("__Internal")]
-    private static extern bool _updatePlayersInRoom(string[] unityJSONList, int count);
+    private static extern void _updatePlayersInRoom(string[] unityJSONList, int count);
     [DllImport("__Internal")]
-    private static extern void failureToConnect(string error);
+    private static extern void _playerDidLeaveGame();
     [DllImport("__Internal")]
-    private static extern void failureToJoinRoom(string error);
-    */
-    // ^^ These functions look like they're built to call out to Swift, but the functions might not actually be in Swift (was getting linker errors).
-    // So, replacing them with dummys for now
-    private static bool _updatePlayersInRoom(string[] unityJSONList, int count){ Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")"); return true; }
-    private static void failureToConnect(string error) { Debug.Log("EXTERN: failureToConnect(" +  error + ")"); }
-    private static void failureToJoinRoom(string error) { Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");}
+    private static extern void _failureToConnect(string error);
+    [DllImport("__Internal")]
+    private static extern void _failureToJoinRoom(string error);
+    
+    
+    // Wrappers (don't call extern in editor)
+    private static void updatePlayersInRoom(string[] unityJSONList, int count)
+    { 
+        if( Application.isEditor ) 
+            Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")");
+        else
+            _updatePlayersInRoom( unityJSONList, count );
+    }
 
-    private static void _playerDidLeaveGame(){ Debug.Log("EXTERN: playerDidLeaveRoom"); }
+    private static void failureToConnect(string error)
+    { 
+        if( Application.isEditor )
+            Debug.Log("EXTERN: failureToConnect(" +  error + ")"); 
+        else
+            _failureToConnect( error );
+    }
+
+    private static void failureToJoinRoom(string error)
+    { 
+        if( Application.isEditor )
+            Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");
+        else
+            _failureToJoinRoom( error );
+    }
+
+    private static void playerDidLeaveGame()
+    { 
+        if( Application.isEditor )
+            Debug.Log("EXTERN: playerDidLeaveRoom"); 
+        else
+            _playerDidLeaveGame();
+    }
+
 
 
 
@@ -168,7 +197,7 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
-        _playerDidLeaveGame();
+        playerDidLeaveGame();
     }
 
 
@@ -236,7 +265,7 @@ public class Dateland_Network : Network_Manager
             //Debug.Log("Players after someone else joined: " + count);
             //Uncomment for Native App Version
 
-            _updatePlayersInRoom(players, players.Length);
+            updatePlayersInRoom(players, players.Length);
         }
 
     }
@@ -261,7 +290,7 @@ public class Dateland_Network : Network_Manager
             }
             //Debug.Log("Players after someone left: " + players.Length);
             //Uncomment for Native App Version
-            _updatePlayersInRoom(players, players.Length);
+            updatePlayersInRoom(players, players.Length);
         }
 
     }
