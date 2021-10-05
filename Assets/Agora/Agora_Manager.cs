@@ -15,7 +15,7 @@ public class Agora_Manager : MonoBehaviour
     //[DllImport("__Internal")]
     //private static extern void failureToConnectAgora(string error);
     // ^^ Not yet implemented externally
-    private static void failureToConnectAgora(string error) { }
+    private static void failureToConnectAgora(string error) { Debug.Log("EXTERN: failureToConnectAgora(" + error + ")"); }
 
 
     public Text logs;

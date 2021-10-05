@@ -54,9 +54,11 @@ public class Dateland_Network : Network_Manager
     */
     // ^^ These functions look like they're built to call out to Swift, but the functions might not actually be in Swift (was getting linker errors).
     // So, replacing them with dummys for now
-    private static bool _updatePlayersInRoom(string[] unityJSONList, int count){ return true; }
-    private static void failureToConnect(string error) { }
-    private static void failureToJoinRoom(string error) { }
+    private static bool _updatePlayersInRoom(string[] unityJSONList, int count){ Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")"); return true; }
+    private static void failureToConnect(string error) { Debug.Log("EXTERN: failureToConnect(" +  error + ")"); }
+    private static void failureToJoinRoom(string error) { Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");}
+
+    private static void _playerDidLeaveGame(){ Debug.Log("EXTERN: playerDidLeaveRoom"); }
 
 
 
@@ -166,6 +168,7 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
+        _playerDidLeaveGame();
     }
 
 
@@ -214,7 +217,7 @@ public class Dateland_Network : Network_Manager
     #region NativeApp Functions
     public void updatePlayerListAfterJoin(Photon.Realtime.Player player)
     {
-        if (PhotonNetwork.PlayerList.Length > 1)
+        if (PhotonNetwork.PlayerList.Length >= 1)
         {
             string[] players = new string[PhotonNetwork.PlayerList.Length - 1];
             int count = 0;
@@ -233,14 +236,13 @@ public class Dateland_Network : Network_Manager
             //Debug.Log("Players after someone else joined: " + count);
             //Uncomment for Native App Version
 
-            if( !Application.isEditor )
-                _updatePlayersInRoom(players, players.Length);
+            _updatePlayersInRoom(players, players.Length);
         }
 
     }
     public void updatePlayerListAfterLeave(Photon.Realtime.Player player)
     {
-        if (PhotonNetwork.PlayerList.Length > 1)
+        if (PhotonNetwork.PlayerList.Length >= 1)
         {
             string[] players = new string[PhotonNetwork.PlayerList.Length - 1];
             int count = 0;
