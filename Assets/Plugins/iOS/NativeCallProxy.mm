@@ -36,6 +36,11 @@ void _playerEndedTalking(unsigned int player_id) {
     NSLog(@"FROM UNITY: playerEndedTalking(%i)", player_id);
 }
 void _playerDidLeaveGame() {
+    // NOTE! You should get this call if you disable the device's internet
+    // while you are playing, forcing a disconnect.
+    // However, if you tap the "Leave" button, I think that is currently a button overlaid
+    // from the native interface (not in Unity) so you won't get this call from
+    // Unity in that case.
     NSLog(@"FROM UNITY: _playerDidLeaveGame");
 }
 void _failureToConnect(const char* error) {
