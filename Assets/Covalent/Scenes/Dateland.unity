@@ -1473,6 +1473,12 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!20 &65151299 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1519566761237642969, guid: 55f6d90dc8bc8ad45a2e69e34dab5e0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1519566761974707898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &80908047
 GameObject:
   m_ObjectHideFlags: 0
@@ -32319,6 +32325,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1298516252, guid: 14fedf62cb634b947ba356bf97018782, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999582443, guid: 14fedf62cb634b947ba356bf97018782, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 65151299}
     - target: {fileID: 154552194464073176, guid: 14fedf62cb634b947ba356bf97018782,
         type: 3}
       propertyPath: m_RootOrder
