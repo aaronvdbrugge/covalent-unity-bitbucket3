@@ -5,9 +5,16 @@ using UnityEngine;
 
 
 /// <summary>
-/// This script will be used for both soccer ball and volleyball.
+/// NOTE: I originally thought I'd use this script for both soccer ball and volleyball.
 /// 
-/// We do not actually use rigidbody pushout / velocity, but just detect
+/// However, the two are rather different -- soccerball uses a rigidbody for its movement, and
+/// volleyball doesn't (it just lerps around to different random locations).
+/// 
+/// So, this is actually only used for soccer ball. I copied it and changed it significantly for
+/// volleyball. I don't think it's worth trying to share code between these two different types
+/// of balls.
+/// 
+/// We do not actually use rigidbody pushout, but just detect
 /// when we overlap a player, and handle velocity on our own.
 /// 
 /// We also handle pseudo-3D height changes (where the ball moves up but its
