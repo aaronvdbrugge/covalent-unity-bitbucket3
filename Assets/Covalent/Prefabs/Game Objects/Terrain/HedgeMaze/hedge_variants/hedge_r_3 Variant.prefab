@@ -7,10 +7,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4147307726083532096, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
+      propertyPath: SorterPositionOffset.x
+      value: -2.736911
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147307726083532096, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
+      propertyPath: SorterPositionOffset.y
+      value: -1.4783232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147307726083532096, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
+      propertyPath: SorterPositionOffset2.x
+      value: 2.6320565
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147307726083532096, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
+      propertyPath: SorterPositionOffset2.y
+      value: 0.4595836
+      objectReference: {fileID: 0}
     - target: {fileID: 5549546829096949362, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
         type: 3}
       propertyPath: m_Name
       value: hedge_r_3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
         type: 3}
@@ -29,6 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -41,16 +71,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6868994221565924635, guid: 63e0a3898b4fd4247a3b1b75a3b6c8c0,
         type: 3}

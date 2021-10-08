@@ -44,10 +44,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -99,8 +101,8 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: -2.1882935, y: -1.7645569, z: 0}
-  SorterPositionOffset2: {x: 2.1549988, y: 0.7458191, z: 0}
+  SorterPositionOffset: {x: -2.724985, y: -1.4783232, z: 0}
+  SorterPositionOffset2: {x: 2.608202, y: 0.42380494, z: 0}
   renderersToSort:
   - {fileID: 1040091324227828149}
 --- !u!60 &2512911256706028975

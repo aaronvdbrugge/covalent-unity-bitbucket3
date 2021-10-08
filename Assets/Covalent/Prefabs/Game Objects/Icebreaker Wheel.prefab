@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8715604350036059216}
   - component: {fileID: 8260486560210109273}
-  - component: {fileID: 136537908}
+  - component: {fileID: 80460368124047891}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Blue ON
   m_TagString: Untagged
@@ -412,7 +412,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &136537908
+--- !u!114 &80460368124047891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,11 +421,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182357740158032884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copyFrom: {fileID: 6020657944230557797}
-  offset: 2
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: -0.0310913, y: 0.27862427, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
 --- !u!1 &1298599030721295329
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +442,7 @@ GameObject:
   - component: {fileID: 6801918066531059129}
   - component: {fileID: 4375593495532619604}
   - component: {fileID: 1934675346}
-  - component: {fileID: 798365275}
+  - component: {fileID: 5500382158724547333}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Pink OFF
   m_TagString: Untagged
@@ -537,11 +542,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.03214593, y: 0.09166162}
-      - {x: -0.14868774, y: 0.023363834}
-      - {x: 0.0009949557, y: -0.0629967}
-      - {x: 0.119136676, y: 0.008817922}
---- !u!114 &798365275
+    - - {x: -0.036044568, y: 0.09945889}
+      - {x: -0.17987683, y: 0.01166853}
+      - {x: 0.0009949557, y: -0.09418518}
+      - {x: 0.14902541, y: -0.006776017}
+--- !u!114 &5500382158724547333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,11 +555,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298599030721295329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copyFrom: {fileID: 6020657944230557797}
-  offset: 1
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: 0.018671818, y: 0.21606342, z: -0.00007748842}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
 --- !u!1 &2120083710902417624
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +576,7 @@ GameObject:
   - component: {fileID: 4355143993198360095}
   - component: {fileID: 6464228166216894034}
   - component: {fileID: 1286220844}
-  - component: {fileID: 801060811}
+  - component: {fileID: 3254235932274467609}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Blue OFF
   m_TagString: Untagged
@@ -666,11 +676,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.03214593, y: 0.09166162}
-      - {x: -0.14868774, y: 0.023363834}
-      - {x: 0.0009949557, y: -0.0629967}
-      - {x: 0.119136676, y: 0.008817922}
---- !u!114 &801060811
+    - - {x: -0.036044568, y: 0.09945889}
+      - {x: -0.17987683, y: 0.01166853}
+      - {x: 0.0009949557, y: -0.09418518}
+      - {x: 0.14902541, y: -0.006776017}
+--- !u!114 &3254235932274467609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -679,11 +689,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2120083710902417624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copyFrom: {fileID: 6020657944230557797}
-  offset: 1
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: -0.03734849, y: 0.30677858, z: -0.00007748842}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
 --- !u!1 &3724839284939069733
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +806,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: 0.29862213, y: -0.5836735, z: 0}
+  SorterPositionOffset: {x: 0.5547131, y: -0.5436592, z: -0.00007748842}
   SorterPositionOffset2: {x: -0.5972481, y: -0.86193657, z: 0}
   renderersToSort: []
 --- !u!60 &7532260774563157221
@@ -848,6 +863,8 @@ MonoBehaviour:
   - Decribe one time in the past when you were playing a videogame.
   - 'Finish this sentence: "As a gamer,"'
   - If you could have dinner with any videogame, which would it be?
+  - Which is better, food or gaming?
+  - How did you lose your G-card (gamerginity)?
   footpadFadeTime: 0.25
   dialogBoxDelay: 6
   dialogBoxTime: 30
@@ -891,7 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6768107754738850379}
   - component: {fileID: 2227521603536201414}
-  - component: {fileID: 349805680}
+  - component: {fileID: 2209017178751337632}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Pink ON
   m_TagString: Untagged
@@ -965,7 +982,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &349805680
+--- !u!114 &2209017178751337632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -974,11 +991,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7909769959012794642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copyFrom: {fileID: 6020657944230557797}
-  offset: 2
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: 0.021800414, y: 0.19416569, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
 --- !u!1 &8489938237061672383
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +1012,7 @@ GameObject:
   - component: {fileID: 8018204700133528300}
   - component: {fileID: 2371241273509870120}
   - component: {fileID: 2649062689164029692}
-  - component: {fileID: 3165191346660346403}
+  - component: {fileID: 571581170740088948}
   m_Layer: 0
   m_Name: Icebreaker Wheel Animation
   m_TagString: Untagged
@@ -1083,7 +1105,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3165191346660346403
+--- !u!114 &571581170740088948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1092,8 +1114,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8489938237061672383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copyFrom: {fileID: 6020657944230557797}
-  offset: 1
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: -0.036839973, y: -1.101194, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
