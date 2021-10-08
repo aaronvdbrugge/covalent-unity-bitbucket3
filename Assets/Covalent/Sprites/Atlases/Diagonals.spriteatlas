@@ -77,6 +77,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 7f1816bfbf1b20440a89ede0ea0b78e6, type: 3}
     - {fileID: 2800000, guid: 82ffe7e2c72e9da4390e107c0d9fc1f7, type: 3}
     - {fileID: 2800000, guid: df63beaab8d5cea4c9b3a94be37dff00, type: 3}
+    - {fileID: 2800000, guid: b16171013a045574e9e07ae20f20300f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -84,6 +85,7 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: fcb1fd20738284e9888edf6d2a5d9da1, type: 3}
   - {fileID: 21300000, guid: 0f61bc802aabece4aab80c9137cde08b, type: 3}
+  - {fileID: 21300000, guid: b16171013a045574e9e07ae20f20300f, type: 3}
   - {fileID: 21300000, guid: 062ab642cf76849b6acd8fa4f4b5699b, type: 3}
   - {fileID: 21300000, guid: 82ffe7e2c72e9da4390e107c0d9fc1f7, type: 3}
   - {fileID: 21300000, guid: f4215193bd98fe240a40db0fe0ca9c04, type: 3}
@@ -106,6 +108,7 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - fence_ironLeftBottom
   - hedge_l_2
+  - hedge_leftTop cutoff
   - fence_mainBack
   - hedge_r_2
   - hedge_l_3
