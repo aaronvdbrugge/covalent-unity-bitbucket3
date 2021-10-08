@@ -338,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8715604350036059216}
   - component: {fileID: 8260486560210109273}
+  - component: {fileID: 136537908}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Blue ON
   m_TagString: Untagged
@@ -399,7 +400,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 37
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 7fc6e87795133d846932387010222745, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -411,6 +412,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &136537908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182357740158032884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  copyFrom: {fileID: 6020657944230557797}
+  offset: 2
 --- !u!1 &1298599030721295329
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +437,7 @@ GameObject:
   - component: {fileID: 6801918066531059129}
   - component: {fileID: 4375593495532619604}
   - component: {fileID: 1934675346}
+  - component: {fileID: 798365275}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Pink OFF
   m_TagString: Untagged
@@ -484,7 +500,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 35
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 85d8280ad1d14cc4796f616fb20bfa33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -525,6 +541,20 @@ PolygonCollider2D:
       - {x: -0.14868774, y: 0.023363834}
       - {x: 0.0009949557, y: -0.0629967}
       - {x: 0.119136676, y: 0.008817922}
+--- !u!114 &798365275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298599030721295329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  copyFrom: {fileID: 6020657944230557797}
+  offset: 1
 --- !u!1 &2120083710902417624
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +566,7 @@ GameObject:
   - component: {fileID: 4355143993198360095}
   - component: {fileID: 6464228166216894034}
   - component: {fileID: 1286220844}
+  - component: {fileID: 801060811}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Blue OFF
   m_TagString: Untagged
@@ -598,7 +629,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 35
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f39d9f991c58a2345867997465da5a5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -639,6 +670,20 @@ PolygonCollider2D:
       - {x: -0.14868774, y: 0.023363834}
       - {x: 0.0009949557, y: -0.0629967}
       - {x: 0.119136676, y: 0.008817922}
+--- !u!114 &801060811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120083710902417624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  copyFrom: {fileID: 6020657944230557797}
+  offset: 1
 --- !u!1 &3724839284939069733
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +763,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 34
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 34084758de425bb46b274739f25bf026, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -748,12 +793,7 @@ MonoBehaviour:
   sortType: 1
   SorterPositionOffset: {x: 0.29862213, y: -0.5836735, z: 0}
   SorterPositionOffset2: {x: -0.5972481, y: -0.86193657, z: 0}
-  renderersToSort:
-  - {fileID: 6020657944230557797}
-  - {fileID: 6464228166216894034}
-  - {fileID: 4375593495532619604}
-  - {fileID: 8260486560210109273}
-  - {fileID: 2227521603536201414}
+  renderersToSort: []
 --- !u!60 &7532260774563157221
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -833,10 +873,11 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 440967194}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -850,6 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6768107754738850379}
   - component: {fileID: 2227521603536201414}
+  - component: {fileID: 349805680}
   m_Layer: 0
   m_Name: Icebreaker Wheel Pad Pink ON
   m_TagString: Untagged
@@ -923,6 +965,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &349805680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909769959012794642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bdb672bac381a43a6d5734629eb87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  copyFrom: {fileID: 6020657944230557797}
+  offset: 2
 --- !u!1 &8489938237061672383
 GameObject:
   m_ObjectHideFlags: 0

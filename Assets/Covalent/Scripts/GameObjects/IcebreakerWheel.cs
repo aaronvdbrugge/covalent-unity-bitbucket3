@@ -8,7 +8,7 @@ using UnityEngine;
 /// A giant spinner which, when two players stand on the designated pads, will play a "spinning" animation,
 /// then display a UI element with an "icebreaker" question.
 /// </summary>
-public class IcebreakerWheel : MonoBehaviourPun
+public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
 {
     [Header("Internal references")]
     [Tooltip("Fades in when footpad 1 is being stood on.")]
@@ -204,8 +204,9 @@ public class IcebreakerWheel : MonoBehaviourPun
 
 
 
-    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+
         if (stream.IsWriting)
         {
             // From PUN docs:
@@ -214,6 +215,8 @@ public class IcebreakerWheel : MonoBehaviourPun
 
             if( activeIcebreakerQuestion != activeIcebreakerQuestionLastSerialized )     // Only bother sending this when it changes!
             {
+                Debug.Log("Sending Icebreaker question: " + activeIcebreakerQuestion);
+
                 // Note that new users joining the game may not get the wheel question if it's in progress.
                 // This is a known issue, but I'm doing it this way for two reasons:
                 // 1.) Easy
@@ -225,6 +228,7 @@ public class IcebreakerWheel : MonoBehaviourPun
         else
         {
             activeIcebreakerQuestion = (int)stream.ReceiveNext();
+            Debug.Log("Receiving Icebreaker question: " + activeIcebreakerQuestion);
         }
     }
 
