@@ -12,7 +12,9 @@ using UnityEngine;
 /// 
 /// So, this is actually only used for soccer ball. I copied it and changed it significantly for
 /// volleyball. I don't think it's worth trying to share code between these two different types
-/// of balls.
+/// of balls. You would have to split this file into two first, a base class that handles a ball
+/// with a z position, and then an inheritant which adds the rigidbody and soccer ball logic.
+/// I don't really think it's a worthwhile use of time since it's just two behaviors (soccer and volleyball).
 /// 
 /// We do not actually use rigidbody pushout, but just detect
 /// when we overlap a player, and handle velocity on our own.
