@@ -1563,7 +1563,7 @@ MonoBehaviour:
   maxSpeed: 10
   isMine: 0
   yVelocityScale: 1
-  editorSpeedMultiple: 6
+  editorSpeedMultiple: 1
 --- !u!114 &5217942367510331885
 MonoBehaviour:
   m_ObjectHideFlags: 0

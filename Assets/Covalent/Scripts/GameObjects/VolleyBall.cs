@@ -62,6 +62,10 @@ public class VolleyBall : MonoBehaviourPun
     [Tooltip("Hits are always the same height.")]
     public float arcHeight = 5.0f;
 
+    [Tooltip("In this many hits, it'll go from arcTimeSlow to arcTimeFast.")]
+    public int maxSpeedupHits = 10;
+
+
     [Tooltip("Place ball on southern corner. Gizmos will help you find proper value here.")]
     public Vector2 arenaNorthWest = Vector2.left;
     [Tooltip("Place ball on southern corner. Gizmos will help you find proper value here.")]
@@ -72,18 +76,22 @@ public class VolleyBall : MonoBehaviourPun
     public float netPadding = 1.0f;
 
 
+    [Tooltip("We'll set rotation to a random vaue on hit, with this being the maximum (rotations per second).")]
+    public float rotationMax = 4;
+
+
 
 
     [Header("Runtime (Network Replicated)")]
     public Vector2 lerpStart;
     public Vector2 lerpEnd;
-    public float lerpProgress;
-    public float speedMultiplier;
+    public float lerpProgress = 1;   // make sure to start this at 1 so the ball doesn't move at the start
+    public int hitStreak;
+    public float spriteRotation = 0.0f;   // even though this is strictly cosmetic, it's nice to replicate it so all users experience the same thing.
 
 
 
-
-    public float zPos => 0;   // this will be calculated via lerpStart / lerpEnd / lerpProgress
+    public float zPos => GetZPos();   // this will be calculated via lerpStart / lerpEnd / lerpProgress
 
 
     // Internal references
@@ -93,14 +101,13 @@ public class VolleyBall : MonoBehaviourPun
     Vector2 _originalPosition;
     float _ballSpriteYOriginal;   // so we can move the ball sprite by zpos
     float _ballSortingYOriginal;   // need to move the ball's sorting point counter to its height
-    float _linearDragOriginal;   //we'll set linear drag to 0 in the air
+    
+    bool _netInitialized = false;   // Need to wait until we join a room. Either we own this object, or we we got a response from RequestBallState
+    float _lastAskedForState = 0.0f;    // If we don't own this, this is Time.time when we last asked for state. Don't count on a response if the master client disconnected; will have to try again.
+
 
     // Runtime
-    float _spriteRotation = 0.0f;
-
-
-    Player_Controller_Mobile lastEnteredTrigger;   // this makes it easier for us to play only one sound when the player is overlapping the ball
-
+    
 
 
     /// <summary>
@@ -108,7 +115,7 @@ public class VolleyBall : MonoBehaviourPun
     /// </summary>
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        // TBD: on hit, serialize lerpStart, lerpEnd, lerpProgress, and speedMultiplier.
+        // TBD: on hit, serialize lerpStart, lerpEnd, lerpProgress, and hitStreak.
         // We could consider using an RPC for this instead, probably would be more responsive.
 
         //if (stream.IsWriting)
@@ -135,20 +142,27 @@ public class VolleyBall : MonoBehaviourPun
         _originalPosition = transform.position;
         _ballSpriteYOriginal = ballSprite.transform.localPosition.y;
         _ballSortingYOriginal = _ballSpriteSorter.SorterPositionOffset.y;
-	}
 
-
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-        Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
-	    if( pcm != null )
-            lastEnteredTrigger = pcm;  //remember this, so we can know to play a sound in OnTriggerStay2D
+        // Place it in the middle of south side...
+        transform.position = transform.localToWorldMatrix.MultiplyPoint( arenaNorthEast/2 + arenaNorthWest/4 );
+        lerpProgress = 1.0f;
+        lerpEnd = transform.position;
 	}
 
 
 	void OnTriggerStay2D(Collider2D other)
     {
+        // NOTE: a ball can only be hit if it has passed over the net, to the opposite side of where it started.
+        // If not, its collisions are irrelevant.
+        if( IsOnNorthSide( lerpStart ) == IsOnNorthSide( transform.position ) && lerpProgress < 1)
+        {
+            Debug.Log("Can't hit ball: " + lerpStart + " -> " + IsOnNorthSide( lerpStart ) + ", " + transform.position + " -> " + IsOnNorthSide( transform.position ));
+            return;    // We're still leaving our original side. 
+        }
+
+        //  ^^ this early return also prevents multi-hits.
+
+
         Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
 
         
@@ -170,12 +184,110 @@ public class VolleyBall : MonoBehaviourPun
             if( collision )
             {
                 // Test randomization
-                transform.position = GetRandomLandingPosition( !IsOnNorthSide(transform.position) );   // flip side back and forth
+                //transform.position = GetRandomLandingPosition( !IsOnNorthSide(transform.position) );   // flip side back and forth
 
-                // TBD: start random lerp to other side of arena
+                Vector2 new_lerp_start = transform.position;
+                Vector2 new_lerp_end = GetRandomLandingPosition( !IsOnNorthSide(transform.position) );   // flip side back and forth;
+
+				// If lerp progress didn't fully make it to 1.0, we have to artificially step lerp start backward so that progress can just be set to 1 - progress,
+				// keeping its Z position, but on the opposite side. This also has the added benefit of letting players "spike" the ball, so that if they hit it high in
+				// its arc, it will take less time to reach the opponent's side.
+                float new_lerp_progress = 0;
+				if (lerpProgress < 1)
+				{ 
+                    new_lerp_progress = 1 - lerpProgress;
+
+                    // Step new_lerp_start such that transform.position is new_lerp_progress of the way from new_lerp_start to new_lerp_end!
+                    //  t.p = s + (e-s) * p
+                    // t.p = s + ep - sp
+                    // t.p = s(1-p) + ep
+                    // t.p - ep = s(1-p)
+                    //  s = (t.p - ep) / (1 - p)
+                    new_lerp_start = ((Vector2)transform.position - new_lerp_end * new_lerp_progress) / (1 - new_lerp_progress);
+                }
+
+                float new_rotation_speed = Random.Range(-360.0f, 360.0f) * rotationMax;
+
+                photonView.RPC("HitBall", RpcTarget.All, new object[] { new_lerp_start, new_lerp_end, new_lerp_progress, hitStreak+1, new_rotation_speed });    // Will execute on us as well... incrementing hitStreak and preventing double-hits
             }
         }
     }
+
+
+    void FixedUpdate()
+    {
+        if( !_netInitialized )
+        {
+            if( PhotonNetwork.InRoom )  // otherwise, wait for room join
+            {
+                if( !photonView.IsMine )
+                    //Need to request the ball's actual state! We just joined, and these requests are sent sparsely. Supplying our ActorNumber means it only needs to be sent to us.
+                    photonView.RPC("RequestBallState", RpcTarget.MasterClient, new object[] { PhotonNetwork.LocalPlayer.ActorNumber });
+                else
+                    _netInitialized = true;   //if we own it, this is all we needed.
+            }
+        }
+        else
+        {
+
+            if( lerpProgress >= 1.0f )  // Ball made it to the ground without getting hit...
+            {
+                if( photonView.IsMine )  // we can reset the hit streak
+                    photonView.RPC("ResetHitStreak", RpcTarget.All );
+            }
+
+            // Animate the volleyball from point A to point B. This affects gameplay
+            transform.position = Vector2.Lerp( lerpStart, lerpEnd, lerpProgress );
+		    lerpProgress = Mathf.Min(1.0f, lerpProgress + Time.fixedDeltaTime / GetTotalArcTime() );
+
+
+            // "Cheat code": in editor, can hit V to go to lerpEnd.
+            if( Application.isEditor && Input.GetKey(KeyCode.V) )
+            {
+                foreach( var player_controller in FindObjectsOfType<Player_Controller_Mobile>() )
+                    if( player_controller.photonView.IsMine )
+                        player_controller.transform.position = lerpEnd;
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// Similar to Player_Hop.GetCurrentHopHeight.
+    /// </summary>
+    public float GetZPos()
+    {
+		float hop_norm = 1 - lerpProgress;   // goes from 0 to 1 as hop progresses
+
+		// We want a parabola that goes from y=0 to 1 to 0, from x=0 to y=1.
+		// Should be:    y = -(2x - 1)^2 +1
+		//    https://www.desmos.com/calculator/qphzqwrput
+		float hop_parabolic = -Mathf.Pow(2 * hop_norm - 1, 2) + 1;
+
+		return hop_parabolic * arcHeight;   // de-normalize
+    }
+
+    /// <summary>
+    /// Similar to Player_Hop.GetCurrentHopVelocity.
+    /// </summary>
+	public float GetCurrentHopVelocity()
+	{
+		// Best way to do this would be calculus?
+		// I believe it would be:
+		/*
+		y = -(2x - 1)^2 + 1
+		y = -(4x^2 - 4x + 1) + 1
+		y = -4x^2 + 4x
+
+		..multiply by hopheight...
+		y = -4hx^2 + 4hx
+
+		derivitave
+		y' = -8hx + 4h
+		 */
+		float hop_norm = 1 - lerpProgress;   // goes from 0 to 1 as hop progresses
+		return -8 * arcHeight * hop_norm + 4 * arcHeight;
+	}
 
 
     /// <summary>
@@ -184,11 +296,12 @@ public class VolleyBall : MonoBehaviourPun
     /// </summary>
 	private void Update()
 	{
+        // Rotate sprite based on _spriteRotation speed
         ballSprite.transform.localRotation = Quaternion.Euler( 
             new Vector3(
                 ballSprite.transform.localRotation.eulerAngles.x,
                 ballSprite.transform.localRotation.eulerAngles.y,  
-                ballSprite.transform.localRotation.eulerAngles.z - _spriteRotation * Time.deltaTime
+                ballSprite.transform.localRotation.eulerAngles.z - spriteRotation * Time.deltaTime
             )
         );
 
@@ -201,6 +314,71 @@ public class VolleyBall : MonoBehaviourPun
         // Move the ball's sorting offset
         _ballSpriteSorter.SorterPositionOffset.y = _ballSortingYOriginal - (zPos / _ballSpriteSorter.transform.localScale.y);
 	}
+
+
+
+    /// <summary>
+    /// Ball was hit by any player, and should start a new arc.
+    /// </summary>
+    [PunRPC]
+    public void HitBall(Vector2 lerpStart, Vector2 lerpEnd, float lerpProgress, int hitStreak, float spriteRotation)
+    {
+        _netInitialized = true;  // if we don't own the ball, we have at least gotten one update on its wherabouts.
+
+        this.lerpStart = lerpStart;
+        this.lerpEnd = lerpEnd;
+        this.lerpProgress = lerpProgress;
+        this.hitStreak = hitStreak;
+        this.spriteRotation = spriteRotation;
+
+        // Just choose a rotation rate based on its calculated speed in X
+        // (don't do this anymore... random rotation is probably a bit more exciting and makes more sense for a ball being hit in the air)
+        //_spriteRotation = rotationRate * GetXYSpeed().x;
+    }
+
+    /// <summary>
+    /// Ball hit the ground.
+    /// </summary>
+    [PunRPC]
+    public void ResetHitStreak()
+    {
+        hitStreak = 0;
+        spriteRotation = 0;  // hit the ground, not rotating anymore
+    }
+
+
+    /// <summary>
+    /// Called when a new player joins, this will request an extra HitBall RPC to be sent out.
+    /// </summary>
+    [PunRPC]
+    public void RequestBallState(int requesting_player_actor_num)
+    {
+        // We should be the owner of this ball, so if we could send an update to just the requesting player, that'd be ideal
+        if( photonView.IsMine )  //just in case, though this should always be true
+        {
+            Photon.Realtime.Player player = PhotonUtil.GetPlayerByActorNumber( requesting_player_actor_num );               // Get the player we want to send it to...
+            if( player != null )
+                photonView.RPC("HitBall", player, new object[] { lerpStart, lerpEnd, lerpProgress, hitStreak, spriteRotation });    // Give them the info they requested
+        }
+    }
+
+
+    /// <summary>
+    /// Get our total arc time based on hitStreak value  (it speeds up as hitStreak progresses)
+    /// </summary>
+    public float GetTotalArcTime()
+    {
+        return Mathf.Lerp(arcTimeSlow, arcTimeFast, Mathf.Min(1.0f, hitStreak / (float)maxSpeedupHits) );
+    }
+
+    /// <summary>
+    /// Gets speed in XY plane for this lerp, ignoring Z
+    /// </summary>
+    public Vector2 GetXYSpeed()
+    {
+        return (lerpEnd - lerpStart) / GetTotalArcTime();
+    }
+
 
 
 
@@ -234,11 +412,12 @@ public class VolleyBall : MonoBehaviourPun
         // I think the easiest way is to take atan2 to the southwest corner of the net,
         // then compare this angle to the atan2 angle of arenaNorthEast.
         Vector2 nw_trans = transform.TransformVector( arenaNorthWest );   // take scaling into account, just in case
+        Vector2 ne_trans = transform.TransformVector( arenaNorthEast );
 
-        Vector2 diff = (Vector2)transform.position - (_originalPosition + nw_trans/2 );
+        Vector2 diff = (Vector2)pos - (_originalPosition + nw_trans/2 - ne_trans*10);   // Scoot it back far enough that the ball can't possibly go behind it
         float pos_ang = Mathf.Atan2( diff.y, diff.x );
 
-        float net_ang = Mathf.Atan2( arenaNorthEast.y, arenaNorthEast.x );
+        float net_ang = Mathf.Atan2( ne_trans.y, ne_trans.x );
 
         return Mathf.DeltaAngle( net_ang, pos_ang ) > 0;
     }
@@ -251,25 +430,28 @@ public class VolleyBall : MonoBehaviourPun
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + new Vector3( 0, collisionHeight, 0 ) );
 
-        if( !Application.isPlaying )
-        {
-            //Visualize arena
-            Gizmos.color = Color.blue;
-            Vector3 arena_northwest_world = transform.TransformVector( arenaNorthWest );   // take scaling into account, just in case
-            Vector3 arena_northeast_world = transform.TransformVector( arenaNorthEast );  
+        Vector3 origin = transform.position;
+        if( Application.isPlaying )
+            origin = _originalPosition;
+        
+        //Visualize arena
+        Gizmos.color = Color.blue;
+        Vector3 arena_northwest_world = transform.TransformVector( arenaNorthWest );   // take scaling into account, just in case
+        Vector3 arena_northeast_world = transform.TransformVector( arenaNorthEast );  
 
 
-            //Draw all the boundaries
-            Gizmos.DrawLine(transform.position, transform.position + arena_northwest_world );
-            Gizmos.DrawLine(transform.position, transform.position + arena_northeast_world );
-            Gizmos.DrawLine(transform.position + arena_northwest_world, transform.position + arena_northwest_world + arena_northeast_world);
-            Gizmos.DrawLine(transform.position + arena_northeast_world, transform.position + arena_northwest_world + arena_northeast_world);
+        //Draw all the boundaries
+        Gizmos.DrawLine(origin, origin + arena_northwest_world );
+        Gizmos.DrawLine(origin, origin + arena_northeast_world );
+        Gizmos.DrawLine(origin + arena_northwest_world, origin + arena_northwest_world + arena_northeast_world);
+        Gizmos.DrawLine(origin + arena_northeast_world, origin + arena_northwest_world + arena_northeast_world);
 
-            //Draw the halfway line
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawLine(transform.position + arena_northwest_world/2, transform.position + arena_northeast_world + arena_northwest_world/2);
-        }
-        else
+        //Draw the halfway line
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(origin + arena_northwest_world/2, origin + arena_northeast_world + arena_northwest_world/2);
+        
+
+        if( Application.isPlaying )
         {
             // In play mode, highlight red on north side
             if( IsOnNorthSide( transform.position ) )

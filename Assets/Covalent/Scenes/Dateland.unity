@@ -29739,7 +29739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681487909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6500015, y: 0.87000275, z: 0}
+  m_LocalPosition: {x: 0.12, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1880069425}
@@ -37465,16 +37465,19 @@ MonoBehaviour:
   ballSprite: {fileID: 3206433514782101529}
   confettiPrefab: {fileID: 0}
   collisionHeight: 1
-  arcTimeSlow: 4
-  arcTimeFast: 1
-  arcHeight: 5
+  arcTimeSlow: 5
+  arcTimeFast: 1.5
+  arcHeight: 6
+  maxSpeedupHits: 10
   arenaNorthWest: {x: -17.9, y: 10.4}
   arenaNorthEast: {x: 12.8, y: 7.2}
   netPadding: 1
+  rotationMax: 4
   lerpStart: {x: 0, y: 0}
   lerpEnd: {x: 0, y: 0}
   lerpProgress: 0
-  speedMultiplier: 0
+  hitStreak: 0
+  spriteRotation: 0
 --- !u!1001 &3314515270343165000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45378,7 +45381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardTo: {fileID: 3206433515955074699}
-  doOnTriggerEnter: 1
+  doOnTriggerEnter: 0
   doOnTriggerExit: 0
   doOnTriggerStay: 1
 --- !u!1001 &8641638121951229674
