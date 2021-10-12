@@ -73,20 +73,26 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
   - {fileID: 21300000, guid: e71f5e24df80e445f998f4fab8b68d4f, type: 3}
   - {fileID: 21300000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
+  - {fileID: 21300000, guid: 9c7a5266a0a3f624c8a7546b22373340, type: 3}
   - {fileID: 21300000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
+  - {fileID: 21300000, guid: d490d1d65e4762e48b1f0dd46e4cdf30, type: 3}
   - {fileID: 21300000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
   - {fileID: 21300000, guid: 008cca9874fda435dab8ac8076a846be, type: 3}
   - {fileID: 21300000, guid: e6526a4ba85df457dbb2c7872efa2ac8, type: 3}
+  - {fileID: 21300000, guid: 2e423ccbb897215499fdd5a92173aeca, type: 3}
   - {fileID: 21300000, guid: 1eba4ecdc95f14c4f806eaea441e275e, type: 3}
   - {fileID: 21300000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
   m_PackedSpriteNamesToIndex:
   - soccer net upper right
   - soccer net lower left
   - soccer net lower bottom
+  - volleyball indicator
   - soccer net upper bottom
+  - volleyball
   - soccer net upper left
   - soccer net lower back
   - soccer net lower right
+  - volleyball ring
   - soccerball
   - soccer net upper back
   m_RenderDataMap: {}

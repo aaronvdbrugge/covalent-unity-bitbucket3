@@ -69,12 +69,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
   - {fileID: 21300000, guid: e6303e735501d43e2af7693cc9bdba5b, type: 3}
   - {fileID: 21300000, guid: ccccffa58216a4e218404632c2ce4f08, type: 3}
+  - {fileID: 21300000, guid: 6e7f6986375a07d48b6a0d3eb2915624, type: 3}
   - {fileID: 21300000, guid: b35491a7255af4565bdf24f0b6ff9cc0, type: 3}
   - {fileID: 21300000, guid: 14f941d95b591cf4db84546adb90b325, type: 3}
   m_PackedSpriteNamesToIndex:
   - platform_fountain@3x
   - forestGround@3x
   - soccer
+  - volleyball boundary
   - pond_left
   - castle
   m_RenderDataMap: {}
