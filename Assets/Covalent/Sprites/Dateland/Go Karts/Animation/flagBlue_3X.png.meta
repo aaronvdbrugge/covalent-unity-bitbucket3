@@ -1,7 +1,40 @@
 fileFormatVersion: 2
 guid: 56239b71c3a9e3d4aaf740a1f5e0c912
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9093593959143444128
+    second: flagBlue_3X_0
+  - first:
+      213: 8711235483071220531
+    second: flagBlue_3X_1
+  - first:
+      213: -1577781247955118408
+    second: flagBlue_3X_2
+  - first:
+      213: 8453274869970323414
+    second: flagBlue_3X_3
+  - first:
+      213: -1007663820774347084
+    second: flagBlue_3X_4
+  - first:
+      213: 2484350837974830447
+    second: flagBlue_3X_5
+  - first:
+      213: 3837000835248295451
+    second: flagBlue_3X_6
+  - first:
+      213: -2162126420981045082
+    second: flagBlue_3X_7
+  - first:
+      213: 5807137252078329532
+    second: flagBlue_3X_8
+  - first:
+      213: -1597805848501489936
+    second: flagBlue_3X_9
+  - first:
+      213: 1262026986129075883
+    second: flagBlue_3X_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +74,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +108,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: flagBlue_3X_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 681
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061fd9d59701dc180800000000000000
+      internalID: -9093593959143444128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flagBlue_3X_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 681
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6dc5e70589a1ae0800000000000000
+      internalID: -1577781247955118408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flagBlue_3X_4
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 681
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be6bb5081f0402f0800000000000000
+      internalID: -1007663820774347084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flagBlue_3X_6
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 681
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e0adb2ee3cf3530800000000000000
+      internalID: 3837000835248295451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flagBlue_3X_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 338
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe11103098179050800000000000000
+      internalID: 5807137252078329532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flagBlue_3X_10
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 338
+        width: 132
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae2e2d7bde938110800000000000000
+      internalID: 1262026986129075883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

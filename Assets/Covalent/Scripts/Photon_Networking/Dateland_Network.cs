@@ -430,7 +430,7 @@ public class Dateland_Network : Network_Manager
         isConnecting = PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
     }
-    private void destroyPlayer()
+    public void destroyPlayer()
     {
         if (madePlayer != null)
         {
@@ -440,7 +440,7 @@ public class Dateland_Network : Network_Manager
             PhotonNetwork.Disconnect();
         }
     }
-    private void backgroundPlayer()
+    public void backgroundPlayer()
     {
         if (madePlayer != null)
         {
@@ -451,7 +451,7 @@ public class Dateland_Network : Network_Manager
         }
     }
 
-    private void enterDateland(string json_string)
+    public void enterDateland(string json_string)
     {
         player_JSON = json_string;
         player = JsonUtility.FromJson<Player_Class>(json_string); 
@@ -463,7 +463,7 @@ public class Dateland_Network : Network_Manager
         Connect();
     }
 
-    private void appWillEnterForeground()
+    public void appWillEnterForeground()
     {
             if (player_removed)
             {
@@ -479,7 +479,7 @@ public class Dateland_Network : Network_Manager
             }
         
     }
-    private void appDidEnterBackground()
+    public void appDidEnterBackground()
     {
             PlayerPrefs.SetFloat("xPos", madePlayer.transform.position.x);
             PlayerPrefs.SetFloat("yPos", madePlayer.transform.position.y);
