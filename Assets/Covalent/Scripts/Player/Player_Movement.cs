@@ -130,13 +130,16 @@ public class Player_Movement : MonoBehaviour
 				{
 					Vector2 editor_vel = Vector2.zero;
 					if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-						editor_vel.y += editorSpeedMultiple;
+						editor_vel.y += 1;
 					if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-						editor_vel.y -= editorSpeedMultiple;
+						editor_vel.y -= 1;
 					if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-						editor_vel.x -= editorSpeedMultiple;
+						editor_vel.x -= 1;
 					if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-						editor_vel.x += editorSpeedMultiple;
+						editor_vel.x += 1;
+
+					if( Input.GetKey(KeyCode.LeftShift) )
+						editor_vel *= editorSpeedMultiple;
 
 					new_vel += editor_vel * maxSpeed;
 				}
