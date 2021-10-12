@@ -168,11 +168,16 @@ public class VolleyBall : MonoBehaviourPun
         //  ^^ this early return also prevents multi-hits.
 
 
+
         Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
 
         
         if( pcm != null && photonView.IsMine )   // Only the owner can decide the random position at which the ball will go next.
         {
+            //Prevent double-spike bug where you can hit it from the other side of the net.
+            if( IsOnNorthSide( pcm.transform.position ) != IsOnNorthSide( transform.position ) )
+                return;
+
             Player_Hop ph = pcm.playerHop;
 
             // Make sure they are actually overlapping in pseudo-3D.
