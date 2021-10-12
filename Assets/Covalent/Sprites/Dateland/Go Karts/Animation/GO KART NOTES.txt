@@ -1,0 +1,53 @@
+When I got the animations from the artist, they were baked together with the smoke effect, and had a lot of duplicated frames if you only look at the actual car motion.
+
+I wanted to remove the smoke and do it procedurally as a particle effect (it will look better anyway), and remove the duplicated frames, replicating their timing in the Unity animation. Here is every frame where the visual changes in the BACK animations:
+
+0
+5
+7
+9
+10
+12
+19
+20
+22
+23
+The frames are 364 x 251 for BACK SIDE.  
+Yellow and Teal have an alignment error, so it's actually 364 x 252
+Back side sprite sheets can be cropped to 1820 x 1255 (cut off frames aren't needed)
+For yellow and teal: 1820 x 1260 
+5x5 tiles
+
+Here is every frame where the visual changes in the FRONT animations:
+
+0
+6
+8
+10
+11
+13
+15
+20
+21
+23
+25
+27
+
+The frames are 327 x 250 for FRONT SIDE.    
+Orange front was glitched. Have to sub a pixel in X: 327 x 249
+Front side sprite sheets can be cropped to 1962 x 1500
+1956 x 1500 for orange
+6x6 tiles
+
+NOTE: for front, tune the photoshop action for frame 21 because that's the only frame where the pilot touches the smoke.
+
+
+
+
+
+I decided to play these frames contiguously, rather than replicating the timing, since it seems to look better that way.
+I wonder if the timing was actually messed up a bit as a concession to fit the smoke effect in there.
+
+
+
+
