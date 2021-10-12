@@ -81,6 +81,9 @@ public class VolleyBall : MonoBehaviourPun
     public float indicatorRingEndScale = 0.5f;
 
 
+    [Tooltip("Step in the indicator. Where we ant to actually stand is a little bit before where the ball will hit. 1.0 = no step")]
+    public float indicatorStepRatio = 0.9f;
+
 
     [Tooltip("Place ball on southern corner. Gizmos will help you find proper value here.")]
     public Vector2 arenaNorthWest = Vector2.left;
@@ -317,7 +320,7 @@ public class VolleyBall : MonoBehaviourPun
         if( lerpProgress < 1 )
         {
             // show where it'll land!
-            indicatorSprite.transform.position = lerpEnd;
+            indicatorSprite.transform.position = Vector3.Lerp(lerpStart, lerpEnd, indicatorStepRatio);   // want to stand a bit before where it'll hit the ground
             indicatorSprite.gameObject.SetActive(true);   
 
             // Change color
