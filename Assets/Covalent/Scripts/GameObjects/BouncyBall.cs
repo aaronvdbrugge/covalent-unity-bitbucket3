@@ -75,6 +75,9 @@ public class BouncyBall : MonoBehaviourPun
     [Tooltip("Color for Goal animation")]
     public Color goalColor;
 
+    [Tooltip("What we set drag to when we're in the air, not on the ground")]
+    public float airDrag = 0.0f;
+
 
     [Header("Runtime")]
     [Tooltip("Pseudo-3D height in the isometric world. Will make the soccer ball sprite hover above its shadow. (network replicated)")]
@@ -312,7 +315,7 @@ public class BouncyBall : MonoBehaviourPun
             }
             else
             {
-                body.drag = 0;   // no drag in the air!
+                body.drag = airDrag;   // less drag in the air!
 
 		        zPos += zVel * Time.fixedDeltaTime;
                 if( zPos > 0.05f )
