@@ -44,10 +44,19 @@ using UnityEngine;
 public class VolleyBall : MonoBehaviourPun
 {
     [Header("Internal references")]
-    public SpriteRenderer ballSprite;     // may want to rotate this, or change its color.
+    [Tooltip("Nested under us. We'll rotate it")]
+    public SpriteRenderer ballSprite;     
+
+    [Tooltip("shows where the ball will land, and changes color")]
+    public SpriteRenderer indicatorSprite;  
+
+    [Tooltip("shows where the ball will land, and changes size and color. Should be parented under indicatorSprite")]
+    public SpriteRenderer ringSprite;    
+
 
     [Header("External references")]
     public GameObject confettiPrefab;   //if non-null, we'll instantiate this on goal
+
 
     [Header("Settings")]
     [Tooltip("If our base is an ellipse, then imagine out collision bound as a cylinder extending upward by this amount.")]
@@ -65,6 +74,13 @@ public class VolleyBall : MonoBehaviourPun
     [Tooltip("In this many hits, it'll go from arcTimeSlow to arcTimeFast.")]
     public int maxSpeedupHits = 10;
 
+    [Tooltip("We'll pull from this gradient to change the color of the indicator ring.")]
+    public Gradient indicatorRingColors;
+
+    public float indicatorRingStartScale = 1.0f;
+    public float indicatorRingEndScale = 0.5f;
+
+
 
     [Tooltip("Place ball on southern corner. Gizmos will help you find proper value here.")]
     public Vector2 arenaNorthWest = Vector2.left;
@@ -80,6 +96,14 @@ public class VolleyBall : MonoBehaviourPun
     public float rotationMax = 4;
 
 
+    [Tooltip("Height to bounce when we hit thr ground.")]
+    public float bounceHeight = 1.0f;
+
+    [Tooltip("Time our ground bounce animation takes.")]
+    public float bounceTime = 0.33f;
+
+    [Tooltip("If an arc has over this amount remaining when hit, it's considered a \"spike\" and will play a louder sound.")]
+    public float spikeSoundThreshold = 0.33f;
 
 
     [Header("Runtime (Network Replicated)")]
@@ -106,29 +130,7 @@ public class VolleyBall : MonoBehaviourPun
     float _lastAskedForState = 0.0f;    // If we don't own this, this is Time.time when we last asked for state. Don't count on a response if the master client disconnected; will have to try again.
 
 
-    // Runtime
-    
-
-
-    /// <summary>
-    /// Handles member synchronization. We just use this for pseudo-3D z positioning right now
-    /// </summary>
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        // TBD: on hit, serialize lerpStart, lerpEnd, lerpProgress, and hitStreak.
-        // We could consider using an RPC for this instead, probably would be more responsive.
-
-        //if (stream.IsWriting)
-        //{
-        //    stream.SendNext(zPos);
-        //    stream.SendNext(zVel);
-        //}
-        //else
-        //{
-        //    zPos = (float)stream.ReceiveNext();
-        //    zVel = (float)stream.ReceiveNext();
-        //}
-    }
+    float _bounceAnimCooldown;  // just do a single bounce when we hit the ground. goes from 1 to 0
 
 
 
@@ -220,9 +222,12 @@ public class VolleyBall : MonoBehaviourPun
         {
             if( PhotonNetwork.InRoom )  // otherwise, wait for room join
             {
-                if( !photonView.IsMine )
+                if( !photonView.IsMine && Time.time - _lastAskedForState >= 0.5f)   // Can only ask for state every half second. The only likely reason we'd need to ask more than once is if the master client disconnected.
+                {
                     //Need to request the ball's actual state! We just joined, and these requests are sent sparsely. Supplying our ActorNumber means it only needs to be sent to us.
                     photonView.RPC("RequestBallState", RpcTarget.MasterClient, new object[] { PhotonNetwork.LocalPlayer.ActorNumber });
+                    _lastAskedForState = Time.time;
+                }
                 else
                     _netInitialized = true;   //if we own it, this is all we needed.
             }
@@ -230,7 +235,7 @@ public class VolleyBall : MonoBehaviourPun
         else
         {
 
-            if( lerpProgress >= 1.0f )  // Ball made it to the ground without getting hit...
+            if( lerpProgress >= 1.0f && hitStreak > 0)  // Ball made it to the ground without getting hit...
             {
                 if( photonView.IsMine )  // we can reset the hit streak
                     photonView.RPC("ResetHitStreak", RpcTarget.All );
@@ -240,6 +245,9 @@ public class VolleyBall : MonoBehaviourPun
             transform.position = Vector2.Lerp( lerpStart, lerpEnd, lerpProgress );
 		    lerpProgress = Mathf.Min(1.0f, lerpProgress + Time.fixedDeltaTime / GetTotalArcTime() );
 
+
+            //Update "bounce" animation after it hits the ground.
+            _bounceAnimCooldown = Mathf.Max(0.0f, _bounceAnimCooldown - Time.fixedDeltaTime / bounceTime);
 
             // "Cheat code": in editor, can hit V to go to lerpEnd.
             if( Application.isEditor && Input.GetKey(KeyCode.V) )
@@ -257,14 +265,20 @@ public class VolleyBall : MonoBehaviourPun
     /// </summary>
     public float GetZPos()
     {
-		float hop_norm = 1 - lerpProgress;   // goes from 0 to 1 as hop progresses
-
 		// We want a parabola that goes from y=0 to 1 to 0, from x=0 to y=1.
 		// Should be:    y = -(2x - 1)^2 +1
 		//    https://www.desmos.com/calculator/qphzqwrput
-		float hop_parabolic = -Mathf.Pow(2 * hop_norm - 1, 2) + 1;
+		float hop_parabolic = -Mathf.Pow(2 * lerpProgress - 1, 2) + 1;
 
-		return hop_parabolic * arcHeight;   // de-normalize
+		float ret = hop_parabolic * arcHeight;   // de-normalize
+
+
+        // NOTE: add in bounce animation as well. Keeping it here will ensure no stutter if they hit it mid-bounce
+        float bounce_norm = 1 - _bounceAnimCooldown;  // goes from 0 to 1 as bounce anim progresses
+        float bounce_parabolic = -Mathf.Pow(2 * bounce_norm - 1, 2) + 1;
+        ret += bounce_parabolic * bounceHeight;
+
+        return ret;
     }
 
     /// <summary>
@@ -285,8 +299,7 @@ public class VolleyBall : MonoBehaviourPun
 		derivitave
 		y' = -8hx + 4h
 		 */
-		float hop_norm = 1 - lerpProgress;   // goes from 0 to 1 as hop progresses
-		return -8 * arcHeight * hop_norm + 4 * arcHeight;
+		return -8 * arcHeight * lerpProgress + 4 * arcHeight;
 	}
 
 
@@ -296,6 +309,25 @@ public class VolleyBall : MonoBehaviourPun
     /// </summary>
 	private void Update()
 	{
+        indicatorSprite.gameObject.SetActive(false);   // ring is nested under indicator.
+
+        if( lerpProgress < 1 )
+        {
+            // show where it'll land!
+            indicatorSprite.transform.position = lerpEnd;
+            indicatorSprite.gameObject.SetActive(true);   
+
+            // Change color
+            Color sprite_color = indicatorRingColors.Evaluate( lerpProgress );
+            indicatorSprite.color = sprite_color;
+            ringSprite.color = sprite_color;
+            
+            //Scale ring
+            ringSprite.transform.localScale = Mathf.Lerp(indicatorRingStartScale, indicatorRingEndScale, lerpProgress) * Vector2.one;
+        }
+
+
+
         // Rotate sprite based on _spriteRotation speed
         ballSprite.transform.localRotation = Quaternion.Euler( 
             new Vector3(
@@ -323,6 +355,7 @@ public class VolleyBall : MonoBehaviourPun
     [PunRPC]
     public void HitBall(Vector2 lerpStart, Vector2 lerpEnd, float lerpProgress, int hitStreak, float spriteRotation)
     {
+        bool was_initialized = _netInitialized;    // can only play sounds if we're initialized, otherwise it could play a sound when we shouldn't
         _netInitialized = true;  // if we don't own the ball, we have at least gotten one update on its wherabouts.
 
         this.lerpStart = lerpStart;
@@ -331,9 +364,15 @@ public class VolleyBall : MonoBehaviourPun
         this.hitStreak = hitStreak;
         this.spriteRotation = spriteRotation;
 
-        // Just choose a rotation rate based on its calculated speed in X
-        // (don't do this anymore... random rotation is probably a bit more exciting and makes more sense for a ball being hit in the air)
-        //_spriteRotation = rotationRate * GetXYSpeed().x;
+        
+        if( was_initialized )
+        {
+            // We can choose to play either a light hit or heavy hit.
+            if( lerpProgress >= spikeSoundThreshold )  // we're starting so late in the arc that it must be a "spike"
+                Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "volleyball_heavy_hit", transform.position );
+            else
+                Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "volleyball_light_hit", transform.position );
+        }
     }
 
     /// <summary>
@@ -344,6 +383,19 @@ public class VolleyBall : MonoBehaviourPun
     {
         hitStreak = 0;
         spriteRotation = 0;  // hit the ground, not rotating anymore
+        _bounceAnimCooldown = 1.0f;   //plays bounce animation
+
+        //Play sound, and spawn confetti! Landing on the ground means somebody "won."
+        Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "volleyball_sand", transform.position );
+
+
+        Vector2 nw_trans = transform.TransformVector( arenaNorthWest );
+        Vector2 ne_trans = transform.TransformVector( arenaNorthEast );
+        Vector2 confetti_spawn = _originalPosition + ne_trans/2 + nw_trans/4;   // Center of south arena
+        if( !IsOnNorthSide( transform.position ) )
+            confetti_spawn += nw_trans/2;   // move to north side
+
+        Instantiate(confettiPrefab, confetti_spawn, Quaternion.identity);
     }
 
 
