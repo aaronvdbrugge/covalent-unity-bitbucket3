@@ -238,7 +238,10 @@ public class VolleyBall : MonoBehaviourPun
             if( lerpProgress >= 1.0f && hitStreak > 0)  // Ball made it to the ground without getting hit...
             {
                 if( photonView.IsMine )  // we can reset the hit streak
+                {
+                    hitStreak = 0;  //set this immediately... avoid possibility of repeat calls
                     photonView.RPC("ResetHitStreak", RpcTarget.All );
+                }
             }
 
             // Animate the volleyball from point A to point B. This affects gameplay
