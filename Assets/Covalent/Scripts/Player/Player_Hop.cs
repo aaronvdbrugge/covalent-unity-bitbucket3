@@ -107,7 +107,7 @@ public class Player_Hop : MonoBehaviourPun
 	/// </summary>
 	public void HopToSeat( SitPoint seat )
 	{
-		if( seat == null || SitPoint.GetOccupiedBy( seat.uid ) == -1 )   //we're just getting off our seat, or nobody's sitting there
+		if( seat == null || SitPoint.GetActorFromUID( seat.uid ) == -1 )   //we're just getting off our seat, or nobody's sitting there
 		{
 			Camera.main.SendMessage("PlaySound", "hop");
 			this.photonView.RPC("HopToSeatRPC", RpcTarget.All, new object[] { seat != null ? seat.uid : null });

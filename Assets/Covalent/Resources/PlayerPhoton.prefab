@@ -1413,7 +1413,7 @@ GameObject:
   - component: {fileID: 1537646255260379276}
   - component: {fileID: 3423532178932913422}
   m_Layer: 8
-  m_Name: Player_Photon_2
+  m_Name: PlayerPhoton
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMine: 0
   colliders:
-  - {fileID: 2056266962552226213}
+  - {fileID: 798382551825579044}
   topHearts: 0
   botHearts: 0
   onBeach: 0
@@ -1668,7 +1668,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 4450914184106857912}
   m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 976f542360feef644b6aa789827dc8ef, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1744,14 +1744,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 8723383788808815926}
   otherMovementStyles:
-  - maxSpeed: 30
-    useAcceleration: 0
-    acceleration: 0
+  - maxSpeed: 60
+    useAcceleration: 1
+    acceleration: 40
+    drag: 1
     layer: 12
     collider: {fileID: 2056266962552226213}
-  - maxSpeed: 5
-    useAcceleration: 0
-    acceleration: 0
+  - maxSpeed: 25
+    useAcceleration: 1
+    acceleration: 15
+    drag: 0
     layer: 8
     collider: {fileID: 798382551825579044}
 --- !u!1 &6105161519920765915

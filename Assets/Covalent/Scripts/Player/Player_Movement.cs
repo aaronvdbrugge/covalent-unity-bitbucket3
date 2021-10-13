@@ -123,7 +123,7 @@ public class Player_Movement : MonoBehaviour
 		{
 			if( isMine )
 			{
-				Vector2 new_vel = lastMovementInput * maxSpeed;
+				Vector2 new_vel = lastMovementInput * (useAcceleration ? acceleration : maxSpeed);
 
 				if( lastMovementInput.x != 0 || lastMovementInput.y != 0 )
 					lastDirection = lastMovementInput.normalized;
@@ -144,12 +144,22 @@ public class Player_Movement : MonoBehaviour
 					if( Input.GetKey(KeyCode.LeftShift) )
 						editor_vel *= editorSpeedMultiple;
 
-					new_vel += editor_vel * maxSpeed;
+					new_vel += editor_vel * (useAcceleration ? acceleration : maxSpeed);
 				}
 
 				new_vel.y *= yVelocityScale;  // isometric movement
 
-				body.velocity = new_vel;
+
+				if( !useAcceleration )   // No acceleration, modify player velocity directly.
+					body.velocity = new_vel;
+				else
+				{
+					// Add to body's velocity, then clamp it under max speed.
+					body.velocity += new_vel * Time.fixedDeltaTime;
+
+					if( body.velocity.magnitude > maxSpeed )   // need to clamp it
+						body.velocity = body.velocity.normalized * maxSpeed;
+				}
 			}
 			// Else, it's not mine... 
 			else if( body.velocity != Vector2.zero )  //just update lastDirection based on velocity.
