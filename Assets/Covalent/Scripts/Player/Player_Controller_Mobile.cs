@@ -47,6 +47,9 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
     [Tooltip("Handles player hopping up and down (and into benches).")]
     public Player_Hop playerHop;
 
+    [Tooltip("Handles things like switching to Go Kart and Ice movements.")]
+    public Player_Alternate_Movements playerAlternateMovements;
+
     [Tooltip("Handles skins")]
     public Spine_Player_Controller spinePlayerController;
 

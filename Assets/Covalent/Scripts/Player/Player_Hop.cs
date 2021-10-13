@@ -223,7 +223,7 @@ public class Player_Hop : MonoBehaviourPun
 				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
 				if( seat != null )  // it might not be instantiated
 				{
-					if( !seat.canMoveWhileSitting )
+					if( !seat.canMoveWhileSitting && seat.setPositionConstantlyWhileSitting )
 						playerParent.transform.position = seat.transform.position;
 
 					playerCollisions.EnableColliders( seat.canMoveWhileSitting );

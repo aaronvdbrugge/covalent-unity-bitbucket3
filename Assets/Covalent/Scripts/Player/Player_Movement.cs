@@ -14,6 +14,9 @@ public class Player_Movement : MonoBehaviour
 {
     public float maxSpeed = 5f;
 
+	public bool useAcceleration = false;
+	public float acceleration = 1.0f;
+
 	
 
 	[HideInInspector]public bool isMine = false;  //Set this from Player Controller Mobile. It affects how we interpret the directions we're "facing"
@@ -79,7 +82,7 @@ public class Player_Movement : MonoBehaviour
 	/// If this is "my" player, we'll set this directly from input; if not, we'll infer it from
 	/// the player's velocity.
 	/// </summary>
-	public Vector2 lastDirection{ get; private set; } = Vector2.one;
+	public Vector2 lastDirection = Vector2.one;
 
 
 

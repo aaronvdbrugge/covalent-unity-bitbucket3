@@ -1406,8 +1406,12 @@ GameObject:
   - component: {fileID: 8723383788808815926}
   - component: {fileID: 5217942367510331885}
   - component: {fileID: 4753401094386036590}
+  - component: {fileID: 6865279174534916535}
+  - component: {fileID: 798382551825579044}
   - component: {fileID: 2056266962552226213}
   - component: {fileID: 2716478330693323187}
+  - component: {fileID: 1537646255260379276}
+  - component: {fileID: 3423532178932913422}
   m_Layer: 8
   m_Name: Player_Photon_2
   m_TagString: Player
@@ -1449,6 +1453,7 @@ MonoBehaviour:
   playerEmotes: {fileID: 331415028678201484}
   playerAgora: {fileID: 4753401094386036590}
   playerHop: {fileID: 2999592731245700905}
+  playerAlternateMovements: {fileID: 3423532178932913422}
   spinePlayerController: {fileID: 8804191198712331188}
   playerName: {fileID: 2481279367525578877}
   playerName_Black: {fileID: 1672433190}
@@ -1562,9 +1567,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
+  useAcceleration: 0
+  acceleration: 1
   isMine: 0
   yVelocityScale: 1
   editorSpeedMultiple: 6
+  lastDirection: {x: 1, y: 1}
 --- !u!114 &5217942367510331885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,7 +1605,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agora: {fileID: 0}
   agora_ID: 0
---- !u!60 &2056266962552226213
+--- !u!114 &6865279174534916535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450914184106857912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a477b1bf54b614987f79f1696fe8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: 'NOTE: the multiple colliders are for different movements, e.g. Go Karts'
+--- !u!60 &798382551825579044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1638,6 +1659,47 @@ PolygonCollider2D:
       - {x: 0.11480509, y: -0.13858192}
       - {x: 0.21213211, y: -0.10606598}
       - {x: 0.2771639, y: -0.057402518}
+--- !u!60 &2056266962552226213
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450914184106857912}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.015}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  m_Points:
+    m_Paths:
+    - - {x: 0.6, y: 0}
+      - {x: 0.5543277, y: 0.11480504}
+      - {x: 0.42426407, y: 0.21213204}
+      - {x: 0.22961007, y: 0.27716386}
+      - {x: -0.000000026226834, y: 0.3}
+      - {x: -0.22961012, y: 0.27716386}
+      - {x: -0.42426407, y: 0.21213204}
+      - {x: -0.5543278, y: 0.11480499}
+      - {x: -0.6, y: -0.000000026226834}
+      - {x: -0.5543277, y: -0.114805035}
+      - {x: -0.424264, y: -0.21213208}
+      - {x: -0.22960989, y: -0.27716392}
+      - {x: 0.0000000071549286, y: -0.3}
+      - {x: 0.22961017, y: -0.27716383}
+      - {x: 0.42426422, y: -0.21213196}
+      - {x: 0.5543278, y: -0.114805035}
 --- !u!114 &2716478330693323187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,6 +1715,40 @@ MonoBehaviour:
   xRadius: 0.3
   yRadius: 0.15
   points: 16
+--- !u!114 &1537646255260379276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450914184106857912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a3885b5d95a3340a80b004c34b1071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRadius: 0.6
+  yRadius: 0.3
+  points: 16
+--- !u!114 &3423532178932913422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450914184106857912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8d7a939455ddc438b033c2ba62701f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 8723383788808815926}
+  otherMovementStyles:
+  - maxSpeed: 30
+    useAcceleration: 0
+    acceleration: 0
+    layer: 12
+    collider: {fileID: 2056266962552226213}
 --- !u!1 &6105161519920765915
 GameObject:
   m_ObjectHideFlags: 0
