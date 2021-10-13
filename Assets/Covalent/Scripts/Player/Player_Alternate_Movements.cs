@@ -72,11 +72,14 @@ public class Player_Alternate_Movements : MonoBehaviour
 		playerMovement.acceleration = style.acceleration;
 		playerMovement.gameObject.layer = style.layer;
 
-		// Disable all colliders, then enable the one we want...
-		_originalStyle.collider.enabled = false;
-		foreach( var s in otherMovementStyles )
-			s.collider.enabled = false;
-
+		// Don't change a collider's "enabled" status unless you need to, otherwise might cause duplicate "OnTrigger" calls.
+		// In addition, enable the new one before disabling the old one
 		style.collider.enabled = true;
+
+		if( _originalStyle.collider.enabled && _originalStyle.collider != style.collider )
+			_originalStyle.collider.enabled = false;
+		foreach( var s in otherMovementStyles )
+			if( s.collider.enabled && s.collider != style.collider )
+				s.collider.enabled = false;
 	}
 }

@@ -1749,6 +1749,11 @@ MonoBehaviour:
     acceleration: 0
     layer: 12
     collider: {fileID: 2056266962552226213}
+  - maxSpeed: 5
+    useAcceleration: 0
+    acceleration: 0
+    layer: 8
+    collider: {fileID: 798382551825579044}
 --- !u!1 &6105161519920765915
 GameObject:
   m_ObjectHideFlags: 0
