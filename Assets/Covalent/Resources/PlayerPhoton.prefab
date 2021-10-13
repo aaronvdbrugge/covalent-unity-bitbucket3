@@ -1749,7 +1749,7 @@ MonoBehaviour:
   - maxSpeed: 60
     useAcceleration: 1
     acceleration: 40
-    drag: 1
+    drag: 1.5
     layer: 12
     collider: {fileID: 2056266962552226213}
   - maxSpeed: 25
