@@ -32,6 +32,10 @@ public class SitPoint : MonoBehaviour
 	public bool canMoveWhileSitting = false;
 
 
+	[Tooltip("Network safety feature which needs to be turned off for Go Karts.")]
+	public bool setPositionConstantlyWhileSitting = true;
+
+
 	// Returns the worldpos that we should hop down from the seat onto.
 	public Vector3 returnPoint => returnTransform.position;
 
