@@ -14,6 +14,9 @@ public class Player_Collisions : MonoBehaviour
     [Tooltip("These will be turned on/off when we sit in a seat, for example")]
     public Collider2D[] colliders;
 
+    [Tooltip("Need to be aware of this, it switches on and off colliders")]
+    public Player_Alternate_Movements playerAlternateMovements;
+
 
     [Header("Colliding info")]
     public bool topHearts, botHearts, onBeach;
@@ -47,7 +50,7 @@ public class Player_Collisions : MonoBehaviour
     public void EnableColliders(bool enable)
     {
         foreach( Collider2D coll in colliders )
-            coll.enabled = enable;
+            coll.enabled = enable && (coll == playerAlternateMovements.currentCollider);   // Can only enable the collider being used for this current movement!
     }
 
 

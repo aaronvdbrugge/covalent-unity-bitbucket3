@@ -1588,6 +1588,8 @@ MonoBehaviour:
   isMine: 0
   colliders:
   - {fileID: 798382551825579044}
+  - {fileID: 2056266962552226213}
+  playerAlternateMovements: {fileID: 3423532178932913422}
   topHearts: 0
   botHearts: 0
   onBeach: 0
