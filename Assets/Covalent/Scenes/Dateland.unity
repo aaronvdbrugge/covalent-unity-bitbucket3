@@ -6942,7 +6942,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 902ab8890feb4834880df768138d2b54, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7547,7 +7547,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 22
   m_Sprite: {fileID: 21300000, guid: 46ecab6bd4e1e7b43a9c134385ee07de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10159,8 +10159,8 @@ GameObject:
   - component: {fileID: 502558156}
   - component: {fileID: 502558155}
   - component: {fileID: 502558158}
-  - component: {fileID: 502558160}
   - component: {fileID: 502558159}
+  - component: {fileID: 502558160}
   m_Layer: 0
   m_Name: lightSign_top
   m_TagString: Untagged
@@ -10293,8 +10293,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 502558160}
+  ObservedComponents: []
   sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -10307,15 +10306,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 502558154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Script: {fileID: 11500000, guid: c1a9d8783ca019b42a0a1af0895c94c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 0
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers:
-  - SynchronizeType: 0
-    LayerIndex: 0
+  animator: {fileID: 502558158}
+  triggerName: start
+  interval: 18
 --- !u!1 &506359296
 GameObject:
   m_ObjectHideFlags: 0
