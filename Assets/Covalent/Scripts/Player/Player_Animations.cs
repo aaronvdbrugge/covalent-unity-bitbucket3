@@ -21,11 +21,15 @@ public class Player_Animations : MonoBehaviour
     [Tooltip("A transform that you don't want to be flipped horizontally (will counter-flip to undo the flip)")]
     public Transform dontFlip;
 
+    public MeshRenderer meshRenderer;
+
 
     [Header("Info")]
     [Tooltip("Will be set dynamically based on playerMovement")]
     public bool horizontalFlip = false;
 
+
+    
 
 
 	private void Update()
