@@ -37,7 +37,7 @@ public class Player_Alternate_Movements : MonoBehaviour
 	public MovementStyle[] otherMovementStyles;
 
 	MovementStyle _originalStyle;
-
+	public Collider2D currentCollider{get; private set; }   //show the collider we're currently using for this movement
 
 	public int currentMovement
 	{
@@ -58,12 +58,12 @@ public class Player_Alternate_Movements : MonoBehaviour
 	{
 		// Find the enabled collider, use this for original movement style.
 		var colliders = playerMovement.GetComponents<Collider2D>();
-		Collider2D enabled_collider = null;
+		currentCollider = null;
 		foreach( Collider2D c in colliders )
 			if(c.enabled)
-				enabled_collider = c;
+				currentCollider = c;
 
-		_originalStyle = new MovementStyle( playerMovement.maxSpeed, playerMovement.useAcceleration, playerMovement.acceleration, playerMovement.body.drag, playerMovement.gameObject.layer, enabled_collider );
+		_originalStyle = new MovementStyle( playerMovement.maxSpeed, playerMovement.useAcceleration, playerMovement.acceleration, playerMovement.body.drag, playerMovement.gameObject.layer, currentCollider );
 	}
 
 
@@ -78,6 +78,7 @@ public class Player_Alternate_Movements : MonoBehaviour
 		// Don't change a collider's "enabled" status unless you need to, otherwise might cause duplicate "OnTrigger" calls.
 		// In addition, enable the new one before disabling the old one
 		style.collider.enabled = true;
+		currentCollider = style.collider;
 
 		if( _originalStyle.collider.enabled && _originalStyle.collider != style.collider )
 			_originalStyle.collider.enabled = false;
@@ -85,4 +86,6 @@ public class Player_Alternate_Movements : MonoBehaviour
 			if( s.collider.enabled && s.collider != style.collider )
 				s.collider.enabled = false;
 	}
+
+
 }
