@@ -184,14 +184,12 @@ public class GoKart : MonoBehaviour
                 else   // Drive-in animation complete; we can move around.
                 {
                     entryPoint.canMoveWhileSitting = true;     // player is now allowed to move around.
+                    plr.playerAlternateMovements.currentMovement = 0;   // Set to Go Kart movement / layer   (-1 is original movement)
                 }
 
                 plr.playerAnimations.meshRenderer.enabled = false;   // Hide the actual player. They're a car now.
 
                 _followInLateUpdate = plr.transform;   // Our visual follows the player wherever
-                    
-                plr.playerAlternateMovements.currentMovement = 0;   // Set to Go Kart movement / layer   (-1 is original movement)
-
 
                 // Choose direction of the visual sprite based on player's movement direction.
                 if( plr.playerMovement.lastDirection.x > 0 )
