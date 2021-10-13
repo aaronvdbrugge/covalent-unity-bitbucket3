@@ -736,6 +736,7 @@ MonoBehaviour:
   hearts: {fileID: 1049407748}
   splash_feet: {fileID: 7332927974134894237}
   dontFlip: {fileID: 1174955726127404258}
+  meshRenderer: {fileID: 2282081113195783097}
   horizontalFlip: 0
 --- !u!114 &331415028678201484
 MonoBehaviour:

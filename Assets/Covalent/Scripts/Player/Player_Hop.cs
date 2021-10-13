@@ -212,14 +212,23 @@ public class Player_Hop : MonoBehaviourPun
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
 		{
-			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
-			playerMovement.movementEnabled = false;    // Disable movement altogether.
+			if( hopProgress > 0 )
+			{
+				playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
+				playerMovement.movementEnabled = false;    // Disable movement altogether.
+			}
 
-			if( hopProgress <= 0 )  //not even hopping, so stay put on the bench...
+			else  //not even hopping, so stay put on the bench...
 			{
 				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
 				if( seat != null )  // it might not be instantiated
-					playerParent.transform.position = seat.transform.position;
+				{
+					if( !seat.canMoveWhileSitting )
+						playerParent.transform.position = seat.transform.position;
+
+					playerCollisions.EnableColliders( seat.canMoveWhileSitting );
+					playerMovement.movementEnabled = seat.canMoveWhileSitting;    // After hop is done, movement may be re-enabled if the seat allows it
+				}
 			}
 		}
 

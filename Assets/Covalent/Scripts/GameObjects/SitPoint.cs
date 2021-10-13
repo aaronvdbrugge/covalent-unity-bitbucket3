@@ -28,9 +28,14 @@ public class SitPoint : MonoBehaviour
     [Tooltip("Child which is the spot they'll return to when they stop sitting.")]
     public Transform returnTransform;
 
-	
+	[Tooltip("For special sit points, you can still move around after you sit in them (e.g. a kart)")]
+	public bool canMoveWhileSitting = false;
+
+
 	// Returns the worldpos that we should hop down from the seat onto.
 	public Vector3 returnPoint => returnTransform.position;
+
+	public int occupyingActor => GetOccupiedBy( uid );
 
 
 	public string uid {get; private set; } = null;   //unique ID. will be set on Awake; derived from world XY
@@ -45,6 +50,9 @@ public class SitPoint : MonoBehaviour
 		uid = Mathf.Floor(position.x*100) + "," + Mathf.Floor(position.y*100); 
 		byUid[ uid ] = this;
 	}
+
+
+	
 
 
 	/// <summary>

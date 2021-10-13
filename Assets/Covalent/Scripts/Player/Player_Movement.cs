@@ -86,7 +86,7 @@ public class Player_Movement : MonoBehaviour
     /// <summary>
     /// Auto-generated from Unity's input action importer, only if we're controlled by user. May be overcomplicating things?
     /// </summary>
-    private Rigidbody2D body;
+    public Rigidbody2D body {get; private set; }
 	
 
 	private void Awake()
