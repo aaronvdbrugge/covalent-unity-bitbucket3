@@ -44,6 +44,9 @@ public class GoKart : MonoBehaviour
     [Tooltip("Time to spend driving from entryPoint to entryPoint + driveInPointOffset")]
     public float driveInTime = 1.0f;
 
+    [Tooltip("Amount of time it takes for this thing to gradually fade back into place.")]
+    public float fadeBackTime = 2.0f;
+
     public EasingFunction.Ease driveInEasing;
 
 
@@ -58,7 +61,8 @@ public class GoKart : MonoBehaviour
     float _driveInProgress = 0;   // Once it reaches 1, we can drive.
     Transform _followInLateUpdate;    // in non null, this transform must be followed in LateUpdate to avoid lag
 
-
+    float _fadeBackProgress = 1;    // <0.5: fade out, >=0.5: fade in
+    Vector2 _fadeAnimCoastVelocity;   // It's cool looking if we maintain our old speed as we fade out :)
 
 	private void Awake()
 	{
@@ -176,15 +180,17 @@ public class GoKart : MonoBehaviour
 
                         plr.transform.position = anim_position;
                         plr.playerMovement.body.velocity = (next_anim_position - anim_position) / Time.fixedDeltaTime;  //set velocity for smoother network animation. will also result in better particle emission rate changes
-                        plr.playerMovement.lastDirection = driveInPointOffset.normalized;     // just force player to go this way so we animate correctly
                     }
 
+                    plr.playerMovement.lastDirection = driveInPointOffset.normalized;     // just force player to go this way so we animate correctly (regardless of whether IsMine)
                     // Player will remain on normal movement until we reach the next phase below:
                 }
                 else   // Drive-in animation complete; we can move around.
                 {
                     entryPoint.canMoveWhileSitting = true;     // player is now allowed to move around.
                     plr.playerAlternateMovements.currentMovement = 0;   // Set to Go Kart movement / layer   (-1 is original movement)
+
+                    _fadeAnimCoastVelocity = plr.playerMovement.body.velocity;  //in case we jump out soon
                 }
 
                 plr.playerAnimations.meshRenderer.enabled = false;   // Hide the actual player. They're a car now.
@@ -217,19 +223,45 @@ public class GoKart : MonoBehaviour
                 emission.rateOverTime = new ParticleSystem.MinMaxCurve( Mathf.Lerp(minParticleRate, maxParticleRate, speed_norm) );
             }
         }
-        else
+        else   // SITTING IDLE & EMPTY
         {
             _driveInProgress = 0.0f;
-
-            // Just camp at the SitPoint
-            transform.position = entryPoint.transform.position;
-            SetDirection(-1, false);
 
             if( _lastPlr != null )
             {
                 _lastPlr.playerAnimations.meshRenderer.enabled = true;   //show previous player again, they got out of the car
                 _lastPlr.playerAlternateMovements.currentMovement = -1;   // Undo Go Kart movement
+
+                _fadeBackProgress = 0.0f;   //start fade animation
+
                 _lastPlr = null;
+            }
+
+
+            // Just camp at the SitPoint
+            //transform.position = entryPoint.transform.position;
+            //SetDirection(-1, false);
+
+            _fadeBackProgress = Mathf.Min(1.0f, _fadeBackProgress + Time.fixedDeltaTime / fadeBackTime);
+
+            // Actually, we'll need to smoothly fade out, then fade in again at the SitPoint.
+            if( _fadeBackProgress < 0.5f )
+            {
+                float fade_lerp = _fadeBackProgress * 2;   // from 0 to 1 in this phase
+
+                transform.position = transform.position + (Vector3)_fadeAnimCoastVelocity * Time.fixedDeltaTime;  // keep moving!! looks cool
+                frontSprite.color = new Color(1, 1, 1, 1-fade_lerp);
+                backSprite.color = new Color(1, 1, 1, 1-fade_lerp);
+            }
+            else   // fade back in to idle spot
+            {
+                float fade_lerp = (_fadeBackProgress - 0.5f) * 2;  // from 0 to 1 in this phase
+
+                transform.position = entryPoint.transform.position;
+                SetDirection(-1, false);
+                idleSprite.color = new Color(1, 1, 1, fade_lerp);
+                frontSprite.color = new Color(1, 1, 1, 1);  // reset these
+                backSprite.color = new Color(1, 1, 1, 1);
             }
         }
     }
