@@ -18,14 +18,16 @@ public class Player_Alternate_Movements : MonoBehaviour
 		public float maxSpeed;
 		public bool useAcceleration;
 		public float acceleration;
+		public float drag;    // rigidbody drag
 		public int layer;   // some movements, like Go Karts, require moving to a different layer
 		public Collider2D collider;   // some movements, like Go Karts, require a larger collision bound
 
-		public MovementStyle( float maxSpeed, bool useAcceleration, float acceleration, int layer, Collider2D collider )
+		public MovementStyle( float maxSpeed, bool useAcceleration, float acceleration, float drag, int layer, Collider2D collider )
 		{
 			this.maxSpeed = maxSpeed;
 			this.useAcceleration = useAcceleration;
 			this.acceleration = acceleration;
+			this.drag = drag;
 			this.layer = layer;
 			this.collider = collider;
 		}
@@ -61,7 +63,7 @@ public class Player_Alternate_Movements : MonoBehaviour
 			if(c.enabled)
 				enabled_collider = c;
 
-		_originalStyle = new MovementStyle( playerMovement.maxSpeed, playerMovement.useAcceleration, playerMovement.acceleration, playerMovement.gameObject.layer, enabled_collider );
+		_originalStyle = new MovementStyle( playerMovement.maxSpeed, playerMovement.useAcceleration, playerMovement.acceleration, playerMovement.body.drag, playerMovement.gameObject.layer, enabled_collider );
 	}
 
 
@@ -70,6 +72,7 @@ public class Player_Alternate_Movements : MonoBehaviour
 		playerMovement.maxSpeed = style.maxSpeed;
 		playerMovement.useAcceleration = style.useAcceleration;
 		playerMovement.acceleration = style.acceleration;
+		playerMovement.body.drag = style.drag;
 		playerMovement.gameObject.layer = style.layer;
 
 		// Don't change a collider's "enabled" status unless you need to, otherwise might cause duplicate "OnTrigger" calls.

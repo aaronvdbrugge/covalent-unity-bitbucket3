@@ -39,7 +39,7 @@ public class SitPoint : MonoBehaviour
 	// Returns the worldpos that we should hop down from the seat onto.
 	public Vector3 returnPoint => returnTransform.position;
 
-	public int occupyingActor => GetOccupiedBy( uid );
+	public int occupyingActor => GetActorFromUID( uid );
 
 
 	public string uid {get; private set; } = null;   //unique ID. will be set on Awake; derived from world XY
@@ -65,7 +65,7 @@ public class SitPoint : MonoBehaviour
 	/// see if any of them claim to be sitting here.
 	/// </summary>
 	/// <returns>Actor Number of the player in the seat, or -1.</returns>
-	public static int GetOccupiedBy(string sitpoint_uid)
+	public static int GetActorFromUID(string sitpoint_uid)
 	{
 		int ret = -1;  //return value, actor number or -1
 
@@ -78,11 +78,26 @@ public class SitPoint : MonoBehaviour
 	}
 
 
+	/// <summary>
+	/// Find the UID of an actor occupying seat
+	/// </summary>
+	public static string GetUIDFromActor(int actor_num)
+	{
+		Photon.Realtime.Player[] players = PhotonNetwork.PlayerList;
+		foreach( var plr in players )
+			if( plr.ActorNumber == actor_num )
+				if( plr.CustomProperties.ContainsKey("SittingOn")  )
+					return (string)plr.CustomProperties["SittingOn"];
+				else
+					return null;
+		return null;
+	}
+
 
 	private void Start()
 	{
 		// Bear in mind a SitPoint could already be occupied when we enter a server!
-		SendMessage("SetInteractable", GetOccupiedBy(uid) == -1, SendMessageOptions.DontRequireReceiver);   // only interactable if nobody is sitting there.
+		SendMessage("SetInteractable", GetActorFromUID(uid) == -1, SendMessageOptions.DontRequireReceiver);   // only interactable if nobody is sitting there.
 	}
 
 	/// <summary>
@@ -103,8 +118,13 @@ public class SitPoint : MonoBehaviour
 	/// </summary>
 	public static bool TryOccupy( string sitpoint_uid, int actor_number )
 	{
-		if( GetOccupiedBy(sitpoint_uid) != -1 ) 
+		if( GetActorFromUID(sitpoint_uid) != -1 ) 
 			return false;
+
+		// Are they hopping straight from one seat to another? Be sure to vacate previous seat
+		string previous_seat = GetUIDFromActor( actor_number );
+		if( previous_seat != null && previous_seat != sitpoint_uid ) 
+			Vacate( previous_seat, actor_number );
 
 		// Can reserve this seat. Find player with this actor number and set the custom property.
 		var player = PhotonUtil.GetPlayerByActorNumber( actor_number );
@@ -129,8 +149,9 @@ public class SitPoint : MonoBehaviour
 	/// </summary>
 	public static void Vacate( string sitpoint_uid, int actor_number )
 	{
-		if( actor_number != GetOccupiedBy(sitpoint_uid) )
+		if( actor_number != GetActorFromUID(sitpoint_uid) )
 			Debug.LogError("ERROR: a different player vacated the seat, than we thought was sitting there!");
+
 
 		var player = PhotonUtil.GetPlayerByActorNumber( actor_number );
 		if( player != null )
