@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 1_RoseGarden
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: fde7669dddb49482b8c367464f222813, type: 3}
+    - {fileID: 2800000, guid: b13428e37a52b4b6a835519fd126d4ea, type: 3}
+    - {fileID: 2800000, guid: e5db05c3a448c462cad35388f48ab4d7, type: 3}
+    - {fileID: 2800000, guid: c5925b19a26fc4791b3ef625e0f055d8, type: 3}
+    - {fileID: 2800000, guid: ca4cd6e641e214adeb5fc02f6e2fbb59, type: 3}
+    - {fileID: 2800000, guid: 5f7116f1898ce4f86b78aef348cd5b19, type: 3}
+    - {fileID: 2800000, guid: 062afc84e0224480499b0a45793cadf8, type: 3}
+    - {fileID: 2800000, guid: c561567178aae44c7a2e3123e3a57c57, type: 3}
+    - {fileID: 2800000, guid: 2236bd8651c1c4889af7c95f02161c74, type: 3}
+    - {fileID: 2800000, guid: d990319d173cd48d6bec314ecccd7d98, type: 3}
+    - {fileID: 2800000, guid: 211685dc6dd8241c49db78e3ec3e1515, type: 3}
+    - {fileID: 2800000, guid: d3f4cc96772ca46d397a91596fdd161c, type: 3}
+    - {fileID: 2800000, guid: 39f3d3161f5dc45be9621a141319aa9c, type: 3}
+    - {fileID: 2800000, guid: eb0118d36b45740828985ffabe3add2d, type: 3}
+    - {fileID: 2800000, guid: d8831628aa7684f8aa053131c3221b23, type: 3}
+    - {fileID: 2800000, guid: 23bc33f64dc304f4b8301db59e13cb3b, type: 3}
+    - {fileID: 2800000, guid: 52490524c879044b0a267bf6da7de960, type: 3}
+    - {fileID: 2800000, guid: 02f3a4195ba2f4a1e9700fdaa7f5835a, type: 3}
+    - {fileID: 2800000, guid: 3fe51d36c07b34f778a2697a5cb7ed8a, type: 3}
+    - {fileID: 2800000, guid: 3a4528a094b2d46df8d6ab8fef3bbfe1, type: 3}
+    - {fileID: 2800000, guid: b0d261bc9bda3467ab140fcd704c83f7, type: 3}
+    - {fileID: 2800000, guid: 0e484953d87e341f19c928cd8d88a8f6, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3a4528a094b2d46df8d6ab8fef3bbfe1, type: 3}
+  - {fileID: 21300000, guid: c561567178aae44c7a2e3123e3a57c57, type: 3}
+  - {fileID: 21300000, guid: 5f7116f1898ce4f86b78aef348cd5b19, type: 3}
+  - {fileID: 21300000, guid: 0e484953d87e341f19c928cd8d88a8f6, type: 3}
+  - {fileID: 21300000, guid: e5db05c3a448c462cad35388f48ab4d7, type: 3}
+  - {fileID: 21300000, guid: eb0118d36b45740828985ffabe3add2d, type: 3}
+  - {fileID: 21300000, guid: b13428e37a52b4b6a835519fd126d4ea, type: 3}
+  - {fileID: 21300000, guid: 52490524c879044b0a267bf6da7de960, type: 3}
+  - {fileID: 21300000, guid: 062afc84e0224480499b0a45793cadf8, type: 3}
+  - {fileID: 21300000, guid: 39f3d3161f5dc45be9621a141319aa9c, type: 3}
+  - {fileID: 21300000, guid: 3fe51d36c07b34f778a2697a5cb7ed8a, type: 3}
+  - {fileID: 21300000, guid: 2236bd8651c1c4889af7c95f02161c74, type: 3}
+  - {fileID: 21300000, guid: d3f4cc96772ca46d397a91596fdd161c, type: 3}
+  - {fileID: 21300000, guid: ca4cd6e641e214adeb5fc02f6e2fbb59, type: 3}
+  - {fileID: 21300000, guid: 23bc33f64dc304f4b8301db59e13cb3b, type: 3}
+  - {fileID: 21300000, guid: d8831628aa7684f8aa053131c3221b23, type: 3}
+  - {fileID: 21300000, guid: 02f3a4195ba2f4a1e9700fdaa7f5835a, type: 3}
+  - {fileID: 21300000, guid: c5925b19a26fc4791b3ef625e0f055d8, type: 3}
+  - {fileID: 21300000, guid: b0d261bc9bda3467ab140fcd704c83f7, type: 3}
+  - {fileID: 21300000, guid: 211685dc6dd8241c49db78e3ec3e1515, type: 3}
+  - {fileID: 21300000, guid: d990319d173cd48d6bec314ecccd7d98, type: 3}
+  - {fileID: 21300000, guid: fde7669dddb49482b8c367464f222813, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - topiary_trex@3x
+  - gardenBench_left@3x
+  - boundary_bottomLeft@3x
+  - tulip_top1@3x
+  - arbor_bottomRight@3x
+  - hedgeFlowers_bottomRight2@3x
+  - arbor_bottomLeft@3x
+  - stoneBench_bottomCenter@3x
+  - boundary_right@3x
+  - hedgeFlowers_bottomRight1@3x
+  - topiary_rabbit@3x
+  - ground@3x
+  - hedge_rightTop@3x
+  - arbor_topRight@3x
+  - shrub_tallCenterTop@3x
+  - rose_bottomCenter1@3x
+  - topiary_elephant@3x
+  - arbor_topLeft@3x
+  - topiaryBrontosaurus@3x
+  - hedge_leftTop@3x
+  - hedge_centerTop@3x
+  - arbor_bottomCenter@3x
+  m_RenderDataMap: {}
+  m_Tag: 1_RoseGarden
+  m_IsVariant: 0

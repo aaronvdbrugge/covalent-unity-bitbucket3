@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Office
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 6319fe1cde54e40bfbf43d525241eea4, type: 3}
+    - {fileID: 2800000, guid: a21150721121a4cdaaf09af7cc95d839, type: 3}
+    - {fileID: 2800000, guid: 41243aaef9fa546eb8698cdde0e59a60, type: 3}
+    - {fileID: 2800000, guid: dd6a24ea5e0c244c69c5d5a2e4f0aaf3, type: 3}
+    - {fileID: 2800000, guid: d529240855a7442e8ba827918f49fa4e, type: 3}
+    - {fileID: 2800000, guid: 76fc8f7efa2094e0a8752c86221de85e, type: 3}
+    - {fileID: 2800000, guid: 7501bcebec4444ee9a3c4ccfa249901d, type: 3}
+    - {fileID: 2800000, guid: 00b7f1fa25dcf47ee8dcfb86491f7526, type: 3}
+    - {fileID: 2800000, guid: eb08b8becf98e44019ceef3581ca30c6, type: 3}
+    - {fileID: 2800000, guid: 012774d25004645d0aaf6cf0d44e7262, type: 3}
+    - {fileID: 2800000, guid: dfa1e7bac6c5c475e90078829a0c5ef4, type: 3}
+    - {fileID: 2800000, guid: 261d89513a6004bcabc12f01cd5aed27, type: 3}
+    - {fileID: 2800000, guid: a6deefd7050974b0c89b5ad816d899b4, type: 3}
+    - {fileID: 2800000, guid: 1d55ccf10116545d8b00e207c14107e9, type: 3}
+    - {fileID: 2800000, guid: 12f806a5ea8a4414aa4c37ac4016350c, type: 3}
+    - {fileID: 2800000, guid: e3c90e89ed14447b2acabf5bbf60173f, type: 3}
+    - {fileID: 2800000, guid: 6c5788b5b22334a7eb862aabc0bccd0d, type: 3}
+    - {fileID: 2800000, guid: 9ea43e384abdc4ef6b10d1d14d3220f3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 261d89513a6004bcabc12f01cd5aed27, type: 3}
+  - {fileID: 21300000, guid: 1d55ccf10116545d8b00e207c14107e9, type: 3}
+  - {fileID: 21300000, guid: a21150721121a4cdaaf09af7cc95d839, type: 3}
+  - {fileID: 21300000, guid: 012774d25004645d0aaf6cf0d44e7262, type: 3}
+  - {fileID: 21300000, guid: 12f806a5ea8a4414aa4c37ac4016350c, type: 3}
+  - {fileID: 21300000, guid: 6c5788b5b22334a7eb862aabc0bccd0d, type: 3}
+  - {fileID: 21300000, guid: a6deefd7050974b0c89b5ad816d899b4, type: 3}
+  - {fileID: 21300000, guid: d529240855a7442e8ba827918f49fa4e, type: 3}
+  - {fileID: 21300000, guid: 9ea43e384abdc4ef6b10d1d14d3220f3, type: 3}
+  - {fileID: 21300000, guid: e3c90e89ed14447b2acabf5bbf60173f, type: 3}
+  - {fileID: 21300000, guid: dfa1e7bac6c5c475e90078829a0c5ef4, type: 3}
+  - {fileID: 21300000, guid: dd6a24ea5e0c244c69c5d5a2e4f0aaf3, type: 3}
+  - {fileID: 21300000, guid: 00b7f1fa25dcf47ee8dcfb86491f7526, type: 3}
+  - {fileID: 21300000, guid: 7501bcebec4444ee9a3c4ccfa249901d, type: 3}
+  - {fileID: 21300000, guid: 6319fe1cde54e40bfbf43d525241eea4, type: 3}
+  - {fileID: 21300000, guid: 76fc8f7efa2094e0a8752c86221de85e, type: 3}
+  - {fileID: 21300000, guid: 41243aaef9fa546eb8698cdde0e59a60, type: 3}
+  - {fileID: 21300000, guid: eb08b8becf98e44019ceef3581ca30c6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - glass wall back
+  - indoor lamp
+  - computer desk file cabinet
+  - facing sofa
+  - omputer room planter 2
+  - rear facing sofa
+  - glass wall computer room
+  - computer room desk 2
+  - wall right-2
+  - oval pink rug
+  - front pink wall
+  - computer room desk 1
+  - computer room planter
+  - computer room desk 4
+  - coffee table
+  - computer room desk 3
+  - computer room cabinet
+  - computer room printer
+  m_RenderDataMap: {}
+  m_Tag: Office
+  m_IsVariant: 0
