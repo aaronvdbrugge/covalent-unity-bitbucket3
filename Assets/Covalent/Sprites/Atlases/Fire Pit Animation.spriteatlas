@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fire Pit Animation
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 115774f40a6333c44980342e285c0531, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4580943078549033468, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: 8002516894366087905, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -1070580766041809260, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -7665344362895511527, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -3625606744244021881, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -3904638928288315293, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -6553258218713234143, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: 4376765668534075687, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: 6989151515863035630, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: 6970996136796097847, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -3929281454099804669, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  - {fileID: -1259979658564850847, guid: 115774f40a6333c44980342e285c0531, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - fire pit_10
+  - fire pit_11
+  - fire pit_1
+  - fire pit_0
+  - fire pit_3
+  - fire pit_2
+  - fire pit_5
+  - fire pit_4
+  - fire pit_7
+  - fire pit_6
+  - fire pit_9
+  - fire pit_8
+  m_RenderDataMap: {}
+  m_Tag: Fire Pit Animation
+  m_IsVariant: 0
