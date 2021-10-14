@@ -20,7 +20,19 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 4
@@ -39,12 +51,57 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 447b2d0cdab67784eaf7058f474c3a67, type: 3}
     - {fileID: 2800000, guid: a753bb7f670980c4e8309a505c6b7b52, type: 3}
     - {fileID: 2800000, guid: 90dcc92d12ff15b43b748a10a1a9d68a, type: 3}
+    - {fileID: 2800000, guid: 2148491efba3b5c4fae835723035cf64, type: 3}
+    - {fileID: 2800000, guid: b45aaade56bf2e34a98b15a4097bf04a, type: 3}
+    - {fileID: 2800000, guid: 46d30fe5e40d2434fb535505f5163b7e, type: 3}
+    - {fileID: 2800000, guid: 67ac70d27db45f543859fdf35f229c87, type: 3}
+    - {fileID: 2800000, guid: dc949ddf4895b5c49b74e3fb4c6d4ada, type: 3}
+    - {fileID: 2800000, guid: df32af5507cd7a04491eee19479c1596, type: 3}
+    - {fileID: 2800000, guid: 67ac70d27db45f543859fdf35f229c87, type: 3}
+    - {fileID: 2800000, guid: 098c7bd372eae32449eded8d23bc3884, type: 3}
+    - {fileID: 2800000, guid: c01940e7050575840a241fd4653258f4, type: 3}
+    - {fileID: 2800000, guid: 5ad573d2c45f1494c81a9ddb59edcf98, type: 3}
+    - {fileID: 2800000, guid: 56b3d158f4101c749b60cd741d2620e4, type: 3}
+    - {fileID: 2800000, guid: 8ef951da21fe32e4fbb8a4ac48606b11, type: 3}
+    - {fileID: 2800000, guid: ae43e6a67a004b947b9d8d1856d543db, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 009f2bb055dc59541919197abd038eda, type: 3}
+  - {fileID: 21300000, guid: 67ac70d27db45f543859fdf35f229c87, type: 3}
+  - {fileID: 21300000, guid: 5ad573d2c45f1494c81a9ddb59edcf98, type: 3}
+  - {fileID: 21300000, guid: 098c7bd372eae32449eded8d23bc3884, type: 3}
+  - {fileID: 21300000, guid: df32af5507cd7a04491eee19479c1596, type: 3}
+  - {fileID: 21300000, guid: 46d30fe5e40d2434fb535505f5163b7e, type: 3}
+  - {fileID: 21300000, guid: 721111f58b362d149b2a9a3109124ac9, type: 3}
+  - {fileID: 21300000, guid: 43170c273c0248f44868c5c1adcf7dad, type: 3}
+  - {fileID: 21300000, guid: c01940e7050575840a241fd4653258f4, type: 3}
+  - {fileID: 21300000, guid: 447b2d0cdab67784eaf7058f474c3a67, type: 3}
+  - {fileID: 21300000, guid: b27b573c900fb8749ab8d8978e673873, type: 3}
+  - {fileID: 21300000, guid: 90dcc92d12ff15b43b748a10a1a9d68a, type: 3}
+  - {fileID: 21300000, guid: 2148491efba3b5c4fae835723035cf64, type: 3}
+  - {fileID: 21300000, guid: b45aaade56bf2e34a98b15a4097bf04a, type: 3}
+  - {fileID: 21300000, guid: a753bb7f670980c4e8309a505c6b7b52, type: 3}
+  - {fileID: 21300000, guid: dc949ddf4895b5c49b74e3fb4c6d4ada, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - archsnow1
+  - log
+  - trees upper corner combined
+  - trees right corner
+  - log table
+  - snowman
+  - icearchB
+  - archwayLeftTop
+  - snow angel
+  - ice building W
+  - ice building E
+  - hot chocolate booth
+  - skates rack 2
+  - skates rack
+  - tea booth
+  - log 2
   m_RenderDataMap: {}
   m_Tag: Ice Skating Rink
   m_IsVariant: 0

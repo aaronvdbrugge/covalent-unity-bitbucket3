@@ -54,12 +54,16 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 20b7de0b67bea1841880d7f00ed140c6, type: 3}
     - {fileID: 2800000, guid: 46a2345a724076c48b1f7333cdcf56d4, type: 3}
     - {fileID: 2800000, guid: 9cd6e595f0f81124ea1366e92d51b96b, type: 3}
+    - {fileID: 2800000, guid: 4e2ba304c65db2e42982c90612723af7, type: 3}
+    - {fileID: 2800000, guid: 86ac04b0f33ad2545b0fabddd952b328, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 86ac04b0f33ad2545b0fabddd952b328, type: 3}
   - {fileID: 21300000, guid: a33ca5534cf1ec64d8392d7626f16f8d, type: 3}
+  - {fileID: 21300000, guid: 4e2ba304c65db2e42982c90612723af7, type: 3}
   - {fileID: 21300000, guid: 7f01a914def9cf74db26a8d8fc3bd487, type: 3}
   - {fileID: 21300000, guid: 9cd6e595f0f81124ea1366e92d51b96b, type: 3}
   - {fileID: 21300000, guid: 276c50079604abf48928b7ef092ea697, type: 3}
@@ -70,7 +74,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 804057fca80440d44b654e688de93b3a, type: 3}
   - {fileID: 21300000, guid: 4901162f47f4fd04fa374ded9639ce06, type: 3}
   m_PackedSpriteNamesToIndex:
+  - pile of snow b
   - icerink fence ENE
+  - pile of snow a
   - icerink fence WNW
   - icerink fence SW
   - icerink fence NNW
