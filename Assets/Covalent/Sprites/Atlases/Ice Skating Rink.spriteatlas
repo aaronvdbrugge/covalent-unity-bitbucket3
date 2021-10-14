@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ice Skating Rink
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 43170c273c0248f44868c5c1adcf7dad, type: 3}
+    - {fileID: 2800000, guid: 721111f58b362d149b2a9a3109124ac9, type: 3}
+    - {fileID: 2800000, guid: 009f2bb055dc59541919197abd038eda, type: 3}
+    - {fileID: 2800000, guid: b27b573c900fb8749ab8d8978e673873, type: 3}
+    - {fileID: 2800000, guid: 447b2d0cdab67784eaf7058f474c3a67, type: 3}
+    - {fileID: 2800000, guid: a753bb7f670980c4e8309a505c6b7b52, type: 3}
+    - {fileID: 2800000, guid: 90dcc92d12ff15b43b748a10a1a9d68a, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: Ice Skating Rink
+  m_IsVariant: 0

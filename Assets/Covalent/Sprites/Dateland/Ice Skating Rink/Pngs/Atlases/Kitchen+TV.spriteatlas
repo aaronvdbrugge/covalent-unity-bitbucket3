@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Kitchen+TV
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 3
+      m_CompressionQuality: 0
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 079dd8bff06d44fc5a75dc3af4f24611, type: 3}
+    - {fileID: 2800000, guid: 27128f2c8f0ae4ef2ba4c78ec7f91a9d, type: 3}
+    - {fileID: 2800000, guid: 55961a29f732a4831b497c86acd99610, type: 3}
+    - {fileID: 2800000, guid: 1522c0470becd4938ad21bd82da619ee, type: 3}
+    - {fileID: 2800000, guid: 91ae7151c52eb407f9ad473c5ad940b9, type: 3}
+    - {fileID: 2800000, guid: 34a084f21a14a457c97acf977e0aca4c, type: 3}
+    - {fileID: 2800000, guid: ecb22225ebe984844a26344ea15919fa, type: 3}
+    - {fileID: 2800000, guid: 3b72fd83cd95e46469cfef651c762866, type: 3}
+    - {fileID: 2800000, guid: 7813ed517aeda4736b6df78d77f4ca3b, type: 3}
+    - {fileID: 2800000, guid: 1b0c2dd0e0cf54aeaab84117b049e45b, type: 3}
+    - {fileID: 2800000, guid: b52b4c3a363f44f8d88d8fb793a68750, type: 3}
+    - {fileID: 2800000, guid: 428a357ed1add41f0954ee3ee2d05e19, type: 3}
+    - {fileID: 2800000, guid: dc5c738b4b8bd49968d90c4cc45fbe18, type: 3}
+    - {fileID: 2800000, guid: f26982f194c494fed8cbc6698ac84f94, type: 3}
+    - {fileID: 2800000, guid: 912cb14f310b241329bda213e22c3dc7, type: 3}
+    - {fileID: 2800000, guid: b7bcc58cf92c24a009977dfe55a0bbe1, type: 3}
+    - {fileID: 2800000, guid: 29a30a263fc5246f7bdf129579af7306, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1b0c2dd0e0cf54aeaab84117b049e45b, type: 3}
+  - {fileID: 21300000, guid: 91ae7151c52eb407f9ad473c5ad940b9, type: 3}
+  - {fileID: 21300000, guid: 7813ed517aeda4736b6df78d77f4ca3b, type: 3}
+  - {fileID: 21300000, guid: f26982f194c494fed8cbc6698ac84f94, type: 3}
+  - {fileID: 21300000, guid: 34a084f21a14a457c97acf977e0aca4c, type: 3}
+  - {fileID: 21300000, guid: 3b72fd83cd95e46469cfef651c762866, type: 3}
+  - {fileID: 21300000, guid: ecb22225ebe984844a26344ea15919fa, type: 3}
+  - {fileID: 21300000, guid: 29a30a263fc5246f7bdf129579af7306, type: 3}
+  - {fileID: 21300000, guid: 1522c0470becd4938ad21bd82da619ee, type: 3}
+  - {fileID: 21300000, guid: 55961a29f732a4831b497c86acd99610, type: 3}
+  - {fileID: 21300000, guid: b52b4c3a363f44f8d88d8fb793a68750, type: 3}
+  - {fileID: 21300000, guid: dc5c738b4b8bd49968d90c4cc45fbe18, type: 3}
+  - {fileID: 21300000, guid: 27128f2c8f0ae4ef2ba4c78ec7f91a9d, type: 3}
+  - {fileID: 21300000, guid: b7bcc58cf92c24a009977dfe55a0bbe1, type: 3}
+  - {fileID: 21300000, guid: 428a357ed1add41f0954ee3ee2d05e19, type: 3}
+  - {fileID: 21300000, guid: 912cb14f310b241329bda213e22c3dc7, type: 3}
+  - {fileID: 21300000, guid: 079dd8bff06d44fc5a75dc3af4f24611, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - tiles
+  - dining table
+  - single_glass
+  - NOTotoro
+  - drinkware cabinet
+  - pink beanie bag
+  - houseplant large
+  - tv
+  - coffee counter
+  - bookshelf
+  - wall left
+  - large blue carpet
+  - blue beanie bag
+  - sectional couch
+  - bookshelf living room
+  - pizza table
+  - back pink wall
+  m_RenderDataMap: {}
+  m_Tag: Kitchen+TV
+  m_IsVariant: 0
