@@ -88,4 +88,12 @@ public class Player_Alternate_Movements : MonoBehaviour
 	}
 
 
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		// Some movements play sounds when you bump into stuff --- just hard code it here
+		if( currentMovement == 0 )   // go karts
+			Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("gokart_bounce", transform.position, UnityEngine.Random.Range(0.75f, 1.25f) );
+	}
+
+
 }
