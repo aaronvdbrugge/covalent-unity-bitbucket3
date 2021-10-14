@@ -33,7 +33,7 @@ public class Camera_Sound : MonoBehaviour
 		myCamera = GetComponent<Camera>();
 	}
 
-	public void PlaySound(string name)
+    public void PlaySoundPitched( string name, float pitch = 1.0f)
     {
         if( !_soundDict.ContainsKey( name ) )  //cache it for future re-use
         {
@@ -46,16 +46,25 @@ public class Camera_Sound : MonoBehaviour
             
 
         if( _soundDict.ContainsKey( name ) )
+        {
+            _soundDict[name].pitch = pitch;
             _soundDict[name].Play();
+        }
+    }
+
+
+	public void PlaySound(string name)
+    {
+        PlaySoundPitched(name, 1.0f);
     }
 
 
 
-
     /// <summary>
-    /// Plays a sound, but only if the position is in camera bounds for this client.
+    /// Call this function to make sure it's OK before you play a soundsource via some method
+    /// other than PlaySoundAtPosition.
     /// </summary>
-    public void PlaySoundAtPosition( string name, Vector2 sound_position )
+    public bool CanPlaySoundAtPosition(Vector2 sound_position)
     {
         float vert_extent = myCamera.orthographicSize;    
         float horz_extent = vert_extent * Screen.width / Screen.height;
@@ -68,15 +77,26 @@ public class Camera_Sound : MonoBehaviour
 
         // See if it's out of bounds...
         if( sound_position.x < position.x - horz_extent )
-            return;
+            return false;
         if( sound_position.x > position.x + horz_extent )
-            return;
+            return false;
         if( sound_position.y < position.y - vert_extent )
-            return;
+            return false;
         if( sound_position.y > position.y + vert_extent )
-            return;
+            return false;
 
-        PlaySound( name );
+        return true;
+    }
+
+
+
+    /// <summary>
+    /// Plays a sound, but only if the position is in camera bounds for this client.
+    /// </summary>
+    public void PlaySoundAtPosition( string name, Vector2 sound_position, float pitch = 1.0f )
+    {
+        if( CanPlaySoundAtPosition( sound_position ) )
+            PlaySoundPitched( name, pitch );
     }
     
 }

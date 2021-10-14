@@ -30,6 +30,10 @@ public class GoKart : MonoBehaviour
     [Tooltip("Turns on and off based on direction and movement.")]
     public ParticleSystem backParticles;
 
+    [Tooltip("Looping sound effect; we'll play and modify it based on our speed etc")]
+    public AudioSource engineNoise;
+
+
 
     [Header("Settings")]
     [Tooltip("Minimum smoke particles to spawn")]
@@ -70,6 +74,12 @@ public class GoKart : MonoBehaviour
         _backSpriteAnimator = backSprite.GetComponent<Animator>();
 	}
 
+
+    Camera_Sound _cameraSound;
+	private void Start()
+	{
+		_cameraSound = Camera.main.GetComponent<Camera_Sound>();   // cache this so we aren't calling GetComponent every frame
+	}
 
 	/// <summary>
 	/// Direction is 0-3 or -1 for idle
@@ -221,11 +231,29 @@ public class GoKart : MonoBehaviour
 
                 emission = backParticles.emission;
                 emission.rateOverTime = new ParticleSystem.MinMaxCurve( Mathf.Lerp(minParticleRate, maxParticleRate, speed_norm) );
+
+
+                // Handle sound!
+                bool can_play_sound = _cameraSound.CanPlaySoundAtPosition(transform.position);
+
+                if( !engineNoise.isPlaying && can_play_sound)
+                    engineNoise.Play();
+                else if(engineNoise.isPlaying && !can_play_sound)
+                    engineNoise.Stop();
+
+                if( can_play_sound )   // modify pitch and volume with speed
+                {
+                    engineNoise.pitch = Mathf.Lerp(0.5f, 1.75f, Mathf.Min( speed_norm*2, 1) );
+                    engineNoise.volume = Mathf.Lerp(0.05f, 0.1f, speed_norm);
+                }
             }
         }
         else   // SITTING IDLE & EMPTY
         {
             _driveInProgress = 0.0f;
+
+            if( engineNoise.isPlaying )
+                engineNoise.Stop();
 
             if( _lastPlr != null )
             {
