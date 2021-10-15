@@ -11,11 +11,13 @@ GameObject:
   - component: {fileID: 2976278172589319931}
   - component: {fileID: 2976278172589319932}
   - component: {fileID: 2976278172589319933}
+  - component: {fileID: 7878516751833665106}
   - component: {fileID: 2976278172589319934}
   - component: {fileID: 2976278172589319935}
   - component: {fileID: 2976278172589319928}
   - component: {fileID: 2976278172589319929}
   - component: {fileID: 2976278172589319930}
+  - component: {fileID: 632653848}
   m_Layer: 14
   m_Name: penguin toy
   m_TagString: Untagged
@@ -108,6 +110,20 @@ MonoBehaviour:
   SorterPositionOffset: {x: 0.02, y: -0.64, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort: []
+--- !u!114 &7878516751833665106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976278172589319924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a477b1bf54b614987f79f1696fe8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: Bounces seem to work a tiny bit better with circle collider than the more
+    accurate polygon ellipse, so using that for now
 --- !u!60 &2976278172589319934
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +131,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2976278172589319924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -177,7 +193,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.02
+  m_LinearDrag: 0.16
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: a4a564f2cfbd8234ba12e712a0d33768, type: 2}
@@ -224,3 +240,19 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!58 &632653848
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976278172589319924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.52}
+  serializedVersion: 2
+  m_Radius: 0.32
