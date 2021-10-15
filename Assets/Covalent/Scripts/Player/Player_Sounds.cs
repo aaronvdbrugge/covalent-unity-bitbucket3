@@ -51,9 +51,11 @@ public class Player_Sounds : MonoBehaviour
 			if( playerAnimations.skating && playerHop.hopProgress <= 0 ) 
 			{
 				float speed = playerMovement.body.velocity.magnitude;
-				if( !skatingSound.isPlaying )
+				bool skate_sound = speed > skatingMinSpeed;
+				if( !skatingSound.isPlaying && skate_sound)
 					skatingSound.Play();
-				skatingSound.enabled = speed > skatingMinSpeed;
+				else if (!skate_sound)
+					skatingSound.Stop();
 				float lerp_amt = speed / playerMovement.maxSpeed;
 				skatingSound.pitch = Mathf.Lerp(skatingMinPitch, skatingMaxPitch, lerp_amt);
 				skatingSound.volume = Mathf.Lerp(skatingMinVolume, skatingMaxVolume, lerp_amt);
