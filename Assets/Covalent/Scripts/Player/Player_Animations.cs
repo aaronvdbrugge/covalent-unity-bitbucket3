@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Spine.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,10 +15,13 @@ public class Player_Animations : MonoBehaviour
     public Player_Movement playerMovement;
     public Player_Hop playerHop;
 
+    public SkeletonMecanim skeletonMecanim;
+
     public Animator anim;
     public Animator hearts;
 
     public SpriteRenderer splash_feet;
+
     [Tooltip("A transform that you don't want to be flipped horizontally (will counter-flip to undo the flip)")]
     public Transform dontFlip;
 
@@ -29,11 +33,16 @@ public class Player_Animations : MonoBehaviour
     public bool horizontalFlip = false;
 
 
-    
+    bool _skating = false;
 
 
+
+    bool _hidShadow = false;
 	private void Update()
 	{
+        if( !_hidShadow ) // NOTE: putting this in Start() is too soon apparently
+            skeletonMecanim.skeleton.SetAttachment("shadow", null );   // We do not need the shadow from animation!! Position it procedurally instead
+
         // Decide whether we should splash
         if (playerCollisions.onBeach && playerMovement.IsWalking() )
             splash_feet.enabled = true;
@@ -74,11 +83,22 @@ public class Player_Animations : MonoBehaviour
         dontFlip.localRotation = new Quaternion( 0, hflip_mult*180, 0, 0);    // player names etc will have to be un-flipped
 
         // Relay proper info to Animator
-        anim.SetBool("walking", playerMovement.IsWalking() );
+        anim.SetBool("walking", playerMovement.IsWalking( _skating ? 0.5f : 0.01f) );   // "waking" threshold is different for skating
+        anim.SetBool("skating", _skating );
         anim.SetBool("hopping", playerHop.hopProgress > 0 );
         anim.SetBool("sitting", sitting && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
 
+
+    /// <summary>
+    /// Turn character ice skates on or off.
+    /// </summary>
+    public void SetIceSkates(bool enable)
+    {
+        _skating = enable;
+        skeletonMecanim.skeleton.SetAttachment("OverlayLeftFoot", enable ? "Shoes/colors/skate" : null );
+        skeletonMecanim.skeleton.SetAttachment("OverlayRightFoot", enable ? "Shoes/colors/skate" : null );
+    }
 
 
     /// <summary>

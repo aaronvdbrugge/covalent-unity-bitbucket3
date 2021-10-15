@@ -171,9 +171,9 @@ public class Player_Movement : MonoBehaviour
 	/// <summary>
 	/// Can be used for animation etc.
 	/// </summary>
-	public bool IsWalking()
+	public bool IsWalking(float threshold = 0.01f)
 	{
-		return body.velocity.magnitude > 0.01f;
+		return body.velocity.magnitude > threshold;
 	}
 
 	public Vector2 GetVelocity()

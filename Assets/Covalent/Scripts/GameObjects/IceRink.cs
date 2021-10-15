@@ -11,7 +11,10 @@ public class IceRink : MonoBehaviour
 	{
 		Player_Controller_Mobile plr = collision.gameObject.GetComponent<Player_Controller_Mobile>();
 		if( plr )
+		{
 			plr.playerAlternateMovements.currentMovement = 1;   // ice rink movement
+			plr.playerAnimations.SetIceSkates(true);   // put on visual ice skates attachment
+		}
 	}
 
 
@@ -19,6 +22,9 @@ public class IceRink : MonoBehaviour
 	{
 		Player_Controller_Mobile plr = collision.gameObject.GetComponent<Player_Controller_Mobile>();
 		if( plr )
+		{
 			plr.playerAlternateMovements.currentMovement = -1;   // back to default movement
+			plr.playerAnimations.SetIceSkates(false);   // remove visual ice skates attachment
+		}
 	}
 }
