@@ -764,13 +764,13 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: walking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: hopping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: sitting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: skating
   m_SynchronizeLayers:
   - SynchronizeType: 2
