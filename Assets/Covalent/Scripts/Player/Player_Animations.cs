@@ -33,7 +33,7 @@ public class Player_Animations : MonoBehaviour
     public bool horizontalFlip = false;
 
 
-    bool _skating = false;
+    public bool skating{get; private set; }
 
 
 
@@ -83,8 +83,8 @@ public class Player_Animations : MonoBehaviour
         dontFlip.localRotation = new Quaternion( 0, hflip_mult*180, 0, 0);    // player names etc will have to be un-flipped
 
         // Relay proper info to Animator
-        anim.SetBool("walking", playerMovement.IsWalking( _skating ? 0.5f : 0.01f) );   // "waking" threshold is different for skating
-        anim.SetBool("skating", _skating );
+        anim.SetBool("walking", playerMovement.IsWalking( skating ? 0.5f : 0.01f) );   // "waking" threshold is different for skating
+        anim.SetBool("skating", skating );
         anim.SetBool("hopping", playerHop.hopProgress > 0 );
         anim.SetBool("sitting", sitting && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
@@ -95,7 +95,7 @@ public class Player_Animations : MonoBehaviour
     /// </summary>
     public void SetIceSkates(bool enable)
     {
-        _skating = enable;
+        skating = enable;
         skeletonMecanim.skeleton.SetAttachment("OverlayLeftFoot", enable ? "Shoes/colors/skate" : null );
         skeletonMecanim.skeleton.SetAttachment("OverlayRightFoot", enable ? "Shoes/colors/skate" : null );
     }

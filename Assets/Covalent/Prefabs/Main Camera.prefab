@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundParent: {fileID: 2454778468757023767}
-  extendSoundBounds: 0.5
+  extendSoundBounds: 0
 --- !u!114 &314187667658909921
 MonoBehaviour:
   m_ObjectHideFlags: 0

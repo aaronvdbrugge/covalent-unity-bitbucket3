@@ -50,6 +50,9 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
     [Tooltip("Handles things like switching to Go Kart and Ice movements.")]
     public Player_Alternate_Movements playerAlternateMovements;
 
+    [Tooltip("Handles complex sounds like the ice skating loop.")]
+    public Player_Sounds playerSounds;
+
     [Tooltip("Handles skins")]
     public Spine_Player_Controller spinePlayerController;
 
