@@ -7,30 +7,28 @@ namespace Plugins.Android
         //Primary static clas, which contains all the different static proxy objects
         private static AndroidJavaClass javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher");
         
-        private static AndroidJavaObject dateLandProxy = javaClass.GetStatic<AndroidJavaObject>("dateLandDispatcher");
-        private static AndroidJavaObject homeIslandProxy = javaClass.GetStatic<AndroidJavaObject>("homeIslandDispatcher");
-        private static AndroidJavaObject errorProxy = javaClass.GetStatic<AndroidJavaObject>("errorDispatcher");
+        private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
         
         public static void _updatePlayersInRoom(string[] unityJsonList, int count)
         {
-            dateLandProxy.Call("updatePlayersInRoom", unityJsonList, count);
+            messageProxy.Call("updatePlayersInRoom", unityJsonList, count);
         }
         
         public static void _playerDidMute(int player_id)
         {
-            dateLandProxy.Call("playerDidMute", player_id);   
+            messageProxy.Call("playerDidMute", player_id);   
         }
         
         public static void _playerDidUnmute(int player_id) {
-            dateLandProxy.Call("playerDidUnmute", player_id); 
+            messageProxy.Call("playerDidUnmute", player_id); 
         }
         
         public static void _playerStartedTalking(int player_id) {
-            dateLandProxy.Call("playerStartedTalking", player_id);
+            messageProxy.Call("playerStartedTalking", player_id);
         }
         
         public static void _playerEndedTalking(int player_id) {
-            dateLandProxy.Call("playerEndedTalking", player_id);
+            messageProxy.Call("playerEndedTalking", player_id);
         }
         
         public static void _playerDidLeaveGame() {
@@ -39,27 +37,26 @@ namespace Plugins.Android
             // However, if you tap the "Leave" button, I think that is currently a button overlaid
             // from the native interface (not in Unity) so you won't get this call from
             // Unity in that case.
-            dateLandProxy.Call("playerDidLeaveGame");
+            messageProxy.Call("playerDidLeaveGame");
             
         }
         
         public static void _failureToConnect(string error) {
-            errorProxy.Call("failureToConnect", error);
+            messageProxy.Call("failureToConnect", error);
         }
         
         public static void _failureToJoinRoom(string error) {
-            
-            errorProxy.Call("failureToJoinRoom", error);
+            messageProxy.Call("failureToJoinRoom", error);
         }
         
         public static void _failureToConnectAgora(string error)
         {
-            errorProxy.Call("failureToConnectAgora", error);
+            messageProxy.Call("failureToConnectAgora", error);
         }
         
         public static void _missingMicPermission()
         {
-            errorProxy.Call("missingMicPermission");
+            messageProxy.Call("missingMicPermission");
         }
 
         public static void showHostMainWindow(string color)

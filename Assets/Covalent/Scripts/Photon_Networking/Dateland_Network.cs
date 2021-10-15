@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Photon.Pun;
 using Photon.Realtime;
+using Plugins.Android;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -60,8 +61,11 @@ public class Dateland_Network : Network_Manager
     { 
         if( Application.isEditor ) 
             Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")");
-        else
-            _updatePlayersInRoom( unityJSONList, count );
+#if PLATFORM_ANDROID
+        NativeAndroidProxy._playerDidMute(23);
+#elif UNITY_IOS
+        _updatePlayersInRoom( unityJSONList, count );
+#endif
     }
 
     private static void failureToConnect(string error)
