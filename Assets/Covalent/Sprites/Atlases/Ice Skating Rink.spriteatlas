@@ -69,6 +69,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: ede7708091da8c44ab26f1b515e7de8f, type: 3}
   - {fileID: 21300000, guid: 009f2bb055dc59541919197abd038eda, type: 3}
   - {fileID: 21300000, guid: 67ac70d27db45f543859fdf35f229c87, type: 3}
   - {fileID: 21300000, guid: 5ad573d2c45f1494c81a9ddb59edcf98, type: 3}
@@ -76,8 +77,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: df32af5507cd7a04491eee19479c1596, type: 3}
   - {fileID: 21300000, guid: 46d30fe5e40d2434fb535505f5163b7e, type: 3}
   - {fileID: 21300000, guid: 721111f58b362d149b2a9a3109124ac9, type: 3}
+  - {fileID: 21300000, guid: ae43e6a67a004b947b9d8d1856d543db, type: 3}
   - {fileID: 21300000, guid: 43170c273c0248f44868c5c1adcf7dad, type: 3}
+  - {fileID: 21300000, guid: aa81b647825a8ba45823179aacd40aa5, type: 3}
   - {fileID: 21300000, guid: c01940e7050575840a241fd4653258f4, type: 3}
+  - {fileID: 21300000, guid: 56b3d158f4101c749b60cd741d2620e4, type: 3}
+  - {fileID: 21300000, guid: 8ef951da21fe32e4fbb8a4ac48606b11, type: 3}
   - {fileID: 21300000, guid: 447b2d0cdab67784eaf7058f474c3a67, type: 3}
   - {fileID: 21300000, guid: b27b573c900fb8749ab8d8978e673873, type: 3}
   - {fileID: 21300000, guid: 90dcc92d12ff15b43b748a10a1a9d68a, type: 3}
@@ -86,6 +91,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a753bb7f670980c4e8309a505c6b7b52, type: 3}
   - {fileID: 21300000, guid: dc949ddf4895b5c49b74e3fb4c6d4ada, type: 3}
   m_PackedSpriteNamesToIndex:
+  - snowflake particle 1
   - archsnow1
   - log
   - trees upper corner combined
@@ -93,8 +99,12 @@ SpriteAtlas:
   - log table
   - snowman
   - icearchB
+  - smore stick
   - archwayLeftTop
+  - snowflake particle 2
   - snow angel
+  - smore stick 2
+  - smore stick 3
   - ice building W
   - ice building E
   - hot chocolate booth
