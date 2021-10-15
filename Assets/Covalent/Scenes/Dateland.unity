@@ -50491,16 +50491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: penguin toy
       objectReference: {fileID: 0}
-    - target: {fileID: 2976278172589319928, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2976278172589319928, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2976278172589319929, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
         type: 3}
       propertyPath: sceneViewId
@@ -50560,16 +50550,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2976278172589319933, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
-        type: 3}
-      propertyPath: SorterPositionOffset.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2976278172589319933, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
-        type: 3}
-      propertyPath: SorterPositionOffset.y
-      value: -0.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6296ffd5f5fd2446a36d2c813afb6a5, type: 3}
