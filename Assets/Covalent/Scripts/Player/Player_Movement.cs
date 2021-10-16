@@ -30,6 +30,9 @@ public class Player_Movement : MonoBehaviour
 	public float editorSpeedMultiple = 4;
 
 	//You can turn this off to disable control.
+	// NOTE! There was a hard to reproduce bug where this got stuck off.
+	// So, this is now a "consumed" value; if you set if off, it will be on the next frame.
+	// You have to set it off constantly to make it work.
 	public bool movementEnabled
 	{
 		get
@@ -38,9 +41,12 @@ public class Player_Movement : MonoBehaviour
 		}
 		set
 		{
-			_movementEnabled = value;
-			if( !_movementEnabled )
-				body.velocity = Vector3.zero;   // on set off, zero the velocity
+			if( value != _movementEnabled )
+			{
+				_movementEnabled = value;
+				if( !_movementEnabled )
+					body.velocity = Vector3.zero;   // on set off, zero the velocity
+			}
 		}
 	}
 	bool _movementEnabled = true;
@@ -121,6 +127,7 @@ public class Player_Movement : MonoBehaviour
 	{
 		if( movementEnabled  )
 		{
+
 			if( isMine )
 			{
 				Vector2 new_vel = lastMovementInput * (useAcceleration ? acceleration : maxSpeed);
@@ -165,6 +172,8 @@ public class Player_Movement : MonoBehaviour
 			else if( body.velocity != Vector2.zero )  //just update lastDirection based on velocity.
 				lastDirection = body.velocity.normalized;
 		}
+		else
+			movementEnabled = true;   // "Consume" this value to prevent game eneding bugs
 	}
 
 

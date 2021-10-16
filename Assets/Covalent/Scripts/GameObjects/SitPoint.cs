@@ -32,6 +32,20 @@ public class SitPoint : MonoBehaviour
 	public bool canMoveWhileSitting = false;
 
 
+	[Tooltip("Set to true to use cameraOffset values")]
+	public bool useCameraOffset = false;
+
+	[Tooltip("If nonzero, the camera will offset when the player sits here (e.g. for soccer seats)")]
+	public Vector2 cameraOffset;
+
+	[Tooltip("Makes it easier if we're positioning a bunch of offsets in one place (e.g. soccer stadium)")]
+	public bool cameraOffsetIsWorldCoordinate = false;
+
+	[Tooltip("If non-one, the camera will smoothly zoom in this position")]
+	public float cameraZoom = 1.0f;
+
+
+
 	[Tooltip("Network safety feature which needs to be turned off for Go Karts.")]
 	public bool setPositionConstantlyWhileSitting = true;
 
@@ -49,6 +63,9 @@ public class SitPoint : MonoBehaviour
 
 	private void Awake()
 	{
+		if( cameraZoom == 0.0f )   // Unity set some bad 0 values when I added cameraZoom
+			cameraZoom = 1.0f;
+
 		// Assing unique ID based on position.
 		Vector3 position = transform.position;
 		uid = Mathf.Floor(position.x*100) + "," + Mathf.Floor(position.y*100); 
@@ -166,5 +183,26 @@ public class SitPoint : MonoBehaviour
 		}
 
 		Debug.LogError("ERROR: Actor number not found for Vacate.");
+	}
+
+
+	/// <summary>
+	/// Gets the place where the camera is supposed to sit when we're sitting here
+	/// </summary>
+	public Vector2 GetCameraOffsetWorld()
+	{
+		if( cameraOffsetIsWorldCoordinate )
+			return cameraOffset;
+		else
+			return transform.localToWorldMatrix.MultiplyPoint( cameraOffset );
+	}
+
+
+
+	private void OnDrawGizmos()
+	{
+		// Show where cameraOffset is
+		Gizmos.color = Color.cyan;
+		Gizmos.DrawWireSphere( GetCameraOffsetWorld(), 1.0f );
 	}
 }

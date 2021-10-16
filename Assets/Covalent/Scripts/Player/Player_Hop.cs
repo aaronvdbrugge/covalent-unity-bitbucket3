@@ -99,6 +99,19 @@ public class Player_Hop : MonoBehaviourPun
 
 
 	/// <summary>
+	/// Returns an actual SitPoint pointer
+	/// </summary>
+	/// <returns></returns>
+	public SitPoint GetSitPoint()
+	{
+		string sit = GetSittingOn();
+		if( sit != null  && SitPoint.byUid.ContainsKey(sit) )
+			return SitPoint.byUid[sit];
+		return null;
+	}
+
+
+	/// <summary>
 	/// Will arc over to a SitPoint and plant our butt in it, turning off all colliders and
 	/// relinquishing walking control until we tap the screen again, at which point we'll hop
 	/// back down onto the SitPoint's returnPoint.
@@ -209,16 +222,20 @@ public class Player_Hop : MonoBehaviourPun
 
 	private void FixedUpdate()
 	{
+
+		// Note that EnableColliders and movementEnabled are now "consumed"
+		// to avoid game breaking bugs (I encountered one that was hard to produce)
+		// This means they must be called constantly.
+		if( hopProgress > 0 )
+		{
+			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
+			playerMovement.movementEnabled = false;    // Disable movement altogether.
+		}
+
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
 		{
-			if( hopProgress > 0 )
-			{
-				playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
-				playerMovement.movementEnabled = false;    // Disable movement altogether.
-			}
-
-			else  //not even hopping, so stay put on the bench...
+			if( hopProgress == 0 )  //not even hopping, so stay put on the bench...
 			{
 				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
 				if( seat != null )  // it might not be instantiated
@@ -273,7 +290,7 @@ public class Player_Hop : MonoBehaviourPun
 				{
 					_enableMovementWhenDone = false;
 					playerCollisions.EnableColliders( true );
-					playerMovement.movementEnabled = true;  
+					//playerMovement.movementEnabled = true;     // no longer necessary; it's a "consumed" value
 				}
 
 				if( !string.IsNullOrEmpty(sitting_on) )   // They hopped onto a seat, can play a sound effect. 

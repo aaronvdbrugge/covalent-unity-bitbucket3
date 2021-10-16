@@ -1,0 +1,107 @@
+INFO    17:20:59:253  21296; AEC_Delay, Config: dev = 0, npart = 12, agg = -1, diagnosis = 0
+INFO    17:20:59:253  21296; GetNsStatus() => enabled= 1, mode=4，nsLevel=-1
+INFO    17:20:59:253  21296; GetAgcStatus() => enabled=0, mode=1
+INFO    17:20:59:253  21296; GetEcStatus() => enabled=1, mode=3
+INFO    17:20:59:253  21296; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters setting as following:BypassAPM =0,Agc=0,Aec=1,Ans=1,Hw3A=0,PitchSmooth=0,MusicDetect=0,ExceptionDetect=0,ToneRemover=0,Bss=0,Hpf=0
+INFO    17:20:59:253  21296; agora::media::ApmAudioPolicy::DecideApmDynamicParam:New Apm Paramters for 3A:Agc.targetLeveldBOv =6,Agc.digitalCompressionGaindB=10,Agc.limiterEnable=1,Agc.gmode=1,Aec.aggressiveness=1,Ans.aggressiveness=1
+INFO    17:20:59:256  16600; [API][rtc_engine_impl.cpp:5579][agora::rtc::RtcEngine::onMediaEngineEvent]
+INFO    17:20:59:261  16600; [cap] Received capability set ack seq: 1
+INFO    17:20:59:405  16600; [remote:106.14.12.130:8443] start 2th connect, send client hello 2320758|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    17:20:59:418  16600; [remote:128.14.196.249:8130] path MTU to remote increased: 1280 --> 1365
+INFO    17:20:59:418  16600; [remote:128.14.196.249:8130] on max stream frame length changed from 1204 to 1339
+INFO    17:21:00:122  16600; [remote:106.14.12.130:8443] start 3th connect, send client hello 2320758|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    17:21:00:531  15468; [API][rtc_engine_impl.cpp:1484][agora::rtc::RtcEngine::muteLocalAudioStream] mute 1
+INFO    17:21:00:531  15468; [API][rtc_engine_impl.cpp:1580][agora::rtc::RtcEngine::muteLocalAudioStreamEx] mute 1
+INFO    17:21:00:531  16600; [cm] muteLocalAudioStream channel , muted 1, isSender 0
+
+INFO    17:21:00:531  16600; [cc] setLocalMuteAudioState: true, priority: 4
+INFO    17:21:00:531  16600; setMuteStatus, muted: On
+INFO    17:21:00:531  16600; [rp] publish audio old:3,new:1,elapsed:1278
+INFO    17:21:02:050  16600; [remote:106.14.12.130:8443] start 4th connect, send client hello 2320758|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    17:21:02:723  16600; gatewayRtt 5(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    17:21:02:723  16600; [timeSync] getStableNTP, rtt_w: 52, diffTime: 1634327640481, bootTime: 16020674, currentTs: 1634343661155
+INFO    17:21:03:721  16600; [rs] total: 39 / 38 valid: 38 / 38
+INFO    17:21:04:690  16600; [remote:106.14.12.130:8443] start 5th connect, send client hello 2320758|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    17:21:04:724  16600; gatewayRtt 12(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 0(500), reason 0x0
+INFO    17:21:04:831  16600; [remote:128.14.196.249:8130] path MTU to remote increased: 1365 --> 1415
+INFO    17:21:04:831  16600; [remote:128.14.196.249:8130] on max stream frame length changed from 1339 to 1389
+INFO    17:21:05:057  20244; Audio statistics - play count: playout count = 200  signal level: far_in = 0
+INFO    17:21:05:269  14968; Audio statistics - rec count: record count = 200 signal level: near_in = 99, near_out = 74 farin = 104
+INFO    17:21:06:724  16600; gatewayRtt 9(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:08:722  16600; [rs] total: 41 / 40 valid: 40 / 40
+INFO    17:21:08:725  16600; gatewayRtt 5(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:08:725  16600; [timeSync] getStableNTP, rtt_w: 52, diffTime: 1634327640481, bootTime: 16026676, currentTs: 1634343667157
+INFO    17:21:09:249  14968; AVSync audio_record_delay: 0
+
+INFO    17:21:12:531  16600; [remote:106.14.12.130:8443] start 6th connect, send client hello 2320758|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    17:21:12:719  16600; [remote:106.14.12.130:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    17:21:12:719  16600; [remote:106.14.12.130:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    17:21:12:719  16600; [remote:106.14.12.130:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    17:21:12:719  16600; [remote:106.14.12.130:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    17:21:12:719  16600; [remote:106.14.12.130:8443] receive server hello piece id: 5, 5/10, complete
+INFO    17:21:12:721  16600; [remote:106.14.12.130:8443] create connection 00000217BBCCAEF0, self initial seq: 2320759, initial rtt: 13995ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    17:21:12:721  16600; [remote:106.14.12.130:8443] create session 00000217AF51B060
+INFO    17:21:12:721  16600; [vocs/aut] connected with 106.14.12.130:8443
+INFO    17:21:12:721  16600; [vocs] close transport since working is finished.
+INFO    17:21:12:721  16600; [remote:106.14.12.130:8443] destroy session 00000217AF51B060
+INFO    17:21:12:722  16600; destroy dangling client connection 00000217B29417E0
+INFO    17:21:12:722  16600; [remote:106.14.12.130:8443] destroy connection 00000217BBCCAEF0
+INFO    17:21:13:723  16600; [rs] total: 42 / 41 valid: 41 / 41
+INFO    17:21:14:725  16600; gatewayRtt 13(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:14:725  16600; [timeSync] getStableNTP, rtt_w: 52, diffTime: 1634327640481, bootTime: 16032676, currentTs: 1634343673157
+INFO    17:21:16:081  16600; [rs] **report stats: seq: 67
+INFO    17:21:16:081  16600; [rs] **report stats: report item map size: 0
+INFO    17:21:16:081  16600; [rs] **report stats: tx bytes: 15237
+INFO    17:21:16:081  16600; [rs] **report stats: rx bytes: 3216
+INFO    17:21:16:081  16600; [rs] remote server: 128.14.196.249:8130
+INFO    17:21:18:722  16600; [rs] total: 43 / 42 valid: 42 / 42
+INFO    17:21:19:057  20244; Audio statistics - play count: playout count = 600  signal level: far_in = 0
+INFO    17:21:19:249  14968; AVSync audio_record_delay: 0
+
+INFO    17:21:19:269  14968; Audio statistics - rec count: record count = 600 signal level: near_in = 99, near_out = 74 farin = 103
+INFO    17:21:20:725  16600; gatewayRtt 45(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:20:725  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16038676, currentTs: 1634343679157
+INFO    17:21:23:723  16600; [rs] total: 44 / 43 valid: 43 / 43
+INFO    17:21:26:728  16600; gatewayRtt 4(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:26:728  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16044678, currentTs: 1634343685159
+INFO    17:21:28:723  16600; [rs] total: 45 / 44 valid: 44 / 44
+INFO    17:21:29:249  14968; AVSync audio_record_delay: 0
+
+INFO    17:21:30:728  16600; **CALL STATS: duration 30s cpu app/total 3.81/5.37 memory size app/ratio app/total 3385736KB/5.06/23.39 battery 100 tx/rx: 2/2 kbps 62.409K/126.76K bytes
+INFO    17:21:32:728  16600; gatewayRtt 4(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:32:728  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16050678, currentTs: 1634343691159
+INFO    17:21:33:723  16600; [rs] total: 46 / 45 valid: 45 / 45
+INFO    17:21:36:083  16600; [rs] **report stats: seq: 70
+INFO    17:21:36:083  16600; [rs] **report stats: report item map size: 0
+INFO    17:21:36:083  16600; [rs] **report stats: tx bytes: 16575
+INFO    17:21:36:083  16600; [rs] **report stats: rx bytes: 3360
+INFO    17:21:36:083  16600; [rs] remote server: 128.14.196.249:8130
+INFO    17:21:37:057  20244; Audio statistics - play count: playout count = 600  signal level: far_in = 0
+INFO    17:21:37:268  14968; Audio statistics - rec count: record count = 600 signal level: near_in = 99, near_out = 74 farin = 103
+INFO    17:21:38:724  16600; [rs] total: 46 / 45 valid: 45 / 45
+INFO    17:21:38:730  16600; gatewayRtt 6(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:38:730  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16056681, currentTs: 1634343697162
+INFO    17:21:39:249  14968; AVSync audio_record_delay: 0
+
+INFO    17:21:43:723  16600; [rs] total: 47 / 46 valid: 46 / 46
+INFO    17:21:44:733  16600; gatewayRtt 14(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:44:733  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16062684, currentTs: 1634343703165
+INFO    17:21:48:724  16600; [rs] total: 48 / 47 valid: 47 / 47
+INFO    17:21:49:249  14968; AVSync audio_record_delay: 0
+
+INFO    17:21:50:736  16600; gatewayRtt 32(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:50:736  16600; [timeSync] getStableNTP, rtt_w: 53, diffTime: 1634327640481, bootTime: 16068687, currentTs: 1634343709168
+INFO    17:21:53:725  16600; [rs] total: 49 / 48 valid: 48 / 48
+INFO    17:21:55:076  20244; Audio statistics - play count: playout count = 601  signal level: far_in = 0
+INFO    17:21:55:269  14968; Audio statistics - rec count: record count = 600 signal level: near_in = 99, near_out = 74 farin = 103
+INFO    17:21:56:082  16600; [rs] **report stats: seq: 73
+INFO    17:21:56:082  16600; [rs] **report stats: report item map size: 0
+INFO    17:21:56:082  16600; [rs] **report stats: tx bytes: 17867
+INFO    17:21:56:082  16600; [rs] **report stats: rx bytes: 3504
+INFO    17:21:56:082  16600; [rs] remote server: 128.14.196.249:8130
+INFO    17:21:56:738  16600; gatewayRtt 111(650), linkspeed 78000(20), rssi -59(-70), rxlossrate 0(30), localRxJitter95 8(500), reason 0x0
+INFO    17:21:56:738  16600; [timeSync] getStableNTP, rtt_w: 54, diffTime: 1634327640481, bootTime: 16074688, currentTs: 1634343715169
+INFO    17:21:58:725  16600; [rs] total: 50 / 49 valid: 49 / 49
+INFO    17:21:59:249  14968; AVSync audio_record_delay: 0
+
+FATAL   17:22:00:090  21344; ahpl: System stalling detected: thread<AgoraEvent> stalled for 9 calc cycles, at least 9403ms!
