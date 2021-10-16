@@ -164,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9146403783663092925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.89, y: 3.37, z: 0}
+  m_LocalPosition: {x: -5.202, y: 4.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9146403784171495433}
@@ -211,15 +211,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 70
-  m_Sprite: {fileID: 21300000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e85caf397a774c4797c0eee9f1c5ccb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.31, y: 2.46}
+  m_Size: {x: 1.59, y: 2.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9146403783663092927
@@ -342,8 +342,8 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: -0.7955475, y: -1.9403839, z: 0}
-  SorterPositionOffset2: {x: 1.8821716, y: -0.44628906, z: 0}
+  SorterPositionOffset: {x: -1.4059865, y: -2.8037124, z: 0}
+  SorterPositionOffset2: {x: 2.7193358, y: -0.42884627, z: 0}
   renderersToSort:
   - {fileID: 9146403783762603675}
 --- !u!1 &9146403784161355046
@@ -461,7 +461,6 @@ GameObject:
   - component: {fileID: 9146403784172716367}
   - component: {fileID: 9146403784172716369}
   - component: {fileID: 9146403784172716370}
-  - component: {fileID: 9146403784172716368}
   m_Layer: 0
   m_Name: boundaries
   m_TagString: Untagged
@@ -520,26 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c066fa3c7724cafac97e37df092321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9146403784172716368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146403784172716365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMovable: 0
-  renderBelowAll: 0
-  movingDependencies: []
-  sortType: 0
-  SorterPositionOffset: {x: 0, y: 0, z: 0}
-  SorterPositionOffset2: {x: 0, y: 0, z: 0}
-  renderersToSort:
-  - {fileID: 0}
 --- !u!1 &9146403784552979027
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9146403784552979027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.65, y: 1.82, z: 0}
+  m_LocalPosition: {x: -9.349, y: 1.637, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9146403784171495433}
@@ -613,15 +592,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 72
-  m_Sprite: {fileID: 21300000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e85caf397a774c4797c0eee9f1c5ccb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.59, y: 2.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9146403784552979029
@@ -670,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9146403784796016533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.18, y: 3.11, z: 0}
+  m_LocalPosition: {x: -7.274, y: 3.331, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9146403784171495433}
@@ -717,15 +696,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 71
-  m_Sprite: {fileID: 21300000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc38be2e70dd0b046b65de84f1140b1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.62, y: 3.14}
+  m_Size: {x: 5.13, y: 4.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9146403784796016535
@@ -846,10 +825,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMovable: 0
-  renderBelowAll: 0
+  renderBelowAll: 1
   movingDependencies: []
-  sortType: 1
-  SorterPositionOffset: {x: -1.9463654, y: -0.3865204, z: 0}
+  sortType: 0
+  SorterPositionOffset: {x: 0, y: 0, z: 0}
   SorterPositionOffset2: {x: 0.7850952, y: 1.2431335, z: 0}
   renderersToSort:
   - {fileID: 9146403785078319703}
@@ -951,15 +930,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 69
-  m_Sprite: {fileID: 21300000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0e0c9539c1393249b761c7d4fb8b3a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 5.85, y: 3.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9146403785083305586
@@ -975,10 +954,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMovable: 0
-  renderBelowAll: 0
+  renderBelowAll: 1
   movingDependencies: []
-  sortType: 1
-  SorterPositionOffset: {x: -2.5508575, y: -0.51200867, z: 0}
+  sortType: 0
+  SorterPositionOffset: {x: 0, y: 0, z: 0}
   SorterPositionOffset2: {x: 1.2525787, y: 1.5451508, z: 0}
   renderersToSort:
   - {fileID: 9146403785083305587}
@@ -998,10 +977,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.2
   m_Points:
-  - {x: -0.7603565, y: -1.1123958}
-  - {x: -1.9756765, y: -0.42549956}
-  - {x: 0.8054619, y: 1.1916873}
-  - {x: 1.9766083, y: 0.4997244}
+  - {x: -1.3338275, y: -1.5959105}
+  - {x: -2.7740393, y: -0.6953684}
+  - {x: 1.3564415, y: 1.6752021}
+  - {x: 2.7749634, y: 0.8820381}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1089,10 +1068,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.2
   m_Points:
-  - {x: -0.8280277, y: -0.7863562}
-  - {x: -1.5512333, y: -0.3947394}
-  - {x: 0.77469444, y: 0.90256286}
-  - {x: 1.5029507, y: 0.48743224}
+  - {x: -1.3699741, y: -1.2691796}
+  - {x: -2.4183369, y: -0.70019937}
+  - {x: 1.3560467, y: 1.4248006}
+  - {x: 2.379919, y: 0.89142776}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1328,12 +1307,12 @@ PrefabInstance:
     - target: {fileID: 6684815515007593657, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9299927
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: 6684815515007593657, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.619995
+      value: -4.18
       objectReference: {fileID: 0}
     - target: {fileID: 6684815515007593657, guid: c3ae81cc002dc3c40b2b19aa483cf831,
         type: 3}
