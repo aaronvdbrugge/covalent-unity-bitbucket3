@@ -2351,6 +2351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7827827696463674634}
   - component: {fileID: 7827827696463674637}
+  - component: {fileID: 4465435209914206210}
   - component: {fileID: 7827827696463674636}
   - component: {fileID: 7827827696463674638}
   - component: {fileID: 7827827696463674673}
@@ -2361,6 +2362,7 @@ GameObject:
   - component: {fileID: 8849188985944677547}
   - component: {fileID: 5396395443679316240}
   - component: {fileID: 314187667658909921}
+  - component: {fileID: 8849712726771496085}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2429,6 +2431,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &4465435209914206210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827827696463674675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582f500f6b41dfc4a96b4848de1540f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  panningResponsivenessRatio: 0.05
+  smoothCooldownTime: 1
 --- !u!81 &7827827696463674636
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2514,17 +2531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67306fc94c55b4206ba5e36f275210c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  disable_follow: 0
-  smoothSpeed: 6
-  offset_x: 4
-  follow_x: 0
-  offset_y: 5.5
-  follow_y: 0
-  clamp_x_left: -54.45
-  clamp_x_right: 54.45
-  clamp_y_down: -32
-  clamp_y_up: 22.2
   cameraSize: 0
   Settings: {fileID: 0}
   Character_Creator: {fileID: 0}
@@ -2618,6 +2624,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signPanel: {fileID: 0}
   uiText: {fileID: 0}
+--- !u!114 &8849712726771496085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827827696463674675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582f500f6b41dfc4a96b4848de1540f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  panningResponsivenessRatio: 0.05
+  smoothCooldownTime: 1
 --- !u!1 &8068302430203263822
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ using UnityEngine.UI;
  */
 
 
-public class Dateland_Camera : Camera_Follow
+public class Dateland_Camera : MonoBehaviour  // : Camera_Follow
 {
     Camera cameraMain;
     public int cameraSize;
@@ -22,7 +22,7 @@ public class Dateland_Camera : Camera_Follow
     public Image[] Graphics_Level_Buttons;
     public Sprite[] Graphics_Level_Sprites;
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
         //9:19.5 = 0.46153846
         //9:16 = 0.5625
@@ -168,14 +168,15 @@ public class Dateland_Camera : Camera_Follow
         EventManager.TriggerEvent("enable_joystick");
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
+    
 
     public void setClamps()
     {
+        // This originally set Camera_Follow values.
+        // The script wasn't working great anyway (had a kind of laggy unsatisfying camera follow logic) so I'm just disabling this stuff.
+        // Any further work should probably be done in the new CameraPanning script.
+        /*
+
         if (cameraMain.orthographicSize == 10)
         {
             if (cameraMain.aspect >= 0.75)
@@ -294,6 +295,6 @@ public class Dateland_Camera : Camera_Follow
                 offset_y = 7.3f;
             }
         }
-        
+        */
     }
 }

@@ -179,7 +179,7 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
             // Relay playerHop to camera click handler, which needs to be able to trigger hops.
             FindObjectOfType<CameraClickHandler>().playerHop = playerHop;
 
-            GameObject.Find("Main Camera").GetComponent<Camera_Follow>().target = transform;
+            Camera.main.GetComponent<CameraPanning>().target = this;
             FindObjectOfType<Emoji_Manager>().playerEmotes = playerEmotes;
         }
     }
