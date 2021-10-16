@@ -56,45 +56,60 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 008cca9874fda435dab8ac8076a846be, type: 3}
-    - {fileID: 2800000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
-    - {fileID: 2800000, guid: e71f5e24df80e445f998f4fab8b68d4f, type: 3}
-    - {fileID: 2800000, guid: e6526a4ba85df457dbb2c7872efa2ac8, type: 3}
-    - {fileID: 2800000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
-    - {fileID: 2800000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
-    - {fileID: 2800000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
-    - {fileID: 2800000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
+    - {fileID: 2800000, guid: 0e85caf397a774c4797c0eee9f1c5ccb, type: 3}
+    - {fileID: 2800000, guid: bc38be2e70dd0b046b65de84f1140b1c, type: 3}
+    - {fileID: 2800000, guid: a0e0c9539c1393249b761c7d4fb8b3a7, type: 3}
+    - {fileID: 2800000, guid: 3c02463ad0e9e904f86c0e6c510bb919, type: 3}
+    - {fileID: 2800000, guid: 2759a58c4f77ab84ebcbef280513110a, type: 3}
+    - {fileID: 2800000, guid: 609922225990ff44d9a7a29a00e1b41d, type: 3}
+    - {fileID: 2800000, guid: eac929587ffe13c42b3158ef49b13b43, type: 3}
+    - {fileID: 2800000, guid: aaf9f77d167dd1a4da1172871ac555b0, type: 3}
     - {fileID: 2800000, guid: 1eba4ecdc95f14c4f806eaea441e275e, type: 3}
+    - {fileID: 2800000, guid: b2ed84735a062224495d4e34714a7145, type: 3}
+    - {fileID: 2800000, guid: 2e5c77a7a1dc06442a352fd4e5bf0de5, type: 3}
+    - {fileID: 2800000, guid: af74289418ca2c344a215f909b382d3d, type: 3}
+    - {fileID: 2800000, guid: fa5a2e19f35e6f04f80c008b128ecc18, type: 3}
+    - {fileID: 2800000, guid: 4bb5972d09ad5464fbfed943d4e10ef7, type: 3}
+    - {fileID: 2800000, guid: b6c651bf67b5e444b91fbb576e5c17ed, type: 3}
+    - {fileID: 2800000, guid: 079ec2339b981c64eb75925973ff9d5f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 0ed109f3b43b94a9cbaf7f5c59734cdf, type: 3}
-  - {fileID: 21300000, guid: e71f5e24df80e445f998f4fab8b68d4f, type: 3}
-  - {fileID: 21300000, guid: 6ba84db4ef48b4a9683bfc194492f074, type: 3}
-  - {fileID: 21300000, guid: 9c7a5266a0a3f624c8a7546b22373340, type: 3}
-  - {fileID: 21300000, guid: f4b127a626f214ef49793fc65064ad1c, type: 3}
-  - {fileID: 21300000, guid: d490d1d65e4762e48b1f0dd46e4cdf30, type: 3}
-  - {fileID: 21300000, guid: 29595f38fd8df4a80ad6c3fdab539326, type: 3}
-  - {fileID: 21300000, guid: 008cca9874fda435dab8ac8076a846be, type: 3}
-  - {fileID: 21300000, guid: e6526a4ba85df457dbb2c7872efa2ac8, type: 3}
-  - {fileID: 21300000, guid: 2e423ccbb897215499fdd5a92173aeca, type: 3}
+  - {fileID: 21300000, guid: 609922225990ff44d9a7a29a00e1b41d, type: 3}
+  - {fileID: 21300000, guid: 079ec2339b981c64eb75925973ff9d5f, type: 3}
+  - {fileID: 21300000, guid: a0e0c9539c1393249b761c7d4fb8b3a7, type: 3}
+  - {fileID: 21300000, guid: b2ed84735a062224495d4e34714a7145, type: 3}
+  - {fileID: 21300000, guid: 0e85caf397a774c4797c0eee9f1c5ccb, type: 3}
+  - {fileID: 21300000, guid: af74289418ca2c344a215f909b382d3d, type: 3}
+  - {fileID: 21300000, guid: 2e5c77a7a1dc06442a352fd4e5bf0de5, type: 3}
+  - {fileID: 21300000, guid: eac929587ffe13c42b3158ef49b13b43, type: 3}
+  - {fileID: 21300000, guid: fa5a2e19f35e6f04f80c008b128ecc18, type: 3}
+  - {fileID: 21300000, guid: 3c02463ad0e9e904f86c0e6c510bb919, type: 3}
+  - {fileID: 21300000, guid: 2759a58c4f77ab84ebcbef280513110a, type: 3}
+  - {fileID: 21300000, guid: 4bb5972d09ad5464fbfed943d4e10ef7, type: 3}
+  - {fileID: 21300000, guid: aaf9f77d167dd1a4da1172871ac555b0, type: 3}
   - {fileID: 21300000, guid: 1eba4ecdc95f14c4f806eaea441e275e, type: 3}
-  - {fileID: 21300000, guid: a15795fe82b6d435c94f968afb2a358c, type: 3}
+  - {fileID: 21300000, guid: bc38be2e70dd0b046b65de84f1140b1c, type: 3}
+  - {fileID: 21300000, guid: b6c651bf67b5e444b91fbb576e5c17ed, type: 3}
   m_PackedSpriteNamesToIndex:
-  - soccer net upper right
-  - soccer net lower left
-  - soccer net lower bottom
-  - volleyball indicator
-  - soccer net upper bottom
-  - volleyball
-  - soccer net upper left
-  - soccer net lower back
-  - soccer net lower right
-  - volleyball ring
+  - lower net back 1
+  - seat
+  - lower net bottom
+  - scructure 2
+  - upper net side a
+  - bush fence in front
+  - structure 1
+  - lower net back
+  - bush fence behind
+  - lower neck side b
+  - lower net bottom 1
+  - street lamp
+  - lower neck side b 1
   - soccerball
-  - soccer net upper back
+  - upper net back
+  - shorter fence
   m_RenderDataMap: {}
   m_Tag: Soccer
   m_IsVariant: 0

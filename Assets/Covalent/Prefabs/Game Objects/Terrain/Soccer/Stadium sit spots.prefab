@@ -47,17 +47,17 @@ PrefabInstance:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraZoom
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraOffset.x
-      value: -76.1
+      value: -75.4
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraOffset.y
-      value: -16.1
+      value: -16.7
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
@@ -162,17 +162,17 @@ PrefabInstance:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraZoom
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraOffset.x
-      value: -76.1
+      value: -75.4
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: cameraOffset.y
-      value: -16.1
+      value: -16.7
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
