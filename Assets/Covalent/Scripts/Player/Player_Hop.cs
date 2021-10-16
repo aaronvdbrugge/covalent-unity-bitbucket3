@@ -223,14 +223,7 @@ public class Player_Hop : MonoBehaviourPun
 	private void FixedUpdate()
 	{
 
-		// Note that EnableColliders and movementEnabled are now "consumed"
-		// to avoid game breaking bugs (I encountered one that was hard to produce)
-		// This means they must be called constantly.
-		if( hopProgress > 0 )
-		{
-			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
-			playerMovement.movementEnabled = false;    // Disable movement altogether.
-		}
+
 
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
@@ -248,6 +241,16 @@ public class Player_Hop : MonoBehaviourPun
 				}
 			}
 		}
+
+		// Note that EnableColliders and movementEnabled are now "consumed"
+		// to avoid game breaking bugs (I encountered one that was hard to produce)
+		// This means they must be called constantly.
+		if( hopProgress > 0 && (!string.IsNullOrEmpty(sitting_on) || _enableMovementWhenDone)  )
+		{
+			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
+			playerMovement.movementEnabled = false;    // Disable movement altogether.
+		}
+
 
 
 		if( hopProgress > 0 )
