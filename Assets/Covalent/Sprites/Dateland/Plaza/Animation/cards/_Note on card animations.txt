@@ -1,0 +1,5 @@
+There was a lot of rendundancy in these animations when I got them, so I boiled them down to save space.
+
+Any "card back" frames are the same for all of them, and I just get them from _balloon.
+
+Any frames that only have translation in them, I just remove... instead I do the translation in Unity's animation tool. The new animations are store in the "optimized" folder.
