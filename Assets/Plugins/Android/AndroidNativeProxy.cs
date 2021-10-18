@@ -3,11 +3,17 @@ using UnityEngine;
 namespace Plugins.Android
 {
 #if PLATFORM_ANDROID
+    /**
+     * The dispatcher/proxy class to trigger callback/listeners when running on the Android Platform.
+     * Android exposes a static instance of Java class UnityDispatcher which can be utilized through AndroidJavaObject.
+     * Through this instance we can call the functions defined in <see cref="INativeProxy"/> and it will trigger events
+     * that will be handled on the native side.
+     */
     public class AndroidNativeProxy : INativeProxy
     {
         //Android Java Class that contains the static object which will be used to trigger callbacks on native side
         private static AndroidJavaClass javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher");
-        
+        //The static instance of the UnityDispatcher class.
         private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
         
         public void _updatePlayersInRoom(string[] unityJsonList, int count)

@@ -3,12 +3,13 @@ using System.Runtime.InteropServices;
 namespace Plugins.iOS
 {
 #if UNITY_IOS
-    public class iOSNativeProxy : INativeProxy
+    public class IOSNativeProxy : INativeProxy
     {
-        
+        /**
+         * Imports the iOS native functions that will trigger events when running on iOS
+         */
         private static class iOSInternal
         {
-            // External calls (out to native app)
 
             [DllImport("__Internal")]
             public static extern void _updatePlayersInRoom(string[] unityJSONList, int count);
@@ -22,7 +23,6 @@ namespace Plugins.iOS
             [DllImport("__Internal")]
             public static extern void _failureToJoinRoom(string error);
             
-            // External functions (to native app)
             [DllImport("__Internal")]
             public static extern void _failureToConnectAgora(string error);
             

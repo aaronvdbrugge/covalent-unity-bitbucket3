@@ -5,7 +5,7 @@ using agora_gaming_rtc;
 using UnityEngine.UI;
 using Photon.Pun;
 using System.Runtime.InteropServices;
-using Covalent.Scripts.Util.Editor;
+using Covalent.Scripts.Util;
 
 #if (UNITY_2018_3_OR_NEWER)
 using UnityEngine.Android;

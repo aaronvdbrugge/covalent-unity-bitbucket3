@@ -1,5 +1,9 @@
 namespace Plugins
 {
+    /**
+     * Defines the native functions accessible to Unity to communicate with the native code.
+     * Implemented by both Android and iOS messaging proxies.
+     */
     public interface INativeProxy
     {
         public void _updatePlayersInRoom(string[] unityJsonList, int count);
