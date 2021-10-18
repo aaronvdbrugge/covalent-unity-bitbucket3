@@ -13,7 +13,7 @@ using UnityEngine;
 /// future, if we run into a similar situation. See "_Note on card animations.txt" for more
 /// info on why this class was necessary.
 /// </summary>
-public class CardImageSwapper : MonoBehaviour
+public class AnimFrameSwapper : MonoBehaviour
 {
     [Tooltip("If sprite name matches this, we won't waste time doing any processing...")]
     public string idleFrameName;
