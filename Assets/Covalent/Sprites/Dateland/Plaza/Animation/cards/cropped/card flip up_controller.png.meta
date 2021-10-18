@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: c66fbbc0dc2239c4b85e4b875b87a9bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8974604607974689073
+    second: card flip up_controller_0
+  - first:
+      213: -2885786688184519964
+    second: card flip up_controller_1
+  - first:
+      213: -6999368446791779224
+    second: card flip up_controller_2
+  - first:
+      213: 4330571208656230508
+    second: card flip up_controller_3
+  - first:
+      213: 6979299336563515548
+    second: card flip up_controller_4
+  - first:
+      213: -416200760226421705
+    second: card flip up_controller_5
+  - first:
+      213: -1174850679063585093
+    second: card flip up_controller_6
+  - first:
+      213: -2090706333091362161
+    second: card flip up_controller_7
+  - first:
+      213: -7962619908311773520
+    second: card flip up_controller_8
+  - first:
+      213: -1441836914875126858
+    second: card flip up_controller_9
+  - first:
+      213: -7146494261960592433
+    second: card flip up_controller_10
+  - first:
+      213: -7799707150438749323
+    second: card flip up_controller_11
+  - first:
+      213: 1309511003608024777
+    second: card flip up_controller_12
+  - first:
+      213: 3843244320142590133
+    second: card flip up_controller_13
+  - first:
+      213: 1606350715076014803
+    second: card flip up_controller_14
+  - first:
+      213: 2829096297150288096
+    second: card flip up_controller_15
+  - first:
+      213: 4489782562397316999
+    second: card flip up_controller_16
+  - first:
+      213: 4584923397565537774
+    second: card flip up_controller_17
+  - first:
+      213: -7852211208042125278
+    second: card flip up_controller_18
+  - first:
+      213: 1531772201742064792
+    second: card flip up_controller_19
+  - first:
+      213: -7004953384461176133
+    second: card flip up_controller_20
+  - first:
+      213: 8360581071818558834
+    second: card flip up_controller_21
+  - first:
+      213: -6852042433819297121
+    second: card flip up_controller_22
+  - first:
+      213: -2453289917976229869
+    second: card flip up_controller_23
+  - first:
+      213: 8900071177102766083
+    second: card flip up_controller_24
+  - first:
+      213: 1425657177283995359
+    second: card flip up_controller_25
+  - first:
+      213: 3092707799557886661
+    second: card flip up_controller_26
+  - first:
+      213: -2322846265552499052
+    second: card flip up_controller_27
+  - first:
+      213: 4433681508251116161
+    second: card flip up_controller_28
+  - first:
+      213: -3183956283773846034
+    second: card flip up_controller_29
+  - first:
+      213: -115458040970281663
+    second: card flip up_controller_30
+  - first:
+      213: 580447229009370393
+    second: card flip up_controller_31
+  - first:
+      213: 4345387606753283198
+    second: card flip up_controller_32
+  - first:
+      213: 3073676995465490403
+    second: card flip up_controller_33
+  - first:
+      213: 7987756121329607983
+    second: card flip up_controller_34
+  - first:
+      213: -4599396524704619722
+    second: card flip up_controller_35
+  - first:
+      213: 7672477680686873626
+    second: card flip up_controller_36
+  - first:
+      213: -5374831885930903122
+    second: card flip up_controller_37
+  - first:
+      213: -5433530054594311548
+    second: card flip up_controller_38
+  - first:
+      213: -4593342834142192945
+    second: card flip up_controller_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: card flip up_controller_36
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 225
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c3470dccd1a7a60800000000000000
+      internalID: 7672477680686873626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card flip up_controller_37
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 0
+        width: 225
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea945a770e2c865b0800000000000000
+      internalID: -5374831885930903122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
