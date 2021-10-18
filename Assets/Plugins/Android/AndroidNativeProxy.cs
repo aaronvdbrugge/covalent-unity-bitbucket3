@@ -2,36 +2,37 @@ using UnityEngine;
 
 namespace Plugins.Android
 {
-    public static class NativeAndroidProxy
+#if PLATFORM_ANDROID
+    public class AndroidNativeProxy : INativeProxy
     {
-        //Primary static clas, which contains all the different static proxy objects
+        //Android Java Class that contains the static object which will be used to trigger callbacks on native side
         private static AndroidJavaClass javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher");
         
         private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
         
-        public static void _updatePlayersInRoom(string[] unityJsonList, int count)
+        public void _updatePlayersInRoom(string[] unityJsonList, int count)
         {
             messageProxy.Call("updatePlayersInRoom", unityJsonList, count);
         }
         
-        public static void _playerDidMute(int player_id)
+        public void _playerDidMute(uint player_id)
         {
             messageProxy.Call("playerDidMute", player_id);   
         }
         
-        public static void _playerDidUnmute(int player_id) {
+        public void _playerDidUnmute(uint player_id) {
             messageProxy.Call("playerDidUnmute", player_id); 
         }
         
-        public static void _playerStartedTalking(int player_id) {
+        public void _playerStartedTalking(uint player_id) {
             messageProxy.Call("playerStartedTalking", player_id);
         }
         
-        public static void _playerEndedTalking(int player_id) {
+        public void _playerEndedTalking(uint player_id) {
             messageProxy.Call("playerEndedTalking", player_id);
         }
         
-        public static void _playerDidLeaveGame() {
+        public void _playerDidLeaveGame() {
             // NOTE! You should get this call if you disable the device's internet
             // while you are playing, forcing a disconnect.
             // However, if you tap the "Leave" button, I think that is currently a button overlaid
@@ -41,28 +42,29 @@ namespace Plugins.Android
             
         }
         
-        public static void _failureToConnect(string error) {
+        public void _failureToConnect(string error) {
             messageProxy.Call("failureToConnect", error);
         }
         
-        public static void _failureToJoinRoom(string error) {
+        public void _failureToJoinRoom(string error) {
             messageProxy.Call("failureToJoinRoom", error);
         }
         
-        public static void _failureToConnectAgora(string error)
+        public void _failureToConnectAgora(string error)
         {
             messageProxy.Call("failureToConnectAgora", error);
         }
         
-        public static void _missingMicPermission()
+        public void _missingMicPermission()
         {
             messageProxy.Call("missingMicPermission");
         }
 
-        public static void showHostMainWindow(string color)
+        public void showHostMainWindow(string color)
         {
             //TODO Create dispatcher for transition event.
         }
 
     }
+#endif
 }

@@ -5,6 +5,7 @@ using agora_gaming_rtc;
 using UnityEngine.UI;
 using Photon.Pun;
 using System.Runtime.InteropServices;
+using Covalent.Scripts.Util.Editor;
 
 #if (UNITY_2018_3_OR_NEWER)
 using UnityEngine.Android;
@@ -12,29 +13,14 @@ using UnityEngine.Android;
 
 public class Agora_Manager : MonoBehaviour
 {
-
-
-
-    // External functions (to native app)
-    [DllImport("__Internal")]
-    private static extern void _failureToConnectAgora(string error);
-    [DllImport("__Internal")]
-    private static extern void _playerDidMute(uint player_id);
-    [DllImport("__Internal")]
-    private static extern void _playerDidUnmute(uint player_id);
-    [DllImport("__Internal")]
-    private static extern void _playerStartedTalking(uint player_id);
-    [DllImport("__Internal")]
-    private static extern void _playerEndedTalking(uint player_id);
-
-
+    
     //Wrappers (don't call externs in editor)
     private static void failureToConnectAgora(string error)
     {
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnectAgora(" + error + ")");
         else
-            _failureToConnectAgora(error);
+            NativeProxy._failureToConnectAgora(error);
     }
 
     private static void playerDidMute(uint player_id)
@@ -42,7 +28,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor)
             Debug.Log("EXTERN: playerDidMute(" + player_id + ")");
         else
-            _playerDidMute( player_id );
+            NativeProxy._playerDidMute( player_id );
     }
 
     private static void playerDidUnmute(uint player_id)
@@ -50,7 +36,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidUnmute(" + player_id + ")");
         else
-            _playerDidUnmute( player_id );
+            NativeProxy._playerDidUnmute( player_id );
     }
 
 
@@ -59,7 +45,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerStartedTalking(" + player_id + ")");
         else
-            _playerStartedTalking(player_id);
+            NativeProxy._playerStartedTalking(player_id);
     }
 
     private static void playerEndedTalking(uint player_id)
@@ -67,7 +53,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerEndedTalking(" + player_id + ")");
         else
-            _playerEndedTalking(player_id);
+            NativeProxy._playerEndedTalking(player_id);
     }
 
 
