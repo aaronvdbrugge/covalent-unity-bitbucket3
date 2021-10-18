@@ -77,6 +77,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 82ffe7e2c72e9da4390e107c0d9fc1f7, type: 3}
     - {fileID: 2800000, guid: df63beaab8d5cea4c9b3a94be37dff00, type: 3}
     - {fileID: 2800000, guid: b16171013a045574e9e07ae20f20300f, type: 3}
+    - {fileID: 2800000, guid: 86e20673d10536848a452787934c3662, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -87,6 +88,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b16171013a045574e9e07ae20f20300f, type: 3}
   - {fileID: 21300000, guid: 062ab642cf76849b6acd8fa4f4b5699b, type: 3}
   - {fileID: 21300000, guid: 82ffe7e2c72e9da4390e107c0d9fc1f7, type: 3}
+  - {fileID: 21300000, guid: 86e20673d10536848a452787934c3662, type: 3}
   - {fileID: 21300000, guid: f4215193bd98fe240a40db0fe0ca9c04, type: 3}
   - {fileID: 21300000, guid: 23e36ff4ea0cefd408e6985a1410ddbe, type: 3}
   - {fileID: 21300000, guid: 52af8605538264f3da8d7a4dac22a614, type: 3}
@@ -99,7 +101,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ec42d6cafe6bf43118a9deb3c31f1273, type: 3}
   - {fileID: 21300000, guid: f2ce5b4b19ce54ab684abd7c2f5d70d9, type: 3}
   - {fileID: 21300000, guid: 5aee745b9bad849f4b25a046c6a4d1de, type: 3}
-  - {fileID: 21300000, guid: c46a229c49e0743d196f055c80068983, type: 3}
   - {fileID: 21300000, guid: 955cbbfcafd9a4329b1f7e1e3d7b95b2, type: 3}
   - {fileID: 21300000, guid: 5685c18d2f8094353a10174bcc3fbe2d, type: 3}
   - {fileID: 21300000, guid: 0e6bd55e398004b8eab66ca38708df41, type: 3}
@@ -110,6 +111,7 @@ SpriteAtlas:
   - hedge_leftTop cutoff
   - fence_mainBack
   - hedge_r_2
+  - platform_edge
   - hedge_l_3
   - hedge_l_1
   - fence_ironLeftCenter
@@ -122,7 +124,6 @@ SpriteAtlas:
   - fence_BG_right@3x
   - fence_rightFar@3x
   - fence_leftMiddle@3x
-  - fence_mainTop
   - fence_leftFar@3x
   - fence_rightMiddle@3x
   - fence_ironRightCenter
