@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Covalent.Scripts.Util.Editor;
 using Photon.Pun;
 using Photon.Realtime;
 using Plugins.Android;
@@ -45,27 +46,13 @@ public class Dateland_Network : Network_Manager
 
     #endregion
 
-    // External calls (out to native app)
-    [DllImport("__Internal")]
-    private static extern void _updatePlayersInRoom(string[] unityJSONList, int count);
-    [DllImport("__Internal")]
-    private static extern void _playerDidLeaveGame();
-    [DllImport("__Internal")]
-    private static extern void _failureToConnect(string error);
-    [DllImport("__Internal")]
-    private static extern void _failureToJoinRoom(string error);
-    
-    
     // Wrappers (don't call extern in editor)
     private static void updatePlayersInRoom(string[] unityJSONList, int count)
     { 
         if( Application.isEditor ) 
             Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")");
-#if PLATFORM_ANDROID
-        NativeAndroidProxy._playerDidMute(23);
-#elif UNITY_IOS
-        _updatePlayersInRoom( unityJSONList, count );
-#endif
+        else
+            NativeProxy._updatePlayersInRoom(unityJSONList, count);
     }
 
     private static void failureToConnect(string error)
@@ -73,7 +60,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnect(" +  error + ")"); 
         else
-            _failureToConnect( error );
+            NativeProxy._failureToConnect( error );
     }
 
     private static void failureToJoinRoom(string error)
@@ -81,7 +68,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");
         else
-            _failureToJoinRoom( error );
+            NativeProxy._failureToJoinRoom( error );
     }
 
     private static void playerDidLeaveGame()
@@ -89,7 +76,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
         else
-            _playerDidLeaveGame();
+            NativeProxy._playerDidLeaveGame();
     }
 
 

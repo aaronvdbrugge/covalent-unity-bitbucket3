@@ -30,9 +30,6 @@ public class Launcher : MonoBehaviourPunCallbacks
     private string player_JSON;
     #endregion
 
-    [DllImport("__Internal")]
-    private static extern bool _updatePlayersInRoom(string[] unityJSONList, int count);
-
 
     #region MonoBehaviour CallBacks
 
