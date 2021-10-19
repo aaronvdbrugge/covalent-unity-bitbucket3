@@ -108,7 +108,7 @@ public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
 
 
 
-        if( photonView.IsMine && questionCooldown <= 0 && footpad1Pressed && footpad2Pressed )   // Conditions are met to launch a new question!  Only photon owner can determine this value, the rest must replicate it.
+        if( Dateland_Network.initialized && photonView.IsMine && questionCooldown <= 0 && footpad1Pressed && footpad2Pressed )   // Conditions are met to launch a new question!  Only photon owner can determine this value, the rest must replicate it.
             activeIcebreakerQuestion = Random.Range( 0, icebreakerQuestions.Length );   // pick a random question out of our array
         
 
