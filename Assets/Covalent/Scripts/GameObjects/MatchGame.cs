@@ -175,7 +175,7 @@ public class MatchGame : MonoBehaviourPun
 
 	private void FixedUpdate()
 	{
-		if( PhotonNetwork.InRoom )   // must wait until we're in a room to initialize cards.
+		if( Player_Controller_Mobile.LocalPlayerInstance != null )   // best way to make sure we're initialized?
 		{
 			// NOTE: we can safeguard against any possible disconnect failures, by manually checking the
 			// list of card values and making sure it's valid. If not, we definitely need to (re)initialize
@@ -357,7 +357,7 @@ public class MatchGame : MonoBehaviourPun
 	/// </summary>
 	void InitializeCards()
 	{
-		if( photonView.IsMine )
+		if( Player_Controller_Mobile.LocalPlayerInstance != null  && photonView.IsMine )
 		{
 			// Randomize card values.
 			// We'll assume an even number of cards, and only one pair of each.
@@ -514,7 +514,7 @@ public class MatchGame : MonoBehaviourPun
     public void RequestState(int requesting_player_actor_num)
     {
         // We should be the owner of this game, so if we could send an update to just the requesting player, that'd be ideal
-        if( photonView.IsMine )  //just in case, though this should always be true
+        if( Player_Controller_Mobile.LocalPlayerInstance != null  && photonView.IsMine )  //just in case, though this should always be true
         {
             Photon.Realtime.Player player = PhotonUtil.GetPlayerByActorNumber( requesting_player_actor_num );               // Get the player we want to send it to...
             if( player != null )
