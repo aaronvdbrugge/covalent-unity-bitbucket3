@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: card idle
+  m_Name: card flip idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,8 +20,8 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: -1.3, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: -0.1, z: 0}
+        inSlope: {x: Infinity, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
@@ -36,7 +36,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2380291551416490092, guid: 5bcd8ffb39e2fbd4bba682dccddeec3e,
+      value: {fileID: 7667012389115797149, guid: 5bcd8ffb39e2fbd4bba682dccddeec3e,
         type: 3}
     attribute: m_Sprite
     path: sprite
@@ -51,20 +51,20 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 891129758
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 891129758
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 891129758
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2380291551416490092, guid: 5bcd8ffb39e2fbd4bba682dccddeec3e, type: 3}
+    - {fileID: 7667012389115797149, guid: 5bcd8ffb39e2fbd4bba682dccddeec3e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -92,9 +92,9 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
+        inSlope: Infinity
         outSlope: 0
-        tangentMode: 136
+        tangentMode: 7
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
@@ -110,8 +110,8 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.3
-        inSlope: -2.5679996
+        value: -0.1
+        inSlope: -2.5919995
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -130,9 +130,9 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
+        inSlope: Infinity
         outSlope: 0
-        tangentMode: 136
+        tangentMode: 7
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
