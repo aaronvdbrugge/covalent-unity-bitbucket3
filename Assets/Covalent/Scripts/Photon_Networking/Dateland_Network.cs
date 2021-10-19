@@ -28,6 +28,14 @@ public class Dateland_Network : Network_Manager
 
 
 
+    /// <summary>
+    /// Check this value before you start doing things with photonView.IsMine...
+    /// It seems like photonView.IsMine can sometimes erroneously be true until we actually get
+    /// things set up.
+    /// </summary>
+    public static bool initialized = false;
+
+
     #endregion
 
     #region Private Fields
@@ -416,6 +424,7 @@ public class Dateland_Network : Network_Manager
                     me.Add("myJSON", player_JSON);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(me, null, null);
 
+                    initialized = true;
                 }
             }
         }
