@@ -409,10 +409,11 @@ public class MatchGame : MonoBehaviourPun
 	[PunRPC]
 	void CardStateRPC(int[] new_card_values, int[] new_card_states)
 	{
-		Debug.Log("Received card state" + (AreAllCardsFaceDown() ? " (all face down)" : "") );
 
 		_cardValues = new_card_values;
 		_cardStates = new_card_states;
+
+		Debug.Log("Received card state" + (AreAllCardsFaceDown() ? " (all face down)" : "") );
 
 
 		// First, compare old values with new ones, and decide if we need to play sounds / animations / etc...
