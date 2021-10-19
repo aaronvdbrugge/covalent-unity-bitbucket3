@@ -43,6 +43,9 @@ public class MatchGame : MonoBehaviourPun
 	[Tooltip("The instant the game ends, with this long before we reset all the cards, triggering a flashing animation.")]
 	public float gameResetCooldownTime = 1.0f;
 
+	[Tooltip("When gameResetCooldownTime ends, we'll reinitialize the board... but we can't show it yet! On all clients, wait this long after game end before we change the visuals of each card.")]
+	public float gameReinitializeCooldownTime = 8.0f;
+
 
 
 
@@ -56,7 +59,7 @@ public class MatchGame : MonoBehaviourPun
 	float _flipCooldown;   // set to cardCooldownTime when flipped
 	float _mismatchCooldown;   // set to mismatchCooldownTime on mismatch, then sends another RPC flipping them back to 0.
 	float _gameResetCooldown;   // set to gameResetCooldownTime on game end, then sends another RPC resetting everything (triggering flashing animation before everything flips back over)
-
+	float _gameReinitializeCooldown;    // if this is > 0, we'll count down in FixedUpdate and then apply all _cardValues to the card visuals when it hits 0. Used to delay the update on game win
 
 	public int numCardTypes => cardsWide * cardsHigh / 2;
 	public int numCards => cardsWide * cardsHigh;
@@ -64,6 +67,7 @@ public class MatchGame : MonoBehaviourPun
 
 	float _lastRequestedState;   // Time.time when we last requested the game's state from its owner (limit to once a second or so)
 
+	Camera_Sound _cameraSound;
 
 
 	// Use this in editor... make the cards ahead of time.
@@ -86,6 +90,8 @@ public class MatchGame : MonoBehaviourPun
 	/// </summary>
 	public void Start()
 	{
+		_cameraSound = Camera.main.GetComponent<Camera_Sound>();
+
 		_cards = new GameObject[cardsWide * cardsHigh];
 		_cardValues = new int[cardsWide * cardsHigh];
 		_cardStates = new int[cardsWide * cardsHigh];
@@ -133,6 +139,37 @@ public class MatchGame : MonoBehaviourPun
 			}
 
 		}
+
+
+		if( Application.isEditor && Input.GetKeyDown(KeyCode.F) )   // Editor cheat code: flip a random card (ignoring cooldowns) or, if a card is already flipped, flip its counterpart
+		{
+			int cur_flipped = -1;
+			for(int card_i=0; card_i<numCards; card_i++)
+				if( _cardStates[card_i] == 1 )
+					cur_flipped = card_i;
+
+			if( cur_flipped >= 0 )
+			{
+				int card_val = _cardValues[cur_flipped];
+				// Find the other one...
+				for(int card_i=0; card_i<numCards; card_i++)
+					if( card_i != cur_flipped && _cardValues[card_i] == card_val )
+					{
+						FlipCard(card_i);
+						break;
+					}
+			}
+			else  // just flip an arbitrary un-flipped one
+			{
+				for(int card_i=0; card_i<numCards; card_i++)
+					if( _cardStates[card_i] == 0 )
+					{
+						FlipCard(card_i);
+						break;
+					}
+			}
+		}
+
 	}
 
 
@@ -162,6 +199,22 @@ public class MatchGame : MonoBehaviourPun
 			// NOTE: once the game is won, we detect that everything is set to state 2, 
 			// and then set it all back to 0 so 
 
+
+
+			// Change AnimFrameSwapper.replaceWithThis for each card. This will make it show the
+			// corrrect type of card when flipped.
+			if( _gameReinitializeCooldown > 0 )
+			{
+				_gameReinitializeCooldown = Mathf.Max(0, _gameReinitializeCooldown - Time.fixedDeltaTime );
+
+				if( _gameReinitializeCooldown <= 0 )   // can update visuals now!
+					for( int i=0; i<cardsWide * cardsHigh; i++ )
+					{
+						AnimFrameSwapper afs = _cards[i].GetComponentInChildren<AnimFrameSwapper>();
+						if( afs )
+							afs.replaceWithThis = cardNames[ _cardValues[i] ];
+					}
+			}
 
 
 
@@ -206,54 +259,7 @@ public class MatchGame : MonoBehaviourPun
 
 					if( triggered_card >= 0 )   // a card was triggered!
 					{
-						_flipCooldown = flipCooldownTime;
-						
-						// Decide what happens.
-						// Note that, if two non-matching cards are changed to state 1, we'll be sending another RPC soon that
-						// switches them back to 0.
-						_cardStates[triggered_card] = 1;
-
-						// Search to see if we have another flipped card matching this triggered card's value
-						int match = -1;
-						for( int card_i=0; card_i<numCards; card_i++)
-							if( card_i != triggered_card && _cardValues[card_i] == _cardValues[triggered_card] && _cardStates[card_i] > 0 )
-							{
-								match = card_i;
-								break;
-							}
-
-						if( match >= 0 )   // found a matching card! Set them both to state 2 (permanently matched until round end)
-						{
-							_cardStates[match] = 2;
-							_cardStates[triggered_card] = 2;
-
-							// Did they win the entire game? If so set cooldowns...
-							bool won_game = true;
-							for( int card_i=0; card_i<numCards; card_i++)
-								if( _cardStates[card_i] != 2 )
-									won_game = false;
-
-							if( won_game )
-							{
-								_gameResetCooldown = gameResetCooldownTime;   // wait for the flip animation to finish, then reset everything to 0, triggering a flashy animation indicating success, and then a reset
-								_flipCooldown = gameEndFlipCooldownTime;       // wait significantly longer before allowing any more flips
-							}
-
-
-						}
-						else
-						{
-							// See if there is another MISMATCHED card on the field.
-							// This would mean we'll need to wait and then send another RPC when our mismatched cooldown is done.
-							for( int card_i=0; card_i<numCards; card_i++)
-								if( card_i != triggered_card && _cardStates[card_i] == 1 )   // we already know there isn't a match, so this is definitely a mismatch
-									_mismatchCooldown = mismatchCooldownTime;
-
-							// We'll need to detect this again in the RPC so we can play a sound or something.
-						}
-
-						// Tell everyone what happened. This will also trigger animations
-						photonView.RPC("CardStateRPC", RpcTarget.All, new object[] { _cardValues, _cardStates });   
+						FlipCard(triggered_card);
 					}
 				}
 				else  // waiting for cooldowns
@@ -290,6 +296,58 @@ public class MatchGame : MonoBehaviourPun
 		}
 	}
 
+
+	void FlipCard(int triggered_card)
+	{
+		_flipCooldown = flipCooldownTime;
+						
+		// Decide what happens.
+		// Note that, if two non-matching cards are changed to state 1, we'll be sending another RPC soon that
+		// switches them back to 0.
+		_cardStates[triggered_card] = 1;
+
+		// Search to see if we have another flipped card matching this triggered card's value
+		int match = -1;
+		for( int card_i=0; card_i<numCards; card_i++)
+			if( card_i != triggered_card && _cardValues[card_i] == _cardValues[triggered_card] && _cardStates[card_i] > 0 )
+			{
+				match = card_i;
+				break;
+			}
+
+		if( match >= 0 )   // found a matching card! Set them both to state 2 (permanently matched until round end)
+		{
+			_cardStates[match] = 2;
+			_cardStates[triggered_card] = 2;
+
+			// Did they win the entire game? If so set cooldowns...
+			bool won_game = true;
+			for( int card_i=0; card_i<numCards; card_i++)
+				if( _cardStates[card_i] != 2 )
+					won_game = false;
+
+			if( won_game )
+			{
+				_gameResetCooldown = gameResetCooldownTime;   // wait for the flip animation to finish, then reset everything to 0, triggering a flashy animation indicating success, and then a reset
+				_flipCooldown = gameEndFlipCooldownTime;       // wait significantly longer before allowing any more flips
+			}
+
+
+		}
+		else
+		{
+			// See if there is another MISMATCHED card on the field.
+			// This would mean we'll need to wait and then send another RPC when our mismatched cooldown is done.
+			for( int card_i=0; card_i<numCards; card_i++)
+				if( card_i != triggered_card && _cardStates[card_i] == 1 )   // we already know there isn't a match, so this is definitely a mismatch
+					_mismatchCooldown = mismatchCooldownTime;
+
+			// We'll need to detect this again in the RPC so we can play a sound or something.
+		}
+
+		// Tell everyone what happened. This will also trigger animations
+		photonView.RPC("CardStateRPC", RpcTarget.All, new object[] { _cardValues, _cardStates });   
+	}
 
 
 
@@ -353,60 +411,96 @@ public class MatchGame : MonoBehaviourPun
 		_cardValues = new_card_values;
 		_cardStates = new_card_states;
 
-		// Change AnimFrameSwapper.replaceWithThis for each card. This will make it show the
-		// corrrect type of card when flipped.
-		for( int i=0; i<cardsWide * cardsHigh; i++ )
-		{
-			AnimFrameSwapper afs = _cards[i].GetComponentInChildren<AnimFrameSwapper>();
-			if( afs )
-				afs.replaceWithThis = cardNames[ _cardValues[i] ];
-		}
-
 
 		// First, compare old values with new ones, and decide if we need to play sounds / animations / etc...
-		bool new_match = false;
-		int state_1_count = 0;   // if we get at least 2, that's a mismatch
+		List<int> new_match_cards = new List<int>();   // cards which have been NEWLY matched; should be length of 0 or 2.
+		List<int> state_1_cards = new List<int>();   // all cards that have state 1 (should only be 0-2 of them)
 		bool new_won_game = true;   // set to false if anything in new state isn't 2, or everything in old state is 2 (they already won)
 		
 		for( int card_i=0; card_i<numCards; card_i++)
 		{
-			// Set animator values...
-			Animator animator = _cards[card_i].GetComponent<Animator>();
 
-			animator.SetBool("flipped", new_card_states[card_i] > 0);
-			animator.SetBool("matched", new_card_states[card_i] == 2);
 
 			// Detect sound cues etc...
 			if( new_card_states[card_i] == 2 && _oldCardStates[card_i] < 2 )   // just matched this one!
-				new_match = true;
+				new_match_cards.Add( card_i );
 			if( new_card_states[card_i] == 1 )   // card is flipped, but not matched
-				state_1_count++;
+				state_1_cards.Add(card_i);
 
 			if( new_card_states[card_i] != 2 )
 				new_won_game = false;   // they still haven't won the game
 		}
 
 		// Make sure, if they won the game, that it's actually a new thing
-		if( new_won_game )
+		bool old_state_won = true;
+		for( int card_i=0; card_i<numCards; card_i++)
+			if( _oldCardStates[card_i] != 2 )
+				old_state_won = false;
+
+		bool new_reset = old_state_won && !new_won_game;  // was the board newly reset?
+
+		if( old_state_won )
+			new_won_game = false;   // the win is not a new thing
+		
+
+		if( new_reset )
 		{
-			bool old_state_won = true;
-			for( int card_i=0; card_i<numCards; card_i++)
-				if( _oldCardStates[card_i] != 2 )
-					old_state_won = false;
-			if( old_state_won )
-				new_won_game = false;   // the win is not a new thing
+			// Special case: to make the reset look a little flashy, we'll delay the card flips
+			for( int x = 0; x < cardsWide; x++ )
+				for( int y = 0; y < cardsHigh; y++)
+					StartCoroutine( SetCardAnimatorStatesDelayed(x*0.2f + y*0.4f, x + y*cardsWide) );  // should result in a ripple across the cards
+		}
+		else
+		{
+			// Set the card animator values normally.
+			for( int card_i=0; card_i < numCards; card_i++ )
+			{
+				Animator animator = _cards[card_i].GetComponent<Animator>();
+
+				animator.SetBool("flipped", new_card_states[card_i] > 0);
+				animator.SetBool("matched", new_card_states[card_i] == 2);
+			}
 		}
 
-		new_card_states.CopyTo(_oldCardStates,0);   // don't need to access old state anymore. set new state (make sure they don't point to the same thing though)
-
-		if( new_match && !_firstStateUpdate)
-			Debug.Log("Play new match sound!");
-
-		if( state_1_count >= 2 && !_firstStateUpdate)
-			Debug.Log("Play mismatch sound...");
-		
+		// Sound cues
 		if( new_won_game && !_firstStateUpdate)
-			Debug.Log("Play won game sound!!!");
+		{
+			// Play the "won game" sound at all four corners of the board, so anyone who can see any of those four corners can hear it.
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 2.0f, "card_game_win", _cards[ 0 + 0 * cardsWide ].transform.position) );
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 2.0f, "card_game_win", _cards[ (cardsWide-1) + 0 * cardsWide ].transform.position) );
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 2.0f, "card_game_win", _cards[ 0 + (cardsHigh-1) * cardsWide ].transform.position) );
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 2.0f, "card_game_win", _cards[ (cardsWide-1) + (cardsHigh-1) * cardsWide ].transform.position) );
+		}
+
+
+		if( !new_won_game && state_1_cards.Count >= 2 && !_firstStateUpdate)
+		{
+			// Play sound at both positions. Since it's just one AudioSource, this will result in the sound playing if either card is onscreen.
+			// Need delay so it happens when the card hits the ground.
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 1.0f, "card_mismatch", _cards[ state_1_cards[0] ].transform.position) );
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay( 1.0f, "card_mismatch", _cards[ state_1_cards[1] ].transform.position) );
+		}
+
+		if( new_match_cards.Count >= 2 && !_firstStateUpdate)
+		{
+			
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay(1.0f, "card_match", _cards[ new_match_cards[0] ].transform.position) );
+			StartCoroutine( _cameraSound.PlaySoundAtPositionAfterDelay(1.0f,  "card_match", _cards[ new_match_cards[1] ].transform.position) );
+		}
+
+
+
+
+
+
+		new_card_states.CopyTo(_oldCardStates,0);   // don't need to access old state anymore. set new state (make sure they don't point to the same thing though)
+		
+
+		if( !new_won_game )
+			_gameReinitializeCooldown = Mathf.Max( _gameReinitializeCooldown, Time.fixedDeltaTime );   // this will indicate FixedUpdate to set up all the new card visuals.
+		else
+			_gameReinitializeCooldown = gameReinitializeCooldownTime;    // Must wait a while before we can update the card visuals.
+
 
 		
 		_firstStateUpdate = false;
@@ -423,5 +517,20 @@ public class MatchGame : MonoBehaviourPun
                 photonView.RPC("CardStateRPC", player, new object[] { _cardValues, _cardStates });    // Give them the info they requested
         }
     }
+
+
+
+
+	/// <summary>
+	/// Used to easily delay update of card animator states, for a flashier animation
+	/// </summary>
+	IEnumerator SetCardAnimatorStatesDelayed(float delay, int card_index)
+	{
+		yield return new WaitForSeconds(delay);
+		Animator animator = _cards[card_index].GetComponent<Animator>();
+
+		animator.SetBool("flipped", _cardStates[card_index] > 0);
+		animator.SetBool("matched", _cardStates[card_index] == 2);
+	}
 
 }

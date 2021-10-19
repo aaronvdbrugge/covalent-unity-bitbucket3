@@ -112,7 +112,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 6d7a235f6836229468bef5cf73b3426d, type: 3}
+      value: {fileID: 21300000, guid: 19c98bb8a797d824eb021c2377323499, type: 3}
     attribute: m_Sprite
     path: card rim
     classID: 212
@@ -182,7 +182,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 6d7a235f6836229468bef5cf73b3426d, type: 3}
+    - {fileID: 21300000, guid: 19c98bb8a797d824eb021c2377323499, type: 3}
     - {fileID: 7667012389115797149, guid: 5bcd8ffb39e2fbd4bba682dccddeec3e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
