@@ -393,9 +393,10 @@ public class MatchGame : MonoBehaviourPun
 		else
 		{
 			// If the game isn't ours, but we still need initialization, we need to request that the game's owner send out another RPC.
-			if( _lastRequestedState - Time.time >= 1.0f )
+			if( Time.time - _lastRequestedState  >= 1.0f )
 			{
 				_lastRequestedState = Time.time;
+				Debug.Log("Requesting statte");
 				photonView.RPC("RequestState", RpcTarget.MasterClient, new object[] { PhotonNetwork.LocalPlayer.ActorNumber });   // asks the owner to send us back state in a call to CardStateRPC.
 			}
 		}
@@ -408,6 +409,8 @@ public class MatchGame : MonoBehaviourPun
 	[PunRPC]
 	void CardStateRPC(int[] new_card_values, int[] new_card_states)
 	{
+		Debug.Log("Received card state" + (AreAllCardsFaceDown() ? " (all face down)" : "") );
+
 		_cardValues = new_card_values;
 		_cardStates = new_card_states;
 
@@ -514,11 +517,20 @@ public class MatchGame : MonoBehaviourPun
         {
             Photon.Realtime.Player player = PhotonUtil.GetPlayerByActorNumber( requesting_player_actor_num );               // Get the player we want to send it to...
             if( player != null )
+			{
+				Debug.Log("Sending requested card state" + (AreAllCardsFaceDown() ? " (all face down)" : "") );
                 photonView.RPC("CardStateRPC", player, new object[] { _cardValues, _cardStates });    // Give them the info they requested
+			}
         }
     }
 
-
+	bool AreAllCardsFaceDown()   // debug helper
+	{
+		for( int i=0; i<numCards; i++ )
+			if( _cardStates[i] > 0 )
+				return false;
+		return true;
+	}
 
 
 	/// <summary>
