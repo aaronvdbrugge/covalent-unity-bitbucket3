@@ -25,7 +25,7 @@ public class SynchronizedAnimationTrigger : MonoBehaviourPun
 
     void FixedUpdate()
     {
-        if( photonView.IsMine )
+        if( PhotonNetwork.InRoom && photonView.IsMine )
         {
             _cooldown = Mathf.Max( 0.0f, _cooldown - Time.fixedDeltaTime );
             if( _cooldown <= 0)

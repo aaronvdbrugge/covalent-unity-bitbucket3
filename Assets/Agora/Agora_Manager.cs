@@ -12,7 +12,7 @@ using UnityEngine.Android;
 
 public class Agora_Manager : MonoBehaviour
 {
-
+    public bool joinChatInEditor = false;
 
 
     // External functions (to native app)
@@ -286,8 +286,8 @@ public class Agora_Manager : MonoBehaviour
 
     public void JoinChannel(string name)
     {
-        mRtcEngine.JoinChannel(name, "extra", 0);
-
+        if( joinChatInEditor || !Application.isEditor )
+            mRtcEngine.JoinChannel(name, "extra", 0);
     }
 
     public AgoraChannel Obj_JoinChannel(string name)
