@@ -172,7 +172,7 @@ public class VolleyBall : MonoBehaviourPun
         Player_Controller_Mobile pcm = other.GetComponent<Player_Controller_Mobile>();
 
         
-        if( pcm != null && photonView.IsMine )   // Only the owner can decide the random position at which the ball will go next.
+        if( pcm != null && photonView.IsMine && Dateland_Network.initialized )   // Only the owner can decide the random position at which the ball will go next.
         {
             //Prevent double-spike bug where you can hit it from the other side of the net.
             if( IsOnNorthSide( pcm.transform.position ) != IsOnNorthSide( transform.position ) )
@@ -228,7 +228,7 @@ public class VolleyBall : MonoBehaviourPun
     {
         if( !_netInitialized )
         {
-            if( PhotonNetwork.InRoom )  // otherwise, wait for room join
+            if( Dateland_Network.initialized )  // otherwise, wait for room join
             {
                 if( !photonView.IsMine && Time.time - _lastAskedForState >= 0.5f)   // Can only ask for state every half second. The only likely reason we'd need to ask more than once is if the master client disconnected.
                 {
@@ -245,7 +245,7 @@ public class VolleyBall : MonoBehaviourPun
 
             if( lerpProgress >= 1.0f && hitStreak > 0)  // Ball made it to the ground without getting hit...
             {
-                if( photonView.IsMine )  // we can reset the hit streak
+                if( photonView.IsMine && Dateland_Network.initialized )  // we can reset the hit streak
                 {
                     hitStreak = 0;  //set this immediately... avoid possibility of repeat calls
                     photonView.RPC("ResetHitStreak", RpcTarget.All );
@@ -408,7 +408,7 @@ public class VolleyBall : MonoBehaviourPun
 
         Instantiate(confettiPrefab, confetti_spawn, Quaternion.identity);
     }
-
+    
 
     /// <summary>
     /// Called when a new player joins, this will request an extra HitBall RPC to be sent out.
@@ -417,7 +417,7 @@ public class VolleyBall : MonoBehaviourPun
     public void RequestBallState(int requesting_player_actor_num)
     {
         // We should be the owner of this ball, so if we could send an update to just the requesting player, that'd be ideal
-        if( photonView.IsMine )  //just in case, though this should always be true
+        if( photonView.IsMine && Dateland_Network.initialized )  //just in case, though this should always be true
         {
             Photon.Realtime.Player player = PhotonUtil.GetPlayerByActorNumber( requesting_player_actor_num );               // Get the player we want to send it to...
             if( player != null )
