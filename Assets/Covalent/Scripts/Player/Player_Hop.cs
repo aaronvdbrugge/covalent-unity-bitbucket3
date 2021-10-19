@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Handles player "hopping" in place, also handles player hopping on and
@@ -30,6 +31,12 @@ public class Player_Hop : MonoBehaviourPun
 	[Header("Runtime")]
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
+	[Tooltip("Time.time when we last hopped in place.")]
+	public float lastHoppedInPlace;
+
+	[Tooltip("True for at least one frame if we hopped in place. I'm not 100% sure if this is guaranteed to not register for two frames in a row. It depends on execution order.")]
+	public bool hoppedInPlace = false;
+
 
 
 	/// <summary>
@@ -79,6 +86,9 @@ public class Player_Hop : MonoBehaviourPun
 	{
 		hopProgress = hopTime;  //starts the hop in Update
 		_useStartEnd = false;     //no start/end point, just hop in place
+
+		hoppedInPlace = true;
+		lastHoppedInPlace = Time.time;
 
 		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);  
 	}
@@ -300,6 +310,14 @@ public class Player_Hop : MonoBehaviourPun
 					Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("sit_down", transform.position);
 			}
 		}
+
+
+		// Update hoppedInPlace value.
+		// We have to be careful to not disable it before other components can consume it.
+		// We can hedge against script execution order problems by making sure to not disable it if it's the same frame that we turned it on.
+		if( hoppedInPlace && lastHoppedInPlace < Time.time )
+			hoppedInPlace = false;
+
 	}
 
     void OnDrawGizmos()
@@ -308,5 +326,4 @@ public class Player_Hop : MonoBehaviourPun
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + new Vector3( 0, collisionHeight, 0 ) );
     }
-
 }

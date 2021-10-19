@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!60 &236520324136100292
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046280969371289577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.029523373, y: -0.27934837}
+      - {x: -0.87509274, y: -0.7426605}
+      - {x: 0.110935986, y: -1.2961539}
+      - {x: 0.95190775, y: -0.8139379}
 --- !u!114 &655173600553054274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,10 +45,29 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: 0, y: 1.4, z: 0}
+  SorterPositionOffset: {x: 0, y: 0.36, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 8046280970923652876}
+--- !u!114 &1944830318839531064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399212804115061234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: 0, y: 0.79, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort: []
 --- !u!1001 &3809059659024794473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,6 +75,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6508965047658637737, guid: 7a1ae482803274e4892cceb69dad8c09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6590558996710360192, guid: 7a1ae482803274e4892cceb69dad8c09,
         type: 3}
       propertyPath: m_Name
@@ -95,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 6590558997186753634, guid: 7a1ae482803274e4892cceb69dad8c09,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1ae482803274e4892cceb69dad8c09, type: 3}
@@ -108,6 +161,12 @@ GameObject:
 --- !u!212 &8046280970923652876 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6590558997186753637, guid: 7a1ae482803274e4892cceb69dad8c09,
+    type: 3}
+  m_PrefabInstance: {fileID: 3809059659024794473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &399212804115061234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3555088853526207131, guid: 7a1ae482803274e4892cceb69dad8c09,
     type: 3}
   m_PrefabInstance: {fileID: 3809059659024794473}
   m_PrefabAsset: {fileID: 0}
