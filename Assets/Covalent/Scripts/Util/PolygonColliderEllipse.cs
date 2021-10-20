@@ -9,8 +9,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class PolygonColliderEllipse : MonoBehaviour
 {
-    public float xRadius;
-    public float yRadius;
+    public float xRadius=1;
+    public float yRadius=1;
     public int points = 16;
 
     
