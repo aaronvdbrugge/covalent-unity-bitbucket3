@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Covalent.GameObjects
 {
@@ -14,7 +12,7 @@ namespace Covalent.GameObjects
 		[SerializeField] private int maxTwinkleAmount;
 		[SerializeField] private Vector2 waitRange;
 		[SerializeField] private float rotationValue;
-		
+
 		private List<SpriteRenderer> starsActive = new List<SpriteRenderer>();
 		private float[] twinkleTimers;
 		private int previousStarId;
@@ -25,7 +23,7 @@ namespace Covalent.GameObjects
 		{
 			twinkleTimers = new float[maxTwinkleAmount];
 		}
-			
+
 		private void Update()
 		{
 			var t = Time.deltaTime;
@@ -82,10 +80,7 @@ namespace Covalent.GameObjects
 				.Join(starTarget.transform.DOLocalRotate(rotation, twinkleAnimationTime / 2)
 					.SetRelative()
 					.SetEase(Ease.Linear))
-				.AppendCallback(() =>
-				{
-					starsActive.Add(starTarget);
-				})
+				.AppendCallback(() => { starsActive.Add(starTarget); })
 				.SetId(this);
 		}
 	}
