@@ -15896,16 +15896,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stars:
-  - {fileID: 1351457970}
-  - {fileID: 441596820}
-  - {fileID: 1581162221}
-  - {fileID: 1478315786}
-  - {fileID: 1151314741}
-  - {fileID: 1374146471}
-  - {fileID: 2007282050}
-  - {fileID: 843048322}
-  twinkleWaitTime: 1
-  twinkleAnimationTime: 1
+  - {fileID: 1351457972}
+  - {fileID: 441596822}
+  - {fileID: 1581162223}
+  - {fileID: 1478315788}
+  - {fileID: 1151314743}
+  - {fileID: 1374146473}
+  - {fileID: 2007282052}
+  - {fileID: 843048324}
+  twinkleAnimationTime: 2
+  clearColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTwinkleAmount: 4
+  waitRange: {x: 1, y: 3}
   rotationValue: -180
 --- !u!1 &647886077
 GameObject:
@@ -30541,7 +30543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1190100946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39953,7 +39955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1531120778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54973,7 +54975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8978962276502290977
 MonoBehaviour:
   m_ObjectHideFlags: 0

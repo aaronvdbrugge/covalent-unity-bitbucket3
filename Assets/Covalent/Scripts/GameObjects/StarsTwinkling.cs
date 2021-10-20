@@ -1,65 +1,92 @@
+using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Covalent.GameObjects
 {
 	public class StarsTwinkling : MonoBehaviour
 	{
-		[SerializeField] private GameObject[] stars;
-		[SerializeField] private float twinkleWaitTime;
+		[SerializeField] private SpriteRenderer[] stars;
 		[SerializeField] private float twinkleAnimationTime;
-
-		[Tooltip("To rotate back to the original rotation, stick to multiple of 180.")] [SerializeField]
-		private float rotationValue;
-
+		[SerializeField] private Color clearColor;
+		[SerializeField] private int maxTwinkleAmount;
+		[SerializeField] private Vector2 waitRange;
+		[SerializeField] private float rotationValue;
+		
+		private List<SpriteRenderer> starsActive = new List<SpriteRenderer>();
+		private float[] twinkleTimers;
 		private int previousStarId;
 		private Tween twinklingTween;
 		private Sequence twinkle;
 
+		private void Awake()
+		{
+			twinkleTimers = new float[maxTwinkleAmount];
+		}
+			
+		private void Update()
+		{
+			var t = Time.deltaTime;
+			for (int i = 0; i < twinkleTimers.Length; i++)
+			{
+				twinkleTimers[i] -= t;
+				if (twinkleTimers[i] <= 0)
+				{
+					TwinkleStar();
+					twinkleTimers[i] = Random.Range(waitRange.x, waitRange.y);
+				}
+			}
+		}
+
 		private void OnEnable()
 		{
-			TwinkleAnimation();
+			starsActive.AddRange(stars);
+			for (int i = 0; i < twinkleTimers.Length; i++)
+			{
+				twinkleTimers[i] = Random.Range(waitRange.x, waitRange.y);
+			}
 		}
 
 		private void OnDisable()
 		{
-			twinklingTween.Kill();
+			starsActive.Clear();
+			DOTween.Kill(this, false);
 		}
 
-		private GameObject starTarget;
-
-		private void TwinkleAnimation()
+		private void TwinkleStar()
 		{
-			twinklingTween = DOTween.Sequence()
+			if (starsActive.Count == 0)
+				return;
+			int randomIndex = Random.Range(0, starsActive.Count);
+			SpriteRenderer starTarget = starsActive[randomIndex];
+			starsActive.Remove(starTarget);
+			Vector3 rotation = new Vector3(0, 0, rotationValue);
+			Vector3 originalScale = starTarget.transform.localScale;
+			Tween twinkle = DOTween.Sequence()
+				.Append(starTarget.transform.DOScale(originalScale, twinkleAnimationTime / 2)
+					.SetEase(Ease.OutCubic))
+				.Join(starTarget
+					.DOColor(clearColor, twinkleAnimationTime / 2)
+					.SetEase(Ease.Linear))
+				.Join(starTarget.transform
+					.DOLocalRotate(rotation, twinkleAnimationTime / 2, RotateMode.FastBeyond360)
+					.SetRelative()
+					.SetEase(Ease.Linear))
+				.Append(starTarget.transform.DOScale(originalScale, twinkleAnimationTime / 2)
+					.SetEase(Ease.InCubic))
+				.Join(starTarget
+					.DOColor(Color.white, twinkleAnimationTime / 2)
+					.SetEase(Ease.Linear))
+				.Join(starTarget.transform.DOLocalRotate(rotation, twinkleAnimationTime / 2)
+					.SetRelative()
+					.SetEase(Ease.Linear))
 				.AppendCallback(() =>
 				{
-					int i = previousStarId;
-					while (i == previousStarId)
-					{
-						i = Random.Range(0, stars.Length);
-					}
-
-					starTarget = stars[i];
-					previousStarId = i;
-					Vector3 originalScale = starTarget.transform.localScale;
-					Vector3 rotation = new Vector3(0, 0, rotationValue);
-					twinkle = DOTween.Sequence()
-						.Append(starTarget.transform.DOScale(originalScale * 2f, twinkleAnimationTime / 2)
-							.SetEase(Ease.OutCubic))
-						.Join(starTarget.transform
-							.DOLocalRotate(rotation, twinkleAnimationTime / 2, RotateMode.FastBeyond360)
-							.SetRelative()
-							.SetEase(Ease.Linear))
-						.Append(starTarget.transform.DOScale(originalScale, twinkleAnimationTime / 2)
-							.SetEase(Ease.InCubic))
-						.Join(starTarget.transform.DOLocalRotate(rotation, twinkleAnimationTime / 2)
-							.SetRelative()
-							.SetEase(Ease.Linear));
+					starsActive.Add(starTarget);
 				})
-				.Append(twinkle)
-				.AppendInterval(twinkleWaitTime);
-
-			twinklingTween.SetLoops(-1);
+				.SetId(this);
 		}
 	}
 }
