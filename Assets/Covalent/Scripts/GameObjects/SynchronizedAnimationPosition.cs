@@ -22,7 +22,6 @@ public class SynchronizedAnimationPosition : MonoBehaviourPun
 
     float _cooldown;   // between SetAnimationTime calls
     float _requestStateCooldown;      // between RequestAnimationTime calls
-    int _nextIndex = 0;
     bool _haveSyncedAtLeastOnce = false;
 
     [PunRPC]
@@ -66,7 +65,7 @@ public class SynchronizedAnimationPosition : MonoBehaviourPun
                     if( _requestStateCooldown <= 0 )
                     {
                         _requestStateCooldown = 1.0f;   // can request once per second
-                        photonView.RPC("RequestAnimationtime", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.ActorNumber);
+                        photonView.RPC("RequestAnimationTime", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.ActorNumber);
                     }
                     else
                         _requestStateCooldown = Mathf.Max(0, _requestStateCooldown - Time.fixedDeltaTime);
