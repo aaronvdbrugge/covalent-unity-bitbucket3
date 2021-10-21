@@ -100,6 +100,8 @@ public class Sunflower : MonoBehaviour
 		if( _overlappingPlayers.Count > 0 )
 			foreach( var plr in _overlappingPlayers )
 			{
+				plr.playerHop.stifleHop = true;   // This will prevent the player from actually hopping here. It does a different action instead. Note this value is "consumed" and must be set every frame
+
 				if( plr.playerHop.hoppedInPlace )
 				{
 					// Player did "action" on this sunflower.

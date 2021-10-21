@@ -791,6 +791,7 @@ MonoBehaviour:
   collisionHeight: 2.2
   hopProgress: 0
   hoppedInPlace: 0
+  stifleHop: 0
 --- !u!1 &2481279366892013452
 GameObject:
   m_ObjectHideFlags: 0
