@@ -29,6 +29,7 @@ public class Sunflower : MonoBehaviour
 	public EasingFunction.Ease stalkShrinkEase = EasingFunction.Ease.Linear;
 	public float flowerGrowTime = 10.0f;
 	public EasingFunction.Ease flowerGrowEase = EasingFunction.Ease.Linear;
+	public float flowerGrowStartScale = 0.2f;   // Shouldn't start at 0, would be smaller than the sprout.
 
 	[Header("Runtime")]
 	[Tooltip("No need to set this in inspector, SunflowerManager will set it up in Start if we're nested under it.")]
@@ -66,6 +67,11 @@ public class Sunflower : MonoBehaviour
 	/// </summary>
 	float _flowerSize;
 
+
+	private void Start()
+	{
+		stalkScaler.localScale = Vector3.zero;   // Starts in "empty mound" state, so shrink away the flower stalk
+	}
 
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -120,19 +126,23 @@ public class Sunflower : MonoBehaviour
 	/// <summary>
 	/// Sets up whatever animation is necessary for the new state.
 	/// </summary>
-	public void SetState( State new_state )
+	public void SetState( State new_state, int new_color = -1 )
 	{
 		if( state == new_state )
 			return;
+
+		if( new_color != -1 )
+			color = new_color;
 
 		switch(new_state)
 		{
 			case State.Sprout:
 				flowerSpriteRenderer.sprite = sproutSprite;
 
-				color = Random.Range(0, sunflowerColorsSprites.Length);   // Pick random color, if it's grown later.  NOTE: in the future, it might be neat to have it depend on player direction? Would be a fun trick to learn
+				if( new_color == -1 )   // can only pick a new color if one was not specified
+					color = Random.Range(0, sunflowerColorsSprites.Length);   // Pick random color, if it's grown later.  NOTE: in the future, it might be neat to have it depend on player direction? Would be a fun trick to learn
 
-				stalkScaler.transform.localScale = Vector3.one;   // no scaling, just display the simple sprite\
+				stalkScaler.transform.localScale = Vector3.one;   // no scaling, just display the simple sprite
 				break;
 
 			case State.Flower:
@@ -167,7 +177,7 @@ public class Sunflower : MonoBehaviour
 		else if( state == State.Flower && _flowerSize < 1 )   // scale up flower animation after it's watered.
 		{
 			_flowerSize = Mathf.Min(1, _flowerSize + Time.deltaTime / flowerGrowTime);
-			float eased = EasingFunction.GetEasingFunction( flowerGrowEase )(0, 1, _flowerSize);
+			float eased = EasingFunction.GetEasingFunction( flowerGrowEase )(flowerGrowStartScale, 1, _flowerSize);
 			stalkScaler.localScale = Vector3.one * eased;
 		}
 	}

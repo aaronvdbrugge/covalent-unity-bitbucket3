@@ -78,12 +78,30 @@ public class SunflowerManager : MonoBehaviourPun
 		return ret;
 	}
 
-	public int[] GetSunflowerStateIntArray()
+	public int[] GetEncodedSunflowerStateColors()
 	{
 		int[] ret = new int[ _sunflowers.Length ];
 		for( int i=0; i<_sunflowers.Length; i++)
-			ret[i] = (int)_sunflowers[i].state;
+			ret[i] = EncodeSunflowerStateColor(_sunflowers[i].state, _sunflowers[i].color);
 		return ret;
+	}
+
+	//NOTE: we can encode a sunflower's state and color by just multiplying the state by 256.
+	//That way, we only need to send one array over the network.
+	public int EncodeSunflowerStateColor(Sunflower.State state, int color)
+	{
+		return ((int)state)*256 + color;
+	}
+
+	// Reverses previous
+	public Sunflower.State DecodeSunflowerState(int encoded_state_color)
+	{
+		return (Sunflower.State)(encoded_state_color / 256);   // chops off last byte
+	}
+
+	public int DecodeSunflowerColor(int encoded_state_color)
+	{
+		return encoded_state_color & 0xFF;   // only the latter byte of encoded state color
 	}
 
 
@@ -91,10 +109,10 @@ public class SunflowerManager : MonoBehaviourPun
 	/// Syncs all sunflowers (could be hundreds), should probably be used sparingly.
 	/// </summary>
 	[PunRPC]
-	void SyncAllSunflowerStates( int[] states )
+	void SyncAllSunflowerStates( int[] encoded_state_colors )
 	{
-		for( int i=0; i<states.Length && i < _sunflowers.Length; i++)
-			_sunflowers[i].SetState( (Sunflower.State)states[i] );
+		for( int i=0; i<encoded_state_colors.Length && i < _sunflowers.Length; i++)
+			_sunflowers[i].SetState( DecodeSunflowerState(encoded_state_colors[i]), DecodeSunflowerColor(encoded_state_colors[i]) );
 
 		_gotState = true;
 	}
@@ -103,9 +121,9 @@ public class SunflowerManager : MonoBehaviourPun
 	/// When a single sunflower's state changes (more efficient than sending the whole array)
 	/// </summary>
 	[PunRPC]
-	void SingleSunflowerStateChanged( int index, Sunflower.State state )
+	void SingleSunflowerStateChanged( int index, int encoded_state_color )
 	{
-		_sunflowers[index].SetState( state );
+		_sunflowers[index].SetState( DecodeSunflowerState(encoded_state_color), DecodeSunflowerColor(encoded_state_color) );
 	}
 
 	/// <summary>
@@ -119,7 +137,7 @@ public class SunflowerManager : MonoBehaviourPun
         {
             Photon.Realtime.Player player = PhotonUtil.GetPlayerByActorNumber( requesting_player_actor_num );               // Get the player we want to send it to...
             if( player != null )
-                photonView.RPC("SyncAllSunflowerStates", player, new object[]{ GetSunflowerStateIntArray() });   
+                photonView.RPC("SyncAllSunflowerStates", player, new object[]{ GetEncodedSunflowerStateColors() });   
         }
 	}
 
@@ -131,7 +149,7 @@ public class SunflowerManager : MonoBehaviourPun
 	public void FlowerStateChanged(Sunflower sunflower)
 	{
 		if( photonView.IsMine && Dateland_Network.initialized )
-            photonView.RPC("SingleSunflowerStateChanged", RpcTarget.Others, new object[]{ sunflower.index, sunflower.state });   
+            photonView.RPC("SingleSunflowerStateChanged", RpcTarget.Others, new object[]{ sunflower.index, EncodeSunflowerStateColor( sunflower.state, sunflower.color ) });   
 	}
 
 
@@ -150,7 +168,7 @@ public class SunflowerManager : MonoBehaviourPun
 				if( _synchronizeCooldown <= 0 )
 				{
 					_synchronizeCooldown = synchronizeInterval;
-					photonView.RPC("SyncAllSunflowerStates", RpcTarget.Others, new object[]{ GetSunflowerStateIntArray() });   
+					photonView.RPC("SyncAllSunflowerStates", RpcTarget.Others, new object[]{ GetEncodedSunflowerStateColors() });   
 				}
 			}
 			else   // not mine
