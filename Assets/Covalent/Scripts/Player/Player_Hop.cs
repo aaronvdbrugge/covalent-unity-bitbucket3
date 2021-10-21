@@ -36,6 +36,10 @@ public class Player_Hop : MonoBehaviourPun
 	public bool hoppedInPlace = false;
 
 
+	[Tooltip("Write to this constantly if you want to stifle actual hopping. The value will be \"consumed\" back to false, so you have to keep setting it every FixedUpdate (it can't get stuck on)")]
+	public bool stifleHop = false;
+
+
 
 	/// <summary>
 	/// Access zPos for things like pseudo-3D collision detection
@@ -61,6 +65,10 @@ public class Player_Hop : MonoBehaviourPun
 	bool _queueHopInPlace = false;   // some fancy maneuvering necessary to ensure that hoppedInPlace is only true for one FixedUpdate frame, regardless of execution order. Note that it may be one frame delayed
 
 
+	int _stifleHopCooldown = 0;    // for script execution order reasons, we'll have to stifle hops for one frame after stifleHop is true.
+
+
+
 	private void Start()
 	{
 		_playerVisualYOriginal = playerVisual.transform.localPosition.y;
@@ -76,10 +84,13 @@ public class Player_Hop : MonoBehaviourPun
 	[ContextMenu("HopInPlace")]
 	public void HopInPlace()
 	{
-		if( GetSittingOn() == null )
-			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
-		else  // "Hop in place" while sitting on something! This counts as getting off the seat.
+		if( GetSittingOn() != null )  // "Hop in place" while sitting on something! This counts as getting off the seat.
 			HopToSeat( null );
+		else if( stifleHop || _stifleHopCooldown > 0 )  // Stifled hop! Hopping here does something instead of hopping...
+			this.photonView.RPC("StifledHopRPC", RpcTarget.All);
+		else
+			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
+
 	}
 
 	[PunRPC]
@@ -92,6 +103,15 @@ public class Player_Hop : MonoBehaviourPun
 
 		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);  
 	}
+
+
+
+	[PunRPC]
+	public void StifledHopRPC()
+	{
+		_queueHopInPlace = true;   // Allows other scripts to respond to the public hoppedInPlace value.
+	}
+
 
 
 
@@ -234,7 +254,6 @@ public class Player_Hop : MonoBehaviourPun
 	{
 
 
-
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
 		{
@@ -321,6 +340,17 @@ public class Player_Hop : MonoBehaviourPun
 			_queueHopInPlace = false;  // Consume this value, set at some unknown time, then enable hoppedInplace for other components to see. It definitely shouldn't be disabled until the above line hits.
 			hoppedInPlace = true;
 		}
+
+
+		// Update stifledHop.
+		// Similarly, there are execution order concerns here... in this case we can probably just let it cooldown for a frame. Make sure to check both _stifleHopCooldown and stifleHop wherever it's used.
+		if( _stifleHopCooldown > 0 ) _stifleHopCooldown--;
+		if( stifleHop )
+		{
+			stifleHop = false;
+			_stifleHopCooldown = 1;
+		}
+
 
 	}
 
