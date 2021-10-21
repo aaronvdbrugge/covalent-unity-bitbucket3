@@ -142,6 +142,8 @@ public class Sunflower : MonoBehaviour
 				if( new_color == -1 )   // can only pick a new color if one was not specified
 					color = Random.Range(0, sunflowerColorsSprites.Length);   // Pick random color, if it's grown later.  NOTE: in the future, it might be neat to have it depend on player direction? Would be a fun trick to learn
 
+				_flowerSize = 0;   // reset this in anticipation of next state
+
 				stalkScaler.transform.localScale = Vector3.one;   // no scaling, just display the simple sprite
 				break;
 
