@@ -126,7 +126,7 @@ public class Sunflower : MonoBehaviour
 	/// <summary>
 	/// Sets up whatever animation is necessary for the new state.
 	/// </summary>
-	public void SetState( State new_state, int new_color = -1 )
+	public void SetState( State new_state, int new_color = -1, bool skip_animation = false )
 	{
 		if( state == new_state )
 			return;
@@ -146,24 +146,26 @@ public class Sunflower : MonoBehaviour
 				break;
 
 			case State.Flower:
-				// TBD: spawn rain cloud
+				// TBD: spawn rain cloud if no skip_animation
 
 				flowerSpriteRenderer.sprite = sunflowerColorsSprites[ color ];
 				stalkScaler.transform.localScale = Vector3.zero;   // start at zero and scale up
+
+				if( skip_animation )     // would normally go from 0 to 1
+					_flowerSize = 0.9999999f;  
 				break;
 
 			case State.EmptyMound:
-				// TBD: spawn "picked" poof
+				// TBD: spawn "picked" poof if no skip_animation
 
 				flowerSpriteRenderer.sprite = emptyStalkSprite;
+				if( skip_animation )     // would normally go from 1 to 0
+					_flowerSize = 0.0000001f;  
 				break;
 		}
 
 		state = new_state;
 	}
-
-
-
 
 
 	private void Update()
