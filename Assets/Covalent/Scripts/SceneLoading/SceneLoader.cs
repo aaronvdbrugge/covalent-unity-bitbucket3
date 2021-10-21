@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneLoader : MonoBehaviour
 {
+	public int targetFrameRate = 60;
+
 	public static SceneLoader Instance;
 
 	public Dictionary<string, GameObject> allBases = new Dictionary<string, GameObject>();   //keep track of all the scenes we've additively loaded in.  SceneBase adds itself here
@@ -24,6 +26,8 @@ public class SceneLoader : MonoBehaviour
 
 	void Awake()
 	{
+		Application.targetFrameRate = targetFrameRate;
+
 		if( Instance != null )   // There's already one of these...
 			Destroy( gameObject );
 		else
