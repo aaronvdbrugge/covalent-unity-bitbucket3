@@ -31,10 +31,8 @@ public class Player_Hop : MonoBehaviourPun
 	[Header("Runtime")]
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
-	[Tooltip("Time.time when we last hopped in place.")]
-	public float lastHoppedInPlace;
 
-	[Tooltip("True for at least one frame if we hopped in place. I'm not 100% sure if this is guaranteed to not register for two frames in a row. It depends on execution order.")]
+	[Tooltip("True for exactly one frame if we hopped in place. ")]
 	public bool hoppedInPlace = false;
 
 
@@ -59,6 +57,9 @@ public class Player_Hop : MonoBehaviourPun
 	bool _useStartEnd = false;    //Should we use start/end or just hop in place?
 
 	bool _enableMovementWhenDone = false;    //Should we enable colliders and movement when we finish the hop? Useful for hopping off a bench
+
+	bool _queueHopInPlace = false;   // some fancy maneuvering necessary to ensure that hoppedInPlace is only true for one FixedUpdate frame, regardless of execution order. Note that it may be one frame delayed
+
 
 	private void Start()
 	{
@@ -87,8 +88,7 @@ public class Player_Hop : MonoBehaviourPun
 		hopProgress = hopTime;  //starts the hop in Update
 		_useStartEnd = false;     //no start/end point, just hop in place
 
-		hoppedInPlace = true;
-		lastHoppedInPlace = Time.time;
+		_queueHopInPlace = true;
 
 		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);  
 	}
@@ -314,9 +314,13 @@ public class Player_Hop : MonoBehaviourPun
 
 		// Update hoppedInPlace value.
 		// We have to be careful to not disable it before other components can consume it.
-		// We can hedge against script execution order problems by making sure to not disable it if it's the same frame that we turned it on.
-		if( hoppedInPlace && lastHoppedInPlace < Time.time )
-			hoppedInPlace = false;
+		// We can hedge against script execution order problems by using this _queue value, called "whenever" from the RPC.
+		hoppedInPlace = false;    // disable from previous frame
+		if( _queueHopInPlace )
+		{
+			_queueHopInPlace = false;  // Consume this value, set at some unknown time, then enable hoppedInplace for other components to see. It definitely shouldn't be disabled until the above line hits.
+			hoppedInPlace = true;
+		}
 
 	}
 
