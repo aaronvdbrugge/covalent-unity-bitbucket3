@@ -23,6 +23,12 @@ public class Sunflower : MonoBehaviour
 	public Sprite[] sunflowerColorsSprites;
 	public Sprite emptyStalkSprite;
 	
+	[Tooltip("FX for when it gets watered")]
+	public GameObject rainCloudPrefab;
+
+	[Tooltip("FX for when it gets plucked")]
+	public GameObject pluckedPrefab;
+
 
 	[Header("Animation")]
 	public float stalkShrinkTime = 3.0f;
@@ -169,7 +175,8 @@ public class Sunflower : MonoBehaviour
 				break;
 
 			case State.Flower:
-				// TBD: spawn rain cloud if no skip_animation
+				if( !skip_animation )
+					Instantiate(rainCloudPrefab, transform.position, Quaternion.identity);
 
 				flowerSpriteRenderer.sprite = sunflowerColorsSprites[ color ];
 				stalkScaler.transform.localScale = Vector3.zero;   // start at zero and scale up
