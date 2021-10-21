@@ -26,8 +26,8 @@ public class Sunflower : MonoBehaviour
 	[Tooltip("FX for when it gets watered")]
 	public GameObject rainCloudPrefab;
 
-	[Tooltip("FX for when it gets plucked")]
-	public GameObject pluckedPrefab;
+	[Tooltip("FX for when it gets plucked (different for each color)")]
+	public GameObject[] pluckedPrefabPerColor;
 
 
 	[Header("Animation")]
@@ -186,7 +186,8 @@ public class Sunflower : MonoBehaviour
 				break;
 
 			case State.EmptyMound:
-				// TBD: spawn "picked" poof if no skip_animation
+				if( !skip_animation )
+					Instantiate(pluckedPrefabPerColor[color], transform.position, Quaternion.identity);
 
 				flowerSpriteRenderer.sprite = emptyStalkSprite;
 				if( skip_animation )     // would normally go from 1 to 0

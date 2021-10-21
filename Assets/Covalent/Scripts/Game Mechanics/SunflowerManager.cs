@@ -162,7 +162,15 @@ public class SunflowerManager : MonoBehaviourPun
 		{
 			if( photonView.IsMine )
 			{
-				_gotState = true;   // we're the authority on state
+				if( !_gotState )
+				{
+					// Randomize the flowers! This'll result in a more interesting experience when the server starts
+					foreach( Sunflower sf in _sunflowers )
+						sf.SetState( (Sunflower.State)Random.Range(0,3), Random.Range(0,4), true );
+
+					_gotState = true;   // we're the authority on state now
+				}
+
 
 				// Handle periodic synchronizations (all of the sunflowers, not just one at a time)
 				_synchronizeCooldown -= Time.fixedDeltaTime;
