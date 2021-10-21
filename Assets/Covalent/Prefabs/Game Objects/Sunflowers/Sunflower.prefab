@@ -109,6 +109,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0798c5378a53bf14990a903dd64dc38a, type: 3}
   - {fileID: 21300000, guid: d24926ccd1c7a464a9f4fc025137736a, type: 3}
   emptyStalkSprite: {fileID: 21300000, guid: 1c7fcf59748d3c3438a7059415ebc520, type: 3}
+  rainCloudPrefab: {fileID: 6285146965710731239, guid: f93dffb8991bd5a4194400b17d5ed280,
+    type: 3}
+  pluckedPrefab: {fileID: 0}
   stalkShrinkTime: 3
   stalkShrinkEase: 21
   flowerGrowTime: 10
