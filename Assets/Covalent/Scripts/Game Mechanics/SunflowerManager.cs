@@ -53,15 +53,11 @@ public class SunflowerManager : MonoBehaviourPun
 		// The order of children should be the same on all clients.
 		List<Sunflower> sunflowers = new List<Sunflower>();
 		int i=0;
-		foreach( Transform t in transform )
+		foreach( Sunflower sf in GetComponentsInChildren<Sunflower>())
 		{
-			Sunflower sf = t.GetComponent<Sunflower>();
-			if( sf )
-			{ 
-				sunflowers.Add(sf);
-				sf.sunflowerManager = this;
-				sf.index = i++;
-			}
+			sunflowers.Add(sf);
+			sf.sunflowerManager = this;
+			sf.index = i++;
 		}
 		_sunflowers = sunflowers.ToArray();
 	}
@@ -178,7 +174,7 @@ public class SunflowerManager : MonoBehaviourPun
 
 				// Process any interactions between player and flower...
 				foreach( var kvp in _interactions )
-					kvp.Value.flower.Interact();
+					kvp.Value.flower.Interact( kvp.Key );
 				_interactions.Clear();
 			}
 			else   // not mine
@@ -202,8 +198,8 @@ public class SunflowerManager : MonoBehaviourPun
 	{
 		if( Dateland_Network.initialized && photonView.IsMine )
 		{
-			float dist_sq = (plr.transform.position - flower.transform.position).sqrMagnitude;
-			if( _interactions.ContainsKey(plr) )   // we already have an interaction for this player. The new one must be closer to win the spot
+			float dist_sq = (plr.transform.position - flower.stalkScaler.transform.position).sqrMagnitude;
+			if( _interactions.ContainsKey(plr) )   // we alrady have an interaction for this player. The new one must be closer to win the spot
 			{
 				if( _interactions[plr].distanceSq > dist_sq )   // new closest contender
 					_interactions[plr] = new PlayerFlowerInteraction { distanceSq = dist_sq, flower = flower };

@@ -114,10 +114,34 @@ public class Sunflower : MonoBehaviour
 	/// Called from SunflowerManager when it confirms a player interacted with us.
 	/// (It'll determine we were the closest overlapping flower.)
 	/// </summary>
-	public void Interact()
+	public void Interact(Player_Controller_Mobile plr)
 	{
+		// COLOR: 
+		// I think it's more fun if you can actually control the color based on what direction you face.
+		int new_color = -1;
+		if( Mathf.Abs(plr.playerMovement.lastDirection.x) > Mathf.Abs(plr.playerMovement.lastDirection.y) )
+		{
+			if( plr.playerMovement.lastDirection.x > 0)  // facing right
+				new_color = 0;
+			else   // facing left
+				new_color = 2;
+		}
+		else
+		{
+			if( plr.playerMovement.lastDirection.y > 0 )  // facing up
+				new_color = 1;
+			else  // facing down
+				new_color = 3;
+		}
+
+
+
 		State new_state = (State)(((int)state + 1) % (int)State.COUNT);   // looping state
-		SetState(new_state);
+		if( new_state != State.Sprout )  // this is the only state where we're allowed to choose a new color
+			new_color = -1;
+
+
+		SetState(new_state, new_color);
 		sunflowerManager.FlowerStateChanged(this);   // will net replicate the state change, if needed
 	}
 
@@ -126,7 +150,7 @@ public class Sunflower : MonoBehaviour
 	/// <summary>
 	/// Sets up whatever animation is necessary for the new state.
 	/// </summary>
-	public void SetState( State new_state, int new_color = -1, bool skip_animation = false )
+	public void SetState( State new_state, int new_color, bool skip_animation = false )
 	{
 		if( state == new_state )
 			return;
@@ -138,9 +162,6 @@ public class Sunflower : MonoBehaviour
 		{
 			case State.Sprout:
 				flowerSpriteRenderer.sprite = sproutSprite;
-
-				if( new_color == -1 )   // can only pick a new color if one was not specified
-					color = Random.Range(0, sunflowerColorsSprites.Length);   // Pick random color, if it's grown later.  NOTE: in the future, it might be neat to have it depend on player direction? Would be a fun trick to learn
 
 				_flowerSize = 0;   // reset this in anticipation of next state
 

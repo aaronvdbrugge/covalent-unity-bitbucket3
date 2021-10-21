@@ -113,6 +113,7 @@ MonoBehaviour:
   stalkShrinkEase: 21
   flowerGrowTime: 10
   flowerGrowEase: 21
+  flowerGrowStartScale: 0.2
   sunflowerManager: {fileID: 0}
   index: 0
   color: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   renderBelowAll: 1
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: 0, y: -1.24, z: 0}
+  SorterPositionOffset: {x: 0, y: -1.26, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort: []
 --- !u!60 &3954571177736661897

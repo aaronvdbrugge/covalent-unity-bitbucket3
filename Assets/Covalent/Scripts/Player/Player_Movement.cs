@@ -62,6 +62,7 @@ public class Player_Movement : MonoBehaviour
 	/// </summary>
 	Vector2 lastMovementInput;
 
+
 	/// <summary>
 	/// If this is "my" player, we'll set this directly from input; if not, we'll infer it from
 	/// the player's velocity.
@@ -139,6 +140,7 @@ public class Player_Movement : MonoBehaviour
 				if ( Application.isEditor )
 				{
 					Vector2 editor_vel = Vector2.zero;
+
 					if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
 						editor_vel.y += 1;
 					if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
@@ -147,6 +149,9 @@ public class Player_Movement : MonoBehaviour
 						editor_vel.x -= 1;
 					if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 						editor_vel.x += 1;
+
+					editor_vel = editor_vel.normalized;
+
 
 					if( Input.GetKey(KeyCode.LeftShift) )
 						editor_vel *= editorSpeedMultiple;

@@ -1,7 +1,6 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -70,19 +69,7 @@ public class MatchGame : MonoBehaviourPun
 	Camera_Sound _cameraSound;
 
 
-	// Use this in editor... make the cards ahead of time.
-	// Seems to make the sprite sorter work better, for some reason
-	[ContextMenu("Make Cards")]
-	public void MakeCards()
-	{
-		for( int x=0; x<cardsWide; x++)
-			for( int y=0; y<cardsHigh; y++)
-			{
-				GameObject go =  PrefabUtility.InstantiatePrefab(cardPrefab) as GameObject;  //Instantiate( cardPrefab, transform );   // we pre-instantiate the cards now
-				go.transform.SetParent(transform, false);
-				go.transform.localPosition = cardOffsetX * x + cardOffsetY * y;
-			}
-	}
+
 
 
 	/// <summary>
