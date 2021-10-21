@@ -112,7 +112,12 @@ public class SunflowerManager : MonoBehaviourPun
 	void SyncAllSunflowerStates( int[] encoded_state_colors )
 	{
 		for( int i=0; i<encoded_state_colors.Length && i < _sunflowers.Length; i++)
-			_sunflowers[i].SetState( DecodeSunflowerState(encoded_state_colors[i]), DecodeSunflowerColor(encoded_state_colors[i]) );
+		{
+			// on our first sync, _gotState will be false, so just skip flower animations in case they walk straight into the sunflower field
+			_sunflowers[i].SetState( DecodeSunflowerState(encoded_state_colors[i]), DecodeSunflowerColor(encoded_state_colors[i]), !_gotState );
+		}
+
+		
 
 		_gotState = true;
 	}
