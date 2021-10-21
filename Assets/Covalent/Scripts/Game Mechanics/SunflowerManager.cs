@@ -170,6 +170,11 @@ public class SunflowerManager : MonoBehaviourPun
 					_synchronizeCooldown = synchronizeInterval;
 					photonView.RPC("SyncAllSunflowerStates", RpcTarget.Others, new object[]{ GetEncodedSunflowerStateColors() });   
 				}
+
+				// Process any interactions between player and flower...
+				foreach( var kvp in _interactions )
+					kvp.Value.flower.Interact();
+				_interactions.Clear();
 			}
 			else   // not mine
 			{  
@@ -181,10 +186,6 @@ public class SunflowerManager : MonoBehaviourPun
 			}
 		}
 
-		// Process any interactions between player and flower...
-		foreach( var kvp in _interactions )
-			kvp.Value.flower.Interact();
-		_interactions.Clear();
 	}
 
 
@@ -194,14 +195,17 @@ public class SunflowerManager : MonoBehaviourPun
 	/// </summary>
 	public void PlayerInteractedWithFlower( Player_Controller_Mobile plr, Sunflower flower )
 	{
-		float dist_sq = (plr.transform.position - flower.transform.position).sqrMagnitude;
-		if( _interactions.ContainsKey(plr) )   // we already have an interaction for this player. The new one must be closer to win the spot
+		if( Dateland_Network.initialized && photonView.IsMine )
 		{
-			if( _interactions[plr].distanceSq > dist_sq )   // new closest contender
+			float dist_sq = (plr.transform.position - flower.transform.position).sqrMagnitude;
+			if( _interactions.ContainsKey(plr) )   // we already have an interaction for this player. The new one must be closer to win the spot
+			{
+				if( _interactions[plr].distanceSq > dist_sq )   // new closest contender
+					_interactions[plr] = new PlayerFlowerInteraction { distanceSq = dist_sq, flower = flower };
+			}
+			else   // no previous contended, can add key
 				_interactions[plr] = new PlayerFlowerInteraction { distanceSq = dist_sq, flower = flower };
 		}
-		else   // no previous contended, can add key
-			_interactions[plr] = new PlayerFlowerInteraction { distanceSq = dist_sq, flower = flower };
 	}
 
 
