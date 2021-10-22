@@ -9,6 +9,12 @@ using UnityEngine.UI;
 
 public class Dateland_Network : Network_Manager
 {
+    [Tooltip("Will be fed to enterDateland automatically if enterDatelandTest is true")]
+    public TextAsset testUserJson;
+
+    [Tooltip("Will immediately enter dateland on Start, using testUserJson data.")]
+    public bool enterDatelandTest = false;
+
     #region Private Serializable Fields
     [SerializeField]
     private byte maxPlayersPerRoom = 16;
@@ -320,6 +326,9 @@ public class Dateland_Network : Network_Manager
         connectToMasterFails = 0;
         connectToRoomFail = 0;
         //Connect();
+
+        // Start connecting to room, so we can create player
+        enterDateland( testUserJson.text );
     }
     private void Update()
     {
@@ -438,6 +447,7 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
+        isConnecting = true;    // added by seb, bugfix
     }
     public void destroyPlayer()
     {

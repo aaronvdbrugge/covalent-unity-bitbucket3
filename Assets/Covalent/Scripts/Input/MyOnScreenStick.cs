@@ -65,6 +65,9 @@ public class MyOnScreenStick : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, my_touch.touch.position, uiCamera, out var position);
         var delta = position - m_StartPos;   // Difference between touch position and the center of this stick
 
+
+
+
         if( delta.magnitude <= radius )
             dragging = true;   //we're inside the circle.
 

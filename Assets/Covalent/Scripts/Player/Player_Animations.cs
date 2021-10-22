@@ -51,14 +51,6 @@ public class Player_Animations : MonoBehaviour
         else if (!playerCollisions.onBeach && splash_feet.enabled)
             splash_feet.enabled = false;
 
-        // Note sure what this does, but I kept in in the refactor -Seb
-        if (playerCollisions.topHearts == true && playerCollisions.botHearts == true)
-        {
-            //hearts.Play("animation", -1, 0);
-                
-            playerCollisions.topHearts = false;
-            playerCollisions.botHearts = false;
-        }
 
         
         // If we're sitting somewhere, get the SitPoint.

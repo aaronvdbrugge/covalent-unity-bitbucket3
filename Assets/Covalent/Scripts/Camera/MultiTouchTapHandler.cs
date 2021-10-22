@@ -128,12 +128,6 @@ public class MultiTouchTapHandler : MonoBehaviour
 			contact_filter.SetLayerMask( layerMask );   // only looking for player colliders
             RaycastHit2D[] results = new RaycastHit2D[8];
 
-            /*
-            int count = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero, contact_filter, results);
-
-            for( int i=0; i<count; i++)
-                results[i].collider.SendMessage("OnMyTouchDown", myTouches[touch.fingerId], SendMessageOptions.DontRequireReceiver);  // send the MyTouch class, which will auto update!
-            */
 
             var coll = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(touch.position), layerMask);
             if( coll != null )
