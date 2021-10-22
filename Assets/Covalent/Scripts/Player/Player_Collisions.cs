@@ -19,16 +19,12 @@ public class Player_Collisions : MonoBehaviour
 
 
     [Header("Colliding info")]
-    public bool topHearts, botHearts, onBeach;
+    public bool onBeach;
 
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("topHeart") && topHearts == false)
-            topHearts = true;
-        else if (collision.gameObject.tag.Equals("botHeart") && botHearts == false)
-            botHearts = true;
         if (collision.gameObject.tag.Equals("beach"))
             onBeach = true;
         if (collision.gameObject.tag.Equals("public_agora") && isMine)

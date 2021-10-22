@@ -590,8 +590,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 1
-  ObservedComponents:
-  - {fileID: 8804191198712331188}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -697,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be70c6586b6d433cbf18ac05f570615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonMechanim: {fileID: 2282081113195783096}
+  skeletonMecanim: {fileID: 2282081113195783096}
   mesh: {fileID: 2282081113195783097}
   characterSkinSlot: -1
   baseSkin: Bareskin
@@ -1681,8 +1680,6 @@ MonoBehaviour:
   - {fileID: 798382551825579044}
   - {fileID: 2056266962552226213}
   playerAlternateMovements: {fileID: 3423532178932913422}
-  topHearts: 0
-  botHearts: 0
   onBeach: 0
 --- !u!114 &4753401094386036590
 MonoBehaviour:
