@@ -592,8 +592,6 @@ MonoBehaviour:
   observableSearch: 1
   ObservedComponents:
   - {fileID: 8804191198712331188}
-  - {fileID: 0}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1479,7 +1477,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 12.3
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!1 &4450914184106857912
 GameObject:
   m_ObjectHideFlags: 0

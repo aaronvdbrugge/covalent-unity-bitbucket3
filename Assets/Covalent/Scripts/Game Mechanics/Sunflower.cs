@@ -29,6 +29,20 @@ public class Sunflower : MonoBehaviour
 	[Tooltip("FX for when it gets plucked (different for each color)")]
 	public GameObject[] pluckedPrefabPerColor;
 
+	[Tooltip("Sound for when a sprout is planted.")]
+	public AudioSource plantSproutAudioSource;
+
+	[Tooltip("Used to trigger multiple rustle sounds")]
+	public SelfSoundTrigger rustleSoundTrigger;
+
+	[Header("Settings")]
+	public float plantSproutSoundPitchMin = 0.75f;
+	public float plantSproutSoundPitchMax = 1.5f;
+
+	[Tooltip("A flower must be this much grown in order to pick it (0-1)")]
+	public float minSizeToPick = 0.5f;
+
+
 
 	[Header("Animation")]
 	public float stalkShrinkTime = 3.0f;
@@ -36,6 +50,42 @@ public class Sunflower : MonoBehaviour
 	public float flowerGrowTime = 10.0f;
 	public EasingFunction.Ease flowerGrowEase = EasingFunction.Ease.Linear;
 	public float flowerGrowStartScale = 0.2f;   // Shouldn't start at 0, would be smaller than the sprout.
+
+	[Tooltip("Make sprout a little punchier by giving it a different start scale")]
+	public Vector2 sproutStartScale = Vector2.one;
+
+	public float sproutAnimTime = 0.3f;
+	public EasingFunction.Ease sproutAnimEase = EasingFunction.Ease.Linear;
+
+
+
+
+	[Tooltip("We have a separate collider for rustling the flower, which is smaller than our interaction readius.")]
+	public Collider2D rustleCollider;
+
+	[Tooltip("(degrees) Add this much of player's x velocity to _rustleAngle")]
+	public float rustleRatioX = 1.0f;
+	
+	[Tooltip("(degrees) Add this much of player's y velocity to _rustleAngle (probably less than X velocity, since horizontal velocity is visually tied to wobbling left and right more). This is arbitrary directionally, so we'll flip it by index%2")]
+	public float rustleRatioY = 0.5f;
+
+	[Tooltip("(degrees) Maximum amount the flower's _rustleAngle can be in either direction.")]
+	public float maxRustleAngle = 45;
+
+	[Tooltip("We'll use a loose interpretation of Hooke's law to spring the flower back to 0 after it's been disturbed. This will just be multiplies to -_rustleAngle on a per-frame basis")]
+	public float rustleSpringK = 0.01f;
+
+	[Tooltip("This is also a pretty loose interpretation of friction. We'll just set _rustleAngleVel to _rustleAngleVel * (1-rustleFriction) every FixedUpdate")]
+	public float rustleFriction = 0.01f;
+
+	[Tooltip("Can only play rustle sound once every this amount of time")]
+	public float rustleSoundCooldownTime = 0.5f;
+
+	[Tooltip("Can only play rustle sound if player normalized velocity is >= this")]
+	public float rustleSoundMinSpd = 0.2f;
+
+
+
 
 	[Header("Runtime")]
 	[Tooltip("No need to set this in inspector, SunflowerManager will set it up in Start if we're nested under it.")]
@@ -73,10 +123,21 @@ public class Sunflower : MonoBehaviour
 	/// </summary>
 	float _flowerSize;
 
+	Camera_Sound _cameraSound;
+
+
+	/// <summary>
+	/// Angle at which the flower is disturbed from its normal straight-up position. Clamped by maxRustleAngle and affected by _rustleAngleVel.
+	/// </summary>
+	float _rustleAngle = 0;
+	float _rustleAngleVel = 0;
+	float _rustleSoundCooldown = 0;    // must cool off before can play another rustle sound
+	float _sproutAnim = 0;   // 0 to 1
 
 	private void Start()
 	{
 		stalkScaler.localScale = Vector3.zero;   // Starts in "empty mound" state, so shrink away the flower stalk
+		_cameraSound = Camera.main.GetComponent<Camera_Sound>();
 	}
 
 
@@ -112,9 +173,78 @@ public class Sunflower : MonoBehaviour
 					// multiple flowers, the SunflowerManager decides who gets an Interact() call based on which was closer to the player.
 					sunflowerManager.PlayerInteractedWithFlower( plr, this );
 				}
+
+				// Handle rustling!
+				// Our collider is pretty big, so need to test if they're overlapping the smaller rustle collider.
+
+				if( plr.playerCollisions.GetEnabledCollider() )
+				{
+					ContactFilter2D contact_filter = new ContactFilter2D();
+					contact_filter.SetLayerMask( LayerMask.GetMask("player_collider") );   // only looking for player colliders
+					Collider2D[] cols = new Collider2D[8];   // can consider up to 8 collisions
+        
+					int num_cols = rustleCollider.OverlapCollider( contact_filter, cols );
+
+					bool do_rustle = false;
+					for( int i=0; i<num_cols; i++ )
+						if( cols[i].GetComponent<Player_Controller_Mobile>() == plr )   // they're overlapping our rustle collider!
+							do_rustle = true;
+
+					if( do_rustle && (state != State.EmptyMound || _flowerSize > 0))   // don't do this to a completely empty mound
+					{
+						_rustleAngleVel += rustleRatioX * -plr.playerMovement.body.velocity.x;   // only consider player's X velocity
+						_rustleAngleVel += rustleRatioY * -plr.playerMovement.body.velocity.y * ((index%2) * 2 - 1);   // direction of Y ratio is arbitrary, so flip it by index%2
+
+						// Sound?
+						if( _rustleSoundCooldown <= 0 && plr.playerMovement.body.velocity.magnitude / plr.playerMovement.maxSpeed >= rustleSoundMinSpd ) // must be going fast enough
+						{
+							_rustleSoundCooldown = rustleSoundCooldownTime;
+							rustleSoundTrigger.PlaySound();
+						}
+					}
+				}
 			}
 
+		if( state == State.Sprout && _sproutAnim < 1 )   // handle sprout animation!
+		{
+			_sproutAnim = Mathf.Min(1, _sproutAnim + Time.fixedDeltaTime / sproutAnimTime );
 
+			float lerp = EasingFunction.GetEasingFunction( sproutAnimEase )(0, 1, _sproutAnim);
+			stalkScaler.localScale = Vector3.Lerp( sproutStartScale, Vector3.one, lerp );
+		}
+
+
+		if( _rustleAngle != 0 || _rustleAngleVel != 0 )   // update rustling, go to sleep if everything's 0
+		{
+			_rustleAngle += _rustleAngleVel * Time.fixedDeltaTime;
+
+			_rustleAngleVel *= (1 - rustleFriction);   // apply ""friction"" 
+			_rustleAngleVel += rustleSpringK * -_rustleAngle * Time.fixedDeltaTime;   // apply ""Hooke's Law""
+
+			if( _rustleAngle < -maxRustleAngle )
+			{
+				_rustleAngle = -maxRustleAngle;
+				_rustleAngleVel = Mathf.Max(0, _rustleAngleVel);	// hit the negative side, stop negative velocity
+			}
+			else if( _rustleAngle > maxRustleAngle )
+			{
+				_rustleAngle = maxRustleAngle;
+				_rustleAngleVel = Mathf.Min(0, _rustleAngleVel);	// hit the positive side, stop positive velocity
+			}
+
+			if( Mathf.Abs(_rustleAngle) <= 0.001f && Mathf.Abs(_rustleAngleVel) <= 0.001f)  // go to sleep
+			{
+				_rustleAngle = 0;
+				_rustleAngleVel = 0;
+			}
+
+			// Set actual angle
+			stalkScaler.transform.localRotation = Quaternion.Euler(0, 0, _rustleAngle);
+		}
+
+		
+		// Cool off rustle sound
+		_rustleSoundCooldown = Mathf.Max(0, _rustleSoundCooldown - Time.fixedDeltaTime);
 	}
 
 
@@ -124,6 +254,9 @@ public class Sunflower : MonoBehaviour
 	/// </summary>
 	public void Interact(Player_Controller_Mobile plr)
 	{
+		if( state == State.Flower && _flowerSize < minSizeToPick )   // can't pick it yet! too small
+			return;
+
 		// COLOR: 
 		// I think it's more fun if you can actually control the color based on what direction you face.
 		int new_color = -1;
@@ -174,6 +307,20 @@ public class Sunflower : MonoBehaviour
 				_flowerSize = 0;   // reset this in anticipation of next state
 
 				stalkScaler.transform.localScale = Vector3.one;   // no scaling, just display the simple sprite
+
+				// Can play the "plant sprout" sound right here, since there's no FX prefab to play it
+				if( !skip_animation )
+					if( _cameraSound.CanPlaySoundAtPosition( transform.position ) )
+					{
+						plantSproutAudioSource.pitch = Random.Range( plantSproutSoundPitchMin, plantSproutSoundPitchMax );
+						plantSproutAudioSource.Play();
+					}
+
+				// Set up sprout animation
+				_sproutAnim = skip_animation ? 1 : 0;
+				if( !skip_animation )
+					stalkScaler.transform.localScale = sproutStartScale;
+
 				break;
 
 			case State.Flower:

@@ -10,9 +10,17 @@ using UnityEngine;
 public class SelfSoundTrigger : MonoBehaviour
 {
 	public AudioSource audioSource;
+
+
+    [Tooltip("If this is used instead, we'll play a random one from this roster")]
+    public AudioSource[] multiAudioSources;
+
+
     public float minPitch = 1.0f;
     public float maxPitch = 1.0f;
 
+    [Tooltip("If this is true, we're probably just using this to randomize pitch")]
+    public bool playOnAwake = false;
 
 
     Camera_Sound _cameraSound;
@@ -21,14 +29,20 @@ public class SelfSoundTrigger : MonoBehaviour
 	private void Start()
 	{
 		_cameraSound = Camera.main.GetComponent<Camera_Sound>();
+        if( playOnAwake )
+            PlaySound();
 	}
 
 	public void PlaySound()
     {
         if( _cameraSound.CanPlaySoundAtPosition( transform.position ) )
         {
-            audioSource.pitch = Random.Range(minPitch, maxPitch);
-            audioSource.Play();
+            AudioSource audio = audioSource;
+            if( multiAudioSources.Length > 0 )   // pick a random sound from multiple
+                audio = multiAudioSources[ Random.Range(0, multiAudioSources.Length) ];
+
+            audio.pitch = Random.Range(minPitch, maxPitch);
+            audio.Play();
         }
     }
 }
