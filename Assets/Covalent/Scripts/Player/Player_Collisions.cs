@@ -81,4 +81,17 @@ public class Player_Collisions : MonoBehaviour
         }
 	}
 
+
+
+    /// <summary>
+    /// Gets an arbitrary enabled collider
+    /// </summary>
+    public Collider2D GetEnabledCollider()
+    {
+        foreach( Collider2D coll in colliders )
+            if( coll.enabled )
+                return coll;
+        return null;
+    }
+
 }
