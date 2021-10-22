@@ -732,6 +732,7 @@ MonoBehaviour:
   playerCollisions: {fileID: 5217942367510331885}
   playerMovement: {fileID: 8723383788808815926}
   playerHop: {fileID: 2999592731245700905}
+  skeletonMecanim: {fileID: 0}
   anim: {fileID: 2282081113195783074}
   hearts: {fileID: 1049407748}
   splash_feet: {fileID: 7332927974134894237}
@@ -784,6 +785,8 @@ MonoBehaviour:
   seatSortingBias: 1
   collisionHeight: 2.2
   hopProgress: 0
+  hoppedInPlace: 0
+  stifleHop: 0
 --- !u!1 &2481279366892013452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1457,7 @@ MonoBehaviour:
   playerAgora: {fileID: 4753401094386036590}
   playerHop: {fileID: 2999592731245700905}
   playerAlternateMovements: {fileID: 3423532178932913422}
+  playerSounds: {fileID: 0}
   spinePlayerController: {fileID: 8804191198712331188}
   playerName: {fileID: 2481279367525578877}
   playerName_Black: {fileID: 1672433190}
@@ -1588,6 +1592,7 @@ MonoBehaviour:
   isMine: 0
   colliders:
   - {fileID: 2056266962552226213}
+  playerAlternateMovements: {fileID: 0}
   topHearts: 0
   botHearts: 0
   onBeach: 0
@@ -1747,11 +1752,13 @@ MonoBehaviour:
   - maxSpeed: 30
     useAcceleration: 0
     acceleration: 0
+    drag: 0
     layer: 12
     collider: {fileID: 2056266962552226213}
   - maxSpeed: 5
     useAcceleration: 0
     acceleration: 0
+    drag: 0
     layer: 8
     collider: {fileID: 798382551825579044}
 --- !u!1 &6105161519920765915

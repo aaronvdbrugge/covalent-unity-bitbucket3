@@ -7,10 +7,11 @@ using UnityEngine.EventSystems;
 /// When this object gets OnPointerClick, it'll SendMessage "OnObjectClicked" to
 /// Camera.main with our own gameObject as the parameter.
 /// </summary>
-public class SendClicksToCamera : MonoBehaviour, IPointerClickHandler
+public class SendClicksToCamera : MonoBehaviour
 {
 	[Tooltip("If left blank we'll fetch Camera.main")]
 	public Camera myCamera;
+
 
 	void Start()
 	{
@@ -18,11 +19,11 @@ public class SendClicksToCamera : MonoBehaviour, IPointerClickHandler
 			myCamera = Camera.main;
 	}
 
-	public void OnPointerClick(PointerEventData pointerEventData)
+	public void OnMyTouchDown(MyTouch my_touch)
 	{
 		myCamera.SendMessage("OnObjectClicked", gameObject);
 
 		// Also allow any other scripts on this object to respond
-        SendMessage("OnThisClicked", SendMessageOptions.DontRequireReceiver);
+		SendMessage("OnThisClicked", SendMessageOptions.DontRequireReceiver);
 	} 
 }
