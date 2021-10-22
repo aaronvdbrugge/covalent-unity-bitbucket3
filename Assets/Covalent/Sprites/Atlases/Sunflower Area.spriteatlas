@@ -58,8 +58,50 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 99f71f40e46bc014e94157ee8ae3eddd, type: 3}
+  - {fileID: 21300000, guid: 38456533527235a41b3e793598f9ceab, type: 3}
+  - {fileID: 21300000, guid: 0ef9bc63fdde13243a2be7f4a5913e74, type: 3}
+  - {fileID: 21300000, guid: 453db916562be4a408d0559ab1f2aba0, type: 3}
+  - {fileID: 21300000, guid: 7a324f76cc00542ccb7147b30652a563, type: 3}
+  - {fileID: 21300000, guid: 0798c5378a53bf14990a903dd64dc38a, type: 3}
+  - {fileID: 21300000, guid: f34d6e39322374bd7894ec38d84296dc, type: 3}
+  - {fileID: 21300000, guid: 1c7fcf59748d3c3438a7059415ebc520, type: 3}
+  - {fileID: 21300000, guid: afd9409985a9cd14fa9b3decb7b28288, type: 3}
+  - {fileID: 21300000, guid: 27c1b999153c31e478d6c4db54927753, type: 3}
+  - {fileID: 21300000, guid: 959e40c9b8a71264b8ba5cce341ab28c, type: 3}
+  - {fileID: 21300000, guid: 342219ea4bc9de942bf379cfe9cd7360, type: 3}
+  - {fileID: 21300000, guid: 05c1196bc85f46144b5fd62322575d9d, type: 3}
+  - {fileID: 21300000, guid: 195c798c17dce4070b5f36b952ae1d92, type: 3}
+  - {fileID: 21300000, guid: af0eb3accbfc34210af498c20be3334b, type: 3}
+  - {fileID: 21300000, guid: d24926ccd1c7a464a9f4fc025137736a, type: 3}
+  - {fileID: 21300000, guid: def9058d64a44f147bb17bbcf1e54f5b, type: 3}
+  - {fileID: 21300000, guid: 27a85a9e3f7fe43cfbbd3b3491d29647, type: 3}
+  - {fileID: 21300000, guid: 97b6b17f5faee4bf2b72e6bc2585aabb, type: 3}
+  - {fileID: 21300000, guid: da6504afb170e6a4580f1a6283aac3ce, type: 3}
+  - {fileID: 21300000, guid: 54c9c7bfd77d84f5facc4907f455a337, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - cutoutFlowerLeft
+  - sunflowers_fence
+  - daisies
+  - picnicTable_bottom
+  - cutoutHeartLeft
+  - sunflowerRed_nomound
+  - stones1
+  - sunflowerPicked_nomound
+  - empty_mound
+  - sunflowerPurple_nomound
+  - picnicTable_top
+  - sunflowerOrange_nomound
+  - sprout_nomound
+  - stones2
+  - cutoutHeartRight
+  - sunflowerYellow_nomound
+  - cushion
+  - picnicBlanket
+  - fenceStone_right
+  - cutoutFlowerRight
+  - fenceStone_left
   m_RenderDataMap: {}
   m_Tag: Sunflower Area
   m_IsVariant: 0

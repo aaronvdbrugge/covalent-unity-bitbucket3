@@ -32,7 +32,6 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 85de01ffe68ee4fba914c19be32db93a, type: 3}
     - {fileID: 2800000, guid: 1b3921ed0c27efe4ca1c2e250ee68d37, type: 3}
     - {fileID: 2800000, guid: 2cf356cd7187c1041b85fcc4e2a5c534, type: 3}
     - {fileID: 2800000, guid: 34d4e137063e1134189aa6cae57dabe0, type: 3}
@@ -72,7 +71,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2cf356cd7187c1041b85fcc4e2a5c534, type: 3}
   - {fileID: 21300000, guid: 1b3921ed0c27efe4ca1c2e250ee68d37, type: 3}
   - {fileID: 21300000, guid: fd9361fea797e8342adc0a3225b25ab5, type: 3}
-  - {fileID: 21300000, guid: 85de01ffe68ee4fba914c19be32db93a, type: 3}
   m_PackedSpriteNamesToIndex:
   - kartPurple idle
   - lightSign_off
@@ -91,7 +89,6 @@ SpriteAtlas:
   - water stand
   - pyramid of tires
   - tirePile
-  - bench
   m_RenderDataMap: {}
   m_Tag: Go Karts
   m_IsVariant: 0
