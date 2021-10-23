@@ -24,10 +24,14 @@ public class Spine_Player_Controller : MonoBehaviour
     }
 
 
-	// Start is called before the first frame update
+	private void Awake()
+	{
+		PlayerSkinManager.Init(skeletonMecanim);
+	}
+
+
 	void Start()
     {
-        PlayerSkinManager.Init(skeletonMecanim);
 
         EventManager.StartListening("init_char_creator", Character_Creator_Startup);
         EventManager.StartListening("end_char_creator", Character_Creator_End);
