@@ -14,7 +14,7 @@ using System.Collections;
 /// duties of a Player object. This class still oversees them and handles some chores regarding Photon and
 /// disconnecting.
 /// </summary>
-public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCallback
+public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCallback
 {
     #region Variables
 

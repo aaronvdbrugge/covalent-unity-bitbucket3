@@ -94,7 +94,6 @@ public class Spine_Player_Controller : MonoBehaviour
 
     public void SetFullSkin(int slot)
     {
-        Debug.Log("Inside setskin");
         if (skeletonMecanim != null)
         {
             characterSkinSlot = slot;
