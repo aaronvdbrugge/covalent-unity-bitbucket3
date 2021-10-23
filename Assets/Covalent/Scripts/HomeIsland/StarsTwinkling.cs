@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Covalent.GameObjects
+namespace Covalent.HomeIsland
 {
 	public class StarsTwinkling : MonoBehaviour
 	{
