@@ -9,9 +9,15 @@ public class Spine_Player_Controller : MonoBehaviourPun
 {
     public SkeletonMecanim skeletonMecanim;
     public MeshRenderer mesh;
+
     Skin characterSkin;
     public int characterSkinSlot = -1;
     [SpineSkin] public string baseSkin = "Bareskin";
+
+    [Tooltip("Spawned when the user changes skin!")]
+    public GameObject changeSkinEffectPrefab;
+
+
     private bool skinInit = false;
     private Vector3 char_position;
 
@@ -95,19 +101,23 @@ public class Spine_Player_Controller : MonoBehaviourPun
     public void SetFullSkin(int slot, bool network_replicate = true)
     {
         if (!network_replicate)  // just set skin immediately only on this client
-            SetFullSkinRPC(slot);
+            SetFullSkinRPC(slot, false);
         else
-            photonView.RPC("SetFullSkinRPC", RpcTarget.All, new object[]{ slot });
+            photonView.RPC("SetFullSkinRPC", RpcTarget.All, new object[]{ slot, true });
     }
 
 
     [PunRPC]
-    void SetFullSkinRPC(int slot)
+    void SetFullSkinRPC(int slot, bool fx)
     {
         characterSkinSlot = slot;
         skeletonMecanim.skeleton.SetSkin(PlayerSkinManager.fullSkins[slot]);
         skeletonMecanim.skeleton.SetToSetupPose();
         mesh.enabled = true;
+
+		// Spawn fx!
+        if( fx) 
+		    Instantiate(changeSkinEffectPrefab, transform.position, Quaternion.identity);
     }
 
 

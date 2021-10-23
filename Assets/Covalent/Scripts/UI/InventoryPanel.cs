@@ -15,12 +15,14 @@ public class InventoryPanel : MonoBehaviour
 	[Tooltip("Will Instantiate cells here")]
 	public Transform cellLayout;
 
+	[Tooltip("Prevents them from spamming it too crazily")]
+	public float cellTapCooldownTime = 0.33f;
 
 
 	List<InventoryCell> _skinCells = new List<InventoryCell>();
 
 	int _skinWhenEnabled = 0;
-
+	float _cellTapCooldown = 0;
 
 	private void Start()
 	{
@@ -53,14 +55,19 @@ public class InventoryPanel : MonoBehaviour
 	/// </summary>
 	public void CellTapped(InventoryCell cell)
 	{
-		//Deselect currently selected skin
-		_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = false;
+		if( _cellTapCooldown <= 0 )
+		{
+			_cellTapCooldown = cellTapCooldownTime;
 
-		// Set the player skin to the index of the tapped cell.
-		Player_Controller_Mobile.mine.spinePlayerController.SetFullSkin( cell.skinIndex );
+			//Deselect currently selected skin
+			_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = false;
 
-		//Select newly selected skin
-		_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = true;
+			// Set the player skin to the index of the tapped cell.
+			Player_Controller_Mobile.mine.spinePlayerController.SetFullSkin( cell.skinIndex );
+
+			//Select newly selected skin
+			_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = true;
+		}
 	}
 
 
@@ -72,5 +79,8 @@ public class InventoryPanel : MonoBehaviour
 		CellTapped( _skinCells[ _skinWhenEnabled ] );
 	}
 
-
+	private void FixedUpdate()
+	{
+		_cellTapCooldown = Mathf.Max(0, _cellTapCooldown - Time.fixedDeltaTime );
+	}
 }

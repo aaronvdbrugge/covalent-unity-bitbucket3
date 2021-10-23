@@ -700,6 +700,8 @@ MonoBehaviour:
   mesh: {fileID: 2282081113195783097}
   characterSkinSlot: -1
   baseSkin: Bareskin
+  changeSkinEffectPrefab: {fileID: 3837052520409508336, guid: ca7c62ca55cdfec4a800201dd21e26c0,
+    type: 3}
 --- !u!114 &3276797820974030301
 MonoBehaviour:
   m_ObjectHideFlags: 0
