@@ -52,7 +52,7 @@ public class SlidingUIPanel : MonoBehaviour
 			if( doSlideIn )
 				_slideProgress = Mathf.Min(1, _slideProgress + Time.deltaTime / slideTime);
 			else 
-				_slideProgress = Mathf.Max(1, _slideProgress - Time.deltaTime / slideTime);
+				_slideProgress = Mathf.Max(0, _slideProgress - Time.deltaTime / slideTime);
 
 			float eased = EasingFunction.GetEasingFunction( slideEase )(0, 1, _slideProgress);
 			_rectTransform.anchoredPosition = Vector2.Lerp( _anchoredPositionOriginal + slideDist, _anchoredPositionOriginal, eased);
