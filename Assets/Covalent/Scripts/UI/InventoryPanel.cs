@@ -16,7 +16,10 @@ public class InventoryPanel : MonoBehaviour
 	public Transform cellLayout;
 
 
+
 	List<InventoryCell> _skinCells = new List<InventoryCell>();
+
+	int _skinWhenEnabled = 0;
 
 
 	private void Start()
@@ -39,6 +42,12 @@ public class InventoryPanel : MonoBehaviour
 	}
 
 
+	private void OnEnable()
+	{
+		_skinWhenEnabled = Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot;  // in case they cancel
+	}
+
+
 	/// <summary>
 	/// Called from InventoryCell
 	/// </summary>
@@ -52,6 +61,15 @@ public class InventoryPanel : MonoBehaviour
 
 		//Select newly selected skin
 		_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = true;
+	}
+
+
+	/// <summary>
+	/// Goes back to the skin we had when we were enabled
+	/// </summary>
+	public void Cancel()
+	{
+		CellTapped( _skinCells[ _skinWhenEnabled ] );
 	}
 
 
