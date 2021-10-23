@@ -7,6 +7,7 @@ namespace Covalent.HomeIsland
 		[SerializeField] private Material glowMaterial;
 		[SerializeField] private Color baseColor;
 		[SerializeField] private Vector2 intensityRange;
+		[SerializeField] private Vector2 distanceMathRange;
 
 		private bool isActive;
 		private readonly int outlineColor = Shader.PropertyToID("OutlineColor");
@@ -33,8 +34,15 @@ namespace Covalent.HomeIsland
 		{
 			float distance = Vector2.Distance(Player_Controller_Mobile.mine.transform.position, transform.position);
 
-			Debug.Log(distance); // 4.2 .... 1
-			float intensity = intensityRange.y / distance;
+			// Set neutralDistance to the min/max values used to affect intensity
+			float neutralDistance = distance;
+			if (neutralDistance < distanceMathRange.x)
+				neutralDistance = distanceMathRange.x;
+			else if (neutralDistance > distanceMathRange.y)
+				neutralDistance = distanceMathRange.y;
+
+			float intensity = MyMath.ConvertRange(distanceMathRange.x, distanceMathRange.y, intensityRange.y,
+				intensityRange.x, neutralDistance);
 
 			float factor = Mathf.Pow(2, intensity);
 			Color newColor = new Color(baseColor.r * factor, baseColor.g * factor, baseColor.b * factor, baseColor.a);

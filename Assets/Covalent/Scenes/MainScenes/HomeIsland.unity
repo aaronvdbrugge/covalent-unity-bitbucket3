@@ -11855,6 +11855,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: 2a0be62fd3d41ab44aed7eb02e901a53, type: 2}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   intensityRange: {x: 7, y: 10}
+  distanceMathRange: {x: 1, y: 4.2}
 --- !u!60 &425630564
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24292,6 +24293,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: fe2a7a5f19e6ab440afd8e59a80b9730, type: 2}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   intensityRange: {x: 7, y: 10}
+  distanceMathRange: {x: 1, y: 4.2}
 --- !u!60 &845037818
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25141,6 +25143,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: 94d7f960b7b1ba849a446b7c11462d47, type: 2}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   intensityRange: {x: 7, y: 10}
+  distanceMathRange: {x: 1, y: 4.2}
 --- !u!60 &867720032
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -56753,6 +56756,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: 5a3bf9dc7dd8b71499b9dea68f7c9c88, type: 2}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   intensityRange: {x: 7, y: 10}
+  distanceMathRange: {x: 1, y: 4.2}
 --- !u!60 &1982790924
 PolygonCollider2D:
   m_ObjectHideFlags: 0
