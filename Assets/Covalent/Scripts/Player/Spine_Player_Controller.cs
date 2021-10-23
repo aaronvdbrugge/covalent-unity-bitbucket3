@@ -57,6 +57,12 @@ public class Spine_Player_Controller : MonoBehaviourPun
     {
         if (characterSkinSlot != -1 && skeletonMecanim != null && !skinInit)
         {
+            // NOTE: ensure character skin slot is correct
+		    if( photonView.Owner.CustomProperties.ContainsKey("CharacterSkinSlot") )
+		        characterSkinSlot = (int)photonView.Owner.CustomProperties["CharacterSkinSlot"];
+
+
+
             skinInit = true;
             SetFullSkin(characterSkinSlot, false);   // no replication needed, for now... characterSkinSlot is set from instantiation
             //SetFullSkin(characterSkinSlot);
@@ -74,6 +80,11 @@ public class Spine_Player_Controller : MonoBehaviourPun
 
         Debug.Log("Instantiating Spine Player Controller with skin " + (int)instantiationData[0]);
         characterSkinSlot = (int)instantiationData[0];
+
+        // Ensure this will persist even if new players join
+		ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable();   // Record this sitpoint's ID in the player's properties.
+		hash["CharacterSkinSlot"] = characterSkinSlot;
+        photonView.Owner.SetCustomProperties(hash);
     }
 
     public void Character_Creator_Startup()
@@ -104,6 +115,11 @@ public class Spine_Player_Controller : MonoBehaviourPun
             SetFullSkinRPC(slot, false);
         else
             photonView.RPC("SetFullSkinRPC", RpcTarget.All, new object[]{ slot, true });
+
+        // Ensure this will persist even if new players join
+		ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable();   // Record this sitpoint's ID in the player's properties.
+		hash["CharacterSkinSlot"] = slot;
+        photonView.Owner.SetCustomProperties(hash);
     }
 
 
