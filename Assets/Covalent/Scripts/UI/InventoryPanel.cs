@@ -16,6 +16,9 @@ public class InventoryPanel : MonoBehaviour
 	public Transform cellLayout;
 
 
+	List<InventoryCell> _skinCells = new List<InventoryCell>();
+
+
 	private void Start()
 	{
 		for( int i=0; i<PlayerSkinManager.fullSkins.Count; i++ )
@@ -23,10 +26,32 @@ public class InventoryPanel : MonoBehaviour
 			GameObject go = Instantiate( inventoryCellPrefab, cellLayout );
 			go.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0);   // Ensure pivot is on the bottom, this is necessary for proper mesh showing / hiding
 			go.GetComponent<HideChildAboveTransform>().target = transform;    // hide meshes when they go above the top of this panel
-			SkeletonMecanim sm = go.GetComponentInChildren<SkeletonMecanim>();
-			sm.skeleton.SetSkin(PlayerSkinManager.fullSkins[i]);    // Set the skin of the mesh!
-			sm.skeleton.SetToSetupPose();
+			InventoryCell cell = go.GetComponent<InventoryCell>();
+			cell.SetSkin(PlayerSkinManager.fullSkins[i]);    // Set the skin of the mesh!
+			cell.selected = Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot == i;   // Select the skin we're currently using
+
+			cell.inventoryPanel = this;
+			cell.skinIndex = i;
+			cell.cellIndex = i;   // for now these are one and the same, but if we start storing non-skin items here in the future, cellIndex may differ from skinIndex
+
+			_skinCells.Add(cell);   // note that if this was an item, we wouldn't add it here
 		}
+	}
+
+
+	/// <summary>
+	/// Called from InventoryCell
+	/// </summary>
+	public void CellTapped(InventoryCell cell)
+	{
+		//Deselect currently selected skin
+		_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = false;
+
+		// Set the player skin to the index of the tapped cell.
+		Player_Controller_Mobile.mine.spinePlayerController.SetFullSkin( cell.skinIndex );
+
+		//Select newly selected skin
+		_skinCells[ Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot ].selected = true;
 	}
 
 
