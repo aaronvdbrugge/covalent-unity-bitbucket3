@@ -5,7 +5,7 @@ using Spine;
 using Spine.Unity;
 using UnityEngine;
 
-public class Spine_Player_Controller : MonoBehaviour
+public class Spine_Player_Controller : MonoBehaviourPun
 {
     public SkeletonMecanim skeletonMecanim;
     public MeshRenderer mesh;
@@ -52,7 +52,7 @@ public class Spine_Player_Controller : MonoBehaviour
         if (characterSkinSlot != -1 && skeletonMecanim != null && !skinInit)
         {
             skinInit = true;
-            SetFullSkin(characterSkinSlot);
+            SetFullSkin(characterSkinSlot, false);   // no replication needed, for now... characterSkinSlot is set from instantiation
             //SetFullSkin(characterSkinSlot);
             //this.photonView.RPC("sendSkin", Photon.Pun.RpcTarget.All, characterSkinSlot);
         }
@@ -92,18 +92,25 @@ public class Spine_Player_Controller : MonoBehaviour
     }
     
 
-    public void SetFullSkin(int slot)
+    public void SetFullSkin(int slot, bool network_replicate = true)
     {
-        if (skeletonMecanim != null)
-        {
-            characterSkinSlot = slot;
-            skeletonMecanim.skeleton.SetSkin(PlayerSkinManager.fullSkins[slot]);
-            skeletonMecanim.skeleton.SetToSetupPose();
-            //setFullSkinCalled = true;   //due to warning, assigned but never used. -seb
-            mesh.enabled = true;
-        }
-        
+        if (!network_replicate)  // just set skin immediately only on this client
+            SetFullSkinRPC(slot);
+        else
+            photonView.RPC("SetFullSkinRPC", RpcTarget.All, new object[]{ slot });
     }
+
+
+    [PunRPC]
+    void SetFullSkinRPC(int slot)
+    {
+        characterSkinSlot = slot;
+        skeletonMecanim.skeleton.SetSkin(PlayerSkinManager.fullSkins[slot]);
+        skeletonMecanim.skeleton.SetToSetupPose();
+        mesh.enabled = true;
+    }
+
+
 
     public void ChangeColor(int r, int g, int b)
     {
