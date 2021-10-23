@@ -1150,11 +1150,6 @@ PrefabInstance:
       propertyPath: Connecting
       value: 
       objectReference: {fileID: 1519566762596406384}
-    - target: {fileID: 7827827696263294501, guid: d875a50a4f490c7468e288d899e08437,
-        type: 3}
-      propertyPath: roomNameBase
-      value: 0TEST_BUILD7_
-      objectReference: {fileID: 0}
     - target: {fileID: 7827827696463674634, guid: d875a50a4f490c7468e288d899e08437,
         type: 3}
       propertyPath: m_RootOrder
