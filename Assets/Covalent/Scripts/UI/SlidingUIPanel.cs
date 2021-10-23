@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 /// <summary>
 /// Sliding UI panel which can slide in from outside the screen.
@@ -19,16 +19,33 @@ public class SlidingUIPanel : MonoBehaviour
 	public Vector2 slideDist;
 
 
+	public UnityEvent onSlideIn;
+	public UnityEvent onSlideAway;
+
+
+
+
 	[Header("Runtime")]
 	[Tooltip("Set this to true during runtime to slide it out. You can also call the SlideIn and SlideAway functions. Note we'll disable ourselves when fully slid out, so you need to enable as well")]
 	public bool doSlideIn = false;   
 
 	public void SlideIn()
 	{
-		doSlideIn = true;
+		if( !doSlideIn )
+		{
+			doSlideIn = true;
+			onSlideIn.Invoke();
+		}
 		gameObject.SetActive(true);
 	}
-	public void SlideAway() => doSlideIn = false;
+	public void SlideAway()
+	{
+		if( doSlideIn )
+		{
+			doSlideIn = false;
+			onSlideAway.Invoke();
+		}
+	}
 
 
 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5791750438104402922}
   - component: {fileID: 363203770440938786}
   - component: {fileID: 8351663955967935433}
+  - component: {fileID: 2296436562144470215}
   m_Layer: 5
   m_Name: Inventory panel
   m_TagString: Untagged
@@ -126,6 +127,36 @@ MonoBehaviour:
   slideTime: 0.5
   slideEase: 10
   slideDist: {x: 0, y: -900}
+  onSlideIn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2296436562144470215}
+        m_TargetAssemblyTypeName: CameraSoundTrigger, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: inventory_open
+          m_BoolArgument: 0
+        m_CallState: 2
+  onSlideAway:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2296436562144470215}
+        m_TargetAssemblyTypeName: CameraSoundTrigger, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: inventory_close
+          m_BoolArgument: 0
+        m_CallState: 2
   doSlideIn: 0
 --- !u!114 &363203770440938786
 MonoBehaviour:
@@ -142,6 +173,7 @@ MonoBehaviour:
   inventoryCellPrefab: {fileID: 1620770202636658476, guid: 714c6d8c372f4324bafdf39c9e6eb689,
     type: 3}
   cellLayout: {fileID: 2494060722715013021}
+  cellTapCooldownTime: 0.33
 --- !u!114 &8351663955967935433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   others: []
+--- !u!114 &2296436562144470215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311988252922314971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030877a3d992a0e4fb855db8c576b4ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignorePosition: 1
 --- !u!1 &549314427875022419
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +418,7 @@ RectTransform:
   m_Father: {fileID: 5597381643227540685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.32573307}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1303,8 +1348,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2038884999043732952}
   m_HandleRect: {fileID: 3507649535250060983}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.67426693
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1579,7 +1624,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000061035156}
-  m_SizeDelta: {x: 0, y: 778}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6374326359932888332
 MonoBehaviour:
