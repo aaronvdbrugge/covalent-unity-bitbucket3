@@ -19,6 +19,10 @@ public class SelfSoundTrigger : MonoBehaviour
     public float minPitch = 1.0f;
     public float maxPitch = 1.0f;
 
+    public bool changeVolume = false;
+    public float minVolume = 0.5f;
+    public float maxVolume = 0.5f;
+
     [Tooltip("If this is true, we're probably just using this to randomize pitch")]
     public bool playOnAwake = false;
 
@@ -42,6 +46,10 @@ public class SelfSoundTrigger : MonoBehaviour
                 audio = multiAudioSources[ Random.Range(0, multiAudioSources.Length) ];
 
             audio.pitch = Random.Range(minPitch, maxPitch);
+
+            if( changeVolume )
+                audio.volume = Random.Range(minVolume, maxVolume);
+
             audio.Play();
         }
     }

@@ -23,7 +23,7 @@ SpriteAtlas:
     platformSettings:
     - serializedVersion: 3
       m_BuildTarget: DefaultTexturePlatform
-      m_MaxTextureSize: 2048
+      m_MaxTextureSize: 512
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 1
@@ -47,6 +47,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
     - {fileID: 2800000, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
     - {fileID: 2800000, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+    - {fileID: 2800000, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+    - {fileID: 2800000, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -63,6 +65,37 @@ SpriteAtlas:
   - {fileID: 7700896175727185420, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
   - {fileID: -8033826313295663292, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
   - {fileID: 7558787311918388234, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -5640824496689385196, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -5681442319201005391, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 8235375887698954559, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 4313631073956068715, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 7825277592319955856, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -6409843506098707379, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 1114717105754173595, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -670864955112196124, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -8834979269855234959, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -3050040181246100834, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -2317144089043575405, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -7945989306045306485, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -6465624677506570212, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 2320810511888671316, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -7166778122740976815, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 4532650370109117578, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -3214601837269280861, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 8685018483622113728, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 1632276898092265251, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 2699650619827913391, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -1299546008498443104, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -6577775102923145646, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -4764916031526477174, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -4132551658144889564, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 1935524768435710537, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 6556710725808846970, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -3927307804131661835, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 7540569968115721176, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -7649789400929899902, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -8377046746197951666, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -6160728916492866337, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
   - {fileID: -6488498725036796166, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
   - {fileID: 7250945442664100390, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
   - {fileID: -1407864739098554323, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
@@ -97,6 +130,37 @@ SpriteAtlas:
   - 3x_butterflyPink_flap_0
   - 3x_butterflyPink_flap_3
   - 3x_butterflyPink_flap_2
+  - 3x_crowHeadTurn_17
+  - 3x_crowHeadTurn_19
+  - 3x_crowHeadTurn_18
+  - 3x_crowHeadTurn_32
+  - 3x_crowHeadTurn_31
+  - 3x_crowHeadTurn_30
+  - 3x_crowHeadTurn_6
+  - 3x_crowHeadTurn_7
+  - 3x_crowHeadTurn_4
+  - 3x_crowHeadTurn_5
+  - 3x_crowHeadTurn_2
+  - 3x_crowHeadTurn_3
+  - 3x_crowHeadTurn_0
+  - 3x_crowHeadTurn_9
+  - 3x_crowHeadTurn_28
+  - 3x_crowHeadTurn_29
+  - 3x_crowHeadTurn_20
+  - 3x_crowCaw_11
+  - 3x_crowCaw_13
+  - 3x_crowCaw_12
+  - 3x_crowCaw_15
+  - 3x_crowCaw_14
+  - 3x_crowCaw_17
+  - 3x_crowCaw_16
+  - 3x_crowCaw_18
+  - 3x_crowCaw_2
+  - 3x_crowCaw_3
+  - 3x_crowCaw_6
+  - 3x_crowCaw_7
+  - 3x_crowCaw_4
+  - 3x_crowCaw_5
   - 3x_butterflyOrange_flap_7
   - 3x_butterflyOrange_flap_6
   - 3x_butterflyOrange_flap_4
