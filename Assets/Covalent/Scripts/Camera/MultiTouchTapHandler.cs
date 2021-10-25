@@ -157,8 +157,8 @@ public class MultiTouchTapHandler : MonoBehaviour
 
             if( results.Count > 0 )  // Something is blocking the position!
             {
-                foreach (var result in results )  // I'm not sure why it's a list... can't it only hit one thing?
-                    result.gameObject.SendMessage("OnMyTouchDown", myTouches[touch.fingerId], SendMessageOptions.DontRequireReceiver);
+               // We only care about the top object hit by this raycast.
+                results[0].gameObject.SendMessage("OnMyTouchDown", myTouches[touch.fingerId], SendMessageOptions.DontRequireReceiver);
 
                 return true;
             }
