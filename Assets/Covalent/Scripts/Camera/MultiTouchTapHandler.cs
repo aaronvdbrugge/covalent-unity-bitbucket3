@@ -147,6 +147,9 @@ public class MultiTouchTapHandler : MonoBehaviour
     {
         foreach( var gr in graphicRaycasters )
         {
+            if( !gr.gameObject.activeInHierarchy )   // don't allow raycasts on inactive canvases
+                continue;
+
             var ped = new PointerEventData(eventSystem);
             ped.position = touch.position;
             List<RaycastResult> results = new List<RaycastResult>();

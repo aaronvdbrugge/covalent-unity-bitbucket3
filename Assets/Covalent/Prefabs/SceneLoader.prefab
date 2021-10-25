@@ -1657,6 +1657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sign Text
       objectReference: {fileID: 0}
+    - target: {fileID: 8545027371082522971, guid: f0b87422508854f4ea6ae6c5e70479b1,
+        type: 3}
+      propertyPath: uiCamera
+      value: 
+      objectReference: {fileID: 4809459024560666342}
     - target: {fileID: 8578069952468083845, guid: f0b87422508854f4ea6ae6c5e70479b1,
         type: 3}
       propertyPath: m_Mesh
