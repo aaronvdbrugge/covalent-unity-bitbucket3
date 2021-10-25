@@ -59,10 +59,19 @@ public class MyOnScreenStick : MonoBehaviour
 
     void OnMyTouchDown( MyTouch my_touch )
     {
-        myTouch = my_touch;
-
         // this means it was within the rectangular bounds, but ensure it was actually within the smaller circular bounds.
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, my_touch.touch.position, uiCamera, out var position);
+        myTouch = my_touch;
+        
+        Vector2 position;
+        if( !uiCamera )
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, my_touch.touch.position, uiCamera, out position);
+        else   // Use UICamera to do the calculation...
+        {
+            Vector3 world_position = uiCamera.ScreenToWorldPoint( my_touch.touch.position );
+            position = transform.worldToLocalMatrix.MultiplyPoint( world_position );
+        }
+
+
         var delta = position - m_StartPos;   // Difference between touch position and the center of this stick
 
 
