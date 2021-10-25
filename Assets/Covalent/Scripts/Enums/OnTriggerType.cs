@@ -1,9 +1,8 @@
-using UnityEngine;
-
-namespace Covalent.Scripts.Enums
+namespace Covalent
 {
-	public class OnTriggerType : MonoBehaviour
+	public enum OnTriggerType
 	{
-		
+		OnTriggerEnter,
+		OnTriggerExit
 	}
 }

@@ -28,4 +28,10 @@ public static class MyMath
 		float scale = (newEnd - newStart) / (originalEnd - originalStart);
 		return (newStart + ((value - originalStart) * scale));
 	}
+
+	public static float Pulse(float time, float frequency)
+	{
+		float pi = 3.14f;
+		return (float) (0.5 * (1 + Mathf.Sin(2 * pi * frequency * time)));
+	}
 }
