@@ -101,11 +101,6 @@ public class MultiTouchTapHandler : MonoBehaviour
         {
             if( Input.GetMouseButton(0) && fakeTouch.phase == TouchPhase.Ended )   // simulate touches in editor
             {
-                if( Input.GetKey(KeyCode.LeftControl) )
-                {
-                    int _DEBUG = 0;
-                }
-
                 fakeTouch.phase = TouchPhase.Began;
                 fakeTouch.position = Input.mousePosition;
                 ProcessNewTouch( fakeTouch );
