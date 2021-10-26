@@ -284,6 +284,16 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.MuteLocalAudioStream( muted );
     }
 
+
+    /// <summary>
+    /// Called from mute toggle button
+    /// </summary>
+    public void MuteToggle( Toggle mute_toggle )
+    {
+        mute( mute_toggle.isOn );
+    }
+
+
     public void JoinChannel(string name)
     {
         if( joinChatInEditor || !Application.isEditor )
