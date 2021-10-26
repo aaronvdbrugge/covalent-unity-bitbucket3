@@ -8,8 +8,17 @@ using UnityEngine;
 /// </summary>
 public class PopupManager : MonoBehaviour
 {
+    [Header("Settings")]
+    [Tooltip("If non empty, ShowPopup on Start")]
+    public string startWithPopup = "";  
+
+
+    [Header("Runtime")]
     [Tooltip("Empty string means no popup")]
     public string curPopup;
+
+    [Tooltip("Popups aren't required to have this component. Can be null")]
+    public PopupWindow curPopupWindow;
 
 
     /// <summary>
@@ -20,6 +29,9 @@ public class PopupManager : MonoBehaviour
 	private void Start()
 	{
 		_closePanel = transform.Find("close").gameObject;
+
+        if( !string.IsNullOrEmpty(startWithPopup))
+            ShowPopup(startWithPopup);
 	}
 
 
@@ -34,7 +46,11 @@ public class PopupManager : MonoBehaviour
         if( !string.IsNullOrEmpty(popup_name) )
         {
             // Show by name
-            transform.Find(popup_name).gameObject.SetActive(true);
+            GameObject popup = transform.Find(popup_name).gameObject;
+            popup.SetActive(true);
+
+            // Does it have anby special settings?
+            curPopupWindow = popup.GetComponent<PopupWindow>();
 
             // Show the BG raycaster
             _closePanel.SetActive(true);
@@ -43,6 +59,15 @@ public class PopupManager : MonoBehaviour
 
         //Remember what panel we're on.
         curPopup = popup_name;
+    }
+
+
+    public void OnTapBackground()
+    {
+        //Only close the popup if it's "tap outtable"
+        if( curPopupWindow != null && !curPopupWindow.tapOuttable )
+            return;
+        ShowPopup("");   // close current popup
     }
 
 
