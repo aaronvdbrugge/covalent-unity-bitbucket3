@@ -23,19 +23,19 @@ namespace Plugins.Android
         
         public void _playerDidMute(uint player_id)
         {
-            messageProxy.Call("playerDidMute", player_id);   
+            messageProxy.Call("playerDidMute", (int) player_id);   
         }
         
         public void _playerDidUnmute(uint player_id) {
-            messageProxy.Call("playerDidUnmute", player_id); 
+            messageProxy.Call("playerDidUnmute", (int) player_id); 
         }
         
         public void _playerStartedTalking(uint player_id) {
-            messageProxy.Call("playerStartedTalking", player_id);
+            messageProxy.Call("playerStartedTalking", (int) player_id);
         }
         
         public void _playerEndedTalking(uint player_id) {
-            messageProxy.Call("playerEndedTalking", player_id);
+            messageProxy.Call("playerEndedTalking", (int) player_id);
         }
         
         public void _playerDidLeaveGame() {

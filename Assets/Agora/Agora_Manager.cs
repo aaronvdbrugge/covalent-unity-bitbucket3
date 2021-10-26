@@ -127,7 +127,7 @@ public class Agora_Manager : MonoBehaviour
 #if PLATFORM_ANDROID
          if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
          {
-             Permission.RequestUserPermission(Permission.Camera);
+             Permission.RequestUserPermission(Permission.Microphone);
          }
 #elif UNITY_IOS
         StartCoroutine(requestMicrophone());
