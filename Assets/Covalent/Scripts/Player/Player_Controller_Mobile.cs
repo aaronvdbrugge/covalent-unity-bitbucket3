@@ -59,7 +59,7 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
 
     public static GameObject LocalPlayerInstance;
 
-    public TextMeshProUGUI playerName, playerName_Black;
+    public TMP_Text playerName;
 
     public Player_Class user_info;
 
@@ -193,7 +193,6 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
         object[] instantiationData = info.photonView.InstantiationData;
         string name = (string)instantiationData[1];
         playerName.text = name;
-        playerName_Black.text = name;
         Debug.Log("Inside Callback the name passed is: " + name + ".");
 
 

@@ -9,8 +9,8 @@ using UnityEngine;
 /// </summary>
 public class SignReader : MonoBehaviour
 {
-    [Tooltip("Enable on read sign")]
-    public GameObject signPanel;
+    [Tooltip("So we can open the popup")]
+    public PopupManager popupManager;
 
     [Tooltip("Sign text displayed here")]
     public TMP_Text uiText;
@@ -18,6 +18,6 @@ public class SignReader : MonoBehaviour
     public void ReadSignText(string sign_text)
     {
         uiText.text = sign_text;
-        signPanel.SetActive(true);
+        popupManager.ShowPopup( "sign_read" );
     }
 }

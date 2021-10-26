@@ -94,7 +94,11 @@ public class Dateland_Network : Network_Manager
             _failureToJoinRoom( error );
     }
 
-    private static void playerDidLeaveGame()
+    /// <summary>
+    /// NOTE: Call this when the player pushes a button indicating they actually want to leave.
+    /// Native should handle the rest
+    /// </summary>
+    public static void playerDidLeaveGame()
     { 
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
