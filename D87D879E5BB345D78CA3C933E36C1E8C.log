@@ -1,0 +1,100 @@
+INFO    22:15:59:955  26840; [dns] parsed ip 54.205.123.178
+INFO    22:15:59:955  26840; [dns] parsed ip 54.214.236.11
+INFO    22:15:59:955  26840; [dns] parsed ip 40.124.38.186
+INFO    22:15:59:955  26840; [ap] onParsedDns succeed, ap3-tls.agora.io
+INFO    22:15:59:955  26840; [dns] parsed ip 50.18.20.222
+INFO    22:15:59:955  26840; [dns] parsed ip 54.205.123.178
+INFO    22:15:59:955  26840; [dns] parsed ip 54.214.236.11
+INFO    22:15:59:955  26840; [dns] parsed ip 40.124.38.186
+INFO    22:15:59:955  26840; [rlbs] onParsedDns ap3-tls.agora.io with err 0, 50.18.20.222, 54.205.123.178, 54.214.236.11, 40.124.38.186, 
+INFO    22:15:59:955  26840; [dns] parsed ip 104.193.88.123
+INFO    22:15:59:955  26840; [dns] parsed ip 104.193.88.77
+INFO    22:15:59:955  26840; [nt/dt] domain is www.baidu.com, ip is 104.193.88.77
+INFO    22:15:59:955  26840; [nt/dt] domain is www.baidu.com, ip is 104.193.88.123
+INFO    22:15:59:982  26840; [remote:128.1.193.215:8130] receive server hello piece id: 0, 1/10, not complete
+INFO    22:15:59:982  26840; [remote:128.1.193.215:8130] receive server hello piece id: 1, 2/10, not complete
+INFO    22:15:59:982  26840; [remote:128.1.193.215:8130] receive server hello piece id: 2, 3/10, not complete
+INFO    22:15:59:982  26840; [remote:128.1.193.215:8130] receive server hello piece id: 3, 4/10, not complete
+INFO    22:15:59:982  26840; [remote:128.1.193.215:8130] receive server hello piece id: 4, 5/10, complete
+INFO    22:15:59:986  26840; [remote:128.1.193.215:8130] create connection 000001F3254964E0, self initial seq: 6548543, initial rtt: 37ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:15:59:986  26840; [remote:128.1.193.215:8130] create session 000001F3DF2A0BD0
+INFO    22:15:59:986  26840; [rs] connected to 128.1.193.215:8130 connection type: aut
+INFO    22:15:59:986  26840; [rs] ResendReportItems report item map size: 3
+INFO    22:15:59:986  26840; destroy dangling client connection 000001F580E94B40
+INFO    22:16:00:026  26840; [remote:50.17.126.121:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    22:16:00:026  26840; [remote:50.17.126.121:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    22:16:00:026  26840; [remote:50.17.126.121:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    22:16:00:026  26840; [remote:50.17.126.121:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    22:16:00:026  26840; [remote:50.17.126.121:8443] receive server hello piece id: 4, 5/10, complete
+INFO    22:16:00:030  26840; [remote:50.17.126.121:8443] create connection 000001F325490060, self initial seq: 4500817, initial rtt: 88ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:16:00:030  26840; [remote:50.17.126.121:8443] create session 000001F3DF2A0D90
+INFO    22:16:00:030  26840; [ap/aut] connected with 50.17.126.121:8443
+INFO    22:16:00:030  26840; destroy dangling client connection 000001F580E93C80
+INFO    22:16:00:106  26840; [ap/u] **responsed from 50.17.126.121:8443, TDS(64).
+INFO    22:16:00:106  26840; [ap] onAPTdsRes success with config: {"_store enable xdump since 3.4.6":["A",{"rtc.enable_xdump":true,"rtc.enable_xdump_file":true,"rtc.enable_xdump_upload":true},{"retention":"1d","store":true}],"_store DISABLE_DELAY_REXFER_
+INFO    22:16:00:106  26840; CacheManager: save cache to storage elapsed 0
+INFO    22:16:00:106  26840; [rp-tds-_store enable xdump since 3.4.6-A] {"rtc.enable_xdump":true,"rtc.enable_xdump_file":true,"rtc.enable_xdump_upload":true}
+INFO    22:16:00:107  26840; [rp-tds-_store DISABLE_DELAY_REXFER_WITH_JITTER80-A] {"rtc.video.rexfer_delay_enabled":false}
+INFO    22:16:00:107  26840; [rp-tds-_store Global: Disable New AVSync Mode for 3.4.X SDK-A] {"che.avsync.support_peer_solo":false,"che.avsync.support_solo":false}
+INFO    22:16:00:110  26840; [remote:52.58.56.244:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    22:16:00:110  26840; [remote:52.58.56.244:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    22:16:00:110  26840; [remote:52.58.56.244:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    22:16:00:111  26840; [remote:52.58.56.244:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    22:16:00:111  26840; [remote:52.58.56.244:8443] receive server hello piece id: 4, 5/10, complete
+INFO    22:16:00:114  26840; [remote:52.58.56.244:8443] create connection 000001F325494BC0, self initial seq: 9226658, initial rtt: 169ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:16:00:114  26840; [remote:52.58.56.244:8443] create session 000001F357A2CDC0
+INFO    22:16:00:114  26840; [remote:52.58.56.244:8443] destroy session 000001F357A2CDC0
+INFO    22:16:00:114  26840; destroy dangling client connection 000001F580E938D0
+INFO    22:16:00:114  26840; [remote:52.58.56.244:8443] destroy connection 000001F325494BC0
+INFO    22:16:00:114  26840; [remote:106.14.12.130:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    22:16:00:115  26840; [remote:106.14.12.130:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    22:16:00:115  26840; [remote:106.14.12.130:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    22:16:00:115  26840; [remote:106.14.12.130:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    22:16:00:115  26840; [remote:106.14.12.130:8443] receive server hello piece id: 4, 5/10, complete
+INFO    22:16:00:117  26840; [remote:106.14.12.130:8443] create connection 000001F325493F30, self initial seq: 14766118, initial rtt: 180ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:16:00:117  26840; [remote:106.14.12.130:8443] create session 000001F357A2D840
+INFO    22:16:00:117  26840; [rlbs] request rs list from 106.14.12.130:8443 with fake ch report_lbs_1635225360117.......
+INFO    22:16:00:117  26840; destroy dangling client connection 000001F580E94030
+INFO    22:16:00:120  26840; [remote:106.14.12.130:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    22:16:00:120  26840; [remote:106.14.12.130:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    22:16:00:120  26840; [remote:106.14.12.130:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    22:16:00:120  26840; [remote:106.14.12.130:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    22:16:00:121  26840; [remote:106.14.12.130:8443] receive server hello piece id: 4, 5/10, complete
+INFO    22:16:00:123  26840; [remote:106.14.12.130:8443] create connection 000001F325494BC0, self initial seq: 14013115, initial rtt: 183ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:16:00:123  26840; [remote:106.14.12.130:8443] create session 000001F357A2CC00
+INFO    22:16:00:123  26840; [remote:106.14.12.130:8443] destroy session 000001F357A2CC00
+INFO    22:16:00:123  26840; destroy dangling client connection 000001F580E968C0
+INFO    22:16:00:123  26840; [remote:106.14.12.130:8443] destroy connection 000001F325494BC0
+INFO    22:16:00:265  26840; [remote:50.17.126.121:8443] on connection close received, reason: 0, detail: 
+INFO    22:16:00:265  26840; [remote:50.17.126.121:8443] start time wait, duration: 2000 ms
+ERROR   22:16:00:265  26840; [ap] aut socket error with 50.17.126.121:8443
+INFO    22:16:00:265  26840; [remote:50.17.126.121:8443] destroy session 000001F3DF2A0D90
+INFO    22:16:00:265  26840; [remote:50.17.126.121:8443] destroy connection 000001F325490060
+INFO    22:16:00:294  26840; [rlbs] request rs list from 123.56.235.221:8443 with fake ch report_lbs_1635225360294.......
+INFO    22:16:01:079  26840; [rlbs] [report servers]: 128.1.75.151
+INFO    22:16:01:079  26840; [rlbs] [report servers]: 128.1.193.224
+INFO    22:16:01:079  26840; [rlbs] [report servers]: 128.14.196.249
+INFO    22:16:01:079  26840; [rlbs/t] responsed from 123.56.235.221:8443 with servers 128.1.75.151:8130
+INFO    22:16:01:079  26840; [rs] RefreshServerByPriority addr:  128.1.75.151:8130  priority:  3
+INFO    22:16:01:079  26840; [rs] RefreshServerByPriority addr:  128.1.193.224:8130  priority update to:  3
+INFO    22:16:01:079  26840; [rs] RefreshServerByPriority addr:  128.14.196.249:8130  priority:  3
+INFO    22:16:01:079  26840; create session builder 000001F33087B970
+INFO    22:16:01:079  26840; [remote:128.1.193.215:8130] destroy session 000001F3DF2A0BD0
+INFO    22:16:01:079  26840; [remote:128.1.193.215:8130] destroy connection 000001F3254964E0
+INFO    22:16:01:079  26840; [remote:106.14.12.130:8443] destroy session 000001F357A2D840
+INFO    22:16:01:079  26840; [remote:106.14.12.130:8443] destroy connection 000001F325493F30
+INFO    22:16:01:079  26840; create dangling client connection 000001F580E968C0
+INFO    22:16:01:082  26840; [remote:128.1.193.224:8130] start 0th connect, send client hello 12763925|syn, tags: SNI :3132382d312d...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    22:16:01:106  26840; [remote:128.1.193.224:8130] receive server hello piece id: 0, 1/10, not complete
+INFO    22:16:01:106  26840; [remote:128.1.193.224:8130] receive server hello piece id: 1, 2/10, not complete
+INFO    22:16:01:106  26840; [remote:128.1.193.224:8130] receive server hello piece id: 2, 3/10, not complete
+INFO    22:16:01:106  26840; [remote:128.1.193.224:8130] receive server hello piece id: 3, 4/10, not complete
+INFO    22:16:01:106  26840; [remote:128.1.193.224:8130] receive server hello piece id: 4, 5/10, complete
+INFO    22:16:01:108  26840; [remote:128.1.193.224:8130] create connection 000001F325492610, self initial seq: 12763926, initial rtt: 26ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    22:16:01:108  26840; [remote:128.1.193.224:8130] create session 000001F357A2D300
+INFO    22:16:01:108  26840; [rs] connected to 128.1.193.224:8130 connection type: aut
+INFO    22:16:01:108  26840; [rs] ResendReportItems report item map size: 8
+INFO    22:16:01:109  26840; destroy dangling client connection 000001F580E968C0
+INFO    22:16:04:987  26840; [rs] total: 16 / 24 valid: 16 / 16
+FATAL   22:16:09:910   6652; ahpl: System stalling detected: thread<AgoraEvent> stalled for 9 calc cycles, at least 9803ms!
+INFO    22:16:10:157  26840; [rs] total: 16 / 24 valid: 16 / 16

@@ -10,47 +10,49 @@ using UnityEngine.UI;
 /// </summary>
 public class Emoji_Manager : MonoBehaviour
 {
-    public Image[] emojiButtonImages;
-    public Sprite[] emojiUI_Icons;
-    private Image mySprite;
-    public Button[] emojiButtons;
+    [Tooltip("Tint the icon when the menu is open.")]
+    public Color menuOpenColor;
+
     public bool showEmotes;
     public Player_Emotes playerEmotes;
-    public int emotes = 0;
+
+    public Image iconSprite;
+
+    public Button[] _emojiButtons;
+
+
+    Color _iconColorOriginal;
+
     // Start is called before the first frame update
     void Start()
     {
-        mySprite = GetComponent<Image>();
-        emojiButtonImages = GetComponentsInChildren<Image>();
-        emojiButtons = GetComponentsInChildren<Button>();
-        showEmotes = false;
+        _iconColorOriginal = iconSprite.color;
+
+        _emojiButtons = this.GetComponentsInChildrenOnly<Button>();  // ignores bg and icon
+
+        showEmotes = true;
+        toggleMenu();  // will toggle it back to false, and setup UI
     }
 
     public void toggleMenu()
     {
-        if (!showEmotes)
+        if (!showEmotes)   // change to shown
         {
-            for (int i = 1; i < emojiButtons.Length; i++)
-            {
-                emojiButtonImages[i].enabled = true;
-                emojiButtons[i].interactable = true;
-            }
+            for (int i = 0; i < _emojiButtons.Length; i++)
+                _emojiButtons[i].gameObject.SetActive(true);
             showEmotes = true;
-            mySprite.sprite = emojiUI_Icons[1];
+            iconSprite.color = menuOpenColor;
         }
-        else
+        else   // change to not shown
         {
-            for (int i = 1; i < emojiButtons.Length; i++)
-            {
-                emojiButtonImages[i].enabled = false;
-                emojiButtons[i].interactable = false;
-            }
+            for (int i = 0; i < _emojiButtons.Length; i++)
+                _emojiButtons[i].gameObject.SetActive(false);
             showEmotes = false;
-            mySprite.sprite = emojiUI_Icons[0];
+            iconSprite.color = _iconColorOriginal;
         }
     }
-
-    public void showEmote(int slot)
+     
+    public void showEmote(int slot)  // called from buttons
     {
         toggleMenu();
         playerEmotes.showEmote(slot);
