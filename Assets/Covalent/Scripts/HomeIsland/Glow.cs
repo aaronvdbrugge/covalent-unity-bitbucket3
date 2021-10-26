@@ -9,8 +9,9 @@ namespace Covalent.HomeIsland
 		[SerializeField] private Material glowMaterial;
 		[SerializeField] private Color baseColor;
 		[SerializeField] private Vector2 intensityRange;
-		[SerializeField] private Vector2 distanceMathRange;
+		[SerializeField] private Vector2 distanceMathRange;  
 		[SerializeField] private bool pulseActive;
+		[SerializeField] private bool onlyPulseInRange;
 		[SerializeField] private float pulseFrequency;
 		[SerializeField] private float pulseIntensity;
 
@@ -40,11 +41,17 @@ namespace Covalent.HomeIsland
 			}
 		}
 
+		// Update the pulse intensity
 		public void UpdatePulseValue()
 		{
+			// If we only pulse within range, check if we are within range
+			if (onlyPulseInRange && !WithinRange)
+				return;
+			
 			pulse = MyMath.Pulse(Time.time, pulseFrequency) * pulseIntensity;
 		}
 
+		// Update the intensity of the glow based on the distance from the source
 		public void UpdateGlowDistanceIntensity()
 		{
 			float distance = Vector2.Distance(Player_Controller_Mobile.mine.transform.position, transform.position);
@@ -58,6 +65,7 @@ namespace Covalent.HomeIsland
 				intensityRange.x, neutralDistance);
 		}
 
+		// Update the glow material values
 		public void UpdateGlowIntensity()
 		{
 			float factor = Mathf.Pow(2, intensityFromDistance + pulse);
