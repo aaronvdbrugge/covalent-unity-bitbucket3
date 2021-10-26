@@ -21,7 +21,7 @@ public class Dateland_Network : Network_Manager
     #endregion
 
     #region Public Fields
-    public CanvasGroup Connecting;
+    public GameObject Connecting;
     public GameObject playerPrefab;
     public GameObject madePlayer;
     public Player_Class player;
@@ -222,8 +222,7 @@ public class Dateland_Network : Network_Manager
     public override void OnJoinedRoom()
     {
         initPlayer = true;
-        Connecting.alpha = 0;
-        Connecting.blocksRaycasts = false;
+        Connecting.SetActive(false);
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -496,8 +495,7 @@ public class Dateland_Network : Network_Manager
             else
             {
                 EventManager.TriggerEvent("cancel_destroy");
-                Connecting.alpha = 0;
-                Connecting.blocksRaycasts = false;
+                Connecting.SetActive(false);
                 inBackground = false;
             }
         
@@ -509,8 +507,7 @@ public class Dateland_Network : Network_Manager
             PlayerPrefs.SetFloat("zPos", madePlayer.transform.position.z);
             PlayerPrefs.SetInt("skinNum", madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot);
             inBackground = true;
-            Connecting.alpha = 1;
-            Connecting.blocksRaycasts = true;
+            Connecting.SetActive(true);
             backgroundPlayer();
         
     }

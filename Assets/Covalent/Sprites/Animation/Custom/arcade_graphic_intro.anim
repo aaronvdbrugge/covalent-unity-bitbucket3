@@ -1689,9 +1689,9 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.3333333
-    functionName: DoForwardNum
-    data: 
+    functionName: PlaySound
+    data: kippo_arcade_intro
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 1
+    intParameter: 0
     messageOptions: 0
