@@ -215,7 +215,10 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
-        playerDidLeaveGame();
+        //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
+
+        // Show disconnected popup
+        Camera.main.GetComponent<Dateland_Camera>().popupManager.ShowPopup("disconnected");
     }
 
 
