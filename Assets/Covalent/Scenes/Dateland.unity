@@ -22232,7 +22232,6 @@ GameObject:
   - component: {fileID: 502996755}
   - component: {fileID: 502996754}
   - component: {fileID: 502996753}
-  - component: {fileID: 502996752}
   - component: {fileID: 502996751}
   m_Layer: 0
   m_Name: fenceStone_right
@@ -22256,35 +22255,6 @@ MonoBehaviour:
   xRadius: 1
   yRadius: 1
   points: 4
---- !u!60 &502996752
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502996750}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.02, y: 2.15}
-    newSize: {x: 3.02, y: 2.15}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.4084768, y: -0.72906876}
-      - {x: 0.9011435, y: -0.43017578}
-      - {x: 0.4265318, y: -0.7112542}
-      - {x: 0.9344716, y: -1.0128555}
 --- !u!114 &502996753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75314,13 +75284,15 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.175, y: 0}
-      - {x: 0.12374368, y: 0.06187184}
-      - {x: -0.000000007649493, y: 0.0875}
-      - {x: -0.12374368, y: 0.06187184}
-      - {x: -0.175, y: -0.000000007649493}
-      - {x: -0.12374366, y: -0.061871853}
-      - {x: 0.000000002086854, y: -0.0875}
-      - {x: 0.12374373, y: -0.06187182}
+      - {x: 0.52203304, y: -0.17697763}
+      - {x: 1.0016798, y: 0.09189749}
+      - {x: 0.5012329, y: 0.36031485}
+      - {x: -0.000000007450581, y: 0.087500095}
+      - {x: -0.123743676, y: 0.061871767}
+      - {x: -0.17500001, y: 0}
+      - {x: -0.12374366, y: -0.061871767}
+      - {x: 0, y: -0.087500095}
+      - {x: 0.12374373, y: -0.061871767}
 --- !u!114 &1740621105
 MonoBehaviour:
   m_ObjectHideFlags: 0
