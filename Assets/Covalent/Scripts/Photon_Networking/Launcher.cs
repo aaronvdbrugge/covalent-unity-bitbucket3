@@ -233,14 +233,4 @@ public class Launcher : MonoBehaviourPunCallbacks
             PhotonNetwork.Disconnect();
         }
     }
-
-    private void createPlayer(string json_string)
-    {
-        player_JSON = json_string;
-        player = JsonUtility.FromJson<Player_Class>(json_string);
-        PlayerPrefs.SetString("name", player.user.name);
-        createPlayerCalled = true;
-    }
-
-
 }

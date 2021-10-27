@@ -54,6 +54,14 @@ public class Dateland_Network : Network_Manager
 
     public string lastSceneName = null;   // used for determining room name.
 
+
+    /// <summary>
+    /// This will be set from CreatePlayerReceiver with real profile JSON
+    /// from the native side. It will remain null when running in editor or
+    /// non-integrated on device.
+    /// </summary>
+    public static string realUserJson = null;
+
     #endregion
 
     // Wrappers (don't call extern in editor)
@@ -321,7 +329,10 @@ public class Dateland_Network : Network_Manager
         //Connect();
 
         // Start connecting to room, so we can create player
-        enterDateland( testUserJson.text );
+        if( !string.IsNullOrEmpty(realUserJson) )   // this would have been set in CreatePlayerreceiver in LoadScreen.cs
+            enterDateland( realUserJson );
+        else  // test environment, use test JSON
+            enterDateland( testUserJson.text );
     }
     private void Update()
     {
