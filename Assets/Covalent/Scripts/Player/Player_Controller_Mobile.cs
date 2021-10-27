@@ -14,7 +14,7 @@ using System.Collections;
 /// duties of a Player object. This class still oversees them and handles some chores regarding Photon and
 /// disconnecting.
 /// </summary>
-public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCallback
+public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCallback
 {
     #region Variables
 
@@ -50,13 +50,16 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
     [Tooltip("Handles things like switching to Go Kart and Ice movements.")]
     public Player_Alternate_Movements playerAlternateMovements;
 
+    [Tooltip("Handles complex sounds like the ice skating loop.")]
+    public Player_Sounds playerSounds;
+
     [Tooltip("Handles skins")]
     public Spine_Player_Controller spinePlayerController;
 
 
     public static GameObject LocalPlayerInstance;
 
-    public TextMeshProUGUI playerName, playerName_Black;
+    public TMP_Text playerName;
 
     public Player_Class user_info;
 
@@ -176,8 +179,7 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
             // Relay playerHop to camera click handler, which needs to be able to trigger hops.
             FindObjectOfType<CameraClickHandler>().playerHop = playerHop;
 
-            GameObject.Find("Main Camera").GetComponent<Camera_Follow>().target = transform;
-            FindObjectOfType<Emoji_Manager>().playerEmotes = playerEmotes;
+            Camera.main.GetComponent<CameraPanning>().target = this;
         }
     }
 
@@ -190,7 +192,6 @@ public class Player_Controller_Mobile : Network_Object, IPunInstantiateMagicCall
         object[] instantiationData = info.photonView.InstantiationData;
         string name = (string)instantiationData[1];
         playerName.text = name;
-        playerName_Black.text = name;
         Debug.Log("Inside Callback the name passed is: " + name + ".");
 
 

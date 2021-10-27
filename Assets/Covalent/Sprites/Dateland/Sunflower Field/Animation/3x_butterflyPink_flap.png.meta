@@ -1,7 +1,46 @@
 fileFormatVersion: 2
 guid: ef8cab86cd07d402b930681c72b9334d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7700896175727185420
+    second: 3x_butterflyPink_flap_0
+  - first:
+      213: 4724427152572591123
+    second: 3x_butterflyPink_flap_1
+  - first:
+      213: 7558787311918388234
+    second: 3x_butterflyPink_flap_2
+  - first:
+      213: -8033826313295663292
+    second: 3x_butterflyPink_flap_3
+  - first:
+      213: 5608826281983313954
+    second: 3x_butterflyPink_flap_4
+  - first:
+      213: 2376977488763645853
+    second: 3x_butterflyPink_flap_5
+  - first:
+      213: -1283200924386602070
+    second: 3x_butterflyPink_flap_6
+  - first:
+      213: -236898129395114783
+    second: 3x_butterflyPink_flap_7
+  - first:
+      213: 187838523480591056
+    second: 3x_butterflyPink_flap_8
+  - first:
+      213: 2707599252876778378
+    second: 3x_butterflyPink_flap_9
+  - first:
+      213: -7598853374841880762
+    second: 3x_butterflyPink_flap_10
+  - first:
+      213: -2424889693577429702
+    second: 3x_butterflyPink_flap_11
+  - first:
+      213: 4954818781027515993
+    second: 3x_butterflyPink_flap_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +80,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +114,264 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 199
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e026e45441fda60800000000000000
+      internalID: 7700896175727185420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 199
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cac44d679809140800000000000000
+      internalID: 4724427152572591123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 199
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0410a3130536e860800000000000000
+      internalID: 7558787311918388234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 199
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f63d8788d128090800000000000000
+      internalID: -8033826313295663292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2288d7069cd86dd40800000000000000
+      internalID: 5608826281983313954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 142
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3db76de87213ee0800000000000000
+      internalID: -1283200924386602070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_7
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 142
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec137d086e56bcf0800000000000000
+      internalID: -236898129395114783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dac13354265b9200800000000000000
+      internalID: 187838523480591056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_9
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 85
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b55ddcc23539520800000000000000
+      internalID: 2707599252876778378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_10
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 85
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f7544bd137b8690800000000000000
+      internalID: -7598853374841880762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_butterflyPink_flap_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 85
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dbfcadbaf095ed0800000000000000
+      internalID: -2424889693577429702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

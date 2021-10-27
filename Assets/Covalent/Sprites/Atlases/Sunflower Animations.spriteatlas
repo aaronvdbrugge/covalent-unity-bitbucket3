@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sunflower Animations
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+    - {fileID: 2800000, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+    - {fileID: 2800000, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+    - {fileID: 2800000, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+    - {fileID: 2800000, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -7598853374841880762, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -2424889693577429702, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 2707599252876778378, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 187838523480591056, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 5608826281983313954, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -236898129395114783, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -1283200924386602070, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 4724427152572591123, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 7700896175727185420, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -8033826313295663292, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: 7558787311918388234, guid: ef8cab86cd07d402b930681c72b9334d, type: 3}
+  - {fileID: -5640824496689385196, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -5681442319201005391, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 8235375887698954559, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 4313631073956068715, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 7825277592319955856, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -6409843506098707379, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 1114717105754173595, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -670864955112196124, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -8834979269855234959, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -3050040181246100834, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -2317144089043575405, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -7945989306045306485, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -6465624677506570212, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 2320810511888671316, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -7166778122740976815, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 4532650370109117578, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: -3214601837269280861, guid: 71076d69bf9c54188bd13fc41e1ea442, type: 3}
+  - {fileID: 8685018483622113728, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 1632276898092265251, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 2699650619827913391, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -1299546008498443104, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -6577775102923145646, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -4764916031526477174, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -4132551658144889564, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 1935524768435710537, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 6556710725808846970, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -3927307804131661835, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: 7540569968115721176, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -7649789400929899902, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -8377046746197951666, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -6160728916492866337, guid: bdccddab5a3e349358571fbbd8904e27, type: 3}
+  - {fileID: -6488498725036796166, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: 7250945442664100390, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -1407864739098554323, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -368779613362723795, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -6604308182241650357, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: 7266958985801505331, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -6490323477393299639, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: 4301920656991221261, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -5857794717418913955, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: -5122379613698528056, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: 3745944224513549708, guid: 8219a7cc25062488aa9d3294762d8fcb, type: 3}
+  - {fileID: 3178964941338122105, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 4313067917271675768, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: -3428451241112297978, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: -3707072028888890769, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 3760038117081087793, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 1355475687071568065, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 2374230054709440139, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 4807238797528582775, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 5453144195534212797, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: 9177553968370935633, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  - {fileID: -567361717039037114, guid: 4af6ae8e311a0412c9d943dbc806eb89, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 3x_butterflyPink_flap_10
+  - 3x_butterflyPink_flap_11
+  - 3x_butterflyPink_flap_9
+  - 3x_butterflyPink_flap_8
+  - 3x_butterflyPink_flap_4
+  - 3x_butterflyPink_flap_7
+  - 3x_butterflyPink_flap_6
+  - 3x_butterflyPink_flap_1
+  - 3x_butterflyPink_flap_0
+  - 3x_butterflyPink_flap_3
+  - 3x_butterflyPink_flap_2
+  - 3x_crowHeadTurn_17
+  - 3x_crowHeadTurn_19
+  - 3x_crowHeadTurn_18
+  - 3x_crowHeadTurn_32
+  - 3x_crowHeadTurn_31
+  - 3x_crowHeadTurn_30
+  - 3x_crowHeadTurn_6
+  - 3x_crowHeadTurn_7
+  - 3x_crowHeadTurn_4
+  - 3x_crowHeadTurn_5
+  - 3x_crowHeadTurn_2
+  - 3x_crowHeadTurn_3
+  - 3x_crowHeadTurn_0
+  - 3x_crowHeadTurn_9
+  - 3x_crowHeadTurn_28
+  - 3x_crowHeadTurn_29
+  - 3x_crowHeadTurn_20
+  - 3x_crowCaw_11
+  - 3x_crowCaw_13
+  - 3x_crowCaw_12
+  - 3x_crowCaw_15
+  - 3x_crowCaw_14
+  - 3x_crowCaw_17
+  - 3x_crowCaw_16
+  - 3x_crowCaw_18
+  - 3x_crowCaw_2
+  - 3x_crowCaw_3
+  - 3x_crowCaw_6
+  - 3x_crowCaw_7
+  - 3x_crowCaw_4
+  - 3x_crowCaw_5
+  - 3x_butterflyOrange_flap_7
+  - 3x_butterflyOrange_flap_6
+  - 3x_butterflyOrange_flap_4
+  - 3x_butterflyOrange_flap_3
+  - 3x_butterflyOrange_flap_2
+  - 3x_butterflyOrange_flap_1
+  - 3x_butterflyOrange_flap_0
+  - 3x_butterflyOrange_flap_9
+  - 3x_butterflyOrange_flap_8
+  - 3x_butterflyOrange_flap_10
+  - 3x_butterflyOrange_flap_11
+  - 3x_butterflyBlue_flap_9
+  - 3x_butterflyBlue_flap_8
+  - 3x_butterflyBlue_flap_1
+  - 3x_butterflyBlue_flap_0
+  - 3x_butterflyBlue_flap_3
+  - 3x_butterflyBlue_flap_2
+  - 3x_butterflyBlue_flap_4
+  - 3x_butterflyBlue_flap_7
+  - 3x_butterflyBlue_flap_6
+  - 3x_butterflyBlue_flap_10
+  - 3x_butterflyBlue_flap_11
+  m_RenderDataMap: {}
+  m_Tag: Sunflower Animations
+  m_IsVariant: 0

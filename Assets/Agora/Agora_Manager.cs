@@ -14,6 +14,8 @@ public class Agora_Manager : MonoBehaviour
     private static int ERROR_NO_PERMISSION_TO_RECORD = 1027;
 
     private static int ERROR_NO_PERMISSION_TO_ACCESS = 9;
+
+    public bool joinChatInEditor = false;
     //Wrappers (don't call externs in editor)
     private static void failureToConnectAgora(string error)
     {
@@ -270,10 +272,20 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.MuteLocalAudioStream( muted );
     }
 
+
+    /// <summary>
+    /// Called from mute toggle button
+    /// </summary>
+    public void MuteToggle( Toggle mute_toggle )
+    {
+        mute( mute_toggle.isOn );
+    }
+
+
     public void JoinChannel(string name)
     {
-        mRtcEngine.JoinChannel(name, "extra", 0);
-
+        if( joinChatInEditor || !Application.isEditor )
+            mRtcEngine.JoinChannel(name, "extra", 0);
     }
 
     public AgoraChannel Obj_JoinChannel(string name)

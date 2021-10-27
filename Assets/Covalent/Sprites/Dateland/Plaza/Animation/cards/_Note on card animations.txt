@@ -1,0 +1,15 @@
+There was a lot of rendundancy in these animations when I got them, so I boiled them down to save space.
+
+Any "card back" frames are the same for all of them, and I just get them from _balloon.
+
+I cropped all but balloon with a Photoshop action to reduce time spend slicing sprite sheets.
+I left the top parts in to keep frame indices consistent.
+
+Any frames that only have translation in them, I just remove... instead I do the translation in
+Unity's animation tool.
+
+There are actually only two animations, flip up and flip down. Rather than make 34 different
+animation clips and Animator states, I just wrote a script called CardImageSwapper.cs that
+seeks out swappable frames with "balloon" in them, and trades them for new ones in LateUpdate.
+The script is general purpose, not necessarily specific to cards, and could be used again
+for similar situations in the future.

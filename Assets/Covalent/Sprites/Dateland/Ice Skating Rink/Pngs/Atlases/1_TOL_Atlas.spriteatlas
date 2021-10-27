@@ -44,28 +44,11 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: e6cb4aded9bac432cbcc1f5016dffacf, type: 3}
-    - {fileID: 2800000, guid: 902f5bf05be5e4ef1befd45dde029ed4, type: 3}
-    - {fileID: 2800000, guid: 89255d99f14074b1da24a1c9a10f69f0, type: 3}
-    - {fileID: 2800000, guid: 6da2e225ef12341739c72a799981eb3b, type: 3}
-    - {fileID: 2800000, guid: bf3302731dc034d05b57a1ee69b6f429, type: 3}
     - {fileID: 2800000, guid: fcb1fd20738284e9888edf6d2a5d9da1, type: 3}
     - {fileID: 2800000, guid: 52af8605538264f3da8d7a4dac22a614, type: 3}
-    - {fileID: 2800000, guid: a607d4bad460d4324aa23eaaffa3692f, type: 3}
     - {fileID: 2800000, guid: fddae2583253841059e1de92ab8541d7, type: 3}
-    - {fileID: 2800000, guid: 0e6bd55e398004b8eab66ca38708df41, type: 3}
-    - {fileID: 2800000, guid: b9a40787a8a1a48e180b4ab572ccaa49, type: 3}
     - {fileID: 2800000, guid: 062ab642cf76849b6acd8fa4f4b5699b, type: 3}
-    - {fileID: 2800000, guid: c46a229c49e0743d196f055c80068983, type: 3}
     - {fileID: 2800000, guid: 01881a82808f5419c969fc50fa633304, type: 3}
-    - {fileID: 2800000, guid: 0efc02ac4f94c474da4c442c531eff90, type: 3}
-    - {fileID: 2800000, guid: fb15e5c0060e7465db419f340b3d36b0, type: 3}
-    - {fileID: 2800000, guid: ff736d2b29f0c4b89993415d11619f54, type: 3}
-    - {fileID: 2800000, guid: 903e451defe8d45ce98c75487432dc7b, type: 3}
-    - {fileID: 2800000, guid: 6fabb373995324903aeda63c00877520, type: 3}
-    - {fileID: 2800000, guid: 48d87d03f1e364a7b970b939cde20531, type: 3}
-    - {fileID: 2800000, guid: 2b943b28e1afc4c65b14b2e8b4100dfa, type: 3}
-    - {fileID: 2800000, guid: 2cc25e315ece943328d4c6e060d43ce8, type: 3}
     - {fileID: 2800000, guid: b35491a7255af4565bdf24f0b6ff9cc0, type: 3}
     - {fileID: 2800000, guid: c0cbd9a7b8c9943148f86bb326f3a312, type: 3}
     bindAsDefault: 1
@@ -74,54 +57,20 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: fcb1fd20738284e9888edf6d2a5d9da1, type: 3}
-  - {fileID: 21300000, guid: fb15e5c0060e7465db419f340b3d36b0, type: 3}
-  - {fileID: 21300000, guid: 902f5bf05be5e4ef1befd45dde029ed4, type: 3}
-  - {fileID: 21300000, guid: 2cc25e315ece943328d4c6e060d43ce8, type: 3}
   - {fileID: 21300000, guid: 062ab642cf76849b6acd8fa4f4b5699b, type: 3}
   - {fileID: 21300000, guid: 01881a82808f5419c969fc50fa633304, type: 3}
-  - {fileID: 21300000, guid: 48d87d03f1e364a7b970b939cde20531, type: 3}
-  - {fileID: 21300000, guid: bf3302731dc034d05b57a1ee69b6f429, type: 3}
-  - {fileID: 21300000, guid: 6fabb373995324903aeda63c00877520, type: 3}
   - {fileID: 21300000, guid: 52af8605538264f3da8d7a4dac22a614, type: 3}
-  - {fileID: 21300000, guid: 6da2e225ef12341739c72a799981eb3b, type: 3}
-  - {fileID: 21300000, guid: b9a40787a8a1a48e180b4ab572ccaa49, type: 3}
   - {fileID: 21300000, guid: b35491a7255af4565bdf24f0b6ff9cc0, type: 3}
   - {fileID: 21300000, guid: c0cbd9a7b8c9943148f86bb326f3a312, type: 3}
-  - {fileID: 21300000, guid: 2b943b28e1afc4c65b14b2e8b4100dfa, type: 3}
   - {fileID: 21300000, guid: fddae2583253841059e1de92ab8541d7, type: 3}
-  - {fileID: 21300000, guid: 89255d99f14074b1da24a1c9a10f69f0, type: 3}
-  - {fileID: 21300000, guid: a607d4bad460d4324aa23eaaffa3692f, type: 3}
-  - {fileID: 21300000, guid: ff736d2b29f0c4b89993415d11619f54, type: 3}
-  - {fileID: 21300000, guid: c46a229c49e0743d196f055c80068983, type: 3}
-  - {fileID: 21300000, guid: 0efc02ac4f94c474da4c442c531eff90, type: 3}
-  - {fileID: 21300000, guid: 903e451defe8d45ce98c75487432dc7b, type: 3}
-  - {fileID: 21300000, guid: 0e6bd55e398004b8eab66ca38708df41, type: 3}
-  - {fileID: 21300000, guid: e6cb4aded9bac432cbcc1f5016dffacf, type: 3}
   m_PackedSpriteNamesToIndex:
   - fence_ironLeftBottom
-  - heart_left2
-  - bush_rightTop
-  - heart_right4
   - fence_mainBack
   - ground
-  - heart_right2
-  - bushLeft_top
-  - heart_right1
   - fence_ironLeftCenter
-  - bushLeft_bottom
-  - fence_ironRightTop
   - pond_left
   - streetlight
-  - heart_right3
   - fence_ironRightBottom
-  - bushHeart_backRight
-  - fence_ironLeftTop
-  - heart_left3
-  - fence_mainTop
-  - heart_left1
-  - heart_left4
-  - fence_ironRightCenter
-  - bush_rightBottom
   m_RenderDataMap: {}
   m_Tag: 1_TOL_Atlas
   m_IsVariant: 0

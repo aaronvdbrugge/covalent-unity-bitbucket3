@@ -1,7 +1,109 @@
 fileFormatVersion: 2
 guid: 71076d69bf9c54188bd13fc41e1ea442
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6465624677506570212
+    second: 3x_crowHeadTurn_0
+  - first:
+      213: 4316667890267468761
+    second: 3x_crowHeadTurn_1
+  - first:
+      213: -2317144089043575405
+    second: 3x_crowHeadTurn_2
+  - first:
+      213: -7945989306045306485
+    second: 3x_crowHeadTurn_3
+  - first:
+      213: -8834979269855234959
+    second: 3x_crowHeadTurn_4
+  - first:
+      213: -3050040181246100834
+    second: 3x_crowHeadTurn_5
+  - first:
+      213: 1114717105754173595
+    second: 3x_crowHeadTurn_6
+  - first:
+      213: -670864955112196124
+    second: 3x_crowHeadTurn_7
+  - first:
+      213: 7023977697509190231
+    second: 3x_crowHeadTurn_8
+  - first:
+      213: 2320810511888671316
+    second: 3x_crowHeadTurn_9
+  - first:
+      213: 2235105719484809645
+    second: 3x_crowHeadTurn_10
+  - first:
+      213: 8818211365562204195
+    second: 3x_crowHeadTurn_11
+  - first:
+      213: -5819100090106976944
+    second: 3x_crowHeadTurn_12
+  - first:
+      213: 2213869372036334552
+    second: 3x_crowHeadTurn_13
+  - first:
+      213: -952858113562002274
+    second: 3x_crowHeadTurn_14
+  - first:
+      213: 7840609275797374188
+    second: 3x_crowHeadTurn_15
+  - first:
+      213: -895178388989902151
+    second: 3x_crowHeadTurn_16
+  - first:
+      213: -5640824496689385196
+    second: 3x_crowHeadTurn_17
+  - first:
+      213: 8235375887698954559
+    second: 3x_crowHeadTurn_18
+  - first:
+      213: -5681442319201005391
+    second: 3x_crowHeadTurn_19
+  - first:
+      213: -3214601837269280861
+    second: 3x_crowHeadTurn_20
+  - first:
+      213: -4757750171136326681
+    second: 3x_crowHeadTurn_21
+  - first:
+      213: 871528821962130827
+    second: 3x_crowHeadTurn_22
+  - first:
+      213: 4697370589878496682
+    second: 3x_crowHeadTurn_23
+  - first:
+      213: -9039477062988988521
+    second: 3x_crowHeadTurn_24
+  - first:
+      213: 4735977088494906926
+    second: 3x_crowHeadTurn_25
+  - first:
+      213: -759400823765139759
+    second: 3x_crowHeadTurn_26
+  - first:
+      213: 2786207208425623747
+    second: 3x_crowHeadTurn_27
+  - first:
+      213: -7166778122740976815
+    second: 3x_crowHeadTurn_28
+  - first:
+      213: 4532650370109117578
+    second: 3x_crowHeadTurn_29
+  - first:
+      213: -6409843506098707379
+    second: 3x_crowHeadTurn_30
+  - first:
+      213: 7825277592319955856
+    second: 3x_crowHeadTurn_31
+  - first:
+      213: 4313631073956068715
+    second: 3x_crowHeadTurn_32
+  - first:
+      213: -8236188780857073486
+    second: 3x_crowHeadTurn_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +143,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +177,402 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18a836bc9c7546a0800000000000000
+      internalID: -6465624677506570212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d592f4ab9d7dfd0800000000000000
+      internalID: -2317144089043575405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89ed1863dc2ab190800000000000000
+      internalID: -7945989306045306485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174b65ee929d36580800000000000000
+      internalID: -8834979269855234959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_5
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a782e6d941ca5d0800000000000000
+      internalID: -3050040181246100834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9077893d45487f00800000000000000
+      internalID: 1114717105754173595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_7
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 927
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e77742b0eb90b6f0800000000000000
+      internalID: -670864955112196124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_9
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 830
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452ed184ddc253020800000000000000
+      internalID: 2320810511888671316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_17
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 733
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411f182b104c7b1b0800000000000000
+      internalID: -5640824496689385196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_18
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 733
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f390d1aacbee94270800000000000000
+      internalID: 8235375887698954559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_19
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 733
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b01720ff467721b0800000000000000
+      internalID: -5681442319201005391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 733
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a71f3329a07363d0800000000000000
+      internalID: -3214601837269280861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_28
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 636
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153bbf1c44d7a8c90800000000000000
+      internalID: -7166778122740976815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_29
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 636
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8495612f7537ee30800000000000000
+      internalID: 4532650370109117578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_30
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 636
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d446421ca49ab07a0800000000000000
+      internalID: -6409843506098707379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_31
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 636
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0931e079288f89c60800000000000000
+      internalID: 7825277592319955856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowHeadTurn_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 539
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dfc3f6b981ddb30800000000000000
+      internalID: 4313631073956068715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

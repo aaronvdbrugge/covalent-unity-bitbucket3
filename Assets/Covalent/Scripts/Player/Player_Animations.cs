@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Spine.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,10 +15,13 @@ public class Player_Animations : MonoBehaviour
     public Player_Movement playerMovement;
     public Player_Hop playerHop;
 
+    public SkeletonMecanim skeletonMecanim;
+
     public Animator anim;
     public Animator hearts;
 
     public SpriteRenderer splash_feet;
+
     [Tooltip("A transform that you don't want to be flipped horizontally (will counter-flip to undo the flip)")]
     public Transform dontFlip;
 
@@ -29,11 +33,16 @@ public class Player_Animations : MonoBehaviour
     public bool horizontalFlip = false;
 
 
-    
+    public bool skating{get; private set; }
 
 
+
+    bool _hidShadow = false;
 	private void Update()
 	{
+        if( !_hidShadow ) // NOTE: putting this in Start() is too soon apparently
+            skeletonMecanim.skeleton.SetAttachment("shadow", null );   // We do not need the shadow from animation!! Position it procedurally instead
+
         // Decide whether we should splash
         if (playerCollisions.onBeach && playerMovement.IsWalking() )
             splash_feet.enabled = true;
@@ -42,14 +51,6 @@ public class Player_Animations : MonoBehaviour
         else if (!playerCollisions.onBeach && splash_feet.enabled)
             splash_feet.enabled = false;
 
-        // Note sure what this does, but I kept in in the refactor -Seb
-        if (playerCollisions.topHearts == true && playerCollisions.botHearts == true)
-        {
-            //hearts.Play("animation", -1, 0);
-                
-            playerCollisions.topHearts = false;
-            playerCollisions.botHearts = false;
-        }
 
         
         // If we're sitting somewhere, get the SitPoint.
@@ -74,11 +75,22 @@ public class Player_Animations : MonoBehaviour
         dontFlip.localRotation = new Quaternion( 0, hflip_mult*180, 0, 0);    // player names etc will have to be un-flipped
 
         // Relay proper info to Animator
-        anim.SetBool("walking", playerMovement.IsWalking() );
+        anim.SetBool("walking", playerMovement.IsWalking( skating ? 0.5f : 0.01f) );   // "waking" threshold is different for skating
+        anim.SetBool("skating", skating );
         anim.SetBool("hopping", playerHop.hopProgress > 0 );
         anim.SetBool("sitting", sitting && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
 
+
+    /// <summary>
+    /// Turn character ice skates on or off.
+    /// </summary>
+    public void SetIceSkates(bool enable)
+    {
+        skating = enable;
+        skeletonMecanim.skeleton.SetAttachment("OverlayLeftFoot", enable ? "Shoes/colors/skate" : null );
+        skeletonMecanim.skeleton.SetAttachment("OverlayRightFoot", enable ? "Shoes/colors/skate" : null );
+    }
 
 
     /// <summary>
@@ -86,6 +98,11 @@ public class Player_Animations : MonoBehaviour
     /// </summary>
     public void Emote(int slot)
     {
-        anim.Play("emote_" + slot, -1, 0f);
+        string anim_suffix = Emoji_Manager.inst.emojiSettings.emojis[slot].playerAnim;
+        if( string.IsNullOrEmpty(anim_suffix) )  // no animation for this one
+            return;
+
+        // Retrieve name of animation that this emoji slot is keyed to.
+        anim.Play("emote_" + anim_suffix, -1, 0f);
     }
 }

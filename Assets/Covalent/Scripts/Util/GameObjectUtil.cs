@@ -15,4 +15,9 @@ public static class GameObjectUtil
 		foreach( Transform child in go.transform )
 			child.gameObject.SetActive( active );
 	}
+
+	public static T[] GetComponentsInChildrenOnly<T>( this GameObject go )
+	{
+		return go.transform.GetComponentsInChildrenOnly<T>();
+	}
 }

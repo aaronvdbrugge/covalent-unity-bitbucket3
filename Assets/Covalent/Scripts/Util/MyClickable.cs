@@ -5,13 +5,13 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// Just a simple OnPointerDown handler
+/// Just a simple OnMyTouchDown handler
 /// </summary>
-public class MyClickable : MonoBehaviour, IPointerClickHandler
+public class MyClickable : MonoBehaviour
 {
 	public UnityEvent onClick;
 
-	public void OnPointerClick(PointerEventData pointerEventData)
+	public void OnMyTouchDown(MyTouch touch)
 	{
         //Debug.Log("OnPointerDown: " + Time.time );
 

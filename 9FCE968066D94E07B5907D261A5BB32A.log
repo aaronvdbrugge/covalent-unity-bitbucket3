@@ -1,0 +1,100 @@
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: scenario(5):
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: is_audience(1) is_solo_broadcaster(1) is_interactive_broadcaster(1) is_headset(0) is_bluetooth(0) audience_need_record(1)
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: scenario(6):
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: is_audience(0) is_solo_broadcaster(0) is_interactive_broadcaster(1) is_headset(0) is_bluetooth(0) audience_need_record(0)
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: scenario(7):
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: is_audience(1) is_solo_broadcaster(1) is_interactive_broadcaster(1) is_headset(1) is_bluetooth(1) audience_need_record(1)
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: scenario(8):
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: is_audience(0) is_solo_broadcaster(0) is_interactive_broadcaster(1) is_headset(0) is_bluetooth(0) audience_need_record(0)
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: scenario(9):
+INFO    21:06:19:149  27192; agora::media::MediaEngineParameterCollection::Audio::updateScenarioConfig: is_audience(0) is_solo_broadcaster(0) is_interactive_broadcaster(0) is_headset(0) is_bluetooth(0) audience_need_record(0)
+INFO    21:06:19:149  14316; [API][rtc_engine_impl.cpp:1681][agora::rtc::RtcEngine::enableAudioVolumeIndication] interval 300, smooth 3, report_vad 1
+INFO    21:06:19:149  14316; [API][rtc_engine_impl.cpp:4950][agora::rtc::RtcEngine::setObject] key che.audio.volume_indication
+INFO    21:06:19:149  14316; [API][rtc_engine_impl.cpp:3337][agora::rtc::RtcEngine::queryInterface] iid 3, inter 0000009FD6AEDA00, m_initialized 1
+INFO    21:06:19:149  14316; [API][rtc_engine_impl.cpp:945][agora::rtc::RtcEngine::setParameters]
+INFO    21:06:19:149  27192; RtcEngine::setParameters {"che.audio.volume_indication":{"interval":300,"smooth":3,"vad":1}}
+INFO    21:06:19:149  27192; [rp] {"che.audio.volume_indication":{"interval":300,"smooth":3,"vad":1}}
+INFO    21:06:19:150  14316; [API][rtc_engine_impl.cpp:1681][agora::rtc::RtcEngine::enableAudioVolumeIndication] interval 250, smooth 3, report_vad 1
+INFO    21:06:19:150  14316; [API][rtc_engine_impl.cpp:4950][agora::rtc::RtcEngine::setObject] key che.audio.volume_indication
+INFO    21:06:19:150  14316; [API][rtc_engine_impl.cpp:3337][agora::rtc::RtcEngine::queryInterface] iid 3, inter 0000009FD6AEDA00, m_initialized 1
+INFO    21:06:19:150  14316; [API][rtc_engine_impl.cpp:945][agora::rtc::RtcEngine::setParameters]
+INFO    21:06:19:150  27192; RtcEngine::setParameters {"che.audio.volume_indication":{"interval":250,"smooth":3,"vad":1}}
+INFO    21:06:19:150  27192; [rp] {"che.audio.volume_indication":{"interval":250,"smooth":3,"vad":1}}
+INFO    21:06:19:169  27192; [remote:128.1.193.215:8130] receive server hello piece id: 0, 1/10, not complete
+INFO    21:06:19:169  27192; [remote:128.1.193.215:8130] receive server hello piece id: 1, 2/10, not complete
+INFO    21:06:19:170  27192; [remote:128.1.193.215:8130] receive server hello piece id: 2, 3/10, not complete
+INFO    21:06:19:170  27192; [remote:128.1.193.215:8130] receive server hello piece id: 3, 4/10, not complete
+INFO    21:06:19:170  27192; [remote:128.1.193.215:8130] receive server hello piece id: 4, 5/10, complete
+INFO    21:06:19:175  27192; [remote:128.1.193.215:8130] create connection 0000022BE3C30B90, self initial seq: 8213233, initial rtt: 29ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    21:06:19:175  27192; [remote:128.1.193.215:8130] create session 0000022BE924D770
+INFO    21:06:19:175  27192; [rs] connected to 128.1.193.215:8130 connection type: aut
+INFO    21:06:19:175  27192; [rs] ResendReportItems report item map size: 3
+INFO    21:06:19:175  27192; destroy dangling client connection 0000022B2F0E9910
+INFO    21:06:19:213  27192; [remote:50.17.126.121:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    21:06:19:214  27192; [remote:50.17.126.121:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    21:06:19:214  27192; [remote:50.17.126.121:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    21:06:19:214  27192; [remote:50.17.126.121:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    21:06:19:214  27192; [remote:50.17.126.121:8443] receive server hello piece id: 4, 5/10, complete
+INFO    21:06:19:217  27192; [remote:50.17.126.121:8443] create connection 0000022BE3C2E5E0, self initial seq: 8554205, initial rtt: 86ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    21:06:19:217  27192; [remote:50.17.126.121:8443] create session 0000022BE924D930
+INFO    21:06:19:217  27192; [ap/aut] connected with 50.17.126.121:8443
+INFO    21:06:19:217  27192; destroy dangling client connection 0000022B2F0EA7D0
+INFO    21:06:19:292  27192; [remote:52.58.56.244:8443] start 1th connect, send client hello 14962971|syn, tags: SNI :35322d35382d...(26), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    21:06:19:296  27192; [ap/u] **responsed from 50.17.126.121:8443, CDS(8).
+INFO    21:06:19:296  27192; [ap] onAPCdsRes success with config: ∏∆êØﬂ‘⁄§ó—˙ œü·íñ≤¬€‹≠∆…‚ìœ
+INFO    21:06:19:296  27192; [cs] applied directly: {"configs":{},"version":""}, elapsed: 0
+INFO    21:06:19:296  27192; CacheManager: save cache to storage elapsed 1
+INFO    21:06:19:297  27192; [ap/u] **responsed from 50.17.126.121:8443, TDS(64).
+INFO    21:06:19:297  27192; [ap] onAPTdsRes success with config: {"_store enable xdump since 3.4.6":["A",{"rtc.enable_xdump":true,"rtc.enable_xdump_file":true,"rtc.enable_xdump_upload":true},{"retention":"1d","store":true}],"_store DISABLE_DELAY_REXFER_
+INFO    21:06:19:297  27192; CacheManager: save cache to storage elapsed 1
+INFO    21:06:19:297  27192; [rp-tds-_store enable xdump since 3.4.6-A] {"rtc.enable_xdump":true,"rtc.enable_xdump_file":true,"rtc.enable_xdump_upload":true}
+INFO    21:06:19:297  27192; [rp-tds-_store DISABLE_DELAY_REXFER_WITH_JITTER80-A] {"rtc.video.rexfer_delay_enabled":false}
+INFO    21:06:19:297  27192; [rp-tds-_store Global: Disable New AVSync Mode for 3.4.X SDK-A] {"che.avsync.support_peer_solo":false,"che.avsync.support_solo":false}
+INFO    21:06:19:302  27192; [remote:52.58.56.244:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    21:06:19:303  27192; [remote:52.58.56.244:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    21:06:19:303  27192; [remote:52.58.56.244:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    21:06:19:304  27192; [remote:52.58.56.244:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    21:06:19:304  27192; [remote:52.58.56.244:8443] receive server hello piece id: 4, 5/10, complete
+INFO    21:06:19:307  27192; [remote:52.58.56.244:8443] create connection 0000022BE3C33140, self initial seq: 14962972, initial rtt: 173ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    21:06:19:307  27192; [remote:52.58.56.244:8443] create session 0000022BE924E3B0
+INFO    21:06:19:307  27192; [remote:52.58.56.244:8443] destroy session 0000022BE924E3B0
+INFO    21:06:19:307  27192; destroy dangling client connection 0000022B2F0E7080
+INFO    21:06:19:307  27192; [remote:52.58.56.244:8443] destroy connection 0000022BE3C33140
+INFO    21:06:19:307  27192; [remote:106.14.12.130:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    21:06:19:307  27192; [remote:106.14.12.130:8443] receive server hello piece id: 1, 2/10, not complete
+INFO    21:06:19:307  27192; [remote:106.14.12.130:8443] receive server hello piece id: 2, 3/10, not complete
+INFO    21:06:19:307  27192; [remote:106.14.12.130:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    21:06:19:307  27192; [remote:106.14.12.130:8443] receive server hello piece id: 4, 5/10, complete
+INFO    21:06:19:310  27192; [remote:106.14.12.130:8443] create connection 0000022BE3C2F270, self initial seq: 11705750, initial rtt: 184ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    21:06:19:310  27192; [remote:106.14.12.130:8443] create session 0000022BE924EFF0
+INFO    21:06:19:310  27192; [rlbs] request rs list from 106.14.12.130:8443 with fake ch report_lbs_1635221179310.......
+INFO    21:06:19:310  27192; destroy dangling client connection 0000022B36F49090
+INFO    21:06:19:359  27192; [remote:106.14.12.130:8443] start 1th connect, send client hello 91981|syn, tags: SNI :3130362d3134...(27), PDMD:, CPTO:4e4f4e432000...(129)
+INFO    21:06:19:458  27192; [remote:50.17.126.121:8443] on connection close received, reason: 0, detail: 
+INFO    21:06:19:458  27192; [remote:50.17.126.121:8443] start time wait, duration: 2000 ms
+ERROR   21:06:19:458  27192; [ap] aut socket error with 50.17.126.121:8443
+INFO    21:06:19:458  27192; [remote:50.17.126.121:8443] destroy session 0000022BE924D930
+INFO    21:06:19:458  27192; [remote:50.17.126.121:8443] destroy connection 0000022BE3C2E5E0
+INFO    21:06:19:476  27192; [rlbs] request rs list from 123.56.235.221:8443 with fake ch report_lbs_1635221179476.......
+INFO    21:06:19:538  27192; [remote:106.14.12.130:8443] receive server hello piece id: 0, 1/10, not complete
+INFO    21:06:19:538  27192; [remote:106.14.12.130:8443] receive server hello piece id: 2, 2/10, not complete
+INFO    21:06:19:538  27192; [remote:106.14.12.130:8443] receive server hello piece id: 1, 3/10, not complete
+INFO    21:06:19:538  27192; [remote:106.14.12.130:8443] receive server hello piece id: 3, 4/10, not complete
+INFO    21:06:19:538  27192; [remote:106.14.12.130:8443] receive server hello piece id: 5, 5/10, complete
+INFO    21:06:19:540  27192; [remote:106.14.12.130:8443] create connection 0000022BE3C33140, self initial seq: 91982, initial rtt: 412ms, git tag: Unknown, perspective: Perspective::kClient, cc: BBRv1, pacing: enable
+INFO    21:06:19:540  27192; [remote:106.14.12.130:8443] create session 0000022BE924D930
+INFO    21:06:19:540  27192; [remote:106.14.12.130:8443] destroy session 0000022BE924D930
+INFO    21:06:19:541  27192; destroy dangling client connection 0000022B2F0E77E0
+INFO    21:06:19:541  27192; [remote:106.14.12.130:8443] destroy connection 0000022BE3C33140
+INFO    21:06:20:577  27192; [rlbs] [report servers]: 128.14.196.249
+INFO    21:06:20:577  27192; [rlbs] [report servers]: 128.1.193.215
+INFO    21:06:20:577  27192; [rlbs] [report servers]: 65.255.41.2
+INFO    21:06:20:577  27192; [rlbs/t] responsed from 123.56.235.221:8443 with servers 128.14.196.249:8130
+INFO    21:06:20:577  27192; [rs] RefreshServerByPriority addr:  128.14.196.249:8130  priority:  3
+INFO    21:06:20:577  27192; [rs] RefreshServerByPriority addr:  128.1.193.215:8130  priority update to:  3
+INFO    21:06:20:577  27192; [rs] RefreshServerByPriority addr:  65.255.41.2:8130  priority:  3
+INFO    21:06:20:577  27192; [remote:106.14.12.130:8443] destroy session 0000022BE924EFF0
+INFO    21:06:20:577  27192; [remote:106.14.12.130:8443] destroy connection 0000022BE3C2F270
+INFO    21:06:24:176  27192; [rs] total: 17 / 17 valid: 17 / 17
+FATAL   21:06:29:092   2588; ahpl: System stalling detected: thread<AgoraEvent> stalled for 9 calc cycles, at least 9794ms!
+INFO    21:06:29:383  27192; [rs] total: 17 / 17 valid: 17 / 17
