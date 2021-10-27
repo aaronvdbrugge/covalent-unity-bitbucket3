@@ -1,6 +1,7 @@
+using Covalent.Scripts.Util.Native_Proxy;
 using UnityEngine;
 
-namespace Plugins.Android
+namespace Covalent.Scripts.Util.Native_Proxy.Android
 {
 #if PLATFORM_ANDROID
     /**
@@ -16,29 +17,29 @@ namespace Plugins.Android
         //The static instance of the UnityDispatcher class.
         private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
         
-        public void _updatePlayersInRoom(string[] unityJsonList, int count)
+        public void UpdatePlayersInRoom(string[] unityJsonList, int count)
         {
             messageProxy.Call("updatePlayersInRoom", unityJsonList, count);
         }
         
-        public void _playerDidMute(uint player_id)
+        public void PlayerDidMute(uint player_id)
         {
             messageProxy.Call("playerDidMute", (int) player_id);   
         }
         
-        public void _playerDidUnmute(uint player_id) {
+        public void PlayerDidUnmute(uint player_id) {
             messageProxy.Call("playerDidUnmute", (int) player_id); 
         }
         
-        public void _playerStartedTalking(uint player_id) {
+        public void PlayerStartedTalking(uint player_id) {
             messageProxy.Call("playerStartedTalking", (int) player_id);
         }
         
-        public void _playerEndedTalking(uint player_id) {
+        public void PlayerEndedTalking(uint player_id) {
             messageProxy.Call("playerEndedTalking", (int) player_id);
         }
         
-        public void _playerDidLeaveGame() {
+        public void PlayerDidLeaveGame() {
             // NOTE! You should get this call if you disable the device's internet
             // while you are playing, forcing a disconnect.
             // However, if you tap the "Leave" button, I think that is currently a button overlaid
@@ -48,25 +49,25 @@ namespace Plugins.Android
             
         }
         
-        public void _failureToConnect(string error) {
+        public void FailureToConnect(string error) {
             messageProxy.Call("failureToConnect", error);
         }
         
-        public void _failureToJoinRoom(string error) {
+        public void FailureToJoinRoom(string error) {
             messageProxy.Call("failureToJoinRoom", error);
         }
         
-        public void _failureToConnectAgora(string error)
+        public void FailureToConnectAgora(string error)
         {
             messageProxy.Call("failureToConnectAgora", error);
         }
         
-        public void _missingMicPermission()
+        public void MissingMicPermission()
         {
             messageProxy.Call("missingMicPermission");
         }
 
-        public void showHostMainWindow(string color)
+        public void ShowHostMainWindow(string color)
         {
             //TODO Create dispatcher for transition event.
         }

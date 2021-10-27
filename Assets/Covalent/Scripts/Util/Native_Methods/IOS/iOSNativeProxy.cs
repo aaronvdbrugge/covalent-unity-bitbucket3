@@ -2,11 +2,13 @@ using System.Runtime.InteropServices;
 
 namespace Plugins.iOS
 {
-#if UNITY_IOS
+#if PLATFORM_ANDROID
     public class IOSNativeProxy : INativeProxy
     {
         /**
-         * Imports the iOS native functions that will trigger events when running on iOS
+         * Wrapper class for the iOS native functions that will trigger events when running on iOS.
+         * Ideally not to be called directly by anything other than IOSNativeProxy as we want to provide wrapper methods
+         * that are defined in INativeProxy interface to keep consistency between Android and iOS.
          */
         private static class iOSInternal
         {
@@ -40,46 +42,46 @@ namespace Plugins.iOS
             
         }
         
-        public void _updatePlayersInRoom(string[] unityJsonList, int count)
+        public void UpdatePlayersInRoom(string[] unityJsonList, int count)
         {
             iOSInternal._updatePlayersInRoom(unityJsonList, count);
         }
         
-        public void _playerDidMute(uint player_id)
+        public void PlayerDidMute(uint player_id)
         {
             iOSInternal._playerDidMute(player_id);
         }
         
-        public void _playerDidUnmute(uint player_id) {
+        public void PlayerDidUnmute(uint player_id) {
             iOSInternal._playerDidUnmute(player_id);
         }
         
-        public void _playerStartedTalking(uint player_id) {
+        public void PlayerStartedTalking(uint player_id) {
             iOSInternal._playerStartedTalking(player_id);
         }
         
-        public void _playerEndedTalking(uint player_id) {
+        public void PlayerEndedTalking(uint player_id) {
             iOSInternal._playerEndedTalking(player_id);
         }
         
-        public void _playerDidLeaveGame() {
+        public void PlayerDidLeaveGame() {
             iOSInternal._playerDidLeaveGame();
         }
         
-        public void _failureToConnect(string error) {
+        public void FailureToConnect(string error) {
             iOSInternal._failureToConnect(error);
         }
         
-        public void _failureToJoinRoom(string error) {
+        public void FailureToJoinRoom(string error) {
             iOSInternal._failureToJoinRoom(error);
         }
         
-        public void _failureToConnectAgora(string error)
+        public void FailureToConnectAgora(string error)
         {
            iOSInternal._failureToConnectAgora(error);
         }
         
-        public void _missingMicPermission()
+        public void MissingMicPermission()
         {
         }
     }
