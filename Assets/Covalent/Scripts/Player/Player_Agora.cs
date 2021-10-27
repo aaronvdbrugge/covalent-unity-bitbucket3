@@ -13,17 +13,36 @@ public class Player_Agora : MonoBehaviour
     public uint agora_ID;
 
 
+    bool _initialized = false;
+
 	private void Awake()
 	{
         agora = FindObjectOfType<Agora_Manager>();
 	}
 
+
+	// NOTE: I don't trust script execution order to get this done AFTER
+	// Dateland_Network initializes partyId. Better to leave this to Update
+	// or LateUpdate.
+	/*
 	private void Start()
 	{
         agora.JoinChannel(PlayerPrefs.GetString("partyId"));
 	}
+    */
 
-    public void LeaveChannel()
+	private void LateUpdate()
+	{
+		if( !_initialized )    // partyId should hopefully be initialized by now
+        {
+            _initialized = true;
+            agora.JoinChannel(PlayerPrefs.GetString("partyId"));
+        }
+	}
+
+
+
+	public void LeaveChannel()
 	{
         agora.LeaveChannel();
 	}
