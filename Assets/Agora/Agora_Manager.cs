@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using agora_gaming_rtc;
 using UnityEngine.UI;
-using Photon.Pun;
-using System.Runtime.InteropServices;
-using Covalent.Scripts.Util;
+using Covalent.Scripts.Util.Native_Proxy;
 
 #if (UNITY_2018_3_OR_NEWER)
 using UnityEngine.Android;
@@ -13,14 +11,16 @@ using UnityEngine.Android;
 
 public class Agora_Manager : MonoBehaviour
 {
-    
+    private static int ERROR_NO_PERMISSION_TO_RECORD = 1027;
+
+    private static int ERROR_NO_PERMISSION_TO_ACCESS = 9;
     //Wrappers (don't call externs in editor)
     private static void failureToConnectAgora(string error)
     {
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnectAgora(" + error + ")");
         else
-            NativeProxy._failureToConnectAgora(error);
+            NativeProxy.FailureToConnectAgora(error);
     }
 
     private static void playerDidMute(uint player_id)
@@ -28,7 +28,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor)
             Debug.Log("EXTERN: playerDidMute(" + player_id + ")");
         else
-            NativeProxy._playerDidMute( player_id );
+            NativeProxy.PlayerDidMute( player_id );
     }
 
     private static void playerDidUnmute(uint player_id)
@@ -36,7 +36,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidUnmute(" + player_id + ")");
         else
-            NativeProxy._playerDidUnmute( player_id );
+            NativeProxy.PlayerDidUnmute( player_id );
     }
 
 
@@ -45,7 +45,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerStartedTalking(" + player_id + ")");
         else
-            NativeProxy._playerStartedTalking(player_id);
+            NativeProxy.PlayerStartedTalking(player_id);
     }
 
     private static void playerEndedTalking(uint player_id)
@@ -53,7 +53,7 @@ public class Agora_Manager : MonoBehaviour
         if( Application.isEditor )
             Debug.Log("EXTERN: playerEndedTalking(" + player_id + ")");
         else
-            NativeProxy._playerEndedTalking(player_id);
+            NativeProxy.PlayerEndedTalking(player_id);
     }
 
 
@@ -119,7 +119,7 @@ public class Agora_Manager : MonoBehaviour
     private void Start()
     {
         mRtcEngine = IRtcEngine.GetEngine(appId);
-        mRtcEngine.SetAudioProfile(AUDIO_PROFILE_TYPE.AUDIO_PROFILE_SPEECH_STANDARD, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_CHATROOM_ENTERTAINMENT);
+        mRtcEngine.SetAudioProfile(AUDIO_PROFILE_TYPE.AUDIO_PROFILE_MUSIC_HIGH_QUALITY_STEREO, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_MEETING);
         mRtcEngine.SetDefaultAudioRouteToSpeakerphone(true);
         mRtcEngine.EnableAudioVolumeIndication(300, 3, true);
 
@@ -143,7 +143,7 @@ public class Agora_Manager : MonoBehaviour
         {
             if( !Application.isEditor ) 
                 failureToConnectAgora("Error: " + error + " Message: " + msg);
-            if (error == 9)
+            if (error == ERROR_NO_PERMISSION_TO_ACCESS || error == ERROR_NO_PERMISSION_TO_RECORD)
             {
                 Debug.Log("Microphone not enabled on device");
                 StartCoroutine(requestMicrophone());

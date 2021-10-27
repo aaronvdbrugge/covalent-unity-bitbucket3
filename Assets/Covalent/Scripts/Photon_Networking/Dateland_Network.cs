@@ -1,13 +1,9 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using Covalent.Scripts.Util;
+using Covalent.Scripts.Util.Native_Proxy;
 using Photon.Pun;
 using Photon.Realtime;
-using Plugins.Android;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Dateland_Network : Network_Manager
 {
@@ -52,7 +48,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor ) 
             Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")");
         else
-            NativeProxy._updatePlayersInRoom(unityJSONList, count);
+            NativeProxy.UpdatePlayersInRoom(unityJSONList, count);
     }
 
     private static void failureToConnect(string error)
@@ -60,7 +56,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnect(" +  error + ")"); 
         else
-            NativeProxy._failureToConnect( error );
+            NativeProxy.FailureToConnect( error );
     }
 
     private static void failureToJoinRoom(string error)
@@ -68,7 +64,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");
         else
-            NativeProxy._failureToJoinRoom( error );
+            NativeProxy.FailureToJoinRoom( error );
     }
 
     private static void playerDidLeaveGame()
@@ -76,7 +72,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
         else
-            NativeProxy._playerDidLeaveGame();
+            NativeProxy.PlayerDidLeaveGame();
     }
 
 
