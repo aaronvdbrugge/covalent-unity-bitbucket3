@@ -12,6 +12,10 @@ public class PopupManager : MonoBehaviour
     [Tooltip("If non empty, ShowPopup on Start")]
     public string startWithPopup = "";  
 
+    public CanvasGroup[] fadeTheseForPopups;
+    public float canvasGroupsFadeTime = 0.25f;
+
+
 
     [Header("Runtime")]
     [Tooltip("Empty string means no popup")]
@@ -26,9 +30,14 @@ public class PopupManager : MonoBehaviour
     /// </summary>
     GameObject _closePanel;
 
+    float _canvasGroupsFadeState = 0;   // 0 to 1. 0 is fully invisible
+
+
 	private void Start()
 	{
 		_closePanel = transform.Find("close").gameObject;
+
+        _canvasGroupsFadeState = Time.fixedDeltaTime / canvasGroupsFadeTime; // ensures the canvas groups will get their alpha set at least once after start
 
         if( !string.IsNullOrEmpty(startWithPopup))
             ShowPopup(startWithPopup);
@@ -79,4 +88,21 @@ public class PopupManager : MonoBehaviour
         Dateland_Network.playerDidLeaveGame();
     }
 
+
+
+	private void FixedUpdate()
+	{
+		if( curPopup != "" && _canvasGroupsFadeState > 0 )  // need to fade out canvas groups
+        {
+            _canvasGroupsFadeState = Mathf.Max(0, _canvasGroupsFadeState - Time.fixedDeltaTime / canvasGroupsFadeTime);
+            foreach( var cg in fadeTheseForPopups )
+                cg.alpha = _canvasGroupsFadeState;
+        }
+        else if( curPopup == "" && _canvasGroupsFadeState < 1 )  // need to fade in canvas groups
+        {
+            _canvasGroupsFadeState = Mathf.Min(1, _canvasGroupsFadeState + Time.fixedDeltaTime / canvasGroupsFadeTime);
+            foreach( var cg in fadeTheseForPopups )
+                cg.alpha = _canvasGroupsFadeState;
+        }
+	}
 }

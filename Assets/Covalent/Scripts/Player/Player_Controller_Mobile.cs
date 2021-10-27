@@ -180,7 +180,6 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
             FindObjectOfType<CameraClickHandler>().playerHop = playerHop;
 
             Camera.main.GetComponent<CameraPanning>().target = this;
-            FindObjectOfType<Emoji_Manager>().playerEmotes = playerEmotes;
         }
     }
 
