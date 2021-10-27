@@ -7,13 +7,19 @@ using UnityEngine;
 
 public class Dateland_Network : Network_Manager
 {
+    [Tooltip("Will be fed to enterDateland automatically if enterDatelandTest is true")]
+    public TextAsset testUserJson;
+
+    [Tooltip("Will immediately enter dateland on Start, using testUserJson data.")]
+    public bool enterDatelandTest = false;
+
     #region Private Serializable Fields
     [SerializeField]
     private byte maxPlayersPerRoom = 16;
     #endregion
 
     #region Public Fields
-    public CanvasGroup Connecting;
+    public GameObject Connecting;
     public GameObject playerPrefab;
     public GameObject madePlayer;
     public Player_Class player;
@@ -24,6 +30,14 @@ public class Dateland_Network : Network_Manager
     [Tooltip("This will be prepended to the scene name. E.g., 'test_Dateland'")]
     public string roomNameBase = "test_";
 
+
+
+    /// <summary>
+    /// Check this value before you start doing things with photonView.IsMine...
+    /// It seems like photonView.IsMine can sometimes erroneously be true until we actually get
+    /// things set up.
+    /// </summary>
+    public static bool initialized = false;
 
 
     #endregion
@@ -67,7 +81,11 @@ public class Dateland_Network : Network_Manager
             NativeProxy.FailureToJoinRoom( error );
     }
 
-    private static void playerDidLeaveGame()
+    /// <summary>
+    /// NOTE: Call this when the player pushes a button indicating they actually want to leave.
+    /// Native should handle the rest
+    /// </summary>
+    public static void playerDidLeaveGame()
     { 
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
@@ -184,15 +202,17 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
-        playerDidLeaveGame();
+        //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
+
+        // Show disconnected popup
+        Camera.main.GetComponent<Dateland_Camera>().popupManager.ShowPopup("disconnected");
     }
 
 
     public override void OnJoinedRoom()
     {
         initPlayer = true;
-        Connecting.alpha = 0;
-        Connecting.blocksRaycasts = false;
+        Connecting.SetActive(false);
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -299,6 +319,9 @@ public class Dateland_Network : Network_Manager
         connectToMasterFails = 0;
         connectToRoomFail = 0;
         //Connect();
+
+        // Start connecting to room, so we can create player
+        enterDateland( testUserJson.text );
     }
     private void Update()
     {
@@ -403,6 +426,7 @@ public class Dateland_Network : Network_Manager
                     me.Add("myJSON", player_JSON);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(me, null, null);
 
+                    initialized = true;
                 }
             }
         }
@@ -416,6 +440,7 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
+        isConnecting = true;    // added by seb, bugfix
     }
     public void destroyPlayer()
     {
@@ -460,8 +485,7 @@ public class Dateland_Network : Network_Manager
             else
             {
                 EventManager.TriggerEvent("cancel_destroy");
-                Connecting.alpha = 0;
-                Connecting.blocksRaycasts = false;
+                Connecting.SetActive(false);
                 inBackground = false;
             }
         
@@ -473,8 +497,7 @@ public class Dateland_Network : Network_Manager
             PlayerPrefs.SetFloat("zPos", madePlayer.transform.position.z);
             PlayerPrefs.SetInt("skinNum", madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot);
             inBackground = true;
-            Connecting.alpha = 1;
-            Connecting.blocksRaycasts = true;
+            Connecting.SetActive(true);
             backgroundPlayer();
         
     }

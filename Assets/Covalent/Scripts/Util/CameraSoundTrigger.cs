@@ -8,8 +8,13 @@ using UnityEngine;
 /// </summary>
 public class CameraSoundTrigger : MonoBehaviour
 {
+    public bool ignorePosition = false;
+
     public void PlaySound(string name)
     {
-        Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( name, transform.position );
+        if( !ignorePosition )
+            Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( name, transform.position );
+        else
+            Camera.main.GetComponent<Camera_Sound>().PlaySound( name );
     }
 }

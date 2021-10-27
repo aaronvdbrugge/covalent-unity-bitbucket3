@@ -1,0 +1,128 @@
+{
+   "partyId":"1:8",
+   "user":{
+      "id":36,
+      "name":"Old2",
+      "userName":"cheeyoon",
+      "age":29,
+      "birthdate":"1991-07-20T00:00:00.000+00:00",
+      "isBanned":false,
+      "completeness":0.71,
+      "photos":[
+         "https://kippo-images-dev.s3.us-east-2.amazonaws.com/photos/OlLAiMereHfNdcPrLc9kTKIRpuA3-8ddf4423-f849-4bdd-954c-f06139456ce1.jpeg",
+         "https://kippo-images-dev.s3.us-east-2.amazonaws.com/photos/OlLAiMereHfNdcPrLc9kTKIRpuA3-b6a30271-b632-4ba6-b1be-6f4c2515242e.jpeg",
+         "https://kippo-images-dev.s3.us-east-2.amazonaws.com/photos/OlLAiMereHfNdcPrLc9kTKIRpuA3-4fbb40ea-2598-491b-afc4-06e45d5ef16a.jpeg",
+         "https://kippo-images-dev.s3.us-east-2.amazonaws.com/photos/OlLAiMereHfNdcPrLc9kTKIRpuA3-4041f139-c738-4f43-b279-0a6d549617ca.jpeg"
+      ],
+      "games":[
+         {
+            "id":"1219",
+            "name":"Kingdom Hearts",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/lxuvogkwn3lexvr7herw.jpg"
+         },
+         {
+            "id":"431",
+            "name":"Uncharted: Drake's Fortune",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/q44ptmlddwayjfpfdgh5.jpg"
+         },
+         {
+            "id":"1026",
+            "name":"The Legend of Zelda: A Link to the Past",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/f9jqwcudxcicbqgzx8tf.jpg"
+         },
+         {
+            "id":"1528",
+            "name":"Jak and Daxter: The Precursor Legacy",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/tgzbgl8kc7wjfuvbdgtr.jpg"
+         },
+         {
+            "id":"37",
+            "name":"Dead Space",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/exlxirelwzpoqftj8phf.jpg"
+         },
+         {
+            "id":"1576",
+            "name":"Spyro the Dragon",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/jhjq94l1zdsfqcyjrkzk.jpg"
+         },
+         {
+            "id":"409",
+            "name":"Final Fantasy XI: Chains of Promathia",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/scy7udp6ctioanopqqx4.jpg"
+         },
+         {
+            "id":"7893",
+            "name":"Legacy of Kain: Soul Reaver 2",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/cyx7yenn9r7z6wx3kjwd.jpg"
+         },
+         {
+            "id":"9804",
+            "name":"MapleStory",
+            "path":"//images.igdb.com/igdb/image/upload/t_thumb/pscm3bm7ozaywmdlu0k4.jpg"
+         }
+      ],
+      "distance":5,
+      "address":{
+         "city":"Los Angeles",
+         "country":"US"
+      },
+      "cardModules":{
+         "modules":[
+            {
+               "type":"wizardingWorld",
+               "payload":{
+                  "hallow":"Cloak",
+                  "quidditchPosition":"Seeker",
+                  "patronus":"Field Mouse",
+                  "pet":"Cat",
+                  "house":"Slytherin"
+               }
+            },
+            {
+               "type":"starterPackArea51",
+               "payload":{
+                  "snack":"Szechuan Sauce",
+                  "weapon":"Uno Reverse Card",
+                  "loot":"Hoverboard",
+                  "transport":"Tesla",
+                  "sidekick":"Morty"
+               }
+            },
+            {
+               "type":"petProfile",
+               "payload":{
+                  "name":"Ricci",
+                  "ability1Value":50,
+                  "age":9,
+                  "ability2Value":50,
+                  "image":"https://kippo-images-dev.s3.us-east-2.amazonaws.com/photos/OlLAiMereHfNdcPrLc9kTKIRpuA3-453334bb-b8b7-4649-8380-715ab7fed672.jpeg",
+                  "loyalty":4,
+                  "intelligence":3,
+                  "ability1Name":"Echo Strike",
+                  "ability2Name":"Fire Slide"
+               }
+            },
+            {
+               "type":"starSign",
+               "payload":{
+                  "signName":"Cancer"
+               }
+            },
+            {
+               "type":"textPrompt",
+               "payload":{
+                  "response":"This is a test account",
+                  "prompt":"My story..."
+               }
+            }
+         ]
+      },
+      "isPublicFigure":false,
+      "isPremium":false,
+      "isPaidPremium":false,
+      "isBorderOn":null,
+      "isBadgeOn":null,
+      "chatColor":null,
+      "onlyFriends":null
+   }
+}

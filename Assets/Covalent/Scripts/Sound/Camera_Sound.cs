@@ -99,4 +99,13 @@ public class Camera_Sound : MonoBehaviour
             PlaySoundPitched( name, pitch );
     }
     
+    /// <summary>
+    /// You need to StartCoroutine with this.
+    /// </summary>
+    public IEnumerator PlaySoundAtPositionAfterDelay(float delay, string name, Vector2 sound_position, float pitch = 1.0f )
+    {
+        yield return new WaitForSeconds(delay);
+        PlaySoundAtPosition(name, sound_position, pitch);
+    }
+
 }

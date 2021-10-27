@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Handles player "hopping" in place, also handles player hopping on and
@@ -31,6 +32,14 @@ public class Player_Hop : MonoBehaviourPun
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
 
+	[Tooltip("True for exactly one frame if we hopped in place. ")]
+	public bool hoppedInPlace = false;
+
+
+	[Tooltip("Write to this constantly if you want to stifle actual hopping. The value will be \"consumed\" back to false, so you have to keep setting it every FixedUpdate (it can't get stuck on)")]
+	public bool stifleHop = false;
+
+
 
 	/// <summary>
 	/// Access zPos for things like pseudo-3D collision detection
@@ -53,6 +62,13 @@ public class Player_Hop : MonoBehaviourPun
 
 	bool _enableMovementWhenDone = false;    //Should we enable colliders and movement when we finish the hop? Useful for hopping off a bench
 
+	bool _queueHopInPlace = false;   // some fancy maneuvering necessary to ensure that hoppedInPlace is only true for one FixedUpdate frame, regardless of execution order. Note that it may be one frame delayed
+
+
+	int _stifleHopCooldown = 0;    // for script execution order reasons, we'll have to stifle hops for one frame after stifleHop is true.
+
+
+
 	private void Start()
 	{
 		_playerVisualYOriginal = playerVisual.transform.localPosition.y;
@@ -68,10 +84,13 @@ public class Player_Hop : MonoBehaviourPun
 	[ContextMenu("HopInPlace")]
 	public void HopInPlace()
 	{
-		if( GetSittingOn() == null )
-			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
-		else  // "Hop in place" while sitting on something! This counts as getting off the seat.
+		if( GetSittingOn() != null )  // "Hop in place" while sitting on something! This counts as getting off the seat.
 			HopToSeat( null );
+		else if( stifleHop || _stifleHopCooldown > 0 )  // Stifled hop! Hopping here does something instead of hopping...
+			this.photonView.RPC("StifledHopRPC", RpcTarget.All);
+		else
+			this.photonView.RPC("HopInPlaceRPC", RpcTarget.All);
+
 	}
 
 	[PunRPC]
@@ -80,8 +99,19 @@ public class Player_Hop : MonoBehaviourPun
 		hopProgress = hopTime;  //starts the hop in Update
 		_useStartEnd = false;     //no start/end point, just hop in place
 
+		_queueHopInPlace = true;
+
 		Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("hop", transform.position);  
 	}
+
+
+
+	[PunRPC]
+	public void StifledHopRPC()
+	{
+		_queueHopInPlace = true;   // Allows other scripts to respond to the public hoppedInPlace value.
+	}
+
 
 
 
@@ -95,6 +125,19 @@ public class Player_Hop : MonoBehaviourPun
 		if( !photonView.Owner.CustomProperties.ContainsKey("SittingOn") )
 			return null;
 		return (string)photonView.Owner.CustomProperties["SittingOn"];
+	}
+
+
+	/// <summary>
+	/// Returns an actual SitPoint pointer
+	/// </summary>
+	/// <returns></returns>
+	public SitPoint GetSitPoint()
+	{
+		string sit = GetSittingOn();
+		if( sit != null  && SitPoint.byUid.ContainsKey(sit) )
+			return SitPoint.byUid[sit];
+		return null;
 	}
 
 
@@ -209,16 +252,12 @@ public class Player_Hop : MonoBehaviourPun
 
 	private void FixedUpdate()
 	{
+
+
 		string sitting_on = GetSittingOn();
 		if( !string.IsNullOrEmpty(sitting_on))   // may as well stick this in update. Remember that a player may already be sitting on something the instant they're instantiated.
 		{
-			if( hopProgress > 0 )
-			{
-				playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
-				playerMovement.movementEnabled = false;    // Disable movement altogether.
-			}
-
-			else  //not even hopping, so stay put on the bench...
+			if( hopProgress == 0 )  //not even hopping, so stay put on the bench...
 			{
 				SitPoint seat = SitPoint.ByUidOrNull( sitting_on );
 				if( seat != null )  // it might not be instantiated
@@ -231,6 +270,16 @@ public class Player_Hop : MonoBehaviourPun
 				}
 			}
 		}
+
+		// Note that EnableColliders and movementEnabled are now "consumed"
+		// to avoid game breaking bugs (I encountered one that was hard to produce)
+		// This means they must be called constantly.
+		if( hopProgress > 0 && (!string.IsNullOrEmpty(sitting_on) || _enableMovementWhenDone)  )
+		{
+			playerCollisions.EnableColliders( false );   // Turn colliders off until we're done sitting.
+			playerMovement.movementEnabled = false;    // Disable movement altogether.
+		}
+
 
 
 		if( hopProgress > 0 )
@@ -273,13 +322,36 @@ public class Player_Hop : MonoBehaviourPun
 				{
 					_enableMovementWhenDone = false;
 					playerCollisions.EnableColliders( true );
-					playerMovement.movementEnabled = true;  
+					//playerMovement.movementEnabled = true;     // no longer necessary; it's a "consumed" value
 				}
 
 				if( !string.IsNullOrEmpty(sitting_on) )   // They hopped onto a seat, can play a sound effect. 
 					Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition("sit_down", transform.position);
 			}
 		}
+
+
+		// Update hoppedInPlace value.
+		// We have to be careful to not disable it before other components can consume it.
+		// We can hedge against script execution order problems by using this _queue value, called "whenever" from the RPC.
+		hoppedInPlace = false;    // disable from previous frame
+		if( _queueHopInPlace )
+		{
+			_queueHopInPlace = false;  // Consume this value, set at some unknown time, then enable hoppedInplace for other components to see. It definitely shouldn't be disabled until the above line hits.
+			hoppedInPlace = true;
+		}
+
+
+		// Update stifledHop.
+		// Similarly, there are execution order concerns here... in this case we can probably just let it cooldown for a frame. Make sure to check both _stifleHopCooldown and stifleHop wherever it's used.
+		if( _stifleHopCooldown > 0 ) _stifleHopCooldown--;
+		if( stifleHop )
+		{
+			stifleHop = false;
+			_stifleHopCooldown = 1;
+		}
+
+
 	}
 
     void OnDrawGizmos()
@@ -288,5 +360,4 @@ public class Player_Hop : MonoBehaviourPun
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + new Vector3( 0, collisionHeight, 0 ) );
     }
-
 }

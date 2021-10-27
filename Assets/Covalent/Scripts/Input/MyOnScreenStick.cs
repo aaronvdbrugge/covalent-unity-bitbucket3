@@ -23,7 +23,7 @@ public class MyVector2Event: UnityEvent<Vector2>
 /// 
 /// Also, don't bother going through Unity's dumb input system, just feed joystick values directly.
 /// </summary>
-public class MyOnScreenStick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+public class MyOnScreenStick : MonoBehaviour
 {
     [Tooltip("This will be sent out when the joystick even occurs, link it to whatever you want")]
     public MyVector2Event onJoystickValues;
@@ -31,34 +31,69 @@ public class MyOnScreenStick : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [Tooltip("A non-raycast-recieving visual dot that's just to show where the stick is positioned currently.")]
     public RectTransform joystickVisual;
 
+    [Tooltip("Just a pointer to the UI camera we're displayed by... need it for calculations. I think you can leave it null for overlay")]
+    public Camera uiCamera;
+
+
 
     bool dragging = false;
 
+    MyTouch myTouch = null;   // Set in OnMyTouchDown, then we keep track of it
 
-    
 
-    public void OnPointerDown(PointerEventData eventData)
+
+    void Update()
+    {
+        if( myTouch != null )
+        {
+            if( myTouch.touch.phase == UnityEngine.TouchPhase.Moved )
+                DoDrag( myTouch );
+            else if( myTouch.touch.phase == UnityEngine.TouchPhase.Ended || myTouch.touch.phase == UnityEngine.TouchPhase.Canceled )
+            {
+                TouchReleased(myTouch);
+                myTouch = null;   // done with it
+            }
+        }
+    }
+
+
+    void OnMyTouchDown( MyTouch my_touch )
     {
         // this means it was within the rectangular bounds, but ensure it was actually within the smaller circular bounds.
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out var position);
+        myTouch = my_touch;
+        
+        Vector2 position;
+        if( !uiCamera )
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, my_touch.touch.position, uiCamera, out position);
+        else   // Use UICamera to do the calculation...
+        {
+            Vector3 world_position = uiCamera.ScreenToWorldPoint( my_touch.touch.position );
+            position = transform.worldToLocalMatrix.MultiplyPoint( world_position );
+        }
+
+
         var delta = position - m_StartPos;   // Difference between touch position and the center of this stick
+
+
+
 
         if( delta.magnitude <= radius )
             dragging = true;   //we're inside the circle.
 
-        // Move onto OnDrag logic immediately.
-        OnDrag( eventData );
+        // Move onto DoDrag logic immediately.
+        DoDrag( my_touch );        
     }
 
-    public void OnDrag(PointerEventData eventData)
+
+   
+
+    void DoDrag(MyTouch my_touch)
     {   
         if( !dragging )   //they touched down outside the circle.
             return;
 
-        if (eventData == null)
-            throw new System.ArgumentNullException(nameof(eventData));
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out var position);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, my_touch.touch.position, uiCamera, out var position);
         var delta = position - m_StartPos;   // Difference between touch position and the center of this stick
 
         // Move the visual dot around
@@ -72,7 +107,7 @@ public class MyOnScreenStick : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         onJoystickValues.Invoke( newPos );   //sends out a value between -1 and 1, with 0 being center.
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    void TouchReleased(MyTouch my_touch)
     {
         if( dragging & joystickVisual )   // put it back in the center
             joystickVisual.anchoredPosition = m_StartPos;

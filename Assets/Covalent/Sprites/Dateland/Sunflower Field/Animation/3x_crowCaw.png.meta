@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: bdccddab5a3e349358571fbbd8904e27
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8156878630387658571
+    second: 3x_crowCaw_0
+  - first:
+      213: 6460803680721702294
+    second: 3x_crowCaw_1
+  - first:
+      213: 6556710725808846970
+    second: 3x_crowCaw_2
+  - first:
+      213: -3927307804131661835
+    second: 3x_crowCaw_3
+  - first:
+      213: -8377046746197951666
+    second: 3x_crowCaw_4
+  - first:
+      213: -6160728916492866337
+    second: 3x_crowCaw_5
+  - first:
+      213: 7540569968115721176
+    second: 3x_crowCaw_6
+  - first:
+      213: -7649789400929899902
+    second: 3x_crowCaw_7
+  - first:
+      213: -6468900493934173613
+    second: 3x_crowCaw_8
+  - first:
+      213: 4005534565601570673
+    second: 3x_crowCaw_9
+  - first:
+      213: 3979111534896180426
+    second: 3x_crowCaw_10
+  - first:
+      213: 8685018483622113728
+    second: 3x_crowCaw_11
+  - first:
+      213: 2699650619827913391
+    second: 3x_crowCaw_12
+  - first:
+      213: 1632276898092265251
+    second: 3x_crowCaw_13
+  - first:
+      213: -6577775102923145646
+    second: 3x_crowCaw_14
+  - first:
+      213: -1299546008498443104
+    second: 3x_crowCaw_15
+  - first:
+      213: -4132551658144889564
+    second: 3x_crowCaw_16
+  - first:
+      213: -4764916031526477174
+    second: 3x_crowCaw_17
+  - first:
+      213: 1935524768435710537
+    second: 3x_crowCaw_18
+  - first:
+      213: -3428840091466414850
+    second: 3x_crowCaw_19
+  - first:
+      213: -5551890469034955014
+    second: 3x_crowCaw_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +138,339 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 3x_crowCaw_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7874da8aad1efa50800000000000000
+      internalID: 6556710725808846970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7ec132c566f79c0800000000000000
+      internalID: -3927307804131661835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b770a2e50cebb80800000000000000
+      internalID: -8377046746197951666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_5
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc27fef0b1b08aa0800000000000000
+      internalID: -6160728916492866337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d324813f6c75a860800000000000000
+      internalID: 7540569968115721176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_7
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 923
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a6607f11d76d590800000000000000
+      internalID: -7649789400929899902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_11
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 822
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c17fffab42678870800000000000000
+      internalID: 8685018483622113728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_12
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 822
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa281847fe5177520800000000000000
+      internalID: 2699650619827913391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_13
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 822
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fadddc03307a610800000000000000
+      internalID: 1632276898092265251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_14
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 822
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e7bd9f46c07b4a0800000000000000
+      internalID: -6577775102923145646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_15
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 822
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac6c226ac517fde0800000000000000
+      internalID: -1299546008498443104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 721
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4258250892a36a6c0800000000000000
+      internalID: -4132551658144889564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_17
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 721
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82ec4c6d1e9fddb0800000000000000
+      internalID: -4764916031526477174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x_crowCaw_18
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 721
+        width: 125
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aa494a58d5cda10800000000000000
+      internalID: 1935524768435710537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

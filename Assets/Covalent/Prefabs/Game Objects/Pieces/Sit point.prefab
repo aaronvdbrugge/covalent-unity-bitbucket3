@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1007146889074338563}
   - component: {fileID: 3610287496759985834}
   m_Layer: 0
-  m_Name: Sit spot
+  m_Name: Sit point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceRight: 1
   returnTransform: {fileID: 8239543935279751558}
+  canMoveWhileSitting: 0
+  useCameraOffset: 0
+  cameraOffset: {x: 0, y: 0}
+  cameraOffsetIsWorldCoordinate: 0
+  cameraZoom: 1
+  setPositionConstantlyWhileSitting: 1
 --- !u!1 &5497741344080740520
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,10 +144,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -257,6 +265,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1007146889074338563}
+        m_TargetAssemblyTypeName: 
         m_MethodName: TapPointClicked
         m_Mode: 1
         m_Arguments:
