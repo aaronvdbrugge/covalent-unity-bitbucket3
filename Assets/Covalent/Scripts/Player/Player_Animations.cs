@@ -98,6 +98,11 @@ public class Player_Animations : MonoBehaviour
     /// </summary>
     public void Emote(int slot)
     {
-        anim.Play("emote_" + slot, -1, 0f);
+        string anim_suffix = Emoji_Manager.inst.emojiSettings.emojis[slot].playerAnim;
+        if( string.IsNullOrEmpty(anim_suffix) )  // no animation for this one
+            return;
+
+        // Retrieve name of animation that this emoji slot is keyed to.
+        anim.Play("emote_" + anim_suffix, -1, 0f);
     }
 }

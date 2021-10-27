@@ -1488,6 +1488,61 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - animation_clips
+  - m_GUID: 1d8fc8819321c164ebd10c28b7dc955a
+    m_Address: Assets/Covalent/Sounds/kippo_arcade_intro.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 4c19aed924cb5c344bc7d2110a9dcb71
+    m_Address: Assets/Covalent/Sounds/emoji_mad.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 2e668deb73ca5104f8415ba8fda63d31
+    m_Address: Assets/Covalent/Sounds/emoji_cheers.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 0d7dbac737869714a96e8634d76ebe62
+    m_Address: Assets/Covalent/Sounds/emoji_love.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: d1a5044c3b8e07a43b44ab6af370d753
+    m_Address: Assets/Covalent/Sounds/emoji_none.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 9eeb435c565f39749b27fb3ea6b73130
+    m_Address: Assets/Covalent/Sounds/emoji_annoyed.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 5a659bcc6a2489640b8c6728f8373d72
+    m_Address: Assets/Covalent/Sounds/emoji_happy.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 45c423a946c1ef7429b9a015a3237963
+    m_Address: Assets/Covalent/Sounds/emoji_wave.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: c48961c38c11d6945a04f98c48869556
+    m_Address: Assets/Covalent/Sounds/emoji_shocked.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 895ca6a6d1f2fe940b3ac56e543d7747
+    m_Address: Assets/Covalent/Sounds/emoji_sad.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
+  - m_GUID: 67cb28f5f31767640907795b1e934be2
+    m_Address: Assets/Covalent/Sounds/emoji_anime_eyes.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sounds
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0439c73a41e69ff4380fd6d8f5e908b6, type: 2}
   m_SchemaSet:

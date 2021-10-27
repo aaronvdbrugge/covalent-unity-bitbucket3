@@ -426,16 +426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimations: {fileID: 3903773990844903389}
-  emojiIcons:
-  - {fileID: 21300000, guid: 55dfbf37ea62c4fc08c338354359f8fc, type: 3}
-  - {fileID: 21300000, guid: 5351e0a2469484b2bb4d316d3b02e7f9, type: 3}
-  - {fileID: 21300000, guid: bb1ec881984ed44bc80287fa655712b8, type: 3}
-  - {fileID: 21300000, guid: ce4809776434848aaa5d08ccecc9ec2e, type: 3}
-  - {fileID: 21300000, guid: 3da3f5526b50d4a388b4031baaa8478d, type: 3}
-  - {fileID: 21300000, guid: 80b7c6a9c16cf4d10b9b03b4f349e388, type: 3}
   emoji_bubble_player: {fileID: 1396734501475889410}
   emoji_icon_player: {fileID: 8294065840561907573}
-  emoteTime: 1.7
+  emoteTime: 3.4
   emojiSlot: -1
 --- !u!114 &2999592731245700905
 MonoBehaviour:
@@ -1507,8 +1500,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7593678650723368536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2.69, z: 0}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0}
   m_Children: []
   m_Father: {fileID: 9039554858790594900}
   m_RootOrder: 1
@@ -1554,12 +1547,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5000
-  m_Sprite: {fileID: 21300000, guid: 80b7c6a9c16cf4d10b9b03b4f349e388, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a1bd347cb9d4c14bb45ae85b246cc9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.65, y: 1.65}
+  m_Size: {x: 1.64, y: 1.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
