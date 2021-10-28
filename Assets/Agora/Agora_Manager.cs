@@ -70,10 +70,6 @@ public class Agora_Manager : MonoBehaviour
             _playerEndedTalking(player_id);
     }
 
-
-
-
-
     public Text logs;
     public IRtcEngine mRtcEngine = null;
     public AudioRecordingDeviceManager audio_manager;
@@ -102,11 +98,6 @@ public class Agora_Manager : MonoBehaviour
     // This is set to 0 every time we update usersTalking, but will increase in Update, and we'll assume they aren't talking
     // if it makes it to 
     Dictionary<uint, float> usersTalkingCooldown = new Dictionary<uint, float>();
-
-
-
-
-
 
     [SerializeField]
     private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
@@ -297,7 +288,7 @@ public class Agora_Manager : MonoBehaviour
     public void JoinChannel(string name)
     {
         if( joinChatInEditor || !Application.isEditor )
-            mRtcEngine.JoinChannel(name, "extra", 0);
+            mRtcEngine.JoinChannel(name, "extra", (uint) PlayerPrefs.GetInt("id"));
     }
 
     public AgoraChannel Obj_JoinChannel(string name)

@@ -479,6 +479,7 @@ public class Dateland_Network : Network_Manager
         player_JSON = json_string;
         player = JsonUtility.FromJson<Player_Class>(json_string); 
         PlayerPrefs.SetString("name", player.user.name);
+        PlayerPrefs.SetInt("id", player.user.id);
         PlayerPrefs.SetString("partyId", player.partyId);
         //Debug.Log("I ON THE OTHER HAND AM THE JSON RECIEVED: " + json_string);
         Debug.Log("This is my Match ID: " + player.partyId);
