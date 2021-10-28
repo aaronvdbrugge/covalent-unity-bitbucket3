@@ -104,5 +104,10 @@ public class PopupManager : MonoBehaviour
             foreach( var cg in fadeTheseForPopups )
                 cg.alpha = _canvasGroupsFadeState;
         }
+
+        // There is a bug here where the canvas groups flash on for a frame before doing the fade in.
+        // Not sure what's going on there, I'll just brute force the bugfix by setting their scale to 0
+        foreach( var cg in fadeTheseForPopups )
+            cg.transform.localScale = _canvasGroupsFadeState < 0.1f ? Vector3.zero : Vector3.one;
 	}
 }
