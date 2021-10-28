@@ -482,6 +482,7 @@ public class Dateland_Network : Network_Manager
                     PhotonNetwork.LocalPlayer.SetCustomProperties(me, null, null);
 
                     initialized = true;
+                    EventManager.TriggerEvent("OnPhotonConnect");   // Lets net replicated objects they need to request state again.
                 }
             }
         }

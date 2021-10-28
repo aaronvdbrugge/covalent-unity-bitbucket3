@@ -30,7 +30,10 @@ public class ConnectingPopup : MonoBehaviour
             else   // OK! start the game
             {
                 if( !_didDisplayWelcome )   // haven't displayed welcome yet
+                {
+                    _didDisplayWelcome = true;
                     popupManager.ShowPopup( welcomePopupName );
+                }
                 else   // just close the popup
                     popupManager.ShowPopup("");
             }
