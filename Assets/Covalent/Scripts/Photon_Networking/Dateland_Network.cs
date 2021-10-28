@@ -17,10 +17,20 @@ public class Dateland_Network : Network_Manager
     #region Private Serializable Fields
     [SerializeField]
     private byte maxPlayersPerRoom = 16;
-    #endregion
+	#endregion
 
-    #region Public Fields
-    public GameObject Connecting;
+
+
+
+
+
+	#region Public Fields
+
+
+    public PopupManager popupManager;
+    public string connectingPopupName = "connecting";
+    public string reconnectingPopupName = "reconnecting";
+    public string disconnectedPopupName = "disconnected";
     public GameObject playerPrefab;
     public GameObject madePlayer;
     public Player_Class player;
@@ -31,7 +41,24 @@ public class Dateland_Network : Network_Manager
     [Tooltip("This will be prepended to the scene name. E.g., 'test_Dateland'")]
     public string roomNameBase = "test_";
 
+    [Tooltip("We'll retry this long after disconnecting...")]
+    public float reconnectTime = 65.0f;
 
+
+    [Tooltip("We'll retry every this amount of seconds")]
+    public float reconnectInterval = 10.0f;
+
+
+    #endregion
+
+
+	#region Static Fields
+	/// <summary>
+	/// This will be set from CreatePlayerReceiver with real profile JSON
+	/// from the native side. It will remain null when running in editor or
+	/// non-integrated on device.
+	/// </summary>
+	public static string realUserJson = null;
 
     /// <summary>
     /// Check this value before you start doing things with photonView.IsMine...
@@ -41,12 +68,13 @@ public class Dateland_Network : Network_Manager
     public static bool initialized = false;
 
 
-    #endregion
+    static bool _wantsToLeave = false;   // playerDidLeaveGame has been called, but we need to wait for Photon to disconnect before we leave the scene.
+	#endregion
+
 
     #region Private Fields
     private bool initPlayer = false;
     private bool player_removed;
-    private bool createPlayerCalled = false;
     private bool isConnecting, inBackground;
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
     private int connectToMasterFails, connectToRoomFail;
@@ -56,12 +84,15 @@ public class Dateland_Network : Network_Manager
     public string lastSceneName = null;   // used for determining room name.
 
 
-    /// <summary>
-    /// This will be set from CreatePlayerReceiver with real profile JSON
-    /// from the native side. It will remain null when running in editor or
-    /// non-integrated on device.
-    /// </summary>
-    public static string realUserJson = null;
+
+    // Reconnect logic
+    bool _reconnecting = false;
+    float _reconnectTimer = 0;
+
+    bool _gotLastKnownPlayerPosition = false;
+    Vector3 _lastKnownPlayerPosition = Vector3.zero;   // We'll use this so we can try to put the player in the same place after we disconnect.
+
+
 
     #endregion
 
@@ -96,22 +127,34 @@ public class Dateland_Network : Network_Manager
     /// </summary>
     public static void playerDidLeaveGame()
     { 
+        PhotonNetwork.Disconnect();
+        _wantsToLeave = true;
+
+        // Forego the logic in DoLeaveGameActual until we've determined Photon disconnected OK
+	}
+
+    /// <summary>
+    /// Only called after we're sure Photon disconnected.
+    /// </summary>
+    void DoLeaveGameActual()
+    {
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
         else
             NativeProxy.PlayerDidLeaveGame();
 
-
+        _wantsToLeave = false;   // reset static value
+        initialized = false;   // reset static value
         realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
 		SceneManager.LoadScene("LoadingScreen");
-	}
+    }
 
 
 
 
-    #region MonoBehaviour CallBacks
+	#region MonoBehaviour CallBacks
 
-    /*
+	/*
     private void OnApplicationFocus(bool focused)
     {
         if (focused)
@@ -127,7 +170,7 @@ public class Dateland_Network : Network_Manager
     }
     */
 
-    public override void OnErrorInfo(ErrorInfo errorInfo)
+	public override void OnErrorInfo(ErrorInfo errorInfo)
     {
         Debug.Log(errorInfo.Info);
     }
@@ -142,7 +185,7 @@ public class Dateland_Network : Network_Manager
         roomOptions.MaxPlayers = maxPlayersPerRoom;
         PhotonNetwork.JoinOrCreateRoom(name, roomOptions, TypedLobby.Default);
         isConnecting = false;
-        PhotonNetwork.SendRate = 10;
+        PhotonNetwork.SendRate = 30;  //10;
     }
 
 
@@ -192,7 +235,7 @@ public class Dateland_Network : Network_Manager
         else
         {
             connectToMasterFails += 1;
-            if (connectToMasterFails == 3)
+            if (connectToMasterFails >= 3)
             {
                 Debug.Log("Failed to connect to master 3 times, iOS failureToConnect(string error) should have been called");
                 failureToConnect("Failed to connect to Photon Server");
@@ -213,26 +256,36 @@ public class Dateland_Network : Network_Manager
 
     public override void OnDisconnected(DisconnectCause cause)
     {
+        initialized = false;   // This should hopefully prevent net replicated objects from trying to use Photon
+        initPlayer = true;   // This should cause us to make a new player, if we ever connect again
+
+
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
         //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
 
-        // Show disconnected popup
-        Camera.main.GetComponent<Dateland_Camera>().popupManager.ShowPopup("disconnected");
+        
+        if( _wantsToLeave )   // This disconnect happened because they were trying to leave...
+            DoLeaveGameActual();    // Can go back to loading screen
+        else if( !_reconnecting )  // Show "reconnecting" popup
+        {
+            _reconnecting = true;
+            popupManager.ShowPopup(reconnectingPopupName);
+            _reconnectTimer = 0.0f;  // reset it
+        }
     }
 
 
     public override void OnJoinedRoom()
     {
         initPlayer = true;
-        Connecting.SetActive(false);
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         Debug.Log("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
         connectToRoomFail += 1;
-        if (connectToRoomFail == 3)
+        if (connectToRoomFail >= 3)
         {
             Debug.Log("Failed to connect to room 3 times, iOS failureToJoinRoom(string error) should have been called");
             failureToJoinRoom("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
@@ -343,11 +396,14 @@ public class Dateland_Network : Network_Manager
     {
         if (PhotonNetwork.NetworkClientState == ClientState.Joined)
         {
-            if (initPlayer && createPlayerCalled)
+            _reconnecting = false;   // We're connected, so reconnecting no longer applies.
+            if( popupManager.curPopup == reconnectingPopupName || popupManager.curPopup == disconnectedPopupName )   // If we were showing "reconnecting" or "disconnected," get rid of it.
+                popupManager.ShowPopup("");
+
+            if (initPlayer)
             {
                 initPlayer = false;
-                createPlayerCalled = false;
-                if (Player_Controller_Mobile.LocalPlayerInstance == null)
+                if (Player_Controller_Mobile.mine == null)
                 {
                     object obj;
                     int skin_slot = -1, skinOffset;
@@ -430,14 +486,16 @@ public class Dateland_Network : Network_Manager
                     else
                     {
                         // Try to find a spawn point, else use (0,0,0)
-                        Vector3 spawn_point = Vector3.zero;
-                        foreach( var spawn in FindObjectsOfType<DefaultPlayerSpawn>() )
+                        Vector3 spawn_point = _lastKnownPlayerPosition;
+                        if( !_gotLastKnownPlayerPosition )   // we've never actually had a last known player position, so find a spawn point
+                        {
+                            foreach( var spawn in FindObjectsOfType<DefaultPlayerSpawn>() )
                             if( spawn.comingFromScene == "" )   // the player isn't coming from any scene... so this is a match
                             {
                                 spawn_point = spawn.transform.position;
                                 break;
                             }
-
+                        }
 
                         madePlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                     }
@@ -450,6 +508,11 @@ public class Dateland_Network : Network_Manager
                     initialized = true;
                 }
             }
+        }
+        else if( _wantsToLeave && PhotonNetwork.NetworkClientState == ClientState.Disconnected )
+        {
+            // OK, we are allowed to leave now
+
         }
         /*else if (PhotonNetwork.NetworkClientState == ClientState.Disconnected && madePlayer == null)
         {
@@ -512,7 +575,6 @@ public class Dateland_Network : Network_Manager
 
         //Debug.Log("I ON THE OTHER HAND AM THE JSON RECIEVED: " + json_string);
         Debug.Log("This is my Match ID: " + player.partyId);
-        createPlayerCalled = true;
         Connect();
     }
 
@@ -526,7 +588,6 @@ public class Dateland_Network : Network_Manager
             else
             {
                 EventManager.TriggerEvent("cancel_destroy");
-                Connecting.SetActive(false);
                 inBackground = false;
             }
         
@@ -538,10 +599,43 @@ public class Dateland_Network : Network_Manager
             PlayerPrefs.SetFloat("zPos", madePlayer.transform.position.z);
             PlayerPrefs.SetInt("skinNum", madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot);
             inBackground = true;
-            Connecting.SetActive(true);
+
+            if( popupManager.curPopup != disconnectedPopupName )
+                popupManager.ShowPopup( connectingPopupName );  // show connecting popup
+
             backgroundPlayer();
         
     }
+
+
+	private void FixedUpdate()
+	{
+		if( _reconnecting )   // We've been disconnected, but try to reconnect
+        {
+            _reconnectTimer += Time.fixedDeltaTime;
+            if( _reconnectTimer >= reconnectTime )   // We reached the end of our reconnect period, and no luck... show "disconnected" and give up
+                popupManager.ShowPopup( disconnectedPopupName );
+            else if( Mathf.Floor( _reconnectTimer / reconnectInterval ) > Mathf.Floor( (_reconnectTimer - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
+            {
+                // These values handle initial retries, but I don't want to use them right now... we'll retry ever reconnectInterval from this spot right here.
+                // Setting them to 3 (their maximum value above) should disable them
+                connectToMasterFails = 3;
+                connectToRoomFail = 3;
+
+                Debug.Log("Attempting reconnect (attempt " + Mathf.Floor( _reconnectTimer / reconnectInterval ) + ")");
+
+                Connect();
+            }
+        }
+
+        // Save last known player position in case we get disconnected.
+        if( Player_Controller_Mobile.mine != null )
+        {
+            _lastKnownPlayerPosition = Player_Controller_Mobile.mine.transform.position;
+            _gotLastKnownPlayerPosition = true;
+        }
+
+	}
 
 
 }

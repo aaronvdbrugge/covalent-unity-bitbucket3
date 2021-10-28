@@ -24,6 +24,15 @@ public class SynchronizedAnimationPosition : MonoBehaviourPun
     float _requestStateCooldown;      // between RequestAnimationTime calls
     bool _haveSyncedAtLeastOnce = false;
 
+	private void Awake()
+	{
+        EventManager.StartListening("OnPhotonConnect", OnPhotonConnect);   // note: it's important to re-request state if they reconnect
+    }
+
+    void OnPhotonConnect() => _haveSyncedAtLeastOnce = false;   // will lead re-requesting state in FixedUpdate
+
+
+
     [PunRPC]
     void SetAnimationTime(float normalized_time)
     {
@@ -47,7 +56,7 @@ public class SynchronizedAnimationPosition : MonoBehaviourPun
 
     void FixedUpdate()
     {
-        if( PhotonNetwork.InRoom )
+        if( Dateland_Network.initialized )
         {
             if( photonView.IsMine )
             {

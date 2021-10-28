@@ -140,7 +140,11 @@ public class VolleyBall : MonoBehaviourPun
 	private void Awake()
 	{
         _ballSpriteSorter = ballSprite.GetComponent<IsoSpriteSorting>();
+        EventManager.StartListening("OnPhotonConnect", OnPhotonConnect);   // note: it's important to re-request state if they reconnect
     }
+
+    void OnPhotonConnect() => _netInitialized = false;   // should be all that's necessary to get another request to happen
+
 
 	private void Start()
 	{

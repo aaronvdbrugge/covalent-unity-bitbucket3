@@ -43,6 +43,14 @@ public class SunflowerManager : MonoBehaviourPun
 
 
 
+	private void Awake()
+	{
+        EventManager.StartListening("OnPhotonConnect", OnPhotonConnect);   // note: it's important to re-request state if they reconnect
+    }
+
+    void OnPhotonConnect() => _gotState = false;   // will lead re-requesting state in FixedUpdate
+
+
 
 
 	private void Start()
