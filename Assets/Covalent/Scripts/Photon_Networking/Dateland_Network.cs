@@ -80,7 +80,6 @@ public class Dateland_Network : Network_Manager
     private bool player_removed;
     private bool tryingToJoinRoom, inBackground;
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
-    private int connectToMasterFails, connectToRoomFail;
     private string player_JSON;
 
 
@@ -362,8 +361,6 @@ public class Dateland_Network : Network_Manager
     private void Start()
     {
         player_removed = false;
-        connectToMasterFails = 0;
-        connectToRoomFail = 0;
         //Connect();
 
         // Start connecting to room, so we can create player
@@ -601,10 +598,6 @@ public class Dateland_Network : Network_Manager
                 popupManager.ShowPopup( disconnectedPopupName );
             else if( Mathf.Floor( (_reconnectTimer-initialReconnectDelay) / reconnectInterval ) > Mathf.Floor( ((_reconnectTimer-initialReconnectDelay) - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
             {
-                // These values handle initial retries, but I don't want to use them right now... we'll retry ever reconnectInterval from this spot right here.
-                // Setting them to 3 (their maximum value above) should disable them
-                connectToMasterFails = 3;
-                connectToRoomFail = 3;
 
                 Debug.Log("Attempting reconnect (attempt " + Mathf.Floor( _reconnectTimer / reconnectInterval ) + ")");
 
