@@ -32,9 +32,6 @@ public class AddressablesLoadingScreen : MonoBehaviour
     [Tooltip("Stretches to fill its parent transform; has x pivot=0.  We'll change it accordingly")]
     public RectTransform progressBar; 
     
-    [Tooltip("Add a little bit of wait time; this ensures the native side has plenty of time to call createPlayer to give us the JSON info before we go to the next scene (I don't know if much delay is actually necessary but added it just in case)")]
-    public float initialDelay = 0.3f;
-
 
 
     [Header("Testing")]
@@ -57,7 +54,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
 		if( !simulate && !string.IsNullOrEmpty(sceneToLoad.AssetGUID) )
             ResourceManager.ExceptionHandler = CustomExceptionHandler;
 
-        progressText.text = "Loading scene...";
+        progressText.text = "Loading...";
         SetProgressBarState(0);
 	}
 
@@ -129,9 +126,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
         // Not simulating. Wait for initialDelay, then call LoadScene
         else if( !string.IsNullOrEmpty(sceneToLoad.AssetGUID) && !_startedLoad)
         {
-            if( initialDelay > 0 )   // Wait a bit before loading scene
-                initialDelay = Mathf.Max(0, initialDelay - Time.deltaTime);
-            else
+            if( Dateland_Network.realUserJson != null || Application.isEditor )   // We must receive the createPlayer call before we start loading.
             {
                 _startedLoad = true;
                 LoadScene();

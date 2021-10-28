@@ -4,6 +4,7 @@ using Covalent.Scripts.Util.Native_Proxy;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dateland_Network : Network_Manager
 {
@@ -91,7 +92,7 @@ public class Dateland_Network : Network_Manager
 
     /// <summary>
     /// NOTE: Call this when the player pushes a button indicating they actually want to leave.
-    /// Native should handle the rest
+    /// Native will need to handle this, but we also need to go back to the loading screen.
     /// </summary>
     public static void playerDidLeaveGame()
     { 
@@ -99,7 +100,11 @@ public class Dateland_Network : Network_Manager
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
         else
             NativeProxy.PlayerDidLeaveGame();
-    }
+
+
+        realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
+		SceneManager.LoadScene("LoadingScreen");
+	}
 
 
 
