@@ -21,6 +21,9 @@ public class Dateland_Camera : MonoBehaviour  // : Camera_Follow
 
     public Image[] Graphics_Level_Buttons;
     public Sprite[] Graphics_Level_Sprites;
+
+    public PopupManager popupManager;
+
     // Start is called before the first frame update
     void Start()
     {
