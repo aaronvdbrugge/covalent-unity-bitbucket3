@@ -7,8 +7,7 @@ using UnityEngine.InputSystem;
 /// This class is intended to hold logic only related to the player's actual movement.
 /// No voice chat code, emojis, etc., even animation! Just movement.
 /// Should be only be enabled if photonView.isMine
-/// </summary>
-
+/// </summary>Contro
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player_Movement : MonoBehaviour
 {

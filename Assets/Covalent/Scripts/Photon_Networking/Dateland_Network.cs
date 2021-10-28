@@ -1,11 +1,9 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using Covalent.Scripts.Util.Native_Proxy;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Dateland_Network : Network_Manager
 {
@@ -21,7 +19,7 @@ public class Dateland_Network : Network_Manager
     #endregion
 
     #region Public Fields
-    public CanvasGroup Connecting;
+    public GameObject Connecting;
     public GameObject playerPrefab;
     public GameObject madePlayer;
     public Player_Class player;
@@ -56,26 +54,23 @@ public class Dateland_Network : Network_Manager
 
     public string lastSceneName = null;   // used for determining room name.
 
+
+    /// <summary>
+    /// This will be set from CreatePlayerReceiver with real profile JSON
+    /// from the native side. It will remain null when running in editor or
+    /// non-integrated on device.
+    /// </summary>
+    public static string realUserJson = null;
+
     #endregion
 
-    // External calls (out to native app)
-    [DllImport("__Internal")]
-    private static extern void _updatePlayersInRoom(string[] unityJSONList, int count);
-    [DllImport("__Internal")]
-    private static extern void _playerDidLeaveGame();
-    [DllImport("__Internal")]
-    private static extern void _failureToConnect(string error);
-    [DllImport("__Internal")]
-    private static extern void _failureToJoinRoom(string error);
-    
-    
     // Wrappers (don't call extern in editor)
     private static void updatePlayersInRoom(string[] unityJSONList, int count)
     { 
         if( Application.isEditor ) 
             Debug.Log("EXTERN: updatePlayersInRoom(" + unityJSONList + ", " + count + ")");
         else
-            _updatePlayersInRoom( unityJSONList, count );
+            NativeProxy.UpdatePlayersInRoom(unityJSONList, count);
     }
 
     private static void failureToConnect(string error)
@@ -83,7 +78,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnect(" +  error + ")"); 
         else
-            _failureToConnect( error );
+            NativeProxy.FailureToConnect( error );
     }
 
     private static void failureToJoinRoom(string error)
@@ -91,7 +86,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToJoinRoom(" + error + ")");
         else
-            _failureToJoinRoom( error );
+            NativeProxy.FailureToJoinRoom( error );
     }
 
     /// <summary>
@@ -103,7 +98,7 @@ public class Dateland_Network : Network_Manager
         if( Application.isEditor )
             Debug.Log("EXTERN: playerDidLeaveRoom"); 
         else
-            _playerDidLeaveGame();
+            NativeProxy.PlayerDidLeaveGame();
     }
 
 
@@ -215,15 +210,17 @@ public class Dateland_Network : Network_Manager
     {
         isConnecting = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
-        playerDidLeaveGame();
+        //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
+
+        // Show disconnected popup
+        Camera.main.GetComponent<Dateland_Camera>().popupManager.ShowPopup("disconnected");
     }
 
 
     public override void OnJoinedRoom()
     {
         initPlayer = true;
-        Connecting.alpha = 0;
-        Connecting.blocksRaycasts = false;
+        Connecting.SetActive(false);
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -332,7 +329,10 @@ public class Dateland_Network : Network_Manager
         //Connect();
 
         // Start connecting to room, so we can create player
-        enterDateland( testUserJson.text );
+        if( !string.IsNullOrEmpty(realUserJson) )   // this would have been set in CreatePlayerreceiver in LoadScreen.cs
+            enterDateland( realUserJson );
+        else  // test environment, use test JSON
+            enterDateland( testUserJson.text );
     }
     private void Update()
     {
@@ -346,13 +346,18 @@ public class Dateland_Network : Network_Manager
                 {
                     object obj;
                     int skin_slot = -1, skinOffset;
-                    object[] initArray = new object[2];
+
+
+                    // Here we store all data that will be sent to OnPhotonInstantiate on all clients.
+                    // We'll deal with skin number below (default to 0 for now).
+                    object[] initArray = new object[] { 0, player.user.name, player.user.id };    
+
                     //This logic below is used to determine players skins coming into the Sandbox
                     //It utilizes the Custom Properties of the Room to store which skins have been used
                     if (PlayerPrefs.HasKey("skinNum"))
                     {
-                        Debug.Log("I HAVE A PREFERENCE!");
-                        initArray = new object[] { PlayerPrefs.GetInt("skinNum"), player.user.name };
+                        //Debug.Log("I HAVE A PREFERENCE!");
+                        initArray[0] = PlayerPrefs.GetInt("skinNum");
                     }
                     else
                     {
@@ -388,7 +393,7 @@ public class Dateland_Network : Network_Manager
                             Skin_Slot.Add(SKIN_SLOT, availableSkins);
                             Skin_Slot.Add("skinOffset", skinOffset);
                             PhotonNetwork.CurrentRoom.SetCustomProperties(Skin_Slot, null, null);
-                            initArray = new object[] { skin_slot * 4 + skinOffset, player.user.name };
+                            initArray[0] = skin_slot * 4 + skinOffset;
                         }
                         else
                         {
@@ -404,7 +409,7 @@ public class Dateland_Network : Network_Manager
                             Skin_Slot.Add(SKIN_SLOT, intArray);
                             Skin_Slot.Add("skinOffset", skinOffset);
                             PhotonNetwork.CurrentRoom.SetCustomProperties(Skin_Slot, null, null);
-                            initArray = new object[] { skin_slot * 4 + skinOffset, player.user.name };
+                            initArray[0] = skin_slot * 4 + skinOffset;
                         }
                     }
 
@@ -481,6 +486,25 @@ public class Dateland_Network : Network_Manager
         PlayerPrefs.SetString("name", player.user.name);
         PlayerPrefs.SetInt("id", player.user.id);
         PlayerPrefs.SetString("partyId", player.partyId);
+
+        // Determine the ID of our partner player.
+        // partyID is in the format  123:456
+        // Partner player is the ID in this string that isn't our ID. One of them should be ours
+        string[] str_ids = player.partyId.Split(':');
+        int partner_id = -1;
+        foreach( string str_id in str_ids )
+            if( int.Parse(str_id) != player.user.id )  // different than our ID
+            {
+                if( partner_id != -1 )   // So was the other one.. print error
+                    Debug.LogError("Both of the IDs in partyID \"" + player.partyId + "\" were different from our ID (" + player.user.id + ")");
+                else
+                    partner_id = int.Parse(str_id);
+            }
+        PlayerPrefs.SetInt("partnerId", partner_id);
+
+
+
+
         //Debug.Log("I ON THE OTHER HAND AM THE JSON RECIEVED: " + json_string);
         Debug.Log("This is my Match ID: " + player.partyId);
         createPlayerCalled = true;
@@ -497,8 +521,7 @@ public class Dateland_Network : Network_Manager
             else
             {
                 EventManager.TriggerEvent("cancel_destroy");
-                Connecting.alpha = 0;
-                Connecting.blocksRaycasts = false;
+                Connecting.SetActive(false);
                 inBackground = false;
             }
         
@@ -510,8 +533,7 @@ public class Dateland_Network : Network_Manager
             PlayerPrefs.SetFloat("zPos", madePlayer.transform.position.z);
             PlayerPrefs.SetInt("skinNum", madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot);
             inBackground = true;
-            Connecting.alpha = 1;
-            Connecting.blocksRaycasts = true;
+            Connecting.SetActive(true);
             backgroundPlayer();
         
     }
