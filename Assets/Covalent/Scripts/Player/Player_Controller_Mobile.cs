@@ -216,6 +216,14 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
         // Clean up static dictionary of players
         if( playersByKippoId.ContainsKey( kippoUserId ) )
             playersByKippoId.Remove( kippoUserId );
+
+        // Clean up "mine"
+        if( this == mine )
+            mine = null;
+
+        // Clean up fromActorNumber
+        if( fromActorNumber.ContainsKey( photonView.Owner.ActorNumber ) )
+            fromActorNumber.Remove( photonView.Owner.ActorNumber );
     }
 
 
