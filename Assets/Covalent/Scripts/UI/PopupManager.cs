@@ -46,6 +46,9 @@ public class PopupManager : MonoBehaviour
 
 	public void ShowPopup(string popup_name)
     {
+        if( popup_name == curPopup )
+            return;
+
         //Set all children to hidden...
         foreach( Transform c in transform )
             c.gameObject.SetActive(false);

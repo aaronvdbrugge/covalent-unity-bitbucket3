@@ -65,7 +65,6 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     public Player_Partner playerPartner;
 
 
-    public static GameObject LocalPlayerInstance;
     [Header("References")]
     public TMP_Text playerName;
 

@@ -148,7 +148,7 @@ public class Launcher : MonoBehaviourPunCallbacks
             {
                 initPlayer = false;
                 createPlayerCalled = false;
-                if (Player_Controller_Mobile.LocalPlayerInstance == null)
+                if (Player_Controller_Mobile.mine == null)
                 {
                     object obj;
                     int skin_slot = -1, skinOffset;

@@ -69,6 +69,13 @@ public class MatchGame : MonoBehaviourPun
 	Camera_Sound _cameraSound;
 
 
+	private void Awake()
+	{
+        EventManager.StartListening("OnPhotonConnect", OnPhotonConnect);   // note: it's important to re-request state if they reconnect
+    }
+
+    void OnPhotonConnect() => _cardValues = new int[cardsWide * cardsHigh];   // this should cause an "invalid" cardValues array, causing it to re-request state in FixedUpdate
+
 
 
 
