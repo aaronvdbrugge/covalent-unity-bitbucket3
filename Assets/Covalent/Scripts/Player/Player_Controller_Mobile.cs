@@ -21,6 +21,11 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     // Convenience pointer to the owned player.
     public static Player_Controller_Mobile mine;
 
+
+    //Convenience pointers to all players, keyed by Kippo ID. Can use this to find our partner
+    public static Dictionary<int, Player_Controller_Mobile> playersByKippoId = new Dictionary<int, Player_Controller_Mobile>();
+
+
     /// <summary>
     /// Lookup of gameobjects via actor number. Photon doesn't seem to provide this, so we'll set it up as we go.
     /// Bear in mind players could be destroyed, and the key will point to something that casts to false.
@@ -28,7 +33,7 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     public static Dictionary<int, Player_Controller_Mobile> fromActorNumber = new Dictionary<int, Player_Controller_Mobile>();
 
 
-
+    [Header("Player component references")]
     [Tooltip("Handles actual movement of the player.")]
     public Player_Movement playerMovement; 
 
@@ -56,12 +61,19 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     [Tooltip("Handles skins")]
     public Spine_Player_Controller spinePlayerController;
 
+    [Tooltip("Handles logic related to the user's partner, who they entered with and are voice chatting with.")]
+    public Player_Partner playerPartner;
+
 
     public static GameObject LocalPlayerInstance;
-
+    [Header("References")]
     public TMP_Text playerName;
 
-    public Player_Class user_info;
+
+
+    [Header("Runtime")]
+    public string username;
+    public int kippoUserId;
 
 
 
@@ -78,9 +90,6 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
 
     private void Awake()
     {
-        user_info = new Player_Class();
-
-
         //Application.targetFrameRate = 60;
         EventManager.StartListening("disable_joystick", disableMovement);
         EventManager.StartListening("enable_joystick", enableMovement);
@@ -169,12 +178,7 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
                 stick.onJoystickValues.AddListener( playerMovement.SetJoystick );
 
 
-            // Not sure why this has to come from different places depending on scene.
-            // I think the Social_Hour case will probably be scrapped. -seb
-            //if (SceneManager.GetActiveScene().name.Equals("Social_Hour"))
-            //    user_info = GameObject.Find("PhotonMono").GetComponent<Launcher>().player;
-            //else
-            user_info = GameObject.Find("Network_Manager").GetComponent<Dateland_Network>().player;
+
 
             // Relay playerHop to camera click handler, which needs to be able to trigger hops.
             FindObjectOfType<CameraClickHandler>().playerHop = playerHop;
@@ -190,10 +194,15 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
         object[] instantiationData = info.photonView.InstantiationData;
-        string name = (string)instantiationData[1];
-        playerName.text = name;
-        Debug.Log("Inside Callback the name passed is: " + name + ".");
+        username = (string)instantiationData[1];
+        kippoUserId = (int)instantiationData[2];
 
+        // Add ourselves to a static dictionary of players by kippo id for easy reference and finding partner.
+        playersByKippoId[kippoUserId] = this;
+
+
+        playerName.text = username;
+        Debug.Log("Inside Callback the name passed is: " + name + ".");
 
         // Set up this dictionary so we can get gameobjects easily, later.
         fromActorNumber[ photonView.Owner.ActorNumber ] = this;
@@ -201,6 +210,16 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
         // Spine player controller stopped getting this call... Manually forward it
         spinePlayerController.OnPhotonInstantiate( info ); 
     }
+
+    void OnDestroy()
+    {
+        // Clean up static dictionary of players
+        if( playersByKippoId.ContainsKey( kippoUserId ) )
+            playersByKippoId.Remove( kippoUserId );
+    }
+
+
+
 
 
 }
