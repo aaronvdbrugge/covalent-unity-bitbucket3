@@ -120,6 +120,11 @@ public class Spine_Player_Controller : MonoBehaviourPun
 		ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable();   // Record this sitpoint's ID in the player's properties.
 		hash["CharacterSkinSlot"] = slot;
         photonView.Owner.SetCustomProperties(hash);
+
+
+        // Ensure we can keep our desired skin next time we join
+        if( photonView.IsMine )
+            PlayerPrefs.SetInt("skinNum", slot);
     }
 
 
