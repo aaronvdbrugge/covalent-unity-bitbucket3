@@ -11,6 +11,8 @@ public class ConnectingPopup : MonoBehaviour
 {
     public PopupManager popupManager;
     public string connectingPopupName = "connecting";
+    public string reconnectingPopupName = "reconnecting";
+    public string disconnectedPopupName = "disconnected";
     public string welcomePopupName = "welcome";
     public float holdTime = 0.25f;   // we'll hold for a short bit before hiding "Connecting...", this should ensure it's still shown during the Photon stutter
 
@@ -20,11 +22,12 @@ public class ConnectingPopup : MonoBehaviour
 
     void FixedUpdate()
     {
-        if( popupManager.curPopup == connectingPopupName && Player_Controller_Mobile.mine != null && PhotonNetwork.IsConnectedAndReady )
+        // Make darn sure everything's ready
+        if( (popupManager.curPopup == connectingPopupName || popupManager.curPopup == reconnectingPopupName || popupManager.curPopup == disconnectedPopupName ) && Player_Controller_Mobile.mine != null && PhotonNetwork.IsConnectedAndReady && Dateland_Network.initialized)
         {
-            if( holdTime > 0 )
+            if( holdTime > 0 )   // hold for a bit
                 holdTime -= Time.fixedDeltaTime;
-            else
+            else   // OK! start the game
             {
                 if( !_didDisplayWelcome )   // haven't displayed welcome yet
                     popupManager.ShowPopup( welcomePopupName );

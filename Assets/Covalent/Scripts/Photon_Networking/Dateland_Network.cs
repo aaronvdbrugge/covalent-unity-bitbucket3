@@ -48,6 +48,9 @@ public class Dateland_Network : Network_Manager
     [Tooltip("We'll retry every this amount of seconds")]
     public float reconnectInterval = 10.0f;
 
+    [Tooltip("We'll try our first reconnect this amount of seconds after disconnect (could be less than reconnectInterval, e.g. 1 second)")]
+    public float initialReconnectDelay = 1.0f;
+
 
     #endregion
 
@@ -75,7 +78,7 @@ public class Dateland_Network : Network_Manager
     #region Private Fields
     private bool initPlayer = false;
     private bool player_removed;
-    private bool isConnecting, inBackground;
+    private bool tryingToJoinRoom, inBackground;
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
     private int connectToMasterFails, connectToRoomFail;
     private string player_JSON;
@@ -184,7 +187,7 @@ public class Dateland_Network : Network_Manager
         roomOptions.BroadcastPropsChangeToAll = true;
         roomOptions.MaxPlayers = maxPlayersPerRoom;
         PhotonNetwork.JoinOrCreateRoom(name, roomOptions, TypedLobby.Default);
-        isConnecting = false;
+        tryingToJoinRoom = false;
         PhotonNetwork.SendRate = 30;  //10;
     }
 
@@ -227,27 +230,12 @@ public class Dateland_Network : Network_Manager
 
     public override void OnConnectedToMaster()
     {
-
-        if (isConnecting)
-        {
+        if (tryingToJoinRoom)
             joinRoom(GetRoomName());   // use name of the current scene to determine room.
-        }
         else
-        {
-            connectToMasterFails += 1;
-            if (connectToMasterFails >= 3)
-            {
-                Debug.Log("Failed to connect to master 3 times, iOS failureToConnect(string error) should have been called");
-                failureToConnect("Failed to connect to Photon Server");
-            }
-            else
-            {
-                Debug.Log("Failed to connect to master " + connectToMasterFails + " times, connecting again");
-                Connect();
-            }
-            
-        }
+            failureToConnect("Failed to connect to Photon Server");
     }
+
     public void disconnectPhoton()
     {
         PhotonNetwork.Disconnect();
@@ -260,19 +248,21 @@ public class Dateland_Network : Network_Manager
         initPlayer = true;   // This should cause us to make a new player, if we ever connect again
 
 
-        isConnecting = false;
+        tryingToJoinRoom = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
         //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
 
         
         if( _wantsToLeave )   // This disconnect happened because they were trying to leave...
             DoLeaveGameActual();    // Can go back to loading screen
-        else if( !_reconnecting )  // Show "reconnecting" popup
+        else if( _gotLastKnownPlayerPosition && !_reconnecting )  // Show "reconnecting" popup. Only relevant if we ever even had a player, otherwise show "connecting" instead
         {
             _reconnecting = true;
             popupManager.ShowPopup(reconnectingPopupName);
             _reconnectTimer = 0.0f;  // reset it
         }
+        else if( !_gotLastKnownPlayerPosition )
+            popupManager.ShowPopup(connectingPopupName);
     }
 
 
@@ -284,17 +274,7 @@ public class Dateland_Network : Network_Manager
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         Debug.Log("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
-        connectToRoomFail += 1;
-        if (connectToRoomFail >= 3)
-        {
-            Debug.Log("Failed to connect to room 3 times, iOS failureToJoinRoom(string error) should have been called");
-            failureToJoinRoom("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
-        }
-        else
-        {
-            Debug.Log("Failed to join room " + connectToRoomFail + " times, joining room again");
-            joinRoom( GetRoomName() );   // Use scene name to determine proper room
-        }
+        failureToJoinRoom("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
     }
 
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
@@ -397,8 +377,7 @@ public class Dateland_Network : Network_Manager
         if (PhotonNetwork.NetworkClientState == ClientState.Joined)
         {
             _reconnecting = false;   // We're connected, so reconnecting no longer applies.
-            if( popupManager.curPopup == reconnectingPopupName || popupManager.curPopup == disconnectedPopupName )   // If we were showing "reconnecting" or "disconnected," get rid of it.
-                popupManager.ShowPopup("");
+            // Note that ConnectingPopup.cs handles disabling the connecting / reconnecting popups we've started, once everything's initialized.
 
             if (initPlayer)
             {
@@ -512,7 +491,7 @@ public class Dateland_Network : Network_Manager
         else if( _wantsToLeave && PhotonNetwork.NetworkClientState == ClientState.Disconnected )
         {
             // OK, we are allowed to leave now
-
+            DoLeaveGameActual();
         }
         /*else if (PhotonNetwork.NetworkClientState == ClientState.Disconnected && madePlayer == null)
         {
@@ -522,9 +501,9 @@ public class Dateland_Network : Network_Manager
     }
     public void Connect()
     {
-        isConnecting = PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
-        isConnecting = true;    // added by seb, bugfix
+        tryingToJoinRoom = true;    // added by seb, bugfix
     }
     public void destroyPlayer()
     {
@@ -575,7 +554,12 @@ public class Dateland_Network : Network_Manager
 
         //Debug.Log("I ON THE OTHER HAND AM THE JSON RECIEVED: " + json_string);
         Debug.Log("This is my Match ID: " + player.partyId);
-        Connect();
+        //Connect();
+
+        // The new-and-improved "reconnect" logic also works best for initial connection.
+        // Just use that, so we'll keep trying for 60 seconds, then give up.
+        _reconnecting = true;
+        _reconnectTimer = 0.0f;
     }
 
     public void appWillEnterForeground()
@@ -615,7 +599,7 @@ public class Dateland_Network : Network_Manager
             _reconnectTimer += Time.fixedDeltaTime;
             if( _reconnectTimer >= reconnectTime )   // We reached the end of our reconnect period, and no luck... show "disconnected" and give up
                 popupManager.ShowPopup( disconnectedPopupName );
-            else if( Mathf.Floor( _reconnectTimer / reconnectInterval ) > Mathf.Floor( (_reconnectTimer - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
+            else if( Mathf.Floor( (_reconnectTimer-initialReconnectDelay) / reconnectInterval ) > Mathf.Floor( ((_reconnectTimer-initialReconnectDelay) - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
             {
                 // These values handle initial retries, but I don't want to use them right now... we'll retry ever reconnectInterval from this spot right here.
                 // Setting them to 3 (their maximum value above) should disable them
