@@ -272,6 +272,12 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.MuteLocalAudioStream( muted );
     }
 
+    [ContextMenu("Do Mute")]
+    public void DoMute() => mute(true);
+    [ContextMenu("Do Unmute")]
+    public void DoUnmute() => mute(false);
+
+
 
     /// <summary>
     /// Called from mute toggle button
@@ -286,9 +292,9 @@ public class Agora_Manager : MonoBehaviour
     /// <summary>
     /// NOTE: don't call this before Dateland_Network.playerFromJson has been initialized. We need the Kippo ID to be our Agora ID.
     /// </summary>
-    public void JoinChannel(string name)
+    public void JoinChannel(string channel_name)
     {
-        _doJoinChannel = name;  // defer action to FixedUpdate
+        _doJoinChannel = channel_name;  // defer action to FixedUpdate
     }
 
 
@@ -329,8 +335,20 @@ public class Agora_Manager : MonoBehaviour
         {
             mRtcEngine.LeaveChannel();
             IRtcEngine.Destroy();
+            mRtcEngine = null;
         }
     }
+
+    void OnDestroy()
+    {
+        if (mRtcEngine != null)
+        {
+            mRtcEngine.LeaveChannel();
+            IRtcEngine.Destroy();
+            mRtcEngine = null;
+        }
+    }
+
 
 	private void FixedUpdate()
 	{
