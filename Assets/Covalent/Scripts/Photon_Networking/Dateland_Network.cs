@@ -4,21 +4,13 @@ using System.Collections.Generic;
 using Covalent.Scripts.Util.Native_Proxy;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Dateland_Network : Network_Manager
 {
-    [Tooltip("Will be fed to enterDateland automatically if enterDatelandTest is true")]
-    public TextAsset testUserJson;
 
-    [Tooltip("Will immediately enter dateland on Start, using testUserJson data.")]
-    public bool enterDatelandTest = false;
-
-    #region Private Serializable Fields
-    [SerializeField]
-    private byte maxPlayersPerRoom = 16;
-	#endregion
 
 
 
@@ -27,17 +19,26 @@ public class Dateland_Network : Network_Manager
 
 	#region Public Fields
 
-
+    [Header("References")]
+    [Tooltip("Will be fed to enterDateland automatically if createPlayer hasn't been called from native.")]
+    public TextAsset testUserJson;
     public PopupManager popupManager;
+    public GameObject playerPrefab;
+    [Tooltip("\"YOU WILL LEAVE THE ARCADE IN 0:60\"")]
+    public TMP_Text partnerDisconnectText;  
+
+
+    [Header("Settings")]
     public string connectingPopupName = "connecting";
     public string reconnectingPopupName = "reconnecting";
     public string disconnectedPopupName = "disconnected";
+    public string disconnectingPartnerPopupName = "disconnecting_partner";
     public string disconnectedInactivityPopupName = "disconnected_inactivity";
-    public GameObject playerPrefab;
-    public Player_Class player;
+    public string disconnectedPartnerPopupName= "disconnected_partner";
+
     public string gameVersion = "1";
     public string SKIN_SLOT = "TESTING";
-
+    public byte maxPlayersPerRoom = 16;
 
     [Tooltip("This will be prepended to the scene name. E.g., 'test_Dateland'")]
     public string roomNameBase = "test_";
@@ -55,6 +56,18 @@ public class Dateland_Network : Network_Manager
     [Tooltip("Kill player if they're backgrounded this long.")]
     public float maxBackgroundedTime = 60f;
 
+    [Tooltip("Countdown to when the player disconnects because their partner disconnected.")]
+    public float partnerDisconnectTime = 60.9f;
+
+
+    [Header("Runtime")]
+    [Tooltip("Parsed from input JSON.")]
+    public Player_Class player;
+
+    [Tooltip("This will be set from the debug button in disconnecting_inactivity so you can keep playing for testing purposes.")]
+    public bool disablePartnerDisconnectForDebug = false;
+
+    public void DisablePartnerDisconnectForDebug() => disablePartnerDisconnectForDebug = true;
 
     #endregion
 
@@ -100,6 +113,16 @@ public class Dateland_Network : Network_Manager
     bool _disconnectedDueToInactivity = false;  // If true, don't bother to reconnect
 
 
+
+    /// <summary>
+    /// For now, we'll just set this to true at the very start.
+    /// In the future, we may need to start out with it being false, to handle the special "wait for date"
+    /// case, where a player might actually have to wait several minutes for their match (with bad internet)
+    /// to load their Dateland. At least they should be able to chat through Agora while one date is waiting.
+    /// </summary>
+    bool _partnerTimeoutEnabled = true;
+    float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime
+    
 
     #endregion
 
@@ -594,6 +617,35 @@ public class Dateland_Network : Network_Manager
             _lastKnownPlayerPosition = Player_Controller_Mobile.mine.transform.position;
             _gotLastKnownPlayerPosition = true;
         }
+
+
+
+        // PARTNER DISCONNECT
+        // See if our partner is in the room...
+        // Don't do it if we're disconnected. Might not be enabled if we're in "wait for date" mode. 
+        if( initialized && _partnerTimeoutEnabled && !disablePartnerDisconnectForDebug && Player_Controller_Mobile.mine != null && Player_Controller_Mobile.mine.playerPartner.GetPartner() == null )   // Partner is MIA!
+        {
+            popupManager.ShowPopup( disconnectingPartnerPopupName );
+
+            _partnerDisconnectTimer += Time.fixedDeltaTime;
+            if( _partnerDisconnectTimer >= partnerDisconnectTime )
+            {
+                // Time to disconnect.
+                _disconnectedDueToInactivity = true;   // not strictly true, but this will prevent us from trying to reconnect all the same
+                _partnerTimeoutEnabled = false;   // not needed anymore
+                popupManager.ShowPopup( disconnectedPartnerPopupName );
+                PhotonNetwork.Disconnect();
+            }
+            else
+                partnerDisconnectText.text = "YOU WILL LEAVE THE ARCADE IN 0:" + (int)(partnerDisconnectTime - _partnerDisconnectTimer);
+        }
+        else
+        {
+            _partnerDisconnectTimer = 0;  // reset 
+            if( popupManager.curPopup == disconnectingPartnerPopupName )   // close popup
+                popupManager.ShowPopup("");
+        }
+        
 
 	}
 
