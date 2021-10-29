@@ -95,6 +95,7 @@ public class Agora_Manager : MonoBehaviour
     private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
 
     float _disconnectRetryCooldown=0;  // set to disconnectRetryInterval on retry
+    bool _wasConnected = false;   // were we ever connected? use to detect disconnect
     string _lastChannel = null;   // if JoinChannel was ever called, this will be the parameter it was given
 
     private IEnumerator requestMicrophone()
@@ -310,6 +311,7 @@ public class Agora_Manager : MonoBehaviour
         Debug.Log("Leaving Agora channel");
         mRtcEngine.LeaveChannel();
         _lastChannel = null;  // so we don't try to reconnect
+        _wasConnected = false;
     }
 
     public void LeaveChannel(AgoraChannel channel)
@@ -329,8 +331,11 @@ public class Agora_Manager : MonoBehaviour
 	private void FixedUpdate()
 	{
 		// Look for disconnect
+        if( mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )  
+            _wasConnected = true;   // were we connected at least once? prerequisite for disconnect
+
         _disconnectRetryCooldown = Mathf.Max(0, _disconnectRetryCooldown - Time.fixedDeltaTime);
-        if( _lastChannel != null && _disconnectRetryCooldown <= 0 &&  mRtcEngine.GetConnectionState() != CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )
+        if( _wasConnected && _lastChannel != null && _disconnectRetryCooldown <= 0 &&  mRtcEngine.GetConnectionState() != CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )
         {
             Debug.Log("Disconnected from Agora. Trying to reconnect to channel " + _lastChannel );
             mRtcEngine.JoinChannel(_lastChannel, "extra", (uint) Dateland_Network.playerFromJson.user.id);
