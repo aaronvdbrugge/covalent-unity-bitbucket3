@@ -113,6 +113,13 @@ public class Agora_Manager : MonoBehaviour
 
     private void Awake()
     {
+        // Weird... could this have been necessary for some reason?
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 30;
+    }
+
+    private void Start()
+    {
         mRtcEngine = IRtcEngine.GetEngine(appId);
         mRtcEngine.SetAudioProfile(AUDIO_PROFILE_TYPE.AUDIO_PROFILE_MUSIC_HIGH_QUALITY_STEREO, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_MEETING);
         mRtcEngine.SetDefaultAudioRouteToSpeakerphone(true);
@@ -137,7 +144,7 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.OnError += (int error, string msg) =>
         {
             if( !Application.isEditor ) 
-                failureToConnectAgora("Error: " + error + " Message: " + msg);
+                failureToConnectAgora("Agora Error: " + error + " Message: " + msg);
             if (error == ERROR_NO_PERMISSION_TO_ACCESS || error == ERROR_NO_PERMISSION_TO_RECORD)
             {
                 Debug.Log("Microphone not enabled on device");
@@ -275,18 +282,15 @@ public class Agora_Manager : MonoBehaviour
     }
 
 
+    string _doJoinChannel = null;   //delays a JoinChannel call until FixedUpdate, allowing Start() to occur first
     /// <summary>
     /// NOTE: don't call this before Dateland_Network.playerFromJson has been initialized. We need the Kippo ID to be our Agora ID.
     /// </summary>
     public void JoinChannel(string name)
     {
-        if( joinChatInEditor || !Application.isEditor )
-        {
-            _lastChannel = name;  // in case we get disconnected
-            Debug.Log("Joining Agora channel: " + name + " with ID " + Dateland_Network.playerFromJson.user.id);
-            mRtcEngine.JoinChannel(name, "extra", (uint) Dateland_Network.playerFromJson.user.id);   // Use Kippo ID for our Agora ID.
-        }
+        _doJoinChannel = name;  // defer action to FixedUpdate
     }
+
 
     public AgoraChannel Obj_JoinChannel(string name)
     {
@@ -330,6 +334,17 @@ public class Agora_Manager : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+        if( _doJoinChannel!=null && (joinChatInEditor || !Application.isEditor) )
+        {
+            _lastChannel = _doJoinChannel;  // in case we get disconnected
+            _wasConnected = false;
+            Debug.Log("Joining Agora channel: " + _doJoinChannel + " with ID " + Dateland_Network.playerFromJson.user.id);
+
+            mRtcEngine.JoinChannel(_doJoinChannel, "extra", (uint) Dateland_Network.playerFromJson.user.id);   // Use Kippo ID for our Agora ID.
+
+            _doJoinChannel = null;  // reset
+        }
+
 		// Look for disconnect
         if( mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )  
             _wasConnected = true;   // were we connected at least once? prerequisite for disconnect
