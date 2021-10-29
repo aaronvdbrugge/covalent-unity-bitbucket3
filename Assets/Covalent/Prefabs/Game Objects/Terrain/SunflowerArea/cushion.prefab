@@ -114,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: useCameraOffset
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
