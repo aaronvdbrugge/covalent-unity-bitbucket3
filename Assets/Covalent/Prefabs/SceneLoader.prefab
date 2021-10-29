@@ -8415,10 +8415,11 @@ MonoBehaviour:
   playerPrefab: {fileID: 4450914184106857912, guid: 17a2df742f5bf4ad3b329a687bd3154a,
     type: 3}
   partnerDisconnectText: {fileID: 4398098526167572347}
+  cameraPanning: {fileID: 4921585097239710678}
   gameVersion: 1
   SKIN_SLOT: TESTING
   maxPlayersPerRoom: 10
-  roomNameBase: TEST0_BUILD8_
+  roomNameBase: TEST1_BUILD8_
   reconnectTime: 65
   reconnectInterval: 10
   initialReconnectDelay: 1

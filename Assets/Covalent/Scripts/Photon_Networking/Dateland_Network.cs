@@ -27,6 +27,9 @@ public class Dateland_Network : Network_Manager
     [Tooltip("\"YOU WILL LEAVE THE ARCADE IN 0:60\"")]
     public TMP_Text partnerDisconnectText;  
 
+    [Tooltip("Don't enable this until our date has arrived, and we're out of Limbo.")]
+    public CameraPanning cameraPanning;
+
 
     [Header("Settings")]
 
@@ -70,6 +73,7 @@ public class Dateland_Network : Network_Manager
     {
         _firstWaitForDate = false;
         disablePartnerDisconnectForDebug = true;
+        Player_Controller_Mobile.mine.transform.position = _gotoWhenDateArrives;     // Move (hopefully teleport) to the spawn point (we were in limbo before)
     }
 
     #endregion
@@ -129,7 +133,7 @@ public class Dateland_Network : Network_Manager
     float _firstWaitForDateTimer = 0;   // while _firstWaitForDate = true
     float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime (while _firstWaitForDate = false, meaning our partner has been in the Photon room at some point)
 
-    
+    Vector3 _gotoWhenDateArrives;   // Players will be spawned in "limbo," then go here once it's verified their date has arrived.
 
     #endregion
 
@@ -505,6 +509,18 @@ public class Dateland_Network : Network_Manager
                             }
                         }
 
+
+                        if( _firstWaitForDate )     // We haven't yet verified that our date is here...
+                        {
+                            Limbo limbo = FindObjectOfType<Limbo>();
+                            if( limbo )  // Forget the spawn_point... we'll wait in Limbo until our date arrives, THEN go to the spawn point.
+                            {
+                                _gotoWhenDateArrives = spawn_point;
+                                spawn_point = FindObjectOfType<Limbo>().transform.position;
+                            }
+                        }
+
+
                         PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                     }
                    
@@ -632,7 +648,10 @@ public class Dateland_Network : Network_Manager
         if( initialized && _firstWaitForDate && Player_Controller_Mobile.mine != null  )   
         {
             if( Player_Controller_Mobile.mine.playerPartner.GetPartner() != null )   // Date connected! Proceed...
+            {
                 _firstWaitForDate = false;    // Note that ConnectingPopup will detect the partner, so we don't need to do anything more regarding popups.
+                Player_Controller_Mobile.mine.transform.position = _gotoWhenDateArrives;     // Move (hopefully teleport) to the spawn point (we were in limbo before)
+            }
             else
             {
                 // We're connected, but our date isn't.
@@ -645,7 +664,7 @@ public class Dateland_Network : Network_Manager
             }
         }
 
-
+        cameraPanning.enabled = !_firstWaitForDate;   //only enable camera panning when we aren't waiting for date
 
 
         // PARTNER DISCONNECT
