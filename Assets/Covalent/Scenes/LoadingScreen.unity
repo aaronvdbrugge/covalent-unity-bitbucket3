@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spoofJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
-  doSpoof: 1
+  doSpoof: 0
   debugSettings: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6, type: 2}
 --- !u!4 &765713207
 Transform:
@@ -937,7 +937,7 @@ MonoBehaviour:
   progressText: {fileID: 178103135}
   progressBar: {fileID: 686144850}
   maxWaitForCreatePlayer: 2
-  simulate: 1
+  simulate: 0
   simulatePercent: 0.5
 --- !u!114 &1311253198
 MonoBehaviour:
