@@ -15,7 +15,7 @@ void _updatePlayersInRoom(char *arr[], int count) {
     
     char* cStringCopy(const char* string);
     NSMutableArray *items = [NSMutableArray array];
-    for(int i = 0; i < count; i++)
+    for(int i = 0; i < count - 1; i++)
     {
         NSString *str = [[NSString alloc] initWithCString:arr[i] encoding:NSUTF8StringEncoding];
         [items addObject:str];
@@ -25,15 +25,19 @@ void _updatePlayersInRoom(char *arr[], int count) {
 void _playerDidMute(unsigned int player_id) {
     // NOTE! player_id is an Agora assigned ID.
     NSLog(@"FROM UNITY: playerDidMute(%i)", player_id);
+    [api playerDidMute:player_id];
 }
 void _playerDidUnmute(unsigned int player_id) {
     NSLog(@"FROM UNITY: playerDidUnmute(%i)", player_id);
+    [api playerDidUnmute:player_id];
 }
 void _playerStartedTalking(unsigned int player_id) {
     NSLog(@"FROM UNITY: playerStartedTalking(%i)", player_id);
+    [api playerStartedTalking:player_id];
 }
 void _playerEndedTalking(unsigned int player_id) {
     NSLog(@"FROM UNITY: playerEndedTalking(%i)", player_id);
+    [api playerEndedTalking:player_id];
 }
 void _playerDidLeaveGame() {
     // NOTE! You should get this call if you disable the device's internet
@@ -42,6 +46,7 @@ void _playerDidLeaveGame() {
     // from the native interface (not in Unity) so you won't get this call from
     // Unity in that case.
     NSLog(@"FROM UNITY: _playerDidLeaveGame");
+    [api playerDidLeaveGame];
 }
 void _failureToConnect(const char* error) {
     NSLog(@"FROM UNITY: failureToConnect(%s)", error);

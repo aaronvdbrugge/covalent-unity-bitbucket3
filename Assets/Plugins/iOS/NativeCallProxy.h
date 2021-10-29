@@ -6,6 +6,11 @@
 @required
 - (void) showHostMainWindow:(NSString*)color;
 - (void) updatePlayersInRoom:(NSMutableArray*)players;
+- (void) playerDidMute:(int)playerId;
+- (void) playerDidUnmute:(int)playerId;
+- (void) playerStartedTalking:(int)playerId;
+- (void) playerEndedTalking:(int)playerId;
+- (void) playerDidLeaveGame;
 // other methods
 @end
 __attribute__ ((visibility("default")))
