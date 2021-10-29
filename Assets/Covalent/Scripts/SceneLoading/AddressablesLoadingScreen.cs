@@ -142,7 +142,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
         {
             if( _loadSceneHandle.IsValid() )
             {
-	            progressText.text = "Loading scene... " + ((int)((_loadSceneHandle.GetDownloadStatus().Percent)*1000) / 10.0f) + "%";
+	            progressText.text = "Loading scene... " + ((int)((_loadSceneHandle.PercentComplete)*1000) / 10.0f) + "%";   // Try using PercentComplete for loading scene, since it's most likely all downloaded now.
                 SetProgressBarState( _loadSceneHandle.GetDownloadStatus().Percent );
             }
             else if( _loadDependenciesHandle.IsValid() )
