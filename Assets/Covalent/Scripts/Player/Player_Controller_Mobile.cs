@@ -78,24 +78,14 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
 
     
 
-    /// <summary>
-    /// When the player is backgrounded, this coroutine will count down to a player
-    /// disconnect.
-    /// </summary>
-    private IEnumerator disconnectCoroutine;
-    private bool destroy_player = true;   // indicates that disconnectCoroutine should finish the job after waiting
+
 
     #endregion
 
     private void Awake()
     {
-        //Application.targetFrameRate = 60;
         EventManager.StartListening("disable_joystick", disableMovement);
         EventManager.StartListening("enable_joystick", enableMovement);
-
-
-        disconnectCoroutine = PlayerDisconnectCoroutine();
-        EventManager.StartListening("cancel_destroy", cancel_destroy);
     }
 
 
@@ -111,52 +101,8 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
 
 
 
-    public IEnumerator PlayerDisconnectCoroutine()
-    {
-        yield return new WaitForSecondsRealtime(60f);
-        if (destroy_player)
-        {
-            EventManager.TriggerEvent("player_removed");
-            destroyMe();
-        }
-    }
-
-    // This old logic is a little bit weird, but I'm not gonne mess with it right now --seb
-	public void cancel_destroy()
-    {
-        if (disconnectCoroutine != null)
-        {
-            StopCoroutine(disconnectCoroutine);
-
-            //Not sure it was like this:
-            //disconnectCoroutine = PlayerDisconnectCoroutine();
-            //destroy_player = true;
-
-            //Shouldn't it just be this?
-            destroy_player = false;
-        }
-    }
 
 
-
-
-    [PunRPC]
-    public void destroyMe()
-    {
-        PhotonNetwork.Disconnect();
-        playerAgora.LeaveChannel();
-        Destroy(this.gameObject);
-    }
-
-
-
-
-
-    public void backgroundMe()
-    {
-        disconnectCoroutine = PlayerDisconnectCoroutine();   //start counting down to disconnect / voice chat end
-        StartCoroutine(disconnectCoroutine);
-    }
 
 
 

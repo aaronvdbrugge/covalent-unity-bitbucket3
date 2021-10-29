@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using System.Collections.Generic;
 using Covalent.Scripts.Util.Native_Proxy;
 using Photon.Pun;
@@ -31,8 +32,8 @@ public class Dateland_Network : Network_Manager
     public string connectingPopupName = "connecting";
     public string reconnectingPopupName = "reconnecting";
     public string disconnectedPopupName = "disconnected";
+    public string disconnectedInactivityPopupName = "disconnected_inactivity";
     public GameObject playerPrefab;
-    public GameObject madePlayer;
     public Player_Class player;
     public string gameVersion = "1";
     public string SKIN_SLOT = "TESTING";
@@ -50,6 +51,9 @@ public class Dateland_Network : Network_Manager
 
     [Tooltip("We'll try our first reconnect this amount of seconds after disconnect (could be less than reconnectInterval, e.g. 1 second)")]
     public float initialReconnectDelay = 1.0f;
+
+    [Tooltip("Kill player if they're backgrounded this long.")]
+    public float maxBackgroundedTime = 60f;
 
 
     #endregion
@@ -77,8 +81,7 @@ public class Dateland_Network : Network_Manager
 
     #region Private Fields
     private bool initPlayer = false;
-    private bool player_removed;
-    private bool tryingToJoinRoom, inBackground;
+    private bool tryingToJoinRoom;
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
     private string player_JSON;
 
@@ -93,6 +96,8 @@ public class Dateland_Network : Network_Manager
 
     bool _gotLastKnownPlayerPosition = false;
     Vector3 _lastKnownPlayerPosition = Vector3.zero;   // We'll use this so we can try to put the player in the same place after we disconnect.
+
+    bool _disconnectedDueToInactivity = false;  // If true, don't bother to reconnect
 
 
 
@@ -148,6 +153,9 @@ public class Dateland_Network : Network_Manager
         _wantsToLeave = false;   // reset static value
         initialized = false;   // reset static value
         realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
+
+        FindObjectOfType<Agora_Manager>().LeaveChannel();    // Clean up after Agora
+
 		SceneManager.LoadScene("LoadingScreen");
     }
 
@@ -156,21 +164,16 @@ public class Dateland_Network : Network_Manager
 
 	#region MonoBehaviour CallBacks
 
-	/*
     private void OnApplicationFocus(bool focused)
     {
-        if (focused)
+        if( !Application.isEditor )
         {
-            Debug.Log("UNITY HAS BEEN FOCUSED");
-            appWillEnterForeground();
-        }
-        else if (!focused)
-        {
-            Debug.Log("UNITY HAS BEEN UNFOCUSED");
-            appDidEnterBackground();
+            if (focused)
+                appWillEnterForeground();
+            else 
+                appDidEnterBackground();
         }
     }
-    */
 
 	public override void OnErrorInfo(ErrorInfo errorInfo)
     {
@@ -254,6 +257,10 @@ public class Dateland_Network : Network_Manager
         
         if( _wantsToLeave )   // This disconnect happened because they were trying to leave...
             DoLeaveGameActual();    // Can go back to loading screen
+        else if( _disconnectedDueToInactivity )
+        {
+            // Don't do anything. Just display the dialog and wait for them to leave
+        }
         else if( _gotLastKnownPlayerPosition && !_reconnecting )  // Show "reconnecting" popup. Only relevant if we ever even had a player, otherwise show "connecting" instead
         {
             _reconnecting = true;
@@ -347,20 +354,13 @@ public class Dateland_Network : Network_Manager
 
     }
     #endregion
-    public void updatePlayerRemoved()
-    {
-        Debug.Log("PLAYER REMOVED WAS CALLED");
-        player_removed = true;
-    }
+
     void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        inBackground = false;
-        EventManager.StartListening("player_removed", updatePlayerRemoved);
     }
     private void Start()
     {
-        player_removed = false;
         //Connect();
 
         // Start connecting to room, so we can create player
@@ -450,16 +450,18 @@ public class Dateland_Network : Network_Manager
                         }
                     }
 
+                    /*
                     if (inBackground)
                     {
                         float x = PlayerPrefs.GetFloat("xPos");
                         float y = PlayerPrefs.GetFloat("yPos");
                         float z = PlayerPrefs.GetFloat("zPos");
                         Vector3 playerPos = new Vector3(x, y, z);
-                        madePlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, playerPos, Quaternion.identity, 0, initArray);
+                        PhotonNetwork.Instantiate(this.playerPrefab.name, playerPos, Quaternion.identity, 0, initArray);
                         inBackground = false;
                     }
-                    else
+                    else*/   // deprecated?
+
                     {
                         // Try to find a spawn point, else use (0,0,0)
                         Vector3 spawn_point = _lastKnownPlayerPosition;
@@ -473,7 +475,7 @@ public class Dateland_Network : Network_Manager
                             }
                         }
 
-                        madePlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
+                        PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                     }
                    
                     //madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot = skin_slot*4 + skinOffset;
@@ -503,27 +505,10 @@ public class Dateland_Network : Network_Manager
         PhotonNetwork.GameVersion = gameVersion;
         tryingToJoinRoom = true;    // added by seb, bugfix
     }
-    public void destroyPlayer()
-    {
-        if (madePlayer != null)
-        {
-            //madePlayer.GetComponent<Player_Controller_Mobile>().cameraMain.transform.position = new Vector3(0, 0, -10);
-            madePlayer.GetComponent<Player_Controller_Mobile>().photonView.RPC("destroyMe", RpcTarget.All, null);
-            PhotonNetwork.SendAllOutgoingCommands();
-            PhotonNetwork.Disconnect();
-        }
-    }
-    public void backgroundPlayer()
-    {
-        if (madePlayer != null)
-        {
-            //madePlayer.GetComponent<Player_Controller_Mobile>().cameraMain.transform.position = new Vector3(0, 0, -10);
-            madePlayer.GetComponent<Player_Controller_Mobile>().backgroundMe();
-            PhotonNetwork.SendAllOutgoingCommands();
-            //PhotonNetwork.Disconnect();
-        }
-    }
 
+
+
+  
     public void enterDateland(string json_string)
     {
         player_JSON = json_string;
@@ -560,33 +545,30 @@ public class Dateland_Network : Network_Manager
         _reconnectTimer = 0.0f;
     }
 
+
+    [ContextMenu("Simulate application foregrounded")]
     public void appWillEnterForeground()
     {
-            if (player_removed)
-            {
-                player_removed = false;
-                enterDateland(player_JSON);
-            }
-            else
-            {
-                EventManager.TriggerEvent("cancel_destroy");
-                inBackground = false;
-            }
-        
+        if (!_disconnectedDueToInactivity)
+            CancelPlayerBackgroundedCoroutine();
     }
+
+
+    [ContextMenu("Simulate application backgrounded")]
     public void appDidEnterBackground()
     {
-            PlayerPrefs.SetFloat("xPos", madePlayer.transform.position.x);
-            PlayerPrefs.SetFloat("yPos", madePlayer.transform.position.y);
-            PlayerPrefs.SetFloat("zPos", madePlayer.transform.position.z);
-            PlayerPrefs.SetInt("skinNum", madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot);
-            inBackground = true;
+        /*
+        if( Player_Controller_Mobile.mine )
+        {
+            PlayerPrefs.SetFloat("xPos", Player_Controller_Mobile.mine.transform.position.x);
+            PlayerPrefs.SetFloat("yPos", Player_Controller_Mobile.mine.transform.position.y);
+            PlayerPrefs.SetFloat("zPos", Player_Controller_Mobile.mine.transform.position.z);
+            PlayerPrefs.SetInt("skinNum", Player_Controller_Mobile.mine.GetComponent<Spine_Player_Controller>().characterSkinSlot);
+        }
+        */
 
-            if( popupManager.curPopup != disconnectedPopupName )
-                popupManager.ShowPopup( connectingPopupName );  // show connecting popup
-
-            backgroundPlayer();
-        
+        PhotonNetwork.SendAllOutgoingCommands();
+        StartPlayerBackgroundedCoroutine();
     }
 
 
@@ -614,6 +596,64 @@ public class Dateland_Network : Network_Manager
         }
 
 	}
+
+
+
+    
+    /*
+     * "Backgrounded" logic.
+     * The coroutine makes me a little nervous, but it may be necessary
+     * to keep things going while the app is backgrounded.
+     */
+
+    /// <summary>
+    /// When the player is backgrounded, this coroutine will count down to a player
+    /// disconnect.
+    /// </summary>
+    private Coroutine playerBackgroundedCoroutine;
+    private bool playerBackgroundedCoroutineEnabled = false;   // indicates that playerBackgroundedCoroutine should finish the job after waiting
+
+
+    /// <summary>
+    /// Will count down to a disconnect due to inactivity.
+    /// </summary>
+    void StartPlayerBackgroundedCoroutine()
+    {
+        if( !playerBackgroundedCoroutineEnabled )
+        {
+            playerBackgroundedCoroutineEnabled = true;
+            playerBackgroundedCoroutine = StartCoroutine( PlayerBackgroundedCoroutine() );
+        }
+    }
+
+    public IEnumerator PlayerBackgroundedCoroutine()
+    {
+        Debug.Log("Started player backgrounded coroutine.");
+        yield return new WaitForSecondsRealtime( maxBackgroundedTime );
+        if (playerBackgroundedCoroutineEnabled)
+        {
+            _disconnectedDueToInactivity = true;
+
+            Debug.Log("Disconnecting player due to inactivity.");
+
+            popupManager.ShowPopup( disconnectedInactivityPopupName );
+            PhotonNetwork.Disconnect();
+        }
+        else
+            Debug.Log("Player backgrounded coroutine cancelled.");
+    }
+
+	public void CancelPlayerBackgroundedCoroutine()
+    {
+        Debug.Log("Cancelling player backgrounded coroutine.");
+        if (playerBackgroundedCoroutine != null)
+        {
+            StopCoroutine(playerBackgroundedCoroutine);
+            playerBackgroundedCoroutineEnabled = false;
+        }
+    }
+
+
 
 
 }

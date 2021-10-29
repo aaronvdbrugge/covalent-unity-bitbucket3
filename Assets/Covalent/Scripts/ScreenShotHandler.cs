@@ -56,7 +56,7 @@ public class ScreenShotHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Application.isEditor && Input.GetKeyDown(KeyCode.Space) && false)   // just disabling this for now... it was throwing errors
         {
             TakeScreenshot(1125, 2436);
         }
