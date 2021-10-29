@@ -937,6 +937,7 @@ MonoBehaviour:
   progressText: {fileID: 178103135}
   progressBar: {fileID: 686144850}
   maxWaitForCreatePlayer: 2
+  debugSettings: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6, type: 2}
   simulate: 0
   simulatePercent: 0.5
 --- !u!114 &1311253198
