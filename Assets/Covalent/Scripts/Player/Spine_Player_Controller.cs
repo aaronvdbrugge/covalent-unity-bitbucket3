@@ -111,6 +111,9 @@ public class Spine_Player_Controller : MonoBehaviourPun
 
     public void SetFullSkin(int slot, bool network_replicate = true)
     {
+        Debug.Log("Selecting skin: " + slot );
+
+
         if (!network_replicate)  // just set skin immediately only on this client
             SetFullSkinRPC(slot, false);
         else
