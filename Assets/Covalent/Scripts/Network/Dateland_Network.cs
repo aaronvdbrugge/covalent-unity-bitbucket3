@@ -433,8 +433,6 @@ public class Dateland_Network : Network_Manager
                 initPlayer = false;
                 if (Player_Controller_Mobile.mine == null)
                 {
-                    object obj;
-                    int skin_slot = -1, skinOffset;
 
 
                     // Here we store all data that will be sent to OnPhotonInstantiate on all clients.
@@ -488,6 +486,7 @@ public class Dateland_Network : Network_Manager
                             }
                         }
 
+
                         // We've tallied up how much of each skin exists in the room, now find minimum among non premium slots.
                         int minimum = int.MaxValue;
                         foreach( int slot in inventoryPanel.nonPremiumSlots )
@@ -497,6 +496,8 @@ public class Dateland_Network : Network_Manager
                             else
                                 minimum = Mathf.Min(minimum, skin_counts[slot]);   // take minimum...
                         }
+
+                        Debug.Log("Full skin set is present " + minimum + " times over.");
 
                         // Now choose randomly among skins that were at this minimum value
                         List<int> rand_skin_pool = new List<int>();
@@ -508,6 +509,7 @@ public class Dateland_Network : Network_Manager
 
                         // NOW we can choose it.
                         initArray[0] = rand_skin_pool[ Random.Range(0, rand_skin_pool.Count) ];
+                        Debug.Log("Chose random skin slot: " + initArray[0] );
                     }
 
 
