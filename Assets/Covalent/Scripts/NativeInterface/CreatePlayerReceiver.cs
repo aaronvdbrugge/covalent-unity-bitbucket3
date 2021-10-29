@@ -12,6 +12,8 @@ using UnityEngine;
 /// </summary>
 public class CreatePlayerReceiver : MonoBehaviour
 {
+
+
     void Start()
     {
         if( gameObject.name != "PhotonMono" || transform.parent != null )
@@ -32,6 +34,7 @@ public class CreatePlayerReceiver : MonoBehaviour
         Debug.Log("FROM NATIVE: createPlayer(" + json_string.Substring(0, 100) + "...)");
 
         Dateland_Network.realUserJson = json_string;
+        Dateland_Network.playerFromJson = JsonUtility.FromJson<Player_Class>(json_string);    // Parse the JSON right away. Now it's available to everyone in Dateland_Network.playerFromJson
     }
 
 }

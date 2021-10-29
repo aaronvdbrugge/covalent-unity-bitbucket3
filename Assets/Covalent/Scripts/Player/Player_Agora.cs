@@ -9,6 +9,10 @@ using UnityEngine;
 /// </summary>
 public class Player_Agora : MonoBehaviour
 {
+    // Deprecated.
+    // Player doesn't handle any voice chat now, it's all in Agora_Manager or StartAgoraWithPartyId.
+
+  #if false
     public Agora_Manager agora;
     public uint agora_ID;
 
@@ -68,5 +72,6 @@ public class Player_Agora : MonoBehaviour
         agora.LeaveChannel();
         agora.JoinChannel(PlayerPrefs.GetString("partyId"));
     }
+    #endif
 
 }

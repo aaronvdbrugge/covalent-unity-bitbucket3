@@ -71,6 +71,10 @@ public class Agora_Manager : MonoBehaviour
     [Tooltip("If no reports from Agora, we assume they aren't talking. Should probably be slightly more than talkingReportIntervalMs")]
     public int assumeNotTalkingTime = 300;   
 
+    [Tooltip("We'll just keep trying to reconnect every this amount of time, if we get disconnected.")]
+    public float disconnectRetryInterval = 10.0f;
+
+
 
     [Header("Runtime")]
     public uint myUid;  //save our own uid in ChannelOnJoinChannelSuccess
@@ -89,6 +93,9 @@ public class Agora_Manager : MonoBehaviour
 
     [SerializeField]
     private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
+
+    float _disconnectRetryCooldown=0;  // set to disconnectRetryInterval on retry
+    string _lastChannel = null;   // if JoinChannel was ever called, this will be the parameter it was given
 
     private void Awake()
     {
@@ -126,7 +133,7 @@ public class Agora_Manager : MonoBehaviour
         StartCoroutine(requestMicrophone());
 #endif
 
-
+         
         mRtcEngine.OnConnectionStateChanged += (CONNECTION_STATE_TYPE state, CONNECTION_CHANGED_REASON_TYPE reason) =>
         {
             Debug.Log("on connection state changed to " + state + " reason: " + reason);
@@ -276,7 +283,10 @@ public class Agora_Manager : MonoBehaviour
     public void JoinChannel(string name)
     {
         if( joinChatInEditor || !Application.isEditor )
+        {
+            _lastChannel = name;  // in case we get disconnected
             mRtcEngine.JoinChannel(name, "extra", (uint) PlayerPrefs.GetInt("id"));
+        }
     }
 
     public AgoraChannel Obj_JoinChannel(string name)
@@ -299,9 +309,8 @@ public class Agora_Manager : MonoBehaviour
 
     public void LeaveChannel()
     {
-
         mRtcEngine.LeaveChannel();
-
+        _lastChannel = null;  // so we don't try to reconnect
     }
 
     public void LeaveChannel(AgoraChannel channel)
@@ -318,5 +327,15 @@ public class Agora_Manager : MonoBehaviour
         }
     }
 
-
+	private void FixedUpdate()
+	{
+		// Look for disconnect
+        _disconnectRetryCooldown = Mathf.Max(0, _disconnectRetryCooldown - Time.fixedDeltaTime);
+        if( _lastChannel != null && _disconnectRetryCooldown <= 0 &&  mRtcEngine.GetConnectionState() != CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )
+        {
+            Debug.Log("Disconnected from Agora. Trying to reconnect to channel " + _lastChannel );
+            mRtcEngine.JoinChannel(_lastChannel, "extra", (uint) PlayerPrefs.GetInt("id"));
+            _disconnectRetryCooldown = disconnectRetryInterval;   // don't retry for a while
+        }
+	}
 }
