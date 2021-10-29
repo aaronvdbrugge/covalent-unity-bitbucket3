@@ -274,7 +274,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.25
+  m_fontSize: 54
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -794,7 +794,7 @@ MonoBehaviour:
   progressText: {fileID: 178103135}
   progressBar: {fileID: 686144850}
   maxWaitForCreatePlayer: 2
-  simulate: 0
+  simulate: 1
   simulatePercent: 0.5
 --- !u!114 &1311253198
 MonoBehaviour:
