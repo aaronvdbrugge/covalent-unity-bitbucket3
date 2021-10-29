@@ -120,6 +120,9 @@ public class Dateland_Network : Network_Manager
     bool _gotLastKnownPlayerPosition = false;
     Vector3 _lastKnownPlayerPosition = Vector3.zero;   // We'll use this so we can try to put the player in the same place after we disconnect.
 
+    bool _backgrounded = false;
+    System.DateTime _dateTimeBackgrounded;    // when put into the foreground, we'll compare DateTime.Now with maxBackgroundedTime
+
     bool _disconnectedDueToInactivity = false;  // If true, don't bother to reconnect
 
 
@@ -192,7 +195,9 @@ public class Dateland_Network : Network_Manager
         realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
         playerFromJson = null;  // static, gleaned from realUserJson
 
-        FindObjectOfType<Agora_Manager>().LeaveChannel();    // Clean up after Agora. Ready it for a possible different voice chat
+        Agora_Manager agora_manager = FindObjectOfType<Agora_Manager>();
+        if( agora_manager )
+            agora_manager.LeaveChannel();    // Clean up after Agora. Ready it for a possible different voice chat
 
 		SceneManager.LoadScene("LoadingScreen");
     }
@@ -601,26 +606,36 @@ public class Dateland_Network : Network_Manager
     [ContextMenu("Simulate application foregrounded")]
     public void appWillEnterForeground()
     {
-        if (!_disconnectedDueToInactivity)
-            CancelPlayerBackgroundedCoroutine();
+        Debug.Log("Application foregrounded.");
+        if( _backgrounded )
+        {
+            _backgrounded = false;
+            double seconds = (float)(System.DateTime.Now - _dateTimeBackgrounded).TotalSeconds;
+
+            Debug.Log("Time backgrounded: " + seconds);
+
+            if( seconds > (double)maxBackgroundedTime )  // They were backgrounded too long...
+            {
+                Debug.Log("Disconnecting due to inactivity.");
+
+                _disconnectedDueToInactivity = true;
+                initialized = false;
+                Debug.Log("Disconnecting player due to inactivity.");
+                popupManager.ShowPopup( "disconnected_inactivity" );
+                PhotonNetwork.Disconnect();
+            }
+        }
     }
 
 
     [ContextMenu("Simulate application backgrounded")]
     public void appDidEnterBackground()
     {
-        /*
-        if( Player_Controller_Mobile.mine )
-        {
-            PlayerPrefs.SetFloat("xPos", Player_Controller_Mobile.mine.transform.position.x);
-            PlayerPrefs.SetFloat("yPos", Player_Controller_Mobile.mine.transform.position.y);
-            PlayerPrefs.SetFloat("zPos", Player_Controller_Mobile.mine.transform.position.z);
-            PlayerPrefs.SetInt("skinNum", Player_Controller_Mobile.mine.GetComponent<Spine_Player_Controller>().characterSkinSlot);
-        }
-        */
-
         PhotonNetwork.SendAllOutgoingCommands();
-        StartPlayerBackgroundedCoroutine();
+        _backgrounded = true;
+        _dateTimeBackgrounded = System.DateTime.Now;
+
+        Debug.Log("Application backgrounded at time: " + _dateTimeBackgrounded );
     }
 
 
@@ -706,61 +721,6 @@ public class Dateland_Network : Network_Manager
 	}
 
 
-
-    
-    /*
-     * "Backgrounded" logic.
-     * The coroutine makes me a little nervous, but it may be necessary
-     * to keep things going while the app is backgrounded.
-     */
-
-    /// <summary>
-    /// When the player is backgrounded, this coroutine will count down to a player
-    /// disconnect.
-    /// </summary>
-    private Coroutine playerBackgroundedCoroutine;
-    private bool playerBackgroundedCoroutineEnabled = false;   // indicates that playerBackgroundedCoroutine should finish the job after waiting
-
-
-    /// <summary>
-    /// Will count down to a disconnect due to inactivity.
-    /// </summary>
-    void StartPlayerBackgroundedCoroutine()
-    {
-        if( !playerBackgroundedCoroutineEnabled )
-        {
-            playerBackgroundedCoroutineEnabled = true;
-            playerBackgroundedCoroutine = StartCoroutine( PlayerBackgroundedCoroutine() );
-        }
-    }
-
-    public IEnumerator PlayerBackgroundedCoroutine()
-    {
-        Debug.Log("Started player backgrounded coroutine.");
-        yield return new WaitForSecondsRealtime( maxBackgroundedTime );
-        if (playerBackgroundedCoroutineEnabled)
-        {
-            _disconnectedDueToInactivity = true;
-            initialized = false;
-
-            Debug.Log("Disconnecting player due to inactivity.");
-
-            popupManager.ShowPopup( "disconnected_inactivity" );
-            PhotonNetwork.Disconnect();
-        }
-        else
-            Debug.Log("Player backgrounded coroutine cancelled.");
-    }
-
-	public void CancelPlayerBackgroundedCoroutine()
-    {
-        Debug.Log("Cancelling player backgrounded coroutine.");
-        if (playerBackgroundedCoroutine != null)
-        {
-            StopCoroutine(playerBackgroundedCoroutine);
-            playerBackgroundedCoroutineEnabled = false;
-        }
-    }
 
 
 
