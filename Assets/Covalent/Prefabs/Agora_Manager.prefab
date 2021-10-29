@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8066da137424f6a9b2596e308f9169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joinChatInEditor: 0
+  joinChatInEditor: 1
   logs: {fileID: 0}
   talkVolumeThreshold: 32
   talkingReportIntervalMs: 250

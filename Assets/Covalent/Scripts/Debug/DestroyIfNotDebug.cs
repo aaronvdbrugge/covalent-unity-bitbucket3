@@ -11,7 +11,7 @@ public class DestroyIfNotDebug : MonoBehaviour
 
     void Awake()
     {
-        if( debugSettings.mode != DebugSettings.DebugMode.Debug )
+        if( debugSettings.mode != DebugSettings.BuildMode.Debug )
             Destroy( gameObject );
     }
 }

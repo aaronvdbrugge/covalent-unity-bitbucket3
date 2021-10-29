@@ -22,7 +22,11 @@ using UnityEngine.UI;
 /// </summary>
 public class AddressablesLoadingScreen : MonoBehaviour
 {
-
+    /// <summary>
+    /// Have we already been in Dateland before?
+    /// If so, we'd better not go back until we for sure get a createPlayer call... testing be damned
+    /// </summary>
+    public static bool comingFromDateland = false;
 
 
     [Tooltip("Needs to be a full Addressables address.")]
@@ -131,7 +135,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
         // Not simulating. Wait for initialDelay, then call LoadScene
         else if( !string.IsNullOrEmpty(sceneToLoad.AssetGUID) && !_startedLoad)
         {
-            if( Dateland_Network.realUserJson != null || Application.isEditor || maxWaitForCreatePlayer <= 0)   // We must receive the createPlayer call before we start loading... or just wait for maxWaitForCreatePlayer
+            if( Dateland_Network.realUserJson != null || Application.isEditor || (maxWaitForCreatePlayer <= 0 && !comingFromDateland))   // We must receive the createPlayer call before we start loading... or just wait for maxWaitForCreatePlayer
             {
                 _startedLoad = true;
                 LoadScene();
