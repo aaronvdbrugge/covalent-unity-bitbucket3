@@ -39,6 +39,10 @@ public class AddressablesLoadingScreen : MonoBehaviour
     [Tooltip("It just makes it easier for testing if we give up waiting for createPlayer and use spoofed data (for example, on-device builds that aren't integrated into native)")]
     public float maxWaitForCreatePlayer = 2.0f;
 
+    [Tooltip("Only use maxWaitForCreatePlayer in Debug.")]
+    public DebugSettings debugSettings;
+
+
 
 
     [Header("Testing")]
@@ -46,6 +50,8 @@ public class AddressablesLoadingScreen : MonoBehaviour
     public bool simulate = false;
     [Tooltip("Change this in the inspector")]
     public float simulatePercent = 0.5f;  
+
+    
 
     AsyncOperationHandle _loadDependenciesHandle;   // load scene dependencies first, then load scene
     AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance> _loadSceneHandle;
@@ -124,7 +130,8 @@ public class AddressablesLoadingScreen : MonoBehaviour
 
 	private void Update()
 	{
-        maxWaitForCreatePlayer -= Time.deltaTime;
+        if( debugSettings.mode == DebugSettings.BuildMode.Debug )   // in non debug modes, MUST wait for a createPlayer call before start.
+            maxWaitForCreatePlayer -= Time.deltaTime;
 
         if( simulate )   // Pretend we're downloading to test the UI
         {
