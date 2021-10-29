@@ -24,6 +24,10 @@ public class Dateland_Network : Network_Manager
     public TextAsset testUserJson;
     public PopupManager popupManager;
     public GameObject playerPrefab;
+
+    [Tooltip("We'll reference the nonPremiumSlots stored here to choose an initial skin.")]
+    public InventoryPanel inventoryPanel; 
+
     [Tooltip("\"YOU WILL LEAVE THE ARCADE IN 0:60\"")]
     public TMP_Text partnerDisconnectText;  
 
@@ -437,107 +441,104 @@ public class Dateland_Network : Network_Manager
                     // We'll deal with skin number below (default to 0 for now).
                     object[] initArray = new object[] { 0, playerFromJson.user.name, playerFromJson.user.id };    
 
+
+                    if( PlayerPrefs.HasKey( "skinNum" ) && !playerFromJson.user.isPaidPremium )
+                    {
+                        // Handle the special case that they used to have premium, but don't anymore.
+                        // If they're using a premium skin, they'll have to re-randomize.
+                        HashSet<int> non_premium_slots_hash = new HashSet<int>(inventoryPanel.nonPremiumSlots);
+                        if( !non_premium_slots_hash.Contains( PlayerPrefs.GetInt( "skinNum" ) ) )
+                        {
+                            Debug.Log("Skin " + PlayerPrefs.GetInt("skinNum") + " can no longer be chosen. It's a premium skin, but we aren't a premium subscriber.");
+                            PlayerPrefs.DeleteKey( "skinNum" );   // can't use this key anymore.
+                        }
+                    }
+
+
                     //This logic below is used to determine players skins coming into the Sandbox
                     //It utilizes the Custom Properties of the Room to store which skins have been used
                     if (PlayerPrefs.HasKey("skinNum"))
                     {
-                        //Debug.Log("I HAVE A PREFERENCE!");
+                        Debug.Log("Preferred skin retrieved from PlayerPrefs.");
                         initArray[0] = PlayerPrefs.GetInt("skinNum");
                     }
                     else
                     {
-                        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("skinOffset", out obj))
+                        // The player has not explicitly selected a skin.
+                        // Our goal is to get an even distribution of the default non-premium skins.
+                        // So, we'll just count up how much of each of these skins are currently in use in the room.
+                        // We'll find the minimum count (0 if there are none of certain skins, 1 if there is at least a set of one of each, etc)
+                        // Then, we'll pick randomly among the skins that equal this count.
+                        var skin_counts = new Dictionary<int, int>();   // skin slot number to number of them in the room.
+
+
+                        Debug.Log("Searching for random skin slot.");
+
+                        foreach( var plr in PhotonNetwork.CurrentRoom.Players )
                         {
-                            int[] availableSkins = (int[])PhotonNetwork.CurrentRoom.CustomProperties[SKIN_SLOT];
-                            skinOffset = (int)PhotonNetwork.CurrentRoom.CustomProperties["skinOffset"];
-                            if (availableSkins.Length == 1)
+                            // Note that players may not be instantiated yet, but we should still be able to read their CustomProperties
+                            if( plr.Value.CustomProperties["CharacterSkinSlot"] != null )
                             {
-                                skin_slot = availableSkins[0];
-                                availableSkins = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-                                skinOffset++;
-                                if (skinOffset > 3)
-                                {
-                                    skinOffset = 0;
-                                }
+                                Debug.Log("Found player with skin " + (int)plr.Value.CustomProperties["CharacterSkinSlot"]);
+                                int slot = (int)plr.Value.CustomProperties["CharacterSkinSlot"];
+                                if( !skin_counts.ContainsKey(slot) )
+                                    skin_counts[slot] = 1;   // first entry in this count dictionary
+                                else
+                                    skin_counts[slot]++;   // add to existing count
                             }
+                        }
+
+                        // We've tallied up how much of each skin exists in the room, now find minimum among non premium slots.
+                        int minimum = int.MaxValue;
+                        foreach( int slot in inventoryPanel.nonPremiumSlots )
+                        {
+                            if( !skin_counts.ContainsKey(slot) )   // if we didn't count any of this key, that means there aren't any! set minimum to 0
+                                minimum = 0;
                             else
-                            {
-                                int random = Random.Range(0, availableSkins.Length);
-                                skin_slot = availableSkins[random];
-                                List<int> temp = new List<int>();
-                                for (int i = 0; i < availableSkins.Length; i++)
-                                {
-                                    temp.Add(availableSkins[i]);
-                                }
-                                temp.RemoveAt(random);
-                                availableSkins = temp.ToArray();
-                            }
-
-
-                            ExitGames.Client.Photon.Hashtable Skin_Slot = new ExitGames.Client.Photon.Hashtable();
-                            Skin_Slot.Add(SKIN_SLOT, availableSkins);
-                            Skin_Slot.Add("skinOffset", skinOffset);
-                            PhotonNetwork.CurrentRoom.SetCustomProperties(Skin_Slot, null, null);
-                            initArray[0] = skin_slot * 4 + skinOffset;
+                                minimum = Mathf.Min(minimum, skin_counts[slot]);   // take minimum...
                         }
-                        else
+
+                        // Now choose randomly among skins that were at this minimum value
+                        List<int> rand_skin_pool = new List<int>();
+                        foreach( int slot in inventoryPanel.nonPremiumSlots )
                         {
-                            //Debug.Log("No custom Properties in this room");
-                            skinOffset = 0;
-                            List<int> excludedInts = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-                            int random = Random.Range(0, excludedInts.Count);
-                            skin_slot = excludedInts[random];
-                            excludedInts.RemoveAt(random);
-                            int[] intArray = excludedInts.ToArray();
-
-                            ExitGames.Client.Photon.Hashtable Skin_Slot = new ExitGames.Client.Photon.Hashtable();
-                            Skin_Slot.Add(SKIN_SLOT, intArray);
-                            Skin_Slot.Add("skinOffset", skinOffset);
-                            PhotonNetwork.CurrentRoom.SetCustomProperties(Skin_Slot, null, null);
-                            initArray[0] = skin_slot * 4 + skinOffset;
+                            if( !skin_counts.ContainsKey(slot) || skin_counts[slot] <= minimum )   // if it's 0 add it no matter what, or if it's lower than minimum
+                                rand_skin_pool.Add(slot);
                         }
+
+                        // NOW we can choose it.
+                        initArray[0] = rand_skin_pool[ Random.Range(0, rand_skin_pool.Count) ];
                     }
 
-                    /*
-                    if (inBackground)
+
+
+
+                    // Try to find a spawn point, else use (0,0,0)
+                    Vector3 spawn_point = _lastKnownPlayerPosition;
+                    if( !_gotLastKnownPlayerPosition )   // we've never actually had a last known player position, so find a spawn point
                     {
-                        float x = PlayerPrefs.GetFloat("xPos");
-                        float y = PlayerPrefs.GetFloat("yPos");
-                        float z = PlayerPrefs.GetFloat("zPos");
-                        Vector3 playerPos = new Vector3(x, y, z);
-                        PhotonNetwork.Instantiate(this.playerPrefab.name, playerPos, Quaternion.identity, 0, initArray);
-                        inBackground = false;
+                        foreach( var spawn in FindObjectsOfType<DefaultPlayerSpawn>() )
+                        if( spawn.comingFromScene == "" )   // the player isn't coming from any scene... so this is a match
+                        {
+                            spawn_point = spawn.transform.position;
+                            break;
+                        }
                     }
-                    else*/   // deprecated?
 
+
+                    if( _firstWaitForDate )     // We haven't yet verified that our date is here...
                     {
-                        // Try to find a spawn point, else use (0,0,0)
-                        Vector3 spawn_point = _lastKnownPlayerPosition;
-                        if( !_gotLastKnownPlayerPosition )   // we've never actually had a last known player position, so find a spawn point
+                        Limbo limbo = FindObjectOfType<Limbo>();
+                        if( limbo )  // Forget the spawn_point... we'll wait in Limbo until our date arrives, THEN go to the spawn point.
                         {
-                            foreach( var spawn in FindObjectsOfType<DefaultPlayerSpawn>() )
-                            if( spawn.comingFromScene == "" )   // the player isn't coming from any scene... so this is a match
-                            {
-                                spawn_point = spawn.transform.position;
-                                break;
-                            }
+                            _gotoWhenDateArrives = spawn_point;
+                            spawn_point = FindObjectOfType<Limbo>().transform.position;
                         }
-
-
-                        if( _firstWaitForDate )     // We haven't yet verified that our date is here...
-                        {
-                            Limbo limbo = FindObjectOfType<Limbo>();
-                            if( limbo )  // Forget the spawn_point... we'll wait in Limbo until our date arrives, THEN go to the spawn point.
-                            {
-                                _gotoWhenDateArrives = spawn_point;
-                                spawn_point = FindObjectOfType<Limbo>().transform.position;
-                            }
-                        }
-
-
-                        PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                     }
+
+                    PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                    
+
                     //madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot = skin_slot*4 + skinOffset;
                     ExitGames.Client.Photon.Hashtable me = new ExitGames.Client.Photon.Hashtable();
                     me.Add("myJSON", player_JSON);
@@ -726,5 +727,14 @@ public class Dateland_Network : Network_Manager
 
 
 
+
+    /// <summary>
+    /// Convenience function for inspector
+    /// </summary>
+    [ContextMenu("Clear PlayerPrefs")]
+    public void ClearPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
 }

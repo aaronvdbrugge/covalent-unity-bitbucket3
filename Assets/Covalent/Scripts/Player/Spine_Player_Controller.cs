@@ -108,7 +108,7 @@ public class Spine_Player_Controller : MonoBehaviourPun
         GetComponent<Renderer>().sortingLayerName = "Default";   
     }
     
-
+    bool first_set_full_skin = true;
     public void SetFullSkin(int slot, bool network_replicate = true)
     {
         Debug.Log("Selecting skin: " + slot );
@@ -127,7 +127,12 @@ public class Spine_Player_Controller : MonoBehaviourPun
 
         // Ensure we can keep our desired skin next time we join
         if( photonView.IsMine )
-            PlayerPrefs.SetInt("skinNum", slot);
+        {
+            if( first_set_full_skin )   // Don't save the very first skin set to PlayerPrefs. It could have just been randomly assigned
+                first_set_full_skin = false;
+            else
+                PlayerPrefs.SetInt("skinNum", slot);
+        }
     }
 
 
