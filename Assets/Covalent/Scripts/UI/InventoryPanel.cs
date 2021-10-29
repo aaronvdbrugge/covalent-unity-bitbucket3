@@ -18,6 +18,11 @@ public class InventoryPanel : MonoBehaviour
 	[Tooltip("Prevents them from spamming it too crazily")]
 	public float cellTapCooldownTime = 0.33f;
 
+	[Tooltip("These are the only slots that can be displayed if is_paid_premium == false.")]
+	public int[] nonPremiumSlots;
+
+
+
 
 	List<InventoryCell> _skinCells = new List<InventoryCell>();
 
@@ -26,8 +31,19 @@ public class InventoryPanel : MonoBehaviour
 
 	private void Start()
 	{
+		bool is_paid_premium = Dateland_Network.playerFromJson.user.isPaidPremium;
+		HashSet<int> non_premium_slots_hash = new HashSet<int>(nonPremiumSlots);
+
+
 		for( int i=0; i<PlayerSkinManager.fullSkins.Count; i++ )
 		{
+			if( !is_paid_premium && !non_premium_slots_hash.Contains(i) )   // this index isn't a non premium slot, and they don't have premium... skip
+			{
+				_skinCells.Add(null);  // still need an entry in skinCells, so the indices correspond correctly
+				continue;
+			}
+
+
 			GameObject go = Instantiate( inventoryCellPrefab, cellLayout );
 			go.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0);   // Ensure pivot is on the bottom, this is necessary for proper mesh showing / hiding
 			go.GetComponent<HideChildAboveTransform>().target = transform;    // hide meshes when they go above the top of this panel
