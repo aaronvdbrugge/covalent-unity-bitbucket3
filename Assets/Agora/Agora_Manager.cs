@@ -79,6 +79,7 @@ public class Agora_Manager : MonoBehaviour
     [Header("Runtime")]
     public uint myUid;  //save our own uid in ChannelOnJoinChannelSuccess
 
+    public bool isMuted = false;   // informational
 
 
     /// <summary>
@@ -186,9 +187,15 @@ public class Agora_Manager : MonoBehaviour
         {
             //Debug.Log("OnAudioPublishStateChanged: " + channel + " : " + oldState + " : " + newState + " : " + elapseSinceLastState);
             if( newState == STREAM_PUBLISH_STATE.PUB_STATE_PUBLISHING )
+            {
+                isMuted = false;
                 playerDidUnmute( myUid );
+            }
             else if( newState == STREAM_PUBLISH_STATE.PUB_STATE_NO_PUBLISHED )
+            {
+                isMuted = true;
                 playerDidMute( myUid );
+            }
         };
 
 
@@ -200,9 +207,15 @@ public class Agora_Manager : MonoBehaviour
         {
             //Debug.Log("OnUserMutedAudio: " + uid + " : " + muted );
             if( muted )
+            {
+                isMuted = true;
                 playerDidMute( uid );
+            }
             else
+            {
+                isMuted = false;
                 playerDidUnmute( uid );
+            }
         };
 
 
@@ -359,7 +372,7 @@ public class Agora_Manager : MonoBehaviour
             Debug.Log("Joining Agora channel: " + _doJoinChannel + " with ID " + Dateland_Network.playerFromJson.user.id);
 
             mRtcEngine.JoinChannel(_doJoinChannel, "extra", (uint) Dateland_Network.playerFromJson.user.id);   // Use Kippo ID for our Agora ID.
-
+            isMuted = false;
             _doJoinChannel = null;  // reset
         }
 
