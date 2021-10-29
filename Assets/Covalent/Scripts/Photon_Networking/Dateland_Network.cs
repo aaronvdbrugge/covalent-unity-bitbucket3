@@ -29,12 +29,6 @@ public class Dateland_Network : Network_Manager
 
 
     [Header("Settings")]
-    public string connectingPopupName = "connecting";
-    public string reconnectingPopupName = "reconnecting";
-    public string disconnectedPopupName = "disconnected";
-    public string disconnectingPartnerPopupName = "disconnecting_partner";
-    public string disconnectedInactivityPopupName = "disconnected_inactivity";
-    public string disconnectedPartnerPopupName= "disconnected_partner";
 
     public string gameVersion = "1";
     public string SKIN_SLOT = "TESTING";
@@ -60,6 +54,10 @@ public class Dateland_Network : Network_Manager
     public float partnerDisconnectTime = 60.9f;
 
 
+    [Tooltip("If the partner takes longer than this to connect initially, we'll switch to a different dialog.")]
+    public float partnerTakingLongTime = 60.0f;
+
+
     [Header("Runtime")]
     [Tooltip("Parsed from input JSON.")]
     public Player_Class player;
@@ -68,6 +66,11 @@ public class Dateland_Network : Network_Manager
     public bool disablePartnerDisconnectForDebug = false;
 
     public void DisablePartnerDisconnectForDebug() => disablePartnerDisconnectForDebug = true;
+    public void DisableWaitForDate()    // could be called from a debug button in "Waiting for match" screen
+    {
+        _firstWaitForDate = false;
+        disablePartnerDisconnectForDebug = true;
+    }
 
     #endregion
 
@@ -115,13 +118,17 @@ public class Dateland_Network : Network_Manager
 
 
     /// <summary>
-    /// For now, we'll just set this to true at the very start.
-    /// In the future, we may need to start out with it being false, to handle the special "wait for date"
+    /// We need to start handling the special "wait for date"
     /// case, where a player might actually have to wait several minutes for their match (with bad internet)
     /// to load their Dateland. At least they should be able to chat through Agora while one date is waiting.
+    /// 
+    /// Once _firstWaitForDate is false, then we can worry about dhowing the intro screen, then doing _partnerDisconnectTimer, etc.,
+    /// when they have had a partner in play at least once.
     /// </summary>
-    bool _partnerTimeoutEnabled = true;
-    float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime
+    bool _firstWaitForDate = true;
+    float _firstWaitForDateTimer = 0;   // while _firstWaitForDate = true
+    float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime (while _firstWaitForDate = false, meaning our partner has been in the Photon room at some point)
+
     
 
     #endregion
@@ -287,11 +294,11 @@ public class Dateland_Network : Network_Manager
         else if( _gotLastKnownPlayerPosition && !_reconnecting )  // Show "reconnecting" popup. Only relevant if we ever even had a player, otherwise show "connecting" instead
         {
             _reconnecting = true;
-            popupManager.ShowPopup(reconnectingPopupName);
+            popupManager.ShowPopup("reconnecting");
             _reconnectTimer = 0.0f;  // reset it
         }
         else if( !_gotLastKnownPlayerPosition )
-            popupManager.ShowPopup(connectingPopupName);
+            popupManager.ShowPopup("connecting");
     }
 
 
@@ -601,7 +608,7 @@ public class Dateland_Network : Network_Manager
         {
             _reconnectTimer += Time.fixedDeltaTime;
             if( _reconnectTimer >= reconnectTime )   // We reached the end of our reconnect period, and no luck... show "disconnected" and give up
-                popupManager.ShowPopup( disconnectedPopupName );
+                popupManager.ShowPopup( "disconnected" );
             else if( Mathf.Floor( (_reconnectTimer-initialReconnectDelay) / reconnectInterval ) > Mathf.Floor( ((_reconnectTimer-initialReconnectDelay) - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
             {
 
@@ -619,21 +626,42 @@ public class Dateland_Network : Network_Manager
         }
 
 
+        // FIRST WAIT FOR DATE
+        // They can basically wait indefinitely until their partner joins.
+        // Once the partner joins, we enable partnet disconnect logic.
+        if( initialized && _firstWaitForDate && Player_Controller_Mobile.mine != null  )   
+        {
+            if( Player_Controller_Mobile.mine.playerPartner.GetPartner() != null )   // Date connected! Proceed...
+                _firstWaitForDate = false;    // Note that ConnectingPopup will detect the partner, so we don't need to do anything more regarding popups.
+            else
+            {
+                // We're connected, but our date isn't.
+                // Display the first popup, until it's been a while, then display the second popup.
+                _firstWaitForDateTimer += Time.fixedDeltaTime;
+                if( _firstWaitForDateTimer < partnerTakingLongTime )
+                    popupManager.ShowPopup( "waiting_for_partner" );
+                else
+                    popupManager.ShowPopup( "partner_long_time" );   // they're taking their sweet time...
+            }
+        }
+
+
+
 
         // PARTNER DISCONNECT
         // See if our partner is in the room...
         // Don't do it if we're disconnected. Might not be enabled if we're in "wait for date" mode. 
-        if( initialized && _partnerTimeoutEnabled && !disablePartnerDisconnectForDebug && Player_Controller_Mobile.mine != null && Player_Controller_Mobile.mine.playerPartner.GetPartner() == null )   // Partner is MIA!
+        if( initialized && !_firstWaitForDate && !disablePartnerDisconnectForDebug && Player_Controller_Mobile.mine != null && Player_Controller_Mobile.mine.playerPartner.GetPartner() == null )   // Partner is MIA!
         {
-            popupManager.ShowPopup( disconnectingPartnerPopupName );
+            popupManager.ShowPopup( "disconnecting_partner" );
 
             _partnerDisconnectTimer += Time.fixedDeltaTime;
             if( _partnerDisconnectTimer >= partnerDisconnectTime )
             {
                 // Time to disconnect.
                 _disconnectedDueToInactivity = true;   // not strictly true, but this will prevent us from trying to reconnect all the same
-                _partnerTimeoutEnabled = false;   // not needed anymore
-                popupManager.ShowPopup( disconnectedPartnerPopupName );
+                _firstWaitForDate = false;   // not needed anymore
+                popupManager.ShowPopup( "disconnected_partner" );
                 PhotonNetwork.Disconnect();
             }
             else
@@ -642,7 +670,7 @@ public class Dateland_Network : Network_Manager
         else
         {
             _partnerDisconnectTimer = 0;  // reset 
-            if( popupManager.curPopup == disconnectingPartnerPopupName )   // close popup
+            if( popupManager.curPopup == "disconnecting_partner" )   // close popup
                 popupManager.ShowPopup("");
         }
         
@@ -688,7 +716,7 @@ public class Dateland_Network : Network_Manager
 
             Debug.Log("Disconnecting player due to inactivity.");
 
-            popupManager.ShowPopup( disconnectedInactivityPopupName );
+            popupManager.ShowPopup( "disconnected_inactivity" );
             PhotonNetwork.Disconnect();
         }
         else
