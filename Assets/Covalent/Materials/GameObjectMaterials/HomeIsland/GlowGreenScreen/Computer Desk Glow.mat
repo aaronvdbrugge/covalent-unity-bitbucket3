@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ComputerDeskOutlineMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: d5019e4b698e3224883e67e8f5e36684,
+  m_Name: Computer Desk Glow
+  m_Shader: {fileID: -6465566751694194690, guid: 4a61a5ff2dd97984f8ba8a52c06ab2ae,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cd0e57d0dadf8ff47b92ad82ce94cf66, type: 3}
+        m_Texture: {fileID: 2800000, guid: aed9de0f530aabf4d8beef1f9ec8ff57, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -50,10 +50,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - OutlineThickness: 1
+    - MaskRange: 0
     - _EnableExternalAlpha: 0
     m_Colors:
-    - OutlineColor: {r: 2, g: 2, b: 2, a: 1}
+    - HDRColor: {r: 47.937256, g: 47.937256, b: 47.937256, a: 1}
+    - MaskColor: {r: 0.04705883, g: 1, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

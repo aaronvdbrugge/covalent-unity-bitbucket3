@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClothingRackOutlineMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: d5019e4b698e3224883e67e8f5e36684,
+  m_Name: FurnitureOutlineMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: da741c2f638b4c141a47059653d97857,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -53,7 +53,7 @@ Material:
     - OutlineThickness: 1
     - _EnableExternalAlpha: 0
     m_Colors:
-    - OutlineColor: {r: 2, g: 2, b: 2, a: 1}
+    - OutlineColor: {r: 191.74902, g: 191.74902, b: 191.74902, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
