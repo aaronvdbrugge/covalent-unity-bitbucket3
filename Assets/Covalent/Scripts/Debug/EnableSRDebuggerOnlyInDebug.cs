@@ -12,7 +12,7 @@ public class EnableSRDebuggerOnlyInDebug : MonoBehaviour
 
     void Start()
     {
-        if( debugSettings.mode == DebugSettings.DebugMode.Debug )
+        if( debugSettings.mode == DebugSettings.BuildMode.Debug )
             SRDebug.Init();
     }
 }

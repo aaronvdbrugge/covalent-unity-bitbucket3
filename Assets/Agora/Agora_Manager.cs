@@ -97,12 +97,6 @@ public class Agora_Manager : MonoBehaviour
     float _disconnectRetryCooldown=0;  // set to disconnectRetryInterval on retry
     string _lastChannel = null;   // if JoinChannel was ever called, this will be the parameter it was given
 
-    private void Awake()
-    {
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 30;
-    }
-
     private IEnumerator requestMicrophone()
     {
         yield return Application.RequestUserAuthorization(UserAuthorization.Microphone);
@@ -116,7 +110,7 @@ public class Agora_Manager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         mRtcEngine = IRtcEngine.GetEngine(appId);
         mRtcEngine.SetAudioProfile(AUDIO_PROFILE_TYPE.AUDIO_PROFILE_MUSIC_HIGH_QUALITY_STEREO, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_MEETING);
@@ -280,12 +274,16 @@ public class Agora_Manager : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// NOTE: don't call this before Dateland_Network.playerFromJson has been initialized. We need the Kippo ID to be our Agora ID.
+    /// </summary>
     public void JoinChannel(string name)
     {
         if( joinChatInEditor || !Application.isEditor )
         {
             _lastChannel = name;  // in case we get disconnected
-            mRtcEngine.JoinChannel(name, "extra", (uint) PlayerPrefs.GetInt("id"));
+            Debug.Log("Joining Agora channel: " + name + " with ID " + Dateland_Network.playerFromJson.user.id);
+            mRtcEngine.JoinChannel(name, "extra", (uint) Dateland_Network.playerFromJson.user.id);   // Use Kippo ID for our Agora ID.
         }
     }
 
@@ -309,6 +307,7 @@ public class Agora_Manager : MonoBehaviour
 
     public void LeaveChannel()
     {
+        Debug.Log("Leaving Agora channel");
         mRtcEngine.LeaveChannel();
         _lastChannel = null;  // so we don't try to reconnect
     }
@@ -334,7 +333,7 @@ public class Agora_Manager : MonoBehaviour
         if( _lastChannel != null && _disconnectRetryCooldown <= 0 &&  mRtcEngine.GetConnectionState() != CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED )
         {
             Debug.Log("Disconnected from Agora. Trying to reconnect to channel " + _lastChannel );
-            mRtcEngine.JoinChannel(_lastChannel, "extra", (uint) PlayerPrefs.GetInt("id"));
+            mRtcEngine.JoinChannel(_lastChannel, "extra", (uint) Dateland_Network.playerFromJson.user.id);
             _disconnectRetryCooldown = disconnectRetryInterval;   // don't retry for a while
         }
 	}

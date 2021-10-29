@@ -8,11 +8,11 @@ using UnityEngine;
 public class DebugSettings: ScriptableObject
 {
 	[Serializable]
-	public enum DebugMode
+	public enum BuildMode
 	{
 		Release,
 		Debug
 	}
 
-	public DebugMode mode = DebugMode.Release; 
+	public BuildMode mode = BuildMode.Release; 
 }

@@ -199,6 +199,8 @@ public class Dateland_Network : Network_Manager
         if( agora_manager )
             agora_manager.LeaveChannel();    // Clean up after Agora. Ready it for a possible different voice chat
 
+        AddressablesLoadingScreen.comingFromDateland = true;   // ensures we will stay on that screen, no matter what, until we get a createPlayer call
+
 		SceneManager.LoadScene("LoadingScreen");
     }
 

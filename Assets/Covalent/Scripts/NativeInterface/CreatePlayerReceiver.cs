@@ -12,12 +12,17 @@ using UnityEngine;
 /// </summary>
 public class CreatePlayerReceiver : MonoBehaviour
 {
-
+    public TextAsset spoofJson;
+    public bool doSpoof = false;    // Will only take effect in debug mode
+    public DebugSettings debugSettings;
 
     void Start()
     {
         if( gameObject.name != "PhotonMono" || transform.parent != null )
             Debug.LogError("CreatePlayerReceiver must be a root-level game object named \"PhotonMono\" to properly receive native function call!");
+
+        if( doSpoof && debugSettings.mode == DebugSettings.BuildMode.Debug )
+            createPlayer( spoofJson.text );
     }
 
 

@@ -274,7 +274,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
+  m_fontSize: 51.25
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -536,6 +536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36af186fb6165e4194bbfc71dea395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spoofJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
+  doSpoof: 1
+  debugSettings: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6, type: 2}
 --- !u!4 &765713207
 Transform:
   m_ObjectHideFlags: 0
@@ -679,6 +682,7 @@ GameObject:
   - component: {fileID: 1311253194}
   - component: {fileID: 1311253193}
   - component: {fileID: 1311253197}
+  - component: {fileID: 1311253198}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -792,6 +796,20 @@ MonoBehaviour:
   maxWaitForCreatePlayer: 2
   simulate: 0
   simulatePercent: 0.5
+--- !u!114 &1311253198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311253192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494d29c1f11d0474c8fee5dfed3a35b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agoraManagerPrefab: {fileID: 4516765667138941106, guid: 2f6cd50025b97ef49bfd1f229597222f,
+    type: 3}
 --- !u!1 &1975783113
 GameObject:
   m_ObjectHideFlags: 0
