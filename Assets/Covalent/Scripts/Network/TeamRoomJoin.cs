@@ -12,26 +12,37 @@ using UnityEngine;
 /// Photon's recommended practice seems to be here, under "Example Use Case: Teams Matchmaking."
 /// https://doc.photonengine.com/zh-CN/realtime/current/lobby-and-matchmaking/userids-and-friends
 /// 
-/// However, this approach requires a "leader" to join the room before a follower, meaning one of our players
-/// could be stuck in loading screen limbo if the other player is still loading.
+/// I'll use a slightly modified version of this approach, so both players can connect to Photon as soon as possible:
 /// 
-/// I want to try the following approach, instead:
+/// "Primary" player is first in partyId, they lead the way. "Secondary" player is second in partyId.
 /// 
-/// 1.) Upon passing loading screen, player does FindFriends to see if their match is already in a room.
-/// 2.) If their match isn't already in a room, they try to JoinRandomRoom with reserved team IDs.
-/// 3.) If that doesn't work, they create a room with reserved team IDs.
-/// 4.) They will check FindFriends again periodically, just to cover against any special case where they may have both
-///		created or joined a room at the same time.  "Secondary" player gets an added 10 second delay on this, to prevent gridlock.
+/// Primary player:
+/// 1.) Upon passing loading screen, immediately finds a random room to join, reserving two slots (one for secondary player)
+/// 
+/// Secondary player:
+/// 1.) Upon passing loading screen, does FindFriends to see if their match is already in a room. If not, they'll just keep
+///		checking it periodically
+/// 2.) They'll continue to check FindFriends periodically until they're sure the primary player has joined a room, then, just join it.
 /// </summary>
 public class TeamRoomJoin : MonoBehaviourPunCallbacks
 {
 	[Header("Settings")]
 	public byte maxPlayersPerRoom = 16;
 
+	[Tooltip("Check where our friend is every this amount of time, while we're in the private waiting room.")]
+	public float checkFriendsInterval = 5.0f;
+
+
+
 	[Header("Runtime")]
 	public string myId;
 	public string matchId;
-	
+	public bool amPrimaryPlayer;   // partyId is "primary:secondary"
+	public bool isWaitingForFriend = false;      // will be set to true when StartJoin() is called on secondary player
+
+
+
+	float _checkFriendsTimer = 0;  // counts up to checkFriendsInterval
 
 
 	/// <summary>
@@ -40,8 +51,19 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 	/// </summary>
 	public void StartJoin()
 	{
-		Debug.Log("Finding friends... (myId: " + myId + ", matchId: " + matchId + ")");
-		PhotonNetwork.FindFriends( new string[1]{ matchId } );   // See if our match ID is in Photon world already. Await OnFriendListUpdate
+		if( !amPrimaryPlayer )
+		{
+			Debug.Log("Secondary player. Finding friends... (myId: " + myId + ", matchId: " + matchId + ")");
+			isWaitingForFriend = true;
+			PhotonNetwork.FindFriends( new string[1]{ matchId } );   // See if our match ID is in Photon world already. Await OnFriendListUpdate
+		}
+		else
+		{
+			// Primary player. We can join room immediately
+			Debug.Log("Primary player. Joining room... (myId: " + myId + ", matchId: " + matchId + ")");
+			string[] reserved_ids = { myId, matchId };
+			PhotonNetwork.JoinRandomRoom(null, 0, MatchmakingMode.FillRoom, null, null, reserved_ids );   // Try to join a random room, reserving TWO slots
+		}
 	}
 
 
@@ -50,6 +72,7 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 	/// </summary>
 	public override void OnFriendListUpdate(List<FriendInfo> friendList)
 	{
+		// Only secondary players get here.
 		// Determine if we can join our friend's room, or if we have to join/create a new one.
 		string found_room = null;
 		foreach(var friend in friendList )
@@ -58,33 +81,25 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 
 		if( !string.IsNullOrEmpty(found_room) )
 		{
+			isWaitingForFriend = false;  // don't need to keep re-checking FindFriends
 			Debug.Log("Found friend's room: " + found_room);
-
-			// NOTE: we may already be in a room, in the unlikely special case of both accidentally creating rooms.
-			// Hopefully, this doesn't cause an issue.
 			PhotonNetwork.JoinRoom(found_room);
 		}
-		else   // No friend room. Join or create new
-		{
-			if( PhotonNetwork.CurrentRoom == null )
-			{
-				Debug.Log("No friend's room. Joining random... ");
-				string[] reserved_ids = new string[]{myId, matchId};
-				PhotonNetwork.JoinRandomRoom(null, 0, MatchmakingMode.FillRoom, null, null, reserved_ids );   // Try to join a random room, reserving TWO slots
-			}
-			else
-				Debug.Log("No friend's room. Continuing to wait in this room.");
-		}
+		else
+			Debug.Log("OnFriendListUpdate didn't find our friend's room.");
+		// else, we'll just keep checking in FixedUpdate
 	}
+
 
 	public override void OnJoinedRoom()
 	{
-		Debug.Log("Joined room succesfully!");
+		Debug.Log("Joined public room: " + PhotonNetwork.CurrentRoom.Name);
 	}
 
 
 	public override void OnJoinRandomFailed (short returnCode, string message)
 	{
+		// Only primary players get here.
 		Debug.Log("JoinRandomFailed( " + returnCode  + ", " + message + " ). Creating room");
 
 		// Most likely reason is there are no rooms with two available slots.
@@ -95,5 +110,27 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 		roomOptions.MaxPlayers = maxPlayersPerRoom;
 		roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
 		PhotonNetwork.CreateRoom( null, roomOptions, TypedLobby.Default, new string[]{myId, matchId}  );   // Create a new room with two reserved slots.
+	}
+
+
+
+	private void FixedUpdate()
+	{
+		if( isWaitingForFriend )
+		{
+			if( !PhotonNetwork.IsConnected )   // in this case, we might want to stop waiting so Dateland_Network can reconnect us
+				isWaitingForFriend = false;
+			else
+			{
+				// Secondary player. Need to check friends periodically
+				_checkFriendsTimer += Time.fixedDeltaTime;
+				if (_checkFriendsTimer >= checkFriendsInterval)
+				{
+					Debug.Log("Checking again for friend's server");
+					_checkFriendsTimer = 0;
+					PhotonNetwork.FindFriends( new string[1]{ matchId } );   // See if our match ID is in Photon world already. Await OnFriendListUpdate
+				}
+			}
+		}
 	}
 }
