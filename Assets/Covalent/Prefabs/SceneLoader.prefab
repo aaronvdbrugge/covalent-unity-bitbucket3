@@ -8287,6 +8287,7 @@ GameObject:
   - component: {fileID: 1519566761037262327}
   - component: {fileID: 1519566761037262326}
   - component: {fileID: 1519566761037262321}
+  - component: {fileID: 729600953714384941}
   m_Layer: 0
   m_Name: Network_Manager
   m_TagString: Untagged
@@ -8335,6 +8336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3afbd29d1f249d4a0740dff7ddb8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamRoomJoin: {fileID: 729600953714384941}
   testUserJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
   popupManager: {fileID: 3458995843106553047}
   playerPrefab: {fileID: 4450914184106857912, guid: 17a2df742f5bf4ad3b329a687bd3154a,
@@ -8343,18 +8345,34 @@ MonoBehaviour:
   partnerDisconnectText: {fileID: 4398098526167572347}
   cameraPanning: {fileID: 4921585097239710678}
   gameVersion: 1
-  SKIN_SLOT: TESTING
-  maxPlayersPerRoom: 10
-  roomNameBase: TEST1_BUILD8_
+  roomName: test
   reconnectTime: 65
   reconnectInterval: 10
   initialReconnectDelay: 1
   maxBackgroundedTime: 60
   partnerDisconnectTime: 60.9
   partnerTakingLongTime: 60
+  checkFriendsInterval: 30
+  checkFriendsIntervalSecondaryAdd: 13.83
   disablePartnerDisconnectForDebug: 0
   maxSkins: 10
   lastSceneName: 
+--- !u!114 &729600953714384941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519566761037262320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb202e80c62fc94e8e2d01b0ab07372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayersPerRoom: 16
+  myId: 
+  matchId: 
+  joinedRoomSuccessfully: 0
 --- !u!1 &1519566761135868040
 GameObject:
   m_ObjectHideFlags: 0
