@@ -8,18 +8,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Dateland_Network : Network_Manager
-{
 
-
-
-
-
-
-
+/// <summary>
+/// Handles logic for connecting / disconnecting to Photon.
+/// It works in tandem with TeamRoomJoin, which specifically handles logic for trying
+/// to put both users in the same room.
+/// </summary>
+public class Dateland_Network : MonoBehaviourPunCallbacks
+{ 
 	#region Public Fields
 
     [Header("References")]
+    
+    [Tooltip("Handles room joining logic (making sure both users go into the same room")]
+    public TeamRoomJoin teamRoomJoin;   
+
     [Tooltip("Will be fed to enterDateland automatically if createPlayer hasn't been called from native.")]
     public TextAsset testUserJson;
     public PopupManager popupManager;
@@ -38,11 +41,9 @@ public class Dateland_Network : Network_Manager
     [Header("Settings")]
 
     public string gameVersion = "1";
-    public string SKIN_SLOT = "TESTING";
-    public byte maxPlayersPerRoom = 16;
 
-    [Tooltip("This will be prepended to the scene name. E.g., 'test_Dateland'")]
-    public string roomNameBase = "test_";
+    [Tooltip("Only used in Debug mode. In Release, we'll pick a random available room.")]
+    public string roomName = "test";
 
     [Tooltip("We'll retry this long after disconnecting...")]
     public float reconnectTime = 65.0f;
@@ -63,6 +64,15 @@ public class Dateland_Network : Network_Manager
 
     [Tooltip("If the partner takes longer than this to connect initially, we'll switch to a different dialog.")]
     public float partnerTakingLongTime = 60.0f;
+
+
+    [Tooltip("While waiting for a partner, every this amount of time, we'll check to see if our friend accidentally joined a different server.")]
+    public float checkFriendsInterval = 30.0f;
+
+
+    [Tooltip("If we're the \"secondary\" partner, add this much to checkFriendsInterval, this will hopefully prevent gridlock.")]
+    public float checkFriendsIntervalSecondaryAdd = 13.83f;   // doesn't go into 30 evenly
+
 
 
     [Header("Runtime")]
@@ -102,13 +112,26 @@ public class Dateland_Network : Network_Manager
     public static bool initialized = false;
 
 
+    /// <summary>
+    /// Kippo ID of our partnered player
+    /// </summary>
+    public static int partnerPlayer = -1;   
+
+    /// <summary>
+    /// Were we the second player in the partyId pair?
+    /// </summary>
+    public static bool secondaryPlayer = false;   
+
+
+
     static bool _wantsToLeave = false;   // playerDidLeaveGame has been called, but we need to wait for Photon to disconnect before we leave the scene.
 	#endregion
 
 
     #region Private Fields
     private bool initPlayer = false;
-    private bool tryingToJoinRoom;
+    private bool needsToJoinRoom;
+    public string previousRoom = null;     // the room we'll try to rejoin, if we lose connection.
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
     private string player_JSON;
 
@@ -142,6 +165,8 @@ public class Dateland_Network : Network_Manager
     bool _firstWaitForDate = true;
     float _firstWaitForDateTimer = 0;   // while _firstWaitForDate = true
     float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime (while _firstWaitForDate = false, meaning our partner has been in the Photon room at some point)
+    float _checkFriendsCooldown = 0;   // counts down. When it does, we'll tell TeamRoomJoin to check the friends list again, and make sure we didn't end up in the wrong room.
+
 
     Vector3 _gotoWhenDateArrives;   // Players will be spawned in "limbo," then go here once it's verified their date has arrived.
 
@@ -198,6 +223,8 @@ public class Dateland_Network : Network_Manager
         initialized = false;   // reset static value
         realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
         playerFromJson = null;  // static, gleaned from realUserJson
+        partnerPlayer = -1;
+        secondaryPlayer = false;
 
         Agora_Manager agora_manager = FindObjectOfType<Agora_Manager>();
         if( agora_manager )
@@ -231,15 +258,21 @@ public class Dateland_Network : Network_Manager
 
     public void joinRoom(string name)
     {
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.CustomRoomPropertiesForLobby = new string[] { SKIN_SLOT, "skinOffset" };
-        roomOptions.IsOpen = true;
-        roomOptions.IsVisible = true;
-        roomOptions.BroadcastPropsChangeToAll = true;
-        roomOptions.MaxPlayers = maxPlayersPerRoom;
-        PhotonNetwork.JoinOrCreateRoom(name, roomOptions, TypedLobby.Default);
-        tryingToJoinRoom = false;
         PhotonNetwork.SendRate = 30;  //10;
+
+        if( string.IsNullOrEmpty(previousRoom) )   // Should look for a room.
+        {
+            teamRoomJoin.myId = playerFromJson.user.id.ToString();
+            teamRoomJoin.matchId = partnerPlayer.ToString();
+            teamRoomJoin.StartJoin();  // Starts the process.
+        }
+        else
+        {
+            // We probably just want to reconnect to a previously existing room.
+            PhotonNetwork.JoinRoom( previousRoom );
+        }
+        
+        needsToJoinRoom = false;
     }
 
 
@@ -266,14 +299,7 @@ public class Dateland_Network : Network_Manager
 
 	public string GetRoomName()
 	{
-        return roomNameBase;
-
-        // Could be useful in the future - see OnChangeScene
-        /*
-        if( lastSceneName == null )   //haven't left or entered other scenes yet
-            lastSceneName = SceneManager.GetActiveScene().name;
-        return roomNameBase + lastSceneName;  // append scene name to the base name of the room we're all in.
-        */
+        return roomName;
     }
 
 
@@ -281,7 +307,7 @@ public class Dateland_Network : Network_Manager
 
     public override void OnConnectedToMaster()
     {
-        if (tryingToJoinRoom)
+        if (needsToJoinRoom)
             joinRoom(GetRoomName());   // use name of the current scene to determine room.
         else
             failureToConnect("Failed to connect to Photon Server");
@@ -299,7 +325,7 @@ public class Dateland_Network : Network_Manager
         initPlayer = true;   // This should cause us to make a new player, if we ever connect again
 
 
-        tryingToJoinRoom = false;
+        needsToJoinRoom = false;
         Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
         //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
 
@@ -323,11 +349,15 @@ public class Dateland_Network : Network_Manager
 
     public override void OnJoinedRoom()
     {
+        previousRoom = PhotonNetwork.CurrentRoom.Name;   // save this in case we get disconnected.
         initPlayer = true;
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
+        if( returnCode == ErrorCode.GameDoesNotExist )
+            previousRoom = null;   // stop trying to reconnect to this room.
+
         Debug.Log("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
         failureToJoinRoom("Failed to join room. Error Code: " + returnCode + " Error Message: " + message);
     }
@@ -421,6 +451,7 @@ public class Dateland_Network : Network_Manager
             enterDateland( testUserJson.text );
         }
     }
+
     private void Update()
     {
         if (PhotonNetwork.NetworkClientState == ClientState.Joined)
@@ -537,11 +568,13 @@ public class Dateland_Network : Network_Manager
                             spawn_point = FindObjectOfType<Limbo>().transform.position;
                         }
                     }
+                    _checkFriendsCooldown = checkFriendsInterval + (secondaryPlayer ? checkFriendsIntervalSecondaryAdd : 0);   // time left till we check the friend list again
+
+
 
                     PhotonNetwork.Instantiate(this.playerPrefab.name, spawn_point, Quaternion.identity, 0, initArray);
                    
 
-                    //madePlayer.GetComponent<Spine_Player_Controller>().characterSkinSlot = skin_slot*4 + skinOffset;
                     ExitGames.Client.Photon.Hashtable me = new ExitGames.Client.Photon.Hashtable();
                     me.Add("myJSON", player_JSON);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(me, null, null);
@@ -564,9 +597,14 @@ public class Dateland_Network : Network_Manager
     }
     public void Connect()
     {
+        // Before connecting, set up the user ID.
+        // This will allow our match to find which room we're in.
+        PhotonNetwork.AuthValues = new AuthenticationValues();
+        PhotonNetwork.AuthValues.UserId = playerFromJson.user.id.ToString();;
+
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
-        tryingToJoinRoom = true;    // added by seb, bugfix
+        needsToJoinRoom = true;    // added by seb, bugfix
     }
 
 
@@ -583,17 +621,18 @@ public class Dateland_Network : Network_Manager
         // partyID is in the format  123:456
         // Partner player is the ID in this string that isn't our ID. One of them should be ours
         string[] str_ids = playerFromJson.partyId.Split(':');
-        int partner_id = -1;
+        partnerPlayer = -1;
         foreach( string str_id in str_ids )
             if( int.Parse(str_id) != playerFromJson.user.id )  // different than our ID
             {
-                if( partner_id != -1 )   // So was the other one.. print error
+                if( partnerPlayer != -1 )   // So was the other one.. print error
                     Debug.LogError("Both of the IDs in partyID \"" + playerFromJson.partyId + "\" were different from our ID (" + playerFromJson.user.id + ")");
                 else
-                    partner_id = int.Parse(str_id);
+                    partnerPlayer = int.Parse(str_id);
             }
-        PlayerPrefs.SetInt("partnerId", partner_id);
 
+        // Determine if we were second in the pair.
+        secondaryPlayer = partnerPlayer.ToString() == str_ids[1];
 
 
 
@@ -673,6 +712,7 @@ public class Dateland_Network : Network_Manager
         // Once the partner joins, we enable partnet disconnect logic.
         if( initialized && !_disconnectedDueToInactivity && _firstWaitForDate && Player_Controller_Mobile.mine != null  )   
         {
+
             if( Player_Controller_Mobile.mine.playerPartner.GetPartner() != null )   // Date connected! Proceed...
             {
                 _firstWaitForDate = false;    // Note that ConnectingPopup will detect the partner, so we don't need to do anything more regarding popups.
@@ -687,6 +727,18 @@ public class Dateland_Network : Network_Manager
                     popupManager.ShowPopup( "waiting_for_partner" );
                 else
                     popupManager.ShowPopup( "partner_long_time" );   // they're taking their sweet time...
+
+
+                // ALSO: check periodically to see if they accidentally joined a different server.
+                _checkFriendsCooldown -= Time.fixedDeltaTime;
+                if( _checkFriendsCooldown <= 0 )
+                {
+                    _checkFriendsCooldown = checkFriendsInterval + (secondaryPlayer ? checkFriendsIntervalSecondaryAdd : 0);   // time left till we check the friend list again
+
+                    Debug.Log("Checking friends list again to make sure they didn't join a different server.");
+                    teamRoomJoin.StartJoin();   // should just check, not necessarily do anything unless friends list changed
+                }
+
             }
         }
 
