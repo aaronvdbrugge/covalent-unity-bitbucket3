@@ -66,14 +66,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     public float partnerTakingLongTime = 60.0f;
 
 
-    [Tooltip("While waiting for a partner, every this amount of time, we'll check to see if our friend accidentally joined a different server.")]
-    public float checkFriendsInterval = 30.0f;
-
-
-    [Tooltip("If we're the \"secondary\" partner, add this much to checkFriendsInterval, this will hopefully prevent gridlock.")]
-    public float checkFriendsIntervalSecondaryAdd = 13.83f;   // doesn't go into 30 evenly
-
-
 
     [Header("Runtime")]
 
@@ -120,7 +112,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     /// <summary>
     /// Were we the second player in the partyId pair?
     /// </summary>
-    public static bool secondaryPlayer = false;   
+    public static bool amPrimaryPlayer = false;   
 
 
 
@@ -165,7 +157,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     bool _firstWaitForDate = true;
     float _firstWaitForDateTimer = 0;   // while _firstWaitForDate = true
     float _partnerDisconnectTimer = 0;   // counts up to partnerDisconnectTime (while _firstWaitForDate = false, meaning our partner has been in the Photon room at some point)
-    float _checkFriendsCooldown = 0;   // counts down. When it does, we'll tell TeamRoomJoin to check the friends list again, and make sure we didn't end up in the wrong room.
 
 
     Vector3 _gotoWhenDateArrives;   // Players will be spawned in "limbo," then go here once it's verified their date has arrived.
@@ -224,7 +215,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         realUserJson = null;    // This is a static variable. It signals to LoadingScreen that we'll need to wait for another createPlayer call before going back into Dateland.
         playerFromJson = null;  // static, gleaned from realUserJson
         partnerPlayer = -1;
-        secondaryPlayer = false;
+        amPrimaryPlayer = false;
 
         Agora_Manager agora_manager = FindObjectOfType<Agora_Manager>();
         if( agora_manager )
@@ -264,6 +255,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         {
             teamRoomJoin.myId = playerFromJson.user.id.ToString();
             teamRoomJoin.matchId = partnerPlayer.ToString();
+            teamRoomJoin.amPrimaryPlayer = amPrimaryPlayer;
+
             teamRoomJoin.StartJoin();  // Starts the process.
         }
         else
@@ -568,7 +561,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                             spawn_point = FindObjectOfType<Limbo>().transform.position;
                         }
                     }
-                    _checkFriendsCooldown = checkFriendsInterval + (secondaryPlayer ? checkFriendsIntervalSecondaryAdd : 0);   // time left till we check the friend list again
 
 
 
@@ -631,8 +623,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                     partnerPlayer = int.Parse(str_id);
             }
 
-        // Determine if we were second in the pair.
-        secondaryPlayer = partnerPlayer.ToString() == str_ids[1];
+        // Determine if we are the primary player, who is in charge of finding a room
+        amPrimaryPlayer = playerFromJson.user.id.ToString() == str_ids[0];
 
 
 
@@ -685,16 +677,14 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 	private void FixedUpdate()
 	{
-		if( _reconnecting && !_disconnectedDueToInactivity )   // We've been disconnected, but try to reconnect
+		if( _reconnecting && !_disconnectedDueToInactivity && !teamRoomJoin.isWaitingForFriend )   // We've been disconnected, but try to reconnect
         {
             _reconnectTimer += Time.fixedDeltaTime;
             if( _reconnectTimer >= reconnectTime )   // We reached the end of our reconnect period, and no luck... show "disconnected" and give up
                 popupManager.ShowPopup( "disconnected" );
             else if( Mathf.Floor( (_reconnectTimer-initialReconnectDelay) / reconnectInterval ) > Mathf.Floor( ((_reconnectTimer-initialReconnectDelay) - Time.fixedDeltaTime) / reconnectInterval ) )  // We just passed a reconnectInterval
             {
-
                 Debug.Log("Attempting reconnect (attempt " + Mathf.Floor( _reconnectTimer / reconnectInterval ) + ")");
-
                 Connect();
             }
         }
@@ -727,17 +717,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                     popupManager.ShowPopup( "waiting_for_partner" );
                 else
                     popupManager.ShowPopup( "partner_long_time" );   // they're taking their sweet time...
-
-
-                // ALSO: check periodically to see if they accidentally joined a different server.
-                _checkFriendsCooldown -= Time.fixedDeltaTime;
-                if( _checkFriendsCooldown <= 0 )
-                {
-                    _checkFriendsCooldown = checkFriendsInterval + (secondaryPlayer ? checkFriendsIntervalSecondaryAdd : 0);   // time left till we check the friend list again
-
-                    Debug.Log("Checking friends list again to make sure they didn't join a different server.");
-                    teamRoomJoin.StartJoin();   // should just check, not necessarily do anything unless friends list changed
-                }
 
             }
         }
