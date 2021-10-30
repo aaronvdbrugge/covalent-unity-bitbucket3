@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HomeIslandSkyBackground
-  m_Shader: {fileID: -6465566751694194690, guid: 449a89ea76a9c834b9f290d648f97e9e,
+  m_Name: DatelandSkyBackground
+  m_Shader: {fileID: -6465566751694194690, guid: f275830e47fd9f64f85751f1360e879f,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -50,17 +50,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - BottomOrigin: -24
-    - BottomRange: 17
+    - BottomOrigin: -0.005
+    - BottomRange: 0.006
     - BottomSpread: 17
-    - TopOrigin: -7
-    - TopRange: 31
+    - TopOrigin: 0
+    - TopRange: 0.005
     - TopSpread: 22
     - _EnableExternalAlpha: 0
     m_Colors:
-    - BottomColor: {r: 0.4156863, g: 0.7294118, b: 1, a: 1}
-    - MiddleColor: {r: 0.882353, g: 0.24313727, b: 0.9921569, a: 1}
-    - TopColor: {r: 0.098039225, g: 0, b: 0.33333334, a: 1}
+    - BottomColor: {r: 0.27058825, g: 0.7843138, b: 0.98823535, a: 1}
+    - MiddleColor: {r: 0.6392157, g: 0.9450981, b: 0.81568635, a: 1}
+    - TopColor: {r: 1, g: 1, b: 0.54901963, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
