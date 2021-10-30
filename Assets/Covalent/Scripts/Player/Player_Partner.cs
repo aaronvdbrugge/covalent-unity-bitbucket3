@@ -27,7 +27,7 @@ public class Player_Partner : MonoBehaviour
 
 
 			// Do this here so we can be sure partnerId is set.
-			if( playerControllerMobile.photonView.IsMine || playerControllerMobile.kippoUserId == PlayerPrefs.GetInt("partnerId", -1) )
+			if( playerControllerMobile.photonView.IsMine || playerControllerMobile.kippoUserId == Dateland_Network.partnerPlayer )
 				activateIfMineOrPartner.SetActive(true);
 		}
 	}
@@ -38,7 +38,7 @@ public class Player_Partner : MonoBehaviour
 	/// </summary>
 	public Player_Controller_Mobile GetPartner()
     {
-        int partner_id = PlayerPrefs.GetInt("partnerId", -1);
+        int partner_id = Dateland_Network.partnerPlayer;
         if( !Player_Controller_Mobile.playersByKippoId.ContainsKey( partner_id ) )
             return null;
         return Player_Controller_Mobile.playersByKippoId[partner_id];
