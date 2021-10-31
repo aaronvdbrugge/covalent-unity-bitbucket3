@@ -12,8 +12,9 @@ namespace Covalent.HomeIsland
 		[SerializeField] private Vector2 opacityRangeOutlineInner;
 		[SerializeField] private Vector2 opacityRangeOutlineOuter;
 		[Header("Glow")] [SerializeField] private Color baseGlowColor;
-		[SerializeField] private Vector2 distanceMathRangeGlow;
+		[SerializeField] private Vector2 distanceMathRangeGlowColor;
 		[SerializeField] private Vector2 opacityRangeOutlineGlow;
+		[SerializeField] private Vector2 distanceMathRangeGlowIntensity;
 		[SerializeField] private Vector2 intensityRange;
 		[Header("Pulse")] [SerializeField] private bool pulseActive;
 		[SerializeField] private bool onlyPulseInRange;
@@ -40,8 +41,9 @@ namespace Covalent.HomeIsland
 		{
 			if (other.gameObject.tag.Equals("Player"))
 			{
-				withinRange = false;
 				intensityFromDistance = intensityRange.x;
+				withinRange = false;
+				SetMinimalValues();
 			}
 		}
 
@@ -50,9 +52,10 @@ namespace Covalent.HomeIsland
 			UpdateGlow(true);
 		}
 
-		public void UpdateGlow(bool forceUpdate = false)
+		public void UpdateGlow(bool forceUpdate = false, bool skipDistanceUpdate = false)
 		{
-			GetClampedDistance();
+			if (!skipDistanceUpdate)
+				GetClampedDistance();
 
 			if (withinRange || forceUpdate)
 			{
@@ -66,6 +69,12 @@ namespace Covalent.HomeIsland
 			}
 			
 			UpdateGlowMaterialColor();
+		}
+
+		private void SetMinimalValues()
+		{
+			clampedDistance = distanceMathRange.y;
+			UpdateGlow(true, true);
 		}
 
 		private void GetClampedDistance()
@@ -93,7 +102,7 @@ namespace Covalent.HomeIsland
 				opacityRangeOutlineOuter.x, clampedDistance, true);
 			
 			Color glowColor = baseGlowColor;
-			glowColor.a = MyMath.ConvertRange(distanceMathRangeGlow.x, distanceMathRangeGlow.y, opacityRangeOutlineGlow.y,
+			glowColor.a = MyMath.ConvertRange(distanceMathRangeGlowColor.x, distanceMathRangeGlowColor.y, opacityRangeOutlineGlow.y,
 				opacityRangeOutlineGlow.x, clampedDistance, true);
 
 			for (int i = 0; i < glowTargets.Length; i++)
@@ -111,7 +120,7 @@ namespace Covalent.HomeIsland
 
 		private void UpdateGlowIntensityFromDistance()
 		{
-			intensityFromDistance = MyMath.ConvertRange(distanceMathRange.x, distanceMathRange.y, intensityRange.y,
+			intensityFromDistance = MyMath.ConvertRange(distanceMathRangeGlowIntensity.x, distanceMathRangeGlowIntensity.y, intensityRange.y,
 				intensityRange.x, clampedDistance, true);
 		}
 		

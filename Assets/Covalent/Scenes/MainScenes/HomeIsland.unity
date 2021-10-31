@@ -13082,13 +13082,14 @@ MonoBehaviour:
   glowTargets:
   - {fileID: 737154636}
   - {fileID: 524017415}
-  distanceMathRange: {x: 1, y: 5}
+  distanceMathRange: {x: 1, y: 4.5}
   baseOutlineColor: {r: 1, g: 1, b: 1, a: 1}
   opacityRangeOutlineInner: {x: 0.7, y: 1}
   opacityRangeOutlineOuter: {x: 0, y: 0.5}
   baseGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  distanceMathRangeGlow: {x: 0, y: 1}
-  opacityRangeOutlineGlow: {x: 1.5, y: 2.5}
+  distanceMathRangeGlowColor: {x: 1.5, y: 2.5}
+  opacityRangeOutlineGlow: {x: 0, y: 1}
+  distanceMathRangeGlowIntensity: {x: 2, y: 3.5}
   intensityRange: {x: 1, y: 1.8}
   pulseActive: 1
   onlyPulseInRange: 1
@@ -26983,13 +26984,14 @@ MonoBehaviour:
   glowTargets:
   - {fileID: 1163540112}
   - {fileID: 1050394056}
-  distanceMathRange: {x: 1, y: 5}
+  distanceMathRange: {x: 1, y: 4.5}
   baseOutlineColor: {r: 1, g: 1, b: 1, a: 1}
   opacityRangeOutlineInner: {x: 0.7, y: 1}
   opacityRangeOutlineOuter: {x: 0, y: 0.5}
   baseGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  distanceMathRangeGlow: {x: 0, y: 1}
-  opacityRangeOutlineGlow: {x: 1.5, y: 2.5}
+  distanceMathRangeGlowColor: {x: 1.5, y: 2.5}
+  opacityRangeOutlineGlow: {x: 0, y: 1}
+  distanceMathRangeGlowIntensity: {x: 2, y: 3.5}
   intensityRange: {x: 1, y: 1.8}
   pulseActive: 1
   onlyPulseInRange: 1
@@ -60402,13 +60404,14 @@ MonoBehaviour:
   isActive: 1
   glowTargets:
   - {fileID: 1411733206}
-  distanceMathRange: {x: 1, y: 5}
+  distanceMathRange: {x: 1, y: 4.5}
   baseOutlineColor: {r: 1, g: 1, b: 1, a: 1}
   opacityRangeOutlineInner: {x: 0.7, y: 1}
   opacityRangeOutlineOuter: {x: 0, y: 0.5}
   baseGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  distanceMathRangeGlow: {x: 0, y: 1}
-  opacityRangeOutlineGlow: {x: 1.5, y: 2.5}
+  distanceMathRangeGlowColor: {x: 1.5, y: 2.5}
+  opacityRangeOutlineGlow: {x: 0, y: 1}
+  distanceMathRangeGlowIntensity: {x: 2, y: 3.5}
   intensityRange: {x: 1, y: 1.8}
   pulseActive: 1
   onlyPulseInRange: 1
@@ -62454,7 +62457,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.56228375, y: 1}
+    m_SensorSize: {x: 0.5624309, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
