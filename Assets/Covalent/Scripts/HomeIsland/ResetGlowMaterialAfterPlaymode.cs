@@ -10,7 +10,7 @@ namespace Covalent.HomeIsland
 		[SerializeField] private Color baseColor;
 		[SerializeField] private int baseIntensity;
 		
-		private readonly int outlineColor = Shader.PropertyToID("OutlineColor");
+		private readonly int outlineColor = Shader.PropertyToID("HDRColor");
 		
 		private void Awake()
 		{
