@@ -8352,9 +8352,8 @@ MonoBehaviour:
   maxBackgroundedTime: 60
   partnerDisconnectTime: 60.9
   partnerTakingLongTime: 60
-  checkFriendsInterval: 30
-  checkFriendsIntervalSecondaryAdd: 13.83
   disablePartnerDisconnectForDebug: 0
+  previousRoom: 
   maxSkins: 10
   lastSceneName: 
 --- !u!114 &729600953714384941
@@ -8369,10 +8368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb202e80c62fc94e8e2d01b0ab07372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayersPerRoom: 16
+  maxPlayersPerRoom: 4
+  checkFriendsInterval: 5
   myId: 
   matchId: 
-  joinedRoomSuccessfully: 0
+  amPrimaryPlayer: 0
+  isWaitingForFriend: 0
 --- !u!1 &1519566761135868040
 GameObject:
   m_ObjectHideFlags: 0
@@ -8518,7 +8519,6 @@ GameObject:
   - component: {fileID: 1519566761237642969}
   - component: {fileID: 4921585097239710678}
   - component: {fileID: 1519566761237642968}
-  - component: {fileID: 1519566761237642970}
   - component: {fileID: 1519566761237642981}
   - component: {fileID: 1519566761237642980}
   - component: {fileID: 1519566761237642971}
@@ -8622,27 +8622,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519566761237642983}
   m_Enabled: 1
---- !u!50 &1519566761237642970
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519566761237642983}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1519566761237642981
 MonoBehaviour:
   m_ObjectHideFlags: 0
