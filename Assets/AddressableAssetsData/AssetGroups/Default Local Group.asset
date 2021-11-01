@@ -838,18 +838,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
-  - m_GUID: 717e9ee1f8227f443b7302a6116b9915
-    m_Address: Assets/Covalent/Sprites/Atlases/Fountain Water.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
   - m_GUID: f1f7280b89eae08468da90fdbb579a5f
     m_Address: Assets/Covalent/Sprites/Atlases/Ice Skating Trees.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: f1fe32c789cc3ed4a911baa01ad3f13e
-    m_Address: Assets/Covalent/Sprites/Atlases/Grass Patch Mild Animation.spriteatlas
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
@@ -865,16 +855,6 @@ MonoBehaviour:
     - atlases
   - m_GUID: a3cafdb4455508647b268c5bb5ef881e
     m_Address: Assets/Covalent/Sprites/Atlases/Diagonals.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: 047681a65c0675845976a14730b1ebef
-    m_Address: Assets/Covalent/Sprites/Atlases/Soccer.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: 8409c139991d9224e8aff118695f47ba
-    m_Address: Assets/Covalent/Sprites/Atlases/Go Karts Flag Animation.spriteatlas
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
@@ -898,16 +878,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
-  - m_GUID: 863ced595f1fa4c6bb8240c8b01764e1
-    m_Address: Assets/Covalent/Sprites/Atlases/Rose Garden Animations.spriteatlas
+  - m_GUID: 5eca537483a214d489acc61d8b80d5b3
+    m_Address: Assets/Covalent/Prefabs/Game Objects/Plaza/light_fountain.prefab
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: e67e003a055ac5d4ca1506764ac7d748
-    m_Address: Assets/Covalent/Sprites/Atlases/Plaza Houses.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
+    m_SerializedLabels: []
   - m_GUID: 476ad15a178f84be3bd2274698cc9fdf
     m_Address: Assets/Covalent/Sprites/Atlases/TOL Animations.spriteatlas
     m_ReadOnly: 0
@@ -915,11 +889,6 @@ MonoBehaviour:
     - atlases
   - m_GUID: 08f613d9399624269a62f7239946ce36
     m_Address: Assets/Covalent/Sprites/Atlases/Diamonds.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: 28b7ad57bb0113545b0f75f392307c6c
-    m_Address: Assets/Covalent/Sprites/Atlases/Arbor Center Wisteria Animation.spriteatlas
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
@@ -968,16 +937,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
-  - m_GUID: 7a6c29c36f6d4974caed51b82373b66e
-    m_Address: Assets/Covalent/Sprites/Atlases/Ice Skating Cup Animations.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: abffef33c13012041a66df93aac37131
-    m_Address: Assets/Covalent/Sprites/Atlases/Bubble Whale Animation.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
   - m_GUID: bd1da2f24a34c0641a4bc23eacd8a307
     m_Address: Assets/Covalent/Sprites/Atlases/Topiary Animations.spriteatlas
     m_ReadOnly: 0
@@ -988,18 +947,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
-  - m_GUID: eec5ba1bf64e817468c73071265d4ee3
-    m_Address: Assets/Covalent/Sprites/Atlases/Go Karts.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
   - m_GUID: 7f09b40b3700ab14a9cbd7a41f538532
     m_Address: Assets/Covalent/Sprites/Atlases/Sunflower Area.spriteatlas
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - atlases
-  - m_GUID: 8f0a18d9b92c04380b96695921cb9cfe
-    m_Address: Assets/Covalent/Sprites/Atlases/TOL.spriteatlas
     m_ReadOnly: 0
     m_SerializedLabels:
     - atlases
@@ -1543,6 +1492,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sounds
+  - m_GUID: 14f2a4427f903da448bfaa5da5be3892
+    m_Address: Assets/Covalent/Sprites/Atlases/Sky.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0439c73a41e69ff4380fd6d8f5e908b6, type: 2}
   m_SchemaSet:
