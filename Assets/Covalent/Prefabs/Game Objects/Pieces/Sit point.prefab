@@ -96,10 +96,10 @@ MonoBehaviour:
   faceRight: 1
   returnTransform: {fileID: 8239543935279751558}
   canMoveWhileSitting: 0
-  useCameraOffset: 0
+  useCameraOffset: 1
   cameraOffset: {x: 0, y: 0}
   cameraOffsetIsWorldCoordinate: 0
-  cameraZoom: 1
+  cameraZoom: 2
   setPositionConstantlyWhileSitting: 1
 --- !u!1 &5497741344080740520
 GameObject:
