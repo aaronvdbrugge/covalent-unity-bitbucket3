@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -44,6 +45,8 @@ public class SceneLoader : MonoBehaviour
 	private void Start()
 	{
 		Application.targetFrameRate = 60;
+		
+		Debug.Log($"bool bloomSupported = {(SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES2)}");
 	}
 
 	public void MoveToScene(string scene_name, GameObject player_obj)

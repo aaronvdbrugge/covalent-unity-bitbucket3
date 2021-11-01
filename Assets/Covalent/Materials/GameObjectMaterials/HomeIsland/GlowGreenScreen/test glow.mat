@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mirror Glow
+  m_Name: test glow
   m_Shader: {fileID: -6465566751694194690, guid: 4a61a5ff2dd97984f8ba8a52c06ab2ae,
     type: 3}
   m_ShaderKeywords: 
@@ -53,8 +53,8 @@ Material:
     - MaskRange: 0.1
     - _EnableExternalAlpha: 0
     m_Colors:
-    - HDRColor: {r: 2, g: 2, b: 2, a: 1}
-    - MaskColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    - HDRColor: {r: 23.968628, g: 23.968628, b: 23.968628, a: 1}
+    - MaskColor: {r: 0.050980397, g: 1, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
