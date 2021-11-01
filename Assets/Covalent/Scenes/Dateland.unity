@@ -9796,6 +9796,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
       propertyPath: canMoveWhileSitting
       value: 1
       objectReference: {fileID: 0}
@@ -14150,6 +14155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848194064}
     m_Modifications:
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: canMoveWhileSitting
@@ -19728,36 +19738,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075459576}
     m_Modifications:
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: faceRight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: -8.833534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4472617509676172841, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: m_Name
@@ -29240,36 +29220,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075459576}
     m_Modifications:
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: faceRight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: -8.833534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4472617509676172841, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: m_Name
@@ -37194,36 +37144,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075459576}
     m_Modifications:
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: faceRight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: -8.833534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4472617509676172841, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: m_Name
@@ -37405,6 +37325,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848194064}
     m_Modifications:
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: canMoveWhileSitting
@@ -47134,6 +47059,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
       propertyPath: canMoveWhileSitting
       value: 1
       objectReference: {fileID: 0}
@@ -54769,6 +54699,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
       propertyPath: canMoveWhileSitting
       value: 1
       objectReference: {fileID: 0}
@@ -60623,56 +60558,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1752217216}
     m_Modifications:
-    - target: {fileID: 1295760725084993557, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295760725084993557, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: 1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295760725084993557, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295760725084993557, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295760725084993557, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766404781021459193, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766404781021459193, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: 1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766404781021459193, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766404781021459193, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766404781021459193, guid: eaa850cf0562f2e4092f023e2a72c3d2,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7894047107921616194, guid: eaa850cf0562f2e4092f023e2a72c3d2,
         type: 3}
       propertyPath: m_Name
@@ -68442,36 +68327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075459576}
     m_Modifications:
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: faceRight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraZoom
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.x
-      value: -8.833534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffset.y
-      value: -56.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: useCameraOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
-        type: 3}
-      propertyPath: cameraOffsetIsWorldCoordinate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4472617509676172841, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: m_Name
@@ -82940,6 +82795,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848194064}
     m_Modifications:
+    - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
+        type: 3}
+      propertyPath: useCameraOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3610287496759985834, guid: ef9f9944a9a2fb447b22bbbfa75bde8b,
         type: 3}
       propertyPath: canMoveWhileSitting
