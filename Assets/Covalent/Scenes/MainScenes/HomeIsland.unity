@@ -13160,7 +13160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 431462600}
   - component: {fileID: 431462602}
-  - component: {fileID: 431462601}
   m_Layer: 0
   m_Name: SkyGradient
   m_TagString: Untagged
@@ -13182,26 +13181,6 @@ Transform:
   m_Father: {fileID: 1065504670}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &431462601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431462599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646d68c34334abe44bb05cf2f10a53a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMovable: 0
-  renderBelowAll: 1
-  movingDependencies: []
-  sortType: 0
-  SorterPositionOffset: {x: 0, y: 0.33, z: 0}
-  SorterPositionOffset2: {x: 0, y: 0, z: 0}
-  renderersToSort:
-  - {fileID: 431462602}
 --- !u!212 &431462602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13242,7 +13221,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -11
+  m_SortingOrder: -90
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -43907,12 +43886,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 13
-  m_Depth: -1
+  orthographic size: 10
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -62594,15 +62573,15 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1313874635}
   m_Lens:
-    FieldOfView: 60
-    OrthographicSize: 13
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.56228375, y: 1}
+    m_SensorSize: {x: 0.5633803, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
