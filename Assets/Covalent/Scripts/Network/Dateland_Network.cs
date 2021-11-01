@@ -613,18 +613,22 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         // partyID is in the format  123:456
         // Partner player is the ID in this string that isn't our ID. One of them should be ours
         string[] str_ids = playerFromJson.partyId.Split(':');
+        bool test_mode = false;
         partnerPlayer = -1;
         foreach( string str_id in str_ids )
             if( int.Parse(str_id) != playerFromJson.user.id )  // different than our ID
             {
                 if( partnerPlayer != -1 )   // So was the other one.. print error
-                    Debug.LogError("Both of the IDs in partyID \"" + playerFromJson.partyId + "\" were different from our ID (" + playerFromJson.user.id + ")");
+                {
+                    Debug.LogWarning("Both of the IDs in partyID \"" + playerFromJson.partyId + "\" were different from our ID (" + playerFromJson.user.id + "). Assuming test mode");
+                    test_mode = true;
+                }
                 else
                     partnerPlayer = int.Parse(str_id);
             }
 
         // Determine if we are the primary player, who is in charge of finding a room
-        amPrimaryPlayer = playerFromJson.user.id.ToString() == str_ids[0];
+        amPrimaryPlayer = test_mode || (playerFromJson.user.id.ToString() == str_ids[0]);
 
 
 
