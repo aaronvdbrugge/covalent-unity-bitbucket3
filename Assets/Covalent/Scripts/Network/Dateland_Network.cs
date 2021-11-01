@@ -704,6 +704,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         // FIRST WAIT FOR DATE
         // They can basically wait indefinitely until their partner joins.
         // Once the partner joins, we enable partnet disconnect logic.
+        bool date_wait_popups = false;
         if( initialized && !_disconnectedDueToInactivity && _firstWaitForDate && Player_Controller_Mobile.mine != null  )   
         {
 
@@ -713,17 +714,27 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 Player_Controller_Mobile.mine.transform.position = _gotoWhenDateArrives;     // Move (hopefully teleport) to the spawn point (we were in limbo before)
             }
             else
-            {
-                // We're connected, but our date isn't.
-                // Display the first popup, until it's been a while, then display the second popup.
-                _firstWaitForDateTimer += Time.fixedDeltaTime;
-                if( _firstWaitForDateTimer < partnerTakingLongTime )
-                    popupManager.ShowPopup( "waiting_for_partner" );
-                else
-                    popupManager.ShowPopup( "partner_long_time" );   // they're taking their sweet time...
-
-            }
+                date_wait_popups = true;
         }
+
+
+        // Note: if we're the secondary player waiting for friend, we're not even initialized, and don't have a player controller,
+        // but we still need to show the "waiting_for_partner" popup.
+        if( teamRoomJoin.isWaitingForFriend && !_disconnectedDueToInactivity && _firstWaitForDate && PhotonNetwork.IsConnectedAndReady )
+            date_wait_popups = true;
+
+        
+        if( date_wait_popups )
+        {
+            // We're connected, but our date isn't.
+            // Display the first popup, until it's been a while, then display the second popup.
+            _firstWaitForDateTimer += Time.fixedDeltaTime;
+            if( _firstWaitForDateTimer < partnerTakingLongTime )
+                popupManager.ShowPopup( "waiting_for_partner" );
+            else
+                popupManager.ShowPopup( "partner_long_time" );   // they're taking their sweet time...
+        }
+
 
         cameraPanning.enabled = !_firstWaitForDate;   //only enable camera panning when we aren't waiting for date
 
