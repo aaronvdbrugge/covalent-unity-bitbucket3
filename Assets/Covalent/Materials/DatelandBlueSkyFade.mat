@@ -52,8 +52,8 @@ Material:
     m_Floats:
     - BottomOrigin: -0.6
     - BottomRange: 0.3
-    - FadeEndX: 0
-    - FadeStartX: -0.01
+    - FadeEndX: 0.1
+    - FadeStartX: -0.1
     - TopOrigin: 0.1
     - TopRange: 0.3
     - _EnableExternalAlpha: 0
