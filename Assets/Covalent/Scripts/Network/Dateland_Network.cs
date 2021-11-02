@@ -48,8 +48,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     [Tooltip("Only used in Debug mode, when NativeEntryPoint.sandboxMode == true. In Release, we'll pick a random available room.")]
     public string sandboxRoomName = "SANDBOX";
 
-    [Tooltip("For debug, we can avoid setting user ID (will allow users across computers to join again without having to configure test_user_json.txt)")]
-    public bool avoidSettingUserIDForDebug = false;
 
 
     [Tooltip("We'll retry this long after disconnecting...")]
@@ -591,7 +589,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     {
         // Before connecting, set up the user ID.
         // This will allow our match to find which room we're in.
-        if( debugSettings.mode == DebugSettings.BuildMode.Release || !avoidSettingUserIDForDebug )
+        if( debugSettings.mode == DebugSettings.BuildMode.Release || !NativeEntryPoint.sandboxMode )
         {
             PhotonNetwork.AuthValues = new AuthenticationValues();
             PhotonNetwork.AuthValues.UserId = playerFromJson.user.id.ToString();;
