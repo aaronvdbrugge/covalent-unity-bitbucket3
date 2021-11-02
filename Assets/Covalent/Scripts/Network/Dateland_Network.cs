@@ -48,6 +48,10 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     [Tooltip("Only used in Debug mode. In Release, we'll pick a random available room. Leave blank for Release behavior.")]
     public string testRoomName = "";
 
+    [Tooltip("For debug, we can avoid setting user ID (will allow users across computers to join again without having to configure test_user_json.txt)")]
+    public bool avoidSettingUserIDForDebug = false;
+
+
     [Tooltip("We'll retry this long after disconnecting...")]
     public float reconnectTime = 65.0f;
 
@@ -594,8 +598,11 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     {
         // Before connecting, set up the user ID.
         // This will allow our match to find which room we're in.
-        PhotonNetwork.AuthValues = new AuthenticationValues();
-        PhotonNetwork.AuthValues.UserId = playerFromJson.user.id.ToString();;
+        if( debugSettings.mode == DebugSettings.BuildMode.Release || !avoidSettingUserIDForDebug )
+        {
+            PhotonNetwork.AuthValues = new AuthenticationValues();
+            PhotonNetwork.AuthValues.UserId = playerFromJson.user.id.ToString();;
+        }
 
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
