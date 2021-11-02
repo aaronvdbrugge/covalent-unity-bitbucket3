@@ -643,8 +643,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spoofJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
-  doSpoof: 0
   debugSettings: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6, type: 2}
+  disableSandboxMode: 1
+  doSpoof: 0
+  doSpoofSandbox: 0
   restartSceneOnCreatePlayer: 0
 --- !u!4 &765713207
 Transform:
@@ -1175,6 +1177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaaf1675be18111438fea6914152bd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testUserJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
   sceneToLoad:
     m_AssetGUID: f9a9f144954b14bad80040bcb4ac6d02
     m_SubObjectName: 
@@ -1207,6 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agoraManagerPrefab: {fileID: 4516765667138941106, guid: 2f6cd50025b97ef49bfd1f229597222f,
     type: 3}
+  sandboxChatRoom: SANDBOX
 --- !u!1 &1975783113
 GameObject:
   m_ObjectHideFlags: 0

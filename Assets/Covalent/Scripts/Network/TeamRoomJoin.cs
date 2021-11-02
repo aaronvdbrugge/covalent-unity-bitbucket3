@@ -29,6 +29,14 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 	[Header("Settings")]
 	public byte maxPlayersPerRoom = 16;
 
+	[Tooltip("If NativeEntryPoint.sandboxMode == true")]
+	public byte maxPlayersPerRoomSandboxMode = 64;   
+
+	/// <summary>
+	/// Returns max players in the chosen NativeEntryPoint mode (sandbox or real matchmaking)
+	/// </summary>
+	public byte GetMaxPlayers() => NativeEntryPoint.sandboxMode ? maxPlayersPerRoomSandboxMode : maxPlayersPerRoom;
+
 	[Tooltip("Check where our friend is every this amount of time, while we're in the private waiting room.")]
 	public float checkFriendsInterval = 5.0f;
 
@@ -43,6 +51,10 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 
 
 	float _checkFriendsTimer = 0;  // counts up to checkFriendsInterval
+
+
+
+	
 
 
 	/// <summary>
@@ -96,6 +108,19 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 		Debug.Log("Joined public room: " + PhotonNetwork.CurrentRoom.Name);
 	}
 
+	public RoomOptions GetRoomOptions()
+	{
+		RoomOptions roomOptions = new RoomOptions();
+
+		roomOptions.IsOpen = true;
+		roomOptions.BroadcastPropsChangeToAll = true;
+		roomOptions.MaxPlayers = GetMaxPlayers();   // honors sandbox mode
+		roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
+		roomOptions.IsVisible = !NativeEntryPoint.sandboxMode;  // disallow random matchmaking in sandbox mode
+
+		return roomOptions;
+	}
+
 
 	public override void OnJoinRandomFailed (short returnCode, string message)
 	{
@@ -103,13 +128,7 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 		Debug.Log("JoinRandomFailed( " + returnCode  + ", " + message + " ). Creating room");
 
 		// Most likely reason is there are no rooms with two available slots.
-		RoomOptions roomOptions = new RoomOptions();
-		roomOptions.IsOpen = true;
-		roomOptions.IsVisible = true;
-		roomOptions.BroadcastPropsChangeToAll = true;
-		roomOptions.MaxPlayers = maxPlayersPerRoom;
-		roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
-		PhotonNetwork.CreateRoom( null, roomOptions, TypedLobby.Default, new string[]{myId, matchId}  );   // Create a new room with two reserved slots.
+		PhotonNetwork.CreateRoom( null, GetRoomOptions(), TypedLobby.Default, new string[]{myId, matchId}  );   // Create a new room with two reserved slots.
 	}
 
 

@@ -8346,7 +8346,7 @@ MonoBehaviour:
   cameraPanning: {fileID: 4921585097239710678}
   debugSettings: {fileID: 0}
   gameVersion: 1
-  testRoomName: TEST0_BUILD8
+  sandboxRoomName: TEST_BUILD_1_0
   avoidSettingUserIDForDebug: 1
   reconnectTime: 65
   reconnectInterval: 10
@@ -8371,6 +8371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlayersPerRoom: 4
+  maxPlayersPerRoomSandboxMode: 64
   checkFriendsInterval: 5
   myId: 
   matchId: 

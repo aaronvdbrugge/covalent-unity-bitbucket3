@@ -11,6 +11,9 @@ public class StartAgoraWithPartyId : MonoBehaviour
     [Tooltip("We'll create this once, then do DontDestroyOnLoad. Should have Agora_Manager attached.")]
     public GameObject agoraManagerPrefab;
 
+    [Tooltip("In NativeEntryPoint.sandboxMode, all users join same chat room")]
+    public string sandboxChatRoom = "SANDBOX";
+
     bool _didFirstConnect = false;
 
     void FixedUpdate()
@@ -28,7 +31,7 @@ public class StartAgoraWithPartyId : MonoBehaviour
                 agora_manager = go.GetComponent<Agora_Manager>();
             }
 
-            agora_manager.JoinChannel( Dateland_Network.playerFromJson.partyId );    // Note that agoraManager should handle reconnecting if the connection to this channel name is lost, and will do so until LeaveChannel is called
+            agora_manager.JoinChannel( NativeEntryPoint.sandboxMode ? sandboxChatRoom : Dateland_Network.playerFromJson.partyId );    // Note that agoraManager should handle reconnecting if the connection to this channel name is lost, and will do so until LeaveChannel is called
         }
     }
 }
