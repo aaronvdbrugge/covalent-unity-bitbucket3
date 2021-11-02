@@ -38,12 +38,15 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     public CameraPanning cameraPanning;
 
 
-    [Header("Settings")]
+    public DebugSettings debugSettings;
 
+
+    [Header("Settings")]
     public string gameVersion = "1";
 
-    [Tooltip("Only used in Debug mode. In Release, we'll pick a random available room.")]
-    public string roomName = "test";
+
+    [Tooltip("Only used in Debug mode. In Release, we'll pick a random available room. Leave blank for Release behavior.")]
+    public string testRoomName = "";
 
     [Tooltip("We'll retry this long after disconnecting...")]
     public float reconnectTime = 65.0f;
@@ -257,7 +260,19 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
             teamRoomJoin.matchId = partnerPlayer.ToString();
             teamRoomJoin.amPrimaryPlayer = amPrimaryPlayer;
 
-            teamRoomJoin.StartJoin();  // Starts the process.
+            if( debugSettings.mode == DebugSettings.BuildMode.Release || string.IsNullOrEmpty(testRoomName) )
+                teamRoomJoin.StartJoin();  // Starts the process.
+            else  // TEST ROOM
+            {
+			    RoomOptions roomOptions = new RoomOptions();
+			    roomOptions.IsOpen = true;
+			    roomOptions.IsVisible = false;  // disallow random matchmaking
+			    roomOptions.BroadcastPropsChangeToAll = true;
+			    roomOptions.MaxPlayers = teamRoomJoin.maxPlayersPerRoom;
+			    roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
+
+                PhotonNetwork.JoinOrCreateRoom( testRoomName, roomOptions, TypedLobby.Default );
+            }
         }
         else
         {
@@ -292,7 +307,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 	public string GetRoomName()
 	{
-        return roomName;
+        return testRoomName;
     }
 
 
