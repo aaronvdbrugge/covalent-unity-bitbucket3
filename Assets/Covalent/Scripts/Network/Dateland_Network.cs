@@ -344,6 +344,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     {
         previousRoom = PhotonNetwork.CurrentRoom.Name;   // save this in case we get disconnected.
         initPlayer = true;
+
+        updatePlayerListAfterJoin();   // Native wants an initial updatePlayerList call.
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -358,13 +360,13 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         //Debug.Log("Number of players after someone coming in: " + PhotonNetwork.PlayerList.Length);
-        updatePlayerListAfterJoin(targetPlayer);
+        updatePlayerListAfterJoin();
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
     {
         //Debug.Log("Number of players after someone leaving: " + PhotonNetwork.PlayerList.Length);
-        updatePlayerListAfterLeave(otherPlayer);
+        updatePlayerListAfterLeave();
     }
 
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
@@ -375,56 +377,42 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     #endregion
 
     #region NativeApp Functions
-    public void updatePlayerListAfterJoin(Photon.Realtime.Player player)
+
+    public void UpdatePlayerList()
     {
+        
         if (PhotonNetwork.PlayerList.Length >= 1)
         {
-            string[] players = new string[PhotonNetwork.PlayerList.Length - 1];
-            int count = 0;
+            string[] players = new string[PhotonNetwork.PlayerList.Length];
+
+            // New: player list must always start with us, then include other players.
+            int count = 1;   // start with index 1. Index 0 is reserved for this player.
             for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
             {
                 Photon.Realtime.Player p = (Photon.Realtime.Player)PhotonNetwork.PlayerList.GetValue(i);
-                if (p.ActorNumber != PhotonNetwork.LocalPlayer.ActorNumber)
+                string json = (string)p.CustomProperties["myJSON"];
+
+                if (p.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)   // Found our own actor, put it in first index.
+                    players[0] = json;
+                else   // Actor besides the owned player; put in count index and update count
                 {
-                    string j = (string)p.CustomProperties["myJSON"];
-                    players[count] = j;
-                    //Debug.Log(JsonUtility.FromJson<Player_Class>(j).user.name);
+                    players[count] = json;
                     count++;
+                    //Debug.Log(JsonUtility.FromJson<Player_Class>(j).user.name);
                     //Debug.Log("Found Another Actor Number" + p.ActorNumber);
                 }
             }
             //Debug.Log("Players after someone else joined: " + count);
             //Uncomment for Native App Version
 
-            updatePlayersInRoom(players, players.Length);
+            updatePlayersInRoom(players, players.Length);   // Makes its way to native app.
         }
-
     }
-    public void updatePlayerListAfterLeave(Photon.Realtime.Player player)
-    {
-        if (PhotonNetwork.PlayerList.Length >= 1)
-        {
-            string[] players = new string[PhotonNetwork.PlayerList.Length - 1];
-            int count = 0;
-            for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-            {
-                Photon.Realtime.Player p = (Photon.Realtime.Player)PhotonNetwork.PlayerList.GetValue(i);
-                if (p.ActorNumber != PhotonNetwork.LocalPlayer.ActorNumber)
-                {
-                    string j = (string)p.CustomProperties["myJSON"];
-                    players[count] = j;
-                    count++;
-                    //Debug.Log(JsonUtility.FromJson<Player_Class>(j).user.name);
-                    //Debug.Log("Found Another Actor Number" + p.ActorNumber);
-                }
 
-            }
-            //Debug.Log("Players after someone left: " + players.Length);
-            //Uncomment for Native App Version
-            updatePlayersInRoom(players, players.Length);
-        }
 
-    }
+    public void updatePlayerListAfterJoin() => UpdatePlayerList();
+    
+    public void updatePlayerListAfterLeave() => UpdatePlayerList();    
     #endregion
 
     void Awake()
