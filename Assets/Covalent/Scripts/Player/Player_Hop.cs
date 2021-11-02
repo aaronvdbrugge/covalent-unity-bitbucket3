@@ -23,12 +23,17 @@ public class Player_Hop : MonoBehaviourPun
 	[Header("Settings")]
 	public float hopTime = 0.5f;
 	public float hopHeight = 5.0f;
+	[Tooltip("When nextJumpIsHighJump.")]
+	public float highHopHeight = 10.0f;  
 	[Tooltip("To make us appear on top of the seat, our sorting position will be smoothly scooted by this amount.")]
 	public float seatSortingBias = 2.0f;   
 	[Tooltip("If our base is an ellipse, then imagine out collision bound as a cylinder extending upward by this amount.")]
 	public float collisionHeight = 1.0f;
 
 	[Header("Runtime")]
+	[Tooltip("Player_Collisions will let us know when we're in a high jump zone.")]
+	public bool nextJumpIsHighJump = false;
+
 	[Tooltip("Sets to hopTime and counts down. You could set it to 0 if you want to cancel the hop. It's 0 when we're on thr ground")]
 	public float hopProgress = 0;
 
@@ -56,6 +61,8 @@ public class Player_Hop : MonoBehaviourPun
 	Vector3 _hopEnd;   // World position at which we should end the current hop
 	float _hopStartSortingBias = 0;    // We can also lerp isometric sorting bias along the hop...
 	float _hopEndSortingBias = 0;
+	float _curHopHeight = 0;   // probably, either hopHeight or highHopHeight
+
 
 
 	bool _useStartEnd = false;    //Should we use start/end or just hop in place?
@@ -97,6 +104,9 @@ public class Player_Hop : MonoBehaviourPun
 	public void HopInPlaceRPC()
 	{
 		hopProgress = hopTime;  //starts the hop in Update
+
+		_curHopHeight = nextJumpIsHighJump ? highHopHeight : hopHeight;  // decide on high jump
+
 		_useStartEnd = false;     //no start/end point, just hop in place
 
 		_queueHopInPlace = true;
@@ -187,6 +197,8 @@ public class Player_Hop : MonoBehaviourPun
 				_hopStartSortingBias = 0;   // ground bias
 				_hopEndSortingBias = seatSortingBias;   // ...lerp it up to the seat bias
 
+				_curHopHeight = nextJumpIsHighJump ? highHopHeight : hopHeight;  // decide on high jump
+
 				_useStartEnd = true;   //uses previous two members for the hop
 			}
 		}
@@ -209,6 +221,8 @@ public class Player_Hop : MonoBehaviourPun
 			_hopStartSortingBias = seatSortingBias;   
 			_hopEndSortingBias = 0;   // Lerp from seat bias to ground bias
 
+			_curHopHeight = nextJumpIsHighJump ? highHopHeight : hopHeight;  // decide on high jump
+
 			_useStartEnd = true;
 
 			_enableMovementWhenDone = true;  //we'll wait till the end of the hop to re-enable movement.
@@ -226,7 +240,7 @@ public class Player_Hop : MonoBehaviourPun
 		//    https://www.desmos.com/calculator/qphzqwrput
 		float hop_parabolic = -Mathf.Pow(2 * hop_norm - 1, 2) + 1;
 
-		return hop_parabolic * hopHeight;   // de-normalize
+		return hop_parabolic * _curHopHeight;   // de-normalize
 	}
 
 
@@ -246,7 +260,7 @@ public class Player_Hop : MonoBehaviourPun
 		y' = -8hx + 4h
 		 */
 		float hop_norm = 1 - hopProgress / hopTime;   // goes from 0 to 1 as hop progresses
-		return -8 * hopHeight * hop_norm + 4 * hopHeight;
+		return -8 * _curHopHeight * hop_norm + 4 * _curHopHeight;
 	}
 
 

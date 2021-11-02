@@ -448,9 +448,11 @@ MonoBehaviour:
   playerCollisions: {fileID: 5217942367510331885}
   playerMovement: {fileID: 8723383788808815926}
   hopTime: 0.75
-  hopHeight: 3
+  hopHeight: 1.5
+  highHopHeight: 3
   seatSortingBias: 1
   collisionHeight: 2.2
+  nextJumpIsHighJump: 0
   hopProgress: 0
   hoppedInPlace: 0
   stifleHop: 0
@@ -1197,6 +1199,7 @@ MonoBehaviour:
   - {fileID: 798382551825579044}
   - {fileID: 2056266962552226213}
   playerAlternateMovements: {fileID: 3423532178932913422}
+  playerHop: {fileID: 2999592731245700905}
   onBeach: 0
 --- !u!114 &4753401094386036590
 MonoBehaviour:

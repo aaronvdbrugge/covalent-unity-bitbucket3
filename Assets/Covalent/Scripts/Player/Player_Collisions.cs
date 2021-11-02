@@ -17,10 +17,15 @@ public class Player_Collisions : MonoBehaviour
     [Tooltip("Need to be aware of this, it switches on and off colliders")]
     public Player_Alternate_Movements playerAlternateMovements;
 
+    [Tooltip("Need to tell them when we overlap a high jump area.")]
+    public Player_Hop playerHop;
+
 
     [Header("Colliding info")]
     public bool onBeach;
 
+
+    bool setHighJump = false;  // set this to true on trigger stay, and we'll consume it in FixedUpdate to avoid script execution order issues.
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +43,13 @@ public class Player_Collisions : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("public_agora") && isMine)
             SendMessage("LeavePublicAgora");
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("high_jump_zone"))
+            setHighJump = true;
     }
 
     /// <summary>
@@ -75,6 +87,11 @@ public class Player_Collisions : MonoBehaviour
                      coll.enabled = (coll == playerAlternateMovements.currentCollider);   // Can only enable the collider being used for this current movement!		
             }
         }
+
+
+        // Doing it in this way avoids script execution order problems:
+        playerHop.nextJumpIsHighJump = setHighJump;
+        setHighJump = false;  // "consume" value
 	}
 
 
