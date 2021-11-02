@@ -174,7 +174,7 @@ public class NativeEntryPoint : MonoBehaviour
         Debug.Log("FROM NATIVE: createPlayer(" + json_string.Substring(0, 100) + "...)");
         Debug.LogWarning("NOTE: createPlayer is deprecated.");
 
-        sandboxMode = false;
+        sandboxMode = true;
         InitInternal(json_string);
     }
 
