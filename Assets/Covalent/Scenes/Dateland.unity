@@ -94688,6 +94688,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519566761037262321, guid: 55f6d90dc8bc8ad45a2e69e34dab5e0a,
+        type: 3}
+      propertyPath: testRoomName
+      value: TEST0_BUILD8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519566761037262321, guid: 55f6d90dc8bc8ad45a2e69e34dab5e0a,
+        type: 3}
+      propertyPath: debugSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6,
+        type: 2}
     - target: {fileID: 1766604535757263638, guid: 55f6d90dc8bc8ad45a2e69e34dab5e0a,
         type: 3}
       propertyPath: m_SizeDelta.y
