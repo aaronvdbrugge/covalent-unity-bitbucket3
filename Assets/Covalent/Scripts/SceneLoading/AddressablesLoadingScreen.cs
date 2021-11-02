@@ -1,3 +1,4 @@
+using Covalent.Scripts.Util.Native_Proxy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,7 +32,17 @@ public class AddressablesLoadingScreen : MonoBehaviour
 
     [Tooltip("Needs to be a full Addressables address.")]
     public AssetReference sceneToLoad;
+
+    [Tooltip("Hidden on error.")]
+    public GameObject progressObject;  
     public TMP_Text progressText;
+
+    [Tooltip("Shown on error.")]
+    public GameObject errorObject;
+    public TMP_Text errorText;
+
+    [Tooltip("Don't bother giving computery looking exceptions to users... just ask them to try again")]
+    public string errorMessage = "A problem occurred.\nPlease try again!";
 
     [Tooltip("Stretches to fill its parent transform; has x pivot=0.  We'll change it accordingly")]
     public RectTransform progressBar; 
@@ -42,12 +53,19 @@ public class AddressablesLoadingScreen : MonoBehaviour
     [Tooltip("Only use maxWaitForCreatePlayer in Debug.")]
     public DebugSettings debugSettings;
 
+    [Tooltip("If an error occurs, we'll eventually call playerDidLeaveGame")]
+    public float timeUntilPlayerDidLeaveGame = 5.0f;
 
+
+    [Tooltip("If error occurs, we'll prime this to restart the frame on createPlayer (next time they try again)")]
+    public CreatePlayerReceiver createPlayerReceiver;
 
 
     [Header("Testing")]
     [Tooltip("Just simulate what it would look like, don't actually do it")]
     public bool simulate = false;
+    public bool simulateError = false;
+
     [Tooltip("Change this in the inspector")]
     public float simulatePercent = 0.5f;  
 
@@ -60,7 +78,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
 
     bool _displayingError = false;
     bool _startedLoad = false;
-
+    float _playerDidLeaveGameTimer = 0;   //counts up to timeUntilPlayerdidLeaveGame, if _displayingError is true
 
 	public void Start()
 	{
@@ -86,7 +104,10 @@ public class AddressablesLoadingScreen : MonoBehaviour
         // gets a 404 etc
 
         Addressables.LogException(handle, exception);
-        progressText.text = "ERROR: " + exception;
+        progressObject.SetActive(false);
+        errorObject.SetActive(true);
+        errorText.text = errorMessage;
+        Debug.LogWarning("Error in AddressablesLoadingScreen.CustomExceptionHandler: " +  exception);
         _displayingError = true;
     }
 
@@ -109,7 +130,10 @@ public class AddressablesLoadingScreen : MonoBehaviour
         }
         else if( !_displayingError)
         {
-            progressText.text = "Failed to download dependencies.";
+            progressObject.SetActive(false);
+            errorObject.SetActive(true);
+            errorText.text = errorMessage;
+            Debug.LogWarning("Failed to download dependencies.");
             _displayingError = true;
         }
     }
@@ -123,7 +147,10 @@ public class AddressablesLoadingScreen : MonoBehaviour
         }
         else if( !_displayingError)
         {
-            progressText.text = "Failed to load scene.";
+            progressObject.SetActive(false);
+            errorObject.SetActive(true);
+            errorText.text = errorMessage;
+            Debug.LogWarning("Failed to load scene.");
             _displayingError = true;
         }
     }
@@ -133,9 +160,16 @@ public class AddressablesLoadingScreen : MonoBehaviour
         if( debugSettings.mode == DebugSettings.BuildMode.Debug )   // in non debug modes, MUST wait for a createPlayer call before start.
             maxWaitForCreatePlayer -= Time.deltaTime;
 
-        if( simulate )   // Pretend we're downloading to test the UI
+        if( simulateError )
         {
-            progressText.text = "Downloading assets... " + ((int)((simulatePercent)*1000) / 10.0f) + "%";
+            progressObject.SetActive(false);
+            errorObject.SetActive(true);
+            errorText.text = errorMessage;
+            _displayingError = true;
+        }
+        else if( simulate )   // Pretend we're downloading to test the UI
+        {
+            progressText.text = "Connecting..." + ((int)((simulatePercent)*100) ) + "%";
             SetProgressBarState( simulatePercent );
         }
 
@@ -153,13 +187,37 @@ public class AddressablesLoadingScreen : MonoBehaviour
         {
             if( _loadSceneHandle.IsValid() )
             {
-	            progressText.text = "Loading scene... " + ((int)((_loadSceneHandle.PercentComplete)*1000) / 10.0f) + "%";   // Try using PercentComplete for loading scene, since it's most likely all downloaded now.
+	            //progressText.text = "Connecting..." + ((int)((_loadSceneHandle.PercentComplete)*1000) / 10.0f) + "%";   // Try using PercentComplete for loading scene, since it's most likely all downloaded now.
+                progressText.text = "Connecting...100%";   // just hang on 100% for scene loading
                 SetProgressBarState( _loadSceneHandle.GetDownloadStatus().Percent );
             }
             else if( _loadDependenciesHandle.IsValid() )
             {
-                progressText.text = "Downloading assets... " + ((int)((_loadDependenciesHandle.GetDownloadStatus().Percent)*1000) / 10.0f) + "%";
+                progressText.text = "Connecting..." + ((int)((_loadDependenciesHandle.GetDownloadStatus().Percent)*100) ) + "%";
                 SetProgressBarState( _loadDependenciesHandle.GetDownloadStatus().Percent );
+            }
+        }
+
+
+        if( _displayingError )
+        {
+            if( _playerDidLeaveGameTimer == 0 )   // Can let native know we failed to connect...
+                Dateland_Network.failureToConnect("Could not download or start the game.");
+
+            // We could disconnect Agora here... but if they at least managed to get voice chat to connect, why stop them? At least let them talk
+
+            // Count down until we leave the game!
+            // However, be aware it still might be running in the BG of the native app.
+            // So make sure we clean up and are ready for the next time they try again.
+            _playerDidLeaveGameTimer += Time.deltaTime;
+
+            createPlayerReceiver.restartSceneOnCreatePlayer = true;   // prime it to restart the frame on next createPlayer (when they try again).
+
+            if( _playerDidLeaveGameTimer >= timeUntilPlayerDidLeaveGame && _playerDidLeaveGameTimer -Time.deltaTime < timeUntilPlayerDidLeaveGame)   // Just crossed the timeUntilPlayerDidLeaveGame threshold...
+            {
+                Debug.Log("Calling playerDidLeaveGame");
+                if( !Application.isEditor )
+                    NativeProxy.PlayerDidLeaveGame();  // Call it directly, Dateland_Network has a bunch of extra logic shoved in
             }
         }
 	}

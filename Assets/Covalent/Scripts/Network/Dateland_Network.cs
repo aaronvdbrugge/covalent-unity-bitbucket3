@@ -172,7 +172,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
             NativeProxy.UpdatePlayersInRoom(unityJSONList, count);
     }
 
-    private static void failureToConnect(string error)
+    public static void failureToConnect(string error)
     { 
         if( Application.isEditor )
             Debug.Log("EXTERN: failureToConnect(" +  error + ")"); 
@@ -329,14 +329,14 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         {
             // Don't do anything. Just display the dialog and wait for them to leave
         }
-        else if( _gotLastKnownPlayerPosition && !_reconnecting )  // Show "reconnecting" popup. Only relevant if we ever even had a player, otherwise show "connecting" instead
+        else if( /*_gotLastKnownPlayerPosition && */ !_reconnecting )  // Show "reconnecting" popup (even if they were never really connected... this shows that a problem's happening)
         {
             _reconnecting = true;
-            popupManager.ShowPopup("reconnecting");
             _reconnectTimer = 0.0f;  // reset it
         }
-        else if( !_gotLastKnownPlayerPosition )
-            popupManager.ShowPopup("connecting");
+
+        if( _reconnecting )
+            popupManager.ShowPopup("reconnecting");
     }
 
 
