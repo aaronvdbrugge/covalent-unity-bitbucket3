@@ -45,8 +45,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     public string gameVersion = "1";
 
 
-    [Tooltip("Only used in Debug mode. In Release, we'll pick a random available room. Leave blank for Release behavior.")]
-    public string testRoomName = "";
+    [Tooltip("Only used in Debug mode, when NativeEntryPoint.sandboxMode == true. In Release, we'll pick a random available room.")]
+    public string sandboxRoomName = "SANDBOX";
 
     [Tooltip("For debug, we can avoid setting user ID (will allow users across computers to join again without having to configure test_user_json.txt)")]
     public bool avoidSettingUserIDForDebug = false;
@@ -264,24 +264,17 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
             teamRoomJoin.matchId = partnerPlayer.ToString();
             teamRoomJoin.amPrimaryPlayer = amPrimaryPlayer;
 
-            if( debugSettings.mode == DebugSettings.BuildMode.Release || string.IsNullOrEmpty(testRoomName) )
-                teamRoomJoin.StartJoin();  // Starts the process.
-            else  // TEST ROOM
+            if( debugSettings.mode == DebugSettings.BuildMode.Release || string.IsNullOrEmpty(sandboxRoomName) || NativeEntryPoint.sandboxMode == false)
+                teamRoomJoin.StartJoin();  // Starts the process of real matchmaking.
+            else  // START SANDBOX ROOM
             {
-			    RoomOptions roomOptions = new RoomOptions();
-			    roomOptions.IsOpen = true;
-			    roomOptions.IsVisible = false;  // disallow random matchmaking
-			    roomOptions.BroadcastPropsChangeToAll = true;
-			    roomOptions.MaxPlayers = teamRoomJoin.maxPlayersPerRoom;
-			    roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
-
-                PhotonNetwork.JoinOrCreateRoom( testRoomName, roomOptions, TypedLobby.Default );
+                PhotonNetwork.JoinOrCreateRoom( sandboxRoomName, teamRoomJoin.GetRoomOptions(), TypedLobby.Default );   // note that teamRoomJoin should check NativeEntryPoint.sandboxMode and give appropriate room options
             }
         }
         else
         {
-            // We probably just want to reconnect to a previously existing room.
-            PhotonNetwork.JoinRoom( previousRoom );
+            // We probably just want to reconnect to a previously existing room, but allow the room to be recreated in case we were the last player there.
+            PhotonNetwork.JoinOrCreateRoom( previousRoom, teamRoomJoin.GetRoomOptions(), TypedLobby.Default );
         }
         
         needsToJoinRoom = false;
@@ -311,7 +304,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 	public string GetRoomName()
 	{
-        return testRoomName;
+        return sandboxRoomName;
     }
 
 
@@ -338,7 +331,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 
         needsToJoinRoom = false;
-        Debug.Log("HELP ME IM DISCONNECTED AND HERE'S WHY: " + cause.ToString());
+        Debug.Log("Photon disconnected: " + cause.ToString());
         //playerDidLeaveGame();   // don't call this yet! wait till they confirm they've been disconnected
 
         
@@ -622,27 +615,35 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         // Determine the ID of our partner player.
         // partyID is in the format  123:456
         // Partner player is the ID in this string that isn't our ID. One of them should be ours
-        string[] str_ids = playerFromJson.partyId.Split(':');
-        bool test_mode = false;
-        partnerPlayer = -1;
-        foreach( string str_id in str_ids )
-            if( int.Parse(str_id) != playerFromJson.user.id )  // different than our ID
-            {
-                if( partnerPlayer != -1 )   // So was the other one.. print error
+        if( !NativeEntryPoint.sandboxMode )
+        {
+            string[] str_ids = playerFromJson.partyId.Split(':');
+            bool test_mode = false;
+            partnerPlayer = -1;
+            foreach( string str_id in str_ids )
+                if( int.Parse(str_id) != playerFromJson.user.id )  // different than our ID
                 {
-                    Debug.LogWarning("Both of the IDs in partyID \"" + playerFromJson.partyId + "\" were different from our ID (" + playerFromJson.user.id + "). Assuming test mode");
-                    test_mode = true;
+                    if( partnerPlayer != -1 )   // So was the other one.. print error
+                    {
+                        Debug.LogWarning("Both of the IDs in partyID \"" + playerFromJson.partyId + "\" were different from our ID (" + playerFromJson.user.id + "). Assuming test mode");
+                        test_mode = true;
+                    }
+                    else
+                        partnerPlayer = int.Parse(str_id);
                 }
-                else
-                    partnerPlayer = int.Parse(str_id);
-            }
 
-        // Determine if we are the primary player, who is in charge of finding a room
-        amPrimaryPlayer = test_mode || (playerFromJson.user.id.ToString() == str_ids[0]);
+            // Determine if we are the primary player, who is in charge of finding a room
+            amPrimaryPlayer = test_mode || (playerFromJson.user.id.ToString() == str_ids[0]);
+        }
+        else
+        {
+            // For sandbox mode, we should be able to just partner with ourselves and skip all the partner logic
+            partnerPlayer = playerFromJson.user.id;
+            amPrimaryPlayer = true;
+        }
 
 
 
-        //Debug.Log("I ON THE OTHER HAND AM THE JSON RECIEVED: " + json_string);
         Debug.Log("This is my Match ID: " + playerFromJson.partyId);
         //Connect();
 

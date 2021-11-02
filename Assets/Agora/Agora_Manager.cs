@@ -16,6 +16,8 @@ public class Agora_Manager : MonoBehaviour
     private static int ERROR_NO_PERMISSION_TO_ACCESS = 9;
 
     public bool joinChatInEditor = false;
+
+
     //Wrappers (don't call externs in editor)
     private static void failureToConnectAgora(string error)
     {
@@ -156,7 +158,7 @@ public class Agora_Manager : MonoBehaviour
 
         mRtcEngine.OnJoinChannelSuccess += (string channelName, uint uid, int elapsed) =>
         {
-            Debug.Log("Joined Channel: " + channelName);
+            Debug.Log("Joined Agora Channel: " + channelName);
             myUid = uid;
             if (!mRtcEngine.IsSpeakerphoneEnabled())
             {
