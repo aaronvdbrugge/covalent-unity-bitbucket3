@@ -194,8 +194,12 @@ public class Player_Hop : MonoBehaviourPun
 				if( seat != null )   // might not be instantiated!
 					_hopEnd = seat.transform.position;    //hop onto the seat....
 
+
+				// The following is no longer needed, it's inferred in FixedUpdate to avoid netcode bugs.
+				/*
 				_hopStartSortingBias = 0;   // ground bias
 				_hopEndSortingBias = seatSortingBias;   // ...lerp it up to the seat bias
+				*/
 
 				_curHopHeight = nextJumpIsHighJump ? highHopHeight : hopHeight;  // decide on high jump
 
@@ -218,8 +222,12 @@ public class Player_Hop : MonoBehaviourPun
 			if( seat != null )  // may not be instantiated yet!
 				_hopEnd = seat.returnPoint;    // Seat tells us where to hop down.
 
+
+			// The following is not needed, it's inferred in FixedUpdate to avoid netcode bugs.
+			/*
 			_hopStartSortingBias = seatSortingBias;   
 			_hopEndSortingBias = 0;   // Lerp from seat bias to ground bias
+			*/
 
 			_curHopHeight = nextJumpIsHighJump ? highHopHeight : hopHeight;  // decide on high jump
 
@@ -284,6 +292,39 @@ public class Player_Hop : MonoBehaviourPun
 				}
 			}
 		}
+
+
+		// Infer _hopStartSortingBias and _hopEndSortingBias based on _useStartEnd and sitting_on.
+		// Remember, we may log on while this player is sitting on something or even in the middle of a hop.
+		if( !_useStartEnd && string.IsNullOrEmpty(sitting_on))   // doing a jump, not a hop into / out of a seat
+		{
+			_hopStartSortingBias = 0;
+			_hopEndSortingBias = 0 ;
+		}
+		else
+		{
+			// Going into / out of a seat. Which is it?
+			if( !string.IsNullOrEmpty(sitting_on) )  // into a seat
+			{
+				_hopStartSortingBias = 0;
+				_hopEndSortingBias = seatSortingBias;
+			}
+			else
+			{
+				_hopStartSortingBias = seatSortingBias;
+				_hopEndSortingBias = 0;
+			}
+
+			if( hopProgress <= 0 )   // the logic below won't set bias, so set it here outselves
+			{
+				isoSpriteSorting.SorterPositionOffset.y = _isoSpriteSortingPositionOffsetYOriginal - _hopEndSortingBias;
+				isoSpriteSorting.SorterPositionOffset2.y = _isoSpriteSortingPositionOffsetYOriginal2 - _hopEndSortingBias;
+			}
+		}
+
+
+
+
 
 		// Note that EnableColliders and movementEnabled are now "consumed"
 		// to avoid game breaking bugs (I encountered one that was hard to produce)
