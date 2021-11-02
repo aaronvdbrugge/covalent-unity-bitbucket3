@@ -8344,8 +8344,10 @@ MonoBehaviour:
   inventoryPanel: {fileID: 9150361226009047860}
   partnerDisconnectText: {fileID: 4398098526167572347}
   cameraPanning: {fileID: 4921585097239710678}
+  debugSettings: {fileID: 0}
   gameVersion: 1
-  roomName: test
+  testRoomName: TEST0_BUILD8
+  avoidSettingUserIDForDebug: 1
   reconnectTime: 65
   reconnectInterval: 10
   initialReconnectDelay: 1
