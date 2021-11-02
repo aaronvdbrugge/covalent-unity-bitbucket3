@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// NOTE: currently, the Native side sends the user's JSON profile to Unity via the following:
@@ -15,6 +15,10 @@ public class CreatePlayerReceiver : MonoBehaviour
     public TextAsset spoofJson;
     public bool doSpoof = false;    // Will only take effect in debug mode
     public DebugSettings debugSettings;
+
+    [Tooltip("You might set this to true if an error occurs while loading the scene. Next time they call createPlayer, they might have gone back out into the app, and back in.")]
+    public bool restartSceneOnCreatePlayer = false;
+
 
     void Start()
     {
@@ -40,6 +44,23 @@ public class CreatePlayerReceiver : MonoBehaviour
 
         Dateland_Network.realUserJson = json_string;
         Dateland_Network.playerFromJson = JsonUtility.FromJson<Player_Class>(json_string);    // Parse the JSON right away. Now it's available to everyone in Dateland_Network.playerFromJson
+
+        if( restartSceneOnCreatePlayer )
+        {
+            restartSceneOnCreatePlayer = false;   // just in case, though this really shouldn't be necessary
+            SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
+        }
+
+    }
+
+
+    /// <summary>
+    /// Does a test createPlayer call through inspector, using spoof data
+    /// </summary>
+    [ContextMenu("Test Create Player")]
+    public void TestCreatePlayer()
+    {
+        createPlayer( spoofJson.text );
     }
 
 }
