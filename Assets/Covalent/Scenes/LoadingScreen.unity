@@ -644,7 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spoofJson: {fileID: 4900000, guid: 65e1d686704702346932bcac4746884b, type: 3}
   debugSettings: {fileID: 11400000, guid: e428b4a88c7624040aff3cd23d0fc6b6, type: 2}
-  disableSandboxMode: 1
+  disableSandboxMode: 0
   doSpoof: 0
   doSpoofSandbox: 0
   restartSceneOnCreatePlayer: 0
