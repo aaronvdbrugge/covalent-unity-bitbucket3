@@ -12,31 +12,58 @@ namespace Covalent.Scripts.Util.Native_Proxy.Android
      */
     public class AndroidNativeProxy : INativeProxy
     {
-        //Android Java Class that contains the static object which will be used to trigger callbacks on native side
-        private static AndroidJavaClass javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher");
+        //private static AndroidJavaClass javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher");
+        //private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
+        // See NativeProxy.cs for an explanation of why we can't initialize static members in this way. It's the compiler's fault.
+        
+
+
         //The static instance of the UnityDispatcher class.
-        private static AndroidJavaObject messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
+        // Note that it will be null when building in isolation.
+        private static AndroidJavaObject messageProxy
+        {
+            get
+            {
+                if( _messageProxy == null )
+                {
+                    AndroidJavaClass javaClass; //Android Java Class that contains the static object which will be used to trigger callbacks on native side
+                    try
+                    {
+                        javaClass = new AndroidJavaClass("com.covalent.kippo.unity.UnityDispatcher"); 
+                        _messageProxy = javaClass.GetStatic<AndroidJavaObject>("messageProxy");
+                    }
+                    catch
+                    {
+                        return null;   // class not found, probably. This is perfectly normal when building in isolation (not integrated)
+                    }
+                }
+                return _messageProxy;
+            }
+        }
+        private static AndroidJavaObject _messageProxy;
+
+
         
         public void UpdatePlayersInRoom(string[] unityJsonList, int count)
         {
-            messageProxy.Call("updatePlayersInRoom", unityJsonList, count);
+            messageProxy?.Call("updatePlayersInRoom", unityJsonList, count);    // note:  "?." syntax ensures this won't happen if messageProxy is null, which can happen when building in isolation
         }
         
         public void PlayerDidMute(uint player_id)
         {
-            messageProxy.Call("playerDidMute", (int) player_id);   
+            messageProxy?.Call("playerDidMute", (int) player_id);   
         }
         
         public void PlayerDidUnmute(uint player_id) {
-            messageProxy.Call("playerDidUnmute", (int) player_id); 
+            messageProxy?.Call("playerDidUnmute", (int) player_id); 
         }
         
         public void PlayerStartedTalking(uint player_id) {
-            messageProxy.Call("playerStartedTalking", (int) player_id);
+            messageProxy?.Call("playerStartedTalking", (int) player_id);
         }
         
         public void PlayerEndedTalking(uint player_id) {
-            messageProxy.Call("playerEndedTalking", (int) player_id);
+            messageProxy?.Call("playerEndedTalking", (int) player_id);
         }
         
         public void PlayerDidLeaveGame() {
@@ -45,26 +72,26 @@ namespace Covalent.Scripts.Util.Native_Proxy.Android
             // However, if you tap the "Leave" button, I think that is currently a button overlaid
             // from the native interface (not in Unity) so you won't get this call from
             // Unity in that case.
-            messageProxy.Call("playerDidLeaveGame");
+            messageProxy?.Call("playerDidLeaveGame");
             
         }
         
         public void FailureToConnect(string error) {
-            messageProxy.Call("failureToConnect", error);
+            messageProxy?.Call("failureToConnect", error);
         }
         
         public void FailureToJoinRoom(string error) {
-            messageProxy.Call("failureToJoinRoom", error);
+            messageProxy?.Call("failureToJoinRoom", error);
         }
         
         public void FailureToConnectAgora(string error)
         {
-            messageProxy.Call("failureToConnectAgora", error);
+            messageProxy?.Call("failureToConnectAgora", error);
         }
         
         public void MissingMicPermission()
         {
-            messageProxy.Call("missingMicPermission");
+            messageProxy?.Call("missingMicPermission");
         }
 
         public void ShowHostMainWindow(string color)
