@@ -18,14 +18,23 @@ public class Player_Animations : MonoBehaviour
     public SkeletonMecanim skeletonMecanim;
 
     public Animator anim;
-    public Animator hearts;
 
     public SpriteRenderer splash_feet;
 
     [Tooltip("A transform that you don't want to be flipped horizontally (will counter-flip to undo the flip)")]
     public Transform dontFlip;
 
+
+
+    [Tooltip("We'll hide this if hideVisuals is true.")]
     public MeshRenderer meshRenderer;
+
+    [Tooltip("We'll hide this if hideVisuals is true.")]
+    public GameObject shadowParent;
+
+
+    [Tooltip("Consumed value for bug safety, needs to be set every FixedUpdate if you want to hide the visuals.")]
+    public bool hideVisuals = false;
 
 
     [Header("Info")]
@@ -81,11 +90,26 @@ public class Player_Animations : MonoBehaviour
         anim.SetBool("sitting", sitting && playerHop.hopProgress <= 0 );   // only start sitting once we've finished out hop.
 	}
 
+	private void FixedUpdate()
+	{
+		if( hideVisuals )
+        {
+            hideVisuals = false;   // consume the value. it must be set every frame
+            meshRenderer.enabled = false;
+            shadowParent.SetActive(false);
+        }
+        else
+        {
+            meshRenderer.enabled = true;
+            shadowParent.SetActive(true);
+        }
+	}
 
-    /// <summary>
-    /// Turn character ice skates on or off.
-    /// </summary>
-    public void SetIceSkates(bool enable)
+
+	/// <summary>
+	/// Turn character ice skates on or off.
+	/// </summary>
+	public void SetIceSkates(bool enable)
     {
         skating = enable;
         skeletonMecanim.skeleton.SetAttachment("OverlayLeftFoot", enable ? "Shoes/colors/skate" : null );
