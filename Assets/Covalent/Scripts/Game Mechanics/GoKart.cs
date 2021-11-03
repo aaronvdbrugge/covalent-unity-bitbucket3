@@ -247,6 +247,14 @@ public class GoKart : MonoBehaviour
                     engineNoise.volume = Mathf.Lerp(0.05f, 0.1f, speed_norm);
                 }
             }
+
+
+            // NOTE: if we're still in the middle of a fade from a previous state, make sure to keep fading in
+            _fadeBackProgress = Mathf.Clamp(_fadeBackProgress + Time.fixedDeltaTime / fadeBackTime, 0.5f, 1.0f);   // "fade in" starts at 0.5f
+            float fade_lerp = (_fadeBackProgress - 0.5f) * 2;  // from 0 to 1 in this phase
+            idleSprite.color = new Color(1, 1, 1, fade_lerp);
+            frontSprite.color = new Color(1, 1, 1, fade_lerp);  
+            backSprite.color = new Color(1, 1, 1, fade_lerp);
         }
         else   // SITTING IDLE & EMPTY
         {
