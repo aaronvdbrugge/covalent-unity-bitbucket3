@@ -269,6 +269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 29737976672859753}
   multiAudioSources: []
+  partyOnly: 0
+  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
@@ -8347,7 +8349,7 @@ MonoBehaviour:
   cameraPanning: {fileID: 4921585097239710678}
   debugSettings: {fileID: 0}
   gameVersion: 1
-  sandboxRoomName: TEST_BUILD_1_0
+  sandboxRoomName: TEST_BUILD_1_1
   reconnectTime: 65
   reconnectInterval: 10
   initialReconnectDelay: 1
@@ -18231,6 +18233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6975502581631398990}
   multiAudioSources: []
+  partyOnly: 0
+  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
@@ -23667,6 +23671,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  partyOnly: 0
+  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
