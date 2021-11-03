@@ -170,13 +170,16 @@ public class GoKart : MonoBehaviour
                 {
                     // NOTE: there is a netcode quirk here.
                     // We are going to move the player from entryPoint to entryPoint + driveInPointOffset
-                    // The player's collider will stay in the player_collider layer until the animation is done, then switch to gokarts layer (so it's fenced in by the track)
+                    // We'll disable all colliders during animations, then switch to gokarts layer (so it's fenced in by the track)
                     // But, we could join a server where players are already in cars, and don't need this animation.
                     // So, just give only the owning player the authority to actually move and do this animation.
 
                     // The movement will be net replicated.
                     // We'll switch the collision layers no matter what -- could be slightly odd if you somehow manage to dive straight into the Go Kart track within
                     // seconds of joining the server, but I doubt that special case will ever be an issue. Worth noting though just in case.
+
+                    // SWITCHING COLLISION LAYERS is handled by Player_Alternate_Movements which is attached to the player and set up in the inspector.
+                    // DISABLING COLLIDERS ALTOGETHER is handled by Player_Collisions, which is aware of Player_Alternate_Movements and knows to re-enable the right collider.
 
                     _driveInProgress = Mathf.Min(1.0f, _driveInProgress + Time.fixedDeltaTime / driveInTime );
 
@@ -194,11 +197,14 @@ public class GoKart : MonoBehaviour
 
                     plr.playerMovement.lastDirection = driveInPointOffset.normalized;     // just force player to go this way so we animate correctly (regardless of whether IsMine)
                     // Player will remain on normal movement until we reach the next phase below:
+
+                    plr.playerCollisions.EnableColliders(false);  // keep colliders off while we're driving in, to avoid glitchy movement
                 }
                 else   // Drive-in animation complete; we can move around.
                 {
                     entryPoint.canMoveWhileSitting = true;     // player is now allowed to move around.
                     plr.playerAlternateMovements.currentMovement = 0;   // Set to Go Kart movement / layer   (-1 is original movement)
+                    plr.playerCollisions.EnableColliders(true);   // This will have been turned off during the drive-in animation.
 
                     _fadeAnimCoastVelocity = plr.playerMovement.body.velocity;  //in case we jump out soon
                 }
@@ -267,6 +273,7 @@ public class GoKart : MonoBehaviour
             {
                 _lastPlr.playerAnimations.meshRenderer.enabled = true;   //show previous player again, they got out of the car
                 _lastPlr.playerAlternateMovements.currentMovement = -1;   // Undo Go Kart movement
+                _lastPlr.playerCollisions.EnableColliders(true);
 
                 _fadeBackProgress = 0.0f;   //start fade animation
 
@@ -307,7 +314,8 @@ public class GoKart : MonoBehaviour
         if( _followInLateUpdate )   // Should be following player. Here is the best place to do it lag-free
         {
             transform.position = _followInLateUpdate.position;    
-            entryPoint.returnTransform.position = transform.position;   // Move the SitPoint's return transform so we hop out right where this car is when we're done.		
+            //entryPoint.returnTransform.position = transform.position;   // Move the SitPoint's return transform so we hop out right where this car is when we're done.		
+            // Actually, don't... since player's can't go on the track, they need to hop all the way out of the track when they're done.
         }
 	}
 
