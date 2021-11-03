@@ -120,7 +120,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 51ba999757cea904d97dc728ac8c2a28, type: 3}
   - {fileID: 21300000, guid: b5d8e4187dc88e14984284252b727841, type: 3}
   - {fileID: 21300000, guid: b762fc78739a52e409bfebaf98f58373, type: 3}
-  - {fileID: 21300000, guid: 6675dde8e3cb24c94b50d9000152b1bc, type: 3}
   - {fileID: 21300000, guid: eaeab95948f33ff47aaec26f53d0e1fb, type: 3}
   - {fileID: 21300000, guid: 4539c079d5d42394f97af497304e4d26, type: 3}
   - {fileID: 21300000, guid: 147190895007946d2b5c8e18efee85c8, type: 3}
@@ -138,7 +137,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: dbc17ebecbfd1469cb196db7d30941bf, type: 3}
   - {fileID: 21300000, guid: f60c230f524b7da46b6d528e5448c235, type: 3}
   - {fileID: 21300000, guid: fc41aa5f01d4c43dfbfefebe3fc34f6b, type: 3}
-  - {fileID: 21300000, guid: bf8b0b8fdbcc3714f92f0d5a93f6452e, type: 3}
   - {fileID: 21300000, guid: 53bc30ff1cd9c3446b24c422a4d0eae6, type: 3}
   m_PackedSpriteNamesToIndex:
   - speechless
@@ -167,7 +165,6 @@ SpriteAtlas:
   - shock
   - weep
   - shocked pika
-  - unmute@3x
   - heh
   - keke
   - bubble@3x
@@ -185,7 +182,6 @@ SpriteAtlas:
   - CC_Icon
   - ok
   - selected_circle
-  - mute@3x
   - humpth
   m_RenderDataMap: {}
   m_Tag: UI
