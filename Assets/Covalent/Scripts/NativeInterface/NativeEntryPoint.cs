@@ -156,11 +156,7 @@ public class NativeEntryPoint : MonoBehaviour
     public void enterArcadeSandbox(string json_string)
     {
         if( debugSettings.mode == DebugSettings.BuildMode.Release )
-        {
-            Debug.LogError("Called enterArcadeSandbox in Release mode. For safety reasons, this is not allowed! Starting in enterArcadeAsPair mode instead...");
-            enterArcadeAsPair(json_string);
-            return;
-        }
+            Debug.LogWarning("Called enterArcadeSandbox in Release mode. This is allowed, for inviting people to beta test... just be careful!");
 
         Debug.Log("FROM NATIVE: enterArcadeSandbox(" + json_string.Substring(0, 100) + "...)");
         sandboxMode = true;

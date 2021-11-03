@@ -261,7 +261,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
             teamRoomJoin.matchId = partnerPlayer.ToString();
             teamRoomJoin.amPrimaryPlayer = amPrimaryPlayer;
 
-            if( debugSettings.mode == DebugSettings.BuildMode.Release || string.IsNullOrEmpty(sandboxRoomName) || NativeEntryPoint.sandboxMode == false)
+            if( string.IsNullOrEmpty(sandboxRoomName) || NativeEntryPoint.sandboxMode == false)
                 teamRoomJoin.StartJoin();  // Starts the process of real matchmaking.
             else  // START SANDBOX ROOM
             {
@@ -602,7 +602,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     {
         // Before connecting, set up the user ID.
         // This will allow our match to find which room we're in.
-        if( debugSettings.mode == DebugSettings.BuildMode.Release || !NativeEntryPoint.sandboxMode )
+        if( !NativeEntryPoint.sandboxMode )
         {
             PhotonNetwork.AuthValues = new AuthenticationValues();
             PhotonNetwork.AuthValues.UserId = playerFromJson.user.id.ToString();;
