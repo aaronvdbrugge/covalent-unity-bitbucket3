@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,8 +65,16 @@ public class Camera_Sound : MonoBehaviour
     /// Call this function to make sure it's OK before you play a soundsource via some method
     /// other than PlaySoundAtPosition.
     /// </summary>
-    public bool CanPlaySoundAtPosition(Vector2 sound_position)
+    public bool CanPlaySoundAtPosition(Vector2 sound_position, bool party_only = false, int triggered_by_uid=-1)
     {
+        if( party_only )
+        {
+            // Check to see if it's triggered by either us or our partner. If not, don't play it!
+            if( triggered_by_uid != Dateland_Network.playerFromJson.user.id && triggered_by_uid != Dateland_Network.partnerPlayer )
+                return false;
+        }
+
+
         float vert_extent = myCamera.orthographicSize;    
         float horz_extent = vert_extent * Screen.width / Screen.height;
 

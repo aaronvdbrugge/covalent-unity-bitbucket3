@@ -15,6 +15,14 @@ public class SelfSoundTrigger : MonoBehaviour
     [Tooltip("If this is used instead, we'll play a random one from this roster")]
     public AudioSource[] multiAudioSources;
 
+    [Tooltip("Only people in our party (usually us and our partner) can hear this!")]
+    public bool partyOnly = false;
+
+    [Header("Runtime")]
+    [Tooltip("Another script will have to set this when triggered, if we're using partyOnly.")]
+    public int triggeredByUid = -1;
+
+
 
     public float minPitch = 1.0f;
     public float maxPitch = 1.0f;
@@ -37,9 +45,18 @@ public class SelfSoundTrigger : MonoBehaviour
             PlaySound();
 	}
 
+
+    /// <summary>
+    /// Sets triggeredByUid. Can be used for SendMessage.
+    /// </summary>
+    public void SetTriggeredByUid(int triggered_by)
+    {
+        triggeredByUid = triggered_by;
+    }
+
 	public void PlaySound()
     {
-        if( _cameraSound.CanPlaySoundAtPosition( transform.position ) )
+        if( _cameraSound.CanPlaySoundAtPosition( transform.position, partyOnly, triggeredByUid ) )    // include "partyOnly" config in this test
         {
             AudioSource audio = audioSource;
             if( multiAudioSources.Length > 0 )   // pick a random sound from multiple

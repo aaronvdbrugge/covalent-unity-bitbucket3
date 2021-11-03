@@ -75,12 +75,22 @@ public class Animating_Object : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        TriggeredByTouch();
+        int player_uid = -1;
+        Player_Controller_Mobile plr = collision.GetComponent<Player_Controller_Mobile>();
+        if( plr )
+            player_uid = plr.kippoUserId;
+
+        TriggeredByTouch(player_uid);
     }
 
-   private void OnCollisionEnter2D(Collision2D col)
+   private void OnCollisionEnter2D(Collision2D collision)
     {
-        TriggeredByTouch();
+        int player_uid = -1;
+        Player_Controller_Mobile plr = collision.gameObject.GetComponent<Player_Controller_Mobile>();
+        if( plr )
+            player_uid = plr.kippoUserId;
+
+        TriggeredByTouch(player_uid);
     }
 
     void DoAnimate()
@@ -92,8 +102,10 @@ public class Animating_Object : MonoBehaviour
             anim.SetTrigger( animationTriggerName );
     }
 
-    void TriggeredByTouch()
+    void TriggeredByTouch(int triggered_by)
     {
+        SendMessage("SetTriggeredByUid", triggered_by, SendMessageOptions.DontRequireReceiver);   // to whoever cares. Maybe SelfSoundTrigger
+
         if (timerToNextAnimation <= 0)   // not allowed to animate unless this has cooled down.
         {
             DoAnimate();
