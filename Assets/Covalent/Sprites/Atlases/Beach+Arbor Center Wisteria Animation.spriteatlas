@@ -68,7 +68,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 975b70c0ae64243acbde0f329a9bf33f, type: 3}
     - {fileID: 2800000, guid: 5cbc7cc6f005d42098034bcfc030ae15, type: 3}
     - {fileID: 2800000, guid: 9cd5f17ade7104b76b5fcde45b0ab0d2, type: 3}
-    - {fileID: 2800000, guid: 9ca4d6be8ab984ceda4d8a0bda6d5e66, type: 3}
+    - {fileID: 2800000, guid: c588d548babf2440ebc055257106b78b, type: 3}
     - {fileID: 2800000, guid: 2cdf14aa19b854fe19ac17ca28203811, type: 3}
     - {fileID: 2800000, guid: 397bd286aa4034f1d82081fe17bebd4c, type: 3}
     - {fileID: 2800000, guid: aaaa962d7b3954743959e2c5b520a1ad, type: 3}
@@ -92,7 +92,12 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 2e423ccbb897215499fdd5a92173aeca, type: 3}
     - {fileID: 2800000, guid: d490d1d65e4762e48b1f0dd46e4cdf30, type: 3}
     - {fileID: 2800000, guid: 6e7f6986375a07d48b6a0d3eb2915624, type: 3}
-    - {fileID: 2800000, guid: c588d548babf2440ebc055257106b78b, type: 3}
+    - {fileID: 2800000, guid: 2547905c145d38f48a099660b45596ae, type: 3}
+    - {fileID: 2800000, guid: 6220b28bcc84650409c985eb61b46ab8, type: 3}
+    - {fileID: 2800000, guid: c94c0563a6a61e6439dc1d1b9c6df1ee, type: 3}
+    - {fileID: 2800000, guid: ed61b2421ee7d044e873a9b1b2a9ded7, type: 3}
+    - {fileID: 2800000, guid: 4aefdfc20aaf0974683b66b8c31ecf8d, type: 3}
+    - {fileID: 2800000, guid: 28454b375075b484fbb7ddd045252943, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -100,7 +105,10 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 975b70c0ae64243acbde0f329a9bf33f, type: 3}
   - {fileID: 21300000, guid: 3ffc7f31abccb447da9752724936dcfc, type: 3}
+  - {fileID: 21300000, guid: ed61b2421ee7d044e873a9b1b2a9ded7, type: 3}
+  - {fileID: 21300000, guid: 4aefdfc20aaf0974683b66b8c31ecf8d, type: 3}
   - {fileID: 21300000, guid: fdafc4f205f2d4a49bcecfcf3bf7dcca, type: 3}
+  - {fileID: 21300000, guid: c94c0563a6a61e6439dc1d1b9c6df1ee, type: 3}
   - {fileID: 21300000, guid: e60f0073f90b046edbb84d5b6d54a235, type: 3}
   - {fileID: 21300000, guid: 770eb2f3d7f68164ea256272737c373f, type: 3}
   - {fileID: 21300000, guid: cda6df24c26d44f17a4829d900fb762f, type: 3}
@@ -115,6 +123,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d490d1d65e4762e48b1f0dd46e4cdf30, type: 3}
   - {fileID: 21300000, guid: 82982bf6e24924af48640b729ba6a05f, type: 3}
   - {fileID: 21300000, guid: 49b6fff6ba7f08545b6aea49d8700627, type: 3}
+  - {fileID: 21300000, guid: 28454b375075b484fbb7ddd045252943, type: 3}
   - {fileID: -7609012854110857515, guid: 9666d097dc420453ba17345d67915613, type: 3}
   - {fileID: -270629388955018214, guid: 9666d097dc420453ba17345d67915613, type: 3}
   - {fileID: -926088353450267596, guid: 9666d097dc420453ba17345d67915613, type: 3}
@@ -220,19 +229,23 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 45680d9ac08a84c4c8308ace6b574964, type: 3}
   - {fileID: 21300000, guid: 2cdf14aa19b854fe19ac17ca28203811, type: 3}
   - {fileID: 21300000, guid: 272a37ba269ac41acbb34a04823d8152, type: 3}
+  - {fileID: 21300000, guid: 6220b28bcc84650409c985eb61b46ab8, type: 3}
   - {fileID: 21300000, guid: 2e423ccbb897215499fdd5a92173aeca, type: 3}
   - {fileID: 21300000, guid: 2531bf1cab89d4f26bc6a3aa38f90584, type: 3}
+  - {fileID: 21300000, guid: 2547905c145d38f48a099660b45596ae, type: 3}
   - {fileID: 21300000, guid: d3f1668cf749943a0b8796a1d213d797, type: 3}
   - {fileID: 21300000, guid: a095109cc902049f48b5810fb44eedc2, type: 3}
   - {fileID: 21300000, guid: aaaa962d7b3954743959e2c5b520a1ad, type: 3}
   - {fileID: 21300000, guid: 71f34d2d394d84ca99d7004b2c275a57, type: 3}
-  - {fileID: 21300000, guid: 9ca4d6be8ab984ceda4d8a0bda6d5e66, type: 3}
   - {fileID: 21300000, guid: 744d930f5780645e2b601a659c5bc974, type: 3}
   - {fileID: 21300000, guid: 65c5ae8faeff64ef0af955e849acc3c9, type: 3}
   m_PackedSpriteNamesToIndex:
   - crabBuried1@3x
   - umbrellaBlueShadow@3x
+  - fishHouse rail 2
+  - fishHouse rail 3
   - dunes_topLeft
+  - fishHouse rail 1
   - umbrellaBlue@3x
   - volleyball net
   - buoy@3x
@@ -247,6 +260,7 @@ SpriteAtlas:
   - volleyball
   - bucketMagenta@3x
   - beach_stepping_stones
+  - fence_topRight smaller
   - bubble whale 3x_19
   - bubble whale 3x_18
   - bubble whale 3x_68
@@ -352,13 +366,14 @@ SpriteAtlas:
   - dunes_topRight
   - fishingPole1@3x
   - towelBlue@3x
+  - fishHouse house
   - volleyball ring
   - bucketCyan@3x
+  - fishHouse deck
   - bench_fishing@3x
   - bucketIndigo@3x
   - lifeGuard@3x
   - seashells2@3x
-  - fishHouse@3x
   - seashells1@3x
   - pier post sand
   m_RenderDataMap: {}
