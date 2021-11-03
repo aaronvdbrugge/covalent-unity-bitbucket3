@@ -677,13 +677,15 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
             if( seconds > (double)maxBackgroundedTime )  // They were backgrounded too long...
             {
-                Debug.Log("Disconnecting due to inactivity.");
-
                 _disconnectedDueToInactivity = true;
                 initialized = false;
                 Debug.Log("Disconnecting player due to inactivity.");
                 popupManager.ShowPopup( "disconnected_inactivity" );
                 PhotonNetwork.Disconnect();
+
+                Agora_Manager agora = FindObjectOfType<Agora_Manager>();
+                if( agora  )
+                    agora.DisconnectDueToInactivity();   // this will prevent it from trying to reconnect.
             }
         }
     }
