@@ -78,8 +78,6 @@ SpriteAtlas:
     - {fileID: 2800000, guid: df9ebdaed421f4416bb830635301313b, type: 3}
     - {fileID: 2800000, guid: abca978ce4d1e474195ea2a18671acf2, type: 3}
     - {fileID: 2800000, guid: aa07a179284354091bf4b263c5a8655f, type: 3}
-    - {fileID: 2800000, guid: dea96c35fcdc24452a419b1729991d1a, type: 3}
-    - {fileID: 2800000, guid: fdee62364efb64cb7aa04cc617852b02, type: 3}
     - {fileID: 2800000, guid: 5642bfb75e1884d428c65eac5160a43e, type: 3}
     - {fileID: 2800000, guid: c233a5f2678d54024960c60bf7c589bd, type: 3}
     - {fileID: 2800000, guid: db12320962c714cffb91404396ed1c0c, type: 3}
@@ -110,8 +108,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 929930a3b851e48d1903d76bca4cfb09, type: 3}
   - {fileID: 21300000, guid: 55131c34cdef9497d8148f399178bcc5, type: 3}
   - {fileID: 21300000, guid: 6b84c315f552a4de88ea0ca067608093, type: 3}
-  - {fileID: 21300000, guid: dea96c35fcdc24452a419b1729991d1a, type: 3}
-  - {fileID: 21300000, guid: fdee62364efb64cb7aa04cc617852b02, type: 3}
   - {fileID: 21300000, guid: 4966c4666f9bb4c6a86d79ef759d333c, type: 3}
   - {fileID: 21300000, guid: 4d30847624c7a4612827b6ff48ae6041, type: 3}
   - {fileID: 21300000, guid: c2c54d57cd90440409e2396873624fd1, type: 3}
@@ -149,8 +145,6 @@ SpriteAtlas:
   - fence_BG_center@3x
   - table_pinkHouse@3x
   - chairYellow_right@3x
-  - lights_fountainBack@3x
-  - lights_fountainFront@3x
   - houseBlue_right@3x
   - cloud@3x
   - tree_tall1@3x
