@@ -99,6 +99,17 @@ public class Agora_Manager : MonoBehaviour
 
     float _disconnectRetryCooldown=0;  // set to disconnectRetryInterval on retry
     bool _wasConnected = false;   // were we ever connected? use to detect disconnect
+
+    /// <summary>
+    /// You should call this when you disconnect Agora due to inactivity, to prevent it from reconnecting.
+    /// </summary>
+    public void DisconnectDueToInactivity()
+    {
+        mRtcEngine.LeaveChannel();
+        _wasConnected = false;  // prevents retrying connection
+    }
+
+
     string _lastChannel = null;   // if JoinChannel was ever called, this will be the parameter it was given
 
     private IEnumerator requestMicrophone()
@@ -127,7 +138,6 @@ public class Agora_Manager : MonoBehaviour
         mRtcEngine.SetAudioProfile(AUDIO_PROFILE_TYPE.AUDIO_PROFILE_MUSIC_HIGH_QUALITY_STEREO, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_MEETING);
         mRtcEngine.SetDefaultAudioRouteToSpeakerphone(true);
         mRtcEngine.EnableAudioVolumeIndication(300, 3, true);
-
 
 #if PLATFORM_ANDROID
          if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
