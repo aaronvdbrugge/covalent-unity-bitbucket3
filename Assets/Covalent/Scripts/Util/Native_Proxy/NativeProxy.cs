@@ -1,5 +1,7 @@
 
 //Include based on platform
+using UnityEngine;
+
 
 #if PLATFORM_ANDROID
 using Covalent.Scripts.Util.Native_Proxy.Android;
@@ -13,12 +15,34 @@ namespace Covalent.Scripts.Util.Native_Proxy
 {
     public static  class NativeProxy
     {
-        //Instantiate messageProxy to an instance of INativeProxy based on the platform
-#if PLATFORM_ANDROID
-        private static INativeProxy messageProxy = new AndroidNativeProxy();
-#elif UNITY_IOS
-        private static INativeProxy messageProxy = new IOSNativeProxy();
-#endif
+        //private static INativeProxy messageProxy = new AndroidNativeProxy();
+        // NOTE! Can't do it this way. Caused on-device NullReferenceExceptions.
+        // I think this is due to a C# quirk where static member initialization
+        // is implementation-dependent.
+        // So, it's the compiler's fault.
+        //  https://stackoverflow.com/questions/3580171/static-member-variable-not-being-initialized-in-release-compiler-clr-bug
+
+        // Instead, I'll just make messageProxy into a getter to ensure it's initialized.
+        private static INativeProxy messageProxy
+        {
+            get
+            {
+                if( _messageProxy == null )
+                {
+                    //Instantiate messageProxy to an instance of INativeProxy based on the platform
+                    #if PLATFORM_ANDROID
+                        _messageProxy = new AndroidNativeProxy();
+                    #elif UNITY_IOS
+                        _messageProxy = new IOSNativeProxy();
+                    #endif
+                }
+                return _messageProxy;
+            }
+        }
+        private static INativeProxy _messageProxy;
+
+
+
         /**
          * <summary>Notifies about the number of users currently in a photon room</summary>
          * <param name="unityJsonList"> List of current players serialized to strings </param>

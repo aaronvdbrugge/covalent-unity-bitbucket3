@@ -130,7 +130,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     private bool needsToJoinRoom;
     public string previousRoom = null;     // the room we'll try to rejoin, if we lose connection.
     public int maxSkins = 10;  //this had a compiler warning. just made it public to avoid that. -seb
-    private string player_JSON;
 
 
     public string lastSceneName = null;   // used for determining room name.
@@ -352,6 +351,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+
         previousRoom = PhotonNetwork.CurrentRoom.Name;   // save this in case we get disconnected.
         initPlayer = true;
 
@@ -390,7 +390,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
     public void UpdatePlayerList()
     {
-        
+        /*
         if (PhotonNetwork.PlayerList.Length >= 1)
         {
             string[] players = new string[PhotonNetwork.PlayerList.Length];
@@ -416,7 +416,19 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
             //Uncomment for Native App Version
 
             updatePlayersInRoom(players, players.Length);   // Makes its way to native app.
-        }
+        }*/
+
+
+        List<string> player_jsons = new List<string>();
+
+        player_jsons.Add( realUserJson );   // First user must always be local player. We have this data stored already
+
+        foreach( var plr in PhotonNetwork.PlayerList )
+            if(plr.ActorNumber != PhotonNetwork.LocalPlayer.ActorNumber && plr.CustomProperties.ContainsKey("myJSON") )  // we already added local player
+                player_jsons.Add((string)plr.CustomProperties["myJSON"]);
+
+
+        updatePlayersInRoom(player_jsons.ToArray(), player_jsons.Count);   // Makes its way to native app.
     }
 
 
@@ -435,11 +447,12 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
         // Start connecting to room, so we can create player
         if( !string.IsNullOrEmpty(realUserJson) )   // this would have been set in CreatePlayerreceiver in LoadScreen.cs
-            enterDateland( realUserJson );
+            enterDateland();
         else  // test environment, use test JSON
         {
-            playerFromJson = JsonUtility.FromJson<Player_Class>(testUserJson.text);
-            enterDateland( testUserJson.text );
+            realUserJson = testUserJson.text;
+            playerFromJson = JsonUtility.FromJson<Player_Class>(realUserJson);
+            enterDateland();
         }
     }
 
@@ -566,7 +579,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                    
 
                     ExitGames.Client.Photon.Hashtable me = new ExitGames.Client.Photon.Hashtable();
-                    me.Add("myJSON", player_JSON);
+                    me.Add("myJSON", realUserJson);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(me, null, null);
 
                     initialized = true;
@@ -603,9 +616,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 
   
-    public void enterDateland(string json_string)
+    public void enterDateland()
     {
-        player_JSON = json_string;
         PlayerPrefs.SetString("name", playerFromJson.user.name);
         PlayerPrefs.SetInt("id", playerFromJson.user.id);
         PlayerPrefs.SetString("partyId", playerFromJson.partyId);
