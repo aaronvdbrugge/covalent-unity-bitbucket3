@@ -209,7 +209,9 @@ public class GoKart : MonoBehaviour
                     _fadeAnimCoastVelocity = plr.playerMovement.body.velocity;  //in case we jump out soon
                 }
 
-                plr.playerAnimations.meshRenderer.enabled = false;   // Hide the actual player. They're a car now.
+                plr.playerAnimations.hideVisuals = true;   // Hide the actual player. They're a car now.
+                // Note that hideVisuals is "consumed" for bug safety, so we need to set hideVisuals every FixedUpdate
+                // for it to work.  We also do not need to set it back, that will happen automatically.
 
                 _followInLateUpdate = plr.transform;   // Our visual follows the player wherever
 
