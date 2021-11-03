@@ -1408,9 +1408,9 @@ MonoBehaviour:
     drag: 1.5
     layer: 12
     collider: {fileID: 2056266962552226213}
-  - maxSpeed: 25
+  - maxSpeed: 12
     useAcceleration: 1
-    acceleration: 15
+    acceleration: 25
     drag: 0
     layer: 8
     collider: {fileID: 798382551825579044}
