@@ -34,6 +34,9 @@ public class MyOnScreenStick : MonoBehaviour
     [Tooltip("Just a pointer to the UI camera we're displayed by... need it for calculations. I think you can leave it null for overlay")]
     public Camera uiCamera;
 
+    [Tooltip("If we get a touch on our edge, that was actually outside the circle, forward it to this object.")]
+    public GameObject forwardEdgeClicks;
+
 
 
     bool dragging = false;
@@ -57,7 +60,7 @@ public class MyOnScreenStick : MonoBehaviour
     }
 
 
-    void OnMyTouchDown( MyTouch my_touch )
+    public void OnMyTouchDown( MyTouch my_touch )
     {
         // this means it was within the rectangular bounds, but ensure it was actually within the smaller circular bounds.
         myTouch = my_touch;
@@ -79,6 +82,8 @@ public class MyOnScreenStick : MonoBehaviour
 
         if( delta.magnitude <= radius )
             dragging = true;   //we're inside the circle.
+        else if( forwardEdgeClicks )     // outside the circle. Can forward the click
+            forwardEdgeClicks.SendMessage("OnMyTouchDown", my_touch, SendMessageOptions.DontRequireReceiver);
 
         // Move onto DoDrag logic immediately.
         DoDrag( my_touch );        

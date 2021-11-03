@@ -7990,6 +7990,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 384109267100450685}
   - {fileID: 1519566762206955678}
   m_Father: {fileID: 6127845980001206949}
   m_RootOrder: 1
@@ -8347,7 +8348,6 @@ MonoBehaviour:
   debugSettings: {fileID: 0}
   gameVersion: 1
   sandboxRoomName: TEST_BUILD_1_0
-  avoidSettingUserIDForDebug: 1
   reconnectTime: 65
   reconnectInterval: 10
   initialReconnectDelay: 1
@@ -9644,7 +9644,7 @@ RectTransform:
   - {fileID: 4691427185030806092}
   - {fileID: 1519566761474330652}
   m_Father: {fileID: 1519566760835742175}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -9706,6 +9706,7 @@ MonoBehaviour:
       m_Calls: []
   joystickVisual: {fileID: 1519566761474330652}
   uiCamera: {fileID: 4809459024560666342}
+  forwardEdgeClicks: {fileID: 2612488195219734703}
   m_MovementRange: 93
 --- !u!1 &1519566762248471679
 GameObject:
@@ -12423,6 +12424,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2612488195219734703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384109267100450685}
+  - component: {fileID: 5474705698196275771}
+  - component: {fileID: 1114143138126837280}
+  - component: {fileID: 6923433618392745926}
+  m_Layer: 5
+  m_Name: Joystick teleport area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &384109267100450685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612488195219734703}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1519566760835742175}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 195}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &5474705698196275771
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612488195219734703}
+  m_CullTransparentMesh: 1
+--- !u!114 &1114143138126837280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612488195219734703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5eff5b56212114ca64d385d6d38b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6923433618392745926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612488195219734703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28612c3575602d4abc7164d0b321f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myOnScreenStick: {fileID: 963998969647408973}
 --- !u!1 &2656746309926729575
 GameObject:
   m_ObjectHideFlags: 0
