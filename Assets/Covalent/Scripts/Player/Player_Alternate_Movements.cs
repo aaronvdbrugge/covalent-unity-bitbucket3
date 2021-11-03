@@ -39,13 +39,16 @@ public class Player_Alternate_Movements : MonoBehaviour
 	MovementStyle _originalStyle;
 	public Collider2D currentCollider{get; private set; }   //show the collider we're currently using for this movement
 
+
+	public const int OriginalStyleIndex = -1;   // normal movement
+
 	public int currentMovement
 	{
 		get => _currentMovement;
 		set
 		{
 			_currentMovement = value;
-			if( _currentMovement == -1 )   // -1 is original style
+			if( _currentMovement == OriginalStyleIndex )   
 				ApplyStyle( _originalStyle );
 			else   //index in otherMovementStyles
 				ApplyStyle( otherMovementStyles[_currentMovement] );
