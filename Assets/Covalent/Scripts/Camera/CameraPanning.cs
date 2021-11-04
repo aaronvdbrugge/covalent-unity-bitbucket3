@@ -27,6 +27,14 @@ public class CameraPanning : MonoBehaviour
 	[Tooltip("Current zoom level.")]
 	public float zoom = 1.0f;
 
+
+	/// <summary>
+	/// We'll check if any of these have wantsPan on.
+	/// Note that they must add themselves to this list on Start.
+	/// </summary>
+	public List<CameraPanArea> cameraPanAreas;   
+
+
 	float _smoothCooldown = 0.0f;    // from 1 to 0
 	float _orthographicSizeOriginal;   // used for zooming
 
@@ -47,25 +55,47 @@ public class CameraPanning : MonoBehaviour
 		if( target == null )
 			return;
 
-		SitPoint sit = target.playerHop.GetSitPoint();
-		if( sit != null )
-		{	
-			if( sit.useCameraOffset == false )   // nothing fancy, just follow the player spot-on
-				transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10 );
-			else
+		bool do_pan = false;   // true if anything is asking us for a camera pan
+		Vector2 target_pos = Vector2.zero;
+		float target_zoom = 0;
+		
+
+
+		// See if any CameraPanAreas want pan...
+		foreach( var campan in cameraPanAreas )
+			if( campan.wantsPan )
 			{
-				// Has camera offset!
-				// "Lazily" move over to where the sit point's pan offset is.
-				Vector3 pan_pos = sit.GetCameraOffsetWorld();
-				Vector3 pos = transform.position;
-				Vector2 new_pos = pos + (pan_pos - pos) * panningResponsivenessRatio;
-				transform.position = new Vector3(new_pos.x, new_pos.y, constZ );
-
-				zoom += (sit.cameraZoom - zoom) * panningResponsivenessRatio;   // use same method for zoom
+				do_pan = true;
+				target_pos = campan.targetPosWorld;
+				target_zoom = campan.targetZoom;
+			}
 
 
-				_smoothCooldown = 1;   // in case we get off the sitpoint soon
-			}		
+		SitPoint sit = target.playerHop.GetSitPoint();
+		if( sit != null && sit.useCameraOffset == true)
+		{	
+			// Has camera offset!
+			// "Lazily" move over to where the sit point's pan offset is.
+			do_pan = true;
+			target_pos = sit.GetCameraOffsetWorld();
+			target_zoom = sit.cameraZoom;
+
+			_smoothCooldown = 1;   // in case we get off the sitpoint soon
+		}
+
+
+
+		if( do_pan )
+		{
+			// Has camera offset!
+			// "Lazily" move over to where the sit point's pan offset is.
+			Vector2 pos = transform.position;
+			Vector2 new_pos = pos + (target_pos - pos) * panningResponsivenessRatio;
+			transform.position = new Vector3(new_pos.x, new_pos.y, constZ );
+
+			zoom += (target_zoom - zoom) * panningResponsivenessRatio;   // use same method for zoom
+
+			_smoothCooldown = 1;   // in case we get off the sitpoint soon
 		}
 		else
 		{
