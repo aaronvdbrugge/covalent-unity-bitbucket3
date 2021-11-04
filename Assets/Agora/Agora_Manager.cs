@@ -92,7 +92,7 @@ public class Agora_Manager : MonoBehaviour
     // Because Agora's calllback doesn't report anything when volume is 0, we'll have to figure that out on our own.
     // This is set to 0 every time we update usersTalking, but will increase in Update, and we'll assume they aren't talking
     // if it makes it to 
-    Dictionary<uint, float> usersTalkingCooldown = new Dictionary<uint, float>();
+    Dictionary<uint, float> timeSinceUserLastTalked = new Dictionary<uint, float>();
 
     [SerializeField]
     private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
@@ -276,7 +276,7 @@ public class Agora_Manager : MonoBehaviour
                         playerEndedTalking( uid );
                 }
 
-                usersTalkingCooldown[uid] = 0;   // This "talking" value is up to date.
+                timeSinceUserLastTalked[uid] = 0;   // This "talking" value is up to date.
             }
 
             // See Update() for logic which deals with assuming they aren't talking, when we haven't heard from them in long enough.
@@ -290,9 +290,9 @@ public class Agora_Manager : MonoBehaviour
 	private void Update()
 	{
         // We have to look for users who stopped talking, because of the way Agora's callback works.
-		foreach( KeyValuePair<uint, float> kvp in new Dictionary<uint, float>(usersTalkingCooldown) )   // new dictionary needed so we can modify during iteration
+		foreach( KeyValuePair<uint, float> kvp in new Dictionary<uint, float>(timeSinceUserLastTalked) )   // new dictionary needed so we can modify during iteration
         {
-            usersTalkingCooldown[kvp.Key] = kvp.Value + Time.deltaTime;   // add deltatime to cooldowns
+            timeSinceUserLastTalked[kvp.Key] = kvp.Value + Time.deltaTime;   // add deltatime to cooldowns
             if( kvp.Value >= assumeNotTalkingTime / 1000.0f )   // We haven't heard from them in a while. Assume they aren't talking
                 if( usersTalking.ContainsKey( kvp.Key ) && usersTalking[kvp.Key] )   // We thought they were talking. Guess not
                 {
