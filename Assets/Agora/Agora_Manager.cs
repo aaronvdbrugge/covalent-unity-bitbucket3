@@ -372,12 +372,8 @@ public class Agora_Manager : MonoBehaviour
             _lastChannel = _doJoinChannel;  // in case we get disconnected
             _wasConnected = false;
             Debug.Log("Joining Agora channel: " + _doJoinChannel + " with ID " + Dateland_Network.playerFromJson.user.id);
-
-
+            
             uint use_id = (uint)Dateland_Network.playerFromJson.user.id;   // Use Kippo ID for our Agora ID.
-            if( NativeEntryPoint.sandboxMode )
-                use_id = 0;   // ID is probably not correct, so avoid duplicate IDs and just let Agora choose.
-
 
             mRtcEngine.JoinChannel(_doJoinChannel, "extra", use_id);   
             isMuted = false;
