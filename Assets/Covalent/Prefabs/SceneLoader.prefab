@@ -8615,10 +8615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  panningResponsivenessRatio: 0.05
+  panningResponsivenessRatio: 0.01
   constZ: -10
-  smoothCooldownTime: 1
+  smoothCooldownTime: 10
   zoom: 1
+  cameraPanAreas: []
 --- !u!81 &1519566761237642968
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8794,10 +8795,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  panningResponsivenessRatio: 0.05
+  panningResponsivenessRatio: 0.01
   constZ: -10
   smoothCooldownTime: 1
   zoom: 1
+  cameraPanAreas: []
 --- !u!114 &3854466522601775372
 MonoBehaviour:
   m_ObjectHideFlags: 0
