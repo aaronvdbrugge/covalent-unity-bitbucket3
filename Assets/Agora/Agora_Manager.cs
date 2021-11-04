@@ -109,6 +109,23 @@ public class Agora_Manager : MonoBehaviour
         _wasConnected = false;  // prevents retrying connection
     }
 
+    /// <summary>
+    /// Use this only for application backgrounded. Note that it would immediately start trying to reconnect.
+    /// </summary>
+    public void DisconnectTemporarily()
+    {
+        mRtcEngine.LeaveChannel();
+    }
+
+    /// <summary>
+    /// Ensures we'll try reconnecting to Agora right now, if it isn't already.
+    /// </summary>
+    public void ReconnectNextFixedUpdate()
+    {
+        _disconnectRetryCooldown = 0;
+    }
+
+
 
     string _lastChannel = null;   // if JoinChannel was ever called, this will be the parameter it was given
 
@@ -128,8 +145,8 @@ public class Agora_Manager : MonoBehaviour
     private void Awake()
     {
         // Weird... could this have been necessary for some reason?
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 30;
+        //QualitySettings.vSyncCount = 0;
+        //Application.targetFrameRate = 30;
     }
 
     private void Start()
@@ -389,6 +406,7 @@ public class Agora_Manager : MonoBehaviour
                 use_id = 0;   // ID is probably not correct, so avoid duplicate IDs and just let Agora choose.
 
 
+            
             mRtcEngine.JoinChannel(_doJoinChannel, "extra", use_id);   
             isMuted = false;
             _doJoinChannel = null;  // reset

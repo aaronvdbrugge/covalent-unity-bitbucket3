@@ -126,6 +126,9 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 
     #region Private Fields
+    Agora_Manager agoraManager;  // cached with FindObjectOfType at start, if it exists
+
+
     private bool initPlayer = false;
     private bool needsToJoinRoom;
     public string previousRoom = null;     // the room we'll try to rejoin, if we lose connection.
@@ -443,6 +446,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     }
     private void Start()
     {
+        agoraManager = FindObjectOfType<Agora_Manager>();
+
         //Connect();
 
         // Start connecting to room, so we can create player
@@ -683,9 +688,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 popupManager.ShowPopup( "disconnected_inactivity" );
                 PhotonNetwork.Disconnect();
 
-                Agora_Manager agora = FindObjectOfType<Agora_Manager>();
-                if( agora  )
-                    agora.DisconnectDueToInactivity();   // this will prevent it from trying to reconnect.
+                if( agoraManager ) agoraManager.ReconnectNextFixedUpdate();   // Tells it to reconnect immediately after being backgrounded.
             }
         }
     }
@@ -697,6 +700,9 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         PhotonNetwork.SendAllOutgoingCommands();
         _backgrounded = true;
         _dateTimeBackgrounded = System.DateTime.Now;
+
+        
+        if( agoraManager ) agoraManager.DisconnectTemporarily();    // It will start trying to reconnect as soon as the app is running again.
 
         Debug.Log("Application backgrounded at time: " + _dateTimeBackgrounded );
     }
