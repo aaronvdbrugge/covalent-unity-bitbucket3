@@ -99163,9 +99163,9 @@ MonoBehaviour:
     type: 3}
   collisionHeight: 0.74
   arcTimeSlow: 5
-  arcTimeFast: 1.5
+  arcTimeFast: 2
   arcHeight: 6
-  maxSpeedupHits: 10
+  maxSpeedupHits: 15
   indicatorRingColors:
     serializedVersion: 2
     key0: {r: 0.41037738, g: 1, b: 0.46203184, a: 1}
