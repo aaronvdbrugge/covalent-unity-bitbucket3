@@ -102,19 +102,12 @@ public class Agora_Manager : MonoBehaviour
 
     /// <summary>
     /// You should call this when you disconnect Agora due to inactivity, to prevent it from reconnecting.
+    /// You can call it when getting backgrounded, as well.
     /// </summary>
-    public void DisconnectDueToInactivity()
+    public void DisconnectWithoutRetry()
     {
         mRtcEngine.LeaveChannel();
         _wasConnected = false;  // prevents retrying connection
-    }
-
-    /// <summary>
-    /// Use this only for application backgrounded. Note that it would immediately start trying to reconnect.
-    /// </summary>
-    public void DisconnectTemporarily()
-    {
-        mRtcEngine.LeaveChannel();
     }
 
     /// <summary>
@@ -123,6 +116,7 @@ public class Agora_Manager : MonoBehaviour
     public void ReconnectNextFixedUpdate()
     {
         _disconnectRetryCooldown = 0;
+        _wasConnected = true;
     }
 
 
