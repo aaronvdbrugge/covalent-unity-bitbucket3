@@ -687,9 +687,13 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 Debug.Log("Disconnecting player due to inactivity.");
                 popupManager.ShowPopup( "disconnected_inactivity" );
                 PhotonNetwork.Disconnect();
-
+            }
+            else
+            {
+                // They weren't backgrounded too long. Can restore
                 if( agoraManager ) agoraManager.ReconnectNextFixedUpdate();   // Tells it to reconnect immediately after being backgrounded.
             }
+
         }
     }
 
@@ -702,7 +706,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         _dateTimeBackgrounded = System.DateTime.Now;
 
         
-        if( agoraManager ) agoraManager.DisconnectTemporarily();    // It will start trying to reconnect as soon as the app is running again.
+        if( agoraManager ) agoraManager.DisconnectWithoutRetry();    // It will start trying to reconnect as soon as the app is running again.
 
         Debug.Log("Application backgrounded at time: " + _dateTimeBackgrounded );
     }
