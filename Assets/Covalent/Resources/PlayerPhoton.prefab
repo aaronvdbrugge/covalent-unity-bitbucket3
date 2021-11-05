@@ -1428,6 +1428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControllerMobile: {fileID: 4450914184106857900}
   activateIfMineOrPartner: {fileID: 4594312136115495357}
+  colorTextIfMineOrPartner: {fileID: 2481279367525578877}
+  partnerTextColor: {r: 0.41037738, g: 1, b: 0.46203184, a: 1}
 --- !u!1 &4594312136115495357
 GameObject:
   m_ObjectHideFlags: 0
