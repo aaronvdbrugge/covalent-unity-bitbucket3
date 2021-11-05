@@ -24,6 +24,11 @@ public class Dateland_Camera : MonoBehaviour  // : Camera_Follow
 
     public PopupManager popupManager;
 
+    [Tooltip("This should be reparented to our Player as soon as we have one.")]
+    public Camera inventoryRenderTextureCamera;
+
+    bool _reparentedInventoryRenderTextureCamera = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -300,4 +305,16 @@ public class Dateland_Camera : MonoBehaviour  // : Camera_Follow
         }
         */
     }
+
+
+	private void FixedUpdate()
+	{
+        // Need to put inventory render texture cam under player, so camera pans don't affect it.
+		if( !_reparentedInventoryRenderTextureCamera && Player_Controller_Mobile.mine != null )
+        {
+            _reparentedInventoryRenderTextureCamera = true;
+            inventoryRenderTextureCamera.transform.SetParent( Player_Controller_Mobile.mine.transform, false );
+            inventoryRenderTextureCamera.transform.localPosition = new Vector3(0,1,-10);   // scoot it back so it can actually see stuff
+        }
+	}
 }
