@@ -71,6 +71,9 @@ public class InventoryPanel : MonoBehaviour
 	/// </summary>
 	public void CellTapped(InventoryCell cell)
 	{
+		if( Player_Controller_Mobile.mine.spinePlayerController.characterSkinSlot == cell.skinIndex )   // They just tapped the already selected one; ignore
+			return;
+
 		if( _cellTapCooldown <= 0 )
 		{
 			_cellTapCooldown = cellTapCooldownTime;
