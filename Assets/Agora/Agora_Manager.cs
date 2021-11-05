@@ -83,6 +83,8 @@ public class Agora_Manager : MonoBehaviour
 
     public bool isMuted = false;   // informational
 
+    public string joinedChannel = null;   // gets set back to null on disconnect
+
 
     /// <summary>
     /// Remember if a uid was talking; this allows us to not spam the extern calls
@@ -179,6 +181,8 @@ public class Agora_Manager : MonoBehaviour
 
         mRtcEngine.OnJoinChannelSuccess += (string channelName, uint uid, int elapsed) =>
         {
+            joinedChannel = channelName;
+
             Debug.Log("Joined Agora Channel: " + channelName);
             myUid = uid;
             if (!mRtcEngine.IsSpeakerphoneEnabled())
@@ -189,6 +193,7 @@ public class Agora_Manager : MonoBehaviour
         
         mRtcEngine.OnLeaveChannel += (RtcStats stats) =>
         {
+            joinedChannel = null;
             //string leaveChannelMessage = string.Format("onLeaveChannel callback duration {0}, tx: {1}, rx: {2}, tx kbps: {3}, rx kbps: {4}", stats.duration, stats.txBytes, stats.rxBytes, stats.txKBitRate, stats.rxKBitRate);
             //Debug.Log(leaveChannelMessage);
         };
