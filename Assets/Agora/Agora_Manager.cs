@@ -425,6 +425,6 @@ public class Agora_Manager : MonoBehaviour
 	}
 
 
-    public bool IsConnected() => mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED;
+    public bool IsConnected() => mRtcEngine == null ? false : mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED;
 
 }
