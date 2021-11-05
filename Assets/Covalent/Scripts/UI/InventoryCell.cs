@@ -34,6 +34,8 @@ public class InventoryCell : MonoBehaviour
     {
 		skeletonMecanim.skeleton.SetSkin(skin);    // Set the skin of the mesh!
 		skeletonMecanim.skeleton.SetToSetupPose();
+
+        skeletonMecanim.skeleton.SetAttachment("shadow", null );   // We do not need the shadow from animation!! 
     }
 
 
