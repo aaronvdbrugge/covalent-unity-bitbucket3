@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -16,6 +17,12 @@ public class Player_Partner : MonoBehaviour
 	[Tooltip("An extra highlight we give to our player, and the partner player.")]
 	public GameObject activateIfMineOrPartner;
 
+	[Tooltip("Text is a different color if it's us or our partner.")]
+	public TMP_Text colorTextIfMineOrPartner;
+
+	[Tooltip("Applies to colorTextIfMineOrPartner")]
+	public Color partnerTextColor;
+
 
 	bool _initalized = false;
 
@@ -28,7 +35,10 @@ public class Player_Partner : MonoBehaviour
 
 			// Do this here so we can be sure partnerId is set.
 			if( playerControllerMobile.photonView.IsMine || playerControllerMobile.kippoUserId == Dateland_Network.partnerPlayer )
+			{
 				activateIfMineOrPartner.SetActive(true);
+				colorTextIfMineOrPartner.color = partnerTextColor;
+			}
 		}
 	}
 
