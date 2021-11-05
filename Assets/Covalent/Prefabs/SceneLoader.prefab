@@ -48928,7 +48928,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -25, y: -25}
-  m_SizeDelta: {x: 58, y: 25}
+  m_SizeDelta: {x: 74.8, y: 25}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &2789360748893085216
 CanvasRenderer:
@@ -48960,8 +48960,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SAVE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 800ea194dd6153740aec4ab50b28f655, type: 2}
-  m_sharedMaterial: {fileID: 1930721235693010322, guid: 800ea194dd6153740aec4ab50b28f655,
+  m_fontAsset: {fileID: 11400000, guid: c05fc8253cea0d44b896a64b57f61109, type: 2}
+  m_sharedMaterial: {fileID: 5877969509603139358, guid: c05fc8253cea0d44b896a64b57f61109,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -48996,7 +48996,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 14
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -50057,7 +50057,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 25, y: -25}
-  m_SizeDelta: {x: 91.92, y: 25}
+  m_SizeDelta: {x: 97.1, y: 25}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8657452603281659609
 CanvasRenderer:
@@ -50089,8 +50089,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CANCEL
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 800ea194dd6153740aec4ab50b28f655, type: 2}
-  m_sharedMaterial: {fileID: 1930721235693010322, guid: 800ea194dd6153740aec4ab50b28f655,
+  m_fontAsset: {fileID: 11400000, guid: c05fc8253cea0d44b896a64b57f61109, type: 2}
+  m_sharedMaterial: {fileID: 5877969509603139358, guid: c05fc8253cea0d44b896a64b57f61109,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -50125,7 +50125,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 14
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
