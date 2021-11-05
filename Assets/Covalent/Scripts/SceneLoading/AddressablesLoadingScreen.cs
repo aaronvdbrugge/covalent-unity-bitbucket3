@@ -88,7 +88,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
 		if( !simulate && !string.IsNullOrEmpty(sceneToLoad.AssetGUID) )
             ResourceManager.ExceptionHandler = CustomExceptionHandler;
 
-        progressText.text = "Loading...";
+        //progressText.text = "Loading...";
         SetProgressBarState(0);
 	}
 
@@ -129,7 +129,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
             // Now that we have dependencies, it's safe to load the scene itself.
             _loadSceneHandle = Addressables.LoadSceneAsync(sceneToLoad, UnityEngine.SceneManagement.LoadSceneMode.Single);
             _loadSceneHandle.Completed += SceneLoadComplete;
-            progressText.text = "Starting scene load.";
+            //progressText.text = "Starting scene load.";
         }
         else if( !_displayingError)
         {
@@ -172,7 +172,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
         }
         else if( simulate )   // Pretend we're downloading to test the UI
         {
-            progressText.text = "Connecting..." + ((int)((simulatePercent)*100) ) + "%";
+            progressText.text = "CONNECTING..." + ((int)((simulatePercent)*100) ) + "%";
             SetProgressBarState( simulatePercent );
         }
 
@@ -197,12 +197,12 @@ public class AddressablesLoadingScreen : MonoBehaviour
             if( _loadSceneHandle.IsValid() )
             {
 	            //progressText.text = "Connecting..." + ((int)((_loadSceneHandle.PercentComplete)*1000) / 10.0f) + "%";   // Try using PercentComplete for loading scene, since it's most likely all downloaded now.
-                progressText.text = "Connecting...100%";   // just hang on 100% for scene loading
+                progressText.text = "CONNECTING...100%";   // just hang on 100% for scene loading
                 SetProgressBarState( _loadSceneHandle.GetDownloadStatus().Percent );
             }
             else if( _loadDependenciesHandle.IsValid() )
             {
-                progressText.text = "Connecting..." + ((int)((_loadDependenciesHandle.GetDownloadStatus().Percent)*100) ) + "%";
+                progressText.text = "CONNECTING..." + ((int)((_loadDependenciesHandle.GetDownloadStatus().Percent)*100) ) + "%";
                 SetProgressBarState( _loadDependenciesHandle.GetDownloadStatus().Percent );
             }
         }
