@@ -83,7 +83,6 @@ public class Agora_Manager : MonoBehaviour
 
     public bool isMuted = false;   // informational
 
-    public string joinedChannel = null;   // gets set back to null on disconnect
 
 
     /// <summary>
@@ -179,9 +178,10 @@ public class Agora_Manager : MonoBehaviour
             Debug.Log("Error: " + error + " Message: " + msg);
         };
 
+
         mRtcEngine.OnJoinChannelSuccess += (string channelName, uint uid, int elapsed) =>
         {
-            joinedChannel = channelName;
+            isMuted = false;    // we probably won't be joining the channel muted
 
             Debug.Log("Joined Agora Channel: " + channelName);
             myUid = uid;
@@ -191,12 +191,7 @@ public class Agora_Manager : MonoBehaviour
             }
         };
         
-        mRtcEngine.OnLeaveChannel += (RtcStats stats) =>
-        {
-            joinedChannel = null;
-            //string leaveChannelMessage = string.Format("onLeaveChannel callback duration {0}, tx: {1}, rx: {2}, tx kbps: {3}, rx kbps: {4}", stats.duration, stats.txBytes, stats.rxBytes, stats.txKBitRate, stats.rxKBitRate);
-            //Debug.Log(leaveChannelMessage);
-        };
+
 
 
 
@@ -428,4 +423,8 @@ public class Agora_Manager : MonoBehaviour
             _disconnectRetryCooldown = disconnectRetryInterval;   // don't retry for a while
         }
 	}
+
+
+    public bool IsConnected() => mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED;
+
 }

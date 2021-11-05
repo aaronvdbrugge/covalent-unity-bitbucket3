@@ -19,7 +19,7 @@ public class MuteToggleButton : MonoBehaviour
 		if( agoraManager == null ) // try to find it now, not in Start
             agoraManager = FindObjectOfType<Agora_Manager>();   // try to find it. it still might be null
 
-        if( !_initialized && agoraManager != null && !string.IsNullOrEmpty(agoraManager.joinedChannel) )  // Can only init once we joined a channel! Otherwise, clicking mute could cause problems
+        if( !_initialized && agoraManager != null && agoraManager.IsConnected() )  // Can only init once we joined a channel! Otherwise, clicking mute could cause problems
         {
             _initialized =true;
 
@@ -33,6 +33,14 @@ public class MuteToggleButton : MonoBehaviour
             muteToggle.onValueChanged.AddListener( ToggleMute );
         }
 
+
+        // NOTE: look out for if agoraManager disconnects. If it does, we'll have to redo everything
+        if( _initialized && agoraManager != null && !agoraManager.IsConnected() )
+        {
+            _initialized = false;
+            muteToggle.interactable = false;
+            muteToggle.onValueChanged.RemoveListener( ToggleMute );
+        }
 	}
 
 
