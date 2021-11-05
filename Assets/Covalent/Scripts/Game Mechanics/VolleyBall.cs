@@ -108,6 +108,9 @@ public class VolleyBall : MonoBehaviourPun
     [Tooltip("If an arc has over this amount remaining when hit, it's considered a \"spike\" and will play a louder sound.")]
     public float spikeSoundThreshold = 0.33f;
 
+    [Tooltip("You can use this to shake the ball around from VolleyballEffects")]
+    public Vector2 spriteOffset = Vector2.zero;
+
 
     [Header("Runtime (Network Replicated)")]
     public Vector2 lerpStart;
@@ -354,9 +357,9 @@ public class VolleyBall : MonoBehaviourPun
 
         // Move the ball sprite up and down, independent of shadow...
         ballSprite.transform.localPosition = new Vector2(
-                ballSprite.transform.localPosition.x,
+                0,
                 _ballSpriteYOriginal + zPos
-            );
+            ) + spriteOffset;
 
         // Move the ball's sorting offset
         _ballSpriteSorter.SorterPositionOffset.y = _ballSortingYOriginal - (zPos / _ballSpriteSorter.transform.localScale.y);
