@@ -15,7 +15,8 @@ public class PopupManager : MonoBehaviour
     public CanvasGroup[] fadeTheseForPopups;
     public float canvasGroupsFadeTime = 0.25f;
 
-
+    [Tooltip("This should be slid out when a new popup appears.")]
+    public SlidingUIPanel inventoryPanel;
 
     [Header("Runtime")]
     [Tooltip("Empty string means no popup")]
@@ -65,19 +66,30 @@ public class PopupManager : MonoBehaviour
             curPopupWindow = popup.GetComponent<PopupWindow>();
 
             // Show the BG raycaster
-            _closePanel.SetActive(true);
+            if( GetCurPopupType() != PopupWindow.Type.CanKeepPlaying )    // Unless they are supposed to be able to keep playing while this is popped up!
+                _closePanel.SetActive(true);
         }
 
+
+        // Slide out inventory panel in case it's currently shown
+        inventoryPanel.SlideAway();
 
         //Remember what panel we're on.
         curPopup = popup_name;
     }
 
 
+    PopupWindow.Type GetCurPopupType()
+    {
+        if( curPopupWindow == null )
+            return PopupWindow.Type.TapOuttable;
+        return curPopupWindow.type;
+    }
+
     public void OnTapBackground()
     {
         //Only close the popup if it's "tap outtable"
-        if( curPopupWindow != null && !curPopupWindow.tapOuttable )
+        if( GetCurPopupType() != PopupWindow.Type.TapOuttable )
             return;
         ShowPopup("");   // close current popup
     }
@@ -95,7 +107,7 @@ public class PopupManager : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if( curPopup != "" && _canvasGroupsFadeState > 0 )  // need to fade out canvas groups
+		if( GetCurPopupType() != PopupWindow.Type.CanKeepPlaying && curPopup != "" && _canvasGroupsFadeState > 0 )  // need to fade out canvas groups, unless it's "can keep playing"
         {
             _canvasGroupsFadeState = Mathf.Max(0, _canvasGroupsFadeState - Time.fixedDeltaTime / canvasGroupsFadeTime);
             foreach( var cg in fadeTheseForPopups )

@@ -15,16 +15,20 @@ public class EnableOtherObjectsWithMe : MonoBehaviour
 	private void OnEnable()
 	{
 		foreach( GameObject go in others )
-			go.SetActive(true);
+			if( go )
+				go.SetActive(true);
 		foreach( GameObject go in disableWithMe)
-			go.SetActive(false);
+			if( go )
+				go.SetActive(false);
 	}
 
 	private void OnDisable()
 	{
 		foreach( GameObject go in others )
-			go.SetActive(false);
+			if( go )
+				go.SetActive(false);
 		foreach( GameObject go in disableWithMe)
-			go.SetActive(true);
+			if( go )
+				go.SetActive(true);
 	}
 }
