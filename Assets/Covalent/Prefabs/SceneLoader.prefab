@@ -10037,7 +10037,7 @@ MonoBehaviour:
   contentView: {fileID: 1766604535757263638}
   emojiPrefab: {fileID: 8315084019494125044, guid: 31081c3e34e933245b8b2dcc75a678a7,
     type: 3}
-  sizeRatio: 0.24242425
+  sizeRatio: 0.1724138
   menuOpenColor: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 1}
   colorFadeDuration: 0.1
   showEmotes: 0
@@ -47701,7 +47701,7 @@ MonoBehaviour:
     m_Top: 40
     m_Bottom: 40
   m_ChildAlignment: 1
-  m_Spacing: 5
+  m_Spacing: -12
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
