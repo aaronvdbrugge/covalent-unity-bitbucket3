@@ -1380,8 +1380,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8039216, g: 0.8745098, b: 0.8745098, a: 0.76862746}
-        key1: {r: 0.9192825, g: 1, b: 1, a: 0.2509804}
+        key0: {r: 0.85126376, g: 0.9245283, b: 0.9245283, a: 1}
+        key1: {r: 0.43431824, g: 0.4716981, b: 0.4716981, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1557,7 +1557,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: b1b3f6b55a23a994b8b80ac8d3d675aa, type: 3}
+    - sprite: {fileID: 21300000, guid: a5edd46011bac04479557618bc6fa9e5, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -9890,6 +9890,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 3613425235786478884}
+  multiAudioSources: []
+  partyOnly: 0
+  triggeredByUid: -1
   minPitch: 0.75
   maxPitch: 1.5
+  changeVolume: 0
+  minVolume: 0.5
+  maxVolume: 0.5
   playOnAwake: 1
