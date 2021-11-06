@@ -68,7 +68,6 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 975b70c0ae64243acbde0f329a9bf33f, type: 3}
     - {fileID: 2800000, guid: 5cbc7cc6f005d42098034bcfc030ae15, type: 3}
     - {fileID: 2800000, guid: 9cd5f17ade7104b76b5fcde45b0ab0d2, type: 3}
-    - {fileID: 2800000, guid: 9ca4d6be8ab984ceda4d8a0bda6d5e66, type: 3}
     - {fileID: 2800000, guid: 2cdf14aa19b854fe19ac17ca28203811, type: 3}
     - {fileID: 2800000, guid: 397bd286aa4034f1d82081fe17bebd4c, type: 3}
     - {fileID: 2800000, guid: aaaa962d7b3954743959e2c5b520a1ad, type: 3}
@@ -117,7 +116,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a095109cc902049f48b5810fb44eedc2, type: 3}
   - {fileID: 21300000, guid: aaaa962d7b3954743959e2c5b520a1ad, type: 3}
   - {fileID: 21300000, guid: 71f34d2d394d84ca99d7004b2c275a57, type: 3}
-  - {fileID: 21300000, guid: 9ca4d6be8ab984ceda4d8a0bda6d5e66, type: 3}
   - {fileID: 21300000, guid: 744d930f5780645e2b601a659c5bc974, type: 3}
   m_PackedSpriteNamesToIndex:
   - crabBuried1@3x
@@ -147,7 +145,6 @@ SpriteAtlas:
   - bucketIndigo@3x
   - lifeGuard@3x
   - seashells2@3x
-  - fishHouse@3x
   - seashells1@3x
   m_RenderDataMap: {}
   m_Tag: 1_Beach

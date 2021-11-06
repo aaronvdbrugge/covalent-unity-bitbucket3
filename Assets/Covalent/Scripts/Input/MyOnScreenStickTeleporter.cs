@@ -11,9 +11,10 @@ public class MyOnScreenStickTeleporter : MonoBehaviour
 {
     public MyOnScreenStick myOnScreenStick;
 
+    [Tooltip("Stick default position when the touch isn't held")]
+    public RectTransform returnPoint;
 
 
-    Vector2 _myOnScreenStickLocalPosOriginal;
 
     /// <summary>
     /// When OnMytouchDown is called, we have to keep track of the
@@ -23,13 +24,11 @@ public class MyOnScreenStickTeleporter : MonoBehaviour
     MyTouch _myTouch;
 
 
+
 	private void Start()
 	{
-		_myOnScreenStickLocalPosOriginal = myOnScreenStick.transform.localPosition;
+		myOnScreenStick.transform.position= returnPoint.transform.position;   // Reset joystick back to center.
 	}
-
-
-
 
 	public void OnMyTouchDown( MyTouch my_touch )
     {
@@ -49,7 +48,7 @@ public class MyOnScreenStickTeleporter : MonoBehaviour
             if( _myTouch.touch.phase == TouchPhase.Canceled || _myTouch.touch.phase == TouchPhase.Ended )
             {
                 _myTouch = null;   // don't need it anymore
-                myOnScreenStick.transform.localPosition = _myOnScreenStickLocalPosOriginal;   // Reset joystick back to center.
+                myOnScreenStick.transform.position= returnPoint.transform.position;   // Reset joystick back to center.
             }
 	}
 
