@@ -197,7 +197,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -209,12 +209,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 0
-    crunchedCompression: 1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -233,12 +233,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 0
-    crunchedCompression: 1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -248,8 +248,8 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -263,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 400
-        y: 1288
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -284,7 +284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 800
-        y: 1288
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -305,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1200
-        y: 1288
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -326,7 +326,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1600
-        y: 1288
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -347,7 +347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 1288
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -367,8 +367,8 @@ TextureImporter:
       name: wind roses_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1104
+        x: 2400
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -388,8 +388,8 @@ TextureImporter:
       name: wind roses_6
       rect:
         serializedVersion: 2
-        x: 400
-        y: 1104
+        x: 2800
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -409,8 +409,8 @@ TextureImporter:
       name: wind roses_7
       rect:
         serializedVersion: 2
-        x: 800
-        y: 1104
+        x: 3200
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -430,8 +430,8 @@ TextureImporter:
       name: wind roses_8
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 1104
+        x: 3600
+        y: 736
         width: 400
         height: 184
       alignment: 0
@@ -451,8 +451,8 @@ TextureImporter:
       name: wind roses_9
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 1104
+        x: 0
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -472,8 +472,8 @@ TextureImporter:
       name: wind roses_10
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1104
+        x: 400
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -493,8 +493,8 @@ TextureImporter:
       name: wind roses_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 920
+        x: 800
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -514,8 +514,8 @@ TextureImporter:
       name: wind roses_12
       rect:
         serializedVersion: 2
-        x: 400
-        y: 920
+        x: 1200
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -535,8 +535,8 @@ TextureImporter:
       name: wind roses_13
       rect:
         serializedVersion: 2
-        x: 800
-        y: 920
+        x: 1600
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -556,8 +556,8 @@ TextureImporter:
       name: wind roses_14
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 920
+        x: 2000
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -577,8 +577,8 @@ TextureImporter:
       name: wind roses_15
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 920
+        x: 2400
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -598,8 +598,8 @@ TextureImporter:
       name: wind roses_16
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 920
+        x: 2800
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -619,8 +619,8 @@ TextureImporter:
       name: wind roses_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 736
+        x: 3200
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -640,8 +640,8 @@ TextureImporter:
       name: wind roses_18
       rect:
         serializedVersion: 2
-        x: 400
-        y: 736
+        x: 3600
+        y: 552
         width: 400
         height: 184
       alignment: 0
@@ -661,8 +661,8 @@ TextureImporter:
       name: wind roses_19
       rect:
         serializedVersion: 2
-        x: 800
-        y: 736
+        x: 0
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -682,8 +682,8 @@ TextureImporter:
       name: wind roses_20
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 736
+        x: 400
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -703,8 +703,8 @@ TextureImporter:
       name: wind roses_21
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 736
+        x: 800
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -724,8 +724,8 @@ TextureImporter:
       name: wind roses_22
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 736
+        x: 1200
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -745,8 +745,8 @@ TextureImporter:
       name: wind roses_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 552
+        x: 1600
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -766,8 +766,8 @@ TextureImporter:
       name: wind roses_24
       rect:
         serializedVersion: 2
-        x: 400
-        y: 552
+        x: 2000
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -787,8 +787,8 @@ TextureImporter:
       name: wind roses_25
       rect:
         serializedVersion: 2
-        x: 800
-        y: 552
+        x: 2400
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -808,8 +808,8 @@ TextureImporter:
       name: wind roses_26
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 552
+        x: 2800
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -829,8 +829,8 @@ TextureImporter:
       name: wind roses_27
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 552
+        x: 3200
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -850,8 +850,8 @@ TextureImporter:
       name: wind roses_28
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 552
+        x: 3600
+        y: 368
         width: 400
         height: 184
       alignment: 0
@@ -872,7 +872,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -893,7 +893,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 400
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -914,7 +914,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 800
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -935,7 +935,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1200
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -956,7 +956,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1600
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -977,7 +977,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 368
+        y: 184
         width: 400
         height: 184
       alignment: 0
@@ -997,7 +997,7 @@ TextureImporter:
       name: wind roses_35
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2400
         y: 184
         width: 400
         height: 184
@@ -1018,7 +1018,7 @@ TextureImporter:
       name: wind roses_36
       rect:
         serializedVersion: 2
-        x: 400
+        x: 2800
         y: 184
         width: 400
         height: 184
@@ -1039,7 +1039,7 @@ TextureImporter:
       name: wind roses_37
       rect:
         serializedVersion: 2
-        x: 800
+        x: 3200
         y: 184
         width: 400
         height: 184
@@ -1060,7 +1060,7 @@ TextureImporter:
       name: wind roses_38
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 3600
         y: 184
         width: 400
         height: 184
@@ -1081,8 +1081,8 @@ TextureImporter:
       name: wind roses_39
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 184
+        x: 0
+        y: 0
         width: 400
         height: 184
       alignment: 0
@@ -1102,8 +1102,8 @@ TextureImporter:
       name: wind roses_40
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 184
+        x: 400
+        y: 0
         width: 400
         height: 184
       alignment: 0
@@ -1123,7 +1123,7 @@ TextureImporter:
       name: wind roses_41
       rect:
         serializedVersion: 2
-        x: 0
+        x: 800
         y: 0
         width: 400
         height: 184
@@ -1144,7 +1144,7 @@ TextureImporter:
       name: wind roses_42
       rect:
         serializedVersion: 2
-        x: 400
+        x: 1200
         y: 0
         width: 400
         height: 184
@@ -1165,7 +1165,7 @@ TextureImporter:
       name: wind roses_43
       rect:
         serializedVersion: 2
-        x: 800
+        x: 1600
         y: 0
         width: 400
         height: 184
