@@ -714,7 +714,11 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
 	private void FixedUpdate()
 	{
-		if( _reconnecting && !_disconnectedDueToInactivity && !teamRoomJoin.isWaitingForFriend )   // We've been disconnected, but try to reconnect
+        // We've been disconnected, but try to reconnect.  
+        // If we're the secondary player waiting for the "friend" primary player to join a room (teamRoomJoin.isWaitingForFriend), we 
+        // DON'T want this logic, as we just want to let TeamRoomJoin poll FindFriends until primary player has joined a room, and then
+        // it does the join room itself.
+		if( _reconnecting && !_disconnectedDueToInactivity && !teamRoomJoin.isWaitingForFriend )   
         {
             _reconnectTimer += Time.fixedDeltaTime;
             if( _reconnectTimer >= reconnectTime )   // We reached the end of our reconnect period, and no luck... show "disconnected" and give up
