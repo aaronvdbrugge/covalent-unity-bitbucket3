@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5787651388004281438}
-  m_LocalRotation: {x: -0.34743842, y: 0.61586237, z: -0.61586255, w: 0.34743842}
+  m_LocalRotation: {x: -0.34743848, y: 0.6158624, z: -0.6158624, w: 0.34743848}
   m_LocalPosition: {x: 0.935, y: -1.019, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -114,9 +114,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 2
-      minScalar: 5
+      minScalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1000,11 +1000,20 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.11148319
         - serializedVersion: 3
-          time: 1
+          time: 0.676854
           value: 1
-          inSlope: 0.00000054271493
-          outSlope: 0.00000054271493
+          inSlope: 0.009801899
+          outSlope: 0.009801899
           tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.0945766
+          outSlope: 0.00000054271493
+          tangentMode: 5
           weightedMode: 0
           inWeight: 0.12174412
           outWeight: 0.33333334
@@ -1313,8 +1322,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.5019608}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1322,7 +1331,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
+        ctime1: 64957
         ctime2: 0
         ctime3: 0
         ctime4: 0
@@ -1490,7 +1499,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: b1b3f6b55a23a994b8b80ac8d3d675aa, type: 3}
+    - sprite: {fileID: 21300000, guid: a5edd46011bac04479557618bc6fa9e5, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
