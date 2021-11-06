@@ -37,12 +37,16 @@ public class Emoji_Manager : MonoBehaviour
     [Tooltip("Tint the icon when the menu is open.")]
     public Color menuOpenColor;
 
+    [Tooltip("For the icon tint")]
+    public float colorFadeDuration = 0.1f;
+
     [Header("Runtime")]
     public bool showEmotes;
 
 
 
     Color _iconColorOriginal;  // iconSprite.color in Start
+    float _colorFadeProgress=0;   // 1.0f = fully menuOpenColor
 
 	private void Awake()
 	{
@@ -55,21 +59,21 @@ public class Emoji_Manager : MonoBehaviour
         _iconColorOriginal = iconSprite.color;
 
         showEmotes = true;
-        toggleMenu();  // will toggle it back to false, and setup UI
+        ToggleMenu();  // will toggle it back to false, and setup UI
 
         // Create a prefab for each emoji.
         foreach( var setting in emojiSettings.emojis )
         {
             GameObject go = Instantiate( emojiPrefab, contentView );
             go.GetComponent<Image>().sprite = setting.sprite;
-            go.GetComponent<Button>().onClick.AddListener( delegate{ showEmote(setting.sprite); } );    // will call back showEmote with its corresponding index.
+            go.GetComponent<Button>().onClick.AddListener( delegate{ ShowEmote(setting.sprite); } );    // will call back showEmote with its corresponding index.
             go.GetComponent<RectTransform>().sizeDelta = new Vector2( setting.sprite.rect.width * sizeRatio, setting.sprite.rect.height * sizeRatio );
         }
 
 
     }
 
-    public void toggleMenu()
+    public void ToggleMenu()
     {
         showEmotes = !showEmotes;
 
@@ -78,9 +82,9 @@ public class Emoji_Manager : MonoBehaviour
         iconSprite.color = showEmotes ? menuOpenColor : _iconColorOriginal;
     }
      
-    public void showEmote(Sprite sprite)  // called from buttons
+    public void ShowEmote(Sprite sprite)  // called from buttons
     {
-        toggleMenu();
+        ToggleMenu();
 
         // We can just use sprite to find the slot...
         int i;
@@ -91,4 +95,14 @@ public class Emoji_Manager : MonoBehaviour
         Player_Controller_Mobile.mine.playerEmotes.showEmote(i);
     }
 
+	private void Update()
+	{
+        //Move _colorFadeProgress one way or another...
+		if( showEmotes )
+            _colorFadeProgress = Mathf.Min(1.0f, _colorFadeProgress + Time.deltaTime / colorFadeDuration );
+        else
+            _colorFadeProgress = Mathf.Max(0.0f, _colorFadeProgress - Time.deltaTime / colorFadeDuration);
+
+        iconSprite.color = Color.Lerp(_iconColorOriginal, menuOpenColor, _colorFadeProgress);
+	}
 }
