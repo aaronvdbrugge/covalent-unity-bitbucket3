@@ -34,7 +34,7 @@ public class MyOnScreenStick : MonoBehaviour
     [Tooltip("Just a pointer to the UI camera we're displayed by... need it for calculations. I think you can leave it null for overlay")]
     public Camera uiCamera;
 
-    [Tooltip("If we get a touch on our edge, that was actually outside the circle, forward it to this object.")]
+    [Tooltip("If we get a touch on our edge, that was actually outside the circle, forward it to this object. Can be null")]
     public GameObject forwardEdgeClicks;
 
 
