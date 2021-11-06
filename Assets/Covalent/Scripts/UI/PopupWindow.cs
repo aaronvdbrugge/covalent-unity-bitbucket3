@@ -9,5 +9,25 @@ using UnityEngine;
 /// </summary>
 public class PopupWindow : MonoBehaviour
 {
-    public bool tapOuttable = true;
+    public enum Type
+    {
+        /// <summary>
+        /// Tapping on background closes the popup
+        /// </summary>
+        TapOuttable,   
+
+        /// <summary>
+        /// Cannot close popup by tapping on background. 
+        /// Must use other means
+        /// </summary>
+        NonTapOuttable,
+
+        /// <summary>
+        /// Will continue to show controls, and will
+        /// not show the invisible tap background
+        /// </summary>
+        CanKeepPlaying
+    }
+
+    public Type type = Type.TapOuttable;
 }

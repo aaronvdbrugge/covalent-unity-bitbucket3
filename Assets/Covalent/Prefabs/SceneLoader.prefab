@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &419698598929737064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,6 +6727,7 @@ MonoBehaviour:
   - {fileID: 1519566762481045242}
   - {fileID: 5375058460596891093}
   canvasGroupsFadeTime: 0.25
+  inventoryPanel: {fileID: 3140883316318473724}
   curPopup: 
   curPopupWindow: {fileID: 0}
 --- !u!114 &3164858549772212944
@@ -7817,7 +7818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &1421116703300149147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10565,7 +10566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &1740702690466675093
 GameObject:
   m_ObjectHideFlags: 0
@@ -11025,7 +11026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &1826006657704091626
 GameObject:
   m_ObjectHideFlags: 0
@@ -11977,7 +11978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -27961,7 +27962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -34712,7 +34713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &4882680542486744037
 GameObject:
   m_ObjectHideFlags: 0
@@ -46254,7 +46255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &6064986062595602564
 GameObject:
   m_ObjectHideFlags: 0
@@ -47960,7 +47961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &7488054124515529053
 GameObject:
   m_ObjectHideFlags: 0
@@ -48984,7 +48985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 1
 --- !u!1 &7996983325128166245
 GameObject:
   m_ObjectHideFlags: 0
@@ -49426,7 +49427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7208855773549987221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49514,7 +49515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 2
 --- !u!1 &8306207535326636602
 GameObject:
   m_ObjectHideFlags: 0
