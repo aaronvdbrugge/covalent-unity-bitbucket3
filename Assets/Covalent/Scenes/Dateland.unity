@@ -14345,13 +14345,13 @@ MonoBehaviour:
   audioSource: {fileID: 187121297}
   multiAudioSources: []
   partyOnly: 1
-  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
   minVolume: 0.5
   maxVolume: 0.5
   playOnAwake: 0
+  triggeredByUid: -1
 --- !u!114 &187121296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47050,13 +47050,13 @@ MonoBehaviour:
   audioSource: {fileID: 934145521}
   multiAudioSources: []
   partyOnly: 1
-  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
   minVolume: 0.5
   maxVolume: 0.5
   playOnAwake: 0
+  triggeredByUid: -1
 --- !u!1001 &934602941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51430,13 +51430,13 @@ MonoBehaviour:
   audioSource: {fileID: 1036446282}
   multiAudioSources: []
   partyOnly: 1
-  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
   minVolume: 0.5
   maxVolume: 0.5
   playOnAwake: 0
+  triggeredByUid: -1
 --- !u!1001 &1036962147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81651,13 +81651,13 @@ MonoBehaviour:
   audioSource: {fileID: 1671017231}
   multiAudioSources: []
   partyOnly: 1
-  triggeredByUid: -1
   minPitch: 1
   maxPitch: 1
   changeVolume: 0
   minVolume: 0.5
   maxVolume: 0.5
   playOnAwake: 0
+  triggeredByUid: -1
 --- !u!1001 &1673514061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84521,13 +84521,13 @@ MonoBehaviour:
   - {fileID: 728343935}
   - {fileID: 42350703}
   partyOnly: 1
-  triggeredByUid: -1
   minPitch: 0.75
   maxPitch: 1.3333334
   changeVolume: 1
   minVolume: 0.5
   maxVolume: 0.9
   playOnAwake: 0
+  triggeredByUid: -1
 --- !u!1001 &1740713511
 PrefabInstance:
   m_ObjectHideFlags: 0
