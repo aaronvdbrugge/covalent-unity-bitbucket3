@@ -211,7 +211,7 @@ public class Agora_Manager : MonoBehaviour
             //Debug.Log("OnAudioPublishStateChanged: " + channel + " : " + oldState + " : " + newState + " : " + elapseSinceLastState);
             if( newState == STREAM_PUBLISH_STATE.PUB_STATE_PUBLISHING )
             {
-                isMuted = false;
+                isMuted = false;   // Only update this value here (not in OnUserMutedAudio) because this is where OUR user mutes/unmutes. OnUserMutedAudio is for other users.
                 playerDidUnmute( myUid );
             }
             else if( newState == STREAM_PUBLISH_STATE.PUB_STATE_NO_PUBLISHED )
@@ -221,24 +221,18 @@ public class Agora_Manager : MonoBehaviour
             }
         };
 
-
+        
         // This is the function that gets called when a REMOTE user changes mute state (but not this user)
         // NOTE: This is marked as "deprecated" in the Agora docs, but the function they recommend to replace it,
         // OnAudioDeviceStateChanged, doesn't seem to work for muting.
-        // OnAudioPublishStateChanged doesn't seem to work either... so as far as I know, we're stuck using this "deprecated" function.
+        // OnAudioPublishStateChanged doesn't seem to work for other users... so as far as I know, we're stuck using this "deprecated" function.
         mRtcEngine.OnUserMutedAudio += (uint uid, bool muted) =>
         {
             //Debug.Log("OnUserMutedAudio: " + uid + " : " + muted );
             if( muted )
-            {
-                isMuted = true;
                 playerDidMute( uid );
-            }
             else
-            {
-                isMuted = false;
                 playerDidUnmute( uid );
-            }
         };
 
 
