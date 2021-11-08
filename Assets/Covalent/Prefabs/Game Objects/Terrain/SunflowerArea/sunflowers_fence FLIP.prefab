@@ -102,6 +102,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: sunflowers_fence FLIP
       objectReference: {fileID: 0}
+    - target: {fileID: 6777003747891775365, guid: aef4cd7df38415f43b64fd94b7333b5b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777003747891775365, guid: aef4cd7df38415f43b64fd94b7333b5b,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -2.380662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777003747891775365, guid: aef4cd7df38415f43b64fd94b7333b5b,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.04742122
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777003747891775365, guid: aef4cd7df38415f43b64fd94b7333b5b,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: 0.03816422
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777003747891775365, guid: aef4cd7df38415f43b64fd94b7333b5b,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -2.306508
+      objectReference: {fileID: 0}
     - target: {fileID: 7489813583032551496, guid: aef4cd7df38415f43b64fd94b7333b5b,
         type: 3}
       propertyPath: m_FlipX
