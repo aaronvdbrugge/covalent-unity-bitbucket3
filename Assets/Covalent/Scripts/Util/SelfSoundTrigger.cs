@@ -18,12 +18,6 @@ public class SelfSoundTrigger : MonoBehaviour
     [Tooltip("Only people in our party (usually us and our partner) can hear this!")]
     public bool partyOnly = false;
 
-    [Header("Runtime")]
-    [Tooltip("Another script will have to set this when triggered, if we're using partyOnly.")]
-    public int triggeredByUid = -1;
-
-
-
     public float minPitch = 1.0f;
     public float maxPitch = 1.0f;
 
@@ -33,6 +27,15 @@ public class SelfSoundTrigger : MonoBehaviour
 
     [Tooltip("If this is true, we're probably just using this to randomize pitch")]
     public bool playOnAwake = false;
+
+
+
+    [Header("Runtime")]
+    [Tooltip("Another script will have to set this when triggered, if we're using partyOnly.")]
+    public int triggeredByUid = -1;
+
+
+
 
 
     Camera_Sound _cameraSound;

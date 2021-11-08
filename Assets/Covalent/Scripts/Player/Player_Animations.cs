@@ -19,7 +19,10 @@ public class Player_Animations : MonoBehaviour
 
     public Animator anim;
 
-    public SpriteRenderer splash_feet;
+
+    [Tooltip("Enable / disable the splash feet animator / renderer instead of the whole object, this will allow lingering sounds to finish")]
+    public SpriteRenderer splashFeetRenderer;
+    public Animator splashFeetAnimator;
 
     [Tooltip("A transform that you don't want to be flipped horizontally (will counter-flip to undo the flip)")]
     public Transform dontFlip;
@@ -45,8 +48,13 @@ public class Player_Animations : MonoBehaviour
     public bool skating{get; private set; }
 
 
+	private void Start()
+	{
+		splashFeetAnimator.SendMessage("SetTriggeredByUid", Dateland_Network.playerFromJson.user.id );  // Set the "splash feet" to come from our own ID, needed because its sounds play only for the party.
+	}
 
-    bool _hidShadow = false;
+
+	bool _hidShadow = false;
 	private void Update()
 	{
         if( !_hidShadow ) // NOTE: putting this in Start() is too soon apparently
@@ -54,11 +62,20 @@ public class Player_Animations : MonoBehaviour
 
         // Decide whether we should splash
         if (playerCollisions.onBeach && playerMovement.IsWalking() )
-            splash_feet.enabled = true;
+        {
+            splashFeetRenderer.enabled = true;
+            splashFeetAnimator.enabled = true;
+        }
         else if (playerCollisions.onBeach && !playerMovement.IsWalking() )
-            splash_feet.enabled = false;
-        else if (!playerCollisions.onBeach && splash_feet.enabled)
-            splash_feet.enabled = false;
+        {
+            splashFeetRenderer.enabled = false;
+            splashFeetAnimator.enabled = false;
+        }
+        else if (!playerCollisions.onBeach && splashFeetRenderer.enabled)
+        {
+            splashFeetRenderer.enabled = false;
+            splashFeetAnimator.enabled = false;
+        }
 
 
         
