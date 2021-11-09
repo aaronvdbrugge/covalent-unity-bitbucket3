@@ -109211,11 +109211,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: penguin toy
       objectReference: {fileID: 0}
-    - target: {fileID: 2976278172589319929, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2976278172589319931, guid: b6296ffd5f5fd2446a36d2c813afb6a5,
         type: 3}
       propertyPath: m_RootOrder

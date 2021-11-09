@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8852383593117126479}
   - component: {fileID: 2976278172589319930}
   - component: {fileID: 632653848}
+  - component: {fileID: 170073670}
   m_Layer: 14
   m_Name: penguin toy
   m_TagString: Untagged
@@ -274,3 +275,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.52}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &170073670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976278172589319924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddc54498bf48344d9741c54b09638c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedLimit: 50
+  testLimit: 0
