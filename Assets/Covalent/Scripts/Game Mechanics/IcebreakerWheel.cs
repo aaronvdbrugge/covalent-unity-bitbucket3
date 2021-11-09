@@ -36,8 +36,9 @@ public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
 
 
     [Header("Settings")]
-    [Tooltip("List of question texts that can be asked.")]
-    public string[] icebreakerQuestions;
+    [Tooltip("List of question texts that can be asked, separated by newline.")]
+    public TextAsset icebreakerQuestions;
+
 
     [Tooltip("Footpad takes this long to fade on or off.")]
     public float footpadFadeTime = 1.0f;
@@ -87,6 +88,33 @@ public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
     int activeIcebreakerQuestionLastSerialized = -1;  // when != activeIcebreakerQuestion, we know we need to send a network update
     int activeIcebreakerQuestionOld = -1;   // Used to detect changes to the value and react to them regardless of who owns us.
     
+    string[] _icebreakerQuestions;   // Parsed version of iceBreakerQuestions, set in Start()
+
+    int _lastQuestionIndex = -1;    // Prevents same question twice in a row
+
+
+
+    void Start()
+    {
+        // Clean up line endings
+        string questions_clean = icebreakerQuestions.text.Replace("\r\n", "\n");
+        questions_clean = questions_clean.Replace("\r", "\n");
+
+        // Tokenize
+        _icebreakerQuestions = questions_clean.Split('\n');
+
+        //Trim each entry
+        for( int i=0; i<_icebreakerQuestions.Length; i++)
+            _icebreakerQuestions[i] = _icebreakerQuestions[i].Trim();
+
+        // Final step to making sure this list is "clean..."
+        // Look for any empty entries and remove them
+        List<string> final_list = new List<string>();
+        foreach( string s in _icebreakerQuestions )
+            if( !string.IsNullOrEmpty(s) )
+                final_list.Add(s);
+        _icebreakerQuestions = final_list.ToArray();
+    }
 
 
     void FixedUpdate()
@@ -109,7 +137,16 @@ public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
 
 
         if( Dateland_Network.initialized && photonView.IsMine && questionCooldown <= 0 && footpad1Pressed && footpad2Pressed )   // Conditions are met to launch a new question!  Only photon owner can determine this value, the rest must replicate it.
-            activeIcebreakerQuestion = Random.Range( 0, icebreakerQuestions.Length );   // pick a random question out of our array
+        {
+            // Try 10 times to randomize a value that is different from _lastQuestionIndex (prevents same question twice in a row)
+            for(int i=0; i<10; i++)
+            {
+                activeIcebreakerQuestion = Random.Range( 0, _icebreakerQuestions.Length );
+                if( activeIcebreakerQuestion != _lastQuestionIndex )
+                    break;
+            }
+            _lastQuestionIndex = activeIcebreakerQuestion;
+        }
         
 
 
@@ -124,7 +161,7 @@ public class IcebreakerWheel : MonoBehaviourPun, IPunObservable
                 Camera.main.GetComponent<Camera_Sound>().PlaySoundAtPosition( "wheel_combined", transform.position );
 
                 // Activate icebreaker question!
-                dialogBoxText.text = icebreakerQuestions[ activeIcebreakerQuestion ];
+                dialogBoxText.text = _icebreakerQuestions[ activeIcebreakerQuestion ];
 
                 // Set up wheel animation, and dialog box timer.  These are handled in Update
                 animator.SetTrigger("spin");

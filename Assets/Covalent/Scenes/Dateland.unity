@@ -110957,16 +110957,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 200459473}
     m_Modifications:
-    - target: {fileID: 133097445, guid: 14fedf62cb634b947ba356bf97018782, type: 3}
-      propertyPath: m_text
-      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      objectReference: {fileID: 0}
-    - target: {fileID: 133097445, guid: 14fedf62cb634b947ba356bf97018782, type: 3}
-      propertyPath: m_fontSize
-      value: 11.85
-      objectReference: {fileID: 0}
     - target: {fileID: 1298516252, guid: 14fedf62cb634b947ba356bf97018782, type: 3}
       propertyPath: sceneViewId
       value: 2
