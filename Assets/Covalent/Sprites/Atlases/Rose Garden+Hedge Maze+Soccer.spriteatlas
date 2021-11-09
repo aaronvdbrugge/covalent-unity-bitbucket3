@@ -57,8 +57,6 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: fde7669dddb49482b8c367464f222813, type: 3}
-    - {fileID: 2800000, guid: b13428e37a52b4b6a835519fd126d4ea, type: 3}
-    - {fileID: 2800000, guid: e5db05c3a448c462cad35388f48ab4d7, type: 3}
     - {fileID: 2800000, guid: c5925b19a26fc4791b3ef625e0f055d8, type: 3}
     - {fileID: 2800000, guid: ca4cd6e641e214adeb5fc02f6e2fbb59, type: 3}
     - {fileID: -1328622910798985702, guid: 22bcf7a43532842d5986a413d278a13e, type: 3}
@@ -108,8 +106,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0e484953d87e341f19c928cd8d88a8f6, type: 3}
   - {fileID: 21300000, guid: a0e0c9539c1393249b761c7d4fb8b3a7, type: 3}
   - {fileID: 21300000, guid: b2ed84735a062224495d4e34714a7145, type: 3}
-  - {fileID: 21300000, guid: e5db05c3a448c462cad35388f48ab4d7, type: 3}
-  - {fileID: 21300000, guid: b13428e37a52b4b6a835519fd126d4ea, type: 3}
   - {fileID: 21300000, guid: 0e85caf397a774c4797c0eee9f1c5ccb, type: 3}
   - {fileID: 21300000, guid: af74289418ca2c344a215f909b382d3d, type: 3}
   - {fileID: -1328622910798985702, guid: 22bcf7a43532842d5986a413d278a13e, type: 3}
@@ -230,8 +226,6 @@ SpriteAtlas:
   - tulip_top1@3x
   - lower net bottom
   - scructure 2
-  - arbor_bottomRight@3x
-  - arbor_bottomLeft@3x
   - upper net side a
   - bush fence in front
   - topiary bronto_0

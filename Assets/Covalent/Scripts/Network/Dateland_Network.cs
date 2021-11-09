@@ -254,7 +254,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         Debug.Log(errorInfo.Info);
     }
 
-    public void joinRoom(string name)
+    public void joinRoom()
     {
         PhotonNetwork.SendRate = 30;  //10;
 
@@ -302,10 +302,6 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     }
 
 
-	public string GetRoomName()
-	{
-        return sandboxRoomName;
-    }
 
 
 
@@ -313,7 +309,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         if (needsToJoinRoom)
-            joinRoom(GetRoomName());   // use name of the current scene to determine room.
+            joinRoom();   // use name of the current scene to determine room.
         else
             failureToConnect("Failed to connect to Photon Server");
     }
