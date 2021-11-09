@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 0
 --- !u!114 &696497812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agoraManagerPrefab: {fileID: 4516765667138941106, guid: 2f6cd50025b97ef49bfd1f229597222f,
     type: 3}
-  sandboxChatRoom: SANDBOX2
+  sandboxChatRoom: BUILD4
 --- !u!1 &1975783113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9be65f155bb43d48986eb585db1cc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapOuttable: 0
+  type: 0
 --- !u!114 &2095790404
 MonoBehaviour:
   m_ObjectHideFlags: 0
