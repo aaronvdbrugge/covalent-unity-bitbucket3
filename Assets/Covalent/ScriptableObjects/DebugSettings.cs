@@ -11,6 +11,12 @@ public class DebugSettings: ScriptableObject
 	public enum BuildMode
 	{
 		Release,
+
+		/// <summary>
+		/// In this mode, we hide all debug interface, and behave as if we are in Release, EXCEPT
+		/// for enabling SRDebugger, so we can trace exceptions.
+		/// </summary>
+		SRDebuggerOnly,  
 		Debug
 	}
 

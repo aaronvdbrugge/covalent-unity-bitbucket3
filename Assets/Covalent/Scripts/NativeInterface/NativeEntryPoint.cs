@@ -155,7 +155,7 @@ public class NativeEntryPoint : MonoBehaviour
     /// <param name="json_string"></param>
     public void enterArcadeSandbox(string json_string)
     {
-        if( debugSettings.mode == DebugSettings.BuildMode.Release )
+        if( debugSettings.mode != DebugSettings.BuildMode.Debug )
             Debug.LogWarning("Called enterArcadeSandbox in Release mode. This is allowed, for inviting people to beta test... just be careful!");
 
         Debug.Log("FROM NATIVE: enterArcadeSandbox(" + json_string.Substring(0, 100) + "...)");
@@ -204,7 +204,7 @@ public class NativeEntryPoint : MonoBehaviour
     /// <summary>
     /// Does a test enterArcadeSandbox call through inspector, using spoof data
     /// </summary>
-    [ContextMenu("Test Enter Arcade As Pair")]
+    [ContextMenu("Test Enter Arcade Sandbox")]
     public void TestEnterArcadeSandbox()
     {
         enterArcadeSandbox( spoofJson.text );

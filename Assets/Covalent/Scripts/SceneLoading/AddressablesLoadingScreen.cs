@@ -179,7 +179,7 @@ public class AddressablesLoadingScreen : MonoBehaviour
         // Not simulating. Wait for initialDelay, then call LoadScene
         else if( !string.IsNullOrEmpty(sceneToLoad.AssetGUID) && !_startedLoad)
         {
-            if( Dateland_Network.realUserJson != null || (maxWaitForCreatePlayer <= 0 && !comingFromDateland && debugSettings.mode != DebugSettings.BuildMode.Release))   // We must receive the createPlayer call before we start loading... or just wait for maxWaitForCreatePlayer
+            if( Dateland_Network.realUserJson != null || (maxWaitForCreatePlayer <= 0 && !comingFromDateland && debugSettings.mode == DebugSettings.BuildMode.Debug))   // We must receive the createPlayer call before we start loading... or just wait for maxWaitForCreatePlayer
             {
                 if( string.IsNullOrEmpty(Dateland_Network.realUserJson) )   // Set up the spoofed user JSON, this is important to get Agora started among other things
                 {
