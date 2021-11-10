@@ -268,7 +268,12 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 teamRoomJoin.StartJoin();  // Starts the process of real matchmaking.
             else  // START SANDBOX ROOM
             {
-                PhotonNetwork.JoinOrCreateRoom( sandboxRoomName, teamRoomJoin.GetRoomOptions(), TypedLobby.Default );   // note that teamRoomJoin should check NativeEntryPoint.sandboxMode and give appropriate room options
+                // Join designated sandbox room
+                //PhotonNetwork.JoinOrCreateRoom( sandboxRoomName, teamRoomJoin.GetRoomOptions(), TypedLobby.Default );   // note that teamRoomJoin should check NativeEntryPoint.sandboxMode and give appropriate room options
+
+                // NEW: Sandbox mode players are tossed in with real players.
+                // Note that we have to respond to OnJoinRandomFailed in case there was no room available.
+                teamRoomJoin.StartJoinSandbox();
             }
         }
         else
@@ -279,6 +284,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         
         needsToJoinRoom = false;
     }
+
+
 
 
     /// <summary>

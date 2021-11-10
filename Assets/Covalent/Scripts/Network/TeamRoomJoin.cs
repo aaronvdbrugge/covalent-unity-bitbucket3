@@ -78,6 +78,16 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 		}
 	}
 
+	/// <summary>
+	/// Now, we're tossing sandbox players in with the real ones. 
+	/// </summary>
+	public void StartJoinSandbox()
+	{
+		Debug.Log("Attempting random room join in Sandbox mode...");
+        PhotonNetwork.JoinRandomRoom(null, 0, MatchmakingMode.FillRoom, null, null, null ); 
+	}
+
+
 
 	/// <summary>
 	/// Should come from Photon once we get a friends update.
@@ -116,7 +126,9 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 		roomOptions.BroadcastPropsChangeToAll = true;
 		roomOptions.MaxPlayers = GetMaxPlayers();   // honors sandbox mode
 		roomOptions.PublishUserId = true;   // broadcasts player Kippo IDs to everyone, should be accessible via Player.UserId
-		roomOptions.IsVisible = !NativeEntryPoint.sandboxMode;  // disallow random matchmaking in sandbox mode
+		//roomOptions.IsVisible = !NativeEntryPoint.sandboxMode;  // disallow random matchmaking in sandbox mode
+		roomOptions.IsVisible = true;   // NEW: sandbox mode players are tossed in with real players!
+
 
 		return roomOptions;
 	}
@@ -124,11 +136,19 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 
 	public override void OnJoinRandomFailed (short returnCode, string message)
 	{
-		// Only primary players get here.
-		Debug.Log("JoinRandomFailed( " + returnCode  + ", " + message + " ). Creating room");
+        if( !NativeEntryPoint.sandboxMode )  // Non sandbox mode: we are the primary player, and secondary player is waiting for us
+		{
+			// Only primary players get here.
+			Debug.Log("JoinRandomFailed( " + returnCode  + ", " + message + " ). Creating room");
 
-		// Most likely reason is there are no rooms with two available slots.
-		PhotonNetwork.CreateRoom( null, GetRoomOptions(), TypedLobby.Default, new string[]{myId, matchId}  );   // Create a new room with two reserved slots.
+			// Most likely reason is there are no rooms with two available slots.
+			PhotonNetwork.CreateRoom( null, GetRoomOptions(), TypedLobby.Default, new string[]{myId, matchId}  );   // Create a new room with two reserved slots.
+		}
+		else // Sandbox mode. We can still join real servers, but we don't have matches
+		{
+		    Debug.Log("JoinRandomFailed( " + returnCode  + ", " + message + " ) in sandbox mode. Creating room");
+		    PhotonNetwork.CreateRoom( null, GetRoomOptions(), TypedLobby.Default, null  ); 
+		}
 	}
 
 
