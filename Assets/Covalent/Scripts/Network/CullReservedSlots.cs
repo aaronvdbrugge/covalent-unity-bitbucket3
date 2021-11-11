@@ -33,27 +33,43 @@ public class CullReservedSlots : MonoBehaviour
 
     bool _didBecameMasterLog = false;   // just used for a debug log
 
+    List<string> _oldExpectedUsers = new List<string>();   // this is just so we can make debug logs when slots are reserved / unreserved
+
     void FixedUpdate()
     {
-        if( PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.ExpectedUsers!=null)    //note that we could become the master client at any time, if the original master client leaves
+        if( PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom != null )    //note that we could become the master client at any time, if the original master client leaves
         {
-            if( !_didBecameMasterLog )
-            {
-                _didBecameMasterLog = true;
-                Debug.Log("Became master client. Handling reservation slot culling.");
-            }
-
-
             _checkCooldown -= Time.fixedDeltaTime;
             if( _checkCooldown <= 0 )
             {
                 _checkCooldown = checkInterval;
 
 
+                if( !_didBecameMasterLog )
+                {
+                    _didBecameMasterLog = true;
+                    Debug.Log("Became master client. Handling reservation slot culling.");
+                }
+
+                // For debugging: log reservations
+                List<string> expected_users = PhotonNetwork.CurrentRoom.ExpectedUsers != null ? new List<string>(PhotonNetwork.CurrentRoom.ExpectedUsers) : new List<string>();  //empty list if null
+            
+                foreach( string str in expected_users )
+                    if( !_oldExpectedUsers.Contains( str ) )   // new reserved slot!
+                        Debug.Log("New reserved slot: " + str);
+                foreach( string str in _oldExpectedUsers )
+                    if( !expected_users.Contains(str) )   // slot was newly removed!
+                        Debug.Log("Removed reserved slot: " + str );
+
+                _oldExpectedUsers = new List<string>(expected_users);  // for next time
+
+
+
+                // Now, start timing out reservations that don't have anyone holding them.
                 List<string> chopping_block = new List<string>();   // slots that we would like to get rid of, but may need to wait for cooldown
 
                 // Look for reserved slots we can start timing out, by putting them in _firstTimeWentMissing...
-                foreach( string slot in PhotonNetwork.CurrentRoom.ExpectedUsers)
+                foreach( string slot in expected_users)
                 {
                     bool found = false;
                     foreach( var kvp in Player_Controller_Mobile.playersByKippoId )
@@ -95,7 +111,7 @@ public class CullReservedSlots : MonoBehaviour
                     if( Time.time - kvp.Value >= slotTimeout )  // it's been in this list too long. We should remove it now
                     {
                         Debug.Log("Slot reservation for " + kvp.Key + " is being removed. Player seems to have disconnected.");
-                        List<string> new_expected = new List<string>(PhotonNetwork.CurrentRoom.ExpectedUsers);
+                        List<string> new_expected = new List<string>(expected_users);
                         if( new_expected.Contains( kvp.Key ) )
                             new_expected.Remove( kvp.Key );
                         PhotonNetwork.CurrentRoom.SetExpectedUsers( new_expected.ToArray() );
