@@ -66,8 +66,8 @@ public class PopupManager : MonoBehaviour
             curPopupWindow = popup.GetComponent<PopupWindow>();
 
             // Show the BG raycaster
-            if( GetCurPopupType() != PopupWindow.Type.CanKeepPlaying )    // Unless they are supposed to be able to keep playing while this is popped up!
-                _closePanel.SetActive(true);
+            // Unless they are supposed to be able to keep playing while this is popped up!
+            _closePanel.SetActive( GetCurPopupType() != PopupWindow.Type.CanKeepPlaying );
         }
 
 
@@ -113,7 +113,7 @@ public class PopupManager : MonoBehaviour
             foreach( var cg in fadeTheseForPopups )
                 cg.alpha = _canvasGroupsFadeState;
         }
-        else if( curPopup == "" && _canvasGroupsFadeState < 1 )  // need to fade in canvas groups
+        else if( (curPopup == "" || GetCurPopupType() == PopupWindow.Type.CanKeepPlaying) && _canvasGroupsFadeState < 1 )  // need to fade in canvas groups
         {
             _canvasGroupsFadeState = Mathf.Min(1, _canvasGroupsFadeState + Time.fixedDeltaTime / canvasGroupsFadeTime);
             foreach( var cg in fadeTheseForPopups )

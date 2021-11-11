@@ -789,7 +789,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
         // Don't do it if we're disconnected. Might not be enabled if we're in "wait for date" mode. 
         if( initialized && !_disconnectedDueToInactivity && !_firstWaitForDate && !disablePartnerDisconnectForDebug && Player_Controller_Mobile.mine != null && Player_Controller_Mobile.mine.playerPartner.GetPartner() == null )   // Partner is MIA!
         {
-            popupManager.ShowPopup( "disconnecting_partner" );
+            if( popupManager.curPopup != "leave_ok")   // The "leave game" popup is the only thing that can override disconnecting_partnet
+                popupManager.ShowPopup( "disconnecting_partner" );
 
             _partnerDisconnectTimer += Time.fixedDeltaTime;
             if( _partnerDisconnectTimer >= partnerDisconnectTime )
