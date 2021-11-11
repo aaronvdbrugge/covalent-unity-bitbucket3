@@ -8265,6 +8265,7 @@ GameObject:
   - component: {fileID: 1519566761037262326}
   - component: {fileID: 1519566761037262321}
   - component: {fileID: 729600953714384941}
+  - component: {fileID: 256265247942953051}
   m_Layer: 0
   m_Name: Network_Manager
   m_TagString: Untagged
@@ -8353,6 +8354,20 @@ MonoBehaviour:
   matchId: 
   amPrimaryPlayer: 0
   isWaitingForFriend: 0
+--- !u!114 &256265247942953051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519566761037262320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e557df8b4bb54d04eae5ca4a6397e0fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkInterval: 10
+  slotTimeout: 60
 --- !u!1 &1519566761237642983
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,7 +74,8 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
     public string username;
     public int kippoUserId;
 
-
+    [Tooltip("Kippo ID of the player we're matched with. Will be the same as kippoUserId if we're in Sandbox mode and don't have a match.")]
+    public int partnerPlayerId;    // This will be useful when the Master Client is culling reserved slots. We don't want to cull any slots reserved for partners of players who are in the room
 
     
 
@@ -138,9 +139,10 @@ public class Player_Controller_Mobile : MonoBehaviourPun, IPunInstantiateMagicCa
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
-        object[] instantiationData = info.photonView.InstantiationData;
+        object[] instantiationData = info.photonView.InstantiationData;   // see: initArray in Dateland_Network.Update. Order here must be the same
         username = (string)instantiationData[1];
         kippoUserId = (int)instantiationData[2];
+        partnerPlayerId = (int)instantiationData[3];
 
         // Add ourselves to a static dictionary of players by kippo id for easy reference and finding partner.
         playersByKippoId[kippoUserId] = this;
