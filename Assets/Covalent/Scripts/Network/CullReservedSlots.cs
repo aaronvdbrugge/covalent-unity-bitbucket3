@@ -107,17 +107,19 @@ public class CullReservedSlots : MonoBehaviour
 
                 // Finally, do actual removal when an entry has been inside _firstTimeWentMissing for too long.
                 List<string> removed = new List<string>();
+                List<string> new_expected = new List<string>(expected_users);
                 foreach( var kvp in _firstTimeWentMissing )
                     if( Time.time - kvp.Value >= slotTimeout )  // it's been in this list too long. We should remove it now
                     {
                         Debug.Log("Slot reservation for " + kvp.Key + " is being removed. Player seems to have disconnected.");
-                        List<string> new_expected = new List<string>(expected_users);
                         if( new_expected.Contains( kvp.Key ) )
                             new_expected.Remove( kvp.Key );
-                        PhotonNetwork.CurrentRoom.SetExpectedUsers( new_expected.ToArray() );
 
                         removed.Add( kvp.Key );
                     }
+
+                if( removed.Count > 0 )  //Need to update expected users!
+                    PhotonNetwork.CurrentRoom.SetExpectedUsers( new_expected.ToArray() );
 
                 foreach( string key in removed )   // clean up _firstTimeWentMissing
                     _firstTimeWentMissing.Remove( key );
