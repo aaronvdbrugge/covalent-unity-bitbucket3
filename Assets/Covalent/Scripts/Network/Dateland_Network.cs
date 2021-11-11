@@ -689,7 +689,9 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 initialized = false;
                 Debug.Log("Disconnecting player due to inactivity.");
                 popupManager.ShowPopup( "disconnected_inactivity" );
-                PhotonNetwork.Disconnect();   // disconnect Agora along with Photon.
+                PhotonNetwork.Disconnect();   
+                
+                agoraManager.DisconnectWithoutRetry(); // disconnect Agora along with Photon.
             }
             else
             {
@@ -797,6 +799,8 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
                 _firstWaitForDate = false;   // not needed anymore
                 popupManager.ShowPopup( "disconnected_partner" );
                 PhotonNetwork.Disconnect();
+
+                agoraManager.DisconnectWithoutRetry();   // disconnect Agora as well
             }
             else
                 partnerDisconnectText.text = "YOU WILL LEAVE THE ARCADE IN 0:" + (int)(partnerDisconnectTime - _partnerDisconnectTimer);
