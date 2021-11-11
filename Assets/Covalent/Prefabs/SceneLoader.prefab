@@ -8347,8 +8347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb202e80c62fc94e8e2d01b0ab07372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayersPerRoom: 4
-  maxPlayersPerRoomSandboxMode: 64
+  maxPlayersPerRoom: 32
+  maxPlayersPerRoomSandboxMode: 32
   checkFriendsInterval: 5
   myId: 
   matchId: 
