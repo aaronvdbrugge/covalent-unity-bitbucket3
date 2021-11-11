@@ -480,7 +480,7 @@ public class Dateland_Network : MonoBehaviourPunCallbacks
 
                     // Here we store all data that will be sent to OnPhotonInstantiate on all clients.
                     // We'll deal with skin number below (default to 0 for now).
-                    object[] initArray = new object[] { 0, playerFromJson.user.name, playerFromJson.user.id };    
+                    object[] initArray = new object[] { 0, playerFromJson.user.name, playerFromJson.user.id, partnerPlayer };    
 
 
                     if( PlayerPrefs.HasKey( "skinNum" ) && !playerFromJson.user.isPaidPremium )
