@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-public class IsoSpriteSortingManager : Singleton<IsoSpriteSortingManager>
+public class IsoSpriteSortingManager : IsoSortLineSingleton<IsoSpriteSortingManager>
 {
     private static List<IsoSpriteSorting> floorSpriteList = new List<IsoSpriteSorting>(64);
     private static List<IsoSpriteSorting> staticSpriteList = new List<IsoSpriteSorting>(256);

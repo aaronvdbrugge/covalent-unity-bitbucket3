@@ -7,7 +7,7 @@
 /// 
 /// As a note, this is made as MonoBehaviour because we need Coroutines.
 /// </summary>
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class IsoSortLineSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance;
 
@@ -28,7 +28,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (applicationIsQuitting)
             {
-                //Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+                //Debug.LogWarning("[IsoSortLineSingleton] Instance '" + typeof(T) +
                 //    "' already destroyed on application quit." +
                 //    " Won't create again - returning null.");
                 return null;
@@ -42,7 +42,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
                     if (FindObjectsOfType(typeof(T)).Length > 1)
                     {
-                        Debug.LogError("[Singleton] Something went really wrong " +
+                        Debug.LogError("[IsoSortLineSingleton] Something went really wrong " +
                             " - there should never be more than 1 singleton!" +
                             " Reopening the scene might fix it.");
                         return _instance;
@@ -56,13 +56,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
                         DontDestroyOnLoad(singleton);
 
-                        //Debug.Log("[Singleton] An instance of " + typeof(T) +
+                        //Debug.Log("[IsoSortLineSingleton] An instance of " + typeof(T) +
                         //    " is needed in the scene, so '" + singleton +
                         //    "' was created with DontDestroyOnLoad.");
                     }
                     else
                     {
-                        Debug.Log("[Singleton] Using instance already created: " +
+                        Debug.Log("[IsoSortLineSingleton] Using instance already created: " +
                             _instance.gameObject.name);
                     }
                 }
@@ -75,7 +75,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     private static bool applicationIsQuitting = false;
     /// <summary>
     /// When Unity quits, it destroys objects in a random order.
-    /// In principle, a Singleton is only destroyed when application quits.
+    /// In principle, a IsoSortLineSingleton is only destroyed when application quits.
     /// If any script calls Instance after it have been destroyed, 
     ///   it will create a buggy ghost object that will stay on the Editor scene
     ///   even after stopping playing the Application. Really bad!
