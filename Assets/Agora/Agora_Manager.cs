@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using agora_gaming_rtc;
 using Covalent.Scripts.Util.Native_Proxy;
 using UnityEngine;
@@ -14,11 +13,48 @@ using UnityEngine.Android;
 public class Agora_Manager : Singleton<Agora_Manager>
 {
 	private static int ERROR_NO_PERMISSION_TO_RECORD = 1027;
-
 	private static int ERROR_NO_PERMISSION_TO_ACCESS = 9;
 
 	public bool joinChatInEditor = false;
+	public Text logs;
+	public IRtcEngine mRtcEngine = null;
+	public AudioRecordingDeviceManager audio_manager;
 
+	[Header("Settings")]
+	[Range(0, 255)]
+	[Tooltip("We'll report to native that the user is \"talking\" if the volume is >= this amount.")]
+	public int talkVolumeThreshold = 32;
+
+	[Tooltip("Agora recommends over 200ms.")]
+	public int talkingReportIntervalMs = 250;
+
+	[Tooltip(
+		"If no reports from Agora, we assume they aren't talking. Should probably be slightly more than talkingReportIntervalMs")]
+	public int assumeNotTalkingTime = 300;
+
+	[Tooltip("We'll just keep trying to reconnect every this amount of time, if we get disconnected.")]
+	public float disconnectRetryInterval = 10.0f;
+
+	[Header("Runtime")] public uint myUid; //save our own uid in ChannelOnJoinChannelSuccess
+	public bool isMuted = false; // informational
+
+	/// <summary>
+	/// Remember if a uid was talking; this allows us to not spam the extern calls
+	/// </summary>
+	Dictionary<uint, bool> usersTalking = new Dictionary<uint, bool>();
+
+	// Because Agora's calllback doesn't report anything when volume is 0, we'll have to figure that out on our own.
+	// This is set to 0 every time we update usersTalking, but will increase in Update, and we'll assume they aren't talking
+	// if it makes it to 
+	Dictionary<uint, float> timeSinceUserLastTalked = new Dictionary<uint, float>();
+
+	[SerializeField] private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
+
+	private float _disconnectRetryCooldown = 0; // set to disconnectRetryInterval on retry
+	private bool _wasConnected = false; // were we ever connected? use to detect disconnect
+	private string _doJoinChannel = null; //delays a JoinChannel call until FixedUpdate, allowing Start() to occur first
+	private string _activeAgoraToken = null;
+	
 	public bool IsConnected() => mRtcEngine == null
 		? false
 		: mRtcEngine.GetConnectionState() == CONNECTION_STATE_TYPE.CONNECTION_STATE_CONNECTED;
@@ -170,17 +206,15 @@ public class Agora_Manager : Singleton<Agora_Manager>
 
 	private void FixedUpdate()
 	{
-		if (_doJoinChannel != null && (joinChatInEditor || !Application.isEditor))
+		if (_doJoinChannel != null && _activeAgoraToken != null && (joinChatInEditor || !Application.isEditor))
 		{
 			_lastChannel = _doJoinChannel; // in case we get disconnected
 			_wasConnected = false;
-			Debug.Log(
-				"Joining Agora channel: " + _doJoinChannel + " with ID " + Dateland_Network.playerFromJson.user.id);
+			Debug.Log($"Joining Agora channel: {_doJoinChannel} with ID {Dateland_Network.playerFromJson.user.id} and with token {_activeAgoraToken}");
 
 			uint use_id = (uint) Dateland_Network.playerFromJson.user.id; // Use Kippo ID for our Agora ID.
-
-
-			mRtcEngine.JoinChannel(_doJoinChannel, "extra", use_id);
+			
+			CallAgoraSDKJoinChannel(_doJoinChannel, "extra", use_id);
 			isMuted = false;
 			_doJoinChannel = null; // reset
 		}
@@ -199,7 +233,7 @@ public class Agora_Manager : Singleton<Agora_Manager>
 			if (NativeEntryPoint.sandboxMode)
 				use_id = 0; // ID is probably not correct, so avoid duplicate IDs and just let Agora choose.
 
-			mRtcEngine.JoinChannel(_lastChannel, "extra", use_id);
+			CallAgoraSDKJoinChannel(_lastChannel, "extra", use_id);
 			_disconnectRetryCooldown = disconnectRetryInterval; // don't retry for a while
 		}
 	}
@@ -222,6 +256,11 @@ public class Agora_Manager : Singleton<Agora_Manager>
 			IRtcEngine.Destroy();
 			mRtcEngine = null;
 		}
+	}
+
+	public void CallAgoraSDKJoinChannel(string channelName, string infoString, uint userId)
+	{
+		mRtcEngine.JoinChannelByKey(_activeAgoraToken, channelName, infoString, userId);
 	}
 
 	//Wrappers (don't call externs in editor)
@@ -266,46 +305,6 @@ public class Agora_Manager : Singleton<Agora_Manager>
 			NativeProxy.PlayerEndedTalking(player_id);
 	}
 
-	public Text logs;
-	public IRtcEngine mRtcEngine = null;
-	public AudioRecordingDeviceManager audio_manager;
-
-	[Header("Settings")]
-	[Range(0, 255)]
-	[Tooltip("We'll report to native that the user is \"talking\" if the volume is >= this amount.")]
-	public int talkVolumeThreshold = 32;
-
-	[Tooltip("Agora recommends over 200ms.")]
-	public int talkingReportIntervalMs = 250;
-
-	[Tooltip(
-		"If no reports from Agora, we assume they aren't talking. Should probably be slightly more than talkingReportIntervalMs")]
-	public int assumeNotTalkingTime = 300;
-
-	[Tooltip("We'll just keep trying to reconnect every this amount of time, if we get disconnected.")]
-	public float disconnectRetryInterval = 10.0f;
-
-
-	[Header("Runtime")] public uint myUid; //save our own uid in ChannelOnJoinChannelSuccess
-
-	public bool isMuted = false; // informational
-
-
-	/// <summary>
-	/// Remember if a uid was talking; this allows us to not spam the extern calls
-	/// </summary>
-	Dictionary<uint, bool> usersTalking = new Dictionary<uint, bool>();
-
-	// Because Agora's calllback doesn't report anything when volume is 0, we'll have to figure that out on our own.
-	// This is set to 0 every time we update usersTalking, but will increase in Update, and we'll assume they aren't talking
-	// if it makes it to 
-	Dictionary<uint, float> timeSinceUserLastTalked = new Dictionary<uint, float>();
-
-	[SerializeField] private string appId = "ebc5c7daf04648c3bfa3083be4f7c53a";
-
-	float _disconnectRetryCooldown = 0; // set to disconnectRetryInterval on retry
-	bool _wasConnected = false; // were we ever connected? use to detect disconnect
-
 	/// <summary>
 	/// You should call this when you disconnect Agora due to inactivity, to prevent it from reconnecting.
 	/// You can call it when getting backgrounded, as well.
@@ -324,7 +323,6 @@ public class Agora_Manager : Singleton<Agora_Manager>
 		_disconnectRetryCooldown = 0;
 		_wasConnected = true;
 	}
-
 
 	string _lastChannel = null; // if JoinChannel was ever called, this will be the parameter it was given
 
@@ -358,21 +356,16 @@ public class Agora_Manager : Singleton<Agora_Manager>
 	{
 		mute(mute_toggle.isOn);
 	}
-
-
-	string _doJoinChannel = null; //delays a JoinChannel call until FixedUpdate, allowing Start() to occur first
-
+	
 	/// <summary>
 	/// NOTE: don't call this before Dateland_Network.playerFromJson has been initialized. We need the Kippo ID to be our Agora ID.
 	/// </summary>
-	public void JoinChannel(string channel_name)
+	public void JoinChannelFirstTime(string channel_name)
 	{
-		Debug.Log($"Joining channel test");
-		StartCoroutine(AgoraTokenTest());
-		//_doJoinChannel = channel_name; // defer action to FixedUpdate
+		StartCoroutine(GetAgoraToken(channel_name));
 	}
 
-
+	/*
 	public AgoraChannel Obj_JoinChannel(string name)
 	{
 		AgoraChannel newChannel = mRtcEngine.CreateChannel(name);
@@ -390,6 +383,7 @@ public class Agora_Manager : Singleton<Agora_Manager>
 		newChannel.JoinChannel("", "", 0, mediaOptions);
 		return newChannel;
 	}
+	*/
 
 	public void LeaveChannel()
 	{
@@ -406,9 +400,12 @@ public class Agora_Manager : Singleton<Agora_Manager>
 
 	// Debug stuff
 
-	private IEnumerator AgoraTokenTest()
+	private IEnumerator GetAgoraToken(string channel_name)
 	{
-		string uri = "https://cloud.kippo.io/token-api/agora/1?tokenType=RTC&channelId=hello_world"; // "https://cloud.kippo.io/token-api/agora/1000?tokenType=RTC&channelId=agora_test"
+		string userId = 1000;
+		
+		// Reference to Kippo-app production Firebase setup.
+		string uri = string.Format("https://cloud.kippo.io/token-api/agora/{0}?tokenType=RTC&channelId={1}", userId, channel_name);
 		
 		UnityWebRequest www = UnityWebRequest.Get(uri);
 		www.SetRequestHeader("Authorization", "Basic YWdvcmF0b2tlbkBnbWFpbC5jb206YWdvcmF0b2tlbg==");
@@ -416,14 +413,20 @@ public class Agora_Manager : Singleton<Agora_Manager>
 		yield return www.SendWebRequest();
  
 		if (www.result != UnityWebRequest.Result.Success) {
-			Debug.Log(www.error);
+			Debug.LogError($"Not able to retrieve Agora token. Error: {www.error}");
 		}
 		else {
-			// Show results as text
-			Debug.Log(www.downloadHandler.text);
- 
-			// Or retrieve results as binary data
-			byte[] results = www.downloadHandler.data;
+			string token = www.downloadHandler.text;
+
+			if (string.IsNullOrEmpty(token) || string.IsNullOrWhiteSpace(token))
+			{
+				Debug.LogError($"Issue retrieving Agora token for user {userId}");
+			}
+			else
+			{
+				_doJoinChannel = channel_name; // defer action to FixedUpdate
+				_activeAgoraToken = www.downloadHandler.text;
+			}
 		}
 	}
 }
