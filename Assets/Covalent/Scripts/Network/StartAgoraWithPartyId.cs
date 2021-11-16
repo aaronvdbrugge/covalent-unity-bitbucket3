@@ -28,7 +28,7 @@ public class StartAgoraWithPartyId : MonoBehaviour
                 agora_manager = go.GetComponent<Agora_Manager>();
             }
 
-            agora_manager.JoinChannel( NativeEntryPoint.sandboxMode ? sandboxChatRoom : Dateland_Network.playerFromJson.partyId );    // Note that agoraManager should handle reconnecting if the connection to this channel name is lost, and will do so until LeaveChannel is called
+            agora_manager.JoinChannelFirstTime( NativeEntryPoint.sandboxMode ? sandboxChatRoom : Dateland_Network.playerFromJson.partyId );    // Note that agoraManager should handle reconnecting if the connection to this channel name is lost, and will do so until LeaveChannel is called
         }
     }
 }
