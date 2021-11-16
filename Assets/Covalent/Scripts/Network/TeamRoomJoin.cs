@@ -38,7 +38,7 @@ public class TeamRoomJoin : MonoBehaviourPunCallbacks
 	public byte GetMaxPlayers() => NativeEntryPoint.sandboxMode ? maxPlayersPerRoomSandboxMode : maxPlayersPerRoom;
 
 	[Tooltip("Check where our friend is every this amount of time, while we're in the private waiting room.")]
-	public float checkFriendsInterval = 5.0f;
+	public float checkFriendsInterval = 1.0f;
 
 
 

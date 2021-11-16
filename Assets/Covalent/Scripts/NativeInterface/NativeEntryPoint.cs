@@ -130,7 +130,6 @@ public class NativeEntryPoint : MonoBehaviour
             enterArcadeSandbox( spoofJson.text );
     }
 
-
     /// <summary>
     /// NOTE: This function gets called from the native side, and is given
     /// a payload of the user's real profile info.
@@ -163,6 +162,11 @@ public class NativeEntryPoint : MonoBehaviour
         InitInternal(json_string);
     }
 
+    public void inviteCanceled()
+    {
+        // This will cancel the "waiting for match".
+        // Dateland_Network.popupManager.ShowPopup( "canceled_partner" );
+    }
 
     [Obsolete("createPlayer is deprecated. Please use enterArcadeAsPair for real matchmaking in Release, or enterArcadeSandbox for testing things unrelated to matchmaking.")]
     public void createPlayer(string json_string)
@@ -173,8 +177,7 @@ public class NativeEntryPoint : MonoBehaviour
         sandboxMode = true;
         InitInternal(json_string);
     }
-
-
+    
     void InitInternal(string json_string)
     {
         Dateland_Network.realUserJson = json_string;
@@ -186,11 +189,6 @@ public class NativeEntryPoint : MonoBehaviour
             SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
         }
     }
-
-
-
-
-
 
     /// <summary>
     /// Does a test enterArcadeAsPair call through inspector, using spoof data
@@ -209,6 +207,4 @@ public class NativeEntryPoint : MonoBehaviour
     {
         enterArcadeSandbox( spoofJson.text );
     }
-
-
 }
