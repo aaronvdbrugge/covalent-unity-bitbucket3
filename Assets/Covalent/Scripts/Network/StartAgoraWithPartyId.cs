@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 /// <summary>
 /// As soon as partyId is available, we'll join voice chat.
