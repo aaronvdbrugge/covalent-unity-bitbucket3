@@ -12,10 +12,10 @@ extern "C" {
 void showHostMainWindow(const char* color) { return [api showHostMainWindow:[NSString stringWithUTF8String:color]]; }
 void _updatePlayersInRoom(char *arr[], int count) {
     NSLog(@"FROM UNITY: updatePlayersInRoom(%i)", count);
-    
+
     char* cStringCopy(const char* string);
     NSMutableArray *items = [NSMutableArray array];
-    for(int i = 0; i < count - 1; i++)
+    for(int i = 0; i < count; i++)
     {
         NSString *str = [[NSString alloc] initWithCString:arr[i] encoding:NSUTF8StringEncoding];
         [items addObject:str];
